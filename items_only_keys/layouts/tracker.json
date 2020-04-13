@@ -1,0 +1,39 @@
+{
+    "shared_item_grid": {
+        "type": "itemgrid",
+        "h_alignment": "center",
+        "item_margin": "1,2",
+        "rows": [
+		  ["","sword","gust","cane","boomerang","wallet",""],
+		  ["","shield","mittsandfly","lamp","bombsremote","wilds",""],
+		  ["","boots","cape","flute","bowandfly","clouds",""],
+		  ["","dogbottle","jabber","mushroom","bothkeys","falls",""],
+		  ["","grip","bracelets","flippersandfly","10hearts","spinandbeam",""],
+		  ["","quiver","carlov","books","sevenscrolls","trophy",""],
+		  ["earth","fire","water","wind","gomode","rc","cryptkey"],
+		  ["dws","dws_bigkey","dws_smallkey","","cof","cof_bigkey","cof_smallkey"],
+		  ["fow","fow_bigkey","fow_smallkey","","tod","tod_bigkey","tod_smallkey"],
+		  ["pow","pow_bigkey","pow_smallkey","","dhc","explicit_dhc_bigkey","explicit_dhc_smallkey"],
+		  ["rockbreaker","dashattack","downthrust","rollattack","swordbeam","perilbeam","greatspin"]
+        ]
+    },
+    "tracker_capture_item": {
+        "type": "container",
+        "content": {
+            "type": "layout",
+            "key": "shared_item_grid"
+        }
+    },
+    "tracker_default": {
+        "type": "container",
+        "width": 270,
+        //"height": 250,
+        "background": "#212121",
+        "content": {
+            "dropshadow": true,
+            "margin": 5,
+            "type": "layout",
+            "key": "shared_item_grid"
+        }
+    }
+}

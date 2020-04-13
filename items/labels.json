@@ -1,0 +1,44 @@
+[
+  // DWS Label
+  {
+    "name": "Deepwood Shrine",
+    "type": "static",
+    "img": "images/pas utiliser/DWS.png",
+    "codes": "dws_label"
+  },
+  // COF Label
+  {
+    "name": "Cave of Flames",
+    "type": "static",
+    "img": "images/pas utiliser/COF.png",
+    "codes": "cof_label"
+  },
+  // FOW Label
+  {
+    "name": "Fortress of Winds",
+    "type": "static",
+    "img": "images/pas utiliser/FOW.png",
+    "codes": "fow_label"
+  },
+  // TOD Label
+  {
+    "name": "Temple of Droplets",
+    "type": "static",
+    "img": "images/pas utiliser/TOD.png",
+    "codes": "tod_label"
+  },
+  // POW Label
+  {
+    "name": "Palace of Winds",
+    "type": "static",
+    "img": "images/pas utiliser/POW.png",
+    "codes": "pow_label"
+  },
+  // DHC Label
+  {
+    "name": "Dark Hyrule Castle",
+    "type": "static",
+    "img": "images/pas utiliser/DHC.png",
+    "codes": "dhc_label"
+  }
+]
