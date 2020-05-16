@@ -1812,7 +1812,7 @@
         "name": "DHC",
         "short_name": "DHC",
         "codes":"dhc",
-        "access_rules": ["$neededElements,$neededSwords,$noElementsOrSwords"],
+        "access_rules": ["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
         "map_locations": [
           {
             "map": "map",
