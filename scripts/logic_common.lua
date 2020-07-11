@@ -83,7 +83,7 @@ function FigurineOpen()
 end
 
 function neededSwords()
-  if Tracker:ProviderCountForCode("sword") >= 0 and has("sword0needed") then
+  if has("sword0needed") then
     return 1
   elseif has("sword") and has("sword1needed") then
     return 1
@@ -117,7 +117,7 @@ function neededElements()
 end
 
 function noElementsOrSwords()
-  if has("element0Needed") and has("sword0needed") and FourElements() == 1 and has("sword5") then
+  if has("element0Needed") and has("sword0needed") and has("figurine_option") then
     return 1
   elseif has("element0Needed") and has("sword1needed") then
     return 1
