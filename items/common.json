@@ -566,7 +566,7 @@
  {
    "name": "Spin Attack",
    "type": "toggle",
-   "img": "images/items/nobeam_spin.png",
+   "img": "images/items/Spin Attack.png",
    "codes": "spinattack"
  },
  //Some Beam
@@ -653,6 +653,27 @@
    "type": "toggle",
    "img": "images/items/Great Spin Attack.png",
    "codes": "greatspin"
+ },
+ // Fast Spin Charge
+ {
+   "name": "Fast Spin Charge",
+   "type": "toggle",
+   "img": "images/items/Fast Spin.png",
+   "codes": "fastspin"
+ },
+ // Fast Split
+ {
+   "name": "Fast Split",
+   "type": "toggle",
+   "img": "images/items/Fast Split.png",
+   "codes": "fastsplit"
+ },
+ // Long Great Spin
+ {
+   "name": "Long Great Spin",
+   "type": "toggle",
+   "img": "images/items/Long Great Spin.png",
+   "codes": "longspin"
  },
  // Go-Mode
  {

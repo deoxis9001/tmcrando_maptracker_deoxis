@@ -59,7 +59,7 @@
           //At least two small keys
           {
             "name":"Mulldozer Key",
-            "access_rules":["$canDamage,[dws_smallkey:4],dws_smallkey:2","$canDamage,$hasNoGust,dws_smallkey:2"],
+            "access_rules":["$canDamage,dws_smallkey:4","$canDamage,$hasNoGust,dws_smallkey:2"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -256,7 +256,7 @@
       },
       {
         "name": "COF Rupees",
-        "short_name": "CoF Rupees",
+        "short_name": "CoF",
         "access_rules":[
           "sword,spinattack,bottle,grip,gust,bombs",
           "sword,spinattack,bottle,grip,gust,bow",
@@ -971,19 +971,21 @@
           },
           {
             "name":"Left Path",
+            "access_rules":["cryptkey:1"],
             "item_count":1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
           },
           {
             "name":"Right Path",
+            "access_rules":["cryptkey:1"],
             "item_count":1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
           },
           {
             "name":"King Gustaf",
-            "access_rules": ["lamp"],
+            "access_rules": ["lamp,cryptkey:3"],
             "item_count": 1
           }
         ]
@@ -1024,7 +1026,7 @@
           //Need one key
           {
             "name":"Small Key Locked Ice Block",
-            "access_rules":["tod_smallkey:1"],
+            "access_rules":["tod_smallkey:4"],
             "item_count": 1
           },
           //Need big key
@@ -1150,7 +1152,7 @@
           //Need one key
           {
             "name":"Small Key Locked Ice Block",
-            "access_rules":["tod_smallkey:1"],
+            "access_rules":["tod_smallkey:4"],
             "item_count": 1
           },
           //Need big key
@@ -1288,7 +1290,7 @@
           //Need one key
           {
             "name":"Small Key Locked Ice Block",
-            "access_rules":["tod_smallkey:1"],
+            "access_rules":["tod_smallkey:4"],
             "item_count": 1
           },
           //Need big key
@@ -1419,7 +1421,7 @@
           //Need one key
           {
             "name":"Small Key Locked Ice Block",
-            "access_rules":["tod_smallkey:1"],
+            "access_rules":["tod_smallkey:4"],
             "item_count": 1
           },
           //Need big key
@@ -1810,7 +1812,7 @@
         "name": "DHC",
         "short_name": "DHC",
         "codes":"dhc",
-        "access_rules": ["$neededElements,$neededSwords,$noElementsOrSwords,$FigurineOpen"],
+        "access_rules": ["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
         "map_locations": [
           {
             "map": "map",
@@ -1899,7 +1901,7 @@
           //Needs big key
           {
             "name":"Vaati",
-            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:5,explicit_dhc_bigkey,sword5,spinattack"],
+            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:1,explicit_dhc_bigkey,sword5,spinattack"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/TriForce.png",
             "chest_opened_img":"images/items-map/TriForce_Gray.png"
@@ -1999,7 +2001,7 @@
           //Needs big key
           {
             "name":"Vaati",
-            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:5,explicit_dhc_bigkey,spinattack"],
+            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:1,explicit_dhc_bigkey,spinattack"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/TriForce.png",
             "chest_opened_img":"images/items-map/TriForce_Gray.png"
@@ -2114,7 +2116,7 @@
           //Needs big key
           {
             "name":"Vaati",
-            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:5,explicit_dhc_bigkey,spinattack"],
+            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:1,explicit_dhc_bigkey,spinattack"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/TriForce.png",
             "chest_opened_img":"images/items-map/TriForce_Gray.png"
@@ -2123,8 +2125,8 @@
       },
       //DHC FAST
       {
-        "name": "Dark Hyrule Castle",
-        "short_name": "DHC Fast",
+        "name": "DHC Fast",
+        "short_name": "DHC",
         "codes":"dhc",
         "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
         "map_locations": [

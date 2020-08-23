@@ -17,11 +17,10 @@ end
 
 Tracker:AddLayouts("layouts/tracker.json")
 
--- Select a broadcast view layout based on whether the current variant is keysanity or not
-if not (string.find(Tracker.ActiveVariantUID, "keys")) then
-    Tracker:AddLayouts("layouts/standard_broadcast.json")
+if (string.find(Tracker.ActiveVariantUID, "live")) then
+    Tracker:AddLayouts("layouts/live_broadcast.json")
 else
-    Tracker:AddLayouts("layouts/keysanity_broadcast.json")
+    Tracker:AddLayouts("layouts/standard_broadcast.json")
 end
 
 if _VERSION == "Lua 5.3" then

@@ -1111,7 +1111,7 @@
           },
           {
             "name":"Key Locked Ice Block",
-            "access_rules":["tod_smallkey:1"],
+            "access_rules":["[tod_smallkey:4],tod_smallkey:1"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1128,7 +1128,7 @@
           },
           {
             "name":"Post Madderpillar Chest",
-            "access_rules":["tod_bigkey,tod_smallkey:4,gust,flippers,$canDamage","tod_bigkey,tod_smallkey:4,gust,cape,lamp,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,$canDamage","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,$canDamage"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1203,9 +1203,9 @@
           },
           {
             "name":"Right Path Rupees",
-            "access_rules":["tod_bigkey,tod_smallkey:4,lamp,flippers,$canDamage",
-            "tod_bigkey,tod_smallkey:4,lamp,gust,$canDamage",
-            "tod_bigkey,tod_smallkey:4,lamp,cape,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,flippers,$canDamage",
+            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,gust,$canDamage",
+            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,cape,$canDamage"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1247,7 +1247,7 @@
                 "map":"tod",
                 "x":600,
                 "y":1215,
-                "restrict_visibility_rules":["rupees_on"]
+                "restrict_visibility_rules":["rupees_on,obscure_on"]
               }
             ],
             "sections":[
@@ -1259,7 +1259,7 @@
           },
           {
             "name":"Ice Puzzle Free Chest",
-            "access_rules":["gust,flippers,tod_bigkey,tod_smallkey:4","cape,lamp,$canDamage,tod_bigkey,tod_smallkey:4"],
+            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,$canDamage,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1276,7 +1276,7 @@
           },
           {
             "name":"Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,tod_smallkey:4","lamp,$canDamage,cape,tod_bigkey,tod_smallkey:4"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,$canDamage,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1293,7 +1293,7 @@
           },
           {
             "name":"Post Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,tod_smallkey:4","gust,cape,lamp,tod_bigkey,tod_smallkey:4"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","gust,cape,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1310,7 +1310,7 @@
           },
           {
             "name":"Right Path Ice Walkway First Chest",
-            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,tod_smallkey:4","lamp,tod_bigkey"],
+            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1327,7 +1327,7 @@
           },
           {
             "name":"Right Path Ice Walkway Second Chest",
-            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,tod_smallkey:4","lamp,tod_bigkey"],
+            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1344,7 +1344,7 @@
           },
           {
             "name":"Right Path Ice Walkway Pot",
-            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,tod_smallkey:4","lamp,tod_bigkey"],
+            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1362,9 +1362,9 @@
           },
           {
             "name":"Blue Chu",
-            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,tod_smallkey:4",
-              "gust,lamp,sword,tod_bigkey,tod_smallkey:4",
-              "gust,lamp,bombs,tod_bigkey,tod_smallkey:4"],
+            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:2",
+              "gust,lamp,sword,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
+              "gust,lamp,bombs,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1383,7 +1383,7 @@
           },
           {
             "name":"Basement Frozen Chest",
-            "access_rules":["gust,flippers,srd3,spinattack,tod_bigkey,tod_smallkey:4","lamp,tod_bigkey"],
+            "access_rules":["gust,flippers,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey","lamp,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1945,7 +1945,7 @@
         "children":[
           {
             "name":"Blade Chest",
-			"access_rules":["sword5,spinattack"],										
+			"access_rules":["sword5,spinattack"],	
             "map_locations":[
               {
                 "map":"dhc",
@@ -2136,7 +2136,7 @@
           },
           {
             "name":"Vaati",
-            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:5,explicit_dhc_bigkey"],
+            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:1,explicit_dhc_bigkey"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2353,7 +2353,7 @@
           },
           {
             "name":"Vaati Open",
-            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:5,explicit_dhc_bigkey,spinattack"],
+            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:1,explicit_dhc_bigkey,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2598,7 +2598,7 @@
           },
           {
             "name":"Vaati Ped",
-            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:5,explicit_dhc_bigkey,spinattack"],
+            "access_rules":["sword5,bombs,cape,bow,cane,gust,lamp,explicit_dhc_smallkey:1,explicit_dhc_bigkey,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",

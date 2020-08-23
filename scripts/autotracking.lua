@@ -662,7 +662,104 @@ function updatefigurine(segment, code, address)
   item.AcquiredCount = ReadU8(segment, address)
   print("figurne", item.AcquiredCount)
 end
+function updateSpin(segment)
+  local item = Tracker:FindObjectForCode("spinattack")
+  if testFlag(segment, 0x2002b44, 0x01) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
 
+function updateRoll(segment)
+  local item = Tracker:FindObjectForCode("rollattack")
+  if testFlag(segment, 0x2002b44, 0x04) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updateDash(segment)
+  local item = Tracker:FindObjectForCode("dashattack")
+  if testFlag(segment, 0x2002b44, 0x10) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updateRock(segment)
+  local item = Tracker:FindObjectForCode("rockbreaker")
+  if testFlag(segment, 0x2002b44, 0x40) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updateBeam(segment)
+  local item = Tracker:FindObjectForCode("swordbeam")
+  if testFlag(segment, 0x2002b45, 0x01) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updateGreat(segment)
+  local item = Tracker:FindObjectForCode("greatspin")
+  if testFlag(segment, 0x2002b45, 0x04) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updateDown(segment)
+  local item = Tracker:FindObjectForCode("downthrust")
+  if testFlag(segment, 0x2002b45, 0x10) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updatePeril(segment)
+  local item = Tracker:FindObjectForCode("perilbeam")
+  if testFlag(segment, 0x2002b45, 0x40) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updateFast(segment)
+  local item = Tracker:FindObjectForCode("fastspin")
+  if testFlag(segment, 0x2002b4e, 0x40) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updateSplit(segment)
+  local item = Tracker:FindObjectForCode("fastsplit")
+  if testFlag(segment, 0x2002b4f, 0x01) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
+
+function updateLong(segment)
+  local item = Tracker:FindObjectForCode("longspin")
+  if testFlag(segment, 0x2002b4f, 0x04) then
+    item.CurrentStage = 1
+  else
+    item.CurrentStage = 0
+  end
+end
 function figurine(segment)
   if not isInGame() then
     return false
@@ -695,6 +792,16 @@ function updateItemsFromMemorySegment(segment)
     updateToggleItemFromByteAndFlag(segment, "bracelets", 0x2002b43, 0x04)
     updateToggleItemFromByteAndFlag(segment, "flippers", 0x2002b43, 0x10)
     updateToggleItemFromByteAndFlag(segment, "spinattack", 0x2002b44, 0x01)
+    updateToggleItemFromByteAndFlag(segment, "rollattack", 0x2002b44, 0x04)
+    updateToggleItemFromByteAndFlag(segment, "dashattack", 0x2002b44, 0x10)
+    updateToggleItemFromByteAndFlag(segment, "rockbreaker", 0x2002b44, 0x40)
+    updateToggleItemFromByteAndFlag(segment, "swordbeam", 0x2002b45, 0x01)
+    updateToggleItemFromByteAndFlag(segment, "greatspin", 0x2002b45, 0x04)
+    updateToggleItemFromByteAndFlag(segment, "downthrust", 0x2002b45, 0x10)
+    updateToggleItemFromByteAndFlag(segment, "perilbeam", 0x2002b45, 0x40)
+    updateToggleItemFromByteAndFlag(segment, "fastspin", 0x2002b4e, 0x40)
+    updateToggleItemFromByteAndFlag(segment, "fastsplit", 0x2002b4f, 0x01)
+    updateToggleItemFromByteAndFlag(segment, "longspin", 0x2002b4f, 0x04)
     updateToggleItemFromByteAndFlag(segment, "jabber", 0x2002b48, 0x40)
     updateToggleItemFromByteAndFlag(segment, "bowandfly", 0x2002b4e, 0x01)
     updateToggleItemFromByteAndFlag(segment, "mittsButterfly", 0x2002b4e, 0x04)
@@ -716,12 +823,23 @@ function updateItemsFromMemorySegment(segment)
     updateShield(segment)
     updateLamp(segment)
     updateBottles(segment)
-    updateBeams(segment)
     updateScrolls(segment)
     updateGoldFalls(segment)
     updateWilds(segment, "wilds", 0x6a)
     updateClouds(segment, "clouds", 0x65)
 
+    --updateSpin(segment)
+    --updateRoll(segment)
+    --updateDash(segment)
+    --updateRock(segment)
+    --updateBeam(segment)
+    --updateGreat(segment)
+    --updateDown(segment)
+    --updatePeril(segment)
+    --updateFast(segment)
+    --updateSplit(segment)
+    --updateLong(segment)
+	
     updateSectionChestCountFromByteAndFlag(segment, "@Fifi/Fifi", 0x2002b3f, 0x20)
 
   end
