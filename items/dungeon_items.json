@@ -2,176 +2,176 @@
   // DWS
   {
     "name": "Deepwood Shrine",
-    "type": "progressive_toggle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
     "capturable": false,
+    "loop": true,
     "stages": [
       {
         "img":"images/donjons/chu.png",
-        "codes":"dws,dwsunknown",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes":"",
       },
       {
-        "img": "images/donjons/chu_earth.png",
-        "codes": "dws",
-      },
-      {
-        "img": "images/donjons/chu_fire.png",
-        "codes": "dws",
-      },
-      {
-        "img": "images/donjons/chu_water.png",
-        "codes": "dws",
-      },
-      {
-        "img": "images/donjons/chu_wind.png",
-        "codes": "dws",
+        "img": "images/donjons/chu.png",
+        "codes": "dws2",
       }
     ]
   },
+ {
+   "name": "Deepwood Shrine w/ Element",
+   "type": "toggle_badged",
+   "base_item": "dws2",
+   "img": "images/donjons/overlay_elements_dws.png",
+   "codes": "dws"
+ },
   // COF
   {
     "name": "Cave of Flames",
-    "type": "progressive_toggle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
     "capturable": false,
+    "loop": true,
     "stages": [
       {
         "img":"images/donjons/gleerok.png",
-        "codes":"cof,cofunknown",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes":"",
       },
       {
-        "img": "images/donjons/gleerok_earth.png",
-        "codes": "cof",
-      },
-      {
-        "img": "images/donjons/gleerok_fire.png",
-        "codes": "cof",
-      },
-      {
-        "img": "images/donjons/gleerok_water.png",
-        "codes": "cof",
-      },
-      {
-        "img": "images/donjons/gleerok_wind.png",
-        "codes": "cof",
+        "img": "images/donjons/gleerok.png",
+        "codes": "cof2",
       }
     ]
   },
+ {
+   "name": "Cave of Flames w/ Element",
+   "type": "toggle_badged",
+   "base_item": "cof2",
+   "img": "images/donjons/overlay_elements_cof.png",
+   "codes": "cof"
+ },
   // FOW
   {
     "name": "Fortress of Winds",
-    "type": "progressive_toggle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
     "capturable": false,
+    "loop": true,
     "stages": [
       {
         "img":"images/donjons/mazaal.png",
-        "codes":"fow,fowunknown",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes":"",
       },
       {
-        "img": "images/donjons/mazaal_earth.png",
-        "codes": "fow",
-      },
-      {
-        "img": "images/donjons/mazaal_fire.png",
-        "codes": "fow",
-      },
-      {
-        "img": "images/donjons/mazaal_water.png",
-        "codes": "fow",
-      },
-      {
-        "img": "images/donjons/mazaal_wind.png",
-        "codes": "fow",
+        "img": "images/donjons/mazaal.png",
+        "codes": "fow2",
       }
     ]
   },
+ {
+   "name": "Fortress of Winds w/ Element",
+   "type": "toggle_badged",
+   "base_item": "fow2",
+   "img": "images/donjons/overlay_elements_fow.png",
+   "codes": "fow"
+ },
   // TOD
   {
     "name": "Temple of Droplets",
-    "type": "progressive_toggle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
     "capturable": false,
+    "loop": true,
     "stages": [
       {
         "img":"images/donjons/octo.png",
-        "codes":"tod,todunknown",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes":"",
       },
       {
-        "img": "images/donjons/octo_earth.png",
-        "codes": "tod",
-      },
-      {
-        "img": "images/donjons/octo_fire.png",
-        "codes": "tod",
-      },
-      {
-        "img": "images/donjons/octo_water.png",
-        "codes": "tod",
-      },
-      {
-        "img": "images/donjons/octo_wind.png",
-        "codes": "tod",
+        "img": "images/donjons/octo.png",
+        "codes": "tod2",
       }
     ]
   },
+ {
+   "name": "Temple of Droplets w/ Element",
+   "type": "toggle_badged",
+   "base_item": "tod2",
+   "img": "images/donjons/overlay_elements_tod.png",
+   "codes": "tod"
+ },
   // RC
   {
     "name": "Royal Crypt",
-    "type": "progressive_toggle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
     "capturable": false,
+    "loop": true,
     "stages": [
       {
         "img":"images/donjons/gustaf.png",
-        "codes":"rc,rcunknown",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes":"",
       },
       {
-        "img": "images/donjons/gustaf_earth.png",
-        "codes": "rc",
+        "img": "images/donjons/gustaf.png",
+        "codes": "rc2",
       },
-      {
-        "img": "images/donjons/gustaf_fire.png",
-        "codes": "rc",
-      },
-      {
-        "img": "images/donjons/gustaf_water.png",
-        "codes": "rc",
-      },
-      {
-        "img": "images/donjons/gustaf_wind.png",
-        "codes": "rc",
-      }
     ]
   },
+ {
+   "name": "Royal Crypt w/ Element",
+   "type": "toggle_badged",
+   "base_item": "rc2",
+   "img": "images/donjons/overlay_elements.png",
+   "codes": "rc"
+ },
   // POW
   {
     "name": "Palace of Winds",
-    "type": "progressive_toggle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
     "capturable": false,
+    "loop": true,
     "stages": [
       {
         "img":"images/donjons/gyorg.png",
-        "codes":"pow,powunknown",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes":"",
       },
       {
-        "img": "images/donjons/gyorg_earth.png",
-        "codes": "pow",
+        "img": "images/donjons/gyorg.png",
+        "codes": "pow2",
       },
-      {
-        "img": "images/donjons/gyorg_fire.png",
-        "codes": "pow",
-      },
-      {
-        "img": "images/donjons/gyorg_water.png",
-        "codes": "pow",
-      },
-      {
-        "img": "images/donjons/gyorg_wind.png",
-        "codes": "pow",
-      }
     ]
   },
+ {
+   "name": "Palace of Winds w/ Element",
+   "type": "toggle_badged",
+   "base_item": "pow2",
+   "img": "images/donjons/overlay_elements_pow.png",
+   "codes": "pow"
+ },
   // DHC
   {
     "name": "DHC",
     "type": "toggle",
 	"img": "images/donjons/vaati.png",
 	"codes": "dhc"
-  },
+  } 
 ]

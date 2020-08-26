@@ -9,7 +9,7 @@
                 ["boots","cape","flute","bowandfly","falls","dogbottle","","dws_bigkey","cof_bigkey","fow_bigkey","tod_bigkey","","pow_bigkey","explicit_dhc_bigkey"],
                 ["flippersandfly","ringandbracelets","carlovtingle","nutandshroom","bothkeys","books","figurine","dws_compass","cof_compass","fow_compass","tod_compass","","pow_compass","dhc_compass"],
                 ["earth","fire","water","wind","gomode","quiver","sevenscrolls","dws_map","cof_map","fow_map","tod_map","","pow_map","dhc_map"],
-			    ["spinattack","fastspin","rockbreaker","rollattack","dashattack","perilbeam","swordbeam","downthrust","greatspin","longspin","fastsplit","","",""],
+			    ["spinattack","fastspin","fastsplit","greatspin","longspin","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack","","",""],
 		]
     },
     "options_popup": {
