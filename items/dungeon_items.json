@@ -1,177 +1,111 @@
 [
-  // DWS
-  {
-    "name": "Deepwood Shrine",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 0,
-    "capturable": false,
-    "loop": true,
-    "stages": [
-      {
-        "img":"images/donjons/chu.png",
-        "inherit_codes": false,
-        "img_mods": "@disabled",
-        "codes":"",
-      },
-      {
-        "img": "images/donjons/chu.png",
-        "codes": "dws2",
-      }
-    ]
-  },
- {
-   "name": "Deepwood Shrine w/ Element",
-   "type": "toggle_badged",
-   "base_item": "dws2",
-   "img": "images/donjons/overlay_elements_dws.png",
-   "codes": "dws"
- },
-  // COF
-  {
-    "name": "Cave of Flames",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 0,
-    "capturable": false,
-    "loop": true,
-    "stages": [
-      {
-        "img":"images/donjons/gleerok.png",
-        "inherit_codes": false,
-        "img_mods": "@disabled",
-        "codes":"",
-      },
-      {
-        "img": "images/donjons/gleerok.png",
-        "codes": "cof2",
-      }
-    ]
-  },
- {
-   "name": "Cave of Flames w/ Element",
-   "type": "toggle_badged",
-   "base_item": "cof2",
-   "img": "images/donjons/overlay_elements_cof.png",
-   "codes": "cof"
- },
-  // FOW
-  {
-    "name": "Fortress of Winds",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 0,
-    "capturable": false,
-    "loop": true,
-    "stages": [
-      {
-        "img":"images/donjons/mazaal.png",
-        "inherit_codes": false,
-        "img_mods": "@disabled",
-        "codes":"",
-      },
-      {
-        "img": "images/donjons/mazaal.png",
-        "codes": "fow2",
-      }
-    ]
-  },
- {
-   "name": "Fortress of Winds w/ Element",
-   "type": "toggle_badged",
-   "base_item": "fow2",
-   "img": "images/donjons/overlay_elements_fow.png",
-   "codes": "fow"
- },
-  // TOD
-  {
-    "name": "Temple of Droplets",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 0,
-    "capturable": false,
-    "loop": true,
-    "stages": [
-      {
-        "img":"images/donjons/octo.png",
-        "inherit_codes": false,
-        "img_mods": "@disabled",
-        "codes":"",
-      },
-      {
-        "img": "images/donjons/octo.png",
-        "codes": "tod2",
-      }
-    ]
-  },
- {
-   "name": "Temple of Droplets w/ Element",
-   "type": "toggle_badged",
-   "base_item": "tod2",
-   "img": "images/donjons/overlay_elements_tod.png",
-   "codes": "tod"
- },
-  // RC
-  {
-    "name": "Royal Crypt",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 0,
-    "capturable": false,
-    "loop": true,
-    "stages": [
-      {
-        "img":"images/donjons/gustaf.png",
-        "inherit_codes": false,
-        "img_mods": "@disabled",
-        "codes":"",
-      },
-      {
-        "img": "images/donjons/gustaf.png",
-        "codes": "rc2",
-      },
-    ]
-  },
- {
-   "name": "Royal Crypt w/ Element",
-   "type": "toggle_badged",
-   "base_item": "rc2",
-   "img": "images/donjons/overlay_elements.png",
-   "codes": "rc"
- },
-  // POW
-  {
-    "name": "Palace of Winds",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 0,
-    "capturable": false,
-    "loop": true,
-    "stages": [
-      {
-        "img":"images/donjons/gyorg.png",
-        "inherit_codes": false,
-        "img_mods": "@disabled",
-        "codes":"",
-      },
-      {
-        "img": "images/donjons/gyorg.png",
-        "codes": "pow2",
-      },
-    ]
-  },
- {
-   "name": "Palace of Winds w/ Element",
-   "type": "toggle_badged",
-   "base_item": "pow2",
-   "img": "images/donjons/overlay_elements_pow.png",
-   "codes": "pow"
- },
-  // DHC
-  {
-    "name": "DHC",
-    "type": "toggle",
-	"img": "images/donjons/vaati.png",
-	"codes": "dhc"
-  } 
+	// DWS
+	{
+		"name": "Deepwood Shrine",
+		"type": "toggle",
+		"allow_disabled": false,
+		"capturable": false,
+		"loop": true,
+		"img": "images/donjons/chu.png",
+		"codes": "dws"
+	},
+	{
+		"name": "Elemental Deepwood Shrine",
+		"type": "toggle_badged",
+		"base_item": "dws",
+		"img": "images/donjons/overlay_elements_dws.png",
+		"codes": "dwsx"
+	},
+	// COF
+	{
+		"name": "Cave of Flames",
+		"type": "toggle",
+		"allow_disabled": false,
+		"capturable": false,
+		"loop": true,
+		"img": "images/donjons/gleerok.png",
+		"codes": "cof"
+	},
+	{
+		"name": "Elemental Cave of Flames",
+		"type": "toggle_badged",
+		"base_item": "cof",
+		"img": "images/donjons/overlay_elements_cof.png",
+		"codes": "cofx"
+	},
+	// FOW
+	{
+		"name": "Fortress of Winds",
+		"type": "toggle",
+		"alow_disabled": false,
+		"capturable": false,
+		"loop": true,
+		"img": "images/donjons/mazaal.png",
+		"codes": "fow"
+	},
+	{
+		"name": "Elemental Fortress of Winds",
+		"type": "toggle_badged",
+		"base_item": "fow",
+		"img": "images/donjons/overlay_elements_fow.png",
+		"codes": "fowx"
+	},
+	// TOD
+	{
+		"name": "Temple of Droplets",
+		"type": "toggle",
+		"allow_disabled": false,
+		"capturable": false,
+		"loop": true,
+		"img": "images/donjons/octo.png",
+		"codes": "tod"
+	},
+	{
+		"name": "Elemental Temple of Droplets",
+		"type": "toggle_badged",
+		"base_item": "tod",
+		"img": "images/donjons/overlay_elements_tod.png",
+		"codes": "todx"
+	},
+	// RC
+	{
+		"name": "Royal Crypt",
+		"type": "toggle",
+		"allow_disabled": false,
+		"capturable": false,
+		"loop": true,
+		"img": "images/donjons/gustaf.png",
+		"codes": "rc"
+	},
+	{
+		"name": "Elemental Royal Crypt",
+		"type": "toggle_badged",
+		"base_item": "rc",
+		"img": "images/donjons/overlay_elements.png",
+		"codes": "rcx"
+	},
+	// POW
+	{
+		"name": "Palace of Winds",
+		"type": "toggle",
+		"allow_disabled": false,
+		"capturable": false,
+		"loop": true,
+		"img": "images/donjons/gyorg.png",
+		"codes": "pow"
+	},
+	{
+		"name": "Elemental Palace of Winds",
+		"type": "toggle_badged",
+		"base_item": "pow",
+		"img": "images/donjons/overlay_elements_pow.png",
+		"codes": "powx"
+	},
+	// DHC
+	{
+		"name": "Dark Hyrule Castle",
+		"type": "toggle",
+		"img": "images/donjons/vaati.png",
+		"codes": "dhc"
+	}
 ]
