@@ -9,9 +9,47 @@ function canDamage()
     return Tracker:ProviderCountForCode("bombs")
   end
 end
-
+function beam()
+  if has("swordbeam") then
+    return 1
+  elseif has("perilbeam") then
+    return 1
+  else
+    return 0
+  end
+end
 function hasNoGust()
   if Tracker:ProviderCountForCode("gust") > 0 then
+    return 0
+  else
+    return 1
+  end
+end
+
+function hasNoCloudtop()
+  local item = Tracker:FindObjectForCode("clouds")
+  local TopRight = Tracker:FindObjectForCode("@Top Right Fusion/Top Right Fusion")
+  local TopLeft = Tracker:FindObjectForCode("@Top Left Fusion/Top Left Fusion")
+  local BottomRight = Tracker:FindObjectForCode("@Bottom Right Fusion/Bottom Right Fusion")
+  local BottomLeft = Tracker:FindObjectForCode("@Bottom Left Fusion/Bottom Left Fusion")
+  local Central = Tracker:FindObjectForCode("@Central Fusion/Central Fusion")
+  local compte = 0
+  if TopRight.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if TopLeft.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if BottomRight.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if BottomLeft.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if Central.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if item.AcquiredCount <= compte then
     return 0
   else
     return 1

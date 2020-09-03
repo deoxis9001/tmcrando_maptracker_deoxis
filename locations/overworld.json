@@ -139,7 +139,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,beam",
+                      "grip,gust,$beam",
                       "grip,cape",
                       "grip,lights",
                       "cane"
@@ -166,7 +166,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,beam",
+                      "grip,gust,$beam",
                       "grip,cape",
                       "grip,lights"
                     ],
@@ -193,7 +193,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,beam",
+                      "grip,gust,$beam",
                       "grip,cape",
                       "grip,lights"
                     ],
@@ -224,7 +224,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,beam",
+                      "grip,gust,$beam",
                       "grip,cape",
                       "grip,lights"
                     ],
@@ -256,7 +256,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,beam",
+                      "grip,gust,$beam",
                       "grip,cape",
                       "grip,lights"
                     ],
@@ -292,7 +292,7 @@
                       "grip,gust,bombs,mitts",
                       "grip,gust,bow,mitts",
                       "grip,gust,boomerang,mitts",
-                      "grip,gust,beam,mitts",
+                      "grip,gust,$beam,mitts",
                       "grip,cape,mitts",
                       "grip,lights,mitts"
                     ],
@@ -2599,7 +2599,7 @@
             "children": [
               {
                 "name":"Central Fusion",
-                "access_rules":["[kinstoneClouds:5],kinstoneClouds:1"],
+                "access_rules":["$hasNoCloudtop"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2618,7 +2618,7 @@
               },
               {
                 "name":"Top Right Fusion",
-                "access_rules":["[kinstoneClouds:5],kinstoneClouds:1,mitts","[kinstoneClouds:5],kinstoneClouds:1,cape"],
+                "access_rules":["$hasNoCloudtop,mitts","$hasNoCloudtop,cape"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2637,7 +2637,7 @@
               },
               {
                 "name":"Top Left Fusion",
-                "access_rules":["[kinstoneClouds:5],kinstoneClouds:1,mitts","[kinstoneClouds:5],kinstoneClouds:1,cape"],
+                "access_rules":["$hasNoCloudtop,mitts","$hasNoCloudtop,cape"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2656,7 +2656,7 @@
               },
               {
                 "name":"Bottom Left Fusion",
-                "access_rules":["[kinstoneClouds:5],kinstoneClouds:1,mitts","[kinstoneClouds:5],kinstoneClouds:1,cape"],
+                "access_rules":["$hasNoCloudtop,mitts","$hasNoCloudtop,cape"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2675,7 +2675,7 @@
               },
               {
                 "name":"Bottom Right Fusion",
-                "access_rules":["[kinstoneClouds:5],kinstoneClouds:1,mitts","[kinstoneClouds:5],kinstoneClouds:1,cape"],
+                "access_rules":["$hasNoCloudtop,mitts","$hasNoCloudtop,cape"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -3670,7 +3670,8 @@
             "sections":[
               {
                 "name":"Lake Cabin",
-                "access_rules":["flippers,boots,bracelets",
+                "access_rules":["flippers,ocarina,[boots],fusions_open,bracelets",
+				  "flippers,boots,bracelets",
                   "{flippers}","{cape}","{mitts,cane}",
                   "cape,boots,gust,bracelets",
                   "mitts,cane,boots,gust,bracelets"],
@@ -3679,14 +3680,14 @@
               },
               {
                 "name":"Chest",
-                "access_rules":["flippers,ocarina,[boots]","cape,boots,gust","mitts,cane,boots,gust","flippers,boots"],
+                "access_rules":["flippers,ocarina,[boots],fusions_open","cape,boots,gust","mitts,cane,boots,gust","flippers,boots"],
                 "item_count":1
               }
             ]
           },
           {
             "name":"North Minish Hole",
-            "access_rules":["flippers,ocarina,[boots]","flippers,boots"],
+            "access_rules":["flippers,ocarina,[boots],fusions_open","flippers,boots"],
             "map_locations":[
               {
                 "map":"map",
@@ -3742,7 +3743,7 @@
           },
           {
             "name":"Minish Woods North Minish Hole",
-            "access_rules":["flippers,ocarina,[boots]","flippers,boots"],
+            "access_rules":["flippers,ocarina,[boots],fusions_open","flippers,boots"],
             "map_locations": [
               {
                 "map":"map",
