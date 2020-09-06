@@ -13,6 +13,7 @@
 		"name": "Elemental Deepwood Shrine",
 		"type": "toggle_badged",
 		"base_item": "dws",
+		"initial_active_state":true,
 		"img": "images/donjons/overlay_elements_dws.png",
 		"codes": "dwsx"
 	},
@@ -30,6 +31,7 @@
 		"name": "Elemental Cave of Flames",
 		"type": "toggle_badged",
 		"base_item": "cof",
+		"initial_active_state":true,
 		"img": "images/donjons/overlay_elements_cof.png",
 		"codes": "cofx"
 	},
@@ -47,6 +49,7 @@
 		"name": "Elemental Fortress of Winds",
 		"type": "toggle_badged",
 		"base_item": "fow",
+		"initial_active_state":true,
 		"img": "images/donjons/overlay_elements_fow.png",
 		"codes": "fowx"
 	},
@@ -64,6 +67,7 @@
 		"name": "Elemental Temple of Droplets",
 		"type": "toggle_badged",
 		"base_item": "tod",
+		"initial_active_state":true,
 		"img": "images/donjons/overlay_elements_tod.png",
 		"codes": "todx"
 	},
@@ -81,6 +85,7 @@
 		"name": "Elemental Royal Crypt",
 		"type": "toggle_badged",
 		"base_item": "rc",
+		"initial_active_state":true,
 		"img": "images/donjons/overlay_elements.png",
 		"codes": "rcx"
 	},
@@ -98,6 +103,7 @@
 		"name": "Elemental Palace of Winds",
 		"type": "toggle_badged",
 		"base_item": "pow",
+		"initial_active_state":true,
 		"img": "images/donjons/overlay_elements_pow.png",
 		"codes": "powx"
 	},
