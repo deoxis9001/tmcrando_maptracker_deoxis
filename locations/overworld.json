@@ -76,6 +76,24 @@
                       }
                     ]
                   },
+				  {
+					"name":"Middle Crenel Tektite Golden",
+					"map_locations":[
+					  {
+						"map":"map",
+						"x":425,
+						"y":470, 
+						"restrict_visibility_rules":["fusions_open,bingo_on"]
+					  }
+					],
+					"sections":[
+					  {
+						"name":"Kill Tektite",
+						"access_rules":["$canDamage"],
+						"item_count":1
+					  }
+					]
+				  },
                   //Crenel Wall HP
                   {
                     "name":"Fairy Cave Heart Piece",
@@ -546,6 +564,24 @@
                   }
                 ]
               },
+			  {
+				"name":"Lower Crenel Tektite Golden",
+				"map_locations":[
+				  {
+					"map":"map",
+					"x":300,
+					"y":730, 
+					"restrict_visibility_rules":["fusions_open,bingo_on"]
+				  }
+				],
+				"sections":[
+				  {
+					"name":"Kill Tektite",
+					"access_rules":["$canDamage"],
+					"item_count":1
+				  }
+				]
+			  },
               //Crenel HP Cave
               {
                 "name":"Crenel Heart Piece Cave",
@@ -730,6 +766,24 @@
                           {
                             "name":"Armos",
                             "item_count":2
+                          }
+                        ]
+                      },
+                      {
+                        "name":"Wind Ruins Octo Golden",
+                        "map_locations":[
+                          {
+                            "map":"map",
+                            "x":500,
+                            "y":2060, 
+							"restrict_visibility_rules":["fusions_open,bingo_on"]
+                          }
+                        ],
+                        "sections":[
+                          {
+                            "name":"Kill octo",
+							"access_rules":["$canDamage"],
+                            "item_count":1
                           }
                         ]
                       },
@@ -988,6 +1042,24 @@
                       }
                     ]
                   },
+				  {
+					"name":"Castor Wild Rope Golden",
+					"map_locations":[
+					  {
+						"map":"map",
+						"x":400,
+						"y":1240, 
+						"restrict_visibility_rules":["fusions_open,bingo_on"]
+					  }
+					],
+					"sections":[
+					  {
+						"name":"Kill Rope",
+						"access_rules":["$canDamage"],
+						"item_count":1
+					  }
+					]
+				  },
                   {
                     "name":"Wilds Platform Chest",
                     "access_rules":["bow"],
@@ -1312,7 +1384,25 @@
                     "chest_opened_img":"images/items-map/Heart Piece Gray.png"
                   }
                 ]
-              }
+              },
+			  {
+				"name":"Western Woods Octo Golden",
+				"map_locations":[
+				  {
+					"map":"map",
+					"x":900,
+					"y":1912, 
+					"restrict_visibility_rules":["fusions_open,bingo_on"]
+				  }
+				],
+				"sections":[
+				  {
+					"name":"Kill Octo",
+					"access_rules":["$canDamage"],
+					"item_count":1
+				  }
+				]
+			  }
             ]
           },
           //Business Scrub
@@ -1470,6 +1560,24 @@
               }
             ]
           },
+		  {
+			"name":"Hyrule Castle Rope Golden",
+			"map_locations":[
+			  {
+				"map":"map",
+				"x":1610,
+				"y":300, 
+				"restrict_visibility_rules":["fusions_open,bingo_on"]
+			  }
+			],
+			"sections":[
+			  {
+				"name":"Kill Rope",
+                "access_rules":["$canDamage"],
+				"item_count":1
+			  }
+			]
+		  },
           {
             "name":"Moat",
             "access_rules":["flippers"],
@@ -3185,6 +3293,24 @@
                   }
                 ]
               },
+			  {
+				"name":"Veil Falls Tektite Golden",
+				"map_locations":[
+				  {
+					"map":"map",
+					"x":1830,
+					"y":275, 
+					"restrict_visibility_rules":["fusions_open,bingo_on"]
+				  }
+				],
+				"sections":[
+				  {
+					"name":"Kill Tektite",
+					"access_rules":["$canDamage"],
+					"item_count":1
+				  }
+				]
+			  },
               {
                 "name":"Veil Falls North Digging Spot",
                 "access_rules":["grip,mitts,[lamp]"],
@@ -3914,6 +4040,25 @@
               }
             ]
           },
+		  {
+			"name":"Eastern Hills Rope Golden",
+            "access_rules":["sword","bombs","lights","lamp"],
+			"map_locations":[
+			  {
+				"map":"map",
+				"x":1725,
+				"y":1725, 
+				"restrict_visibility_rules":["fusions_open,bingo_on"]
+			  }
+			],
+			"sections":[
+			  {
+				"name":"Kill Rope",
+                "access_rules":["$canDamage"],
+				"item_count":1
+			  }
+			]
+		  },
           {
             "name":"Farm Rupee",
             "access_rules":["sword,mitts","bombs,mitts","lights,mitts","lamp,mitts","ocarina,mitts"],
@@ -4276,6 +4421,24 @@
               }
             ]
           },
+		  {
+			"name":"North Minish Woods Octo Golden",
+			"map_locations":[
+			  {
+				"map":"map",
+				"x":2200,
+				"y":1550, 
+				"restrict_visibility_rules":["fusions_open,bingo_on"]
+			  }
+			],
+			"sections":[
+			  {
+				"name":"Kill Octo",
+                "access_rules":["$canDamage"],
+				"item_count":1
+			  }
+			]
+		  },
           {
             "name":"Minish Flippers Cave",
             "access_rules":["flippers,bombs","flippers,dws"],
