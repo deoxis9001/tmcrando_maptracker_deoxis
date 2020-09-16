@@ -10,9 +10,9 @@
         "pins",
         "autotracker"
       ],
-      "version": "1.0.0.6",
+      "version": "1.0.0.7",
       "uid": "tmcrando_maptracker_deoxis",
-      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases/download/1.0.0.6/tmcrando_maptracker_deoxis.zip",
+      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases/download/1.0.0.7/tmcrando_maptracker_deoxis.zip",
       "variants": [
         {
           "name": "Map Tracker",
