@@ -223,6 +223,25 @@
     ],
   },
   {
+    "name":"Bingo",
+    "type":"progressive",
+    "loop":false,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/bingo_on.png",
+        "codes":"bingo_off",
+        "inherit_codes":false,
+		"img_mods":"grayscale"
+      },
+      {
+        "img":"images/options/bingo_on.png",
+        "codes":"bingo_on",
+        "inherit_codes":true
+      }
+    ],
+  },
+  {
    "name": "Figurine",
    "type": "consumable",
    "img": "images/options/figurine.png",
