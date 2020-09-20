@@ -887,6 +887,17 @@ function updateLocations(segment)
   if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
   end
+  --GOLDEN
+  updateSectionChestCountFromByteAndFlag(segment, "@Wind Ruins Octo Golden/Kill Octo", 0x2002ca2, 0x02)
+  updateSectionChestCountFromByteAndFlag(segment, "@Lower Crenel Tektite Golden/Kill Tektite", 0x2002ca2, 0x04)
+  updateSectionChestCountFromByteAndFlag(segment, "@Castor Wild Rope Golden/Kill Rope", 0x2002ca2, 0x08)
+  updateSectionChestCountFromByteAndFlag(segment, "@Eastern Hills Rope Golden/Kill Rope", 0x2002ca2, 0x10)
+  updateSectionChestCountFromByteAndFlag(segment, "@Hyrule Castle Rope Golden/Kill Rope", 0x2002ca2, 0x20)
+  updateSectionChestCountFromByteAndFlag(segment, "@Veil Falls Tektite Golden/Kill Tektite", 0x2002ca2, 0x40)
+  updateSectionChestCountFromByteAndFlag(segment, "@Middle Crenel Tektite Golden/Kill Tektite", 0x2002ca2, 0x80)
+  updateSectionChestCountFromByteAndFlag(segment, "@North Minish Woods Octo Golden/Kill Octo", 0x2002ca3, 0x01)
+  updateSectionChestCountFromByteAndFlag(segment, "@Western Woods Octo Golden/Kill Octo", 0x2002ca3, 0x02)
+  
 
   --FUSIONS
   updateSectionChestCountFromByteAndFlag(segment, "@Top Right Fusion/Top Right Fusion", 0x2002c81, 0x02)
