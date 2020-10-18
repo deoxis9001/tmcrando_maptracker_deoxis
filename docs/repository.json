@@ -23,7 +23,7 @@
           ]
         },
         {
-          "name": "Items Only - Horizontal or Vertical Broadcast",
+          "name": "Items Only",
           "flags": [
             "autotracker"
           ]
