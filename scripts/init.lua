@@ -16,7 +16,9 @@ end
 
 Tracker:AddLayouts("layouts/tracker.json")
 
-if (string.find(Tracker.ActiveVariantUID, "live")) then
+if (string.find(Tracker.ActiveVariantUID, "_H")) then
+    Tracker:AddLayouts("layouts/standard_h_broadcast.json")
+elseif (string.find(Tracker.ActiveVariantUID, "live")) then
     Tracker:AddLayouts("layouts/live_broadcast.json")
 else
     Tracker:AddLayouts("layouts/standard_broadcast.json")

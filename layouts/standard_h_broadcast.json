@@ -1,0 +1,28 @@
+{
+    "tracker_broadcast": {
+        "type": "array",
+        "dropshadow": true,
+        "margin": "0",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_margin": "0,0,0,0",
+                        "rows": [
+							["sword","gust","cane","boomerang","wilds","wallet","","dwsx","cofx","fowx","todx","rcx","powx","dhc"],
+							["shield","mittsandfly","lamp","bombsremote","clouds","10hearts","","dws_smallkey","cof_smallkey","fow_smallkey","tod_smallkey","cryptkey","pow_smallkey","explicit_dhc_smallkey"],
+							["boots","cape","flute","bowandfly","falls","dogbottle","","dws_bigkey","cof_bigkey","fow_bigkey","tod_bigkey","","pow_bigkey","explicit_dhc_bigkey"],
+							["flippersandfly","ringandbracelets","carlovtingle","nutandshroom","bothkeys","books","figurine","dws_compass","cof_compass","fow_compass","tod_compass","","pow_compass","dhc_compass"],
+							["earth","fire","water","wind","gomode","quiver","sevenscrolls","dws_map","cof_map","fow_map","tod_map","","pow_map","dhc_map"],
+							["spinattack","fastspin","fastsplit","greatspin","longspin","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack","","",""],
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
