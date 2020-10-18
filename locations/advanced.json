@@ -987,7 +987,7 @@
           },
           {
             "name":"Minish Dirt Room Key Drop",
-            "access_rules":["bow,mitts,fow_smallkey:3"],
+            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2"],
             "map_locations":[
               {
                 "map":"fow",
@@ -1153,7 +1153,7 @@
           },
           {
             "name":"Underwater Pot",
-            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,$canDamage,tod_bigkey"],
+            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1210,8 +1210,8 @@
           {
             "name":"Right Path Rupees",
             "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,flippers,$canDamage",
-            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,gust,$canDamage",
-            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,cape,$canDamage"],
+            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,$canDamage",
+            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,,$canDamage"],
             "map_locations":[
               {
                 "map":"tod",

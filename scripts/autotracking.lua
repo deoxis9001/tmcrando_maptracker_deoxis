@@ -22,19 +22,21 @@ function autotracker_started()
   print("Started Tracking")
 
   DWS_KEY_COUNT = 0
-  DWS_KEY_PREV_VALUE = 0
+  DWS_KEY_USED = 0
   COF_KEY_COUNT = 0
-  COF_KEY_PREV_VALUE = 0
+  COF_KEY_USED = 0
   FOW_KEY_COUNT = 0
-  FOW_KEY_PREV_VALUE = 0
+  FOW_KEY_USED = 0
   TOD_KEY_COUNT = 0
-  TOD_KEY_PREV_VALUE = 0
+  TOD_KEY_USED = 0
   POW_KEY_COUNT = 0
-  POW_KEY_PREV_VALUE = 0
+  POW_KEY_USED = 0
   DHC_KEY_COUNT = 0
-  DHC_KEY_PREV_VALUE = 0
+  DHC_KEY_USED = 0
+  DHCKS_KEY_COUNT = 0
+  DHCKS_KEY_USED = 0
   RC_KEY_COUNT = 0
-  RC_KEY_PREV_VALUE = 0
+  RC_KEY_USED = 0
 end
 
 U8_READ_CACHE = 0
@@ -611,47 +613,117 @@ end
 function updateSmallKeys(segment, code, address)
   local item = Tracker:FindObjectForCode(code)
   if code == "dws_smallkey" then
-    if ReadU8(segment, address) > DWS_KEY_PREV_VALUE then
-      DWS_KEY_COUNT = DWS_KEY_COUNT + 1
-      item.AcquiredCount = DWS_KEY_COUNT
-    end
-    DWS_KEY_PREV_VALUE = ReadU8(segment, address)
+	DWS_KEY_USED = 0
+	  if testFlag(segment, 0x2002d3f, 0x40) then
+	DWS_KEY_USED = DWS_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d41, 0x04) then
+	DWS_KEY_USED = DWS_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d43, 0x10) then
+	DWS_KEY_USED = DWS_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d44, 0x20) then
+	DWS_KEY_USED = DWS_KEY_USED + 1
+	  end
+      DWS_KEY_COUNT = ReadU8(segment, address)
+      item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
   elseif code == "cof_smallkey" then
-    if ReadU8(segment, address) > COF_KEY_PREV_VALUE then
-      COF_KEY_COUNT = COF_KEY_COUNT + 1
-      item.AcquiredCount = COF_KEY_COUNT
-    end
-    COF_KEY_PREV_VALUE = ReadU8(segment, address)
+      COF_KEY_USED = 0
+	  if testFlag(segment, 0x2002d56, 0x10) then
+	COF_KEY_USED = COF_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d57, 0x20) then
+	COF_KEY_USED = COF_KEY_USED + 1
+	  end
+      COF_KEY_COUNT = ReadU8(segment, address)
+      item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
   elseif code == "fow_smallkey" then
-    if ReadU8(segment, address) > FOW_KEY_PREV_VALUE then
-      FOW_KEY_COUNT = FOW_KEY_COUNT + 1
-      item.AcquiredCount = FOW_KEY_COUNT
-    end
-    FOW_KEY_PREV_VALUE = ReadU8(segment, address)
+      FOW_KEY_USED = 0
+	  if testFlag(segment, 0x2002d6f, 0x20) then
+	FOW_KEY_USED = FOW_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d71, 0x10) then
+	FOW_KEY_USED = FOW_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d72, 0x40) then
+	FOW_KEY_USED = FOW_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d72, 0x80) then
+	FOW_KEY_USED = FOW_KEY_USED + 1
+	  end
+      FOW_KEY_COUNT = ReadU8(segment, address)
+      item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
   elseif code == "tod_smallkey" then
-    if ReadU8(segment, address) > TOD_KEY_PREV_VALUE then
-      TOD_KEY_COUNT = TOD_KEY_COUNT + 1
-      item.AcquiredCount = TOD_KEY_COUNT
-    end
-    TOD_KEY_PREV_VALUE = ReadU8(segment, address)
+      TOD_KEY_USED = 0
+	  if testFlag(segment, 0x2002d89, 0x04) then
+	TOD_KEY_USED = TOD_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d8a, 0x01) then
+	TOD_KEY_USED = TOD_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d8c, 0x02) then
+	TOD_KEY_USED = TOD_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d90, 0x08) then
+	TOD_KEY_USED = TOD_KEY_USED + 1
+	  end
+      TOD_KEY_COUNT = ReadU8(segment, address)
+      item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
   elseif code == "pow_smallkey" then
-    if ReadU8(segment, address) > POW_KEY_PREV_VALUE then
-      POW_KEY_COUNT = POW_KEY_COUNT + 1
-      item.AcquiredCount = POW_KEY_COUNT
-    end
-    POW_KEY_PREV_VALUE = ReadU8(segment, address)
+      POW_KEY_USED = 0
+	  if testFlag(segment, 0x2002da3, 0x10) then
+	POW_KEY_USED = POW_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002da3, 0x80) then
+	POW_KEY_USED = POW_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002da5, 0x04) then
+	POW_KEY_USED = POW_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002da5, 0x08) then
+	POW_KEY_USED = POW_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002da6, 0x08) then
+	POW_KEY_USED = POW_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002da9, 0x04) then
+	POW_KEY_USED = POW_KEY_USED + 1
+	  end
+      POW_KEY_COUNT = ReadU8(segment, address)
+      item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
   elseif code == "explicit_dhc_smallkey" then
-    if ReadU8(segment, address) > DHC_KEY_PREV_VALUE then
-      DHC_KEY_COUNT = DHC_KEY_COUNT + 1
-      item.AcquiredCount = DHC_KEY_COUNT
-    end
-    DHC_KEY_PREV_VALUE = ReadU8(segment, address)
+      DHC_KEY_USED = 0
+	  if testFlag(segment, 0x2002dbb, 0x20) then
+	DHC_KEY_USED = DHC_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002dbc, 0x10) then
+	DHC_KEY_USED = DHC_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002dbc, 0x20) then
+	DHC_KEY_USED = DHC_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002dbc, 0x40) then
+	DHC_KEY_USED = DHC_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002dbc, 0x80) then
+	DHC_KEY_USED = DHC_KEY_USED + 1
+	  end
+      DHC_KEY_COUNT = ReadU8(segment, address)
+      item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
   elseif code == "cryptkey" then
-    if ReadU8(segment, address) > RC_KEY_PREV_VALUE then
-      RC_KEY_COUNT = RC_KEY_COUNT + 1
-      item.AcquiredCount = RC_KEY_COUNT
-    end
-    RC_KEY_PREV_VALUE = ReadU8(segment, address)
+      RC_KEY_USED = 0
+	  if testFlag(segment, 0x2002d00, 0x80) then
+	RC_KEY_USED = RC_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d01, 0x01) then
+	RC_KEY_USED = RC_KEY_USED + 1
+	  end
+	  if testFlag(segment, 0x2002d12, 0x08) then
+	RC_KEY_USED = RC_KEY_USED + 1
+	  end
+      RC_KEY_COUNT = ReadU8(segment, address)
+      item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED
   else
     item.AcquiredCount = 0
   end
@@ -1678,9 +1750,9 @@ function updateKeys(segment)
     return true
   end
 end
-ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey)
 ScriptHost:AddMemoryWatch("TMC Locations and Bosses", 0x2002c81, 0x200, updateLocations)
 ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x45, updateItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("TMC Item Upgrades", 0x2002ae4, 0x0c, updateGearFromMemory)
-ScriptHost:AddMemoryWatch("TMC Keys", 0x2002e9d, 0x16, updateKeys)
-ScriptHost:AddMemoryWatch("TMC figurine", 0x2002af0, 0x16, figurine)
+ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey)
+ScriptHost:AddMemoryWatch("TMC Keys", 0x2002d00, 0x200, updateKeys)
+ScriptHost:AddMemoryWatch("TMC figurine", 0x2002af0, 0x01, figurine)

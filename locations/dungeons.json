@@ -1121,7 +1121,7 @@
           //behind small key
           {
             "name":"Octo",
-            "access_rules":["gust,flippers,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[cape],lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[flippers],cape,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Heart Container.png",
             "chest_opened_img":"images/items-map/Heart Container Gray.png"
@@ -1259,7 +1259,7 @@
           //behind small key
           {
             "name":"Octo",
-            "access_rules":["gust,flippers,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[cape],lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],            "item_count": 1,
+            "access_rules":["gust,flippers,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[flippers],cape,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],            "item_count": 1,
             "chest_unopened_img":"images/items-map/Heart Container.png",
             "chest_opened_img":"images/items-map/Heart Container Gray.png"
           }
@@ -1389,7 +1389,7 @@
           //behind small key
           {
             "name":"Octo",
-            "access_rules":["gust,flippers,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[cape],lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],            "item_count": 1,
+            "access_rules":["gust,flippers,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[flippers],cape,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],            "item_count": 1,
             "chest_unopened_img":"images/items-map/Heart Container.png",
             "chest_opened_img":"images/items-map/Heart Container Gray.png"
           }
@@ -1541,7 +1541,7 @@
           //behind small key
           {
             "name":"Octo",
-            "access_rules":["gust,flippers,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[cape],lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],            "item_count": 1,
+            "access_rules":["gust,flippers,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[flippers],cape,lamp,bombs,sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],            "item_count": 1,
             "chest_unopened_img":"images/items-map/Heart Container.png",
             "chest_opened_img":"images/items-map/Heart Container Gray.png"
           }
