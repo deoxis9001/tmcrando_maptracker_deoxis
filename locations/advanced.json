@@ -2030,10 +2030,7 @@
           },
           {
             "name":"Northwest Tower",
-            "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
+            "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2099,7 +2096,10 @@
           },
           {
             "name":"Northeast Tower",
-            "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
+            "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2247,10 +2247,7 @@
           },
           {
             "name":"Northwest Tower Open",
-            "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
+            "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2316,7 +2313,10 @@
           },
           {
             "name":"Northeast Tower Open",
-            "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
+            "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2492,10 +2492,7 @@
           },
           {
             "name":"Northwest Tower Ped",
-            "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
-              "bombs,cape,$beam,lamp,explicit_dhc_smallkey:1,sword5,spinattack"],
+            "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2561,7 +2558,10 @@
           },
           {
             "name":"Northeast Tower Ped",
-            "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
+            "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+              "bombs,cape,$beam,lamp,explicit_dhc_smallkey:1,sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
