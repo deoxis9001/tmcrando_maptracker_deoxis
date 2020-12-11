@@ -10,9 +10,9 @@
         "pins",
         "autotracker"
       ],
-      "version": "1.0.0.13",
+      "version": "1.0.0.14",
       "uid": "tmcrando_maptracker_deoxis",
-      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases/download/1.0.0.13/tmcrando_maptracker_deoxis.zip",
+      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases/download/1.0.0.14/tmcrando_maptracker_deoxis.zip",
       "variants": [
         {
           "name": "Map Tracker - Horizontal or Vertical Broadcast",
