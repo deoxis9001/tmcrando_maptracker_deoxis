@@ -1247,7 +1247,7 @@
           },
           {
             "name":"Lower Underwater Rupees",
-            "access_rules":["tod_bigkey,flippers"],
+            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
