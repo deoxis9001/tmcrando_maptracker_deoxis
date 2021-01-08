@@ -31,37 +31,13 @@
         "h_alignment": "center",
         "item_margin": "0,0,2,10",
         "rows": [
-          [
-              "sword", "gust", "cane", "boomerang", "quiver","bigkey"
-          ],
-          [
-              "shield", "mitts", "lamp", "bombs", "wilds","smallkey"
-          ],
-          [
-              "boots", "cape", "ocarina", "bow", "clouds","genericyellow"
-          ],
-          [
-              "bottle",
-              "jabber",
-              "mushroom",
-              "llrkey",
-              "falls",
-              "dogfood"
-          ],
-          [
-              "grip",
-              "bracelets",
-              "flippers",
-              "gravekey",
-              "heartpiece",
-              "butterfly"
-          ],
-          [
-              "10hearts","sevenscrolls","wallet","carlov","books","remotebombs"
-          ],
-          [
-            "dogbottle","earth","fire","water","wind","figurine"
-          ]
+          ["sword", "gust", "cane", "boomerang", "wallet","wilds"],
+          ["shield", "mitts", "lamp", "bombs", "remotebombs","clouds"],
+          ["boots", "cape", "ocarina", "bow", "quiver","falls"],
+          ["dogfood","grip","carlov","jabber","llrkey","genericyellow"],
+          ["bottle","bracelets","trophy","mushroom","gravekey","bigkey"],
+          ["10hearts","heartpiece","sevenscrolls","flippers", "butterfly","smallkey"],
+          ["earth","fire","water","wind","books","figurine"]
         ]
       }
     },
