@@ -47,11 +47,6 @@
         "inherit_codes":false
       },
       {
-        "img": "images/fusion/Kinsanity_Random.png",
-        "codes": "fusions_Rando",
-        "inherit_codes":false
-      },
-      {
         "img": "images/options/Kinsanity_None.png",
         "codes": "fusions_none",
         "inherit_codes":false
@@ -160,6 +155,11 @@
     "allow_disabled":false,
     "stages":[
       {
+        "img": "images/options/Four Sword.png",
+        "inherit_codes": false,
+        "codes": "sword5Needed"
+      },
+      {
         "img": "images/options/Smith's Sword0.png",
         "inherit_codes": false,
         "codes": "sword0Needed"
@@ -183,11 +183,6 @@
         "img": "images/options/Blue Sword.png",
         "inherit_codes": false,
         "codes": "sword4Needed"
-      },
-      {
-        "img": "images/options/Four Sword.png",
-        "inherit_codes": false,
-        "codes": "sword5Needed"
       }
     ]
   },
