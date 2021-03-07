@@ -1209,9 +1209,8 @@
           },
           {
             "name":"Right Path Rupees",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,flippers,$canDamage",
-            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,$canDamage",
-            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,$canDamage",
+            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,flippers,[lamp]"],
             "map_locations":[
               {
                 "map":"tod",

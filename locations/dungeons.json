@@ -1196,9 +1196,8 @@
           },
           {
             "name":"Right Path Rupees",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,flippers,$canDamage",
-            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,gust,$canDamage",
-            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,cape,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,$canDamage",
+            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,flippers,[lamp]"],
             "item_count":5
           },
           {
@@ -1463,9 +1462,8 @@
           },
           {
             "name":"Right Path Rupees",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,flippers,$canDamage",
-            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,gust,$canDamage",
-            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,cape,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,$canDamage",
+            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,flippers,[lamp]"],
             "item_count":5
           },
           {
