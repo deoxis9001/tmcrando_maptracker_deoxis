@@ -59,7 +59,7 @@
           //At least two small keys
           {
             "name":"Mulldozer Key",
-            "access_rules":["$canDamage,[dws_smallkey:4],dws_smallkey:2"],
+            "access_rules":["[$canDamage],$canDamage_off,[dws_smallkey:4],dws_smallkey:2"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -102,7 +102,7 @@
           //if lamp then two
           {
             "name":"Madderpillar Chest",
-            "access_rules": ["$canDamage,[dws_smallkey:4],dws_smallkey:3","dws_smallkey:2,lamp,$canDamage","[lamp],dws_smallkey:2,gust,$canDamage","dws_smallkey:1,lamp,gust,$canDamage"],
+            "access_rules": ["[$canDamage],$canDamage_off,[dws_smallkey:4],dws_smallkey:3","dws_smallkey:2,lamp,[$canDamage],$canDamage_off","[lamp],dws_smallkey:2,gust,[$canDamage],$canDamage_off","dws_smallkey:1,lamp,gust,[$canDamage],$canDamage_off"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/big_chest_closed.png",
             "chest_opened_img":"images/items-map/big_chest_open.png"
@@ -167,8 +167,8 @@
           {
             "name":"Spiny Beetle Fight",
             "access_rules": [
-              "cane,$canDamage",
-              "shield,$canDamage",
+              "cane,[$canDamage],$canDamage_off",
+              "shield,[$canDamage],$canDamage_off",
 			  "downthrust,cape,sword",
               "bombs"],
             "item_count": 1,
@@ -178,8 +178,8 @@
           {
             "name":"Big Chest Room",
             "access_rules": [
-              "cane,$canDamage",
-              "shield,$canDamage",
+              "cane,[$canDamage],$canDamage_off",
+              "shield,[$canDamage],$canDamage_off",
 			  "downthrust,cape,sword",
               "bombs"],
             "item_count": 2,
@@ -188,8 +188,8 @@
           {
             "name":"First Rollobite Room",
             "access_rules": [
-              "cane,$canDamage",
-              "shield,$canDamage",
+              "cane,[$canDamage],$canDamage_off",
+              "shield,[$canDamage],$canDamage_off",
 			  "downthrust,cape,sword",
               "bombs"],
             "item_count": 2,
@@ -200,8 +200,8 @@
             "name":"Bombable Wall Heart Piece",
             "short_name":"Bomb Wall HP",
             "access_rules": ["bombs,sword,cof_smallkey:1",
-              "{cane,$canDamage}",
-              "{shield,$canDamage}",
+              "{cane,[$canDamage],$canDamage_off}",
+              "{shield,[$canDamage],$canDamage_off}",
               "{downthrust,cape,sword}",
               "{bombs}"],
             "capture_item": true,
@@ -292,8 +292,8 @@
           {
             "name":"Spiny Beetle Fight",
             "access_rules": [
-              "cane,$canDamage",
-              "shield,$canDamage",
+              "cane,[$canDamage],$canDamage_off",
+              "shield,[$canDamage],$canDamage_off",
 			  "downthrust,cape,sword",
               "bombs"],
             "item_count": 1,
@@ -303,8 +303,8 @@
           {
             "name":"Rupees",
             "access_rules":[
-              "cane,$canDamage",
-              "shield,$canDamage",
+              "cane,[$canDamage],$canDamage_off",
+              "shield,[$canDamage],$canDamage_off",
 			  "downthrust,cape,sword",
               "bombs"],
             "item_count":5
@@ -312,8 +312,8 @@
           {
             "name":"Big Chest Room",
             "access_rules": [
-              "cane,$canDamage",
-              "shield,$canDamage",
+              "cane,[$canDamage],$canDamage_off",
+              "shield,[$canDamage],$canDamage_off",
 			  "downthrust,cape,sword",
               "bombs"],
             "item_count": 2,
@@ -322,8 +322,8 @@
           {
             "name":"First Rollobite Room",
             "access_rules": [
-              "cane,$canDamage",
-              "shield,$canDamage",
+              "cane,[$canDamage],$canDamage_off",
+              "shield,[$canDamage],$canDamage_off",
 			  "downthrust,cape,sword",
               "bombs"],
             "item_count": 2,
@@ -334,8 +334,8 @@
             "name":"Bombable Wall Heart Piece",
             "short_name":"Bomb Wall HP",
             "access_rules": ["bombs,sword,cof_smallkey:1",
-              "{cane,$canDamage}",
-              "{shield,$canDamage}",
+              "{cane,[$canDamage],$canDamage_off}",
+              "{shield,[$canDamage],$canDamage_off}",
 			  "{downthrust,cape,sword}",
               "{bombs}"],
             "capture_item": true,
@@ -1043,14 +1043,14 @@
           //Need big key
           {
             "name":"Post Madderpillar Chest",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,$canDamage","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,sword","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,sword"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/big_chest_closed.png",
             "chest_opened_img":"images/items-map/big_chest_open.png"
           },
           {
             "name":"Underwater Pot",
-            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,$canDamage,tod_bigkey"],
+            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,[$canDamage],$canDamage_off,tod_bigkey"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -1065,17 +1065,18 @@
           },
           {
             "name":"Ice Puzzle Free Chest",
-            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,$canDamage,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,[$canDamage],$canDamage_off,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count": 1
           },
           {
             "name":"Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,$canDamage,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,[$canDamage],$canDamage_off,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count":1
           },
           {
             "name":"Post Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","gust,cape,lamp,tod_bigkey:1,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
+			"gust,cape,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1,[$canDamage],$canDamage_off"],
             "item_count": 1
           },
           //END OF LEFT PATH
@@ -1107,13 +1108,13 @@
           },
           {
             "name":"Dark Maze",
-            "access_rules":["lamp,$canDamage,tod_bigkey"],
+            "access_rules":["lamp,[$canDamage],$canDamage_off,tod_bigkey"],
             "item_count": 3,
             "clear_as_group": false
           },
           {
             "name":"Dark Maze Bomb Wall",
-            "access_rules":["lamp,$canDamage,bombs,tod_bigkey"],
+            "access_rules":["lamp,[$canDamage],$canDamage_off,bombs,tod_bigkey"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -1169,14 +1170,14 @@
           //Need big key
           {
             "name":"Post Madderpillar Chest",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,$canDamage","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,sword","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,sword"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/big_chest_closed.png",
             "chest_opened_img":"images/items-map/big_chest_open.png"
           },
           {
             "name":"Underwater Pot",
-            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,$canDamage,tod_bigkey"],
+            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,[$canDamage],$canDamage_off,tod_bigkey"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -1196,23 +1197,24 @@
           },
           {
             "name":"Right Path Rupees",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,$canDamage",
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,[$canDamage],$canDamage_off",
             "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,flippers,[lamp]"],
             "item_count":5
           },
           {
             "name":"Ice Puzzle Free Chest",
-            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,$canDamage,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,[$canDamage],$canDamage_off,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count": 1
           },
           {
             "name":"Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,$canDamage,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,[$canDamage],$canDamage_off,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count":1
           },
           {
             "name":"Post Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","gust,cape,lamp,tod_bigkey:1,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
+			"gust,cape,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1,[$canDamage],$canDamage_off"],
             "item_count": 1
           },
           //END OF LEFT PATH
@@ -1244,13 +1246,13 @@
           },
           {
             "name":"Dark Maze",
-            "access_rules":["lamp,$canDamage,tod_bigkey"],
+            "access_rules":["lamp,[$canDamage],$canDamage_off,tod_bigkey"],
             "item_count": 3,
             "clear_as_group": false
           },
           {
             "name":"Dark Maze Bomb Wall",
-            "access_rules":["lamp,$canDamage,bombs,tod_bigkey"],
+            "access_rules":["lamp,[$canDamage],$canDamage_off,bombs,tod_bigkey"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -1305,14 +1307,14 @@
           //Need big key
           {
             "name":"Post Madderpillar Chest",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,$canDamage","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,sword","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,sword"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/big_chest_closed.png",
             "chest_opened_img":"images/items-map/big_chest_open.png"
           },
           {
             "name":"Underwater Pot",
-            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,$canDamage,tod_bigkey"],
+            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,[$canDamage],$canDamage_off,tod_bigkey"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -1327,17 +1329,18 @@
           },
           {
             "name":"Ice Puzzle Free Chest",
-            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,$canDamage,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,[$canDamage],$canDamage_off,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count": 1
           },
           {
             "name":"Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,$canDamage,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,[$canDamage],$canDamage_off,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count":1
           },
           {
             "name":"Post Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","gust,cape,lamp,tod_bigkey:1,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
+			"gust,cape,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1,[$canDamage],$canDamage_off"],
             "item_count": 1
           },
           //END OF LEFT PATH
@@ -1374,13 +1377,13 @@
           },
           {
             "name":"Dark Maze",
-            "access_rules":["lamp,$canDamage,tod_bigkey"],
+            "access_rules":["lamp,[$canDamage],$canDamage_off,tod_bigkey"],
             "item_count": 3,
             "clear_as_group": false
           },
           {
             "name":"Dark Maze Bomb Wall",
-            "access_rules":["lamp,$canDamage,bombs,tod_bigkey"],
+            "access_rules":["lamp,[$canDamage],$canDamage_off,bombs,tod_bigkey"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -1435,14 +1438,14 @@
           //Need big key
           {
             "name":"Post Madderpillar Chest",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,$canDamage","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,$canDamage"],
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,sword","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,sword"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/big_chest_closed.png",
             "chest_opened_img":"images/items-map/big_chest_open.png"
           },
           {
             "name":"Underwater Pot",
-            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,$canDamage,tod_bigkey"],
+            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,[$canDamage],$canDamage_off,tod_bigkey"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -1462,7 +1465,7 @@
           },
           {
             "name":"Right Path Rupees",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,$canDamage",
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,[$canDamage],$canDamage_off",
             "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,flippers,[lamp]"],
             "item_count":5
           },
@@ -1478,17 +1481,18 @@
           },
           {
             "name":"Ice Puzzle Free Chest",
-            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,$canDamage,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,[$canDamage],$canDamage_off,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count": 1
           },
           {
             "name":"Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,$canDamage,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,[$canDamage],$canDamage_off,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "item_count":1
           },
           {
             "name":"Post Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","gust,cape,lamp,tod_bigkey:1,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
+			"gust,cape,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1,[$canDamage],$canDamage_off"],
             "item_count": 1
           },
           //END OF LEFT PATH
@@ -1525,13 +1529,13 @@
           },
           {
             "name":"Dark Maze",
-            "access_rules":["lamp,$canDamage,tod_bigkey"],
+            "access_rules":["lamp,[$canDamage],$canDamage_off,tod_bigkey"],
             "item_count": 3,
             "clear_as_group": false
           },
           {
             "name":"Dark Maze Bomb Wall",
-            "access_rules":["lamp,$canDamage,bombs,tod_bigkey"],
+            "access_rules":["lamp,[$canDamage],$canDamage_off,bombs,tod_bigkey"],
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"

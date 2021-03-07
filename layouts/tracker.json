@@ -20,7 +20,7 @@
         "h_alignment": "center",
         "item_margin": "1,2",
         "rows": [
-          ["obscure_off","fusions_open","dhc_closed","element4Needed","sword0Needed","rupees_off","figurine_option","bingo_off"]
+          ["obscure_off","fusions_open","dhc_closed","element4Needed","sword0Needed","rupees_off","figurine_option","weapons_off","bingo_off"]
                 ]
       }
     },
@@ -38,7 +38,8 @@
           ["bottle","bracelets","trophy","mushroom","gravekey","bigkey"],
           ["10hearts","heartpiece","sevenscrolls","flippers", "butterfly","smallkey"],
           ["earth","fire","water","wind","books","figurine"]
-        ]
+		         
+        ]        
       }
     },
     "tracker_default": {

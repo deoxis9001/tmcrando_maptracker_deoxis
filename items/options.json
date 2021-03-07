@@ -47,6 +47,11 @@
         "inherit_codes":false
       },
       {
+        "img": "images/fusion/Kinsanity_Random.png",
+        "codes": "fusions_Rando",
+        "inherit_codes":false
+      },
+      {
         "img": "images/options/Kinsanity_None.png",
         "codes": "fusions_none",
         "inherit_codes":false
@@ -249,5 +254,22 @@
    "min_quantity":0,
    "max_quantity":136,
    "increment":10
- }
+ },
+  {
+    "name": "Weapons",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/weapons_off.png",
+        "codes": "weapons_off"
+      },
+      {
+        "img":"images/options/weapons_on.png",
+        "codes": "weapons_on",
+        "inherit_codes":false
+      }
+    ]
+  }
 ]
