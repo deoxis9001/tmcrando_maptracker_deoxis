@@ -10,12 +10,13 @@
         "pins",
         "autotracker"
       ],
-      "version": "1.0.0.19",
+      "version": "1.0.0.20",
       "uid": "tmcrando_maptracker_deoxis",
-      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases/download/1.0.0.19/tmcrando_maptracker_deoxis.zip",
+      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases/download/1.0.0.20/tmcrando_maptracker_deoxis.zip",
+	  "documentation_url": "https://minish.deoxis9001.tk/index.php",
       "variants": [
         {
-          "name": "Map Tracker - Horizontal or Vertical Broadcast",
+          "name": "Map Tracker - Horizontal or Vertical Broadcast (F2) - Help (F1)",
           "flags": [
             "map",
             "pins",
