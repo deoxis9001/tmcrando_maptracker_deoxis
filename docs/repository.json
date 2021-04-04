@@ -16,7 +16,7 @@
 	  "documentation_url": "https://minish.deoxis9001.tk/index.php",
       "variants": [
         {
-          "name": "Map Tracker - Horizontal or Vertical Broadcast (F2) - Help (F1)",
+          "name": "Map Tracker - Horizontal or Vertical Broadcast (F2)",
           "flags": [
             "map",
             "pins",
