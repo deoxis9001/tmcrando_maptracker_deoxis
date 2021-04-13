@@ -464,7 +464,7 @@
             "access_rules": [
               "cane,sword,cof_smallkey:1",
               "shield,sword,cof_smallkey:1",
-			  "downthrust,cape,sword",
+			  "downthrust,cape,sword,cof_smallkey:1",
               "bombs,sword,cof_smallkey:1"],
             "map_locations":[
               {
