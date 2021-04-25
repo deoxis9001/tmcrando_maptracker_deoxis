@@ -609,6 +609,47 @@ function updateHearts(segment, address)
     item.CurrentStage = ReadU8(segment, address)/8 - 3
   end
 end
+function updateBigKeys(segment, code)
+  if code == "dws_bigkey" then
+	  if testFlag(segment, 0x2002D45, 0x02) then
+	  		updateToggleItemFromByteAndFlag(segment, "dws_bigkey", 0x2002D45, 0x02)
+	  else
+			updateToggleItemFromByteAndFlag(segment, "dws_bigkey", 0x2002ead, 0x04)
+	  end
+  elseif code == "cof_bigkey" then
+	  if testFlag(segment, 0x2002D5A, 0x40) then
+	  		updateToggleItemFromByteAndFlag(segment, "cof_bigkey", 0x2002D5A, 0x40)
+	  else
+			updateToggleItemFromByteAndFlag(segment, "cof_bigkey", 0x2002eae, 0x04)
+	  end
+  elseif code == "fow_bigkey" then
+	  if testFlag(segment, 0x2002D70, 0x40) then
+	  		updateToggleItemFromByteAndFlag(segment, "fow_bigkey", 0x2002D70, 0x40)
+	  else
+			updateToggleItemFromByteAndFlag(segment, "fow_bigkey", 0x2002eaf, 0x04)
+	  end
+  elseif code == "tod_bigkey" then
+	  if testFlag(segment, 0x2002D89, 0x10) then
+	  		updateToggleItemFromByteAndFlag(segment, "tod_bigkey", 0x2002D89, 0x10)
+	  else
+			updateToggleItemFromByteAndFlag(segment, "tod_bigkey", 0x2002eb0, 0x04)
+	  end
+  elseif code == "pow_bigkey" then
+	  if testFlag(segment, 0x2002DA2, 0x40) then
+	  		updateToggleItemFromByteAndFlag(segment, "pow_bigkey", 0x2002DA2, 0x40)
+	  elseif testFlag(segment, 0x2002DA4, 0x04) then
+	  		updateToggleItemFromByteAndFlag(segment, "pow_bigkey", 0x2002DA4, 0x04)
+	  else
+			updateToggleItemFromByteAndFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
+	  end
+  elseif code == "explicit_dhc_bigkey" then
+	  if testFlag(segment, 0x2002DBE, 0x20) then
+	  		updateToggleItemFromByteAndFlag(segment, "explicit_dhc_bigkey", 0x2002DBE, 0x20)
+	  else
+			updateToggleItemFromByteAndFlag(segment, "explicit_dhc_bigkey", 0x2002eb2, 0x04)
+	  end
+  end
+end
 
 function updateSmallKeys(segment, code, address)
   local item = Tracker:FindObjectForCode(code)
@@ -1679,12 +1720,12 @@ function updateKeys(segment)
   InvalidateReadCaches()
 
   if AUTOTRACKER_ENABLE_ITEM_TRACKING then
-    updateToggleItemFromByteAndFlag(segment, "dws_bigkey", 0x2002ead, 0x04)
-    updateToggleItemFromByteAndFlag(segment, "cof_bigkey", 0x2002eae, 0x04)
-    updateToggleItemFromByteAndFlag(segment, "fow_bigkey", 0x2002eaf, 0x04)
-    updateToggleItemFromByteAndFlag(segment, "tod_bigkey", 0x2002eb0, 0x04)
-    updateToggleItemFromByteAndFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
-    updateToggleItemFromByteAndFlag(segment, "explicit_dhc_bigkey", 0x2002eb2, 0x04)
+    updateBigKeys(segment, "dws_bigkey")
+    updateBigKeys(segment, "cof_bigkey")
+    updateBigKeys(segment, "fow_bigkey")
+    updateBigKeys(segment, "tod_bigkey")
+    updateBigKeys(segment, "pow_bigkey")
+    updateBigKeys(segment, "explicit_dhc_bigkey")
     updateToggleItemFromByteAndFlag(segment, "dws_map", 0x2002ead, 0x01)
     updateToggleItemFromByteAndFlag(segment, "cof_map", 0x2002eae, 0x01)
     updateToggleItemFromByteAndFlag(segment, "fow_map", 0x2002eaf, 0x01)

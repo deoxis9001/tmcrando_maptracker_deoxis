@@ -1090,21 +1090,27 @@
                     "sections":[
                       {
                         "name":"Left",
-                        "access_rules":["[kinstoneWilds:3],kinstoneWilds:1"],
+                        "access_rules":["bow,[kinstoneWilds:3],kinstoneWilds:1",
+                            "cape,[kinstoneWilds:3],kinstoneWilds:1",
+                            "flippers,[kinstoneWilds:3],kinstoneWilds:1"],
                         "item_count": 1,
                         "chest_opened_img":"images/items-map/Gold Kinstone (Wilds) Gray.png",
                         "chest_unopened_img":"images/items-map/Gold Kinstone (Wilds).png"
                       },
                       {
                         "name":"Middle",
-                        "access_rules":["[kinstoneWilds:3],kinstoneWilds:1"],
+                        "access_rules":["bow,[kinstoneWilds:3],kinstoneWilds:1",
+                            "cape,[kinstoneWilds:3],kinstoneWilds:1",
+                            "flippers,[kinstoneWilds:3],kinstoneWilds:1"],
                         "item_count": 1,
                         "chest_opened_img":"images/items-map/Gold Kinstone (Wilds) Gray.png",
                         "chest_unopened_img":"images/items-map/Gold Kinstone (Wilds).png"
                       },
                       {
                         "name":"Right",
-                        "access_rules":["[kinstoneWilds:3],kinstoneWilds:1"],
+                        "access_rules":["bow,[kinstoneWilds:3],kinstoneWilds:1",
+                            "cape,[kinstoneWilds:3],kinstoneWilds:1",
+                            "flippers,[kinstoneWilds:3],kinstoneWilds:1"],
                         "item_count": 1,
                         "chest_opened_img":"images/items-map/Gold Kinstone (Wilds) Gray.png",
                         "chest_unopened_img":"images/items-map/Gold Kinstone (Wilds).png"
