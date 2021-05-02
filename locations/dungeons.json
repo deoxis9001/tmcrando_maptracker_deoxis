@@ -110,7 +110,7 @@
           {
             "name":"Madderpillar Heart Piece",
             "short_name":"Madderpillar HP",
-            "access_rules": ["[dws_smallkey:4],dws_smallkey:3","dws_smallkey:2,lamp","[lamp],dws_smallkey:2,gust","dws_smallkey:1,lamp,gust"],
+            "access_rules": ["[dws_smallkey:4],dws_smallkey:3,lamp","[dws_smallkey:4],dws_smallkey:3,gust","dws_smallkey:2,lamp","[lamp],dws_smallkey:2,gust","dws_smallkey:1,lamp,gust","{dws_smallkey:1}"],
             "capture_item": true,
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Heart Piece.png",
