@@ -8,7 +8,7 @@
       //Trilby Highlands
       {
         "name":"Trilby Highlands",
-        "access_rules":["sword,spinattack","cape","flippers"],
+        "access_rules":["sword,spinattack","cape","flippers","boots,[]"],
         "children":[
           {
             "name":"Vine Rupee",
