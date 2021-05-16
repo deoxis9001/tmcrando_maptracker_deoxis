@@ -499,7 +499,8 @@
           //Everything past here needs three keys
           {
             "name":"Minish Dirt Room Key Drop",
-            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2"],
+            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2","{bow,fow_smallkey:2}"],
+			"capture_item":true,
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -642,7 +643,8 @@
           //Everything past here needs three keys
           {
             "name":"Minish Dirt Room Key Drop",
-            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2"],
+            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2","{bow,fow_smallkey:2}"],
+			"capture_item":true,
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -775,7 +777,8 @@
           //Everything past here needs three keys
           {
             "name":"Minish Dirt Room Key Drop",
-            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2"],
+            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2","{bow,fow_smallkey:2}"],
+			"capture_item":true,
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"
@@ -924,7 +927,8 @@
           //Everything past here needs three keys
           {
             "name":"Minish Dirt Room Key Drop",
-            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2"],
+            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2","{bow,fow_smallkey:2}"],
+			"capture_item":true,
             "item_count": 1,
             "chest_unopened_img":"images/items-map/Small Key.png",
             "chest_opened_img":"images/items-map/Small Key Done.png"

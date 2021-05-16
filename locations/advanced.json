@@ -987,7 +987,7 @@
           },
           {
             "name":"Minish Dirt Room Key Drop",
-            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2"],
+            "access_rules":["bow,mitts,[fow_smallkey:3],fow_smallkey:2","{bow,fow_smallkey:2}"],
             "map_locations":[
               {
                 "map":"fow",
@@ -999,6 +999,7 @@
               {
                 "name":"Minish Dirt Room Key Drop",
                 "item_count": 1,
+                "capture_item":true,
                 "chest_unopened_img":"images/items-map/Small Key.png",
                 "chest_opened_img":"images/items-map/Small Key Done.png"
               }
