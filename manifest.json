@@ -12,12 +12,6 @@
     "Standard_h": {
       "display_name": "Standard Map Tracker - Broadcast(F2) Horizontal"
     },
-    "live": {
-      "display_name": "Live Map Tracker"
-    },
-    "entrance": {
-      "display_name": "Entrance Map Tracker"
-    },
     "items_only": {
       "display_name": "Items Tracker - Broadcast(F2) Vertical"
     },
