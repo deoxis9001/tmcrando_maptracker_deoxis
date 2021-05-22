@@ -1,0 +1,366 @@
+[
+    {
+    "name": "Cave of Flames",
+    "access_rules": [
+        "sword,spinattack,bottle,grip,gust,bombs",
+        "sword,spinattack,bottle,grip,gust,bow",
+        "sword,spinattack,bottle,grip,gust,boomerang",
+        "sword,spinattack,bottle,grip,lights",
+        "sword,spinattack,bottle,grip,cane",
+        "sword,spinattack,bottle,bombs,cane",
+        "bottle,grip,cape",
+        "cape,bottle,bombs,cane",
+        "flippers,bottle,grip,gust,bombs",
+        "flippers,bottle,grip,gust,bow",
+        "flippers,bottle,grip,gust,boomerang",
+        "flippers,bottle,grip,lights",
+        "flippers,bottle,grip,cane",
+        "flippers,bottle,bombs,cane"
+    ],
+    "children": [
+        {
+            "name": "Spiny Beetle Fight",
+            "access_rules": [
+                "cane,[$canDamage],$canDamage_off",
+                "shield,[$canDamage],$canDamage_off",
+                "$CanDownthrust",
+                "bombs"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 1515,
+                    "y": 950
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Spiny Beetle Fight",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "Cave of Flames Rupees",
+            "access_rules": [
+                "cane,[$canDamage],$canDamage_off",
+                "shield,[$canDamage],$canDamage_off",
+                "bombs",
+                "$CanDownthrust"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 1260,
+                    "y": 935,
+                    "force_invisibility_rules": [
+                        "rupees_off"
+                    ]
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Rupees",
+                    "item_count": 5
+                }
+            ]
+        },
+        {
+            "name": "Big Chest Room Big Chest",
+            "access_rules": [
+                "cane,[$canDamage],$canDamage_off",
+                "shield,[$canDamage],$canDamage_off",
+                "$CanDownthrust",
+                "bombs"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 940,
+                    "y": 1640
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Big Chest Room Big Chest",
+                    "item_count": 1,
+                    "chest_unopened_img": "images/items-map/big_chest_closed.png",
+                    "chest_opened_img": "images/items-map/big_chest_open.png"
+                }
+            ]
+        },
+        {
+            "name": "Big Chest Room Small Chest",
+            "access_rules": [
+                "$CanDownthrust",
+                "cane,[$canDamage],$canDamage_off",
+                "shield,[$canDamage],$canDamage_off",
+                "bombs"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 750,
+                    "y": 1835
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Big Chest Room Small Chest",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "First Rollobite Room Free Chest",
+            "access_rules": [
+                "cane,[$canDamage],$canDamage_off",
+                "shield,[$canDamage],$canDamage_off",
+                "$CanDownthrust",
+                "bombs"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 425,
+                    "y": 1835
+                }
+            ],
+            "sections": [
+                {
+                    "name": "First Rollobite Room Free Chest",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "First Rollobite Room Pillar Chest",
+            "access_rules": [
+                "cane,[$canDamage],$canDamage_off",
+                "shield,[$canDamage],$canDamage_off",
+                "$CanDownthrust",
+                "bombs"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 425,
+                    "y": 1660
+                }
+            ],
+            "sections": [
+                {
+                    "name": "First Rollobite Room Pillar Chest",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "Bombable Wall Heart Piece",
+            "access_rules": [
+                "bombs,sword,cof_smallkey:1",
+                "{cane,[$canDamage],$canDamage_off}",
+                "{shield,[$canDamage],$canDamage_off}",
+                "{$CanDownthrust}",
+                "{bombs}"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 885,
+                    "y": 1395
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Bomb Wall HP",
+                    "item_count": 1,
+                    "capture_item": true,
+                    "chest_unopened_img": "images/items-map/Heart Piece.png",
+                    "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+                }
+            ]
+        },
+        {
+            "name": "Spiny Chu Fight",
+            "access_rules": [
+                "cane,sword,cof_smallkey:1",
+                "shield,sword,cof_smallkey:1",
+                "$CanDownthrust,cof_smallkey:1",
+                "bombs,sword,cof_smallkey:1"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 785,
+                    "y": 950
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Spiny Chu Fight",
+                    "item_count": 1,
+                    "chest_unopened_img": "images/items-map/big_chest_closed.png",
+                    "chest_opened_img": "images/items-map/big_chest_open.png"
+                }
+            ]
+        },
+        {
+            "name": "Spiny Chu Pillar Chest",
+            "access_rules": [
+                "cane,sword,cof_smallkey:1"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 920,
+                    "y": 890
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Spiny Chu Pillar Chest",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "Pre Lava Basement Room Block Chest",
+            "access_rules": [
+                "cane,sword,cof_smallkey:2"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 450,
+                    "y": 310
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Pre Lava Basement Room Block Chest",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "Pre Lava Basement Room Ledge",
+            "access_rules": [
+                "cane,sword,cof_smallkey:2"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 480,
+                    "y": 375
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Pre Lava Basement Room Ledge",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "COF Blade Chest",
+            "access_rules": [
+                "cane,sword,cof_smallkey:2"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 1610,
+                    "y": 135
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Blade Chest",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "Lava Basement Left",
+            "access_rules": [
+                "sword,cane,cof_smallkey:2"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 740,
+                    "y": 695
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Lava Basement Left",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "Lava Basement Right",
+            "access_rules": [
+                "sword,cane,cof_smallkey:2"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 1290,
+                    "y": 700
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Lava Basement Right",
+                    "item_count": 1
+                }
+            ]
+        },
+        {
+            "name": "Lava Basement Big Chest",
+            "access_rules": [
+                "cane,sword,cof_smallkey:2"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 895,
+                    "y": 435
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Lava Basement Big Chest",
+                    "item_count": 1,
+                    "chest_unopened_img": "images/items-map/big_chest_closed.png",
+                    "chest_opened_img": "images/items-map/big_chest_open.png"
+                }
+            ]
+        },
+        {
+            "name": "Gleerok",
+            "access_rules": [
+                "cane,sword,cof_bigkey,cof_smallkey:2"
+            ],
+            "map_locations": [
+                {
+                    "map": "cof",
+                    "x": 1555,
+                    "y": 425
+                }
+            ],
+            "sections": [
+                {
+                    "name": "Gleerok",
+                    "item_count": 1,
+                    "chest_unopened_img": "images/items-map/Heart Container.png",
+                    "chest_opened_img": "images/items-map/Heart Container Gray.png"
+                }
+            ]
+        }
+    ]
+    }
+]

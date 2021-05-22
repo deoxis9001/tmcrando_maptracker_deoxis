@@ -1,0 +1,44 @@
+[
+    {
+        "name":"Royal Crypt",
+        "access_rules":["gravekey,sword4,boots,spinattack,bombs,[lamp]","gravekey,sword4,boots,spinattack,cape,[lamp]","gravekey,sword4,boots,spinattack,flippers,[lamp]"],
+        "map_locations": [
+          {
+            "map":"map",
+            "x":827,
+            "y":150
+          }
+        ],
+        "sections": [
+          {
+            "name":"Gibdos",
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/Small Key.png",
+            "chest_opened_img":"images/items-map/Small Key Done.png"
+          },
+          {
+            "name":"Other Gibdos",
+            "item_count": 1
+          },
+          {
+            "name":"Left Path",
+            "access_rules":["cryptkey:1"],
+            "item_count":1,
+            "chest_unopened_img":"images/items-map/Small Key.png",
+            "chest_opened_img":"images/items-map/Small Key Done.png"
+          },
+          {
+            "name":"Right Path",
+            "access_rules":["cryptkey:1"],
+            "item_count":1,
+            "chest_unopened_img":"images/items-map/Small Key.png",
+            "chest_opened_img":"images/items-map/Small Key Done.png"
+          },
+          {
+            "name":"King Gustaf",
+            "access_rules": ["lamp,cryptkey:3"],
+            "item_count": 1
+          }
+        ]
+      }
+]

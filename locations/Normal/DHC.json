@@ -1,0 +1,326 @@
+[
+          {
+            "name": "DHC",
+            "short_name": "DHC",
+            "codes":"dhc",
+            "access_rules": ["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1326,
+                "y": 130,
+                "restrict_visibility_rules":["dhc_closed"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Blade Chest",
+                "access_rules":["sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Platform Chest",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name": "Stone King",
+                "access_rules": ["bombs,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Post Throne Big Chest",
+                "access_rules":["bombs,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name":"Northeast Tower",
+                "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,lamp,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Southeast Tower",
+                "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Southwest Tower",
+                "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Northwest Tower",
+                "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Big Block Chest",
+                "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,magicboomerang,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:5,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name":"Vaati",
+                "access_rules":["sword5,bombs,bow,cane,gust,[lamp],explicit_dhc_smallkey:1,explicit_dhc_bigkey,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/TriForce.png",
+                "chest_opened_img":"images/items-map/TriForce_Gray.png"
+              }
+            ]
+          },
+          {
+            "name": "DHC Open",
+            "short_name": "DHC",
+            "codes":"dhc",
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1326,
+                "y": 130,
+                "restrict_visibility_rules":["dhc_open"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Blade Chest",
+                "access_rules":["sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Platform Chest",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name": "Stone King",
+                "access_rules": ["bombs,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Post Throne Big Chest",
+                "access_rules":["bombs,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name":"Northeast Tower",
+                "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,lamp,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Southeast Tower",
+                "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Southwest Tower",
+                "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Northwest Tower",
+                "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Big Block Chest",
+                "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,magicboomerang,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:5,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name":"Vaati",
+                "access_rules":["sword5,bombs,bow,cane,gust,[lamp],explicit_dhc_smallkey:1,explicit_dhc_bigkey,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/TriForce.png",
+                "chest_opened_img":"images/items-map/TriForce_Gray.png"
+              }
+            ]
+          },
+          {
+            "name": "DHC Ped",
+            "short_name": "DHC",
+            "codes":"dhc",
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1326,
+                "y": 130,
+                "restrict_visibility_rules":["dhc_peditems"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Pedestal Two Elements",
+                "access_rules":["$TwoElements"],
+                "item_count":1
+              },
+              {
+                "name":"Pedestal Three Elements",
+                "access_rules":["$ThreeElements"],
+                "item_count":1
+              },
+              {
+                "name":"Pedestal Four Elements",
+                "access_rules":["$FourElements"],
+                "item_count":1
+              },
+              {
+                "name":"Blade Chest",
+                "access_rules":["sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Platform Chest",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name": "Stone King",
+                "access_rules": ["bombs,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Post Throne Big Chest",
+                "access_rules":["bombs,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name":"Northeast Tower",
+                "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,lamp,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Southeast Tower",
+                "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Southwest Tower",
+                "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:1,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Northwest Tower",
+                "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:1,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Small Key.png",
+                "chest_opened_img":"images/items-map/Small Key Done.png"
+              },
+              {
+                "name":"Big Block Chest",
+                "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,lights,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,magicboomerang,explicit_dhc_smallkey:5,sword5,spinattack",
+                  "bombs,cape,$beam,explicit_dhc_smallkey:5,sword5,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              },
+              {
+                "name":"Vaati",
+                "access_rules":["sword5,bombs,bow,cane,gust,[lamp],explicit_dhc_smallkey:1,explicit_dhc_bigkey,spinattack"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/TriForce.png",
+                "chest_opened_img":"images/items-map/TriForce_Gray.png"
+              }
+            ]
+          },
+          {
+            "name": "DHC Fast",
+            "short_name": "DHC",
+            "codes":"dhc",
+            "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
+            "map_locations": [
+              {
+                "map": "map",
+                "x": 1326,
+                "y": 130,
+                "restrict_visibility_rules":["dhc_none"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Win",
+                "item_count":1
+              }
+            ]
+          }
+]

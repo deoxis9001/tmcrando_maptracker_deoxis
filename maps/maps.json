@@ -5,6 +5,11 @@
     "location_size": 65
   },
   {
+    "name": "entrance",
+    "img": "images/maps/big_map.png",
+    "location_size": 50
+  },
+  {
     "name":"mines",
     "img": "images/maps/Mines.png",
     "locations_size": 50

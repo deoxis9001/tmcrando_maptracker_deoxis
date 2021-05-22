@@ -1,0 +1,95 @@
+[
+    {
+        "name": "Royal Crypt",
+        "access_rules": [
+            "gravekey,sword4,boots,spinattack,bombs,[lamp]",
+            "gravekey,sword4,boots,spinattack,cape,[lamp]",
+            "gravekey,sword4,boots,spinattack,flippers,[lamp]"
+        ],
+        "children": [
+            {
+                "name": "Gibdos",
+                "map_locations": [
+                    {
+                        "map": "rc",
+                        "x": 295,
+                        "y": 1655
+                    }
+                ],
+                "sections": [
+                    {
+                        "name": "First Gibdos",
+                        "item_count": 1,
+                        "chest_unopened_img": "images/items-map/Small Key.png",
+                        "chest_opened_img": "images/items-map/Small Key Done.png"
+                    },
+                    {
+                        "name": "Other Gibdos",
+                        "item_count": 1
+                    }
+                ]
+            },
+            {
+                "name": "Left Path",
+                "access_rules": [
+                    "cryptkey:1"
+                ],
+                "map_locations": [
+                    {
+                        "map": "rc",
+                        "x": 140,
+                        "y": 935
+                    }
+                ],
+                "sections": [
+                    {
+                        "name": "Left Path",
+                        "item_count": 1,
+                        "chest_unopened_img": "images/items-map/Small Key.png",
+                        "chest_opened_img": "images/items-map/Small Key Done.png"
+                    }
+                ]
+            },
+            {
+                "name": "Right Path",
+                "access_rules": [
+                    "cryptkey:1"
+                ],
+                "map_locations": [
+                    {
+                        "map": "rc",
+                        "x": 445,
+                        "y": 935
+                    }
+                ],
+                "sections": [
+                    {
+                        "name": "Right Path",
+                        "item_count": 1,
+                        "chest_unopened_img": "images/items-map/Small Key.png",
+                        "chest_opened_img": "images/items-map/Small Key Done.png"
+                    }
+                ]
+            },
+            {
+                "name": "King Gustaf",
+                "access_rules": [
+                    "lamp,cryptkey:3"
+                ],
+                "map_locations": [
+                    {
+                        "map": "rc",
+                        "x": 295,
+                        "y": 75
+                    }
+                ],
+                "sections": [
+                    {
+                        "name": "King Gustaf",
+                        "item_count": 1
+                    }
+                ]
+            }
+        ]
+    }
+]

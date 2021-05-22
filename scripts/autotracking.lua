@@ -1784,13 +1784,13 @@ function updateKeys(segment)
     updateSectionChestCountFromByteAndFlag(segment, "@Pedestal Items/Three Elements", 0x2002ea8, 0x01)
     updateSectionChestCountFromByteAndFlag(segment, "@DHC Ped/Pedestal Four Elements", 0x2002ea8, 0x02)
     updateSectionChestCountFromByteAndFlag(segment, "@Pedestal Items/Four Elements", 0x2002ea8, 0x02)
-
   end
 
   if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
   end
 end
+
 ScriptHost:AddMemoryWatch("TMC Locations and Bosses", 0x2002c81, 0x200, updateLocations)
 ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x45, updateItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("TMC Item Upgrades", 0x2002ae4, 0x0c, updateGearFromMemory)

@@ -1,0 +1,336 @@
+[
+  {
+    "name": "Deepwood Shrine",
+    "short_name": "DWS",
+    "chest_opened_img": "images/items-map/chest_open.png",
+    "chest_unopened_img": "images/items-map/chest_closed.png",
+    "access_rules": [
+      "sword,jabber",
+      "sword,flippers",
+      "bombs,jabber",
+      "bombs,flippers",
+      "lights,jabber",
+      "lights,flippers",
+      "lamp,jabber",
+      "lamp,flippers",
+      "ocarina,flippers",
+      "ocarina,jabber"
+    ],
+    "children": [
+      {
+        "name": "Slug Room",
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 786,
+            "y": 1054
+          }
+        ],
+        "sections": [
+          {
+            "name": "Slug Room",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Upstairs Room",
+        "access_rules": [
+          "gust",
+          "lamp"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 152,
+            "y": 1137
+          }
+        ],
+        "sections": [
+          {
+            "name": "Upstairs Chest",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Barrel Room Northwest",
+        "access_rules": [
+          "bombs,dws_smallkey:1",
+          "gust,dws_smallkey:1"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 622,
+            "y": 299
+          }
+        ],
+        "sections": [
+          {
+            "name": "Barrel Room Northwest",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "West Side Big Chest",
+        "access_rules": [
+          "dws_smallkey:1"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 410,
+            "y": 280
+          }
+        ],
+        "sections": [
+          {
+            "name": "West Side Big Chest",
+            "item_count": 1,
+            "chest_unopened_img": "images/items-map/big_chest_closed.png",
+            "chest_opened_img": "images/items-map/big_chest_open.png"
+          }
+        ]
+      },
+      {
+        "name": "Two Statue Room",
+        "access_rules": [
+          "dws_smallkey:1"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 145,
+            "y": 570
+          }
+        ],
+        "sections": [
+          {
+            "name": "Two Statue Room",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Mulldozer Key",
+        "access_rules": [
+          "[$canDamage],$canDamage_off,dws_smallkey:2,[dws_smallkey:4]"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 1425,
+            "y": 330
+          }
+        ],
+        "sections": [
+          {
+            "name": "Mulldozer Key",
+            "item_count": 1,
+            "chest_unopened_img": "images/items-map/Small Key.png",
+            "chest_opened_img": "images/items-map/Small Key Done.png"
+          }
+        ]
+      },
+      {
+        "name": "Two Lamp Chest",
+        "access_rules": [
+          "bombs,dws_smallkey:2",
+          "gust,dws_smallkey:1"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 1040,
+            "y": 140
+          }
+        ],
+        "sections": [
+          {
+            "name": "Two Lamp",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Basement Switch Room Big Chest",
+        "access_rules": [
+          "gust, dws_smallkey:1",
+          "dws_smallkey:2"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 1635,
+            "y": 730
+          }
+        ],
+        "sections": [
+          {
+            "name": "Basement Switch Room Big Chest",
+            "item_count": 1,
+            "chest_unopened_img": "images/items-map/big_chest_closed.png",
+            "chest_opened_img": "images/items-map/big_chest_open.png"
+          }
+        ]
+      },
+      {
+        "name": "Basement Switch Chest",
+        "access_rules": [
+          "gust,dws_smallkey:1",
+          "cape,dws_smallkey:2"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 1450,
+            "y": 795
+          }
+        ],
+        "sections": [
+          {
+            "name": "Basement Switch Chest",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Blue Warp Heart Piece",
+        "access_rules": [
+          "bombs,dws_smallkey:2",
+          "gust,dws_smallkey",
+          "{dws_smallkey:2}"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 785,
+            "y": 60
+          }
+        ],
+        "sections": [
+          {
+            "name": "Blue Warp Heart Piece",
+            "item_count": 1,
+            "capture_item": true,
+            "chest_unopened_img": "images/items-map/Heart Piece.png",
+            "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+          }
+        ]
+      },
+      {
+        "name": "Puffstool Room",
+        "access_rules": [
+          "bombs,dws_smallkey:2",
+          "gust,dws_smallkey:1"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 665,
+            "y": 60
+          }
+        ],
+        "sections": [
+          {
+            "name": "Puffstool Room",
+            "item_count": 2
+          }
+        ]
+      },
+      {
+        "name": "Madderpillar Chest",
+        "access_rules": [
+          "[$canDamage],$canDamage_off,[dws_smallkey:4],dws_smallkey:3",
+          "dws_smallkey:2,lamp,[$canDamage],$canDamage_off",
+          "[lamp],dws_smallkey:2,gust,[$canDamage],$canDamage_off",
+          "dws_smallkey:1,lamp,gust,[$canDamage],$canDamage_off"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 420,
+            "y": 115
+          }
+        ],
+        "sections": [
+          {
+            "name": "Madderpillar Chest",
+            "item_count": 1,
+            "chest_unopened_img": "images/items-map/big_chest_closed.png",
+            "chest_opened_img": "images/items-map/big_chest_open.png"
+          }
+        ]
+      },
+      {
+        "name": "Madderpillar Heart Piece",
+        "access_rules": [
+          "[dws_smallkey:4],dws_smallkey:3,gust",
+          "dws_smallkey:2,lamp",
+          "[lamp],dws_smallkey:2,gust",
+          "dws_smallkey:1,lamp,gust"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 480,
+            "y": 320
+          }
+        ],
+        "sections": [
+          {
+            "name": "Madderpillar Heart Piece",
+            "item_count": 1,
+            "capture_item": true,
+            "chest_unopened_img": "images/items-map/Heart Piece.png",
+            "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+          }
+        ]
+      },
+      {
+        "name": "Basement Big Chest",
+        "access_rules": [
+          "gust,[dws_smallkey:4],dws_smallkey:2"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 1155,
+            "y": 775
+          }
+        ],
+        "sections": [
+          {
+            "name": "Basement Big Chest",
+            "item_count": 1,
+            "chest_unopened_img": "images/items-map/big_chest_closed.png",
+            "chest_opened_img": "images/items-map/big_chest_open.png"
+          }
+        ]
+      },
+      {
+        "name": "Green Chu",
+        "access_rules": [
+          "gust,sword,dws_bigkey"
+        ],
+        "map_locations": [
+          {
+            "map": "dws",
+            "x": 245,
+            "y": 820
+          }
+        ],
+        "sections": [
+          {
+            "name": "Green Chu",
+            "item_count": 1,
+            "chest_unopened_img": "images/items-map/Heart Container.png",
+            "chest_opened_img": "images/items-map/Heart Container Gray.png"
+          }
+        ]
+      }
+    ]
+  }
+]
