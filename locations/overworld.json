@@ -5,7 +5,6 @@
     "chest_opened_img":"images/items-map/chest_open.png",
     "children":
     [
-      //Trilby Highlands
       {
         "name":"Trilby Highlands",
         "access_rules":["sword,spinattack","cape","flippers","boots,[]"],
@@ -27,12 +26,10 @@
               }
             ]
           },
-          //Mount Crenel Base
           {
             "name":"Mount Crenel Base",
             "access_rules":["bottle"],
             "children":[
-              //Mount Crenel
               {
                 "name":"Mount Crenel",
                 "access_rules":[
