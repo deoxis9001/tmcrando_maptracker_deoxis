@@ -2,20 +2,7 @@
     {
     "name": "Cave of Flames",
     "access_rules": [
-        "sword,spinattack,bottle,grip,gust,bombs",
-        "sword,spinattack,bottle,grip,gust,bow",
-        "sword,spinattack,bottle,grip,gust,boomerang",
-        "sword,spinattack,bottle,grip,lights",
-        "sword,spinattack,bottle,grip,cane",
-        "sword,spinattack,bottle,bombs,cane",
-        "bottle,grip,cape",
-        "cape,bottle,bombs,cane",
-        "flippers,bottle,grip,gust,bombs",
-        "flippers,bottle,grip,gust,bow",
-        "flippers,bottle,grip,gust,boomerang",
-        "flippers,bottle,grip,lights",
-        "flippers,bottle,grip,cane",
-        "flippers,bottle,bombs,cane"
+        "[$CofEnter],$CofEnterHL"
     ],
     "children": [
         {

@@ -14,32 +14,39 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
   -- OVERWORLD
   Tracker:AddLocations("locations/overworld.json")
   -- DWS
+  ScriptHost:LoadScript("scripts/Logic/Dungeons/DWS.lua")
   Tracker:AddLocations("locations/Map/DWS.json")
   Tracker:AddLocations("locations/Normal/DWS.json")
   -- COF
+  ScriptHost:LoadScript("scripts/Logic/Dungeons/COF.lua")
   Tracker:AddLocations("locations/Map/COF.json")
   Tracker:AddLocations("locations/Normal/COF.json")
   Tracker:AddLocations("locations/Rupee/COF.json")
   -- FOW
+  ScriptHost:LoadScript("scripts/Logic/Dungeons/FOW.lua")
   Tracker:AddLocations("locations/Map/FOW.json")
   Tracker:AddLocations("locations/Normal/FOW.json")
   Tracker:AddLocations("locations/Obscure/FOW.json")
   Tracker:AddLocations("locations/Rupee/FOW.json")
   Tracker:AddLocations("locations/RupeeObscure/FOW.json")
   -- TOD
+  ScriptHost:LoadScript("scripts/Logic/Dungeons/TOD.lua")
   Tracker:AddLocations("locations/Map/TOD.json")
   Tracker:AddLocations("locations/Normal/TOD.json")
   Tracker:AddLocations("locations/Obscure/TOD.json")
   Tracker:AddLocations("locations/Rupee/TOD.json")
   Tracker:AddLocations("locations/RupeeObscure/TOD.json")
   -- RC
+  ScriptHost:LoadScript("scripts/Logic/Dungeons/RC.lua")
   Tracker:AddLocations("locations/Map/RC.json")
   Tracker:AddLocations("locations/Normal/RC.json")
   -- POW
+  ScriptHost:LoadScript("scripts/Logic/Dungeons/POW.lua")
   Tracker:AddLocations("locations/Map/POW.json")
   Tracker:AddLocations("locations/Normal/POW.json")
   Tracker:AddLocations("locations/Rupee/POW.json")
   -- POW
+  ScriptHost:LoadScript("scripts/Logic/Dungeons/DHC.lua")
   Tracker:AddLocations("locations/Map/DHC.json")
   Tracker:AddLocations("locations/Normal/DHC.json")
   -- FUSION

@@ -4,22 +4,7 @@
     "chest_opened_img": "images/items-map/chest_open.png",
     "chest_unopened_img": "images/items-map/chest_closed.png",
     "access_rules": [
-      "sword,spinattack,bottle,grip,gust,bombs",
-      "sword,spinattack,bottle,grip,gust,bow",
-      "sword,spinattack,bottle,grip,gust,boomerang",
-      "sword,spinattack,bottle,grip,lights",
-      "sword,spinattack,bottle,grip,gust,$beam",
-      "sword,spinattack,bottle,grip,cane",
-      "cape,bottle,grip",
-      "cape,bottle,bombs,cane",
-      "sword,spinattack,bottle,bombs,cane",
-      "flippers,bottle,grip,gust,bombs",
-      "flippers,bottle,grip,gust,bow",
-      "flippers,bottle,grip,gust,boomerang",
-      "flippers,sword,bottle,grip,gust,$beam",
-      "flippers,bottle,grip,lights",
-      "flippers,bottle,grip,cane",
-      "flippers,bottle,bombs,cane"
+      "[$CofEnter],$CofEnterHL"
     ],
     "map_locations": [
       {
