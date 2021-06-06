@@ -5,16 +5,7 @@
     "chest_opened_img": "images/items-map/chest_open.png",
     "chest_unopened_img": "images/items-map/chest_closed.png",
     "access_rules": [
-      "sword,jabber",
-      "sword,flippers",
-      "bombs,jabber",
-      "bombs,flippers",
-      "lights,jabber",
-      "lights,flippers",
-      "lamp,jabber",
-      "lamp,flippers",
-      "ocarina,flippers",
-      "ocarina,jabber"
+      "$DwsEnter"
     ],
     "map_locations": [
       {
