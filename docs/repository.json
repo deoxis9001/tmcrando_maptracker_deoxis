@@ -30,6 +30,34 @@
           ]
         }
       ]
-    }
+    },
+    {
+      "name": "Beta TMCR deoxis9001",
+      "author": "Deoxis9001",
+      "game_name": "Minish Cap Randomizer",
+      "flags": [
+        "map",
+        "pins",
+        "autotracker"
+      ],
+      "version": "0.0.0.1",
+      "uid": "tmcrando_maptracker_deoxis_dev",
+      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/raw/V2/tmcrando_maptracker_deoxis_dev.zip",
+        {
+          "name": "Map Tracker - Horizontal or Vertical Broadcast (F2)",
+          "flags": [
+            "map",
+            "pins",
+            "autotracker"
+          ]
+        },
+        {
+          "name": "Items Only",
+          "flags": [
+            "autotracker"
+          ]
+        }
+      ]
+    },
   ]
 }
