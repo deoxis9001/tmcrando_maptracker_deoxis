@@ -43,8 +43,10 @@
       "version": "0.0.0.1",
       "uid": "tmcrando_maptracker_deoxis_dev",
       "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/raw/V2/tmcrando_maptracker_deoxis_dev.zip",
-        {
-          "name": "Map Tracker - Horizontal or Vertical Broadcast (F2)",
+      "variants": 
+	  [
+		{
+          "name": "Beta TMCR deoxis9001",
           "flags": [
             "map",
             "pins",
