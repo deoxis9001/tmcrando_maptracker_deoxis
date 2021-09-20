@@ -10,9 +10,9 @@
         "pins",
         "autotracker"
       ],
-      "version": "1.0.0.25",
+      "version": "1.0.0.26",
       "uid": "tmcrando_maptracker_deoxis",
-      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases/download/1.0.0.25/tmcrando_maptracker_deoxis.zip",
+      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases/download/1.0.0.26/tmcrando_maptracker_deoxis.zip",
 	  "documentation_url": "https://minish.deoxis9001.tk/index.php",
       "variants": [
         {
@@ -30,36 +30,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Beta TMCR deoxis9001",
-      "author": "Deoxis9001",
-      "game_name": "Minish Cap Randomizer",
-      "flags": [
-        "map",
-        "pins",
-        "autotracker"
-      ],
-      "version": "0.0.0.1",
-      "uid": "tmcrando_maptracker_deoxis_dev",
-      "link": "https://github.com/deoxis9001/tmcrando_maptracker_deoxis/raw/V2/tmcrando_maptracker_deoxis_dev.zip",
-      "variants": 
-	  [
-		{
-          "name": "Beta TMCR deoxis9001",
-          "flags": [
-            "map",
-            "pins",
-            "autotracker"
-          ]
-        },
-        {
-          "name": "Items Only",
-          "flags": [
-            "autotracker"
-          ]
-        }
-      ]
-    },
+    }
   ]
 }
