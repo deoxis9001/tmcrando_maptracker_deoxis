@@ -236,7 +236,7 @@
           },
           {
             "name":"Madderpillar Heart Piece",
-            "access_rules": ["[dws_smallkey:4],dws_smallkey:3,gust","dws_smallkey:2,lamp","[lamp],dws_smallkey:2,gust","dws_smallkey:1,lamp,gust"],
+            "access_rules": ["[dws_smallkey:4],dws_smallkey:3,gust","dws_smallkey:2,lamp","[lamp],dws_smallkey:2,gust","dws_smallkey:1,lamp,gust","{dws_smallkey:1}"],
             "map_locations":[
               {
                 "map":"dws",
