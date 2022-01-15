@@ -2,7 +2,7 @@
   "name": "The Minish Cap Randomizer Map and Item Tracker",
   "game_name": "Minish Cap Randomizer",
   "platform": "gba",
-  "package_version": "1.0.0.28",
+  "package_version": "1.0.0.29",
   "package_uid": "tmcrando_maptracker_deoxis",
   "author": "Deoxis9001",
   "variants": {
@@ -19,16 +19,16 @@
       "display_name": "Standard Items Tracker - Horizontal"
     },
     "Standard_a": {
-      "display_name": "Item no progessive Map Tracker - Broadcast (F2) Vertical"
+      "display_name": "Item no progressive Map Tracker - Broadcast (F2) Vertical"
     },
     "Standard_a_h": {
-      "display_name": "Item no progessive Map Tracker - Broadcast (F2) Horizontal"
+      "display_name": "Item no progressive Map Tracker - Broadcast (F2) Horizontal"
     },
     "items_only_a": {
-      "display_name": "Item no progessive Items Tracker - Vertical"
+      "display_name": "Item no progressive Items Tracker - Vertical"
     },
     "items_only_a_h": {
-      "display_name": "Item no progessive Items Tracker - Horizontal"
+      "display_name": "Item no progressive Items Tracker - Horizontal"
     }
   }
 }
