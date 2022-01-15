@@ -6,13 +6,13 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/Obscure_Off.png",
-        "codes":"obscure_off",
+        "img":"images/options/Obscure_On.png",
+        "codes":"obscure_on",
         "inherit_codes":false
       },
       {
-        "img":"images/options/Obscure_On.png",
-        "codes":"obscure_on",
+        "img":"images/options/Obscure_Off.png",
+        "codes":"obscure_off",
         "inherit_codes":false
       }
     ]
@@ -258,13 +258,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/weapons_off.png",
-        "codes": "weapons_off"
-      },
-      {
         "img":"images/options/weapons_on.png",
         "codes": "weapons_on",
         "inherit_codes":false
+      },
+      {
+        "img": "images/options/weapons_off.png",
+        "codes": "weapons_off"
       }
     ]
   }
