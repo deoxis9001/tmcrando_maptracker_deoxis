@@ -8,7 +8,7 @@
       //Trilby Highlands
       {
         "name":"Trilby Highlands",
-        "access_rules":["sword,spinattack","cape","flippers","boots,[]"],
+        "access_rules":["$Sword1,spinattack","cape","flippers","boots,[]"],
         "children":[
           {
             "name":"Vine Rupee",
@@ -455,7 +455,7 @@
                   },
                   {
                     "name":"Grayblade",
-                    "access_rules":["grip,sword3,spinattack"],
+                    "access_rules":["grip,$Sword3,spinattack"],
                     "map_locations":[
                       {
                         "map":"map",
@@ -706,7 +706,7 @@
           //Western Wood
           {
             "name":"Western Wood",
-            "access_rules":["sword3,spinattack"],
+            "access_rules":["$Sword3,spinattack"],
             "children":[
               //Castor Wilds
               {
@@ -1466,7 +1466,7 @@
           //Bomb Wall
           {
             "name":"Trilby Highlands Bomb Wall",
-            "access_rules":["bombs,sword3,spinattack"],
+            "access_rules":["bombs,$Sword3,spinattack"],
             "map_locations":[
               {
                 "map":"map",
@@ -1483,7 +1483,7 @@
           },
           {
             "name":"Trilby Highlands Rupee Cave",
-            "access_rules":["sword3,spinattack"],
+            "access_rules":["$Sword3,spinattack"],
             "map_locations":[
               {
                 "map":"map",
@@ -1553,7 +1553,7 @@
             "sections": [
               {
                 "name":"Grimblade",
-                "access_rules":["lamp,sword"],
+                "access_rules":["lamp,$Sword1"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Tiger Scroll.png",
                 "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
@@ -1652,7 +1652,7 @@
           //Royal Valley
           {
             "name":"Royal Valley",
-            "access_rules":["sword4,flippers,spinattack","sword4,bombs,spinattack","sword4,cape,spinattack"],
+            "access_rules":["$Sword4,flippers,spinattack","$Sword4,bombs,spinattack","$Sword4,cape,spinattack"],
             "children": [
               {
                 "name":"Great Fairy",
@@ -1706,7 +1706,7 @@
               },
               {
                 "name":"Northwest Grave",
-                "access_rules":["sword4,gravekey,boots,spinattack,[lamp]"],
+                "access_rules":["$Sword4,gravekey,boots,spinattack,[lamp]"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -1726,7 +1726,7 @@
               },
               {
                 "name":"Northwest Grave Area",
-                "access_rules":["sword4,gravekey,boots,spinattack,[lamp]"],
+                "access_rules":["$Sword4,gravekey,boots,spinattack,[lamp]"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -1750,7 +1750,7 @@
               },
               {
                 "name":"Northeast Grave Area",
-                "access_rules":["sword4,gravekey,boots,spinattack,[lamp]"],
+                "access_rules":["$Sword4,gravekey,boots,spinattack,[lamp]"],
                 "map_locations":[
                   {
                     "map":"map",
@@ -1772,7 +1772,7 @@
               },
               {
                 "name":"Royal Valley Joy Butterfly",
-                "access_rules":["sword4,gravekey,boots,spinattack,[lamp]"],
+                "access_rules":["$Sword4,gravekey,boots,spinattack,[lamp]"],
                 "map_locations":[
                   {
                     "map":"map",
@@ -1792,7 +1792,7 @@
           },
           {
             "name":"Pre Royal Valley Chest",
-            "access_rules":["bombs,sword4,spinattack","flippers,sword4,spinattack","cape,sword4,spinattack"],
+            "access_rules":["bombs,$Sword4,spinattack","flippers,$Sword4,spinattack","cape,$Sword4,spinattack"],
             "map_locations":[
               {
                 "map":"map",
@@ -1951,7 +1951,7 @@
             "sections":[
               {
                 "name":"Greatblade",
-                "access_rules":["sword"],
+                "access_rules":["$Sword1"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Tiger Scroll.png",
                 "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
@@ -1977,28 +1977,28 @@
             "sections": [
               {
                 "name":"Spin Attack",
-                "access_rules":["sword"],
+                "access_rules":["$Sword1"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Tiger Scroll.png",
                 "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
               },
               {
                 "name":"Rock Breaker",
-                "access_rules":["sword2"],
+                "access_rules":["$Sword2"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Tiger Scroll.png",
                 "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
               },
               {
                 "name":"Dash Attack",
-                "access_rules":["sword,boots"],
+                "access_rules":["$Sword1,boots"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Tiger Scroll.png",
                 "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
               },
               {
                 "name":"Down Thrust",
-                "access_rules":["sword,cape"],
+                "access_rules":["$Sword1,cape"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Tiger Scroll.png",
                 "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
@@ -2083,7 +2083,7 @@
               },
               {
                 "name":"Simon's Simulations",
-                "access_rules":["sword"],
+                "access_rules":["$Sword1"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Heart Piece.png",
                 "chest_opened_img":"images/items-map/Heart Piece Gray.png"
@@ -2346,12 +2346,12 @@
           },
           {
             "name":"Dr. Left's House",
-            "access_rules": ["bracelets,gust,sword3,cape,spinattack",
-              "bracelets,gust,sword3,cane,spinattack",
-              "bracelets,gust,sword3,flippers,spinattack",
-              "bracelets,bombs,sword3,cape,spinattack",
-              "bracelets,bombs,sword3,cane,spinattack",
-              "bracelets,bombs,sword3,flippers,spinattack"],
+            "access_rules": ["bracelets,gust,$Sword3,cape,spinattack",
+              "bracelets,gust,$Sword3,cane,spinattack",
+              "bracelets,gust,$Sword3,flippers,spinattack",
+              "bracelets,bombs,$Sword3,cape,spinattack",
+              "bracelets,bombs,$Sword3,cane,spinattack",
+              "bracelets,bombs,$Sword3,flippers,spinattack"],
             "map_locations": [
               {
                 "map":"map",
@@ -2463,8 +2463,8 @@
               {
                 "name":"Hyrule Well Center Chest",
                 "access_rules":[
-                  "flippers,mitts,sword4,spinattack",
-                  "cape,mitts,sword4,spinattack"
+                  "flippers,mitts,$Sword4,spinattack",
+                  "cape,mitts,$Sword4,spinattack"
                 ],
                 "item_count":1
               }
@@ -2506,13 +2506,13 @@
             "sections":[
               {
                 "name":"Garden Chests",
-                "access_rules":["sword5,spinattack"],
+                "access_rules":["$Sword5,spinattack"],
                 "item_count":3
               },
               {
                 "name":"Heart Piece",
                 "item_count":1,
-                "access_rules":["sword5,spinattack","{cane}"],
+                "access_rules":["$Sword5,spinattack","{cane}"],
                 "capture_item":true,
                 "chest_unopened_img":"images/items-map/Heart Piece.png",
                 "chest_opened_img":"images/items-map/Heart Piece Gray.png"
@@ -2533,13 +2533,13 @@
             "sections":[
               {
                 "name":"Garden Chests",
-                "access_rules":["sword5,spinattack"],
+                "access_rules":["$Sword5,spinattack"],
                 "item_count":3
               },
               {
                 "name":"Heart Piece",
                 "item_count":1,
-                "access_rules":["sword5,spinattack","{cane}"],
+                "access_rules":["$Sword5,spinattack","{cane}"],
                 "capture_item":true,
                 "chest_unopened_img":"images/items-map/Heart Piece.png",
                 "chest_opened_img":"images/items-map/Heart Piece Gray.png"
@@ -2608,7 +2608,7 @@
           },
           {
             "name":"Fusion Rupee Cave",
-            "access_rules":["sword","bombs","lights","lamp","flippers","cape"],
+            "access_rules":["$Sword1","bombs","lights","lamp","flippers","cape"],
             "map_locations":[
               {
                 "map":"map",
@@ -2626,7 +2626,7 @@
           },
           {
             "name":"Near Link's House Chest",
-            "access_rules":["sword","bombs","lights","lamp"],
+            "access_rules":["$Sword1","bombs","lights","lamp"],
             "map_locations":[
               {
                 "map":"map",
@@ -2644,7 +2644,7 @@
           },
           {
             "name":"Tingle",
-            "access_rules":["cane,sword,trophy","cane,bombs,trophy","cane,lights,trophy","cane,lamp,trophy"],
+            "access_rules":["cane,$Sword1,trophy","cane,bombs,trophy","cane,lights,trophy","cane,lamp,trophy"],
             "map_locations":[
               {
                 "map":"map",
@@ -2662,7 +2662,7 @@
           //Southwest Tree Heart Piece
           {
             "name":"Tree Heart Piece",
-            "access_rules":["sword","lights","lamp","bombs"],
+            "access_rules":["$Sword1","lights","lamp","bombs"],
             "map_locations": [
               {
                 "map":"map",
@@ -2682,7 +2682,7 @@
           },
           {
             "name":"Minish Flippers Hole",
-            "access_rules":["boots,flippers,lamp","boots,flippers,bombs","boots,flippers,sword","boots,flippers,lights"],
+            "access_rules":["boots,flippers,lamp","boots,flippers,bombs","boots,flippers,$Sword1","boots,flippers,lights"],
             "map_locations": [
               {
                 "map":"map",
@@ -3192,7 +3192,7 @@
                   },
                   {
                     "name":"Bombable Wall Second Chest",
-                    "access_rules":["bombs,sword4,spinattack,[lamp]"],
+                    "access_rules":["bombs,$Sword4,spinattack,[lamp]"],
                     "item_count":1
                   }
                 ]
@@ -3420,7 +3420,7 @@
       //Lon Lon Ranch
       {
         "name":"Lon Lon Ranch",
-        "access_rules": ["sword","bombs","lamp","lights","ocarina"],
+        "access_rules": ["$Sword1","bombs","lamp","lights","ocarina"],
         "children": [
           {
             "name":"Veil Falls South Mitts Cave",
@@ -3519,7 +3519,7 @@
             "sections":[
               {
                 "name":"Splitblade",
-                "access_rules":["sword"],
+                "access_rules":["$Sword1"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Tiger Scroll.png",
                 "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
@@ -3545,7 +3545,7 @@
           },
           {
             "name": "Lon Lon Cave",
-            "access_rules":["sword3,llrkey,spinattack","sword3,ocarina,spinattack","sword3,cape,spinattack","sword3,flippers,mitts,spinattack"],
+            "access_rules":["$Sword3,llrkey,spinattack","$Sword3,ocarina,spinattack","$Sword3,cape,spinattack","$Sword3,flippers,mitts,spinattack"],
             "map_locations": [
               {
                 "map":"map",
@@ -3692,16 +3692,16 @@
       //Lake Hylia
       {
         "name":"Lake Hylia",
-          "access_rules": ["llrkey,sword",
+          "access_rules": ["llrkey,$Sword1",
             "llrkey,bombs",
             "llrkey,lamp",
             "llrkey,lights",
-            "cape,sword",
+            "cape,$Sword1",
             "cape,bombs,",
             "cape,lamp",
             "cape,lights",
             "ocarina",
-            "flippers,mitts,sword",
+            "flippers,mitts,$Sword1",
             "flippers,mitts,bombs",
             "flippers,mitts,lamp",
             "flippers,mitts,lights"],
@@ -3903,7 +3903,7 @@
             "sections": [
               {
                 "name":"Waveblade",
-                "access_rules":["10hearts,sword"],
+                "access_rules":["10hearts,$Sword1"],
                 "item_count":1,
                 "chest_unopened_img":"images/items-map/Tiger Scroll.png",
                 "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
@@ -4009,7 +4009,7 @@
       //Eastern Hills
       {
         "name":"Eastern Hills",
-        "access_rules":["bombs","sword","lamp","lights","ocarina"],
+        "access_rules":["bombs","$Sword1","lamp","lights","ocarina"],
         "children": [
           {
             "name": "Eastern Hills Bombable Wall",
@@ -4030,7 +4030,7 @@
           },
           {
             "name":"Farm Chest",
-            "access_rules":["sword","bombs","lights","lamp"],
+            "access_rules":["$Sword1","bombs","lights","lamp"],
             "map_locations":[
               {
                 "map":"map",
@@ -4048,7 +4048,7 @@
           },
 		  {
 			"name":"Eastern Hills Rope Golden",
-            "access_rules":["sword","bombs","lights","lamp"],
+            "access_rules":["$Sword1","bombs","lights","lamp"],
 			"map_locations":[
 			  {
 				"map":"map",
@@ -4067,7 +4067,7 @@
 		  },
           {
             "name":"Farm Rupee",
-            "access_rules":["sword,mitts","bombs,mitts","lights,mitts","lamp,mitts","ocarina,mitts"],
+            "access_rules":["$Sword1,mitts","bombs,mitts","lights,mitts","lamp,mitts","ocarina,mitts"],
             "map_locations":[
               {
                 "map":"map",
@@ -4085,7 +4085,7 @@
           },
           {
             "name":"Eastern Hills Beanstalk",
-            "access_rules":["sword","bombs","lights","lamp"],
+            "access_rules":["$Sword1","bombs","lights","lamp"],
             "map_locations":[
               {
                 "map":"map",
@@ -4112,7 +4112,7 @@
       //Minish Woods
       {
         "name": "Minish Woods",
-        "access_rules":["sword","bombs","lamp","ocarina","lights"],
+        "access_rules":["$Sword1","bombs","lamp","ocarina","lights"],
         "children": [
           {
             "name": "Northern Heart Piece",
@@ -4139,7 +4139,7 @@
           },
           {
             "name": "Syrup's Hut",
-            "access_rules":["sword,flippers",
+            "access_rules":["$Sword1,flippers",
               "llrkey,cane",
               "cape",
               "flippers",

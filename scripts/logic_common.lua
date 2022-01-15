@@ -1,5 +1,5 @@
 function canDamage()
-  if Tracker:ProviderCountForCode("sword") > 0 then
+  if Sword1() > 0 then
     return 1
   elseif Tracker:ProviderCountForCode("weapons_on") > 0 then
     if Tracker:ProviderCountForCode("bow") > 0 then
@@ -14,7 +14,7 @@ function canDamage()
   end
 end
 function canDamage_off()
-  if Tracker:ProviderCountForCode("sword") > 0 then
+  if Sword1() > 0 then
     return 1
   elseif Tracker:ProviderCountForCode("bow") > 0 then
     return 1
@@ -22,6 +22,118 @@ function canDamage_off()
     return 1
   else
     return Tracker:ProviderCountForCode("bombs")
+  end
+end
+
+function Sword1()
+  if Tracker:ProviderCountForCode("sword") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword2") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword3") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword5") > 0 then
+    return 1
+  elseif has("smithsword") then
+    return 1
+  elseif has("greensword") then
+    return 1
+  elseif has("redsword") then
+    return 1
+  elseif has("bluesword") then
+    return 1
+  elseif has("foursword") then
+    return 1
+  else
+    return 0
+  end
+end
+function Sword2()
+  if Tracker:ProviderCountForCode("sword2") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword3") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword5") > 0 then
+    return 1
+  elseif has("greensword") then
+    return 1
+  elseif has("redsword") then
+    return 1
+  elseif has("bluesword") then
+    return 1
+  elseif has("foursword") then
+    return 1
+  else
+    return 0
+  end
+end
+function Sword3()
+  if Tracker:ProviderCountForCode("sword3") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword5") > 0 then
+    return 1
+  elseif has("redsword") then
+    return 1
+  elseif has("bluesword") then
+    return 1
+  elseif has("foursword") then
+    return 1
+  else
+    return 0
+  end
+end
+function CanSplit2()
+  if Tracker:ProviderCountForCode("sword3") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword5") > 0 then
+    return 1
+  elseif has("redsword") then
+    return 1
+  else
+    return 0
+  end
+end
+function CanSplit3()
+  if Tracker:ProviderCountForCode("sword3") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword5") > 0 then
+    return 1
+  elseif has("redsword") then
+    return 1
+  else
+    return 0
+  end
+end
+function Sword4()
+  if Tracker:ProviderCountForCode("sword4") > 0 then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword5") > 0 then
+    return 1
+  elseif has("bluesword") then
+    return 1
+  elseif has("foursword") then
+    return 1
+  else
+    return 0
+  end
+end
+function Sword5()
+  if Tracker:ProviderCountForCode("sword5") > 0 then
+    return 1
+  elseif has("foursword") then
+    return 1
+  else
+    return 0
   end
 end
 function beam()
@@ -127,6 +239,7 @@ function has(item, amount)
     return count == amount
   end
 end
+
 function FigurineOpen()
   if Tracker:ProviderCountForCode("figurine") >= Tracker:ProviderCountForCode("figurine_option") then
     return 1
@@ -138,15 +251,15 @@ end
 function neededSwords()
   if has("sword0needed") then
     return 1
-  elseif has("sword") and has("sword1needed") then
+  elseif Sword1() and has("sword1needed") then
     return 1
-  elseif has("sword2") and has("sword2needed") then
+  elseif Sword2() and has("sword2needed") then
     return 1
-  elseif has("sword3") and has("sword3needed") then
+  elseif Sword3() and has("sword3needed") then
     return 1
-  elseif has("sword4") and has("sword4needed") then
+  elseif Sword4() and has("sword4needed") then
     return 1
-  elseif has("sword5") and has("sword5needed") then
+  elseif Sword5() and has("sword5needed") then
     return 1
   else
     return 0

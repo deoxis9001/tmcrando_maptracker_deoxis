@@ -257,16 +257,16 @@ end
 
 function updateSwords(segment)
   local item = Tracker:FindObjectForCode("sword")
-  if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then
-    item.CurrentStage = 4
-  elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 then
+  if ReadU8(segment, 0x2002b33) == 0x10 then
     item.CurrentStage = 5
-  elseif ReadU8(segment, 0x2002b32) == 0x05 then
-    item.CurrentStage = 1
-  elseif ReadU8(segment, 0x2002b32) == 0x15 then
-    item.CurrentStage = 2
-  elseif ReadU8 (segment, 0x2002b32) == 0x55 then
+  elseif ReadU8(segment, 0x2002b33) == 0x01 then
+    item.CurrentStage = 4
+  elseif ReadU8 (segment, 0x2002b32) == 0x40 then
     item.CurrentStage = 3
+  elseif ReadU8(segment, 0x2002b32) == 0x10 then
+    item.CurrentStage = 2
+  elseif ReadU8(segment, 0x2002b32) == 0x04 then
+    item.CurrentStage = 1
   else
     item.CurrentStage = 0
   end
@@ -923,6 +923,12 @@ function updateItemsFromMemorySegment(segment)
     updateToggleItemFromByteAndFlag(segment, "fire", 0x2002b42, 0x04)
     updateToggleItemFromByteAndFlag(segment, "water", 0x2002b42, 0x10)
     updateToggleItemFromByteAndFlag(segment, "wind", 0x2002b42, 0x40)
+    updateToggleItemFromByteAndFlag(segment, "smithsword", 0x2002b32, 0x04)
+    updateToggleItemFromByteAndFlag(segment, "greensword", 0x2002b32, 0x10)
+    updateToggleItemFromByteAndFlag(segment, "redsword", 0x2002b32, 0x40)
+    updateToggleItemFromByteAndFlag(segment, "bluesword", 0x2002b33, 0x01)
+    updateToggleItemFromByteAndFlag(segment, "foursword", 0x2002b33, 0x10)
+    updateToggleItemFromByteAndFlag(segment, "smithsword", 0x2002b32, 0x04)
 
     updateLLRKey(segment, "llrkey", 0x2002b3f, 0x40)
     updateDogFood(segment, "dogbottle", 0x2002b3f, 0x10)

@@ -15,29 +15,68 @@
       {
         "img": "images/items/Smith's Sword.png",
         "inherit_codes": false,
-        "codes": "sword, smith"
+        "codes": "sword"
       },
       {
         "img": "images/items/Green Sword.png",
         "inherit_codes": false,
-        "codes": "sword,sword2,greensword,dmg"
+        "codes": "sword2"
       },
       {
         "img": "images/items/Red Sword.png",
         "inherit_codes": false,
-        "codes": "sword,sword2,sword3,redsword,dmg"
+        "codes": "sword3"
       },
       {
         "img": "images/items/Blue Sword.png",
         "inherit_codes": false,
-        "codes": "sword,sword2,sword3,sword4,bluesword,dmg"
+        "codes": "sword4"
       },
       {
         "img": "images/items/Four Sword.png",
         "inherit_codes": false,
-        "codes": "sword,sword2,sword3,sword4,sword5,foursword,dmg"
+        "codes": "sword5"
       }
     ]
+  },
+  //No Progressive Swords Smith (Overworld)
+  {
+    "name": "Smith Sword",
+    "type": "toggle",
+	"img": "images/items/Smith's Sword.png",
+	"inherit_codes": false,
+	"codes": "smithsword"
+  },
+  //No Progressive Swords Green (Overworld)
+  {
+    "name": "Green Sword",
+    "type": "toggle",
+	"img": "images/items/Green Sword.png",
+	"codes": "greensword"
+  },
+  //No Progressive Swords Red (Overworld)
+  {
+    "name": "Red Sword",
+    "type": "toggle",
+	"img": "images/items/Red Sword.png",
+	"inherit_codes": false,
+	"codes": "redsword"
+  },
+  //No Progressive Swords Blue (Overworld)
+  {
+    "name": "Blue Sword",
+    "type": "toggle",
+	"img": "images/items/Blue Sword.png",
+	"inherit_codes": false,
+	"codes": "bluesword"
+  },
+  //No Progressive Swords Four (Overworld)
+  {
+    "name": "Four Sword",
+    "type": "toggle",
+	"img": "images/items/Four Sword.png",
+	"inherit_codes": false,
+	"codes": "foursword"
   },
   //Gust Jar
   {
