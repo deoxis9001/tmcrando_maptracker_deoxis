@@ -102,13 +102,11 @@ function CanSplit2()
   end
 end
 function CanSplit3()
-  if Tracker:ProviderCountForCode("sword3") > 0 then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword4") > 0 then
+  if Tracker:ProviderCountForCode("sword4") > 0 then
     return 1
   elseif Tracker:ProviderCountForCode("sword5") > 0 then
     return 1
-  elseif has("redsword") then
+  elseif has("bluesword") then
     return 1
   else
     return 0
