@@ -311,7 +311,9 @@
           "flippers,bottle,grip,gust,boomerang",
           "flippers,bottle,grip,lights",
           "flippers,bottle,grip,cane",
-          "flippers,bottle,bombs,cane"
+          "flippers,bottle,bombs,cane",
+          "[boots],bottle,bombs,cane",
+          "[boots],bottle,grip,cane"
         ],
         "children":[
           {

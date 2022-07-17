@@ -144,16 +144,19 @@
           "$Sword1,spinattack,bottle,grip,lights",
           "$Sword1,spinattack,bottle,grip,gust,$beam",
           "$Sword1,spinattack,bottle,grip,cane",
+          "$Sword1,spinattack,bottle,bombs,cane",
           "cape,bottle,grip",
           "cape,bottle,bombs,cane",
-          "$Sword1,spinattack,bottle,bombs,cane",
           "flippers,bottle,grip,gust,bombs",
           "flippers,bottle,grip,gust,bow",
           "flippers,bottle,grip,gust,boomerang",
           "flippers,$Sword1,bottle,grip,gust,$beam",
           "flippers,bottle,grip,lights",
           "flippers,bottle,grip,cane",
-          "flippers,bottle,bombs,cane"
+          "flippers,bottle,bombs,cane",
+          "[boots],bottle,bombs,cane",
+          "[boots],bottle,grip,cane"
+
         ],
         "map_locations": [
           {
@@ -278,7 +281,9 @@
           "flippers,$Sword1,bottle,grip,gust,$beam",
           "flippers,bottle,grip,lights",
           "flippers,bottle,grip,cane",
-          "flippers,bottle,bombs,cane" 
+          "flippers,bottle,bombs,cane",
+          "[boots],bottle,bombs,cane",
+          "[boots],bottle,grip,cane" 
         ],
         "map_locations": [
           {
