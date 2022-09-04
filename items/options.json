@@ -249,7 +249,6 @@
    "codes": "figurine_option",
    "min_quantity":0,
    "max_quantity":136,
-   "increment":10
  },
   {
     "name": "Weapons",

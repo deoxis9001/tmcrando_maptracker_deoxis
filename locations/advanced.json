@@ -312,8 +312,22 @@
           "flippers,bottle,grip,lights",
           "flippers,bottle,grip,cane",
           "flippers,bottle,bombs,cane",
-          "[boots],bottle,bombs,cane",
-          "[boots],bottle,grip,cane"
+          "boots,[$Sword1,spinattack],bottle,grip,gust,bombs",
+          "boots,[$Sword1,spinattack],bottle,grip,gust,bow",
+          "boots,[$Sword1,spinattack],bottle,grip,gust,boomerang",
+          "boots,[$Sword1,spinattack],bottle,grip,lights",
+          "boots,[$Sword1,spinattack],bottle,grip,gust,$beam",
+          "boots,[$Sword1,spinattack],bottle,grip,cane",
+          "boots,[$Sword1,spinattack],bottle,bombs,cane",
+          "boots,[cape],bottle,grip",
+          "boots,[cape],bottle,bombs,cane",
+          "boots,[flippers],bottle,grip,gust,bombs",
+          "boots,[flippers],bottle,grip,gust,bow",
+          "boots,[flippers],bottle,grip,gust,boomerang",
+          "boots,[flippers],$Sword1,bottle,grip,gust,$beam",
+          "boots,[flippers],bottle,grip,lights",
+          "boots,[flippers],bottle,grip,cane",
+          "boots,[flippers],bottle,bombs,cane"
         ],
         "children":[
           {

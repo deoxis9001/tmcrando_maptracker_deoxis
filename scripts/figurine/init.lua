@@ -1,0 +1,6 @@
+ScriptHost:LoadScript("scripts/figurine/class.lua")
+ScriptHost:LoadScript("scripts/figurine/custom_item.lua")
+ScriptHost:LoadScript("scripts/figurine/RichButton.lua")
+local figurine10 = RichButton("figurine plus 10","figurine10",10)
+local figurine50 = RichButton("figurine plus 50","figurine50",50)
+local figurinemax = RichButton("figurine plus 136","figurinemax",136)
