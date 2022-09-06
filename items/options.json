@@ -251,6 +251,14 @@
    "max_quantity":136,
  },
   {
+   "name": "Dungeons",
+   "type": "consumable",
+   "img": "images/options/dungeons.png",
+   "codes": "dungeons",
+   "min_quantity":0,
+   "max_quantity":6,
+ },
+  {
     "name": "Weapons",
     "type": "progressive",
     "loop": true,

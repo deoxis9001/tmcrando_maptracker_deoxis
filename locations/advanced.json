@@ -1966,7 +1966,7 @@
       //DHC CLOSED
       {
         "name":"Dark Hyrule Castle",
-        "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
+        "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen,$Dungeons"],
         "children":[
           {
             "name":"Blade Chest",
@@ -2649,7 +2649,7 @@
         "children":[
           {
             "name":"Pull the Pedestal",
-            "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
+            "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen,$Dungeons"],
             "map_locations":[
               {
                 "map":"dhc",

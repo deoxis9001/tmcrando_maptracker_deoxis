@@ -246,6 +246,34 @@ function FigurineOpen()
   end
 end
 
+function Dungeons()
+	local count = 0
+	if has("dws") then
+		count = count + 1
+	end
+	if has("cof") then
+		count = count + 1
+	end
+	if has("fow") then
+		count = count + 1
+	end
+	if has("tod") then
+		count = count + 1
+	end
+	if has("rc") then
+		count = count + 1
+	end
+	if has("pow") then
+		count = count + 1
+	end
+	
+	if count >= Tracker:ProviderCountForCode("dungeons") then
+		return 1
+	else
+		return 0
+	end
+end
+
 function neededSwords()
   if has("sword0needed") then
     return 1
@@ -281,7 +309,9 @@ function neededElements()
 end
 
 function noElementsOrSwords()
-  if has("element0Needed") and has("sword0needed") and has("figurine_option") then
+  if has("element0Needed") and has("sword0needed") and Tracker:ProviderCountForCode("dungeons") > 0 then
+    return 1
+  elseif has("element0Needed") and has("sword0needed") and has("figurine_option") then
     return 1
   elseif has("element0Needed") and has("sword1needed") then
     return 1

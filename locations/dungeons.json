@@ -1867,7 +1867,7 @@
         "name": "DHC",
         "short_name": "DHC",
         "codes":"dhc",
-        "access_rules": ["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
+        "access_rules": ["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen,$Dungeons"],
         "map_locations": [
           {
             "map": "map",
@@ -2183,7 +2183,7 @@
         "name": "DHC Fast",
         "short_name": "DHC",
         "codes":"dhc",
-        "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen"],
+        "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen,$Dungeons"],
         "map_locations": [
           {
             "map": "map",
