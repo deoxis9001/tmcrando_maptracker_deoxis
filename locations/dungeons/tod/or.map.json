@@ -1,0 +1,163 @@
+[
+  {
+    "name":"Dungeons",
+    "chest_opened_img":"images/items-map/chest_open.png",
+    "chest_unopened_img":"images/items-map/chest_closed.png",
+    "children":
+    [
+	{
+        "name": "TOD RupObs",
+        "short_name": "TOD",
+        "access_rules":[
+          "llrkey,$Sword1,flippers",
+          "llrkey,bombs,flippers",
+          "llrkey,lamp,flippers",
+          "llrkey,lights,flippers",
+          "$Sword1,flippers,mitts",
+          "bombs,flippers,mitts",
+          "lamp,flippers,mitts",
+          "lights,flippers,mitts",
+          "cape,$Sword1",
+          "cape,bombs,",
+          "cape,lamp",
+          "cape,lights",
+          "ocarina,flippers",
+          "ocarina,cape"],
+        "codes":"tod",
+        "map_locations": [
+          {
+            "map":"map",
+            "x":2337,
+            "y":1035,
+            "restrict_visibility_rules":["obscure_on,rupees_on"]
+          }
+        ],
+        "sections": [
+          {
+            "name":"First Ice Block",
+            "item_count": 1
+          },
+          //Need one key
+          {
+            "name":"Small Key Locked Ice Block",
+            "access_rules":["[tod_smallkey:4],tod_smallkey:1"],
+            "item_count": 1
+          },
+          //Need big key
+          {
+            "name":"Post Madderpillar Chest",
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,flippers,$Sword1","tod_bigkey,[tod_smallkey:4],tod_smallkey:1,gust,cape,lamp,$Sword1"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/big_chest_closed.png",
+            "chest_opened_img":"images/items-map/big_chest_open.png"
+          },
+          {
+            "name":"Underwater Pot",
+            "access_rules":["flippers,gust,tod_bigkey","flippers,cape,tod_bigkey","flippers,cape,lamp,[$CanDamage],$CanDamageOff,tod_bigkey"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/Small Key.png",
+            "chest_opened_img":"images/items-map/Small Key Done.png"
+          },
+          //Need two keys
+          {
+            "name":"Overhang Chest",
+            "access_rules":["tod_bigkey"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/big_chest_closed.png",
+            "chest_opened_img":"images/items-map/big_chest_open.png"
+          },
+          {
+            "name":"Left Path Rupees",
+            "access_rules":["tod_bigkey"],
+            "item_count":5
+          },
+          {
+            "name":"Right Path Rupees",
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,[$CanDamage],$CanDamageOff",
+            "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,flippers,[lamp]"],
+            "item_count":5
+          },
+          {
+            "name":"Upper Water Rupees",
+            "access_rules":["tod_bigkey,flippers"],
+            "item_count":6
+          },
+          {
+            "name":"Lower Water Rupees",
+            "access_rules":["tod_bigkey,cape,flippers","tod_bigkey,gust,flippers"],
+            "item_count":6
+          },
+          {
+            "name":"Ice Puzzle Free Chest",
+            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,[$CanDamage],$CanDamageOff,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "item_count": 1
+          },
+          {
+            "name":"Ice Puzzle Frozen Chest",
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,[$CanDamage],$CanDamageOff,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "item_count":1
+          },
+          {
+            "name":"Post Ice Puzzle Frozen Chest",
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
+			"gust,cape,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1,[$CanDamage],$CanDamageOff"],
+            "item_count": 1
+          },
+          //END OF LEFT PATH
+          //EVERYTHING ELSE NEEDS GUST/FLIPPERS OR LAMP
+          {
+            "name":"Right Path Ice Walkway Chests",
+            "access_rules":["gust,flippers,$Sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,tod_bigkey"],
+            "item_count": 2
+          },
+          {
+            "name":"Right Path Ice Walkway Pot",
+            "access_rules":["gust,flippers,$Sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,tod_bigkey"],
+            "item_count": 1
+          },
+          {
+            "name":"Basement Frozen Chest",
+            "access_rules":["gust,flippers,srd3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,tod_bigkey"],
+            "item_count": 1,
+          },
+          //blue chu is behind small key
+          {
+            "name":"Blue Chu",
+            "access_rules":["gust,flippers,$Sword3,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
+              "gust,lamp,$Sword1,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
+              "gust,lamp,bombs,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/big_chest_closed.png",
+            "chest_opened_img":"images/items-map/big_chest_open.png"
+          },
+          {
+            "name":"Post Blue Chu Frozen Chest",
+            "access_rules":["lamp,tod_bigkey"],
+            "item_count": 1
+          },
+          {
+            "name":"Dark Maze",
+            "access_rules":["lamp,[$CanDamage],$CanDamageOff,tod_bigkey"],
+            "item_count": 3,
+            "clear_as_group": false
+          },
+          {
+            "name":"Dark Maze Bomb Wall",
+            "access_rules":["lamp,[$CanDamage],$CanDamageOff,bombs,tod_bigkey"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/Small Key.png",
+            "chest_opened_img":"images/items-map/Small Key Done.png"
+          },
+          //behind small key
+          {
+            "name":"Octo",
+            "access_rules":["gust,flippers,lamp,bombs,$CanSplit2,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","[flippers],cape,lamp,bombs,$CanSplit2,spinattack,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"], 
+			"item_count": 1,
+            "chest_unopened_img":"images/items-map/Heart Container.png",
+            "chest_opened_img":"images/items-map/Heart Container Gray.png"
+          }
+        ]
+      }
+    ]
+  }
+]

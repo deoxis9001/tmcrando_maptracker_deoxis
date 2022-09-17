@@ -1,0 +1,146 @@
+[
+  {
+    "name":"Dungeons",
+    "chest_opened_img":"images/items-map/chest_open.png",
+    "chest_unopened_img":"images/items-map/chest_closed.png",
+    "children":
+    [
+	{
+        "name": "POW Rupees",
+        "short_name": "POW",
+        "codes":"pow",
+        "access_rules": ["bombs,kinstoneFalls,grip,kinstoneClouds:5,mitts,$Sword4,spinattack,[lamp]",
+          "bombs,kinstoneFalls,grip,kinstoneClouds:5,cape,$Sword4,spinattack,[lamp]"],
+        "map_locations": [
+          {
+            "map": "map",
+            "x": 2303,
+            "y": 250,
+            "restrict_visibility_rules":["rupees_on"]
+          }
+        ],
+        "sections": [
+          {
+            "name":"Firebar Grate",
+            "access_rules": ["cape"],
+            "item_count": 1
+          },
+          {
+            "name":"Wizzrobe Platform Fight",
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/big_chest_closed.png",
+            "chest_opened_img":"images/items-map/big_chest_open.png"
+          },
+          {
+            "name":"Pot Puzzle Key",
+            "access_rules":["cape,[cane],bracelets","cape,[cane],[bracelets],pow_bigkey,pow_smallkey:2"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/Small Key.png",
+            "chest_opened_img":"images/items-map/Small Key Done.png"
+          },
+          {
+            "name":"Rupees",
+            "access_rules":["cape,[cane]"],
+            "item_count":5
+          },
+          //Need one key
+          {
+            "name":"Moblin Archer Chest",
+            "access_rules":["cape,[cane],pow_smallkey:1"],
+            "item_count": 1
+          },
+          {
+            "name":"Flail Soldiers",
+            "access_rules":["cape,[cane],pow_smallkey:1"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/Small Key.png",
+            "chest_opened_img":"images/items-map/Small Key Done.png"
+          },
+          //Need two keys
+          {
+            "name":"Spark Chest",
+            "access_rules":["cape,[cane],pow_smallkey:2,[pow_smallkey:5]"],
+            "item_count": 1
+          },
+          //Need three keys
+          {
+            "name":"Pre Big Key Door Big Chest",
+            "access_rules":["cape,[cane],pow_smallkey:3,[pow_smallkey:6]"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/big_chest_closed.png",
+            "chest_opened_img":"images/items-map/big_chest_open.png"
+          },
+          //SECOND HALF
+          //Need Big Key
+          {
+            "name":"Roller Chest",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:3],pow_smallkey:1"],
+            "item_count": 1
+          },
+          {
+            "name":"Dark Room Big",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:3],pow_smallkey:1"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/big_chest_closed.png",
+            "chest_opened_img":"images/items-map/big_chest_open.png"
+          },
+          {
+            "name":"Dark Room Small",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:3],pow_smallkey:1"],
+            "item_count":1
+          },
+          //Need four keys
+          {
+            "name":"Fire Wizzrobe Fight",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:4],pow_smallkey:2"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/big_chest_closed.png",
+            "chest_opened_img":"images/items-map/big_chest_open.png"
+          },
+          {
+            "name":"Twin Wizzrobe Fight",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:4],pow_smallkey:2"],
+            "item_count":1
+          },
+          {
+            "name":"Heart Piece",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:4],pow_smallkey:2","{cape,cane}"],
+            "capture_item": true,
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/Heart Piece.png",
+            "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+          },
+          {
+            "name":"Switch Chest",
+            "access_rules":["cape,[cane],bombs,pow_bigkey,[pow_smallkey:4],pow_smallkey:2","cape,[cane],boomerang,pow_bigkey,[pow_smallkey:4],pow_smallkey:2"],
+            "item_count": 1
+          },
+          //Need five keys
+          {
+            "name":"Bombarossa Maze",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:5],pow_smallkey:3"],
+            "item_count": 1
+          },
+          //Need six keys
+          {
+            "name":"Block Maze Room",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:6],pow_smallkey:4"],
+            "item_count": 1
+          },
+          {
+            "name":"Block Maze Detour",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:6],pow_smallkey:4"],
+            "item_count":1
+          },
+          {
+            "name":"Gyorg",
+            "access_rules":["cape,[cane],pow_bigkey,[pow_smallkey:6],pow_smallkey:4"],
+            "item_count": 1,
+            "chest_unopened_img":"images/items-map/Heart Container.png",
+            "chest_opened_img":"images/items-map/Heart Container Gray.png"
+          }
+        ]
+      }
+    ]
+  }
+]

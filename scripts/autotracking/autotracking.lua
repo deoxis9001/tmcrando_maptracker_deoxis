@@ -650,7 +650,7 @@ end
 
 function updateSmallKeys(segment, code, address)
   local item = Tracker:FindObjectForCode(code)
-  if code == "dws_smallkey" and ( DWS_KEY_USED <> 0 or DWS_KEY_COUNT <> 0 ) then
+  if code == "dws_smallkey" then
 	DWS_KEY_USED = 0
 	  if testFlag(segment, 0x2002d3f, 0x40) then
 	DWS_KEY_USED = DWS_KEY_USED + 1
@@ -666,7 +666,7 @@ function updateSmallKeys(segment, code, address)
 	  end
       DWS_KEY_COUNT = ReadU8(segment, address)
       item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
-  elseif code == "cof_smallkey" and ( COF_KEY_USED <> 0 or COF_KEY_COUNT <> 0 ) then
+  elseif code == "cof_smallkey" then
       COF_KEY_USED = 0
 	  if testFlag(segment, 0x2002d56, 0x10) then
 	COF_KEY_USED = COF_KEY_USED + 1
@@ -676,7 +676,7 @@ function updateSmallKeys(segment, code, address)
 	  end
       COF_KEY_COUNT = ReadU8(segment, address)
       item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
-  elseif code == "fow_smallkey"  and ( FOW_KEY_USED <> 0 or FOW_KEY_COUNT <> 0 ) then
+  elseif code == "fow_smallkey" then
       FOW_KEY_USED = 0
 	  if testFlag(segment, 0x2002d6f, 0x20) then
 	FOW_KEY_USED = FOW_KEY_USED + 1
@@ -692,7 +692,7 @@ function updateSmallKeys(segment, code, address)
 	  end
       FOW_KEY_COUNT = ReadU8(segment, address)
       item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
-  elseif code == "tod_smallkey" and ( TOD_KEY_USED <> 0 or TOD_KEY_COUNT <> 0 ) then
+  elseif code == "tod_smallkey" then
       TOD_KEY_USED = 0
 	  if testFlag(segment, 0x2002d89, 0x04) then
 	TOD_KEY_USED = TOD_KEY_USED + 1
@@ -708,7 +708,7 @@ function updateSmallKeys(segment, code, address)
 	  end
       TOD_KEY_COUNT = ReadU8(segment, address)
       item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
-  elseif code == "pow_smallkey"  and ( POW_KEY_USED <> 0 or POW_KEY_COUNT <> 0 ) then
+  elseif code == "pow_smallkey" then
       POW_KEY_USED = 0
 	  if testFlag(segment, 0x2002da3, 0x10) then
 	POW_KEY_USED = POW_KEY_USED + 1
@@ -730,7 +730,7 @@ function updateSmallKeys(segment, code, address)
 	  end
       POW_KEY_COUNT = ReadU8(segment, address)
       item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
-  elseif code == "explicit_dhc_smallkey" and ( DHC_KEY_USED <> 0 or DHC_KEY_COUNT <> 0 ) then
+  elseif code == "explicit_dhc_smallkey" then
       DHC_KEY_USED = 0
 	  if testFlag(segment, 0x2002dbb, 0x20) then
 	DHC_KEY_USED = DHC_KEY_USED + 1
@@ -749,7 +749,7 @@ function updateSmallKeys(segment, code, address)
 	  end
       DHC_KEY_COUNT = ReadU8(segment, address)
       item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
-  elseif code == "cryptkey"  and ( RC_KEY_USED <> 0 or RC_KEY_COUNT <> 0 ) then
+  elseif code == "cryptkey" then
       RC_KEY_USED = 0
 	  if testFlag(segment, 0x2002d00, 0x80) then
 	RC_KEY_USED = RC_KEY_USED + 1
