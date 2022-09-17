@@ -274,23 +274,5 @@
         "codes": "weapons_off"
       }
     ]
-  },
-  {
-    "name": "Keasy",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/keasy_off.png",
-        "codes":"keasy_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/keasy_on.png",
-        "codes":"keasy_on",
-        "inherit_codes":false
-      }
-    ]
   }
 ]
