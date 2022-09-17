@@ -89,7 +89,7 @@
 					"sections":[
 					  {
 						"name":"Kill Tektite",
-						"access_rules":["[$canDamage],$canDamage_off"],
+						"access_rules":["[$CanDamage],$CanDamageOff"],
 						"item_count":1
 					  }
 					]
@@ -157,7 +157,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,$beam",
+                      "grip,gust,$Beam",
                       "grip,cape",
                       "grip,lights",
                       "cane"
@@ -184,7 +184,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,$beam",
+                      "grip,gust,$Beam",
                       "grip,cape",
                       "grip,lights"
                     ],
@@ -211,7 +211,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,$beam",
+                      "grip,gust,$Beam",
                       "grip,cape",
                       "grip,lights"
                     ],
@@ -242,7 +242,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,$beam",
+                      "grip,gust,$Beam",
                       "grip,cape",
                       "grip,lights"
                     ],
@@ -274,7 +274,7 @@
                       "grip,gust,bombs",
                       "grip,gust,bow",
                       "grip,gust,boomerang",
-                      "grip,gust,$beam",
+                      "grip,gust,$Beam",
                       "grip,cape",
                       "grip,lights"
                     ],
@@ -310,7 +310,7 @@
                       "grip,gust,bombs,mitts",
                       "grip,gust,bow,mitts",
                       "grip,gust,boomerang,mitts",
-                      "grip,gust,$beam,mitts",
+                      "grip,gust,$Beam,mitts",
                       "grip,cape,mitts",
                       "grip,lights,mitts"
                     ],
@@ -577,7 +577,7 @@
 				"sections":[
 				  {
 					"name":"Kill Tektite",
-					"access_rules":["[$canDamage],$canDamage_off"],
+					"access_rules":["[$CanDamage],$CanDamageOff"],
 					"item_count":1
 				  }
 				]
@@ -782,7 +782,7 @@
                         "sections":[
                           {
                             "name":"Kill octo",
-							"access_rules":["[$canDamage],$canDamage_off"],
+							"access_rules":["[$CanDamage],$CanDamageOff"],
                             "item_count":1
                           }
                         ]
@@ -1055,7 +1055,7 @@
 					"sections":[
 					  {
 						"name":"Kill Rope",
-						"access_rules":["[$canDamage],$canDamage_off"],
+						"access_rules":["[$CanDamage],$CanDamageOff"],
 						"item_count":1
 					  }
 					]
@@ -1404,7 +1404,7 @@
 				"sections":[
 				  {
 					"name":"Kill Octo",
-					"access_rules":["[$canDamage],$canDamage_off"],
+					"access_rules":["[$CanDamage],$CanDamageOff"],
 					"item_count":1
 				  }
 				]
@@ -1579,7 +1579,7 @@
 			"sections":[
 			  {
 				"name":"Kill Rope",
-                "access_rules":["[$canDamage],$canDamage_off"],
+                "access_rules":["[$CanDamage],$CanDamageOff"],
 				"item_count":1
 			  }
 			]
@@ -2273,7 +2273,7 @@
             "sections":[
               {
                 "name":"Mulldozers",
-                "access_rules":["[$canDamage],$canDamage_off,cane"],
+                "access_rules":["[$CanDamage],$CanDamageOff,cane"],
                 "item_count":1
               },
               {
@@ -2305,7 +2305,7 @@
             "sections": [
               {
                 "name":"Scissor Beetles",
-                "access_rules":["[$canDamage],$canDamage_off,cape","[$canDamage],$canDamage_off,gust","[$canDamage],$canDamage_off,flippers"],
+                "access_rules":["[$CanDamage],$CanDamageOff,cape","[$CanDamage],$CanDamageOff,gust","[$CanDamage],$CanDamageOff,flippers"],
                 "item_count":1
               },
               {
@@ -2329,7 +2329,7 @@
             "sections": [
               {
                 "name":"Scissor Beetles",
-                "access_rules":["[$canDamage],$canDamage_off,cape","[$canDamage],$canDamage_off,gust","[$canDamage],$canDamage_off,flippers"],
+                "access_rules":["[$CanDamage],$CanDamageOff,cape","[$CanDamage],$CanDamageOff,gust","[$CanDamage],$CanDamageOff,flippers"],
                 "item_count":1
               },
               {
@@ -2713,7 +2713,7 @@
             "children": [
               {
                 "name":"Central Fusion",
-                "access_rules":["$hasNoCloudtop"],
+                "access_rules":["$NoCloudtop"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2732,7 +2732,7 @@
               },
               {
                 "name":"Top Right Fusion",
-                "access_rules":["$hasNoCloudtop,mitts","$hasNoCloudtop,cape"],
+                "access_rules":["$NoCloudtop,mitts","$NoCloudtop,cape"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2751,7 +2751,7 @@
               },
               {
                 "name":"Top Left Fusion",
-                "access_rules":["$hasNoCloudtop,mitts","$hasNoCloudtop,cape"],
+                "access_rules":["$NoCloudtop,mitts","$NoCloudtop,cape"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2770,7 +2770,7 @@
               },
               {
                 "name":"Bottom Left Fusion",
-                "access_rules":["$hasNoCloudtop,mitts","$hasNoCloudtop,cape"],
+                "access_rules":["$NoCloudtop,mitts","$NoCloudtop,cape"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2789,7 +2789,7 @@
               },
               {
                 "name":"Bottom Right Fusion",
-                "access_rules":["$hasNoCloudtop,mitts","$hasNoCloudtop,cape"],
+                "access_rules":["$NoCloudtop,mitts","$NoCloudtop,cape"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2808,7 +2808,7 @@
               },
               {
                 "name":"Kill Piranhas (North)",
-                "access_rules": ["[$canDamage],$canDamage_off,cape","[$canDamage],$canDamage_off,mitts"],
+                "access_rules": ["[$CanDamage],$CanDamageOff,cape","[$CanDamage],$CanDamageOff,mitts"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -2825,7 +2825,7 @@
               },
               {
                 "name":"Kill Piranhas (South)",
-                "access_rules": ["[$canDamage],$canDamage_off,cape","[$canDamage],$canDamage_off,mitts"],
+                "access_rules": ["[$CanDamage],$CanDamageOff,cape","[$CanDamage],$CanDamageOff,mitts"],
                 "map_locations": [
                   {
                     "map":"map",
@@ -3312,7 +3312,7 @@
 				"sections":[
 				  {
 					"name":"Kill Tektite",
-					"access_rules":["[$canDamage],$canDamage_off"],
+					"access_rules":["[$CanDamage],$CanDamageOff"],
 					"item_count":1
 				  }
 				]
@@ -4060,7 +4060,7 @@
 			"sections":[
 			  {
 				"name":"Kill Rope",
-                "access_rules":["[$canDamage],$canDamage_off"],
+                "access_rules":["[$CanDamage],$CanDamageOff"],
 				"item_count":1
 			  }
 			]
@@ -4440,7 +4440,7 @@
 			"sections":[
 			  {
 				"name":"Kill Octo",
-                "access_rules":["[$canDamage],$canDamage_off"],
+                "access_rules":["[$CanDamage],$CanDamageOff"],
 				"item_count":1
 			  }
 			]

@@ -1,0 +1,6 @@
+ScriptHost:LoadScript("scripts/item_spec/class.lua")
+ScriptHost:LoadScript("scripts/item_spec/custom_item.lua")
+ScriptHost:LoadScript("scripts/item_spec/figurine.lua")
+local figurine10 = FigurineButton("figurine plus 10","figurine10",10,"images/options/figurine10.png")
+local figurine50 = FigurineButton("figurine plus 50","figurine50",50,"images/options/figurine50.png")
+local figurinemax = FigurineButton("figurine plus 136","figurinemax",136,"images/options/figurineMax.png")

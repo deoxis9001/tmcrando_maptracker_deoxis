@@ -1,35 +1,5 @@
--- 
-ScriptHost:LoadScript("scripts/figurine/init.lua")
---  Load configuration options up front
-ScriptHost:LoadScript("scripts/settings/settings.lua")
-
-Tracker:AddItems("items/common.json")
-Tracker:AddItems("items/dungeon_items.json")
-Tracker:AddItems("items/keys.json")
-Tracker:AddItems("items/options.json")
-
-if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
-    ScriptHost:LoadScript("scripts/logic/common.lua")
-    Tracker:AddMaps("maps/maps.json")
-    Tracker:AddLocations("locations/overworld.json")
-    Tracker:AddLocations("locations/dungeons.json")
-    Tracker:AddLocations("locations/advanced.json")
-end
-
-Tracker:AddLayouts("layouts/tracker.json")
-
-if (string.find(Tracker.ActiveVariantUID, "_a_h")) then
-    Tracker:AddLayouts("layouts/standard_a_h_broadcast.json")
-elseif (string.find(Tracker.ActiveVariantUID, "_h")) then
-    Tracker:AddLayouts("layouts/standard_h_broadcast.json")
-elseif (string.find(Tracker.ActiveVariantUID, "_a")) then
-    Tracker:AddLayouts("layouts/standard_a_broadcast.json")
-else
-    Tracker:AddLayouts("layouts/standard_broadcast.json")
-end
-
-if _VERSION == "Lua 5.3" then
-  ScriptHost:LoadScript("scripts/autotracking/autotracking.lua")
-else
-  print("Your tracker version does not support autotracking")
-end
+ScriptHost:LoadScript("scripts/item_spec/init.lua")
+ScriptHost:LoadScript("scripts/settings/init.lua")
+ScriptHost:LoadScript("scripts/logic/init.lua")
+ScriptHost:LoadScript("scripts/main/init.lua")
+ScriptHost:LoadScript("scripts/autotracking/init.lua")
