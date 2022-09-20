@@ -760,24 +760,6 @@
    "codes": "cryptkey",
    "max_quantity": 3
  },
- //beta
- {
-   "name": "beta",
-   "type": "progressive",
-   "img": "images/items/Beta.png",
-   "allow_disabled": false,
-   "inherit_codes": false,
-   "stages":[
-     {
-       "img":"images/items/Beta.png",
-       "codes": "beta"
-     },
-     {
-       "img":"images/items/Beta.png",
-       "codes": "beta"
-     },
-   ]
- },
  {
    "name": "Hearts",
    "type": "progressive",
