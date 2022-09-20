@@ -1,0 +1,589 @@
+[
+  {
+    "name":"World",
+    "chest_unopened_img":"images/items-map/chest_closed.png",
+    "chest_opened_img":"images/items-map/chest_open.png",
+    "children":
+    [
+{
+        "name":"Hyrule Town",
+        "children": [
+          //Swiftblade Dojo
+          {
+            "name":"Swiftblade's Dojo",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1194,
+                "y":1575,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Spin Attack",
+                "access_rules":["$Sword1"],
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+                "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+              },
+              {
+                "name":"Rock Breaker",
+                "access_rules":["$Sword2"],
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+                "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+              },
+              {
+                "name":"Dash Attack",
+                "access_rules":["$Sword1,boots"],
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+                "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+              },
+              {
+                "name":"Down Thrust",
+                "access_rules":["$Sword1,cape"],
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+                "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+              }
+            ]
+          },
+          {
+            "name":"Town Waterfall",
+            "access_rules":["flippers"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1150,
+                "y":1271,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Waterfall",
+                "item_count":1
+              }
+            ]
+          },
+          //Stockwell's Shop
+          {
+            "name":"Stockwell's Shop",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1378,
+                "y":1482,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Wallet Spot (80 Rupees)",
+                "item_count": 1,
+                "capture_item":true,
+                "access_rules":["{}",""]
+              },
+              {
+                "name":"Boomerang Spot (300 Rupees)",
+                "access_rules":["wallet2","{}"],
+                "item_count": 1,
+                "capture_item":true,
+              },
+              {
+                "name":"Quiver Spot (600 Rupees)",
+                "access_rules":["wallet4","{}"],
+                "item_count": 1,
+                "capture_item":true,
+              },
+              {
+                "name":"Attic Chest",
+                "access_rules":["cane","flippers","cape"],
+                "item_count": 1
+              },
+              {
+                "name":"Dog Food Bottle Spot",
+                "capture_item":true,
+                "access_rules":["cane","flippers","cape","{}"],
+                "item_count": 1
+              }
+            ]
+          },
+          //Eastern Shops
+          {
+            "name":"Eastern Shops",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1225,
+                "y":1350,
+              }
+            ],
+            "sections":[
+              {
+                "name":"Rem",
+                "access_rules":["mushroom"],
+                "item_count": 1
+              },
+              {
+                "name":"Simon's Simulations",
+                "access_rules":["$Sword1"],
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              },
+              {
+                "name":"Figurine House",
+                "access_rules":["carlov"],
+                "item_count": 3
+              },
+              {
+                "name":"Figurine House Heart Piece",
+                "access_rules":["carlov","{}"],
+                "capture_item":true,
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name":"Hearth Back Door Heart Piece",
+            "access_rules":["cane","flippers","cape"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1610,
+                "y":1275,
+                "restrict_visibility_rules":["obscure_off"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Hearth Back Door Heart Piece",
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name":"Hearth",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1610,
+                "y":1275,
+                "restrict_visibility_rules":["obscure_on"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Hearth Back Door Heart Piece",
+                "access_rules":["cane","flippers","cape"],
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              },
+              {
+                "name":"Hearth Right Pot",
+                "item_count":1,
+              }
+            ]
+          },
+          {
+            "name":"Bakery Attic Chest",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1425,
+                "y":1345,
+              }
+            ],
+            "sections":[
+              {
+                "name":"Bakery Attic Chest",
+                "access_rules":["cane","flippers","cape"],
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name":"Mayor's House Basement",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1535,
+                "y":1220
+              }
+            ],
+            "sections":[
+              {
+                "name":"Mayor's House Basement",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name":"Carlov",
+            "access_rules":["cape","cane","flippers"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1050,
+                "y":1580
+               }
+            ],
+            "sections":[
+              {
+                "name":"Carlov",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Julietta's House",
+            "map_locations": [
+              {
+                "map":"map",
+                "x": 1540,
+                "y": 1500,
+              }
+            ],
+            "sections":[
+              {
+                "name":"Bookshelf",
+                "capture_item":true,
+                "access_rules":["cane,bottle","flippers,bottle","cape,bottle","{}"],
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Fountain",
+            "access_rules": ["bottle,cane","bottle,cape","bottle,flippers"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x": 1225,
+                "y": 1250,
+              }
+            ],
+            "sections":[
+              {
+                "name":"Mulldozers",
+                "access_rules":["[$CanDamage],$CanDamageOff,cane"],
+                "item_count":1
+              },
+              {
+                "name":"Small Chest",
+                "access_rules":["flippers","cape"],
+                "item_count":1
+              },
+              {
+                "name":"Heart Piece",
+                "item_count":1,
+                "access_rules":["cape","{}"],
+                "capture_item": true,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name":"Flippers Cave",
+            "access_rules":["cane,ocarina,book3,grip","flippers,cane,ocarina"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1125,
+                "y":1050,
+                "restrict_visibility_rules":["rupees_off,obscure_off","rupees_off,obscure_on","rupees_on,obscure_off"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Scissor Beetles",
+                "access_rules":["[$CanDamage],$CanDamageOff,cape","[$CanDamage],$CanDamageOff,gust","[$CanDamage],$CanDamageOff,flippers"],
+                "item_count":1
+              },
+              {
+                "name":"Frozen Chest",
+                "access_rules":["flippers,lamp"],
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Flippers Cave Rupees",
+            "access_rules":["cane,ocarina,book3,grip","flippers,cane,ocarina"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1125,
+                "y":1050,
+                "restrict_visibility_rules":["rupees_on,obscure_on"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Scissor Beetles",
+                "access_rules":["[$CanDamage],$CanDamageOff,cape","[$CanDamage],$CanDamageOff,gust","[$CanDamage],$CanDamageOff,flippers"],
+                "item_count":1
+              },
+              {
+                "name":"Frozen Chest",
+                "access_rules":["flippers,lamp"],
+                "item_count":1
+              },
+              {
+                "name":"Under the Waterfall",
+                "access_rules":["flippers,cane"],
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Dr. Left's House",
+            "access_rules": ["bracelets,gust,$Sword3,cape,spinattack",
+              "bracelets,gust,$Sword3,cane,spinattack",
+              "bracelets,gust,$Sword3,flippers,spinattack",
+              "bracelets,bombs,$Sword3,cape,spinattack",
+              "bracelets,bombs,$Sword3,cane,spinattack",
+              "bracelets,bombs,$Sword3,flippers,spinattack"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x": 1030,
+                "y": 1355,
+              }
+            ],
+            "sections":[
+              {
+                "name":"Dr. Left's House",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Library",
+            "access_rules": ["ocarina"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x": 1215,
+                "y": 1045,
+              }
+            ],
+            "sections":[
+              {
+                "name":"Yellow Library Minish",
+                "item_count":1,
+                "access_rules":["book3,cane"]
+              },
+            ]
+          },
+          //Cuccos
+          {
+            "name":"Anju",
+            "access_rules": ["flippers","cape"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1550,
+                "y":1600,
+              }
+            ],
+            "sections":[
+              {
+                "name":"Heart Piece",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          //Town Cave
+          {
+            "name":"Town Digging Cave",
+            "access_rules":["mitts"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1465,
+                "y":1275
+              }
+            ],
+            "sections":[
+              {
+                "name":"Cave Chests",
+                "item_count": 3
+              },
+              {
+                "name":"Town Basement Left",
+                "item_count":1,
+              }
+            ]
+          },
+          {
+            "name":"Bell",
+            "access_rules":["cape"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1325,
+                "y":1200,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Bell",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name":"Hyrule Well",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1500,
+                "y":1425,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Hyrule Well Bottom Chest",
+                "access_rules":["flippers","cape"],
+                "item_count":1
+              },
+              {
+                "name":"Hyrule Well Center Chest",
+                "access_rules":[
+                  "flippers,mitts,$Sword4,spinattack",
+                  "cape,mitts,$Sword4,spinattack"
+                ],
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"School",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1500,
+                "y":1050,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Roof Chest",
+                "access_rules":["cane"],
+                "item_count":1
+              },
+              {
+                "name":"Pull the Statue",
+                "access_rules":["bombs"],
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"School Gardens",
+            "access_rules":["cane"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1600,
+                "y":1067,
+                "restrict_visibility_rules":["fusions_none"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Garden Chests",
+                "access_rules":["$Sword5,spinattack"],
+                "item_count":3
+              },
+              {
+                "name":"Heart Piece",
+                "item_count":1,
+                "access_rules":["$Sword5,spinattack","{cane}"],
+                "capture_item":true,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name":"School Gardens Open",
+            "access_rules":["cane"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1600,
+                "y":1067,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Garden Chests",
+                "access_rules":["$Sword5,spinattack"],
+                "item_count":3
+              },
+              {
+                "name":"Heart Piece",
+                "item_count":1,
+                "access_rules":["$Sword5,spinattack","{cane}"],
+                "capture_item":true,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              },
+              {
+                "name":"Minish Path Chest",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Lady Next to Cafe",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1220,
+                "y":1500
+              }
+            ],
+            "sections": [
+              {
+                "name":"Lady Next to Cafe",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Hearth Ledge",
+            "access_rules":["Lamp"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1550,
+                "y":1350
+              }
+            ],
+            "sections": [
+              {
+                "name":"Hearth Ledge",
+                "item_count":1
+              }
+            ]
+          }
+        ]
+      }
+	]
+  }
+]

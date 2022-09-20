@@ -1,0 +1,112 @@
+[
+  {
+    "name":"World",
+    "chest_unopened_img":"images/items-map/chest_closed.png",
+    "chest_opened_img":"images/items-map/chest_open.png",
+    "children":
+    [
+	{
+        "name":"Eastern Hills",
+        "access_rules":["bombs","$Sword1","lamp","lights","ocarina"],
+        "children": [
+          {
+            "name": "Eastern Hills Bombable Wall",
+            "access_rules":["bombs"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1775,
+                "y":1900
+              }
+            ],
+            "sections": [
+              {
+                "name":"Eastern Hills Bomb Wall",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Farm Chest",
+            "access_rules":["$Sword1","bombs","lights","lamp"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1795,
+                "y":1685,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Farm Chest",
+                "item_count":1
+              }
+            ]
+          },
+		  {
+			"name":"Eastern Hills Rope Golden",
+            "access_rules":["$Sword1","bombs","lights","lamp"],
+			"map_locations":[
+			  {
+				"map":"map",
+				"x":1725,
+				"y":1725, 
+				"restrict_visibility_rules":["fusions_open,bingo_on"]
+			  }
+			],
+			"sections":[
+			  {
+				"name":"Kill Rope",
+                "access_rules":["[$CanDamage],$CanDamageOff"],
+				"item_count":1
+			  }
+			]
+		  },
+          {
+            "name":"Farm Rupee",
+            "access_rules":["$Sword1,mitts","bombs,mitts","lights,mitts","lamp,mitts","ocarina,mitts"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1700,
+                "y":1560,
+                "restrict_visibility_rules":["rupees_on"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Farm Rupee",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Eastern Hills Beanstalk",
+            "access_rules":["$Sword1","bombs","lights","lamp"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1705,
+                "y":1830,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Beanstalk Chests",
+                "item_count":2
+              },
+              {
+                "name":"Beanstalk Heart Piece",
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          }
+        ]
+      }
+	]
+  }
+]

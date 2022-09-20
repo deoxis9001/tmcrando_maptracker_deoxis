@@ -1,0 +1,408 @@
+[
+  {
+    "name":"World",
+    "chest_unopened_img":"images/items-map/chest_closed.png",
+    "chest_opened_img":"images/items-map/chest_open.png",
+	"name":"Veil Falls",
+	"access_rules":["bombs"],
+    "children":
+    [
+	{
+            "name":"Cloud Tops",
+            "access_rules":["kinstoneFalls,grip,[lamp]"],
+            "children": [
+              {
+                "name":"Central Fusion",
+                "access_rules":["$NoCloudtop"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3150,
+                    "y":1110
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Central Fusion",
+                    "item_count":1,
+                    "chest_unopened_img":"images/items-map/Gold Kinstone (Clouds).png",
+                    "chest_opened_img":"images/items-map/Gold Kinstone (Clouds) Gray.png"
+                  }
+                ]
+              },
+              {
+                "name":"Top Right Fusion",
+                "access_rules":["$NoCloudtop,mitts","$NoCloudtop,cape"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3275,
+                    "y":850
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Top Right Fusion",
+                    "item_count":1,
+                    "chest_unopened_img":"images/items-map/Gold Kinstone (Clouds).png",
+                    "chest_opened_img":"images/items-map/Gold Kinstone (Clouds) Gray.png"
+                  }
+                ]
+              },
+              {
+                "name":"Top Left Fusion",
+                "access_rules":["$NoCloudtop,mitts","$NoCloudtop,cape"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2700,
+                    "y":830
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Top Left Fusion",
+                    "item_count":1,
+                    "chest_unopened_img":"images/items-map/Gold Kinstone (Clouds).png",
+                    "chest_opened_img":"images/items-map/Gold Kinstone (Clouds) Gray.png"
+                  }
+                ]
+              },
+              {
+                "name":"Bottom Left Fusion",
+                "access_rules":["$NoCloudtop,mitts","$NoCloudtop,cape"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2855,
+                    "y":1270
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Bottom Left Fusion",
+                    "item_count":1,
+                    "chest_unopened_img":"images/items-map/Gold Kinstone (Clouds).png",
+                    "chest_opened_img":"images/items-map/Gold Kinstone (Clouds) Gray.png"
+                  }
+                ]
+              },
+              {
+                "name":"Bottom Right Fusion",
+                "access_rules":["$NoCloudtop,mitts","$NoCloudtop,cape"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3275,
+                    "y":1270
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Bottom Right Fusion",
+                    "item_count":1,
+                    "chest_unopened_img":"images/items-map/Gold Kinstone (Clouds).png",
+                    "chest_opened_img":"images/items-map/Gold Kinstone (Clouds) Gray.png"
+                  }
+                ]
+              },
+              {
+                "name":"Kill Piranhas (North)",
+                "access_rules": ["[$CanDamage],$CanDamageOff,cape","[$CanDamage],$CanDamageOff,mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2970,
+                    "y":840,
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Kill Piranhas",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Kill Piranhas (South)",
+                "access_rules": ["[$CanDamage],$CanDamageOff,cape","[$CanDamage],$CanDamageOff,mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3010,
+                    "y":1270,
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Kill Piranhas",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Right Chest",
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3290,
+                    "y":450
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Right Chest",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Top Left North Chests",
+                "access_rules":["mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2730,
+                    "y":150,
+                    "restrict_visibility_rules":["obscure_off"]
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Top Left North Chests",
+                    "item_count":2,
+                  }
+                ]
+              },
+              {
+                "name":"Top Left North Chests Obscure",
+                "access_rules":["mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2730,
+                    "y":150,
+                    "restrict_visibility_rules":["obscure_on"]
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Top Left North Chests",
+                    "item_count":2,
+                  },
+                  {
+                    "name":"Digging Spot on the Left",
+                    "item_count":1
+                  }
+                ]
+              },
+              {
+                "name":"Top Left South Chest",
+                "access_rules":["mitts","cape"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2710,
+                    "y":260
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Top Left South Chest",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Bottom Left Chest",
+                "access_rules":["mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2730,
+                    "y":680
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Bottom Left Chest",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Center Left",
+                "access_rules":["cape","mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2845,
+                    "y":575
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Center Left",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Center Right",
+                "access_rules":["cape","mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3000,
+                    "y":575
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Center Right",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Top Right Digging Spot",
+                "access_rules":["mitts"],
+                "map_locations":[
+                  {
+                    "map":"map",
+                    "x":3300,
+                    "y":175,
+                    "restrict_visibility_rules":["obscure_on"]
+                  }
+                ],
+                "sections":[
+                  {
+                    "name":"Digging Spot",
+                    "item_count":1
+                  }
+                ]
+              },
+              {
+                "name":"Bottom Left Digging Spot",
+                "access_rules":["mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2670,
+                    "y":730,
+                    "restrict_visibility_rules":["obscure_on"]
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Digging Spot",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Center Digging Spot",
+                "access_rules":["mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2920,
+                    "y":550,
+                    "restrict_visibility_rules":["obscure_on"]
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Digging Spot",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"South Digging Spot",
+                "access_rules":["mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3150,
+                    "y":730,
+                    "restrict_visibility_rules":["obscure_on"]
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Digging Spot",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Southeast South Digging Spot",
+                "access_rules":["mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3300,
+                    "y":730,
+                    "restrict_visibility_rules":["obscure_on"]
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Digging Spot",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Southeast North Digging Spot",
+                "access_rules":["mitts"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":3300,
+                    "y":600,
+                    "restrict_visibility_rules":["obscure_on"]
+                  }
+                ],
+                "sections": [
+                  {
+                    "name":"Digging Spot",
+                    "item_count":1,
+                  }
+                ]
+              },
+              {
+                "name":"Wind Tribe House",
+                "access_rules":["kinstoneClouds:5,mitts","kinstoneClouds:5,cape"],
+                "map_locations": [
+                  {
+                    "map":"map",
+                    "x":2303,
+                    "y":350,
+                    "restrict_visibility_rules":["fusions_none"]
+                  }
+                ],
+                "sections":[
+                  {
+                    "name":"Save Gregal",
+                    "access_rules":["gust"],
+                    "item_count":1
+                  },
+                  {
+                    "name":"Gregal's Gift",
+                    "access_rules":["gust"],
+                    "item_count":1
+                  },
+                  {
+                    "name":"House Chests",
+                    "item_count":8,
+                    "clear_as_group":false
+                  }
+                ]
+              }
+            ]
+          }
+	]
+  }
+]

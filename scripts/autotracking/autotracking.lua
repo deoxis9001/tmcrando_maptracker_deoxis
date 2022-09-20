@@ -1,5 +1,5 @@
 -- Configuration ----------------------
-TMC_AUTOTRACKER_DEBUG = true
+-- TMC_AUTOTRACKER_DEBUG = true
 BOW_VALUE = 0
 WildsFused = 0
 WildsBag = 0
@@ -93,7 +93,7 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
 
         local value = ReadU8(segment, address)
 
-        if TMC_AUTOTRACKER_DEBUGG then
+        if TMC_AUTOTRACKER_DEBUG then
             print(locationRef, value)
         end
 
@@ -102,7 +102,7 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
         else
             location.AvailableChestCount = 1
         end
-    elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+    elseif TMC_AUTOTRACKER_DEBUG then
         print("Couldn't find location", locationRef)
     end
 end
@@ -360,8 +360,10 @@ end
 function updateQuiver(segment)
   local item = Tracker:FindObjectForCode("quiver")
   if item then
-      item.CurrentStage = ReadU8(segment, 0x2002aef)
+    item.CurrentStage = ReadU8(segment, 0x2002aef)  
+    if TMC_AUTOTRACKER_DEBUG then
       print("Bow value =", BOW_VALUE, ReadU8(segment, 0x2002aef))
+    end
   end
   if ReadU8(segment,0x2002aef) == 0x00 then
     item.CurrentStage = 0
@@ -467,7 +469,9 @@ function updateWildsUsedFixed(segment, locationData)
       end
     end
     item.AcquiredCount = WildsFused + WildsBag
-    print("Wilds Used", WildsFused)
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds Used", WildsFused)
+	end
   end
 end
 
@@ -476,53 +480,68 @@ function updateWilds(segment, code, flag)
 
   if ReadU8(segment, 0x2002b58) == flag then
     WildsBag = ReadU8(segment, 0x2002b6b)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b6b))
-
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b6b))
+	end
   elseif ReadU8(segment, 0x2002b59) == flag then
     WildsBag = ReadU8(segment, 0x2002b6c)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b6c))
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b6c))
+	end
 
   elseif ReadU8(segment, 0x2002b5a) == flag then
     WildsBag = ReadU8(segment, 0x2002b6d)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b6d))
-
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b6d))
+	end
   elseif ReadU8(segment, 0x2002b5b) == flag then
     WildsBag = ReadU8(segment, 0x2002b6e)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b6e))
-
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b6e))
+	end
   elseif ReadU8(segment, 0x2002b5c) == flag then
     WildsBag = ReadU8(segment, 0x2002b6f)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b6f))
-
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b6f))
+	end
   elseif ReadU8(segment, 0x2002b5d) == flag then
     WildsBag = ReadU8(segment, 0x2002b70)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b70))
-
-  elseif ReadU8(segment, 0x2002b5e) == flag then
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b70))
+	end
+	elseif ReadU8(segment, 0x2002b5e) == flag then
     WildsBag = ReadU8(segment, 0x2002b71)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b71))
-
-  elseif ReadU8(segment, 0x2002b5f) == flag then
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b71))
+	end
+	elseif ReadU8(segment, 0x2002b5f) == flag then
     WildsBag = ReadU8(segment, 0x2002b72)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b72))
-
-  elseif ReadU8(segment, 0x2002b60) == flag then
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b72))
+	end
+	elseif ReadU8(segment, 0x2002b60) == flag then
     WildsBag = ReadU8(segment, 0x2002b73)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b73))
-
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b73))
+	end
   elseif ReadU8(segment, 0x2002b61) == flag then
     WildsBag = ReadU8(segment, 0x2002b74)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b74))
-
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b74))
+	end
   elseif ReadU8(segment, 0x2002b62) == flag then
     WildsBag = ReadU8(segment, 0x2002b75)
-    print("Wilds in Bag", ReadU8(segment, 0x2002b75))
+	if TMC_AUTOTRACKER_DEBUG then
+		print("Wilds in Bag", ReadU8(segment, 0x2002b75))
+	end
   else
 	WildsBag = 0
   end
 
   item.AcquiredCount = WildsFused + WildsBag
-  print("Wilds Obtained", WildsBag)
+  if TMC_AUTOTRACKER_DEBUG then
+	print("Wilds Obtained", WildsBag)
+  end
 end
 
 function updateCloudsUsedFixed(segment, locationData)
@@ -541,7 +560,9 @@ function updateCloudsUsedFixed(segment, locationData)
       end
     end
     item.AcquiredCount = CloudsFused + CloudsBag
-    print("Clouds Fused", CloudsFused)
+	if TMC_AUTOTRACKER_DEBUG then
+      print("Clouds Fused", CloudsFused)
+	end
   end
 end
 
@@ -569,35 +590,44 @@ function updateClouds(segment, code, flag)
 
   elseif ReadU8(segment, 0x2002b5d) == flag then
     CloudsBag = ReadU8(segment, 0x2002b70)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b70))
-
+    if TMC_AUTOTRACKER_DEBUG then
+      print("Clouds in Bag", ReadU8(segment, 0x2002b70))
+    end
   elseif ReadU8(segment, 0x2002b5e) == flag then
     CloudsBag = ReadU8(segment, 0x2002b71)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b71))
-
+    if TMC_AUTOTRACKER_DEBUG then
+      print("Clouds in Bag", ReadU8(segment, 0x2002b71))
+    end
   elseif ReadU8(segment, 0x2002b5f) == flag then
     CloudsBag = ReadU8(segment, 0x2002b72)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b72))
-
+    if TMC_AUTOTRACKER_DEBUG then
+      print("Clouds in Bag", ReadU8(segment, 0x2002b72))
+    end
   elseif ReadU8(segment, 0x2002b60) == flag then
     CloudsBag = ReadU8(segment, 0x2002b73)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b73))
-
+    if TMC_AUTOTRACKER_DEBUG then
+      print("Clouds in Bag", ReadU8(segment, 0x2002b73))
+    end
   elseif ReadU8(segment, 0x2002b61) == flag then
     CloudsBag = ReadU8(segment, 0x2002b74)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b74))
-
+    if TMC_AUTOTRACKER_DEBUG then
+      print("Clouds in Bag", ReadU8(segment, 0x2002b74))
+    end
   elseif ReadU8(segment, 0x2002b62) == flag then
     CloudsBag = ReadU8(segment, 0x2002b75)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b75))
+    if TMC_AUTOTRACKER_DEBUG then
+      print("Clouds in Bag", ReadU8(segment, 0x2002b75))
+    end
   else
 	CloudsBag = 0	
   end
+  if TMC_AUTOTRACKER_DEBUG then
    print("Clouds in Bag", CloudsBag)	
-
+  end
   item.AcquiredCount = CloudsBag + CloudsFused
-
-  print("Clouds Obtained", CloudsFused)
+  if TMC_AUTOTRACKER_DEBUG then
+	print("Clouds Obtained", CloudsFused)
+  end
 end
 
 function updateHearts(segment, address)
@@ -770,7 +800,9 @@ end
 function updatefigurine(segment, code, address)
   local item = Tracker:FindObjectForCode(code)
   item.AcquiredCount = ReadU8(segment, address)
-  print("figurne", item.AcquiredCount)
+  if TMC_AUTOTRACKER_DEBUG then
+    print("figurne", item.AcquiredCount)
+  end
 end
 function updateSpin(segment)
   local item = Tracker:FindObjectForCode("spinattack")

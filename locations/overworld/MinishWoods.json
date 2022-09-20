@@ -1,0 +1,378 @@
+[
+  {
+    "name":"World",
+    "chest_unopened_img":"images/items-map/chest_closed.png",
+    "chest_opened_img":"images/items-map/chest_open.png",
+    "children":
+    [
+{
+        "name": "Minish Woods",
+        "access_rules":["$Sword1","bombs","lamp","ocarina","lights"],
+        "children": [
+          {
+            "name": "Northern Heart Piece",
+            "access_rules":["flippers",
+              "cape",
+              "llrkey,cane",
+              "ocarina,cane", "{lamp}","{lights}","{sword}","{bombs}","{ocarina}"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2100,
+                "y":1620,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Northern Heart Piece",
+                "item_count":1,
+                "capture_item":true,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name": "Syrup's Hut",
+            "access_rules":["$Sword1,flippers",
+              "llrkey,cane",
+              "cape",
+              "flippers",
+              "ocarina,cane"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2435,
+                "y":1470,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Witch's Item (60 Rupees)",
+                "item_count":1,
+              }
+            ]
+          },
+          {
+            "name": "Minish Woods Great Fairy",
+            "access_rules":["cane"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2050,
+                "y":1470,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Minish Woods Great Fairy",
+                "item_count":1,
+              }
+            ]
+          },
+          {
+            "name":"Minish Woods Pre Stump Chest",
+            "map_locations":[
+              {
+                "map":"map",
+                "x":2580,
+                "y":1826,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Chest",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Cross the Pond",
+            "access_rules":["cape","flippers","ocarina,cane","llrkey,cane"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":2049,
+                "y":1571,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Chest",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Minish Woods Entrance Chest",
+            "map_locations":[
+              {
+                "map":"map",
+                "x":2112,
+                "y":1677,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Chest",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Pre Minish Village Minish Hole",
+            "map_locations":[
+              {
+                "map":"map",
+                "x":2336,
+                "y":2081,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Minish Hole",
+                "item_count":1
+              }
+            ]
+          },
+          //DWS Heart Piece
+          {
+            "name": "Shrine Heart Piece",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2250,
+                "y":1900,
+              }
+            ],
+            "sections": [
+              {
+                "name": "Shrine Heart Piece",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name":"Pre Shrine Chest",
+            "map_locations":[
+              {
+                "map":"map",
+                "x":2421,
+                "y":1921,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Pre Shrine Chest",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name": "Like Like Cave",
+            "access_rules": ["mitts"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2375,
+                "y":1650
+              }
+            ],
+            "sections": [
+              {
+                "name":"Like Like Cave",
+                "item_count":2
+              }
+            ]
+          },
+          {
+
+          },
+          //Minish Village
+          {
+            "name": "Minish Village",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2297,
+                "y":2000,
+                "restrict_visibility_rules":["fusions_none"]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Barrel",
+                "item_count": 1,
+              },
+              {
+                "name": "Dock Heart Piece",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name": "Minish Village Open",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2297,
+                "y":2000,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections": [
+              {
+                "name": "Barrel",
+                "item_count": 1,
+              },
+              {
+                "name": "Dock Heart Piece",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              },
+              {
+                "name":"Minish Path Chest",
+                "item_count":1
+              }
+            ]
+          },
+          //Belari
+          {
+            "name":"Belari",
+            "access_rules":["dws","bombs"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2175,
+                "y":1950,
+                "restrict_visibility_rules":["fusions_none"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Belari",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name":"Belari Open",
+            "access_rules":["dws","bombs"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2175,
+                "y":1950,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections": [
+              {
+                "name":"Belari",
+                "item_count": 1
+              },
+              {
+                "name":"Belari 2nd Item",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Post Minish Village Chest",
+            "access_rules":["bombs","dws"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":2038,
+                "y":1879,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Wind Crest Chest",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Minish Woods North Digging Cave",
+            "access_rules": ["mitts,cape","mitts,flippers","mitts,cane,llrkey","mitts,cane,ocarina"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x": 2300,
+                "y": 1600
+              }
+            ],
+            "sections":[
+              {
+                "name":"Minish Woods North Digging Cave",
+                "item_count":1
+              }
+            ]
+          },
+		  {
+			"name":"North Minish Woods Octo Golden",
+			"map_locations":[
+			  {
+				"map":"map",
+				"x":2200,
+				"y":1550, 
+				"restrict_visibility_rules":["fusions_open,bingo_on"]
+			  }
+			],
+			"sections":[
+			  {
+				"name":"Kill Octo",
+                "access_rules":["[$CanDamage],$CanDamageOff"],
+				"item_count":1
+			  }
+			]
+		  },
+          {
+            "name":"Minish Flippers Cave",
+            "access_rules":["flippers,bombs","flippers,dws"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2050,
+                "y":1800,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Left",
+                "item_count":1
+              },
+              {
+                "name":"Left Heart Piece",
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              },
+              {
+                "name":"Middle",
+                "item_count":1
+              },
+              {
+                "name":"Right",
+                "item_count":1
+              }
+            ]
+          }
+        ]
+      },
+	]
+  }
+]

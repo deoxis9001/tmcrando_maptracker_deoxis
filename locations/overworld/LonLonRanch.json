@@ -1,0 +1,281 @@
+[
+  {
+    "name":"World",
+    "chest_unopened_img":"images/items-map/chest_closed.png",
+    "chest_opened_img":"images/items-map/chest_open.png",
+    "children":
+    [
+	{
+        "name":"Lon Lon Ranch",
+        "access_rules": ["$Sword1","bombs","lamp","lights","ocarina"],
+        "children": [
+          {
+            "name":"Veil Falls South Mitts Cave",
+            "access_rules":["flippers,mitts,cane","cape,mitts,cane"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1970,
+                "y":525
+              }
+            ],
+            "sections": [
+              {
+                "name":"Veil Falls South Mitts Cave",
+                "item_count":2
+              }
+            ]
+          },
+          {
+            "name":"South Veil Falls Rupees",
+            "access_rules":["flippers,cane","cape,cane","{bombs,falls}","{bombs,flippers}","{bombs,cape}"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1905,
+                "y":543,
+                "restrict_visibility_rules":["rupees_on"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Rupee 1",
+                "capture_item":true,
+                "item_count":1
+              },
+              {
+                "name":"Rupee 2",
+                "capture_item": true,
+                "item_count":1
+              },
+              {
+                "name":"Rupee 3",
+                "capture_item": true,
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"North Ranch Chest",
+            "access_rules":["cane"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1772,
+                "y":826,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Chest",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Lower Veil Falls Heart Piece",
+            "access_rules":["cane"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1910,
+                "y":750,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Lower Heart Piece",
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name":"Lower Veil Falls Waterfall",
+            "access_rules":["cane,flippers"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1820,
+                "y":686,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Splitblade",
+                "access_rules":["$Sword1"],
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+                "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+              }
+            ]
+          },
+          {
+            "name": "Malon's Pot",
+            "access_rules":[""],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1910,
+                "y":1190
+              }
+            ],
+            "sections": [
+              {
+                "name":"Malon's Pot",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name": "Lon Lon Cave",
+            "access_rules":["$Sword3,llrkey,spinattack","$Sword3,ocarina,spinattack","$Sword3,cape,spinattack","$Sword3,flippers,mitts,spinattack"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1825,
+                "y":1075,
+              }
+            ],
+            "sections": [
+              {
+                "name":"Lon Lon Cave",
+                "item_count":1
+              },
+              {
+                "name":"Hidden Bomb Wall",
+                "item_count":1,
+                "access_rules":["bombs,lamp"]
+              }
+            ]
+          },
+          {
+            "name": "Lon Lon Minish Crack",
+            "access_rules":["llrkey,cane","ocarina,cane","cape","flippers,mitts,cane"],
+            "map_locations": [
+              {
+                "map":"map",
+                "x":2025,
+                "y":805
+              }
+            ],
+            "sections": [
+              {
+                "name":"Lon Lon Minish Crack",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Goron Quest",
+            "access_rules":["cape","flippers","ocarina,cane","llrkey,cane"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1750,
+                "y":1365,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Small Chest",
+                "item_count":1
+              },
+              {
+                "name":"Big Chest",
+                "item_count":1,
+                "chest_unopened_img":"images/items-map/big_chest_closed.png",
+                "chest_opened_img":"images/items-map/big_chest_open.png"
+              }
+            ]
+          },
+          {
+            "name":"Lon Lon Dried Up Pond",
+            "access_rules":["cape","flippers,mitts","ocarina","llrkey"],
+            "map_locations":[
+              {
+                "map":"map",
+                "x":1995,
+                "y":1140,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Lon Lon Pond",
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Bonk the Tree",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1975,
+                "y":1025,
+                "restrict_visibility_rules":["fusions_none"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Minish Path Heart Piece",
+                "access_rules":["boots,flippers,mitts","boots,ocarina","boots,llrkey","boots,cape"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              }
+            ]
+          },
+          {
+            "name":"Bonk the Tree Open",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1975,
+                "y":1025,
+                "restrict_visibility_rules":["fusions_open"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Minish Path Heart Piece",
+                "access_rules":["boots,flippers,mitts","boots,ocarina","boots,llrkey","boots,cape"],
+                "item_count": 1,
+                "chest_unopened_img":"images/items-map/Heart Piece.png",
+                "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+              },
+              {
+                "name":"Minish Path Chest",
+                "access_rules":["boots,flippers,mitts","boots,ocarina","boots,llrkey","boots,cape"],
+                "item_count":1
+              }
+            ]
+          },
+          {
+            "name":"Lon Lon Ranch Digging Spot",
+            "map_locations": [
+              {
+                "map":"map",
+                "x":1865,
+                "y":980,
+                "restrict_visibility_rules":["obscure_on"]
+              }
+            ],
+            "sections":[
+              {
+                "name":"Digging Spot Above Tree",
+                "access_rules":["llrkey,cane,mitts","ocarina,cane,mitts","cape,mitts","flippers,mitts,cane"],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      }
+	]
+  }
+]
