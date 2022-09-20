@@ -50,8 +50,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":1515,
-                "y":950
+				"x": 2259,
+				"y": 1005
               }
             ],
             "sections":[
@@ -67,8 +67,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":1260,
-                "y":935,
+                "x":2005,
+                "y":1005,
                 "force_invisibility_rules":["rupees_off"]
               }
             ],
@@ -89,8 +89,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":940,
-                "y":1640
+                "x":890,
+                "y":1090
               }
             ],
             "sections":[
@@ -108,8 +108,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":750,
-                "y":1835
+                "x":690,
+                "y":1290
               }
             ],
             "sections":[
@@ -129,8 +129,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":425,
-                "y":1835
+                "x":370,
+                "y":1390
               }
             ],
             "sections":[
@@ -150,8 +150,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":425,
-                "y":1660
+                "x":370,
+                "y":1120
               }
             ],
             "sections":[
@@ -171,8 +171,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":885,
-                "y":1395
+                "x":840,
+                "y":850
               }
             ],
             "sections":[
@@ -195,8 +195,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":785,
-                "y":950
+                "x":730,
+                "y":410
               }
             ],
             "sections":[
@@ -214,8 +214,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":920,
-                "y":890
+                "x":860,
+                "y":340
               }
             ],
             "sections":[
@@ -231,8 +231,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":450,
-                "y":310
+                "x":1220,
+                "y":270
               }
             ],
             "sections":[
@@ -248,8 +248,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":480,
-                "y":375
+                "x":1270,
+                "y":340
               }
             ],
             "sections":[
@@ -265,8 +265,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":1610,
-                "y":135
+                "x":2370,
+                "y":120
               }
             ],
             "sections":[
@@ -282,8 +282,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":740,
-                "y":695
+                "x":1520,
+                "y":665
               }
             ],
             "sections":[
@@ -299,8 +299,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":1290,
-                "y":700
+                "x":2050,
+                "y":660
               }
             ],
             "sections":[
@@ -316,8 +316,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":895,
-                "y":435
+                "x":1665,
+                "y":400
               }
             ],
             "sections":[
@@ -335,8 +335,8 @@
             "map_locations":[
               {
                 "map":"cof",
-                "x":1555,
-                "y":425
+                "x":1380,
+                "y":1200
               }
             ],
             "sections":[

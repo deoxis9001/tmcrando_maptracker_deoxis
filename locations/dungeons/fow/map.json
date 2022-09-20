@@ -18,7 +18,7 @@
               {
                 "map":"fow",
                 "x":250,
-                "y":2335
+                "y":1115
               }
             ],
             "sections":[
@@ -35,7 +35,7 @@
               {
                 "map":"fow",
                 "x":1111,
-                "y":2334,
+                "y":1114,
                 "force_invisibility_rules":["rupees_off"]
               }
             ],
@@ -53,7 +53,7 @@
               {
                 "map":"fow",
                 "x":200,
-                "y":2190
+                "y":970
               }
             ],
             "sections":[
@@ -69,8 +69,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":405,
-                "y":1770
+                "x":1805,
+                "y":870
               }
             ],
             "sections":[
@@ -86,8 +86,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":288,
-                "y":1892,
+                "x":1688,
+                "y":992,
                 "force_invisibility_rules":["rupees_off"]
               }
             ],
@@ -104,8 +104,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":520,
-                "y":1893,
+                "x":1920,
+                "y":993,
                 "force_invisibility_rules":["rupees_off"]
               }
             ],
@@ -176,8 +176,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":1015,
-                "y":1575
+                "x":2415,
+                "y":675
               }
             ],
             "sections":[
@@ -192,8 +192,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":885,
-                "y":1575
+                "x":2285,
+                "y":675
               }
             ],
             "sections":[
@@ -209,8 +209,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":790,
-                "y":1960
+                "x":2190,
+                "y":1060
               }
             ],
             "sections":[
@@ -263,7 +263,7 @@
               {
                 "map":"fow",
                 "x":1110,
-                "y":2155
+                "y":935
               }
             ],
             "sections":[
@@ -282,8 +282,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":680,
-                "y":1510
+                "x":2080,
+                "y":610
               }
             ],
             "sections":[
@@ -301,8 +301,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":630,
-                "y":1895
+                "x":2030,
+                "y":995
               }
             ],
             "sections":[
@@ -318,8 +318,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":370,
-                "y":1160
+                "x":1770,
+                "y":260
               }
             ],
             "sections":[
@@ -337,8 +337,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":500,
-                "y":1160
+                "x":1900,
+                "y":260
               }
             ],
             "sections":[
@@ -354,8 +354,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":1270,
-                "y":1130
+                "x":2670,
+                "y":230
               }
             ],
             "sections":[
@@ -373,8 +373,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":1030,
-                "y":1180
+                "x":2430,
+                "y":280
               }
             ],
             "sections":[
@@ -393,8 +393,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":1080,
-                "y":1830,
+                "x":2480,
+                "y":930,
                 "force_invisibility_rules":["obscure_off"]
               }
             ],
@@ -411,8 +411,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":965,
-                "y":1980,
+                "x":2365,
+                "y":1080,
                 "force_invisibility_rules":["obscure_off"]
               }
             ],
@@ -429,8 +429,8 @@
             "map_locations":[
               {
                 "map":"fow",
-                "x":1280,
-                "y":1380
+                "x":2680,
+                "y":480
               }
             ],
             "sections":[
