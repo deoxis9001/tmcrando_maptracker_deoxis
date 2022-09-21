@@ -6,7 +6,7 @@
     "children":[
 //RC
       {
-        "name":"Royal Crypt",
+        "name":"RC",
         "access_rules":["gravekey,$CanSplit3,boots,spinattack,bombs,[lamp]","gravekey,$CanSplit3,boots,spinattack,cape,[lamp]","gravekey,$CanSplit3,boots,spinattack,flippers,[lamp]"],
         "children":[
           {
