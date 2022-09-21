@@ -35,17 +35,18 @@ function Dungeons()
 end
 
 function NeededSwords()
+    -- return 0
   if has("sword0needed") then
     return 1
-  elseif Sword1() and has("sword1needed") then
+  elseif Sword1()==1 and has("sword1needed") then
     return 1
-  elseif Sword2() and has("sword2needed") then
+  elseif Sword2()==1 and has("sword2needed") then
     return 1
-  elseif Sword3() and has("sword3needed") then
+  elseif Sword3()==1 and has("sword3needed") then
     return 1
-  elseif Sword4() and has("sword4needed") then
+  elseif Sword4()==1 and has("sword4needed") then
     return 1
-  elseif Sword5() and has("sword5needed") then
+  elseif Sword5()==1 and has("sword5needed") then
     return 1
   else
     return 0

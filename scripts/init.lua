@@ -1,3 +1,4 @@
+
 ScriptHost:LoadScript("scripts/item_spec/init.lua")
 ScriptHost:LoadScript("scripts/settings/init.lua")
 ScriptHost:LoadScript("scripts/logic/init.lua")

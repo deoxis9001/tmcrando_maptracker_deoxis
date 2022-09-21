@@ -1,5 +1,4 @@
 -- Configuration ----------------------
--- TMC_AUTOTRACKER_DEBUG = true
 BOW_VALUE = 0
 WildsFused = 0
 WildsBag = 0
@@ -11,10 +10,13 @@ KEY_STOLEN = false
 print("")
 print("Active Auto-Tracker Configuration")
 print("")
-print("Enable Item Tracking:       ", AUTOTRACKER_ENABLE_ITEM_TRACKING)
-print("Enable Location Tracking:   ", AUTOTRACKER_ENABLE_LOCATION_TRACKING)
+print("Enable Item Tracking:                      ", AUTOTRACKER_ENABLE_ITEM_TRACKING)
+print("Enable Location Tracking:                  ", AUTOTRACKER_ENABLE_LOCATION_TRACKING)
 if TMC_AUTOTRACKER_DEBUG then
-  print("Enable Debug Logging:       ", TMC_AUTOTRACKER_DEBUG)
+  print("Enable Debug Logging :                   ", TMC_AUTOTRACKER_DEBUG)
+  print("Enable Debug Logging items:              ", TMC_AUTOTRACKER_DEBUG_ITEM)
+  print("Enable Debug Logging localisation:       ", TMC_AUTOTRACKER_DEBUG_LOCATION)
+  print("Enable Debug Logging error:              ", TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND)
 end
 print("")
 
@@ -69,7 +71,7 @@ function updateToggleItemFromByteAndFlag(segment, code, address, flag)
     local item = Tracker:FindObjectForCode(code)
     if item then
         local value = ReadU8(segment, address)
-        if TMC_AUTOTRACKER_DEBUG then
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
             print(item.Name, code, flag)
         end
 
@@ -79,6 +81,92 @@ function updateToggleItemFromByteAndFlag(segment, code, address, flag)
             item.Active = true
         else
             item.Active = false
+        end
+    end
+end
+
+
+function smithswordCheck(segment, code, address, flag)
+    if smithsword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(smithsword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			smithsword:setActive(true)
+        else
+			smithsword:setActive(false)
+        end
+    end
+end
+
+function greenswordCheck(segment, code, address, flag)
+    if greensword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(greensword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			greensword:setActive(true)
+        else
+			greensword:setActive(false)
+        end
+    end
+end
+
+function redswordCheck(segment, code, address, flag)
+    if redsword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(redsword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			redsword:setActive(true)
+        else
+			redsword:setActive(false)
+        end
+    end
+end
+
+function blueswordCheck(segment, code, address, flag)
+    if bluesword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(bluesword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			bluesword:setActive(true)
+        else
+			bluesword:setActive(false)
+        end
+    end
+end
+
+function fourswordCheck(segment, code, address, flag)
+    if foursword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(foursword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			foursword:setActive(true)
+        else
+			foursword:setActive(false)
         end
     end
 end
@@ -93,7 +181,7 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
 
         local value = ReadU8(segment, address)
 
-        if TMC_AUTOTRACKER_DEBUG then
+        if TMC_AUTOTRACKER_DEBUG_LOCATION then
             print(locationRef, value)
         end
 
@@ -102,8 +190,8 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
         else
             location.AvailableChestCount = 1
         end
-    elseif TMC_AUTOTRACKER_DEBUG then
-        print("Couldn't find location", locationRef)
+    elseif TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND then
+    print("Location not found", locationRef)
     end
 end
 
@@ -130,7 +218,7 @@ function decreaseChestCount(segment, locationRef, chestData)
 
     location.AvailableChestCount = (#chestData - cleared)
 
-  elseif TMC_AUTOTRACKER_DEBUG then
+  elseif TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND then
     print("Location not found", locationRef)
   end
 end
@@ -139,7 +227,7 @@ function updateDogFood(segment, code, address, flag)
   local item = Tracker:FindObjectForCode(code)
   if item then
     local value = ReadU8(segment, address)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print(item.Name, code, flag)
     end
 
@@ -157,7 +245,7 @@ function updateLLRKey(segment, code, address, flag)
   local item = Tracker:FindObjectForCode(code)
   if item then
     local value = ReadU8(segment, address)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print(item.Name, code, flag)
     end
 
@@ -175,7 +263,7 @@ function updateMush(segment, code, address, flag)
   local item = Tracker:FindObjectForCode(code)
   if item then
     local value = ReadU8(segment, address)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print(item.Name, code, flag)
     end
 
@@ -202,7 +290,7 @@ function graveKeyStolen(segment, code, address, flag)
   local item = Tracker:FindObjectForCode(code)
   if item then
     local value = ReadU8(segment, address)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print(item.Name, code, flag)
     end
 
@@ -218,7 +306,7 @@ function updateGraveKey(segment, code, address, flag)
   local item = Tracker:FindObjectForCode(code)
   if item then
     local value = ReadU8(segment, address)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print(item.Name, code, flag)
     end
 
@@ -253,19 +341,19 @@ function updateBooks(segment, code, address)
 end
 
 function updateSwords(segment)
-  local item = Tracker:FindObjectForCode("sword")
+  local item = sword.InfoStage
   if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then
-    item.CurrentStage = 4
+    sword:setActive(4)
   elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 then
-    item.CurrentStage = 5
+    sword:setActive(5)
   elseif ReadU8(segment, 0x2002b32) == 0x05 then
-    item.CurrentStage = 1
+    sword:setActive(1)
   elseif ReadU8(segment, 0x2002b32) == 0x15 then
-    item.CurrentStage = 2
+    sword:setActive(2)
   elseif ReadU8 (segment, 0x2002b32) == 0x55 then
-    item.CurrentStage = 3
+    sword:setActive(3)
   else
-    item.CurrentStage = 0
+    sword:setActive(0)
   end
 end
 
@@ -361,7 +449,7 @@ function updateQuiver(segment)
   local item = Tracker:FindObjectForCode("quiver")
   if item then
     item.CurrentStage = ReadU8(segment, 0x2002aef)  
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Bow value =", BOW_VALUE, ReadU8(segment, 0x2002aef))
     end
   end
@@ -469,7 +557,7 @@ function updateWildsUsedFixed(segment, locationData)
       end
     end
     item.AcquiredCount = WildsFused + WildsBag
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds Used", WildsFused)
 	end
   end
@@ -480,58 +568,58 @@ function updateWilds(segment, code, flag)
 
   if ReadU8(segment, 0x2002b58) == flag then
     WildsBag = ReadU8(segment, 0x2002b6b)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b6b))
 	end
   elseif ReadU8(segment, 0x2002b59) == flag then
     WildsBag = ReadU8(segment, 0x2002b6c)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b6c))
 	end
 
   elseif ReadU8(segment, 0x2002b5a) == flag then
     WildsBag = ReadU8(segment, 0x2002b6d)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b6d))
 	end
   elseif ReadU8(segment, 0x2002b5b) == flag then
     WildsBag = ReadU8(segment, 0x2002b6e)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b6e))
 	end
   elseif ReadU8(segment, 0x2002b5c) == flag then
     WildsBag = ReadU8(segment, 0x2002b6f)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b6f))
 	end
   elseif ReadU8(segment, 0x2002b5d) == flag then
     WildsBag = ReadU8(segment, 0x2002b70)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b70))
 	end
 	elseif ReadU8(segment, 0x2002b5e) == flag then
     WildsBag = ReadU8(segment, 0x2002b71)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b71))
 	end
 	elseif ReadU8(segment, 0x2002b5f) == flag then
     WildsBag = ReadU8(segment, 0x2002b72)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b72))
 	end
 	elseif ReadU8(segment, 0x2002b60) == flag then
     WildsBag = ReadU8(segment, 0x2002b73)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b73))
 	end
   elseif ReadU8(segment, 0x2002b61) == flag then
     WildsBag = ReadU8(segment, 0x2002b74)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b74))
 	end
   elseif ReadU8(segment, 0x2002b62) == flag then
     WildsBag = ReadU8(segment, 0x2002b75)
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds in Bag", ReadU8(segment, 0x2002b75))
 	end
   else
@@ -539,7 +627,7 @@ function updateWilds(segment, code, flag)
   end
 
   item.AcquiredCount = WildsFused + WildsBag
-  if TMC_AUTOTRACKER_DEBUG then
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
 	print("Wilds Obtained", WildsBag)
   end
 end
@@ -560,7 +648,7 @@ function updateCloudsUsedFixed(segment, locationData)
       end
     end
     item.AcquiredCount = CloudsFused + CloudsBag
-	if TMC_AUTOTRACKER_DEBUG then
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Clouds Fused", CloudsFused)
 	end
   end
@@ -570,62 +658,71 @@ function updateClouds(segment, code, flag)
   local item = Tracker:FindObjectForCode(code)
   if ReadU8(segment, 0x2002b58) == flag then
     CloudsBag = ReadU8(segment, 0x2002b6b)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b6b))
-
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Clouds in Bag", ReadU8(segment, 0x2002b6b))
+	end
   elseif ReadU8(segment, 0x2002b59) == flag then
     CloudsBag = ReadU8(segment, 0x2002b6c)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b6c))
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Clouds in Bag", ReadU8(segment, 0x2002b6c))
+	end
 
   elseif ReadU8(segment, 0x2002b5a) == flag then
     CloudsBag = ReadU8(segment, 0x2002b6d)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b6d))
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Clouds in Bag", ReadU8(segment, 0x2002b6d))
+	end
 
   elseif ReadU8(segment, 0x2002b5b) == flag then
     CloudsBag = ReadU8(segment, 0x2002b6e)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b6e))
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Clouds in Bag", ReadU8(segment, 0x2002b6e))
+	end
 
   elseif ReadU8(segment, 0x2002b5c) == flag then
     CloudsBag = ReadU8(segment, 0x2002b6f)
-    print("Clouds in Bag", ReadU8(segment, 0x2002b6f))
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Clouds in Bag", ReadU8(segment, 0x2002b6f))
+	end
 
   elseif ReadU8(segment, 0x2002b5d) == flag then
     CloudsBag = ReadU8(segment, 0x2002b70)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Clouds in Bag", ReadU8(segment, 0x2002b70))
     end
   elseif ReadU8(segment, 0x2002b5e) == flag then
     CloudsBag = ReadU8(segment, 0x2002b71)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Clouds in Bag", ReadU8(segment, 0x2002b71))
     end
   elseif ReadU8(segment, 0x2002b5f) == flag then
     CloudsBag = ReadU8(segment, 0x2002b72)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Clouds in Bag", ReadU8(segment, 0x2002b72))
     end
   elseif ReadU8(segment, 0x2002b60) == flag then
     CloudsBag = ReadU8(segment, 0x2002b73)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Clouds in Bag", ReadU8(segment, 0x2002b73))
     end
   elseif ReadU8(segment, 0x2002b61) == flag then
     CloudsBag = ReadU8(segment, 0x2002b74)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Clouds in Bag", ReadU8(segment, 0x2002b74))
     end
   elseif ReadU8(segment, 0x2002b62) == flag then
     CloudsBag = ReadU8(segment, 0x2002b75)
-    if TMC_AUTOTRACKER_DEBUG then
+    if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Clouds in Bag", ReadU8(segment, 0x2002b75))
     end
   else
 	CloudsBag = 0	
   end
-  if TMC_AUTOTRACKER_DEBUG then
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
    print("Clouds in Bag", CloudsBag)	
   end
   item.AcquiredCount = CloudsBag + CloudsFused
-  if TMC_AUTOTRACKER_DEBUG then
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
 	print("Clouds Obtained", CloudsFused)
   end
 end
@@ -800,8 +897,8 @@ end
 function updatefigurine(segment, code, address)
   local item = Tracker:FindObjectForCode(code)
   item.AcquiredCount = ReadU8(segment, address)
-  if TMC_AUTOTRACKER_DEBUG then
-    print("figurne", item.AcquiredCount)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+    print("Figurne: ", item.AcquiredCount)
   end
 end
 function updateSpin(segment)
@@ -952,12 +1049,11 @@ function updateItemsFromMemorySegment(segment)
     updateToggleItemFromByteAndFlag(segment, "fire", 0x2002b42, 0x04)
     updateToggleItemFromByteAndFlag(segment, "water", 0x2002b42, 0x10)
     updateToggleItemFromByteAndFlag(segment, "wind", 0x2002b42, 0x40)
-    updateToggleItemFromByteAndFlag(segment, "smithsword", 0x2002b32, 0x04)
-    updateToggleItemFromByteAndFlag(segment, "greensword", 0x2002b32, 0x10)
-    updateToggleItemFromByteAndFlag(segment, "redsword", 0x2002b32, 0x40)
-    updateToggleItemFromByteAndFlag(segment, "bluesword", 0x2002b33, 0x01)
-    updateToggleItemFromByteAndFlag(segment, "foursword", 0x2002b33, 0x10)
-    updateToggleItemFromByteAndFlag(segment, "smithsword", 0x2002b32, 0x04)
+    smithswordCheck(segment, "smithsword", 0x2002b32, 0x04)
+    greenswordCheck(segment, "greensword", 0x2002b32, 0x10)
+    redswordCheck(segment, "redsword", 0x2002b32, 0x40)
+    blueswordCheck(segment, "bluesword", 0x2002b33, 0x01)
+    fourswordCheck(segment, "foursword", 0x2002b33, 0x10)
 
     updateLLRKey(segment, "llrkey", 0x2002b3f, 0x40)
     updateDogFood(segment, "dogbottle", 0x2002b3f, 0x10)
@@ -1238,6 +1334,7 @@ function updateLocations(segment)
   updateSectionChestCountFromByteAndFlag(segment, "@South Veil Falls Rupees/Rupee 2", 0x2002cd0, 0x08)
   updateSectionChestCountFromByteAndFlag(segmemt, "@South Veil Falls Rupees/Rupee 3", 0x2002cd0, 0x10)
   updateSectionChestCountFromByteAndFlag(segment, "@Upper Veil Falls Rocks/Left Digging Spot", 0x2002cd0, 0x80)
+  updateSectionChestCountFromByteAndFlag(segment, "@Veil Falls North Digging Spot/North Digging Spot", 0x2002cd0, 0x80)
   updateSectionChestCountFromByteAndFlag(segment, "@Lower Veil Falls Heart Piece/Lower Heart Piece", 0x2002cd1, 0x02)
   updateSectionChestCountFromByteAndFlag(segment, "@Upper Veil Falls Rocks/Right Chest", 0x2002cd3, 0x80)
   updateSectionChestCountFromByteAndFlag(segment, "@Veil Falls Rock Chest/Veil Falls Chest", 0x2002cd3, 0x80)
@@ -1743,7 +1840,7 @@ function updateLocations(segment)
   updateSectionChestCountFromByteAndFlag(segment, "@DHC Ped/Stone King", 0x2002dc2, 0x02)
   updateSectionChestCountFromByteAndFlag(segment, "@Stone King Ped/Stone King", 0x2002dc2, 0x02)
 
-  updateSectionChestCountFromByteAndFlag(segment, "@Dark Hyrule Castle/Win", 0x2002ca6, 0x20)
+  updateSectionChestCountFromByteAndFlag(segment, "@DHC Fast/Win", 0x2002ca6, 0x20)
   updateSectionChestCountFromByteAndFlag(segment, "@Pull the Pedestal/Just Win", 0x2002ca6, 0x20)
 end
 

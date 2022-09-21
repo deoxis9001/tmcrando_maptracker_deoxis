@@ -1,83 +1,83 @@
 [
   // Progressive Swords (Overworld)
-  {
-    "name": "Sword",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 0,
-    "stages": [
-      {
-        "img": "images/items/Smith's Sword.png",
-        "inherit_codes": false,
-        "img_mods": "@disabled",
-        "codes": ""
-      },
-      {
-        "img": "images/items/Smith's Sword.png",
-        "inherit_codes": false,
-        "codes": "sword"
-      },
-      {
-        "img": "images/items/Green Sword.png",
-        "inherit_codes": false,
-        "codes": "sword2"
-      },
-      {
-        "img": "images/items/Red Sword.png",
-        "inherit_codes": false,
-        "codes": "sword3"
-      },
-      {
-        "img": "images/items/Blue Sword.png",
-        "inherit_codes": false,
-        "codes": "sword4"
-      },
-      {
-        "img": "images/items/Four Sword.png",
-        "inherit_codes": false,
-        "codes": "sword5"
-      }
-    ]
-  },
+  //    {
+  //      "name": "Sword",
+  //      "type": "progressive",
+  //      "allow_disabled": false,
+  //      "initial_stage_idx": 0,
+  //      "stages": [
+  //      {
+  //        "img": "images/items/Smith's Sword.png",
+  //        "inherit_codes": false,
+  //        "img_mods": "@disabled",
+  //        "codes": ""
+  //      },
+  //      {
+  //        "img": "images/items/Smith's Sword.png",
+  //        "inherit_codes": false,
+  //        "codes": "sword"
+  //      },
+  //      {
+  //      "img": "images/items/Green Sword.png",
+  //      "inherit_codes": false,
+  //      "codes": "sword2"
+  //      },
+  //      {
+  //        "img": "images/items/Red Sword.png",
+  //        "inherit_codes": false,
+  //        "codes": "sword3"
+  //      },
+  //      {
+  //        "img": "images/items/Blue Sword.png",
+  //        "inherit_codes": false,
+  //        "codes": "sword4"
+  //       },
+  //       {
+  //         "img": "images/items/Four Sword.png",
+  //         "inherit_codes": false,
+  //         "codes": "sword5"
+  //       }
+  //     ]
+  //    },
   //No Progressive Swords Smith (Overworld)
-  {
-    "name": "Smith Sword",
-    "type": "toggle",
-	"img": "images/items/Smith's Sword.png",
-	"inherit_codes": false,
-	"codes": "smithsword"
-  },
+  //  {
+  //  "name": "Smith Sword",
+  //  "type": "toggle",
+  //  "img": "images/items/Smith's Sword.png",
+  //  "inherit_codes": false,
+  //  "codes": "smithsword"
+  //  },
   //No Progressive Swords Green (Overworld)
-  {
-    "name": "Green Sword",
-    "type": "toggle",
-	"img": "images/items/Green Sword.png",
-	"codes": "greensword"
-  },
+  //  {
+  //  "name": "Green Sword",
+  //  "type": "toggle",
+  //  "img": "images/items/Green Sword.png",
+  //  "codes": "greensword"
+  //  },
   //No Progressive Swords Red (Overworld)
-  {
-    "name": "Red Sword",
-    "type": "toggle",
-	"img": "images/items/Red Sword.png",
-	"inherit_codes": false,
-	"codes": "redsword"
-  },
+  //  {
+  //  "name": "Red Sword",
+  //  "type": "toggle",
+  //  "img": "images/items/Red Sword.png",
+  //  "inherit_codes": false,
+  //  "codes": "redsword"
+  //  },
   //No Progressive Swords Blue (Overworld)
-  {
-    "name": "Blue Sword",
-    "type": "toggle",
-	"img": "images/items/Blue Sword.png",
-	"inherit_codes": false,
-	"codes": "bluesword"
-  },
+  //  {
+  //  "name": "Blue Sword",
+  //  "type": "toggle",
+  //  "img": "images/items/Blue Sword.png",
+  //  "inherit_codes": false,
+  //  "codes": "bluesword"
+  //  },
   //No Progressive Swords Four (Overworld)
-  {
-    "name": "Four Sword",
-    "type": "toggle",
-	"img": "images/items/Four Sword.png",
-	"inherit_codes": false,
-	"codes": "foursword"
-  },
+  //  {
+  //  "name": "Four Sword",
+  //  "type": "toggle",
+  //  "img": "images/items/Four Sword.png",
+  //  "inherit_codes": false,
+  //  "codes": "foursword"
+  //  },
   //Gust Jar
   {
     "name": "Gust Jar",
