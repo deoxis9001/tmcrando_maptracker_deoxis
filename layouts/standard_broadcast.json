@@ -14,7 +14,7 @@
                         "item_margin": "0,0,0,0",
                         "rows": [
 							["","smithsword","greensword","redsword","bluesword","foursword",""],
-							["","gust","cane","boomerang","wallet","sevenscrolls","spinattack"],
+							["sword0","gust","cane","boomerang","wallet","sevenscrolls","spinattack"],
 							["shield","mittsandfly","lamp","bombsremote","wilds","fastspin","fastsplit"],
 							["boots","cape","flute","bowandfly","clouds","greatspin","longspin"],
 							["grip","jabber","carlov","quiver","falls","perilbeam","swordbeam"],
