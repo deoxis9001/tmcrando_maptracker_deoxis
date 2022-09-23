@@ -18,24 +18,6 @@
     ]
   },
   {
-    "name": "Unrandomized",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img": "images/options/Rando_Off.png",
-        "codes": "rando",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/Rando_On.png",
-        "codes": "rando_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
     "name": "Fusions",
     "type": "progressive",
     "loop": true,
@@ -50,7 +32,12 @@
         "img": "images/options/Kinsanity_None.png",
         "codes": "fusions_none",
         "inherit_codes":false
-      }
+      },
+      // {
+      //   "img": "images/options/Kinsanity_Rando.png",
+      //   "codes": "fusions_rando",
+      //   "inherit_codes":false
+      // }
     ]
   },
   {
@@ -78,40 +65,6 @@
       {
         "img":"images/options/dhc_fast.png",
         "codes":"dhc_none",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"DHCtest",
-    "type":"progressive",
-    "loop":true,
-    "allow_disabled":false,
-    "inherit_codes":false,
-    "stages":[
-      {
-        "img":"images/options/dhc_closed.png",
-        "codes":"dhc_closed_test",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/dhc_open.png",
-        "codes":"dhc_open_test",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/dhc_peditems.png",
-        "codes":"dhc_peditems_test",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/dhc_fast.png",
-        "codes":"dhc_none_test",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/figurine.png",
-        "codes":"dhc_none_test,figurine_test",
         "inherit_codes":false
       }
     ]
@@ -248,6 +201,7 @@
    "img": "images/options/figurine.png",
    "codes": "figurine_option",
    "min_quantity":0,
+   "initial_quantity": 0,
    "max_quantity":136,
  },
   {
@@ -256,6 +210,7 @@
    "img": "images/options/dungeons.png",
    "codes": "dungeons",
    "min_quantity":0,
+   "initial_quantity": 0,
    "max_quantity":6,
  },
   {
