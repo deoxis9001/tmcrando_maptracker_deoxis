@@ -1,0 +1,20 @@
+[
+  {
+	"name":"Fusion Rupee Cave",
+	"access_rules":["$RupeeCaveFusion"],
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1047,
+		"y":1836,
+		"restrict_visibility_rules":["rupees_on,fusions_open"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":15
+	  }
+	]
+  }
+]
