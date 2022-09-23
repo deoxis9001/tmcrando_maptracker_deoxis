@@ -1,6 +1,6 @@
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
     Tracker:AddMaps("maps/maps.json")
-    -- Tracker:AddLocations("locations/overworld.json")
+	ScriptHost:LoadScript("scripts/locations/init.lua")
     Tracker:AddLocations("locations/dungeons/dws/map.json")
     Tracker:AddLocations("locations/dungeons/dws/n.map.json")
     Tracker:AddLocations("locations/dungeons/cof/map.json")
@@ -35,13 +35,8 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
     Tracker:AddLocations("locations/overworld/SouthHyruleField.json")
     Tracker:AddLocations("locations/overworld/HyruleTown.json")
     Tracker:AddLocations("locations/overworld/NorthHyruleField.json")
-    Tracker:AddLocations("locations/overworld/RoyalValley.json")
+    -- Tracker:AddLocations("locations/overworld/RoyalValley.json")
     Tracker:AddLocations("locations/overworld/HyruleCastleGardens.json")
     Tracker:AddLocations("locations/overworld/TrilbyHighlands.json")
-    -- Tracker:AddLocations("locations/overworld/map.json")
-    -- Tracker:AddLocations("locations/overworld/map.json")
-    -- Tracker:AddLocations("locations/overworld/map.json")
-    -- Tracker:AddLocations("locations/overworld/map.json")
-    -- Tracker:AddLocations("locations/overworld/map.json")
     Tracker:AddLocations("locations/fusion.json")
 end
