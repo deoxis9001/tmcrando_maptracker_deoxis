@@ -26,6 +26,7 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
     Tracker:AddLocations("locations/dungeons/dhc/f.map.json")
     Tracker:AddLocations("locations/dungeons/dhc/o.map.json")
     Tracker:AddLocations("locations/dungeons/dhc/p.map.json")
+    Tracker:AddLocations("locations/overworld/HyruleCastleGardens.json")
     Tracker:AddLocations("locations/overworld/MinishWoods.json")
     Tracker:AddLocations("locations/overworld/EasternHills.json")
     Tracker:AddLocations("locations/overworld/LakeHylia.json")
@@ -36,7 +37,6 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
     Tracker:AddLocations("locations/overworld/HyruleTown.json")
     Tracker:AddLocations("locations/overworld/NorthHyruleField.json")
     -- Tracker:AddLocations("locations/overworld/RoyalValley.json")
-    Tracker:AddLocations("locations/overworld/HyruleCastleGardens.json")
     Tracker:AddLocations("locations/overworld/TrilbyHighlands.json")
-    Tracker:AddLocations("locations/fusion.json")
+    -- Tracker:AddLocations("locations/fusion.json")
 end
