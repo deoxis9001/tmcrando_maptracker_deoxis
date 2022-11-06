@@ -1,5 +1,5 @@
 -- Configuration ----------------------
-TMC_AUTOTRACKER_DEBUG = true
+TMC_AUTOTRACKER_DEBUG = false
 BOW_VALUE = 0
 WildsFused = 0
 WildsBag = 0
@@ -20,7 +20,6 @@ print("")
 
 function autotracker_started()
   print("Started Tracking")
-
   DWS_KEY_COUNT = 0
   DWS_KEY_USED = 0
   COF_KEY_COUNT = 0
@@ -82,6 +81,91 @@ function updateToggleItemFromByteAndFlag(segment, code, address, flag)
             item.Active = true
         else
             item.Active = false
+        end
+    end
+end
+
+function smithswordCheck(segment, code, address, flag)
+    if smithsword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(smithsword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			smithsword:setActive(true)
+        else
+			smithsword:setActive(false)
+        end
+    end
+end
+
+function greenswordCheck(segment, code, address, flag)
+    if greensword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(greensword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			greensword:setActive(true)
+        else
+			greensword:setActive(false)
+        end
+    end
+end
+
+function redswordCheck(segment, code, address, flag)
+    if redsword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(redsword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			redsword:setActive(true)
+        else
+			redsword:setActive(false)
+        end
+    end
+end
+
+function blueswordCheck(segment, code, address, flag)
+    if bluesword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(bluesword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			bluesword:setActive(true)
+        else
+			bluesword:setActive(false)
+        end
+    end
+end
+
+function fourswordCheck(segment, code, address, flag)
+    if foursword then
+        local value = ReadU8(segment, address)
+        if TMC_AUTOTRACKER_DEBUG_ITEM then
+            print(foursword.code, code, flag)
+        end
+
+        local flagTest = value & flag
+
+        if flagTest ~= 0 then
+			foursword:setActive(true)
+        else
+			foursword:setActive(false)
         end
     end
 end
@@ -256,19 +340,19 @@ function updateBooks(segment, code, address)
 end
 
 function updateSwords(segment)
-  local item = Tracker:FindObjectForCode("sword")
+  local item = sword.InfoStage
   if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then
-    item.CurrentStage = 4
+    sword:setActive(4)
   elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 then
-    item.CurrentStage = 5
+    sword:setActive(5)
   elseif ReadU8(segment, 0x2002b32) == 0x05 then
-    item.CurrentStage = 1
+    sword:setActive(1)
   elseif ReadU8(segment, 0x2002b32) == 0x15 then
-    item.CurrentStage = 2
+    sword:setActive(2)
   elseif ReadU8 (segment, 0x2002b32) == 0x55 then
-    item.CurrentStage = 3
+    sword:setActive(3)
   else
-    item.CurrentStage = 0
+    sword:setActive(0)
   end
 end
 
