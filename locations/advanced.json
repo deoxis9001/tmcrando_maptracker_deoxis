@@ -108,7 +108,7 @@
           },
           {
             "name":"Mulldozer Key",
-            "access_rules":["[$canDamage],$canDamage_off,dws_smallkey:2,[dws_smallkey:4]"],
+            "access_rules":["[$CanDamage],$CanDamageOff,dws_smallkey:2,[dws_smallkey:4]"],
             "map_locations":[
               {
                 "map":"dws",
@@ -217,7 +217,7 @@
           },
           {
             "name":"Madderpillar Chest",
-            "access_rules": ["[$canDamage],$canDamage_off,[dws_smallkey:4],dws_smallkey:3","dws_smallkey:2,lamp,[$canDamage],$canDamage_off","[lamp],dws_smallkey:2,gust,[$canDamage],$canDamage_off","dws_smallkey:1,lamp,gust,[$canDamage],$canDamage_off"],
+            "access_rules": ["[$CanDamage],$CanDamageOff,[dws_smallkey:4],dws_smallkey:3","dws_smallkey:2,lamp,[$CanDamage],$CanDamageOff","[lamp],dws_smallkey:2,gust,[$CanDamage],$CanDamageOff","dws_smallkey:1,lamp,gust,[$CanDamage],$CanDamageOff"],
             "map_locations":[
               {
                 "map":"dws",
@@ -316,7 +316,7 @@
           "boots,[$Sword1,spinattack],bottle,grip,gust,bow",
           "boots,[$Sword1,spinattack],bottle,grip,gust,boomerang",
           "boots,[$Sword1,spinattack],bottle,grip,lights",
-          "boots,[$Sword1,spinattack],bottle,grip,gust,$beam",
+          "boots,[$Sword1,spinattack],bottle,grip,gust,$Beam",
           "boots,[$Sword1,spinattack],bottle,grip,cane",
           "boots,[$Sword1,spinattack],bottle,bombs,cane",
           "boots,[cape],bottle,grip",
@@ -324,7 +324,7 @@
           "boots,[flippers],bottle,grip,gust,bombs",
           "boots,[flippers],bottle,grip,gust,bow",
           "boots,[flippers],bottle,grip,gust,boomerang",
-          "boots,[flippers],$Sword1,bottle,grip,gust,$beam",
+          "boots,[flippers],$Sword1,bottle,grip,gust,$Beam",
           "boots,[flippers],bottle,grip,lights",
           "boots,[flippers],bottle,grip,cane",
           "boots,[flippers],bottle,bombs,cane"
@@ -333,8 +333,8 @@
           {
             "name":"Spiny Beetle Fight",
             "access_rules": [
-              "cane,[$canDamage],$canDamage_off",
-              "shield,[$canDamage],$canDamage_off",
+              "cane,[$CanDamage],$CanDamageOff",
+              "shield,[$CanDamage],$CanDamageOff",
 			  "downthrust,cape,$Sword1",
               "bombs"],
             "map_locations":[
@@ -353,7 +353,7 @@
           },
           {
             "name":"Cave of Flames Rupees",
-            "access_rules":["cane,[$canDamage],$canDamage_off","shield,[$canDamage],$canDamage_off","bombs","downthrust,cape,$Sword1"],
+            "access_rules":["cane,[$CanDamage],$CanDamageOff","shield,[$CanDamage],$CanDamageOff","bombs","downthrust,cape,$Sword1"],
             "map_locations":[
               {
                 "map":"cof",
@@ -372,8 +372,8 @@
           {
             "name":"Big Chest Room Big Chest",
             "access_rules": [
-              "cane,[$canDamage],$canDamage_off",
-              "shield,[$canDamage],$canDamage_off",
+              "cane,[$CanDamage],$CanDamageOff",
+              "shield,[$CanDamage],$CanDamageOff",
 			  "downthrust,cape,$Sword1",
               "bombs"],
             "map_locations":[
@@ -394,7 +394,7 @@
           },
           {
             "name":"Big Chest Room Small Chest",
-            "access_rules": ["downthrust,cape,$Sword1","cane,[$canDamage],$canDamage_off","shield,[$canDamage],$canDamage_off","bombs"],
+            "access_rules": ["downthrust,cape,$Sword1","cane,[$CanDamage],$CanDamageOff","shield,[$CanDamage],$CanDamageOff","bombs"],
             "map_locations":[
               {
                 "map":"cof",
@@ -412,8 +412,8 @@
           {
             "name":"First Rollobite Room Free Chest",
             "access_rules": [
-              "cane,[$canDamage],$canDamage_off",
-              "shield,[$canDamage],$canDamage_off",
+              "cane,[$CanDamage],$CanDamageOff",
+              "shield,[$CanDamage],$CanDamageOff",
 			  "downthrust,cape,$Sword1",
               "bombs"],
             "map_locations":[
@@ -433,8 +433,8 @@
           {
             "name":"First Rollobite Room Pillar Chest",
             "access_rules": [
-              "cane,[$canDamage],$canDamage_off",
-              "shield,[$canDamage],$canDamage_off",
+              "cane,[$CanDamage],$CanDamageOff",
+              "shield,[$CanDamage],$CanDamageOff",
 			  "downthrust,cape,$Sword1",
               "bombs"],
             "map_locations":[
@@ -454,8 +454,8 @@
           {
             "name":"Bombable Wall Heart Piece",
             "access_rules": ["bombs,$Sword1,cof_smallkey:1",
-              "{cane,[$canDamage],$canDamage_off}",
-              "{shield,[$canDamage],$canDamage_off}",
+              "{cane,[$CanDamage],$CanDamageOff}",
+              "{shield,[$CanDamage],$CanDamageOff}",
 			  "{downthrust,cape,sword}",
               "{bombs}"],
             "map_locations":[
@@ -1228,7 +1228,7 @@
           },
           {
             "name":"Right Path Rupees",
-            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,[$canDamage],$canDamage_off",
+            "access_rules":["tod_bigkey,[tod_smallkey:4],tod_smallkey:1,lamp,[$CanDamage],$CanDamageOff",
             "tod_bigkey,[tod_smallkey:4],tod_smallkey:1,cape,gust,flippers,[lamp]"],
             "map_locations":[
               {
@@ -1283,7 +1283,7 @@
           },
           {
             "name":"Ice Puzzle Free Chest",
-            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,[$canDamage],$canDamage_off,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","cape,lamp,[$CanDamage],$CanDamageOff,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1300,7 +1300,7 @@
           },
           {
             "name":"Ice Puzzle Frozen Chest",
-            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,[$canDamage],$canDamage_off,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
+            "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1","lamp,[$CanDamage],$CanDamageOff,cape,tod_bigkey,[tod_smallkey:4],tod_smallkey:1"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1318,7 +1318,7 @@
           {
             "name":"Post Ice Puzzle Frozen Chest",
             "access_rules":["gust,flippers,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1",
-			"gust,cape,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1,[$canDamage],$canDamage_off"],
+			"gust,cape,lamp,tod_bigkey,[tod_smallkey:4],tod_smallkey:1,[$CanDamage],$CanDamageOff"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1442,7 +1442,7 @@
           },
           {
             "name":"Dark Maze Bottom",
-            "access_rules":["lamp,[$canDamage],$canDamage_off,tod_bigkey"],
+            "access_rules":["lamp,[$CanDamage],$CanDamageOff,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1459,7 +1459,7 @@
           },
           {
             "name":"Dark Maze Top Left",
-            "access_rules":["lamp,[$canDamage],$canDamage_off,tod_bigkey"],
+            "access_rules":["lamp,[$CanDamage],$CanDamageOff,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1476,7 +1476,7 @@
           },
           {
             "name":"Dark Maze Top Right",
-            "access_rules":["lamp,[$canDamage],$canDamage_off,tod_bigkey"],
+            "access_rules":["lamp,[$CanDamage],$CanDamageOff,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1493,7 +1493,7 @@
           },
           {
             "name":"Dark Maze Bombable Wall",
-            "access_rules":["lamp,[$canDamage],$canDamage_off,bombs,tod_bigkey"],
+            "access_rules":["lamp,[$CanDamage],$CanDamageOff,bombs,tod_bigkey"],
             "map_locations":[
               {
                 "map":"tod",
@@ -1966,7 +1966,7 @@
       //DHC CLOSED
       {
         "name":"Dark Hyrule Castle",
-        "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen,$Dungeons"],
+        "access_rules":["$NeededSwords,$NeededElements,$NoElementsOrSwords,$FigurineOpen,$Dungeons"],
         "children":[
           {
             "name":"Blade Chest",
@@ -2072,7 +2072,7 @@
             "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2095,7 +2095,7 @@
             "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2118,7 +2118,7 @@
             "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2141,7 +2141,7 @@
             "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:5,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:5,$Sword5,spinattack",
               "bombs,cape,magicboomerang,explicit_dhc_smallkey:5,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:5,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:5,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2289,7 +2289,7 @@
             "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2312,7 +2312,7 @@
             "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2335,7 +2335,7 @@
             "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2358,7 +2358,7 @@
             "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:5,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:5,$Sword5,spinattack",
               "bombs,cape,magicboomerang,explicit_dhc_smallkey:5,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:5,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:5,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2534,7 +2534,7 @@
             "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2557,7 +2557,7 @@
             "access_rules":["bombs,cape,magicboomerang,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2580,7 +2580,7 @@
             "access_rules":["bombs,cape,magicboomerang,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,bow,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
               "bombs,cape,lights,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack",
-              "bombs,cape,$beam,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack"],
+              "bombs,cape,$Beam,lamp,explicit_dhc_smallkey:1,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2603,7 +2603,7 @@
             "access_rules":["bombs,cape,bow,explicit_dhc_smallkey:5,$Sword5,spinattack",
               "bombs,cape,lights,explicit_dhc_smallkey:5,$Sword5,spinattack",
               "bombs,cape,magicboomerang,explicit_dhc_smallkey:5,$Sword5,spinattack",
-              "bombs,cape,$beam,explicit_dhc_smallkey:5,$Sword5,spinattack"],
+              "bombs,cape,$Beam,explicit_dhc_smallkey:5,$Sword5,spinattack"],
             "map_locations":[
               {
                 "map":"dhc",
@@ -2649,7 +2649,7 @@
         "children":[
           {
             "name":"Pull the Pedestal",
-            "access_rules":["$neededSwords,$neededElements,$noElementsOrSwords,$FigurineOpen,$Dungeons"],
+            "access_rules":["$NeededSwords,$NeededElements,$NoElementsOrSwords,$FigurineOpen,$Dungeons"],
             "map_locations":[
               {
                 "map":"dhc",
