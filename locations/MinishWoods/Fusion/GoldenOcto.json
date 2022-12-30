@@ -1,0 +1,22 @@
+[
+  {
+	"name":"North Minish Woods Octo Golden",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2200,
+		"y":1550,
+		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill Octo",
+		"item_count":1,
+		"access_rules":["$MinishWoods_F_GoldenOcto_KillOcto,[$MinishWoods_F_GoldenOcto_KillOcto_Y]","{$MinishWoods_F_GoldenOcto_KillOcto_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

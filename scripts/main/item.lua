@@ -1,7 +1,7 @@
-Tracker:AddItems("items/common.json")
-Tracker:AddItems("items/dungeon_items.json")
-Tracker:AddItems("items/keys.json")
-Tracker:AddItems("items/options.json")
+Tracker:AddItems(JsItems.."common.json")
+Tracker:AddItems(JsItems.."dungeon_items.json")
+Tracker:AddItems(JsItems.."keys.json")
+Tracker:AddItems(JsItems.."options.json")
 if(VERSION_BETA==true) then
-	Tracker:AddItems("items/beta.json")
+	Tracker:AddItems(JsItems.."beta.json")
 end 

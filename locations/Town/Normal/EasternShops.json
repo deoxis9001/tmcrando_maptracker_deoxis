@@ -1,0 +1,43 @@
+[
+  {
+	"name":"Eastern Shops",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1225,
+		"y":1350,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rem",
+		"item_count":1,
+		"access_rules":["$Town_N_EasternShops_Rem,[$Town_N_EasternShops_Rem_Y]","{$Town_N_EasternShops_Rem_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Simon's Simulations",
+		"item_count":1,
+		"access_rules":["$Town_N_EasternShops_SimonSimulations,[$Town_N_EasternShops_SimonSimulations_Y]","{$Town_N_EasternShops_SimonSimulations_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Figurine House",
+		"item_count":1,
+		"access_rules":["$Town_N_EasternShops_FigurineHouse,[$Town_N_EasternShops_FigurineHouse_Y]","{$Town_N_EasternShops_FigurineHouse_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Figurine House Heart Piece",
+		"item_count":1,
+ 		"access_rules":["$Town_N_EasternShops_FigurineHouseHeartPiece,[$Town_N_EasternShops_FigurineHouseHeartPiece_Y]","{$Town_N_EasternShops_FigurineHouseHeartPiece_B}"],
+       "capture_item":true,
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

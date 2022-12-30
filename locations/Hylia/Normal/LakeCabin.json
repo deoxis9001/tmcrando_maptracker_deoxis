@@ -1,0 +1,23 @@
+[
+  {
+	"name":"Lake Cabin",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2590,
+		"y":1365,
+        "restrict_visibility_rules":["fusions_none"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Lake Cabin",
+		"item_count":1,
+        "capture_item":true,
+		"access_rules":["$Hylia_N_LakeCabin_LakeCabin,[$Hylia_N_LakeCabin_LakeCabin_Y]","{$Hylia_N_LakeCabin_LakeCabin_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

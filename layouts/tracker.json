@@ -12,20 +12,119 @@
 			["beta","spinattack","fastspin","fastsplit","greatspin","longspin","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack","sevenscrolls"],
 		]
     },
-    "options_popup": {
+    "options": {
       "type": "group",
       "header": "Settings",
       "content": {
         "type": "itemgrid",
         "h_alignment": "center",
-        "item_margin": "1,2",
+        "item_margin": "0,0",
+		"item_width":160,
         "rows": [
-			  ["obscure_off","rupees_off","","figurine_option"],
-			  ["dhc_closed","fusions_open","","figurine10"],
-			  ["element4Needed","sword5Needed","dungeons","figurine50"],
-			  ["weapons_off","bingo_off","progression","figurinemax"]
+			  ["","",""],
+			  ["obscure_off","rupees_off",""],
+			  ["dhc_closed","fusions_open","keysanity_standard"],
+			  ["element4Needed","sword5Needed","dungeons"],
+			  ["golden_enemy_off","progressive","weapons_off"],
+			  ["","",""],
+			  ["","",""],
+			  ["figurine_option","figurine10",""],
+			  ["figurine50","figurinemax",""]
 		  ]
       }
+    },
+    "options_other": {
+      "type": "group",
+      "header": "Settings",
+      "content": {
+        "type": "itemgrid",
+        "h_alignment": "center",
+        "item_margin": "0,0",
+		"item_width":160,
+        "rows": [
+			  ["guardskip_off","likelike_off","blowdust_off"],
+			  ["crenelmushroom_off","lightarrowbreak_off","crenelbeam_off"],
+			  ["downstrikebeetle_off","capeextension_off","darkrooms_off"],
+			  ["lakeminish_off","cabinswim_off","cloudskill_off"],
+			  ["fowpot_off","powjump_off","powpotpuzzleool_off"],
+			  ["dhccanonhit_off","dhcbladepuzzleshuffle_off","dhcswitchhit_off"],
+			  ["","",""]
+		  ]
+      }
+    },
+	"options_popup2": {
+        "type": "array",
+        "margin": "0",
+        "content": [
+            {
+                "type": "group",
+                "header": "Settings",
+                "content": [
+                    {
+                        "type": "item",
+                        "margin": "0, 0, 0, 0",
+                        "item": "obscure_off"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "160, 0, 0, 0",
+                        "item": "rupees_off"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "0, 32, 0, 0",
+                        "item": "dhc_closed"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "160, 32, 0, 0",
+                        "item": "fusions_open"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "0, 64, 0, 0",
+                        "item": "element4Needed"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "160, 64, 0, 0",
+                        "item": "sword5Needed"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "320, 64, 0, 0",
+                        "item": "dungeons"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "0, 96, 0, 0",
+                        "item": "weapons_off"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "160, 96, 0, 0",
+                        "item": "golden_enemy_off"
+                    },
+                    {
+                        "type": "item",
+                        "margin": "320, 96, 0, 0",
+                        "item": "progressive"
+                    },
+                    {
+                        "type": "itemgrid",
+						"h_alignment": "center",
+                        "item_margin": "480, 0, 0, 0",
+						"item_width":160,
+						"rows": [
+							  ["figurine_option"],
+							  ["figurine10"],
+							  ["figurine50"],
+							  ["figurinemax"]
+						]
+                    }
+                ]
+            }
+        ]
     },
     "tracker_capture_item": {
       "type": "container",
@@ -59,12 +158,12 @@
                         {
                             "type": "group",
                             "header": "Inventaire",
-							"header_content": {
-							   "type": "button_popup",
-							   "style": "settings",
-							   "popup_background": "#50877373",
-							   "layout": "options_popup"
-							},
+							//"header_content": {
+							//   "type": "button_popup",
+							//   "style": "settings",
+							//   "popup_background": "#50877373",
+							//   "layout": "options_popup"
+							//},
                             "dock": "left",
                             "content": {
                                 "type": "layout",
@@ -162,6 +261,22 @@
                             "content":{
                               "type":"map",
                               "maps":["dhc"]
+                            }
+                          },
+                          {
+                            "title":"Settings",
+                            "icon":"images/icon-maps/Elements.png",
+                            "content":{
+                              "type":"layout",
+							  "key": "options"
+                            }
+                          },
+                          {
+                            "title":"Settings skip",
+                            "icon":"images/icon-maps/Elements.png",
+                            "content":{
+                              "type":"layout",
+                              "key": "options_other"
                             }
                           },
                         ]

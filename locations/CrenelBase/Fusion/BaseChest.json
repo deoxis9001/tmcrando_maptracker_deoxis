@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Crenel Base Chest",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":78,
+		"y":858,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$CrenelBase_F_BaseChest_chest,[$CrenelBase_F_BaseChest_chest_Y]","{$CrenelBase_F_BaseChest_chest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

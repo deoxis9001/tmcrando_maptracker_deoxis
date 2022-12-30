@@ -1,0 +1,28 @@
+[
+  {
+	"name":"Melari Open",
+	"map_locations":[{
+		"map":"map",
+		"x":425,
+		"y":350,
+		"restrict_visibility_rules":["$Fusions,obscure_off"]
+	}
+	],
+	"sections":[
+	  {
+		"name":"Melari",
+		"item_count":1,
+		"access_rules":["$Crenel_F_MelariOpen_Melari,[$Crenel_F_MelariOpen_Melari_Y]","{$Crenel_F_MelariOpen_Melari_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Crenel_F_MelariOpen_Chest,[$Crenel_F_MelariOpen_Chest_Y]","{$Crenel_F_MelariOpen_Chest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

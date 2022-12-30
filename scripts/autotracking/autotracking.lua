@@ -85,7 +85,6 @@ function updateToggleItemFromByteAndFlag(segment, code, address, flag)
     end
 end
 
-
 function smithswordCheck(segment, code, address, flag)
     if smithsword then
         local value = ReadU8(segment, address)
@@ -448,7 +447,7 @@ end
 function updateQuiver(segment)
   local item = Tracker:FindObjectForCode("quiver")
   if item then
-    item.CurrentStage = ReadU8(segment, 0x2002aef)  
+    item.CurrentStage = ReadU8(segment, 0x2002aef)
     if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Bow value =", BOW_VALUE, ReadU8(segment, 0x2002aef))
     end

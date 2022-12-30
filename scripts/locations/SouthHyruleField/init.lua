@@ -1,60 +1,19 @@
-ScriptHost:LoadScript("scripts/locations/SouthHyruleField/SmithsHouse.lua")
-Tracker:AddLocations("locations/SouthHyruleField/SmithsHouse.json")
+DirWorld="SouthHyruleField/"
 
-ScriptHost:LoadScript("scripts/locations/SouthHyruleField/RupeeCaveFusion.lua")
-Tracker:AddLocations("locations/SouthHyruleField/RupeeCaveFusion.json")
+ScriptHost:LoadScript(ScriptLocations..""..DirWorld.."".. N .."SmithsHouse.lua")
+Tracker:AddLocations(JsLocations..""..DirWorld.."".. N .."SmithsHouse.json")
 
-ScriptHost:LoadScript("scripts/locations/SouthHyruleField/NearLinksHouseChestFusion.lua")
-Tracker:AddLocations("locations/SouthHyruleField/NearLinksHouseChestFusion.json")
+ScriptHost:LoadScript(ScriptLocations..""..DirWorld.."".. FR .."RupeeCaveFusion.lua")
+Tracker:AddLocations(JsLocations..""..DirWorld.."".. FR .."RupeeCaveFusion.json")
 
-ScriptHost:LoadScript("scripts/locations/SouthHyruleField/Tingle.lua")
-Tracker:AddLocations("locations/SouthHyruleField/Tingle.json")
+ScriptHost:LoadScript(ScriptLocations..""..DirWorld.."".. F .."NearLinksHouseChestFusion.lua")
+Tracker:AddLocations(JsLocations..""..DirWorld.."".. F .."NearLinksHouseChestFusion.json")
 
-ScriptHost:LoadScript("scripts/locations/SouthHyruleField/TreeHeartPieceFusion.lua")
-Tracker:AddLocations("locations/SouthHyruleField/TreeHeartPieceFusion.json")
+ScriptHost:LoadScript(ScriptLocations..""..DirWorld.."".. N .."Tingle.lua")
+Tracker:AddLocations(JsLocations..""..DirWorld.."".. N .."Tingle.json")
 
-ScriptHost:LoadScript("scripts/locations/SouthHyruleField/MinishFlippersHole.lua")
-Tracker:AddLocations("locations/SouthHyruleField/MinishFlippersHole.json")
+ScriptHost:LoadScript(ScriptLocations..""..DirWorld.."".. F .."TreeHeartPieceFusion.lua")
+Tracker:AddLocations(JsLocations..""..DirWorld.."".. F .."TreeHeartPieceFusion.json")
 
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
--- ScriptHost:LoadScript("scripts/locations/SouthHyruleField/GreatFairy.lua")
--- Tracker:AddLocations("locations/SouthHyruleField/GreatFairy.json")
-
+ScriptHost:LoadScript(ScriptLocations..""..DirWorld.."".. N .."MinishFlippersHole.lua")
+Tracker:AddLocations(JsLocations..""..DirWorld.."".. N .."MinishFlippersHole.json")

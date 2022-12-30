@@ -1,0 +1,29 @@
+[
+	{
+	"name":"Gardens Right Fountain",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1505,
+		"y":160,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Dry Fountain",
+		"access_rules":["$Castle_F_GardensRightFountain_DryFountain,[$Castle_F_GardensRightFountain_DryFountain_Y]","{$Castle_F_GardensRightFountain_DryFountain_B}"],
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Minish Hole",
+		"item_count":1,
+		"access_rules":["$Castle_F_GardensRightFountain_MinishHole,[$Castle_F_GardensRightFountain_MinishHole_Y]","{$Castle_F_GardensRightFountain_MinishHole_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }
+	]
+  }
+]

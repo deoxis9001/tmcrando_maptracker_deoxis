@@ -1,0 +1,36 @@
+[
+  {
+	"name":"Treasure Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2450,
+		"y":850,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Treasure Cave",
+		"item_count":7,
+		"access_rules":["$Hylia_F_TreasureCave_TreasureCave,[$Hylia_F_TreasureCave_TreasureCave_Y]","{$Hylia_F_TreasureCave_TreasureCave_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Beanstalk",
+		"item_count":2,
+		"access_rules":["$Hylia_F_TreasureCave_Beanstalk,[$Hylia_F_TreasureCave_Beanstalk_Y]","{$Hylia_F_TreasureCave_Beanstalk_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Beanstalk Heart Piece",
+		"item_count":1,
+		"access_rules":["$Hylia_F_TreasureCave_BeanstalkHeartPiece,[$Hylia_F_TreasureCave_BeanstalkHeartPiece_Y]","{$Hylia_F_TreasureCave_BeanstalkHeartPiece_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  }
+]

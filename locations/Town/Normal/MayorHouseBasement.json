@@ -1,0 +1,21 @@
+[
+  {
+	"name":"Mayor's House Basement",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1535,
+		"y":1220,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Mayor's House Basement",
+		"item_count":1,
+		"access_rules":["$Town_N_MayorHouseBasement_MayorHouseBasement,[$Town_N_MayorHouseBasement_MayorHouseBasement_Y]","{$Town_N_MayorHouseBasement_MayorHouseBasement_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

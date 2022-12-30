@@ -1,0 +1,28 @@
+[
+  {
+	"name":"Veil Falls South Mitts Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1970,
+		"y":525,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Left Chest",
+		"item_count":1,
+		"access_rules":["$FallsLower_N_SouthMittsCave_LeftChest,[$FallsLower_N_SouthMittsCave_LeftChest_Y]","{$FallsLower_N_SouthMittsCave_LeftChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Right Chest",
+		"item_count":1,
+		"access_rules":["$FallsLower_N_SouthMittsCave_RightChest,[$FallsLower_N_SouthMittsCave_RightChest_Y]","{$FallsLower_N_SouthMittsCave_RightChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	]
+  }
+]

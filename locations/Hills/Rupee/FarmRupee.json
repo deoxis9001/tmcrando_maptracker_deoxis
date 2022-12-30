@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Farm Rupee",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1700,
+		"y":1560,
+		"restrict_visibility_rules":["rupees_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Farm Rupee",
+		"item_count":1,
+		"access_rules":["$Hills_R_FarmRupee_FarmRupee,[$Hills_R_FarmRupee_FarmRupee_Y]","{$Hills_R_FarmRupee_FarmRupee_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

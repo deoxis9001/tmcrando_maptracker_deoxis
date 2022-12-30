@@ -1,0 +1,21 @@
+[
+  {
+	"name":"Minish Flippers Hole",
+	"access_rules":["$SouthHyruleField_N_MinishFlippersHole,[$SouthHyruleField_N_MinishFlippersHole_Y]","{$SouthHyruleField_N_MinishFlippersHole_B}"],
+	"map_locations": [
+	  {
+		"map":"map",
+		"x":1225,
+		"y":1800,
+	  }
+	],
+	"sections": [
+	  {
+		"name":"Minish Flippers Hole",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  }
+ ]

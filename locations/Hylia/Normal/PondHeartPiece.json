@@ -1,0 +1,21 @@
+[
+  {
+	"name":"Pond Heart Piece",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2290,
+		"y":820,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Diving for Love",
+		"item_count":1,
+		"access_rules":["$Hylia_N_PondHeartPiece_DivingforLove,[$Hylia_N_PondHeartPiece_DivingforLove_Y]","{$Hylia_N_PondHeartPiece_DivingforLove_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  }
+]

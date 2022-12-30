@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Fusion Rupee Cave",
+  "access_rules":["$SouthHyruleField_FR_RupeeCaveFusion,[$SouthHyruleField_FR_RupeeCaveFusion_Y]","{$SouthHyruleField_FR_RupeeCaveFusion_B}"],
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1047,
+		"y":1836,
+		"restrict_visibility_rules":["rupees_on,fusions_open","rupees_on,open_world"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":15,
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

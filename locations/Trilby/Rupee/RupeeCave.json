@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Trilby Highlands Rupee Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":705,
+		"y":1250,
+		"restrict_visibility_rules":["rupees_on,$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":15,
+		"access_rules":["$Trilby_R_RupeeCave_Rupee,[$Trilby_R_RupeeCave_Rupee_Y]","{$Trilby_R_RupeeCave_Rupee_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

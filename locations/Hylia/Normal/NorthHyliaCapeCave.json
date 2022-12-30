@@ -1,0 +1,23 @@
+[
+  {
+	"name":"North Hylia Cape Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2450,
+		"y":850,
+        "restrict_visibility_rules":["fusions_none"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"North Hylia Cape Cave",
+		"item_count":7,
+        "clear_as_group":false,
+		"access_rules":["$Hylia_N_NorthHyliaCapeCave_NorthHyliaCapeCave,[$Hylia_N_NorthHyliaCapeCave_NorthHyliaCapeCave_Y]","{$Hylia_N_NorthHyliaCapeCave_NorthHyliaCapeCave_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

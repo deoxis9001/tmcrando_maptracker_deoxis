@@ -1,11 +1,11 @@
 SwordOptions = CustomItem:extend()
 
-function SwordOptions:init(name, code, imagePath)
+function SwordOptions:init(name, code, imagePathActive, imagePathDesactive)
     self:createItem(name)
     self.code = code
     self:setProperty("Active", true)
-    self.activeImage = ImageReference:FromPackRelativePath(imagePath)
-    self.disabledImage = ImageReference:FromImageReference(self.activeImage, "@disabled")
+    self.activeImage = ImageReference:FromPackRelativePath(imagePathActive)
+    self.disabledImage = ImageReference:FromPackRelativePath(imagePathDesactive)
     self.noImage = nil
     self.ItemInstance.PotentialIcon = self.activeImage
 	-- sword.ItemInstance.PotentialIcon = sword.activeImage
@@ -138,11 +138,19 @@ function SwordOptions:updateIcon()
 end
 
 function SwordOptions:onLeftClick()
-    self:setActive(true)
+	if (self:getActive()) then
+		self:setActive(false)
+	else
+		self:setActive(true)
+	end
 end
 
 function SwordOptions:onRightClick()
-    self:setActive(false)
+	if (self:getActive()) then
+		self:setActive(false)
+	else
+		self:setActive(true)
+	end
 end
 
 function SwordOptions:canProvideCode(code)

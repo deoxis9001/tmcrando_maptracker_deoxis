@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Trilby Highlands Fusion Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":845,
+		"y":950,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Trilby_F_FusionCave_Chest,[$Trilby_F_FusionCave_Chest_Y]","{$Trilby_F_FusionCave_Chest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

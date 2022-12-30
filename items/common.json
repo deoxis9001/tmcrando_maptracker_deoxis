@@ -103,7 +103,7 @@
       },
       {
         "img": "images/items/Magical Boomerang.png",
-        "codes": "boomerang,magicboomerang"
+        "codes": "magicboomerang"
       }
     ]
   },
@@ -122,15 +122,15 @@
       },
       {
         "img": "images/items/Wallet300alt.png",
-        "codes": "wallet,wallet2"
+        "codes": "wallet"
       },
       {
         "img": "images/items/Wallet500alt.png",
-        "codes": "wallet3"
+        "codes": "wallet2"
       },
       {
         "img": "images/items/Wallet999alt.png",
-        "codes": "wallet4"
+        "codes": "wallet3"
       }
     ]
   },
@@ -227,19 +227,19 @@
       },
       {
         "img": "images/items/Bomb10.png",
-        "codes": "bombs,bomb,dmg"
+        "codes": "bombs,bomb,bombs10,dmg"
       },
       {
         "img": "images/items/Bomb30.png",
-        "codes": "bombs,bomb,dmg"
+        "codes": "bombs,bomb,bombs30,dmg"
       },
       {
         "img": "images/items/Bomb50.png",
-        "codes": "bombs,bomb,dmg"
+        "codes": "bombs,bomb,bombs50,dmg"
       },
       {
         "img": "images/items/Bomb99.png",
-        "codes": "bombs,bomb,dmg"
+        "codes": "bombs,bomb,bombs99,dmg"
       },
     ]
   },

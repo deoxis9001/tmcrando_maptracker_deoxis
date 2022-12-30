@@ -1,0 +1,21 @@
+[
+  {
+	"name":"Bell",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1325,
+		"y":1200,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Bell",
+		"item_count":1,
+		"access_rules":["$Town_N_Bell_Bell,[$Town_N_Bell_Bell_Y]","{$Town_N_Bell_Bell_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  }
+]

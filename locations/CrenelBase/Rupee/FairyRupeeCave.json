@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Fairy Rupee Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":441,
+		"y":825,
+		"restrict_visibility_rules":["rupees_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":3,
+		"access_rules":["$CrenelBase_R_FairyRupeeCave_Rupees,[$CrenelBase_R_FairyRupeeCave_Rupees_Y]","{$CrenelBase_R_FairyRupeeCave_Rupees_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

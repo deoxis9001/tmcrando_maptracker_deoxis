@@ -1,0 +1,42 @@
+[
+  {
+	"name":"Swiftblade's Dojo",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1194,
+		"y":1575,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Spin Attack",
+		"item_count":1,
+		"access_rules":["$Town_N_SwiftbladeDojo_SpinAttack,[$Town_N_SwiftbladeDojo_SpinAttack_Y]","{$Town_N_SwiftbladeDojo_SpinAttack_B}"],
+        "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+        "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+	  },
+	  {
+		"name":"Rock Breaker",
+		"item_count":1,
+		"access_rules":["$Town_N_SwiftbladeDojo_RockBreaker,[$Town_N_SwiftbladeDojo_RockBreaker_Y]","{$Town_N_SwiftbladeDojo_RockBreaker_B}"],
+        "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+        "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+	  },
+	  {
+		"name":"Rock Breaker",
+		"item_count":1,
+		"access_rules":["$Town_N_SwiftbladeDojo_DashAttack,[$Town_N_SwiftbladeDojo_DashAttack_Y]","{$Town_N_SwiftbladeDojo_DashAttack_B}"],
+        "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+        "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+	  },
+	  {
+		"name":"Down Thrust",
+		"item_count":1,
+		"access_rules":["$Town_N_SwiftbladeDojo_DownThrust,[$Town_N_SwiftbladeDojo_DownThrust_Y]","{$Town_N_SwiftbladeDojo_DownThrust_B}"],
+        "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+        "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+	  },
+	]
+  }
+]

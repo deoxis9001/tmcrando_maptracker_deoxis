@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Top Left Tree",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1275,
+		"y":655,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Top Left Tree",
+		"item_count":1,
+		"access_rules":["$NorthField_F_TopLeftTree_TopLeftTree,[$NorthField_F_TopLeftTree_TopLeftTree_Y]","{$NorthField_F_TopLeftTree_TopLeftTree_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

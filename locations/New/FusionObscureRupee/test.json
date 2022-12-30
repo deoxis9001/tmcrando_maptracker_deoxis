@@ -1,0 +1,21 @@
+[
+  {
+	"name":"Test",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1622,
+		"y":1835,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Test",
+		"item_count":1,
+		"access_rules":["$N_FOR_Test,[$N_FOR_Test_Y]","{$N_FOR_Test_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

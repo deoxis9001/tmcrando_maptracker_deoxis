@@ -1,0 +1,37 @@
+[
+  {
+	"name":"School Gardens",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1600,
+		"y":1067,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Garden Chests",
+		"item_count":1,
+		"access_rules":["$Town_F_SchoolGardensOpen_GardenChests,[$Town_F_SchoolGardensOpen_GardenChests_Y]","{$Town_F_SchoolGardensOpen_GardenChests_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+        "capture_item":true,
+		"access_rules":["$Town_F_SchoolGardensOpen_HeartPiece,[$Town_F_SchoolGardensOpen_HeartPiece_Y]","{$Town_F_SchoolGardensOpen_HeartPiece_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Minish Path Chest",
+		"item_count":1,
+		"access_rules":["$Town_F_SchoolGardensOpen_MinishPathChest,[$Town_F_SchoolGardensOpen_MinishPathChest_Y]","{$Town_F_SchoolGardensOpen_MinishPathChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

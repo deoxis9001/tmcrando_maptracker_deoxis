@@ -1,0 +1,21 @@
+[
+  {
+	"name":"Castor Wilds Fusions",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":75,
+		"y":1700
+	  }
+	],
+	"sections":[
+		{
+		  "name":"Fusions",
+		  "item_count":3,
+		  "access_rules":["$Swamp_N_CastorWildsFusions_Fusions,[$Swamp_N_CastorWildsFusions_Fusions_Y]","{$Swamp_N_CastorWildsFusions_Fusions_B}"],
+		  "chest_opened_img": "images/items-map/Gold Kinstone (Wilds) Gray.png",
+		  "chest_unopened_img": "images/items-map/Gold Kinstone (Wilds).png"
+		}
+	]
+  }
+]

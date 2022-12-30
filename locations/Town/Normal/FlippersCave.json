@@ -1,0 +1,29 @@
+[
+  {
+	"name":"Flippers Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1125,
+		"y":1050,
+        "restrict_visibility_rules":["rupees_off,obscure_off","rupees_off,obscure_on","rupees_on,obscure_off"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Scissor Beetles",
+		"item_count":1,
+		"access_rules":["$Town_N_FlippersCave_ScissorBeetles,[$Town_N_FlippersCave_ScissorBeetles_Y]","{$Town_N_FlippersCave_ScissorBeetles_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Frozen Chest",
+		"item_count":1,
+		"access_rules":["$Town_N_FlippersCave_FrozenChest,[$Town_N_FlippersCave_FrozenChest_Y]","{$Town_N_FlippersCave_FrozenChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Bottom Right Tree",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1370,
+		"y":730,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Bottom Right Tree",
+		"item_count":1,
+		"access_rules":["$NorthField_F_BottomRightTree_BottomRightTree,[$NorthField_F_BottomRightTree_BottomRightTree_Y]","{$NorthField_F_BottomRightTree_BottomRightTree_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+	"name":"Fountain",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1225,
+		"y":1250,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Mulldozers",
+		"item_count":1,
+		"access_rules":["$Town_N_Fountain_Mulldozers,[$Town_N_Fountain_Mulldozers_Y]","{$Town_N_Fountain_Mulldozers_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Small Chest",
+		"item_count":1,
+		"access_rules":["$Town_N_Fountain_SmallChest,[$Town_N_Fountain_SmallChest_Y]","{$Town_N_Fountain_SmallChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+        "capture_item": true,
+		"access_rules":["$Town_N_Fountain_HeartPiece,[$Town_N_Fountain_HeartPiece_Y]","{$Town_N_Fountain_HeartPiece_B}"],
+        "chest_unopened_img":"images/items-map/Heart Piece.png",
+        "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  }
+]

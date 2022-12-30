@@ -1,6 +1,7 @@
+ScriptHost:LoadScript("scripts/var.lua")
 
-ScriptHost:LoadScript("scripts/item_spec/init.lua")
-ScriptHost:LoadScript("scripts/settings/init.lua")
-ScriptHost:LoadScript("scripts/logic/init.lua")
-ScriptHost:LoadScript("scripts/main/init.lua")
-ScriptHost:LoadScript("scripts/autotracking/init.lua")
+ScriptHost:LoadScript(ScriptItemSpec.."init.lua")
+ScriptHost:LoadScript(ScriptSettings.."init.lua")
+ScriptHost:LoadScript(ScriptLogic.."init.lua")
+ScriptHost:LoadScript(ScriptMain.."init.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."init.lua")
