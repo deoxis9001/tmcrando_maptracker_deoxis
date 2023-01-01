@@ -1,0 +1,29 @@
+[
+  {
+	"name":"Northwest Grave Area",
+	"map_locations": [
+	  {
+		"map":"map",
+		"x":725,
+		"y":200,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count": 1,
+		"access_rules":["$Valley_F_NorthweatGraveFusion_Heartpiece,[$Valley_F_NorthweatGraveFusion_Heartpiece_Y]","{$Valley_F_NorthweatGraveFusion_Heartpiece_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Valley_F_NorthweatGraveFusion_Chest,[$Valley_F_NorthweatGraveFusion_Chest_Y]","{$Valley_F_NorthweatGraveFusion_Chest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

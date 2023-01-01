@@ -1,0 +1,23 @@
+[
+  {
+	"name":"Wind Ruins Beanstalk",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":210,
+		"y":1795,
+		"restrict_visibility_rules":["$Fusions"]
+
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Big Chest",
+		"item_count":1,
+		"access_rules":["$Ruins_F_Beanstalk_BigChest,[$Ruins_F_Beanstalk_BigChest_Y]","{$Ruins_F_Beanstalk_BigChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

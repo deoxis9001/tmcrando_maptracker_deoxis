@@ -1,0 +1,87 @@
+[
+	{
+	"name":"Gibdos",
+	"map_locations":[
+	  {
+		"map":"rc",
+		"x":295,
+		"y":805
+	  }
+	],
+	"sections":[
+	  {
+		"name":"First Gibdos",
+		"item_count":1,
+		"access_rules":["$Dungeon_N_Crypt_Gibdos,[$Dungeon_N_Crypt_Gibdos_Y]","{$Dungeon_N_Crypt_Gibdos_B}"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png",
+	  },
+	  {
+		"name":"Other Gibdos",
+		"item_count":1,
+		"access_rules":["$Dungeon_N_Crypt_OtherGibdos,[$Dungeon_N_Crypt_OtherGibdos_Y]","{$Dungeon_N_Crypt_OtherGibdos_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }
+	  
+	  
+	]
+  },
+  {
+	"name":"Left Path",
+	"map_locations":[
+	  {
+		"map":"rc",
+		"x":143,
+		"y":85
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Left Path",
+		"item_count":1,
+		"access_rules":["$Dungeon_N_Crypt_LeftPath,[$Dungeon_N_Crypt_LeftPath_Y]","{$Dungeon_N_Crypt_LeftPath_B}"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png",
+	  }
+	]
+  },
+  {
+	"name":"Right Path",
+	"map_locations":[
+	  {
+		"map":"rc",
+		"x":447,
+		"y":85
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Left Path",
+		"item_count":1,
+		"access_rules":["$Dungeon_N_Crypt_RightPath,[$Dungeon_N_Crypt_RightPath_Y]","{$Dungeon_N_Crypt_RightPath_B}"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png",
+	  }
+	]
+  },
+  {
+	"name":"King Gustaf",
+	"map_locations":[
+	  {
+		"map":"rc",
+		"x":895,
+		"y":75
+	  }
+	],
+	"sections":[
+	  {
+		"name":"King Gustaf",
+		"item_count":1,
+		"access_rules":["$Dungeon_N_Crypt_KingGustaf,[$Dungeon_N_Crypt_KingGustaf_Y]","{$Dungeon_N_Crypt_KingGustaf_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }
+	]
+  },
+]

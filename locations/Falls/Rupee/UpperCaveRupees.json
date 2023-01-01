@@ -1,0 +1,36 @@
+[
+  {
+	"name":"Veil Falls Upper Cave Rupees",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1845,
+		"y":180,
+		"restrict_visibility_rules":["obscure_off,rupees_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Bomb Wall Chest",
+		"item_count":1,
+		"access_rules":["$Falls_R_UpperCaveRupees_BombWallChest,[$Falls_R_UpperCaveRupees_BombWallChest_Y]","{$Falls_R_UpperCaveRupees_BombWallChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Freestanding Chest",
+		"item_count":1,
+		"access_rules":["$Falls_R_UpperCaveRupees_FreestandingChest,[$Falls_R_UpperCaveRupees_FreestandingChest_Y]","{$Falls_R_UpperCaveRupees_FreestandingChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Downstairs Rupees",
+		"item_count":9,
+		"access_rules":["$Falls_R_UpperCaveRupees_DownstairsRupees,[$Falls_R_UpperCaveRupees_DownstairsRupees_Y]","{$Falls_R_UpperCaveRupees_DownstairsRupees_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

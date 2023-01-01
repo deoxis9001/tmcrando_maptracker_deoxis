@@ -1,0 +1,29 @@
+[
+  {
+	"name":"Fusion Digging Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1815,
+		"y":550,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Falls_F_FusionDiggingCave_HeartPiece,[$Falls_F_FusionDiggingCave_HeartPiece_Y]","{$Falls_F_FusionDiggingCave_HeartPiece_B}"],
+		"chest_unopened_img": "images/items-map/Heart Piece.png",
+		"chest_opened_img": "images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Falls_F_FusionDiggingCave_Chest,[$Falls_F_FusionDiggingCave_Chest_Y]","{$Falls_F_FusionDiggingCave_Chest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

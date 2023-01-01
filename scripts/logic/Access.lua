@@ -95,3 +95,24 @@ function AccessRuins()
 		return 0
 	end 
 end
+function AccessValley() 
+	if CanSplit3()==1 and (OverworldBlocks()==1 or has("cape") or has("flippers"))	then
+		return 1
+	else
+		return 0
+	end 
+end
+function AccessFalls()
+	if ( ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and has("grip") ) or WindCrest()==1 or ( has("open_world") and has("grip") )) then
+		return 1
+	else
+		return 0
+	end 
+end
+function AccessClouds()
+	if WindCrest()==1 or ( AccessFalls()==1 and has("grip") and has("open_world") ) then
+		return 1
+	else
+		return 0
+	end 
+end
