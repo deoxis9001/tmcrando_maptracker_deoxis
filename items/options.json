@@ -166,7 +166,7 @@
   {
     "name":"Golden Enemy",
     "type":"progressive",
-    "loop":false,
+    "loop":true,
     "allow_disabled":false,
     "stages":[
       {

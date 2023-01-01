@@ -16,41 +16,149 @@
       "type": "group",
       "header": "Settings",
       "content": {
-        "type": "itemgrid",
-        "h_alignment": "center",
-        "item_margin": "0,0",
-		"item_width":160,
-        "rows": [
-			  ["","",""],
-			  ["obscure_off","rupees_off",""],
-			  ["dhc_closed","fusions_open","keysanity_standard"],
-			  ["element4Needed","sword5Needed","dungeons"],
-			  ["golden_enemy_off","progressive","weapons_off"],
-			  ["","",""],
-			  ["","",""],
-			  ["figurine_option","figurine10",""],
-			  ["figurine50","figurinemax",""]
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					  ["obscure_off","rupees_off","","figurine_option"],
+					  ["dhc_closed","fusions_open","","figurine10"],
+					  ["element4Needed","sword5Needed","dungeons","figurine50"],
+					  ["golden_enemy_off","progressive","weapons_off","figurinemax"],
+					  ["","","",""],
+					  ["","","",""]
+				  ]
+			  }
 		  ]
       }
     },
-    "options_other": {
+    "options_other2": {
       "type": "group",
       "header": "Settings",
       "content": {
         "type": "itemgrid",
         "h_alignment": "center",
         "item_margin": "0,0",
-		"item_width":160,
         "rows": [
-			  ["guardskip_off","likelike_off","blowdust_off"],
-			  ["crenelmushroom_off","lightarrowbreak_off","crenelbeam_off"],
-			  ["downstrikebeetle_off","capeextension_off","darkrooms_off"],
-			  ["lakeminish_off","cabinswim_off","cloudskill_off"],
-			  ["fowpot_off","powjump_off","powpotpuzzleool_off"],
-			  ["dhccanonhit_off","dhcbladepuzzleshuffle_off","dhcswitchhit_off"],
-			  ["","",""]
+			  ["darkrooms_off"]
 		  ]
       }
+    },
+	"options_other": {
+        "type": "array",
+        "margin": "0",
+        "content": [
+			{
+				"type": "group",
+				"header": "Settings Trick",
+				"max_witdh":"320",
+				"content": [
+					{
+						"type": "scroll",
+						"max_height":"448",
+						"h_alignment": "center",
+							"content": [
+								{
+									"type": "item",
+									"margin": "0, 0, 0, 0",
+									"item": "guardskip_off"
+								},
+								{
+									"type": "item",
+									"margin": "320, 0, 0, 0",
+									"item": "likelike_off"
+								},
+								{
+									"type": "item",
+									"margin": "640, 0, 0, 0",
+									"item": "blowdust_off"
+								},
+								{
+									"type": "item",
+									"margin": "0, 64, 0, 0",
+									"item": "crenelmushroom_off"
+								},
+								{
+									"type": "item",
+									"margin": "320, 64, 0, 0",
+									"item": "lightarrowbreak_off"
+								},
+								{
+									"type": "item",
+									"margin": "640, 64, 0, 0",
+									"item": "crenelbeam_off"
+								},
+								{
+									"type": "item",
+									"margin": "0, 128, 0, 0",
+									"item": "downstrikebeetle_off"
+								},
+								{
+									"type": "item",
+									"margin": "320, 128, 0, 0",
+									"item": "capeextension_off"
+								},
+								{
+									"type": "item",
+									"margin": "640, 128, 0, 0",
+									"item": "darkrooms_off"
+								},
+								{
+									"type": "item",
+									"margin": "0, 192, 0, 0",
+									"item": "lakeminish_off"
+								},
+								{
+									"type": "item",
+									"margin": "320, 192, 0, 0",
+									"item": "cabinswim_off"
+								},
+								{
+									"type": "item",
+									"margin": "640, 192, 0, 0",
+									"item": "cloudskill_off"
+								},
+								{
+									"type": "item",
+									"margin": "0, 256, 0, 0",
+									"item": "fowpot_off"
+								},
+								{
+									"type": "item",
+									"margin": "320, 256, 0, 0",
+									"item": "powjump_off"
+								},
+								{
+									"type": "item",
+									"margin": "640, 256, 0, 0",
+									"item": "powpotpuzzleool_off"
+								},
+								{
+									"type": "item",
+									"margin": "0, 320, 0, 0",
+									"item": "dhccanonhit_off"
+								},
+								{
+									"type": "item",
+									"margin": "320, 320, 0, 0",
+									"item": "dhcbladepuzzleshuffle_off"
+								},
+								{
+									"type": "item",
+									"margin": "640, 320, 0, 0",
+									"item": "dhcswitchhit_off"
+								},
+							]
+					}
+				]
+			}
+		]
     },
 	"options_popup2": {
         "type": "array",
@@ -272,13 +380,21 @@
                             }
                           },
                           {
-                            "title":"Settings skip",
+                            "title":"Settings Trick",
                             "icon":"images/icon-maps/Elements.png",
                             "content":{
                               "type":"layout",
                               "key": "options_other"
                             }
                           },
+//                          {
+//                            "title":"Settings Fusions",
+//                            "icon":"images/icon-maps/Elements.png",
+//                            "content":{
+//                              "type":"layout",
+//                              "key": "option_fusion"
+//                            }
+//                          },
                         ]
                       }
                     ]
