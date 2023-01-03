@@ -12,7 +12,7 @@
 	  {
 		"name":"Lon Lon Minish Crack",
 		"item_count":1,
-		"access_rules":["$LonLon_N_LonLonMinishCrack_LonLonMinishCrack,[$LonLon_N_LonLonMinishCrack_LonLonMinishCrack_Y]","{$LonLon_N_LonLonMinishCrack_LonLonMinishCrack_B}"],
+		"access_rules":["$LonLon_N_LonLonMinishCrack_LonLonMinishCrack"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

@@ -13,7 +13,7 @@
 	  {
 		"name":"Digging Spot",
 		"item_count":1,
-		"access_rules":["$NorthField_O_DiggingSpot_DiggingSpot,[$NorthField_O_DiggingSpot_DiggingSpot_Y]","{$NorthField_O_DiggingSpot_DiggingSpot_B}"],
+		"access_rules":["$NorthField_O_DiggingSpot_DiggingSpot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

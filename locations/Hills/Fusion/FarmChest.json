@@ -13,7 +13,7 @@
 	  {
 		"name":"Farm Chest",
 		"item_count":1,
-		"access_rules":["$Hills_F_FarmChest_FarmChest,[$Hills_F_FarmChest_FarmChest_Y]","{$Hills_F_FarmChest_FarmChest_B}"],
+		"access_rules":["$Hills_F_FarmChest_FarmChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

@@ -13,7 +13,7 @@
 	  {
 		"name":"Minish Hole",
 		"item_count":1,
-		"access_rules":["$Castle_F_GardensLeftFountain_MinishHole,[$Castle_F_GardensLeftFountain_MinishHole]","{$Castle_F_GardensLeftFountain_MinishHole}"],
+		"access_rules":["$Castle_F_GardensLeftFountain_MinishHole"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }

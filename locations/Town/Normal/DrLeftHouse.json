@@ -12,7 +12,7 @@
 	  {
 		"name":"Dr. Left's House",
 		"item_count":1,	
-		"access_rules":["$Town_N_DrLeftHouse_DrLeftHouse,[$Town_N_DrLeftHouse_DrLeftHouse_Y]","{$Town_N_DrLeftHouse_DrLeftHouse_B}"],
+		"access_rules":["$Town_N_DrLeftHouse_DrLeftHouse"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

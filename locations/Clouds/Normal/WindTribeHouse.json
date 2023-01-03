@@ -18,42 +18,42 @@
 	  {
 		"name":"1F Chests",
 		"item_count":2,
-		"access_rules":["$WindTribe_N_WindTribeHouse_1FChests,[$WindTribe_N_WindTribeHouse_1FChests_Y]","{$WindTribe_N_WindTribeHouse_1FChests_B}"],
+		"access_rules":["$WindTribe_N_WindTribeHouse_1FChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"2F Chest",
 		"item_count":1,
-		"access_rules":["$WindTribe_N_WindTribeHouse_2FChest,[$WindTribe_N_WindTribeHouse_2FChest_Y]","{$WindTribe_N_WindTribeHouse_2FChest_B}"],
+		"access_rules":["$WindTribe_N_WindTribeHouse_2FChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"2F Save Gregal",
 		"item_count":1,
-		"access_rules":["$WindTribe_N_WindTribeHouse_2FSaveGregal,[$WindTribe_N_WindTribeHouse_2FSaveGregal_Y]","{$WindTribe_N_WindTribeHouse_2FSaveGregal_B}"],
+		"access_rules":["$WindTribe_N_WindTribeHouse_2FSaveGregal"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"2F Gregal's Gift",
 		"item_count":1,
-		"access_rules":["$WindTribe_N_WindTribeHouse_2FGregalGift,[$WindTribe_N_WindTribeHouse_2FGregalGift_Y]","{$WindTribe_N_WindTribeHouse_2FGregalGift_B}"],
+		"access_rules":["$WindTribe_N_WindTribeHouse_2FGregalGift"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"3F Chests",
 		"item_count":3,
-		"access_rules":["$WindTribe_N_WindTribeHouse_3FChests,[$WindTribe_N_WindTribeHouse_3FChests_Y]","{$WindTribe_N_WindTribeHouse_3FChests_B}"],
+		"access_rules":["$WindTribe_N_WindTribeHouse_3FChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"4F Chests",
 		"item_count":2,
-		"access_rules":["$WindTribe_N_WindTribeHouse_4FChests,[$WindTribe_N_WindTribeHouse_4FChests_Y]","{$WindTribe_N_WindTribeHouse_4FChests_B}"],
+		"access_rules":["$WindTribe_N_WindTribeHouse_4FChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

@@ -17,21 +17,21 @@
 		{
 		  "name":"Fusion",
 		  "item_count":1,
-		  "access_rules":["$Falls_N_SourceFlowCave_Fusion,[$Falls_N_SourceFlowCave_Fusion]","{$Falls_N_SourceFlowCave_Fusion_B}"],
+		  "access_rules":["$Falls_N_SourceFlowCave_Fusion"],
 		  "chest_unopened_img": "images/items-map/Gold Kinstone (Falls).png",
 		  "chest_opened_img": "images/items-map/Gold Kinstone (Falls) Gray.png"
 		},
 		{
 		  "name":"Bombable Wall First Chest",
 		  "item_count":1,
-		  "access_rules":["$Falls_N_SourceFlowCave_FirstChest,[$Falls_N_SourceFlowCave_FirstChest_Y]","{$Falls_N_SourceFlowCave_FirstChest_B}"],
+		  "access_rules":["$Falls_N_SourceFlowCave_FirstChest"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
 		{
 		  "name":"Bombable Wall Second Chest",
 		  "item_count":1,
-		  "access_rules":["$Falls_N_SourceFlowCave_SecondChest,[$Falls_N_SourceFlowCave_SecondChest_Y]","{$Falls_N_SourceFlowCave_SecondChest_B}"],
+		  "access_rules":["$Falls_N_SourceFlowCave_SecondChest"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		}

@@ -12,7 +12,7 @@
 	  {
 		"name":"Bell",
 		"item_count":1,
-		"access_rules":["$Town_N_Bell_Bell,[$Town_N_Bell_Bell_Y]","{$Town_N_Bell_Bell_B}"],
+		"access_rules":["$Town_N_Bell_Bell"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

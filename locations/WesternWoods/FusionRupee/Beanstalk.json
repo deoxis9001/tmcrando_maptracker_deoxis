@@ -13,14 +13,14 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$WesternWoods_FR_Beanstalk_Chest,[$WesternWoods_FR_Beanstalk_Chest_Y]","{$WesternWoods_FR_Beanstalk_Chest_B}"],
+		"access_rules":["$WesternWoods_FR_Beanstalk_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Rupees",
 		"item_count":16,
-		"access_rules":["$WesternWoods_FR_Beanstalk_Rupees,[$WesternWoods_FR_Beanstalk_Rupees_Y]","{$WesternWoods_FR_Beanstalk_Rupees_B}"],
+		"access_rules":["$WesternWoods_FR_Beanstalk_Rupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

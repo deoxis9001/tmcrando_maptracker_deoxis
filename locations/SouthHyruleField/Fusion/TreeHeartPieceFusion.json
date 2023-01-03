@@ -1,7 +1,7 @@
 [
   {
 	"name":"Tree Heart Piece",
-	"access_rules":["$SouthHyruleField_F_TreeHeartPieceFusion,[$SouthHyruleField_F_TreeHeartPieceFusion_Y]","{$SouthHyruleField_F_TreeHeartPieceFusion_B}"],
+	"access_rules":["$SouthHyruleField_F_TreeHeartPieceFusion"],
 	"map_locations": [
 	  {
 		"map":"map",

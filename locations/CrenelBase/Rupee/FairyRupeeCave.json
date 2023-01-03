@@ -13,7 +13,7 @@
 	  {
 		"name":"Rupees",
 		"item_count":3,
-		"access_rules":["$CrenelBase_R_FairyRupeeCave_Rupees,[$CrenelBase_R_FairyRupeeCave_Rupees_Y]","{$CrenelBase_R_FairyRupeeCave_Rupees_B}"],
+		"access_rules":["$CrenelBase_R_FairyRupeeCave_Rupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

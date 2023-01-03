@@ -13,21 +13,24 @@
 		{
 		  "name":"Rupee 1",
 		  "item_count":1,
-		  "access_rules":["$FallsLower_R_SouthVeilFallsRupees_Rupee1,[$FallsLower_R_SouthVeilFallsRupees_Rupee1_Y]","{$FallsLower_R_SouthVeilFallsRupees_Rupee1_B}"],
+		  "capture":true,
+		  "access_rules":["$FallsLower_R_SouthVeilFallsRupees_Rupee1"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
 		{
 		  "name":"Rupee 2",
 		  "item_count":1,
-		  "access_rules":["$FallsLower_R_SouthVeilFallsRupees_Rupee2,[$FallsLower_R_SouthVeilFallsRupees_Rupee2_Y]","{$FallsLower_R_SouthVeilFallsRupees_Rupee2_B}"],
+		  "capture":true,
+		  "access_rules":["$FallsLower_R_SouthVeilFallsRupees_Rupee2"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
 		{
 		  "name":"Rupee 3",
 		  "item_count":1,
-		  "access_rules":["$FallsLower_R_SouthVeilFallsRupees_Rupee3,[$FallsLower_R_SouthVeilFallsRupees_Rupee3_Y]","{$FallsLower_R_SouthVeilFallsRupees_Rupee3_B}"],
+		  "capture":true,
+		  "access_rules":["$FallsLower_R_SouthVeilFallsRupees_Rupee3"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},

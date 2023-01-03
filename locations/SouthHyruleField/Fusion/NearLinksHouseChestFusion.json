@@ -1,7 +1,7 @@
 [
   {
 	"name":"Near Link's House Chest",
-	"access_rules":["$SouthHyruleField_F_NearLinksHouseChestFusion,[$SouthHyruleField_F_NearLinksHouseChestFusion_Y]","{$SouthHyruleField_F_NearLinksHouseChestFusion_B}"],
+	"access_rules":["$SouthHyruleField_F_NearLinksHouseChestFusion"],
 	"map_locations":[
 	  {
 		"map":"map",

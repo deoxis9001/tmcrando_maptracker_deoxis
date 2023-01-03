@@ -12,7 +12,7 @@
 	  {
 		"name":"Fusion",
 		"item_count":1,
-		"access_rules":["$Clouds_N_BottomRightFusion_Fusion,[$Clouds_N_BottomRightFusion_Fusion_Y]","{$Clouds_N_BottomRightFusion_Fusion_B}"],
+		"access_rules":["$Clouds_N_BottomRightFusion_Fusion"],
 		"chest_unopened_img": "images/items-map/Gold Kinstone (Clouds).png",
 		"chest_opened_img": "images/items-map/Gold Kinstone (Clouds) Gray.png"
 	  }

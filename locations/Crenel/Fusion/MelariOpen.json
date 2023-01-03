@@ -12,14 +12,14 @@
 	  {
 		"name":"Melari",
 		"item_count":1,
-		"access_rules":["$Crenel_F_MelariOpen_Melari,[$Crenel_F_MelariOpen_Melari_Y]","{$Crenel_F_MelariOpen_Melari_B}"],
+		"access_rules":["$Crenel_F_MelariOpen_Melari"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Crenel_F_MelariOpen_Chest,[$Crenel_F_MelariOpen_Chest_Y]","{$Crenel_F_MelariOpen_Chest_B}"],
+		"access_rules":["$Crenel_F_MelariOpen_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

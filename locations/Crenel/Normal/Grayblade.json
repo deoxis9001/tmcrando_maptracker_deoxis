@@ -12,21 +12,21 @@
 		{
 		  "name":"Chests",
 		  "item_count":2,
-		  "access_rules":["$Crenel_N_Grayblade_Chests,[$Crenel_N_Grayblade_Chests_Y]","{$Crenel_N_Grayblade_Chests_B}"],
+		  "access_rules":["$Crenel_N_Grayblade_Chests"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
 		{
 		  "name":"Heart Piece",
 		  "item_count":1,
-		  "access_rules":["$Crenel_N_Grayblade_HeartPiece,[$Crenel_N_Grayblade_HeartPiece_Y]","{$Crenel_N_Grayblade_HeartPiece_B}"],
+		  "access_rules":["$Crenel_N_Grayblade_HeartPiece"],
 		  "chest_unopened_img":"images/items-map/Heart Piece.png",
 		  "chest_opened_img":"images/items-map/Heart Piece Gray.png"
 		},
 		{
 		  "name":"Grayblade",
 		  "item_count":1,
-		  "access_rules":["$Crenel_N_Grayblade_Grayblade,[$Crenel_N_Grayblade_Grayblade_Y]","{$Crenel_N_Grayblade_Grayblade_B}"],
+		  "access_rules":["$Crenel_N_Grayblade_Grayblade"],
 		  "chest_unopened_img":"images/items-map/Tiger Scroll.png",
 		  "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
 		}

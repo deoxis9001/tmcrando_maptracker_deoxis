@@ -12,7 +12,7 @@
 	  {
 		"name":"Heart Piece",
 		"item_count":1,
-		"access_rules":["$Ruins_N_MinishWallHole_HeartPiece,[$Ruins_N_MinishWallHole_HeartPiece_Y]","{$Ruins_N_MinishWallHole_HeartPiece_B}"],
+		"access_rules":["$Ruins_N_MinishWallHole_HeartPiece"],
 		"chest_unopened_img": "images/items-map/Heart Piece.png",
 		"chest_opened_img": "images/items-map/Heart Piece Gray.png"
 	}

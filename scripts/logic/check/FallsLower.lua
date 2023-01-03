@@ -17,6 +17,8 @@ end
 function FallsLower_WaterfallFusion_DojoNPC() 
 	if ( Fusions()==1 and AccessMinishWoods()==1 and has("cane") and has("flippers") and HasSword()==1 ) then
 		return 1
+	elseif ( Falls_Entrance_HP()==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -33,6 +35,8 @@ end
 function FallsLower_RockItem2() 
 	if ( AccessMinishWoods()==1 and has("cane") and (has("flippers") or has("cape") ) ) then
 		return 1
+	elseif ( Falls_Entrance_HP()==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -41,6 +45,8 @@ end
 function FallsLower_RockItem3() 
 	if ( AccessMinishWoods()==1 and has("cane") and (has("flippers") or has("cape") ) ) then
 		return 1
+	elseif ( Falls_Entrance_HP()==1 ) then
+		return 2
 	else
 		return 0
 	end 

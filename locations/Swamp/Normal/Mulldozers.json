@@ -13,7 +13,7 @@
 	  {
 		"name":"Bow Chest",
 		"item_count":1,
-		"access_rules":["$Swamp_N_Mulldozers_BowChest,[$Swamp_N_Mulldozers_BowChest_Y]","{$Swamp_N_Mulldozers_BowChest_B}"],
+		"access_rules":["$Swamp_N_Mulldozers_BowChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

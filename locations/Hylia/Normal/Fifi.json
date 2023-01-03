@@ -12,7 +12,7 @@
 	  {
 		"name":"Fifi",
 		"item_count":1,
-		"access_rules":["$Hylia_N_Fifi_Fifi,[$Hylia_N_Fifi_Fifi_Y]","{$Hylia_N_Fifi_Fifi_B}"],
+		"access_rules":["$Hylia_N_Fifi_Fifi"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

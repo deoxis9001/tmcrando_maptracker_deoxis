@@ -13,7 +13,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Crenel_F_WallChest_Chest,[$Crenel_F_WallChest_Chest_Y]","{$Crenel_F_WallChest_Chest_B}"],
+		"access_rules":["$Crenel_F_WallChest_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

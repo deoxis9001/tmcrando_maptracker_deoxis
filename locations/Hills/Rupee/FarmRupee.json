@@ -13,7 +13,7 @@
 	  {
 		"name":"Farm Rupee",
 		"item_count":1,
-		"access_rules":["$Hills_R_FarmRupee_FarmRupee,[$Hills_R_FarmRupee_FarmRupee_Y]","{$Hills_R_FarmRupee_FarmRupee_B}"],
+		"access_rules":["$Hills_R_FarmRupee_FarmRupee"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

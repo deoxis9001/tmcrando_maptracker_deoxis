@@ -13,21 +13,21 @@
 	  {
 		"name":"Bomb Wall Chest",
 		"item_count":1,
-		"access_rules":["$Falls_R_UpperCaveRupees_BombWallChest,[$Falls_R_UpperCaveRupees_BombWallChest_Y]","{$Falls_R_UpperCaveRupees_BombWallChest_B}"],
+		"access_rules":["$Falls_R_UpperCaveRupees_BombWallChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Freestanding Chest",
 		"item_count":1,
-		"access_rules":["$Falls_R_UpperCaveRupees_FreestandingChest,[$Falls_R_UpperCaveRupees_FreestandingChest_Y]","{$Falls_R_UpperCaveRupees_FreestandingChest_B}"],
+		"access_rules":["$Falls_R_UpperCaveRupees_FreestandingChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Downstairs Rupees",
 		"item_count":9,
-		"access_rules":["$Falls_R_UpperCaveRupees_DownstairsRupees,[$Falls_R_UpperCaveRupees_DownstairsRupees_Y]","{$Falls_R_UpperCaveRupees_DownstairsRupees_B}"],
+		"access_rules":["$Falls_R_UpperCaveRupees_DownstairsRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

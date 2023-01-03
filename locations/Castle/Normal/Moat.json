@@ -11,17 +11,17 @@
 	"sections":[
 	  {
 		"name":"Moat Left",
-		"access_rules":["$Castle_N_Moat_MoatLeft,[$Castle_N_Moat_MoatLeft_Y]","{$Castle_N_Moat_MoatLeft_B}"],
+		"access_rules":["$Castle_N_Moat_MoatLeft"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
-		"item_count":2
+		"item_count":1
 	  },
 	  {
 		"name":"Moat Right",
-		"access_rules":["$Castle_N_Moat_MoatRight,[$Castle_N_Moat_MoatRight_Y]","{$Castle_N_Moat_MoatRight_B}"],
+		"access_rules":["$Castle_N_Moat_MoatRight"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
-		"item_count":2
+		"item_count":1
 	  }
 	]
   }

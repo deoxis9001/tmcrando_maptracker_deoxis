@@ -13,7 +13,7 @@
 	  {
 		"name":"Garden Chests",
 		"item_count":1,
-		"access_rules":["$Town_N_SchoolGardens_GardenChests,[$Town_N_SchoolGardens_GardenChests_Y]","{$Town_N_SchoolGardens_GardenChests_B}"],
+		"access_rules":["$Town_N_SchoolGardens_GardenChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
@@ -21,7 +21,7 @@
 		"name":"Heart Piece",
 		"item_count":1,
         "capture_item":true,
-		"access_rules":["$Town_N_SchoolGardens_HeartPiece,[$Town_N_SchoolGardens_HeartPiece_Y]","{$Town_N_SchoolGardens_HeartPiece_B}"],
+		"access_rules":["$Town_N_SchoolGardens_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

@@ -12,28 +12,28 @@
 	  {
 		"name":"Left Chest",
 		"item_count":1,
-		"access_rules":["$MinishWoods_N_MinishFlippersCave_LeftChest,[$MinishWoods_N_MinishFlippersCave_LeftChest_Y]","{$MinishWoods_N_MinishFlippersCave_LeftChest_B}"],
+		"access_rules":["$MinishWoods_N_MinishFlippersCave_LeftChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Left Heart Piece",
 		"item_count":1,
-		"access_rules":["$MinishWoods_N_MinishFlippersCave_LeftHeartPiece,[$MinishWoods_N_MinishFlippersCave_LeftHeartPiece_Y]","{$MinishWoods_N_MinishFlippersCave_LeftHeartPiece_B}"],
+		"access_rules":["$MinishWoods_N_MinishFlippersCave_LeftHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  },
 	  {
 		"name":"Middle Chest",
 		"item_count":1,
-		"access_rules":["$MinishWoods_N_MinishFlippersCave_MiddleChest,[$MinishWoods_N_MinishFlippersCave_MiddleChest_Y]","{$MinishWoods_N_MinishFlippersCave_MiddleChest_B}"],
+		"access_rules":["$MinishWoods_N_MinishFlippersCave_MiddleChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Right Chest",
 		"item_count":1,
-		"access_rules":["$MinishWoods_N_MinishFlippersCave_RightChest,[$MinishWoods_N_MinishFlippersCave_RightChest_Y]","{$MinishWoods_N_MinishFlippersCave_RightChest_B}"],
+		"access_rules":["$MinishWoods_N_MinishFlippersCave_RightChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },

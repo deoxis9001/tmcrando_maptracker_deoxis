@@ -12,7 +12,7 @@
 	  {
 		"name":"Dampe",
 		"item_count": 1,
-		"access_rules":["$Valley_N_Dampe_Dampe,[$Valley_N_Dampe_Dampe_Y]","{$Valley_N_Dampe_Dampe_B}"],
+		"access_rules":["$Valley_N_Dampe_Dampe"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

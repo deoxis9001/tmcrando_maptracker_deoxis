@@ -13,21 +13,21 @@
 		{
 		  "name":"Top",
 		  "item_count":1,
-		  "access_rules":["$Swamp_O_DivingSpots_Top,[$Swamp_O_DivingSpots_Top_Y]","{$Swamp_O_DivingSpots_Top_B}"],
+		  "access_rules":["$Swamp_O_DivingSpots_Top"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
 		{
 		  "name":"Middle",
 		  "item_count":1,
-		  "access_rules":["$Swamp_O_DivingSpots_Middle,[$Swamp_O_DivingSpots_Middle_Y]","{$Swamp_O_DivingSpots_Middle_B}"],
+		  "access_rules":["$Swamp_O_DivingSpots_Middle"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
 		{
 		  "name":"Bottom",
 		  "item_count":1,
-		  "access_rules":["$Swamp_O_DivingSpots_Bottom,[$Swamp_O_DivingSpots_Bottom_Y]","{$Swamp_O_DivingSpots_Bottom_B}"],
+		  "access_rules":["$Swamp_O_DivingSpots_Bottom"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		}

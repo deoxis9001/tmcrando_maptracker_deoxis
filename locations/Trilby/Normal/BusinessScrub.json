@@ -12,7 +12,7 @@
 	  {
 		"name":"Business Scrub",
 		"item_count":1,
-		"access_rules":["$Trilby_N_BusinessScrub_BusinessScrub,[$Trilby_N_BusinessScrub_BusinessScrub_Y]","{$Trilby_N_BusinessScrub_BusinessScrub_Y}"],
+		"access_rules":["$Trilby_N_BusinessScrub_BusinessScrub"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

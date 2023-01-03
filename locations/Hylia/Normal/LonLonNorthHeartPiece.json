@@ -13,7 +13,7 @@
 		"name":"Heart Piece",
 		"item_count":1,
 		"capture_item":true,
-		"access_rules":["$Hylia_N_LonLonNorthHeartPiece_HeartPiece,[$Hylia_N_LonLonNorthHeartPiece_HeartPiece_Y]","{$Hylia_N_LonLonNorthHeartPiece_HeartPiece_B}"],
+		"access_rules":["$Hylia_N_LonLonNorthHeartPiece_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

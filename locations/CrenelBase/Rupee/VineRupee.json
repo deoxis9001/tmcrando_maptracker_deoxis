@@ -13,7 +13,7 @@
 	  {
 		"name":"Rupee",
 		"item_count":1,
-		"access_rules":["$CrenelBase_R_VineRupee_rupee,[$CrenelBase_R_VineRupee_rupee_Y]","{$CrenelBase_R_VineRupee_rupee_B}"],
+		"access_rules":["$CrenelBase_R_VineRupee_rupee"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

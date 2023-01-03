@@ -13,14 +13,14 @@
 	  {
 		"name":"Minish Path Chest",
 		"item_count":1,
-		"access_rules":["$LonLon_F_BonktheTreeOpen_MinishPathChest,[$LonLon_F_BonktheTreeOpen_MinishPathChest_Y]","{$LonLon_F_BonktheTreeOpen_MinishPathChest_B}"],
+		"access_rules":["$LonLon_F_BonktheTreeOpen_MinishPathChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Minish Path Heart Piece",
 		"item_count":1,
-		"access_rules":["$LonLon_F_BonktheTreeOpen_MinishHeartPiece,[$LonLon_F_BonktheTreeOpen_MinishHeartPiece_Y]","{$LonLon_F_BonktheTreeOpen_MinishHeartPiece_B}"],
+		"access_rules":["$LonLon_F_BonktheTreeOpen_MinishHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

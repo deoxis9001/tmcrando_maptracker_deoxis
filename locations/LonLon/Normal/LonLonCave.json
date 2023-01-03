@@ -12,14 +12,14 @@
 	  {
 		"name":"Lon Lon Cave",
 		"item_count":1,
-		"access_rules":["$LonLon_N_LonLonCave_LonLonCave,[$LonLon_N_LonLonCave_LonLonCave_Y]","{$LonLon_N_LonLonCave_LonLonCave_B}"],
+		"access_rules":["$LonLon_N_LonLonCave_LonLonCave"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Hidden Bomb Wall",
 		"item_count":1,
-		"access_rules":["$LonLon_N_LonLonCave_HiddenBombWall,[$LonLon_N_LonLonCave_HiddenBombWall_Y]","{$LonLon_N_LonLonCave_HiddenBombWall_B}"],
+		"access_rules":["$LonLon_N_LonLonCave_HiddenBombWall"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

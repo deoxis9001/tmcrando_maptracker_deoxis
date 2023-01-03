@@ -13,14 +13,14 @@
 	  {
 		"name":"Bomb Wall Chest",
 		"item_count":1,
-		"access_rules":["$Falls_N_UpperCave_BombWallChest,[$Falls_N_UpperCave_BombWallChest_Y]","{$Falls_N_UpperCave_BombWallChest_B}"],
+		"access_rules":["$Falls_N_UpperCave_BombWallChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Freestanding Chest",
 		"item_count":1,
-		"access_rules":["$Falls_N_UpperCave_FreestandingChest,[$Falls_N_UpperCave_FreestandingChest_Y]","{$Falls_N_UpperCave_FreestandingChest_B}"],
+		"access_rules":["$Falls_N_UpperCave_FreestandingChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

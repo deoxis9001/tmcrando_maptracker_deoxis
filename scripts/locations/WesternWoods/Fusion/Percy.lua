@@ -5,20 +5,7 @@ function WesternWoods_F_Percy_MoblinReward()
     return 0
   end
 end
-function WesternWoods_F_Percy_MoblinReward_Y()
-  if WesternWoods_PercyFusion_Moblin()==1 then
-    return 1
-  else
-    return 0
-  end
-end
-function WesternWoods_F_Percy_MoblinReward_B()
-  if WesternWoods_PercyFusion_Moblin()==1 then
-    return 1
-  else
-    return 0
-  end
-end
+
 
 function WesternWoods_F_Percy_PercyReward()
   if WesternWoods_PercyFusion_Percy()==1 then
@@ -27,18 +14,4 @@ function WesternWoods_F_Percy_PercyReward()
     return 0
   end
 end
-function WesternWoods_F_Percy_PercyReward_Y()
-  if WesternWoods_PercyFusion_Percy()==1 then
-    return 1
-  else
-    return 0
-  end
-end
-function WesternWoods_F_Percy_PercyReward_B()
-  if WesternWoods_PercyFusion_Percy()==1 then
-    return 1
-  else
-    return 0
-  end
-end
-
+^

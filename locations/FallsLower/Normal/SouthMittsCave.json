@@ -12,14 +12,14 @@
 	  {
 		"name":"Left Chest",
 		"item_count":1,
-		"access_rules":["$FallsLower_N_SouthMittsCave_LeftChest,[$FallsLower_N_SouthMittsCave_LeftChest_Y]","{$FallsLower_N_SouthMittsCave_LeftChest_B}"],
+		"access_rules":["$FallsLower_N_SouthMittsCave_LeftChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Right Chest",
 		"item_count":1,
-		"access_rules":["$FallsLower_N_SouthMittsCave_RightChest,[$FallsLower_N_SouthMittsCave_RightChest_Y]","{$FallsLower_N_SouthMittsCave_RightChest_B}"],
+		"access_rules":["$FallsLower_N_SouthMittsCave_RightChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },

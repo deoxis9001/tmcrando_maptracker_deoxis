@@ -12,7 +12,7 @@
 	  {
 		"name":"Yellow Library Minish",
 		"item_count":1,
-		"access_rules":["$Town_N_Library_YellowLibraryMinish,[$Town_N_Library_YellowLibraryMinish_Y]","{$Town_N_Library_YellowLibraryMinish_B}"],
+		"access_rules":["$Town_N_Library_YellowLibraryMinish"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

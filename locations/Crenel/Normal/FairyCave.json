@@ -12,7 +12,7 @@
 	  {
 		"name":"Heart Piece",
 		"item_count":1,
-		"access_rules":["$Crenel_N_FairyCave_HeartPiece,[$Crenel_N_FairyCave_HeartPiece_Y]","{$Crenel_N_FairyCave_HeartPiece_B}"],
+		"access_rules":["$Crenel_N_FairyCave_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

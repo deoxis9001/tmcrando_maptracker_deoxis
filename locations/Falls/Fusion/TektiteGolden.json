@@ -13,7 +13,7 @@
 	  {
 		"name":"Kill Tektite",
 		"item_count":1,
-		"access_rules":["$Falls_F_TektiteGolden_KillTektite,[$Falls_F_TektiteGolden_KillTektite_Y]","{$Falls_F_TektiteGolden_KillTektite_B}"],
+		"access_rules":["$Falls_F_TektiteGolden_KillTektite"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

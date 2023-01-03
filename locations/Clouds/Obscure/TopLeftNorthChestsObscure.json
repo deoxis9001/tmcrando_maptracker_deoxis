@@ -13,14 +13,14 @@
 		{
 		  "name":"Chests",
 		  "item_count":2,
-		  "access_rules":["$Clouds_O_TopLeftNorthChestsObscure_Chests,[$Clouds_O_TopLeftNorthChestsObscure_Chests_Y]","{$Clouds_O_TopLeftNorthChestsObscure_Chests_B}"],
+		  "access_rules":["$Clouds_O_TopLeftNorthChestsObscure_Chests"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
 		{
 		  "name":"Digging Spot Left",
 		  "item_count":1,
-		  "access_rules":["$Clouds_O_TopLeftNorthChestsObscure_DiggingSpot,[$Clouds_O_TopLeftNorthChestsObscure_DiggingSpot_Y]","{$Clouds_O_TopLeftNorthChestsObscure_DiggingSpot_B}"],
+		  "access_rules":["$Clouds_O_TopLeftNorthChestsObscure_DiggingSpot"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		}

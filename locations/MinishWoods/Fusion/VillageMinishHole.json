@@ -12,7 +12,7 @@
 	  {
 		"name":"Minish Hole",
 		"item_count":1,
-		"access_rules":["$MinishWoods_F_VillageMinishHole_MinishHole,[$MinishWoods_F_VillageMinishHole_MinishHole_Y]","{$MinishWoods_F_VillageMinishHole_MinishHole_B}"],
+		"access_rules":["$MinishWoods_F_VillageMinishHole_MinishHole"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

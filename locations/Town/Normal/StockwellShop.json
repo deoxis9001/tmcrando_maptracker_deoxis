@@ -11,7 +11,7 @@
 	"sections":[
 	  {
 		"name":"Wallet Spot (80 Rupees)",
-		"access_rules":["$Town_N_StockwellShop_WalletSpot,[$Town_N_StockwellShop_WalletSpot_Y]","{$Town_N_StockwellShop_WalletSpot_B}"],
+		"access_rules":["$Town_N_StockwellShop_WalletSpot"],
 		"item_count":1,
         "capture_item":true,
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -19,7 +19,7 @@
 	  },
 	  {
 		"name":"Boomerang Spot (300 Rupees)",
-		"access_rules":["$Town_N_StockwellShop_BoomerangSpot,[$Town_N_StockwellShop_BoomerangSpot_Y]","{$Town_N_StockwellShop_BoomerangSpot_B}"],
+		"access_rules":["$Town_N_StockwellShop_BoomerangSpot"],
 		"item_count":1,
         "capture_item":true,
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -29,14 +29,14 @@
 		"name":"Quiver Spot (600 Rupees)",
 		"item_count":1,
         "capture_item":true,
-		"access_rules":["$Town_N_StockwellShop_QuiverSpot,[$Town_N_StockwellShop_QuiverSpot_Y]","{$Town_N_StockwellShop_QuiverSpot_B}"],
+		"access_rules":["$Town_N_StockwellShop_QuiverSpot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Attic Chest",
 		"item_count":1,
-		"access_rules":["$Town_N_StockwellShop_AtticChest,[$Town_N_StockwellShop_AtticChest_Y]","{$Town_N_StockwellShop_AtticChest_B}"],
+		"access_rules":["$Town_N_StockwellShop_AtticChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
@@ -44,7 +44,7 @@
 		"name":"Dog Food Bottle Spot",
 		"item_count":1,
         "capture_item":true,
-		"access_rules":["$Town_N_StockwellShop_DogFoodBottleSpot,[$Town_N_StockwellShop_DogFoodBottleSpot_Y]","{$Town_N_StockwellShop_DogFoodBottleSpot_B}"],
+		"access_rules":["$Town_N_StockwellShop_DogFoodBottleSpot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },

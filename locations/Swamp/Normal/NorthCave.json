@@ -12,7 +12,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Swamp_N_NorthCave_Chest,[$Swamp_N_NorthCave_Chest_Y]","{$Swamp_N_NorthCave_Chest_B}"],
+		"access_rules":["$Swamp_N_NorthCave_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

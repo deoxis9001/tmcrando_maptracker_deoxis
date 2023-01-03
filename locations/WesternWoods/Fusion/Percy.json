@@ -13,14 +13,14 @@
 		{
 		  "name":"Moblin Reward",
 		  "item_count":1,
-		  "access_rules":["$WesternWoods_F_Percy_MoblinReward,[$WesternWoods_F_Percy_MoblinReward_Y]","{$WesternWoods_F_Percy_MoblinReward_B}"],
+		  "access_rules":["$WesternWoods_F_Percy_MoblinReward"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
 		{
 		  "name":"Percy Reward",
 		  "item_count":1,
-		  "access_rules":["$WesternWoods_F_Percy_PercyReward,[$WesternWoods_F_Percy_PercyReward_Y]","{$WesternWoods_F_Percy_PercyReward_B}"],
+		  "access_rules":["$WesternWoods_F_Percy_PercyReward"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		}

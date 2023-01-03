@@ -45,6 +45,8 @@ end
 function CoF_B1_HP() 
 	if ( CoFAccess()==1 and ( ( CoFBlueWarp()==1 and has("cane") ) or ( BombWalls()==1 and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 ) ) ) then
 		return 1
+	elseif ( CoFAccess()==1 and BombWalls()==1 and CoFSpikeBeetle()==1 ) then
+		return 2
 	else
 		return 0
 	end 

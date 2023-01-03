@@ -12,7 +12,7 @@
 	  {
 		"name":"North Minish Hole",
 		"item_count":1,
-		"access_rules":["$Hylia_N_NorthMinishHole_NorthMinishHole,[$Hylia_N_NorthMinishHole_NorthMinishHole_Y]","{$Hylia_N_NorthMinishHole_NorthMinishHole_B}"],
+		"access_rules":["$Hylia_N_NorthMinishHole_NorthMinishHole"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

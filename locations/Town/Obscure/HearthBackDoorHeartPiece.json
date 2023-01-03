@@ -13,14 +13,14 @@
 	  {
 		"name":"Hearth Back Door Heart Piece",
 		"item_count":1,
-		"access_rules":["$Town_O_HearthBackDoorHeartPiece_HearthBackDoorHeartPiece,[$Town_O_HearthBackDoorHeartPiece_HearthBackDoorHeartPiece_Y]","{$Town_O_HearthBackDoorHeartPiece_HearthBackDoorHeartPiece_B}"],
+		"access_rules":["$Town_O_HearthBackDoorHeartPiece_HearthBackDoorHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 		},
 		{
 			"name":"Hearth Right Pot",
 			"item_count":1,
-			"access_rules":["$Town_O_HearthBackDoorHeartPiece_HearthRightPot,[$Town_O_HearthBackDoorHeartPiece_HearthRightPot_Y]","{$Town_O_HearthBackDoorHeartPiece_HearthRightPot_B}"],
+			"access_rules":["$Town_O_HearthBackDoorHeartPiece_HearthRightPot"],
 			"chest_unopened_img":"images/items-map/chest_closed.png",
 			"chest_opened_img":"images/items-map/chest_open.png"
 		}

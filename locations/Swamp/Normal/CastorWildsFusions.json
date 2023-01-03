@@ -12,7 +12,7 @@
 		{
 		  "name":"Fusions",
 		  "item_count":3,
-		  "access_rules":["$Swamp_N_CastorWildsFusions_Fusions,[$Swamp_N_CastorWildsFusions_Fusions_Y]","{$Swamp_N_CastorWildsFusions_Fusions_B}"],
+		  "access_rules":["$Swamp_N_CastorWildsFusions_Fusions"],
 		  "chest_opened_img": "images/items-map/Gold Kinstone (Wilds) Gray.png",
 		  "chest_unopened_img": "images/items-map/Gold Kinstone (Wilds).png"
 		}

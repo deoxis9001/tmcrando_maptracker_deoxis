@@ -13,14 +13,14 @@
 	  {
 		"name":"Left Digging Spot",
 		"item_count":1,
-		"access_rules":["$Falls_FO_UpperVeillFallsRock_Digging,[$Falls_FO_UpperVeillFallsRock_Digging_Y]","{$Falls_FO_UpperVeillFallsRock_Digging_B}"],
+		"access_rules":["$Falls_FO_UpperVeillFallsRock_Digging"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Right Chest",
 		"item_count":1,
-		"access_rules":["$Falls_FO_UpperVeillFallsRock_RightChest,[$Falls_FO_UpperVeillFallsRock_RightChest_Y]","{$Falls_FO_UpperVeillFallsRock_RightChest_B}"],
+		"access_rules":["$Falls_FO_UpperVeillFallsRock_RightChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

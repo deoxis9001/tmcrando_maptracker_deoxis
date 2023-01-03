@@ -1,7 +1,7 @@
 [
   {
 	"name":"Minish Flippers Hole",
-	"access_rules":["$SouthHyruleField_N_MinishFlippersHole,[$SouthHyruleField_N_MinishFlippersHole_Y]","{$SouthHyruleField_N_MinishFlippersHole_B}"],
+	"access_rules":["$SouthHyruleField_N_MinishFlippersHole"],
 	"map_locations": [
 	  {
 		"map":"map",

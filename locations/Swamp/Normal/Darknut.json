@@ -12,7 +12,7 @@
 	  {
 		"name":"Darknut",
 		"item_count":1,
-		"access_rules":["$Swamp_N_Darknut_Darknut,[$Swamp_N_Darknut_Darknut_Y]","{$Swamp_N_Darknut_Darknut_B}"],
+		"access_rules":["$Swamp_N_Darknut_Darknut"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

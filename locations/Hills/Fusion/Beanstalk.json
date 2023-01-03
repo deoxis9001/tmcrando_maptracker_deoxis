@@ -13,21 +13,21 @@
 	  {
 		"name":"Left Chest",
 		"item_count":1,
-		"access_rules":["$Hills_F_Beanstalk_LeftChest,[$Hills_F_Beanstalk_LeftChest_Y]","{$Hills_F_Beanstalk_LeftChest_B}"],
+		"access_rules":["$Hills_F_Beanstalk_LeftChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Right Chest",
 		"item_count":1,
-		"access_rules":["$Hills_F_Beanstalk_RightChest,[$Hills_F_Beanstalk_RightChest_Y]","{$Hills_F_Beanstalk_RightChest_B}"],
+		"access_rules":["$Hills_F_Beanstalk_RightChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
         "name":"Heart Piece",
 		"item_count":1,
-		"access_rules":["$Hills_F_Beanstalk_HeartPiece,[$Hills_F_Beanstalk_HeartPiece_Y]","{$Hills_F_Beanstalk_HeartPiece_B}"],
+		"access_rules":["$Hills_F_Beanstalk_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

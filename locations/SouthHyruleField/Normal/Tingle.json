@@ -1,7 +1,7 @@
 [
   {
 	"name":"Tingle",
-	"access_rules":["$SouthHyruleField_N_Tingle,[$SouthHyruleField_N_Tingle_Y]","{$SouthHyruleField_N_Tingle_B}"],
+	"access_rules":["$SouthHyruleField_N_Tingle"],
 	"map_locations":[
 	  {
 		"map":"map",

@@ -12,14 +12,14 @@
 		{
 		  "name":"Swiftblade",
 		  "item_count":1,
-		  "access_rules":["$Swamp_N_SwiftbladetheFirst_Swiftblade,[$Swamp_N_SwiftbladetheFirst_Swiftblade_Y]","{$Swamp_N_SwiftbladetheFirst_Swiftblade_B}"],
+		  "access_rules":["$Swamp_N_SwiftbladetheFirst_Swiftblade"],
 		  "chest_unopened_img": "images/items-map/Tiger Scroll.png",
 		  "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
 		},
 		{
 		  "name":"Heart Piece",
 		  "item_count":1,
-		  "access_rules":["$Swamp_N_SwiftbladetheFirst_HeartPiece,[$Swamp_N_SwiftbladetheFirst_HeartPiece_Y]","{$Swamp_N_SwiftbladetheFirst_HeartPiece_B}"],
+		  "access_rules":["$Swamp_N_SwiftbladetheFirst_HeartPiece"],
 		  "chest_unopened_img": "images/items-map/Heart Piece.png",
 		  "chest_opened_img": "images/items-map/Heart Piece Gray.png"
 		}

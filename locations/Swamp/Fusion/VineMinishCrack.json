@@ -13,7 +13,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Swamp_F_VineMinishCrack,[$Swamp_F_VineMinishCrack_Y]","{$Swamp_F_VineMinishCrack_B}"],
+		"access_rules":["$Swamp_F_VineMinishCrack"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

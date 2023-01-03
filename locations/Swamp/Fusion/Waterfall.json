@@ -13,7 +13,7 @@
 	  {
 		"name":"Scarblade",
 		"item_count":1,
-		"access_rules":["$Swamp_F_Waterfall_Scarblade,[$Swamp_F_Waterfall_Scarblade_Y]","{$Swamp_F_Waterfall_Scarblade_B}"],
+		"access_rules":["$Swamp_F_Waterfall_Scarblade"],
 		"chest_unopened_img": "images/items-map/Tiger Scroll.png",
 		"chest_opened_img": "images/items-map/Tiger Scroll Done.png"
 	  }

@@ -13,7 +13,7 @@
 	  {
 		"name":"Kill Rope",
 		"item_count":1,
-		"access_rules":["$Swamp_F_RopeGolden_KillRope,[$Swamp_F_RopeGolden_KillRope_Y]","{$Swamp_F_RopeGolden_KillRope_B}"],
+		"access_rules":["$Swamp_F_RopeGolden_KillRope"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

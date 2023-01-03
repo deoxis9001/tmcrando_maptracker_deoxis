@@ -14,14 +14,14 @@
 		"name":"Lake Cabin",
 		"item_count":1,
         "capture_item":true,
-		"access_rules":["$Hylia_F_LakeCabinOpen_LakeCabin,[$Hylia_F_LakeCabinOpen_LakeCabin_Y]","{$Hylia_F_LakeCabinOpen_LakeCabin_B}"],
+		"access_rules":["$Hylia_F_LakeCabinOpen_LakeCabin"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Hylia_F_LakeCabinOpen_Chest,[$Hylia_F_LakeCabinOpen_Chest_Y]","{$Hylia_F_LakeCabinOpen_Chest_B}"],
+		"access_rules":["$Hylia_F_LakeCabinOpen_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

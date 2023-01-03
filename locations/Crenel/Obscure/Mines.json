@@ -13,14 +13,14 @@
 	  {
 		"name":"Melari",
 		"item_count":1,
-		"access_rules":["$Crenel_O_Mines_Melari,[$Crenel_O_Mines_Melari_Y]","{$Crenel_O_Mines_Melari_B}"],
+		"access_rules":["$Crenel_O_Mines_Melari"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Digging Spots (Melari's Mines Tab)",
 		"item_count":8,
-		"access_rules":["$Crenel_O_Mines_Digging,[$Crenel_O_Mines_Digging_Y]","{$Crenel_O_Mines_Digging_B}"],
+		"access_rules":["$Crenel_O_Mines_Digging"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

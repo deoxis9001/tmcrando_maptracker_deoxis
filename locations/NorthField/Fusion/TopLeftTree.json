@@ -13,7 +13,7 @@
 	  {
 		"name":"Top Left Tree",
 		"item_count":1,
-		"access_rules":["$NorthField_F_TopLeftTree_TopLeftTree,[$NorthField_F_TopLeftTree_TopLeftTree_Y]","{$NorthField_F_TopLeftTree_TopLeftTree_B}"],
+		"access_rules":["$NorthField_F_TopLeftTree_TopLeftTree"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

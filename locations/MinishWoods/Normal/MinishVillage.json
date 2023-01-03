@@ -13,14 +13,14 @@
 	  {
 		"name":"Barrel",
 		"item_count":1,
-		"access_rules":["$MinishWoods_N_MinishVillage_Barrel,[$MinishWoods_N_MinishVillage_Barrel_Y]","{$MinishWoods_N_MinishVillage_Barrel_B}"],
+		"access_rules":["$MinishWoods_N_MinishVillage_Barrel"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Dock Heart Piece",
 		"item_count":1,
-		"access_rules":["$MinishWoods_N_MinishVillage_DockHeartPiece,[$MinishWoods_N_MinishVillage_DockHeartPiece_Y]","{$MinishWoods_N_MinishVillage_DockHeartPiece_B}"],
+		"access_rules":["$MinishWoods_N_MinishVillage_DockHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

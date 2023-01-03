@@ -49,6 +49,8 @@ end
 function AccessTrilby() 
 	if ( has("open_world") or has("flippers") or has("cape") or ( HasSword()==1 and HasSpin()==1 ) or GuardSkip()==1 or (WindCrest()==1 and (UperBean()==1 or has("grip")))) then
 		return 1
+	elseif (  GuardSkip()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -56,6 +58,8 @@ end
 function AccessWestern() 
 	if ( WesternShortcut()==1 or ( AccessTrilby()==1 and ( CanSplit2()==1 or TrilbyShortcut()==1 ) ) or  ( WindCrest()==1 and ( has("boots") or has("cape") ) ) ) then
 		return 1
+	elseif ( AccessTrilby()==2 and ( CanSplit2()==1 or TrilbyShortcut()==1 ) ) then
+		return 2
 	else
 		return 0
 	end 

@@ -13,7 +13,7 @@
 	  {
 		"name":"Heart Piece",
 		"item_count":1,
-		"access_rules":["$Falls_F_UpperWaterfall_HeartPiece,[$Falls_F_UpperWaterfall_HeartPiece_Y]","{$Falls_F_UpperWaterfall_HeartPiece_B}"],
+		"access_rules":["$Falls_F_UpperWaterfall_HeartPiece"],
 		"chest_unopened_img": "images/items-map/Heart Piece.png",
 		"chest_opened_img": "images/items-map/Heart Piece Gray.png"
 	  }

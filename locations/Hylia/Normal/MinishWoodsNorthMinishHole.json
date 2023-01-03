@@ -12,7 +12,7 @@
 	  {
 		"name":"Minish Woods North Minish Hole",
 		"item_count":1,
-		"access_rules":["$Hylia_N_MinishWoodsNorthMinishHole_MinishWoodsNorthMinishHole,[$Hylia_N_MinishWoodsNorthMinishHole_MinishWoodsNorthMinishHole_Y]","{$Hylia_N_MinishWoodsNorthMinishHole_MinishWoodsNorthMinishHole_B}"],
+		"access_rules":["$Hylia_N_MinishWoodsNorthMinishHole_MinishWoodsNorthMinishHole"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

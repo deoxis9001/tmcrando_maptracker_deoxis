@@ -12,7 +12,7 @@
 	  {
 		"name":"Chests",
 		"item_count":2,
-		"access_rules":["$Swamp_N_MittsCave_Chests,[$Swamp_N_MittsCave_Chests_Y]","{$Swamp_N_MittsCave_Chests_B}"],
+		"access_rules":["$Swamp_N_MittsCave_Chests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

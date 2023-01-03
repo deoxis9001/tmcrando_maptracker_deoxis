@@ -12,7 +12,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Trilby_N_BombWall_Chest,[$Trilby_N_BombWall_Chest_Y]","{$Trilby_N_BombWall_Chest_B}"],
+		"access_rules":["$Trilby_N_BombWall_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

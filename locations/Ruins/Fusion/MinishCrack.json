@@ -13,7 +13,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Ruins_F_MinishCrack_Chest,[$Ruins_F_MinishCrack_Chest_Y]","{$Ruins_F_MinishCrack_Chest_B}"],
+		"access_rules":["$Ruins_F_MinishCrack_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

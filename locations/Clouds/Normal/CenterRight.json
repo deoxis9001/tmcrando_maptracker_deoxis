@@ -12,7 +12,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Clouds_N_CenterRight_Chest,[$Clouds_N_CenterRight_Chest_Y]","{$Clouds_N_CenterRight_Chest_B}"],
+		"access_rules":["$Clouds_N_CenterRight_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

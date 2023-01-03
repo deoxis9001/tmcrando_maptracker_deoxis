@@ -12,7 +12,7 @@
 	  {
 		"name":"Great Fairy",
 		"item_count":1,
-		"access_rules":["$MinishWood_N_MinishWoodsGreatFairy_GreatFairy,[$MinishWood_N_MinishWoodsGreatFairy_GreatFairy_Y]","{$MinishWood_N_MinishWoodsGreatFairy_GreatFairy_B}"],
+		"access_rules":["$MinishWood_N_MinishWoodsGreatFairy_GreatFairy"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

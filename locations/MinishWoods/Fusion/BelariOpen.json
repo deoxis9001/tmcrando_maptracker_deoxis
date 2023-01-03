@@ -13,14 +13,14 @@
 	  {
 		"name":"1st Item",
 		"item_count":1,
-		"access_rules":["$MinishWoods_F_BelariOpen_1stItem,[$MinishWoods_F_BelariOpen_1stItem_Y]","{$MinishWoods_F_BelariOpen_1stItem_B}"],
+		"access_rules":["$MinishWoods_F_BelariOpen_1stItem"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"2nd Item",
 		"item_count":1,
-		"access_rules":["$MinishWoods_F_BelariOpen_2ndItem,[$MinishWoods_F_BelariOpen_2ndItem_Y]","{$MinishWoods_F_BelariOpen_2ndItem_B}"],
+		"access_rules":["$MinishWoods_F_BelariOpen_2ndItem"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },

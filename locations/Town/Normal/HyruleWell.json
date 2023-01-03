@@ -12,14 +12,14 @@
 	  {
 		"name":"Hyrule Well Bottom Chest",
 		"item_count":1,
-		"access_rules":["$Town_N_HyruleWell_HyruleWellBottomChest,[$Town_N_HyruleWell_HyruleWellBottomChest_Y]","{$Town_N_HyruleWell_HyruleWellBottomChest_B}"],
+		"access_rules":["$Town_N_HyruleWell_HyruleWellBottomChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Hyrule Well Center Chest",
 		"item_count":1,
-		"access_rules":["$Town_N_HyruleWell_HyruleWellCenterChest,[$Town_N_HyruleWell_HyruleWellCenterChest_Y]","{$Town_N_HyruleWell_HyruleWellCenterChest_B}"],
+		"access_rules":["$Town_N_HyruleWell_HyruleWellCenterChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

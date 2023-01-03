@@ -12,7 +12,7 @@
 	  {
 		"name":"Fairy",
 		"item_count":1,
-		"access_rules":["$Crenel_N_WallFairy_Fairy,[$Crenel_N_WallFairy_Fairy_Y]","{$Crenel_N_WallFairy_Fairy_B}"],
+		"access_rules":["$Crenel_N_WallFairy_Fairy"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

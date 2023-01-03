@@ -12,7 +12,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Crenel_N_MinesCave_chest,[$Crenel_N_MinesCave_chest_Y]","{$Crenel_N_MinesCave_chest_B}"],
+		"access_rules":["$Crenel_N_MinesCave_chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

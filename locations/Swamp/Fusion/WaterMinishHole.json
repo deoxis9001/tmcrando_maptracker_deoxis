@@ -13,14 +13,14 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Swamp_F_WaterMinishHole_Chest,[$Swamp_F_WaterMinishHole_Chest_Y]","{$Swamp_F_WaterMinishHole_Chest_B}"],
+		"access_rules":["$Swamp_F_WaterMinishHole_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Heart Piece",
 		"item_count":1,
-		"access_rules":["$Swamp_F_WaterMinishHole_HeartPiece,[$Swamp_F_WaterMinishHole_HeartPiece_Y]","{$Swamp_F_WaterMinishHole_HeartPiece_B}"],
+		"access_rules":["$Swamp_F_WaterMinishHole_HeartPiece"],
 		"chest_unopened_img": "images/items-map/Heart Piece.png",
 		"chest_opened_img": "images/items-map/Heart Piece Gray.png"
 	  }

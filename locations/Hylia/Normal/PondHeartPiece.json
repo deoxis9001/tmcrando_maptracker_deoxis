@@ -12,7 +12,7 @@
 	  {
 		"name":"Diving for Love",
 		"item_count":1,
-		"access_rules":["$Hylia_N_PondHeartPiece_DivingforLove,[$Hylia_N_PondHeartPiece_DivingforLove_Y]","{$Hylia_N_PondHeartPiece_DivingforLove_B}"],
+		"access_rules":["$Hylia_N_PondHeartPiece_DivingforLove"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

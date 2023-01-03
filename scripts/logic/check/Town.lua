@@ -236,6 +236,8 @@ end
 function Town_Fountain_HP() 
 	if ( Fountain()==1 and has("cape") ) then
 		return 1
+	elseif ( Fountain()==1 ) then
+		return 2
 	else
 		return 0
 	end 

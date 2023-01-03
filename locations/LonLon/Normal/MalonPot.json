@@ -12,7 +12,7 @@
 	  {
 		"name":"Malon's Pot",
 		"item_count":1,
-		"access_rules":["$LonLon_N_MalonPot_MalonPot,[$LonLon_N_MalonPot_MalonPot_Y]","{$LonLon_N_MalonPot_MalonPot_B}"],
+		"access_rules":["$LonLon_N_MalonPot_MalonPot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

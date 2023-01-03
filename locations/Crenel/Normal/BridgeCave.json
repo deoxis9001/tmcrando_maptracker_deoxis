@@ -12,7 +12,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Crenel_N_BridgeCave_chest,[$Crenel_N_BridgeCave_chest_Y]","{$Crenel_N_BridgeCave_chest_B}"],
+		"access_rules":["$Crenel_N_BridgeCave_chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

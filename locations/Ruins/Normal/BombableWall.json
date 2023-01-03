@@ -12,7 +12,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Ruins_N_BombableWall_Chest,[$Ruins_N_BombableWall_Chest_Y]","{$Ruins_N_BombableWall_Chest_B}"],
+		"access_rules":["$Ruins_N_BombableWall_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

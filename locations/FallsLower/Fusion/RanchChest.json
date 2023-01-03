@@ -13,7 +13,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$FallsLower_F_RanchChest_Chest,[$FallsLower_F_RanchChest_Chest_Y]","{$FallsLower_F_RanchChest_Chest_B}"],
+		"access_rules":["$FallsLower_F_RanchChest_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

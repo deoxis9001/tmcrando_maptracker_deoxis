@@ -13,7 +13,7 @@
 	  {
 		"name":"Digging Spot Above Tree",
 		"item_count":1,
-		"access_rules":["$LonLon_O_LonLonRanchDiggingSpot_DiggingSpotAboveTree,[$LonLon_O_LonLonRanchDiggingSpot_DiggingSpotAboveTree_Y]","{$LonLon_O_LonLonRanchDiggingSpot_DiggingSpotAboveTree_B}"],
+		"access_rules":["$LonLon_O_LonLonRanchDiggingSpot_DiggingSpotAboveTree"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

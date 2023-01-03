@@ -1,7 +1,7 @@
 [
   {
 	"name":"Fusion Rupee Cave",
-  "access_rules":["$SouthHyruleField_FR_RupeeCaveFusion,[$SouthHyruleField_FR_RupeeCaveFusion_Y]","{$SouthHyruleField_FR_RupeeCaveFusion_B}"],
+  "access_rules":["$SouthHyruleField_FR_RupeeCaveFusion"],
 	"map_locations":[
 	  {
 		"map":"map",

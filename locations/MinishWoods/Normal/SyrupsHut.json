@@ -12,7 +12,7 @@
 	  {
 		"name":"Witch's Item (60 Rupees)",
 		"item_count":1,
-		"access_rules":["$MinishWoods_N_SyrupsHut_WitchsItem,[$MinishWoods_N_SyrupsHut_WitchsItem_Y]","{$MinishWoods_N_SyrupsHut_WitchsItem_B}"],
+		"access_rules":["$MinishWoods_N_SyrupsHut_WitchsItem"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

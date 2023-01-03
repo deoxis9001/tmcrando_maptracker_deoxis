@@ -13,7 +13,7 @@
 	  {
 		"name":"Minish Path Heart Piece",
 		"item_count":1,
-		"access_rules":["$LonLon_N_BonktheTree_MinishPathHeartPiece,[$LonLon_N_BonktheTree_MinishPathHeartPiece_Y]","{$LonLon_N_BonktheTree_MinishPathHeartPiece_B}"],
+		"access_rules":["$LonLon_N_BonktheTree_MinishPathHeartPiece"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

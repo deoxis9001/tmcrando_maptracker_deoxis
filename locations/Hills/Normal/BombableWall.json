@@ -12,7 +12,7 @@
 	  {
 		"name":"Bomb Wall",
 		"item_count":1,
-		"access_rules":["$Hills_N_BombWall_BombWall,[$Hills_N_BombWall_BombWall_Y]","{$Hills_N_BombWall_BombWall_B}"],
+		"access_rules":["$Hills_N_BombWall_BombWall"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

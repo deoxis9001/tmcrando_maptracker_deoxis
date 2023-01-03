@@ -14,7 +14,7 @@
 	"sections":[
 	  {
 		"name":"Joy Butterfly",
-		"access_rules":["$Valley_F_Butterfly_JoyButterfly,[$Valley_F_Butterfly_JoyButterfly_Y]","{$Valley_F_Butterfly_JoyButterfly_B}"],
+		"access_rules":["$Valley_F_Butterfly_JoyButterfly"],
 		"item_count":1
 	  }
 	]

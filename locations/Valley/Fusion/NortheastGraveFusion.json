@@ -13,14 +13,14 @@
 	  {
 		"name":"Grave Chest",
 		"item_count":1,
-		"access_rules":["$Valley_F_NortheastGraveFusion_GraveChest,[$Valley_F_NortheastGraveFusion_GraveChest_Y]","{$Valley_F_NortheastGraveFusion_GraveChest_B}"],
+		"access_rules":["$Valley_F_NortheastGraveFusion_GraveChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Valley_F_NortheastGraveFusion_Chest,[$Valley_F_NortheastGraveFusion_Chest_Y]","{$Valley_F_NortheastGraveFusion_Chest_B}"],
+		"access_rules":["$Valley_F_NortheastGraveFusion_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

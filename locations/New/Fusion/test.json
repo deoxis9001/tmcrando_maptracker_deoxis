@@ -12,7 +12,7 @@
 	  {
 		"name":"Test",
 		"item_count":1,
-		"access_rules":["$N_F_Test,[$N_F_Test_Y]","{$N_F_Test_B}"],
+		"access_rules":["$N_F_Test"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

@@ -13,7 +13,7 @@
 	  {
 		"name":"Buried Treasure",
 		"item_count":2,
-		"access_rules":["$WesternWoods_FO_SouthDigging_BuriedTreasure,[$WesternWoods_FO_SouthDigging_BuriedTreasure_Y]","{$WesternWoods_FO_SouthDigging_BuriedTreasure_B}"],
+		"access_rules":["$WesternWoods_FO_SouthDigging_BuriedTreasure"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

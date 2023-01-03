@@ -12,7 +12,7 @@
 	"sections":[
 	  {
 		"name":"Waterfall",
-	"access_rules":["$Town_F_TownWaterfall_Waterfall,[$Town_F_TownWaterfall_Waterfall_Y]","{$Town_F_TownWaterfall_Waterfall_B}"],
+	"access_rules":["$Town_F_TownWaterfall_Waterfall"],
 		"item_count":1,
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"

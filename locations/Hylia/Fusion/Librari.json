@@ -19,7 +19,7 @@
 	  {
 		"name":"Librari",
 		"item_count":1,
-		"access_rules":["$Hylia_F_Librari_Librari,[$Hylia_F_Librari_Librari_Y]","{$Hylia_F_Librari_Librari_B}"],
+		"access_rules":["$Hylia_F_Librari_Librari"],
         "chest_unopened_img":"images/items-map/Heart Container.png",
         "chest_opened_img":"images/items-map/Heart Container Gray.png"
 	  }

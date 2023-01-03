@@ -12,7 +12,7 @@
 	  {
 		"name":"Heart piece",
 		"item_count":1,
-		"access_rules":["$Swamp_N_NortheastLakeCave_HeartPiece,[$Swamp_N_NortheastLakeCave_HeartPiece_Y]","{$Swamp_N_NortheastLakeCave_HeartPiece_B}"],
+		"access_rules":["$Swamp_N_NortheastLakeCave_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

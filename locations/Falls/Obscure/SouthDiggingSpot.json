@@ -13,7 +13,7 @@
 	  {
 		"name":"Digging",
 		"item_count":1,
-		"access_rules":["$Falls_O_SouthDiggingSpot_Digging,[$Falls_O_SouthDiggingSpot_Digging_Y]","{$Falls_O_SouthDiggingSpot_Digging_B}"],
+		"access_rules":["$Falls_O_SouthDiggingSpot_Digging"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

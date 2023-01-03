@@ -20,4 +20,4 @@ O ="Obscure/"
 OR ="ObscureRupee/"
 R ="Rupee/"
 
--- 	"access_rules":["$RV_N_Check,[$RV_N_Check_Y]","{$RV_N_Check_B}"],
+-- 	"access_rules":["$RV_N_Check"],

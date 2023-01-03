@@ -12,14 +12,14 @@
 	  {
 		"name":"Waveblade",
 		"item_count":1,
-		"access_rules":["$Hylia_N_Waveblade_Waveblade,[$Hylia_N_Waveblade_Waveblade_Y]","{$Hylia_N_Waveblade_Waveblade_B}"],
+		"access_rules":["$Hylia_N_Waveblade_Waveblade"],
 		"chest_unopened_img":"images/items-map/Tiger Scroll.png",
 		"chest_opened_img":"images/items-map/Tiger Scroll Done.png"
 	  },
 	  {
 		"name":"Heart Piece",
 		"item_count":1,
-		"access_rules":["$Hylia_N_Waveblade_HeartPiece,[$Hylia_N_Waveblade_HeartPiece_Y]","{$Hylia_N_Waveblade_HeartPiece_B}"],
+		"access_rules":["$Hylia_N_Waveblade_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

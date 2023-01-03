@@ -12,7 +12,7 @@
 	  {
 		"name":"Heart Piece",
 		"item_count":1,
-		"access_rules":["$Town_N_Anju_HeartPiece,[$Town_N_Anju_HeartPiece_Y]","{$Town_N_Anju_HeartPiece_B}"],
+		"access_rules":["$Town_N_Anju_HeartPiece"],
         "chest_unopened_img":"images/items-map/Heart Piece.png",
         "chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }

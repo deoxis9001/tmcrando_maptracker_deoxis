@@ -13,7 +13,7 @@
 	  {
 		"name":"Lon Lon Pond",
 		"item_count":1,
-		"access_rules":["$LonLon_F_LonLonDriedUpPond_LonLonPond,[$LonLon_F_LonLonDriedUpPond_LonLonPond_Y]","{$LonLon_F_LonLonDriedUpPond_LonLonPond_B}"],
+		"access_rules":["$LonLon_F_LonLonDriedUpPond_LonLonPond"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

@@ -12,7 +12,7 @@
 	"sections":[
 	  {
 		"name":"Dry Fountain",
-		"access_rules":["$Castle_F_GardensRightFountain_DryFountain,[$Castle_F_GardensRightFountain_DryFountain_Y]","{$Castle_F_GardensRightFountain_DryFountain_B}"],
+		"access_rules":["$Castle_F_GardensRightFountain_DryFountain"],
 		"item_count":1,
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
@@ -20,7 +20,7 @@
 	  {
 		"name":"Minish Hole",
 		"item_count":1,
-		"access_rules":["$Castle_F_GardensRightFountain_MinishHole,[$Castle_F_GardensRightFountain_MinishHole_Y]","{$Castle_F_GardensRightFountain_MinishHole_B}"],
+		"access_rules":["$Castle_F_GardensRightFountain_MinishHole"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }

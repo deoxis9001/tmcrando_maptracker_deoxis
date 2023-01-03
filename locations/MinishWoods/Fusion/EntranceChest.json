@@ -12,7 +12,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$MinishWood_F_EntranceChest_Chest,[$MinishWood_F_EntranceChest_Chest_Y]","{$MinishWood_F_EntranceChest_Chest_B}"],
+		"access_rules":["$MinishWood_F_EntranceChest_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

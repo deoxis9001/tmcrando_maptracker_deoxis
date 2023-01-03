@@ -13,7 +13,7 @@
 	  {
 		"name":"Center Ladder",
 		"item_count":1,
-		"access_rules":["$NorthField_F_4TreesDone_CenterLadder,[$NorthField_F_4TreesDone_CenterLadder_Y]","{$NorthField_F_4TreesDone_CenterLadder_B}"],
+		"access_rules":["$NorthField_F_4TreesDone_CenterLadder"],
         "chest_unopened_img":"images/items-map/big_chest_closed.png",
         "chest_opened_img":"images/items-map/big_chest_open.png"
 	  }

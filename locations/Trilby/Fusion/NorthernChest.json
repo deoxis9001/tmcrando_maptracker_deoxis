@@ -13,7 +13,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Trilby_F_NorthernChest_Chest,[$Trilby_F_NorthernChest_Chest_Y]","{$Trilby_F_NorthernChest_Chest_B}"],
+		"access_rules":["$Trilby_F_NorthernChest_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

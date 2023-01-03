@@ -13,7 +13,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Falls_F_RockChest_Chest,[$Falls_F_RockChest_Chest_Y]","{$Falls_F_RockChest_Chest_B}"],
+		"access_rules":["$Falls_F_RockChest_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

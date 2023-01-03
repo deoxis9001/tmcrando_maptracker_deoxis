@@ -3,7 +3,7 @@
 	"name":"Smith's House",
     "chest_unopened_img":"images/items-map/chest_closed.png",
     "chest_opened_img":"images/items-map/chest_open.png",
-    "access_rules":["$SouthHyruleField_N_SmithsHouse,[$SouthHyruleField_N_SmithsHouse_Y]","{$SouthHyruleField_N_SmithsHouse_B}"],
+    "access_rules":["$SouthHyruleField_N_SmithsHouse"],
 
 	"map_locations": [
 	  {

@@ -12,7 +12,7 @@
 	  {
 		"name":"Lady Next to Cafe",
 		"item_count":1,
-		"access_rules":["$Town_N_LadyNexttoCafe_LadyNexttoCafe,[$Town_N_LadyNexttoCafe_LadyNexttoCafe_Y]","{$Town_N_LadyNexttoCafe_LadyNexttoCafe_B}"],
+		"access_rules":["$Town_N_LadyNexttoCafe_LadyNexttoCafe"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

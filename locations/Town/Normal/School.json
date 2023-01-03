@@ -12,14 +12,14 @@
 	  {
 		"name":"Roof Chest",
 		"item_count":1,
-		"access_rules":["$Town_N_School_RoofChest,[$Town_N_School_RoofChest_Y]","{$Town_N_School_RoofChest_B}"],
+		"access_rules":["$Town_N_School_RoofChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Pull the Statue",
 		"item_count":1,
-		"access_rules":["$Town_N_School_PulltheStatue,[$Town_N_School_PulltheStatue_Y]","{$Town_N_School_PulltheStatue_B}"],
+		"access_rules":["$Town_N_School_PulltheStatue"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

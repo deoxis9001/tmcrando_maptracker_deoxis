@@ -13,14 +13,14 @@
 	  {
 		"name":"Scissor Beetles",
 		"item_count":1,
-		"access_rules":["$Town_N_FlippersCave_ScissorBeetles,[$Town_N_FlippersCave_ScissorBeetles_Y]","{$Town_N_FlippersCave_ScissorBeetles_B}"],
+		"access_rules":["$Town_N_FlippersCave_ScissorBeetles"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Frozen Chest",
 		"item_count":1,
-		"access_rules":["$Town_N_FlippersCave_FrozenChest,[$Town_N_FlippersCave_FrozenChest_Y]","{$Town_N_FlippersCave_FrozenChest_B}"],
+		"access_rules":["$Town_N_FlippersCave_FrozenChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

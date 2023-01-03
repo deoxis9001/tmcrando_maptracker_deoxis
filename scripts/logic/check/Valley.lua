@@ -25,6 +25,8 @@ end
 function Valley_Dampe_NPC() 
 	if ( AccessValley()==1 and DarkRooms()==1) then
 		return 1
+	elseif ( AccessValley()==1 and DarkRooms()==2) then
+		return 2
 	else
 		return 0
 	end 

@@ -13,21 +13,21 @@
 	  {
 		"name":"Scissor Beetles",
 		"item_count":1,
-		"access_rules":["$Town_OR_FlippersCaveRupees_ScissorBeetles,[$Town_OR_FlippersCaveRupees_ScissorBeetles_Y]","{$Town_OR_FlippersCaveRupees_ScissorBeetles_B}"],
+		"access_rules":["$Town_OR_FlippersCaveRupees_ScissorBeetles"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Frozen Chest",
 		"item_count":1,
-		"access_rules":["$Town_OR_FlippersCaveRupees_FrozenChest,[$Town_OR_FlippersCaveRupees_FrozenChest_Y]","{$Town_OR_FlippersCaveRupees_FrozenChest_B}"],
+		"access_rules":["$Town_OR_FlippersCaveRupees_FrozenChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Under the Waterfall",
 		"item_count":1,
-		"access_rules":["$Town_OR_FlippersCaveRupees_UndertheWaterfall,[$Town_OR_FlippersCaveRupees_UndertheWaterfall_Y]","{$Town_OR_FlippersCaveRupees_UndertheWaterfall_B}"],
+		"access_rules":["$Town_OR_FlippersCaveRupees_UndertheWaterfall"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 		"visibility_rules":"rupees_on,obscure_on"

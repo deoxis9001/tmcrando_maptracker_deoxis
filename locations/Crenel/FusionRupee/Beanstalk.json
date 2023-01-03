@@ -13,14 +13,14 @@
 		{
 		  "name":"Heart Piece",
 		  "item_count":1,
-		  "access_rules":["$Crenel_FR_Beanstalk_HeartPiece,[$Crenel_FR_Beanstalk_HeartPiece_Y]","{$Crenel_FR_Beanstalk_HeartPiece_B}"],
+		  "access_rules":["$Crenel_FR_Beanstalk_HeartPiece"],
 		  "chest_unopened_img":"images/items-map/Heart Piece.png",
 		  "chest_opened_img":"images/items-map/Heart Piece Gray.png"
 		},
 		{
 		  "name":"Rupees",
 		  "item_count":8,
-		  "access_rules":["$Crenel_FR_Beanstalk_Rupees,[$Crenel_FR_Beanstalk_Rupees_Y]","{$Crenel_FR_Beanstalk_Rupees_B}"],
+		  "access_rules":["$Crenel_FR_Beanstalk_Rupees"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		}

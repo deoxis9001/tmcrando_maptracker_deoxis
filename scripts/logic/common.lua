@@ -438,8 +438,10 @@ end
 function DarkRooms()
 	if ( has("lamp") and has("darkrooms_off")) then
 		return 1
-	elseif ( has("lamp") and has("darkrooms_on") ) then
+	elseif ( has("darkrooms_off") ) then
 		return 2
+	elseif ( has("darkrooms_on") ) then
+		return 1
 	else
 		return 0
 	end 
