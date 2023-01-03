@@ -1,0 +1,119 @@
+[
+	{
+	"name":"DeepWood",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2282,
+		"y":1800
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Slug Room",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_SlugRoom,[$Dungeon_Deepwood_SlugRoom_Y]","{$Dungeon_Deepwood_SlugRoom_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  },
+	  {
+		"name":"Upstairs Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_UpstairsChest,[$Dungeon_Deepwood_UpstairsChest_Y]","{$Dungeon_Deepwood_UpstairsChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  },
+	  {
+		"name":"Barrel Room Northwest",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_BarrelRoomNorthwest,[$Dungeon_Deepwood_BarrelRoomNorthwest_Y]","{$Dungeon_Deepwood_BarrelRoomNorthwest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  },
+	  {
+		"name":"West Side Big Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_WestSideBigChest,[$Dungeon_Deepwood_WestSideBigChest_Y]","{$Dungeon_Deepwood_WestSideBigChest_B}"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  },
+	  {
+		"name":"Two Statue Room",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_TwoStatueRoom,[$Dungeon_Deepwood_TwoStatueRoom_Y]","{$Dungeon_Deepwood_TwoStatueRoom_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  },
+	  {
+		"name":"Mulldozer Key",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_MulldozerKey,[$Dungeon_Deepwood_MulldozerKey_Y]","{$Dungeon_Deepwood_MulldozerKey_B}"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png",
+	  },
+	  {
+		"name":"Two Lamp Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_TwoLampChest,[$Dungeon_Deepwood_TwoLampChest_Y]","{$Dungeon_Deepwood_TwoLampChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  },
+	  {
+		"name":"Basement Switch Room Big Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_BasementSwitchRoomBigChest,[$Dungeon_Deepwood_BasementSwitchRoomBigChest_Y]","{$Dungeon_Deepwood_BasementSwitchRoomBigChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  },
+	  {
+		"name":"Basement Switch Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_BasementSwitchChest,[$Dungeon_Deepwood_BasementSwitchChest_Y]","{$Dungeon_Deepwood_BasementSwitchChest_B}"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  },
+	  {
+		"name":"Blue Warp Heart Piece",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_BlueWarpHeartPiece,[$Dungeon_Deepwood_BlueWarpHeartPiece_Y]","{$Dungeon_Deepwood_BlueWarpHeartPiece_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Puffstool Room",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_PuffstoolRoom,[$Dungeon_Deepwood_PuffstoolRoom_Y]","{$Dungeon_Deepwood_PuffstoolRoom_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  },
+	  {
+		"name":"Madderpillar Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_MadderpillarChest,[$Dungeon_Deepwood_MadderpillarChest_Y]","{$Dungeon_Deepwood_MadderpillarChest_B}"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  },
+	  {
+		"name":"Madderpillar Heart Piece",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_MadderpillarHeartPiece,[$Dungeon_Deepwood_MadderpillarHeartPiece_Y]","{$Dungeon_Deepwood_MadderpillarHeartPiece_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png",
+	  },
+	  {
+		"name":"Basement Big Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_BasementBigChest,[$Dungeon_Deepwood_BasementBigChest_Y]","{$Dungeon_Deepwood_BasementBigChest_B}"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  },
+	  {
+		"name":"Green Chu",
+		"item_count":1,
+		"access_rules":["$Dungeon_Deepwood_GreenChu,[$Dungeon_Deepwood_GreenChu_Y]","{$Dungeon_Deepwood_GreenChu_B}"],
+		"chest_unopened_img":"images/items-map/Heart Container.png",
+		"chest_opened_img":"images/items-map/Heart Container Gray.png",
+	  }	  
+	]
+  }
+]

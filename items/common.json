@@ -83,14 +83,14 @@
     "name": "Gust Jar",
     "type": "toggle",
     "img": "images/items/Gust Jar.png",
-    "codes": "gust,gustjar"
+    "codes": "gust"
   },
   //Cane of Pacci
   {
     "name": "Cane of Pacci",
     "type": "toggle",
     "img": "images/items/Cane of Pacci.png",
-    "codes": "cane,paccicane,batonsauteur"
+    "codes": "cane"
   },
   //Boomerang
   {
@@ -145,7 +145,7 @@
       },
       {
         "img": "images/items/Mirror Shield.png",
-        "codes": "shield,shield2,mirrorshield"
+        "codes": "shield,mirrorshield"
       }
     ]
   },
@@ -207,7 +207,7 @@
       },
       {
         "img": "images/items/Lamp (Lit).png",
-        "codes":"lamp,lantern"
+        "codes":"lamp"
       }
     ]
   },
@@ -227,19 +227,19 @@
       },
       {
         "img": "images/items/Bomb10.png",
-        "codes": "bombs,bomb,bombs10,dmg"
+        "codes": "bombs,bombs10"
       },
       {
         "img": "images/items/Bomb30.png",
-        "codes": "bombs,bomb,bombs30,dmg"
+        "codes": "bombs,bombs30"
       },
       {
         "img": "images/items/Bomb50.png",
-        "codes": "bombs,bomb,bombs50,dmg"
+        "codes": "bombs,bombs50"
       },
       {
         "img": "images/items/Bomb99.png",
-        "codes": "bombs,bomb,bombs99,dmg"
+        "codes": "bombs,bombs99"
       },
     ]
   },
@@ -255,7 +255,7 @@
    "name": "Gold Kinstone (Wilds)",
    "type": "consumable",
    "img": "images/items/Kinstone Wilds Half.png",
-   "codes": "kinstoneWilds,wilds",
+   "codes": "wilds",
    "max_quantity": 3
  },
  // Boots
@@ -277,7 +277,7 @@
    "name": "Ocarina",
    "type": "toggle",
    "img": "images/items/Ocarina of Wind.png",
-   "codes": "flute,ocarina"
+   "codes": "ocarina"
  },
  // Bow
  {
@@ -287,7 +287,7 @@
    "stages": [
      {
        "img": "images/items/Bow0.png",
-       "codes": "bow,dmg"
+       "codes": "bow"
      },
      {
        "img": "images/items/Light Arrows Smaller.png",
@@ -429,7 +429,7 @@
    "name": "Gold Kinstone (Falls)",
    "type": "toggle",
    "img": "images/items/Kinstone Falls Half.png",
-   "codes": "kinstoneFalls, falls"
+   "codes": "falls"
  },
  // Grip Ring
  {
@@ -754,13 +754,6 @@
    "max_quantity": 11
  },
  {
-   "name": "Crypt Keys",
-   "type": "consumable",
-   "img": "images/donjons/Small Key.png",
-   "codes": "cryptkey",
-   "max_quantity": 3
- },
- {
    "name": "Hearts",
    "type": "progressive",
    "img": "images/items/Heart Container.png",
@@ -920,6 +913,7 @@
    "img": "images/items/Figurine.png",
    "codes": "figurine",
    "min_quantity":0,
-   "max_quantity":136
+   "max_quantity":136,
+   "display_as_fraction_of_max":true
  }
 ]

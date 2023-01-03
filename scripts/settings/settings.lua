@@ -2,8 +2,8 @@
 -- Configuration options for scripted systems in this pack
 ------------------------------------------------------------------
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
-AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
-TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
+AUTOTRACKER_ENABLE_LOCATION_TRACKING = false
+TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = true
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
 VERSION_BETA = true

@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Southeast North Digging Spot",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":3300,
+		"y":600,
+		"restrict_visibility_rules":["obscure_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Digging Spot",
+		"item_count":1,
+		"access_rules":["$Clouds_O_SoutheastNorthDiggingSpot_DiggingSpot,[$Clouds_O_SoutheastNorthDiggingSpot_DiggingSpot_Y]","{$Clouds_O_SoutheastNorthDiggingSpot_DiggingSpot_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+	"name":"Top Left North Chests",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2730,
+		"y":150,
+		"restrict_visibility_rules":["obscure_off"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Top Left North Chests",
+		"item_count":2,
+		"access_rules":["$Clouds_N_TopLeftNorthChests_Chests,[$Clouds_N_TopLeftNorthChests_Chests_Y]","{$Clouds_N_TopLeftNorthChests_Chests_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  }
+]

@@ -1,0 +1,324 @@
+[
+  {
+	"name":"Spiny Beetle Fight",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":2259,
+		"y":1005
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Spiny Beetle Fight",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_SpinyBeetleFight,[$Dungeon_CaveOfFlame_SpinyBeetleFight_Y]","{$Dungeon_CaveOfFlame_SpinyBeetleFight_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Rupees",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":2005,
+		"y":1005,
+        "restrict_visibility_rules":["rupees_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_Rupees,[$Dungeon_CaveOfFlame_Rupees_Y]","{$Dungeon_CaveOfFlame_Rupees_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Big Chest Room Big Chest",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":890,
+		"y":1090
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Big Chest Room Big Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_BigChestRoom,[$Dungeon_CaveOfFlame_BigChestRoom_Y]","{$Dungeon_CaveOfFlame_BigChestRoom_B}"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"West Side Big Chest",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":690,
+		"y":1290
+	  }
+	],
+	"sections":[
+	  {
+		"name":"West Side Big Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_BigChestRoom,[$Dungeon_CaveOfFlame_BigChestRoom_Y]","{$Dungeon_CaveOfFlame_BigChestRoom_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"First Rollobite Room Free Chest",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":370,
+		"y":1390
+	  }
+	],
+	"sections":[
+	  {
+		"name":"First Rollobite Room Free Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_FirstRollobiteRoom,[$Dungeon_CaveOfFlame_FirstRollobiteRoom_Y]","{$Dungeon_CaveOfFlame_FirstRollobiteRoom_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"First Rollobite Room Pillar Chest",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":370,
+		"y":1120
+	  }
+	],
+	"sections":[
+	  {
+		"name":"First Rollobite Room Pillar Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_FirstRollobiteRoom,[$Dungeon_CaveOfFlame_FirstRollobiteRoom_Y]","{$Dungeon_CaveOfFlame_FirstRollobiteRoom_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Bombable Wall Heart Piece",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":840,
+		"y":850
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Bombable Wall Heart Piece",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_BombableWallHeartPiece,[$Dungeon_CaveOfFlame_BombableWallHeartPiece_Y]","{$Dungeon_CaveOfFlame_BombableWallHeartPiece_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Spiny Chu Fight",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":730,
+		"y":410
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Spiny Chu Fight",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_SpinyChuFight,[$Dungeon_CaveOfFlame_SpinyChuFight_Y]","{$Dungeon_CaveOfFlame_SpinyChuFight_B}"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Spiny Chu Pillar Chest",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":860,
+		"y":340
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Spiny Chu Pillar Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_SpinyChuPillarChest,[$Dungeon_CaveOfFlame_SpinyChuPillarChest_Y]","{$Dungeon_CaveOfFlame_SpinyChuPillarChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Pre Lava Basement Room Block Chest",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":1220,
+		"y":270
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Pre Lava Basement Room Block Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_PreLavaBasementRoom,[$Dungeon_CaveOfFlame_PreLavaBasementRoom_Y]","{$Dungeon_CaveOfFlame_PreLavaBasementRoom_B}"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Pre Lava Basement Room Ledge",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":1270,
+		"y":340
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Pre Lava Basement Room Ledge",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_PreLavaBasementRoom,[$Dungeon_CaveOfFlame_PreLavaBasementRoom_Y]","{$Dungeon_CaveOfFlame_PreLavaBasementRoom_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Blade Chest",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":2370,
+		"y":120
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Blade Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_BladeChest,[$Dungeon_CaveOfFlame_BladeChest_Y]","{$Dungeon_CaveOfFlame_BladeChest_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Lava Basement Left",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":1520,
+		"y":665
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Lava Basement Left",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_LavaBasement,[$Dungeon_CaveOfFlame_LavaBasement_Y]","{$Dungeon_CaveOfFlame_LavaBasement_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Lava Basement Right",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":2050,
+		"y":665
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Lava Basement Right",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_LavaBasement,[$Dungeon_CaveOfFlame_LavaBasement_Y]","{$Dungeon_CaveOfFlame_LavaBasement_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Lava Basement Big Chest",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":1665,
+		"y":400
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Lava Basement Big Chest",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_LavaBasementBigChest,[$Dungeon_CaveOfFlame_LavaBasementBigChest_Y]","{$Dungeon_CaveOfFlame_LavaBasementBigChest_B}"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	  
+	]
+  },
+  {
+	"name":"Gleerok",
+	"map_locations":[
+	  {
+		"map":"cof",
+		"x":1380,
+		"y":1200
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Gleerok",
+		"item_count":1,
+		"access_rules":["$Dungeon_CaveOfFlame_Gleerok,[$Dungeon_CaveOfFlame_Gleerok_Y]","{$Dungeon_CaveOfFlame_Gleerok_B}"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	  
+	]
+  }
+  
+]

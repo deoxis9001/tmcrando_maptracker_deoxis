@@ -286,25 +286,12 @@
     "img": "images/donjons/Big Key.png",
     "codes": "dhc_bigkey"
   },
-  {
-    "name": "Explicit DHC Big Key",
-    "type": "toggle",
-    "img": "images/donjons/Big Key.png",
-    "codes": "explicit_dhc_bigkey"
-  },
   // DHC Small Keys
   {
     "name": "Dark Hyrule Castle Small Key",
     "type": "consumable",
     "img": "images/donjons/Small Key.png",
     "codes": "dhc_smallkey",
-    "max_quantity": 5
-  },
-  {
-    "name": "Explicit Dark Hyrule Castle Small Key",
-    "type": "consumable",
-    "img": "images/donjons/Small Key.png",
-    "codes": "explicit_dhc_smallkey",
     "max_quantity": 5
   },
   {
@@ -350,8 +337,10 @@
  },
   // Royal Crypt Keys
   {
-    "name": "Royal Crypt Key",
+    "name": "Royal Crypt Small Key",
     "type": "consumable",
-    "img": "images/donjons/"
-  }
+    "img": "images/donjons/Small Key.png",
+    "codes": "rc_smallkey",
+    "max_quantity": 3
+  },
 ]

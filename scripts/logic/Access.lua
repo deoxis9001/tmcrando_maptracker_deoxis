@@ -110,7 +110,28 @@ function AccessFalls()
 	end 
 end
 function AccessClouds()
-	if WindCrest()==1 or ( AccessFalls()==1 and has("grip") and has("open_world") ) then
+	if WindCrest()==1 or ( AccessFalls()==1 and has("grip") ) or has("open_world") then
+		return 1
+	else
+		return 0
+	end 
+end
+function AccessDeepwood()
+	if AccessMinishWoods()==1 and Festari()==1 then
+		return 1
+	else
+		return 0
+	end 
+end
+function CoFAccess()
+	if AccessMelari()==1 then
+		return 1
+	else
+		return 0
+	end 
+end
+function CoFBasementAccess()
+	if  CoFAccess()==1 and (CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( BombWalls()==1 and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 )) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 )) then
 		return 1
 	else
 		return 0
