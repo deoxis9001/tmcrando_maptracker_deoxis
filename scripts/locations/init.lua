@@ -1,30 +1,4 @@
 
-ScriptHost:LoadScript(ScriptLocations.."Castle.lua")
-ScriptHost:LoadScript(ScriptLocations.."Clouds.lua")
-ScriptHost:LoadScript(ScriptLocations.."Crenel.lua")
-ScriptHost:LoadScript(ScriptLocations.."CrenelBase.lua")
-ScriptHost:LoadScript(ScriptLocations.."Falls.lua")
-ScriptHost:LoadScript(ScriptLocations.."FallsLower.lua")
-ScriptHost:LoadScript(ScriptLocations.."Hills.lua")
-ScriptHost:LoadScript(ScriptLocations.."Hylia.lua")
-ScriptHost:LoadScript(ScriptLocations.."LonLon.lua")
-ScriptHost:LoadScript(ScriptLocations.."MinishWoods.lua")
-ScriptHost:LoadScript(ScriptLocations.."NorthField.lua")
-ScriptHost:LoadScript(ScriptLocations.."Ruins.lua")
-ScriptHost:LoadScript(ScriptLocations.."SouthHyruleField.lua")
-ScriptHost:LoadScript(ScriptLocations.."Swamp.lua")
-ScriptHost:LoadScript(ScriptLocations.."Town.lua")
-ScriptHost:LoadScript(ScriptLocations.."Trilby.lua")
-ScriptHost:LoadScript(ScriptLocations.."Valley.lua")
-ScriptHost:LoadScript(ScriptLocations.."WesternWoods.lua")
-
-ScriptHost:LoadScript(ScriptLocations.."Dungeons/CaveOfFlame.lua")
-ScriptHost:LoadScript(ScriptLocations.."Dungeons/Crypt.lua")
-ScriptHost:LoadScript(ScriptLocations.."Dungeons/Deepwood.lua")
--- ScriptHost:LoadScript(ScriptLocations.."Dungeons/Fortress.lua")
--- ScriptHost:LoadScript(ScriptLocations.."Dungeons/Droplet.lua")
--- ScriptHost:LoadScript(ScriptLocations.."Dungeons/Palace.lua")
--- ScriptHost:LoadScript(ScriptLocations.."Dungeons/DHC.lua")
 
 
 

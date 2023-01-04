@@ -11,13 +11,3 @@ JsMap="maps/"
 
 ScriptLocations="scripts/locations/"
 JsLocations="locations/"
-F ="Fusion/"
-FO ="FusionObscure/"
-FOR ="FusionObscureRupee/"
-FR ="FusionRupee/"
-N ="Normal/"
-O ="Obscure/"
-OR ="ObscureRupee/"
-R ="Rupee/"
-
--- 	"access_rules":["$RV_N_Check"],

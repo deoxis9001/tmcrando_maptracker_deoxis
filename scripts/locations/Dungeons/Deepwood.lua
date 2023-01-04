@@ -121,6 +121,6 @@ function Json_Dungeon_Deepwood_GreenChu()
 end
 
 
-Tracker:AddLocations(JsLocations..""..DirWorld.."".. N .."Deepwood.json")
+Tracker:AddLocations(JsLocations..""..DirWorld.."Normal/Deepwood.json")
 Tracker:AddLocations(JsLocations..""..DirWorld.."Map/Deepwood.json")
 

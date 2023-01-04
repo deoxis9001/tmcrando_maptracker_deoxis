@@ -99,7 +99,7 @@ function Json_Dungeon_CaveOfFlame_Gleerok()
 end
 
 
-Tracker:AddLocations(JsLocations..""..DirWorld.."".. N .."CaveOfFlame.json")
-Tracker:AddLocations(JsLocations..""..DirWorld.."".. R .."CaveOfFlame.json")
+Tracker:AddLocations(JsLocations..""..DirWorld.."Normal/CaveOfFlame.json")
+Tracker:AddLocations(JsLocations..""..DirWorld.."Rupee/CaveOfFlame.json")
 Tracker:AddLocations(JsLocations..""..DirWorld.."Map/CaveOfFlame.json")
 

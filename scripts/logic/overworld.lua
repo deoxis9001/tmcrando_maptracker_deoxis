@@ -331,7 +331,7 @@ end
 function CryptDoor() 
 	if ( has("open_world") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("cryptkey") >= 1 ) then
+	elseif ( Tracker:ProviderCountForCode("rc_smallkey") >= 1 ) then
 		return 1
 	else
 		return 0
@@ -340,7 +340,7 @@ end
 function CryptBlocks() 
 	if ( has("open_world") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("cryptkey") >= 3 ) then
+	elseif ( Tracker:ProviderCountForCode("rc_smallkey") >= 3 ) then
 		return 1
 	else
 		return 0

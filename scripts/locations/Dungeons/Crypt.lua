@@ -40,6 +40,6 @@ function Json_Dungeon_Crypt_KingGustaf()
   end
 end
 
-Tracker:AddLocations(JsLocations..""..DirWorld.."".. N .."Crypt.json")
+Tracker:AddLocations(JsLocations..""..DirWorld.."Normal/Crypt.json")
 Tracker:AddLocations(JsLocations..""..DirWorld.."Map/Crypt.json")
 

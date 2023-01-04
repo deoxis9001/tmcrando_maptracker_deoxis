@@ -1123,6 +1123,9 @@ function updateLocations(segment)
     updateToggleItemFromByteAndFlag(segment, "pow", 0x2002c9c, 0x40)
     updateToggleItemFromByteAndFlag(segment, "rc", 0x2002d02, 0x04)
     updateToggleItemFromByteAndFlag(segment, "dhc", 0x2002ca6, 0x20)
+	updateGoldFallsUsed(segment, 0x2002c82, 0x02)
+	updateWildsUsedFixed(segment, {{0x2002c81,0x40},{0x2002c81,0x80},{0x2002c82,0x01}})
+	updateCloudsUsedFixed(segment, {{0x2002c81,0x02},{0x2002c81,0x04},{0x2002c81,0x08},{0x2002c81,0x10},{0x2002c81,0x20}})
   end
 
   if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
@@ -1146,9 +1149,6 @@ function updateLocations(segment)
 	  updateSectionChestCountFromByteAndFlag(segment, "@Bottom Right Fusion/Fusion", 0x2002c81, 0x20)
 	  decreaseChestCount(segment, "@Crenel Heart Piece Cave/Chests", {{0x2002c81, 0x40},{0x2002c81,0x80},{0x2002c82,0x01}})
 	  updateSectionChestCountFromByteAndFlag(segment, "@Source of the Flow Cave/Fusion", 0x2002c82, 0x02)
-	  updateGoldFallsUsed(segment, 0x2002c82, 0x02)
-	  updateWildsUsedFixed(segment, {{0x2002c81,0x40},{0x2002c81,0x80},{0x2002c82,0x01}})
-	  updateCloudsUsedFixed(segment, {{0x2002c81,0x02},{0x2002c81,0x04},{0x2002c81,0x08},{0x2002c81,0x10},{0x2002c81,0x20}})
 
 	  --CRENEL
 	  updateSectionChestCountFromByteAndFlag(segment, "@Crenel Climbing Wall Chest/Wall Chest", 0x2002cd4, 0x01)
