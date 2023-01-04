@@ -1,6 +1,6 @@
 DirWorld="Dungeons/CaveOfFlame/"
 
-function Dungeon_CaveOfFlame_SpinyBeetleFight()
+function Json_Dungeon_CaveOfFlame_SpinyBeetleFight()
   if CoF_1F_SpikeBeetle_BigChest()==1 then
     return 1
   else
@@ -8,7 +8,7 @@ function Dungeon_CaveOfFlame_SpinyBeetleFight()
   end
 end
 
-function Dungeon_CaveOfFlame_Rupees()
+function Json_Dungeon_CaveOfFlame_Rupees()
   if CoF_1F_Item()==1 then
     return 1
   else
@@ -16,7 +16,7 @@ function Dungeon_CaveOfFlame_Rupees()
   end
 end
 
-function Dungeon_CaveOfFlame_BigChestRoom()
+function Json_Dungeon_CaveOfFlame_BigChestRoom()
   if CoF_B1_HazyRoom_BigChest()==1 then
     return 1
   else
@@ -24,7 +24,7 @@ function Dungeon_CaveOfFlame_BigChestRoom()
   end
 end
 
-function Dungeon_CaveOfFlame_FirstRollobiteRoom()
+function Json_Dungeon_CaveOfFlame_FirstRollobiteRoom()
   if CoF_B1_Rollobite_Chest()==1 then
     return 1
   else
@@ -32,7 +32,7 @@ function Dungeon_CaveOfFlame_FirstRollobiteRoom()
   end
 end
 
-function Dungeon_CaveOfFlame_BombableWallHeartPiece()
+function Json_Dungeon_CaveOfFlame_BombableWallHeartPiece()
   if CoF_B1_HP()==1 then
     return 1
   elseif CoF_B1_HP()==2 then
@@ -42,7 +42,7 @@ function Dungeon_CaveOfFlame_BombableWallHeartPiece()
   end
 end
 
-function Dungeon_CaveOfFlame_SpinyChuFight()
+function Json_Dungeon_CaveOfFlame_SpinyChuFight()
   if CoF_B1_SpikeyChus_BigChest()==1 then
     return 1
   else
@@ -50,7 +50,7 @@ function Dungeon_CaveOfFlame_SpinyChuFight()
   end
 end
 
-function Dungeon_CaveOfFlame_SpinyChuPillarChest()
+function Json_Dungeon_CaveOfFlame_SpinyChuPillarChest()
   if CoF_B1_SpikeyChus_PillarChest()==1 then
     return 1
   else
@@ -58,7 +58,7 @@ function Dungeon_CaveOfFlame_SpinyChuPillarChest()
   end
 end
 
-function Dungeon_CaveOfFlame_PreLavaBasementRoom()
+function Json_Dungeon_CaveOfFlame_PreLavaBasementRoom()
   if CoF_B2_PreLava_Chest()==1 then
     return 1
   else
@@ -66,7 +66,7 @@ function Dungeon_CaveOfFlame_PreLavaBasementRoom()
   end
 end
 
-function Dungeon_CaveOfFlame_BladeChest()
+function Json_Dungeon_CaveOfFlame_BladeChest()
   if CoF_B2_LavaRoom_BladeChest()==1 then
     return 1
   else
@@ -74,7 +74,7 @@ function Dungeon_CaveOfFlame_BladeChest()
   end
 end
 
-function Dungeon_CaveOfFlame_LavaBasement()
+function Json_Dungeon_CaveOfFlame_LavaBasement()
   if CoF_B2_LavaRoom_Chest()==1 then
     return 1
   else
@@ -82,7 +82,7 @@ function Dungeon_CaveOfFlame_LavaBasement()
   end
 end
 
-function Dungeon_CaveOfFlame_LavaBasementBigChest()
+function Json_Dungeon_CaveOfFlame_LavaBasementBigChest()
   if CoF_B2_LavaRoom_BigChest()==1 then
     return 1
   else
@@ -90,7 +90,7 @@ function Dungeon_CaveOfFlame_LavaBasementBigChest()
   end
 end
 
-function Dungeon_CaveOfFlame_Gleerok()
+function Json_Dungeon_CaveOfFlame_Gleerok()
   if CoF_BossItem()==1 then
     return 1
   else

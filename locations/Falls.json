@@ -1,0 +1,316 @@
+[
+  {
+	"name":"Veil Falls - Upper Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1845,
+		"y":180,
+		"restrict_visibility_rules":["obscure_off,rupees_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Bomb Wall Chest",
+		"item_count":1,
+		"access_rules":["$Falls_UpperCave_BombWallChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Freestanding Chest",
+		"item_count":1,
+		"access_rules":["$Falls_UpperCave_FreestandingChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Downstairs Rupees",
+		"item_count":9,
+		"access_rules":["$Falls_UpperCave_DownstairsRupees"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - Upper Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1845,
+		"y":180,
+		"restrict_visibility_rules":["obscure_on,rupees_on"]
+	  }
+	],
+	"sections":[
+		{
+		  "name":"Bomb Wall Chest",
+		  "item_count":1,
+		  "access_rules":["$Falls_UpperCave_BombWallChest"],
+		  "chest_unopened_img":"images/items-map/chest_closed.png",
+		  "chest_opened_img":"images/items-map/chest_open.png"
+		},
+		{
+		  "name":"Freestanding Chest",
+		  "item_count":1,
+		  "access_rules":["$Falls_UpperCave_FreestandingChest"],
+		  "chest_unopened_img":"images/items-map/chest_closed.png",
+		  "chest_opened_img":"images/items-map/chest_open.png"
+		},
+		{
+		  "name":"Downstairs Rupees",
+		  "item_count":9,
+		  "access_rules":["$Falls_UpperCave_DownstairsRupees"],
+		  "chest_unopened_img":"images/items-map/chest_closed.png",
+		  "chest_opened_img":"images/items-map/chest_open.png"
+		},
+		{
+		  "name":"Underwater Rupees",
+		  "item_count":6,
+		  "access_rules":["$Falls_UpperCave_UnderwaterRupees"],
+		  "chest_unopened_img":"images/items-map/chest_closed.png",
+		  "chest_opened_img":"images/items-map/chest_open.png"
+		}
+	]
+  },
+  {
+	"name":"Veil Falls - Upper Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1845,
+		"y":180,
+		"restrict_visibility_rules":["rupees_off"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Bomb Wall Chest",
+		"item_count":1,
+		"access_rules":["$Falls_UpperCave_BombWallChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Freestanding Chest",
+		"item_count":1,
+		"access_rules":["$Falls_UpperCave_FreestandingChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - South Digging Spot",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1875,
+		"y":625,
+		"restrict_visibility_rules":["obscure_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Digging",
+		"item_count":1,
+		"access_rules":["$Falls_SouthDiggingSpot_Digging"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - Upper Rocks",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1885,
+		"y":245,
+		"restrict_visibility_rules":["obscure_on,fusions_none"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Digging",
+		"item_count":1,
+		"access_rules":["$Falls_UpperRocks_Digging"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - Upper Rocks",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1885,
+		"y":245,
+		"restrict_visibility_rules":["$Fusions,obscure_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Digging",
+		"item_count":1,
+		"access_rules":["$Falls_UpperRocks_Digging"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Falls_UpperRocks_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - Upper Rocks",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1885,
+		"y":245,
+		"restrict_visibility_rules":["$Fusions,obscure_off"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Falls_UpperRocks_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - Upper Waterfall",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1695,
+		"y":155,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Falls_UpperWaterfall_HeartPiece"],
+		"chest_unopened_img": "images/items-map/Heart Piece.png",
+		"chest_opened_img": "images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - Mitts Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1815,
+		"y":550,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Falls_FusionDiggingCave_HeartPiece"],
+		"chest_unopened_img": "images/items-map/Heart Piece.png",
+		"chest_opened_img": "images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Falls_FusionDiggingCave_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - Tektite Golden",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1830,
+		"y":275,
+		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Falls_TektiteGolden_Kill"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Veil Falls - Heart Piece",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1760,
+		"y":540
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"capture_item": true,
+		"access_rules":["$Falls_HeartPiece_HeartPiece"],
+		"chest_unopened_img": "images/items-map/Heart Piece.png",
+		"chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+	]
+  },
+  {
+	"name":"Veil Falls - Source of the Flow Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1695,
+		"y":450
+	  },
+	  {
+		"map": "map",
+		"x": 1800,
+		"y": 350
+	  }
+	],
+	"sections":[
+		{
+		  "name":"Fusion",
+		  "item_count":1,
+		  "access_rules":["$Falls_SourceFlowCave_Fusion"],
+		  "chest_unopened_img": "images/items-map/Gold Kinstone (Falls).png",
+		  "chest_opened_img": "images/items-map/Gold Kinstone (Falls) Gray.png"
+		},
+		{
+		  "name":"Bombable Wall First Chest",
+		  "item_count":1,
+		  "access_rules":["$Falls_SourceFlowCave_FirstChest"],
+		  "chest_unopened_img":"images/items-map/chest_closed.png",
+		  "chest_opened_img":"images/items-map/chest_open.png"
+		},
+		{
+		  "name":"Bombable Wall Second Chest",
+		  "item_count":1,
+		  "access_rules":["$Falls_SourceFlowCave_SecondChest"],
+		  "chest_unopened_img":"images/items-map/chest_closed.png",
+		  "chest_opened_img":"images/items-map/chest_open.png"
+		}
+	]
+  }
+]

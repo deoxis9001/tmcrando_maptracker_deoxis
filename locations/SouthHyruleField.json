@@ -1,0 +1,120 @@
+[
+  {
+	"name":"SouthHyruleField - Tingle",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1622,
+		"y":1835,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Gift",
+		"item_count":1,
+		"access_rules":["$Json_SouthHyruleField_Tingle_Gift"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"SouthHyruleField - Smith's House",
+
+	"map_locations": [
+	  {
+		"map":"map",
+		"x":1430,
+		"y":1900
+	  }
+	],
+	"sections": [
+	  {
+		"name":"Chests",
+		"item_count": 3,
+		"access_rules":["$Json_SouthHyruleField_SmithsHouse_Chests"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }
+	]
+  },
+  {
+	"name":"SouthHyruleField - Minish Flippers Hole",
+	"map_locations": [
+	  {
+		"map":"map",
+		"x":1225,
+		"y":1800,
+	  }
+	],
+	"sections": [
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_SouthHyruleField_MinishFlippersHole_HeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"SouthHyruleField - Rupee Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1047,
+		"y":1836,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":15,
+		"access_rules":["$Json_SouthHyruleField_RupeeCave_Rupees"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"SouthHyruleField - Tree Heart Piece",
+	"map_locations": [
+	  {
+		"map":"map",
+		"x":1622,
+		"y":2000,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections": [
+	  {
+		"name":"Heart Piece",
+		"item_count": 1,
+		"access_rules":["$Json_SouthHyruleField_TreeHeartPiece_HeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"SouthHyruleField - Near Link's House Chest",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1505,
+		"y":1889,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_SouthHyruleField_NearLinksHouseChest_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }
+	]
+  }
+]

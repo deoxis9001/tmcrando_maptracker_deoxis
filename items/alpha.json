@@ -1,0 +1,20 @@
+[
+  //beta
+ {
+   "name": "beta",
+   "type": "progressive",
+   "img": "images/items/Alpha.png",
+   "allow_disabled": false,
+   "inherit_codes": false,
+   "stages":[
+     {
+       "img":"images/items/Alpha.png",
+       "codes": "beta,alpha"
+     },
+     {
+       "img":"images/items/Alpha.png",
+       "codes": "beta"
+     },
+   ]
+ },
+]

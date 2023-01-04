@@ -12,14 +12,14 @@
 	  {
 		"name":"First Gibdos",
 		"item_count":1,
-		"access_rules":["$Dungeon_N_Crypt_Gibdos"],
+		"access_rules":["$Json_Dungeon_Crypt_Gibdos"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  },
 	  {
 		"name":"Other Gibdos",
 		"item_count":1,
-		"access_rules":["$Dungeon_N_Crypt_OtherGibdos"],
+		"access_rules":["$Json_Dungeon_Crypt_OtherGibdos"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }
@@ -40,7 +40,7 @@
 	  {
 		"name":"Left Path",
 		"item_count":1,
-		"access_rules":["$Dungeon_N_Crypt_LeftPath"],
+		"access_rules":["$Json_Dungeon_Crypt_LeftPath"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  }
@@ -59,7 +59,7 @@
 	  {
 		"name":"Left Path",
 		"item_count":1,
-		"access_rules":["$Dungeon_N_Crypt_RightPath"],
+		"access_rules":["$Json_Dungeon_Crypt_RightPath"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  }
@@ -78,7 +78,7 @@
 	  {
 		"name":"King Gustaf",
 		"item_count":1,
-		"access_rules":["$Dungeon_N_Crypt_KingGustaf"],
+		"access_rules":["$Json_Dungeon_Crypt_KingGustaf"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }

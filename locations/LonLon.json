@@ -1,0 +1,180 @@
+[
+  {
+	"name":"Lon Lon Ranch - Digging Spot",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1865,
+		"y":980,
+        "restrict_visibility_rules":["obscure_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Digging (Above Tree)",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_DiggingSpot_Digging"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Lon Lon Ranch - Malon's Pot",
+	"map_locations":[
+      {
+        "map":"map",
+        "x":1910,
+        "y":1190
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Pot",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_MalonPot_Pot"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Lon Lon Ranch - Minish Crack",
+	"map_locations":[
+      {
+        "map":"map",
+        "x":2025,
+        "y":805
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$LonLon_MinishCrack_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Lon Lon Ranch - Cave",
+	"map_locations":[
+      {
+        "map":"map",
+        "x":1825,
+        "y":1075
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_Cave_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Hidden Chest (Bomb Wall)",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_Cave_HiddenChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Lon Lon Ranch - Bonk the Tree",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1975,
+		"y":1025,
+        "restrict_visibility_rules":["fusions_none"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_BonktheTree_HeartPiece"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Lon Lon Ranch - Bonk the Tree",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1975,
+		"y":1025,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_BonktheTree_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_BonktheTree_HeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"Lon Lon Ranch -  Dried Up Pond",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1995,
+		"y":1140,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Big Chest",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_DriedUpPond_BigChest"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Goron Quest",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1750,
+		"y":1365,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_GoronQuest_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Big Chest",
+		"item_count":1,
+		"access_rules":["$Json_LonLon_GoronQuest_BigChest"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png"
+	  }
+	]
+  }
+]

@@ -270,75 +270,91 @@ function HasMagicBoomerang()
 end
 
 function HasDamageSource()
-	if ( HasSword()==1 and has("weapons_off")) then
+	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasSword()==1 or HasBow()==1 or has("bombs") ) and has("weapons_on")) then
+	elseif ( ( HasBow()==1 or has("bombs") ) and has("weapons_on")) then
 		return 1
+	elseif ( ( HasBow()==1 or has("bombs") ) and has("weapons_off")) then
+		return 3
 	else
 		return 0
 	end
 end
 
 function HasChuDamage()
-	if ( HasSword()==1 and has("weapons_off")) then
+	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasSword()==1  or has("bombs") ) and has("weapons_on"))then
+	elseif ( has("bombs")  and has("weapons_on")) then
 		return 1
+	elseif ( has("bombs")  and has("weapons_off")) then
+		return 2
 	else
 		return 0
 	end
 end
 
 function HasGleerokDamage()
-	if ( HasSword()==1 and has("weapons_off")) then
+	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasSword()==1 or HasBow()==1  or has("bombs30") ) and has("weapons_on")) then
+	elseif ( (HasBow()==1  or has("bombs30") ) and has("weapons_on")) then
 		return 1
+	elseif ( (HasBow()==1  or has("bombs30") ) and has("weapons_off")) then
+		return 2
 	else
 		return 0
 	end
 end
 function HasWizrobeDamage()
-	if ( HasSword()==1 and has("weapons_off")) then
+	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasSword()==1 or HasBow()==1  or has("bombs")  or has("lamp")) and has("weapons_on")) then
+	elseif ( ( HasBow()==1  or has("bombs")  or has("lamp")) and has("weapons_on")) then
 		return 1
+	elseif ( ( HasBow()==1  or has("bombs")  or has("lamp")) and has("weapons_off")) then
+		return 2
 	else
 		return 0
 	end
 end
 function HasDarknutDamage()
-	if ( HasSword()==1 and has("weapons_off")) then
+	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasSword()==1 or HasBow()==1  or has("bombs") ) and has("weapons_on")) then
+	elseif ( HasBow()==1  or has("bombs") ) and has("weapons_on") then
 		return 1
+	elseif ( HasBow()==1  or has("bombs") ) and has("weapons_off") then
+		return 2
 	else
 		return 0
 	end
 end
 function HasHandDamage()
-	if ( HasSword()==1 and has("weapons_off")) then
+	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasSword()==1 or HasBow()==1  or has("bombs")) and has("weapons_on")) then
+	elseif ( (HasBow()==1  or has("bombs")) and has("weapons_on")) then
 		return 1
+	elseif ( (HasBow()==1  or has("bombs")) and has("weapons_off")) then
+		return 2
 	else
 		return 0
 	end
 end
 function HasMazaalDamage()
-	if ( HasSword()==1 and has("weapons_off")) then
+	if ( HasSword()==1 ) then
 		return 1
 	elseif ( has("weapons_on")) then
 		return 1
+	elseif ( has("weapons_off")) then
+		return 2
 	else
 		return 0
 	end
 end
 function HasGhiniDamage()
-	if ( HasSword()==1 and has("weapons_off")) then
+	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasSword()==1 or HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_on")) then
+	elseif ( (HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_on")) then
 		return 1
+	elseif ( (HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_off")) then
+		return 2
 	else
 		return 0
 	end
@@ -369,6 +385,8 @@ end
 function LikeLike()
 	if ( has("likelike_on") ) then
 		return 1
+	elseif ( HasSword()==1 and has("likelike_off") ) then
+		return 1
 	elseif ( has("likelike_off") ) then
 		return 2
 	else
@@ -378,9 +396,9 @@ end
 function BlowDust()
 	if ( (has("bombs") or has("gust") )  and has("blowdust_on")) then
 		return 1
-	elseif ( (has("bombs") )  and has("blowdust_off")) then
+	elseif ( (has("bombs") ) and has("blowdust_off")) then
 		return 1
-	elseif ( (has("gust") )  and has("blowdust_off")) then
+	elseif ( (has("gust") ) and has("blowdust_off")) then
 		return 2
 	else
 		return 0
@@ -469,6 +487,10 @@ end
 function CloudsKill()
 	if ( HasDamageSource()==1 and has("cloudskill_off")  ) then
 		return 1
+	elseif ( has("cloudskill_off")  ) then
+		return 2
+	elseif ( has("cloudskill_on")  ) then
+		return 2
 	else
 		return 0
 	end 
@@ -483,8 +505,10 @@ function FoWPot()
 	end 
 end
 function PoWJump()
-	if ( has("cane") and has("fowpot_off") ) then
+	if ( has("cape") and has("powjump_on") ) then
 		return 1
+	elseif ( has("cape") and has("powjump_off") ) then
+		return 2
 	else
 		return 0
 	end 

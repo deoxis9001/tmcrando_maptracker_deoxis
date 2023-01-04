@@ -1,0 +1,404 @@
+[
+  {
+	"name":"Minish Woods North - Syrup's Hut",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2435,
+		"y":1470,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Item (60 Rupees)",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_SyrupsHut_Item"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods North - Shrine Heart Piece",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2250,
+		"y":1900,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_ShrineHeartPiece_HeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods North - Heart Piece",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2100,
+		"y":1620,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_NorthernHeartPiece_HeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods North - Mitts Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2300,
+		"y":1600,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Digging",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MittCave_Digging"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Great Fairy",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2050,
+		"y":1470,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Gift",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_GreatFairy_Gift"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Minish Village",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2297,
+		"y":2000,
+		"restrict_visibility_rules":["fusions_none"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Barrel",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishVillage_Barrel"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishVillage_HeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Minish Village",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2297,
+		"y":2000,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Barrel",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishVillage_Barrel"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishVillage_HeartPiece"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishVillage_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	]
+  },
+  {
+	"name":"Minish Woods - Minish Flippers Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2050,
+		"y":1800,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Left Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishFlippersCave_LeftChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Left Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishFlippersCave_LeftHeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Middle Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishFlippersCave_MiddleChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Right Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_MinishFlippersCave_RightChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	]
+  },
+  {
+	"name":"Minish Woods - Like Like Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2375,
+		"y":1650,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chests",
+		"item_count":2,
+		"access_rules":["$Json_MinishWoods_LikeLikeCave_Chests"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Belari",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2175,
+		"y":1950,
+        "restrict_visibility_rules":["fusions_none"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Gift 1st Item",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_Belari_Gift1stItem"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Belari",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2175,
+		"y":1950,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Gift 1st Item",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_Belari_Gift1stItem"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Gift 2nd Item",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_Belari_Gift2ndItem"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	]
+  },
+  {
+	"name":"Minish Woods - Pre Minish Village - Minish Hole",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2336,
+		"y":2081,
+		"restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_PreMinishVillage_MinishHole_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Pre Stump Chest",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2580,
+		"y":1826,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_PreStumpChest_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Pre Shrine Chest",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2421,
+		"y":1921,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_PreShrineChest_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Post Minish Village",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2038,
+		"y":1879,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_PostMinishVillage_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods North - Octo Golden",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2200,
+		"y":1550,
+		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_GoldenOcto_Kill"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Entrance",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2112,
+		"y":1677,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_Entrance_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Minish Woods - Cross the Pond",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2049,
+		"y":1571,
+        "restrict_visibility_rules":["$Fusions"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_MinishWoods_CrossthePond_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  
+]
