@@ -80,4 +80,4 @@ function Json_LonLon_GoronQuest_BigChest()
   end
 end
 
-Tracker:AddLocations(JsLocations.."Lonlon.json")
+Tracker:AddLocations(JsLocations.."LonLon.json")
