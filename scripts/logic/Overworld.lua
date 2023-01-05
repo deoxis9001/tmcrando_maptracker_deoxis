@@ -687,7 +687,7 @@ end
 function ToDRightIceBlock() 
 	if ( has("open_world") ) then
 		return 1
-	elseif ( ( ToDBlueWarp()==1 and CanSplit2()==1) or has("lamp") ) then
+	elseif ( has("lamp") ) then
 		return 1
 	else
 		return 0
