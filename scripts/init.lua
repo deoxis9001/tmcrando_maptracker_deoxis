@@ -15,8 +15,8 @@ JsLocations="locations/"
 -- Configuration options for scripted systems in this pack
 ------------------------------------------------------------------
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
-AUTOTRACKER_ENABLE_LOCATION_TRACKING = false
-TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
+AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
+TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = true
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
 VERSION_ALPHA = true
@@ -111,6 +111,9 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Droplet.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Palace.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/DHC.lua")
+	Tracker:AddLocations(JsLocations.."Dungeons.json")
+	-- Tracker:AddLocations(JsLocations.."Maps.json")
+
 end
 	Tracker:AddLayouts(JsLayouts.."tracker.json")
 if (string.find(Tracker.ActiveVariantUID, "_h")) then

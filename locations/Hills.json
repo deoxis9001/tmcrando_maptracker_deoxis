@@ -90,7 +90,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Chest",
+		"name":"Chests",
 		"item_count":2,
 		"access_rules":["$Json_Hills_Beanstalk_Chests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",

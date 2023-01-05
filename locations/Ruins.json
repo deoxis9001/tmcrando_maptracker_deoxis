@@ -167,7 +167,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Butterfly",
+		"name":"Joy Butterfly",
 		"item_count":1,
 		"access_rules":["$Json_Ruins_JoyButterfly_Butterfly"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",

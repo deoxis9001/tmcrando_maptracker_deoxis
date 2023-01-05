@@ -43,7 +43,7 @@ function Fortress_Left_2F_Item()
 end
 
 
-function Fortress_Left_3F_SwitchChest() 
+function Fortress_Left_3F_SwitchChest() -- pas utiliser sur le tracker
 	if ( AccessFortress()==1 and FoWEyeSwitch()==1 and FoWStalfosFight()==1 and FoWDigSwitch()==1) then
 		return 1
 	else
@@ -97,7 +97,7 @@ function Fortress_Right_2F_LeftChest()
 end
 
 
-function Fortress_Right_2F_RightChest() 
+function Fortress_Right_2F_RightChest()  -- pas utiliser sur le tracker
 	if ( AccessFortress()==1 ) then
 		return 1
 	else
@@ -115,7 +115,7 @@ function Fortress_Right_2F_DigChest()
 end
 
 
-function Fortress_Right_3F_DigChest() 
+function Fortress_Right_3F_DigChest()   -- pas utiliser sur le tracker
 	if ( AccessFortress()==1 and has("mitts") ) then
 		return 1
 	else
@@ -143,7 +143,7 @@ end
 
 
 function Fortress_BackLeft_BigChest() 
-    if ( AccessFortress()==1 and ( FoWBlueWarp()==1 or ( FoWEyegores()==1 and FoWLeftDoor()==1 and FoWDarknut()==1 )) and BombWalls()==1 then
+    if ( AccessFortress()==1 and ( FoWBlueWarp()==1 or ( FoWEyegores()==1 and FoWLeftDoor()==1 and FoWDarknut()==1 )) and BombWalls()==1 ) then
 		return 1
 	else
 		return 0
@@ -152,7 +152,7 @@ end
 
 
 function Fortress_BackLeft_SmallChest() 
-	if ( AccessFortress()==1 and (FoWBlueWarp()==1 or (FoWEyegores()==1 and FoWLeftDoor()==1 and FoWDarknut()==+)) and BombWalls()==1 and has("mitts") ) then
+	if ( AccessFortress()==1 and (FoWBlueWarp()==1 or (FoWEyegores()==1 and FoWLeftDoor()==1 and FoWDarknut()==1)) and BombWalls()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0

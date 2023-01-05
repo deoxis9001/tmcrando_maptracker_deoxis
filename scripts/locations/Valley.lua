@@ -66,5 +66,13 @@ function Json_Valley_Butterfly_JoyButterfly()
   end
 end
 
+function Json_Valley_PreRoyalValeyChest_Chest()
+  if Valley_PreValleyFusion_Chest()==1then
+    return 1
+  else
+    return 0
+  end
+end
+
 
 Tracker:AddLocations(JsLocations.."Valley.json")

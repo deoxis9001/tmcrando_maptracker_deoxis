@@ -610,14 +610,13 @@ end
 function ToDMainRoom() 
 	if ( has("open_world") and ToDBigDoor()==1 ) then
 		return 1
-	elseif ( ToDBigDoor()==1 or ( ToDBlueWarp()==1 and ( ToDScissorBeetles()==1 or ( ToDLeftReverse()==1 and has("flippers") ) ) or ( ToDRedWarp()==1 and BombWalls()==1 and ToDWeb()==1 and ToDMadderpillars()==1 ) ) ) then
+	elseif ( ToDBigDoor()==1 ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function ToDBlueWarp()
---Helpers.ToDMainRoom, (|Helpers.ToDLeftPath, (&Helpers.ToDRightPath, Items.RocsCape), Helpers.ToDEitherPath) 
 	if ( has("open_world") ) then
 		return 1
 	elseif ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) and ToDEitherPath()==1 ) ) then
@@ -647,7 +646,7 @@ end
 function ToDLeftPillars() 
 	if ( has("open_world") ) then
 		return 1
-	elseif ( has("GustJar") ) then
+	elseif ( has("gust") ) then
 		return 1
 	else
 		return 0

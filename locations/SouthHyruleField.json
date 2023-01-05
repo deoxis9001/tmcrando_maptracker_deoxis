@@ -1,6 +1,6 @@
 [
   {
-	"name":"SouthHyruleField - Tingle",
+	"name":"South Field - Tingle",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -19,7 +19,7 @@
 	]
   },
   {
-	"name":"SouthHyruleField - Smith's House",
+	"name":"South Field - Smith's House",
 
 	"map_locations": [
 	  {
@@ -39,7 +39,7 @@
 	]
   },
   {
-	"name":"SouthHyruleField - Minish Flippers Hole",
+	"name":"South Field - Minish Flippers Hole",
 	"map_locations": [
 	  {
 		"map":"map",
@@ -58,13 +58,13 @@
 	]
   },
   {
-	"name":"SouthHyruleField - Rupee Cave",
+	"name":"South Field - Rupee Cave",
 	"map_locations":[
 	  {
 		"map":"map",
 		"x":1047,
 		"y":1836,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$Fusions,rupees_on"]
 	  }
 	],
 	"sections":[
@@ -78,7 +78,7 @@
 	]
   },
   {
-	"name":"SouthHyruleField - Tree Heart Piece",
+	"name":"South Field - Tree Heart Piece",
 	"map_locations": [
 	  {
 		"map":"map",
@@ -98,7 +98,7 @@
 	]
   },
   {
-	"name":"SouthHyruleField - Near Link's House Chest",
+	"name":"South Field - Near Link's House Chest",
 	"map_locations":[
 	  {
 		"map":"map",

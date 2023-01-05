@@ -5,8 +5,7 @@
 	  {
 		"map":"map",
 		"x":1125,
-		"y":1050,
-		 "restrict_visibility_rules":["rupees_on,obscure_on"]
+		"y":1050
 	  }
 	],
 	"sections":[
@@ -26,38 +25,12 @@
 	  },
 	  {
 		"name":"Under the Waterfall",
+		"visibility_rules":["rupees_on,obscure_on"],
 		"item_count":1,
 		"access_rules":["$Json_Town_FlippersCave_UndertheWaterfall"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 		"visibility_rules":"rupees_on,obscure_on"
-	  }
-	]
-  },
-  {
-	"name":"Town - Flippers Cave",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1125,
-		"y":1050,
-        "restrict_visibility_rules":["rupees_off","obscure_off"]
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Scissor Beetles",
-		"item_count":1,
-		"access_rules":["$Json_Town_FlippersCave_ScissorBeetles"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Frozen Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_FlippersCave_FrozenChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
 	  }
 	]
   },
@@ -68,7 +41,6 @@
 		"map":"map",
 		"x":1610,
 		"y":1275,
-        "restrict_visibility_rules":["obscure_on"]
 	  }
 	],
 	"sections":[
@@ -81,31 +53,12 @@
       },
 	  {
 		"name":"Right Pot",
+		"visibility_rules":["obscure_on"],
 		"item_count":1,
 		"access_rules":["$Json_Town_Inn_RightPot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
       }
-	]
-  },
-  {
-	"name":"Town - Inn",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1610,
-		"y":1275,
-        "restrict_visibility_rules":["obscure_off"]
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Back Door - Heart Piece",
-		"item_count":1,
-		"access_rules":["$Json_Town_Inn_BackDoorHeartPiece"],
-		"chest_unopened_img":"images/items-map/Heart Piece.png",
-		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
-	  }
 	]
   },
   {
@@ -232,41 +185,13 @@
 		"map":"map",
 		"x":1600,
 		"y":1067,
-        "restrict_visibility_rules":["fusions_none"]
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Chests",
-		"item_count":3,
-		"access_rules":["$Json_Town_SchoolGardens_GardenChests"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Heart Piece",
-		"item_count":1,
-        "capture_item":true,
-		"access_rules":["$Json_Town_SchoolGardens_HeartPiece"],
-		"chest_unopened_img":"images/items-map/Heart Piece.png",
-		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
-	  }
-	]
-  },
-  {
-	"name":"Town - School Gardens",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1600,
-		"y":1067,
         "restrict_visibility_rules":["$Fusions"]
 	  }
 	],
 	"sections":[
 	  {
 		"name":"Garden Chests",
-		"item_count":1,
+		"item_count":3,
 		"access_rules":["$Json_Town_SchoolGardens_GardenChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -281,6 +206,7 @@
 	  },
 	  {
 		"name":"Minish Path Chest",
+		"visibility_rules":["$Fusions"],
 		"item_count":1,
 		"access_rules":["$Json_Town_SchoolGardens_MinishPathChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",

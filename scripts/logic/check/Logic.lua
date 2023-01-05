@@ -1274,7 +1274,7 @@ function SouthField_MinishSize_WaterHole_HP()
 	end 
 end
 function SouthField_Tingle_NPC() 
-	if ( has("PacciCane")  and has("trophy") and ( CanDestroyTrees()==1 or WindCrest()==1 ) ) then
+	if ( has("cane")  and has("trophy") and ( CanDestroyTrees()==1 or WindCrest()==1 ) ) then
 		return 1
 	else
 		return 0

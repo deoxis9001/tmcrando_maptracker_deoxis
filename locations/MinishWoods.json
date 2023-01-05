@@ -19,7 +19,7 @@
 	]
   },
   {
-	"name":"Minish Woods North - Shrine Heart Piece",
+	"name":"Minish Woods - Shrine Heart Piece",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -67,7 +67,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Digging",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_MinishWoods_MittCave_Digging"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -100,8 +100,7 @@
 	  {
 		"map":"map",
 		"x":2297,
-		"y":2000,
-		"restrict_visibility_rules":["fusions_none"]
+		"y":2000
 	  }
 	],
 	"sections":[
@@ -118,36 +117,10 @@
 		"access_rules":["$Json_MinishWoods_MinishVillage_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
-	  }
-	]
-  },
-  {
-	"name":"Minish Woods - Minish Village",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":2297,
-		"y":2000,
-        "restrict_visibility_rules":["$Fusions"]
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Barrel",
-		"item_count":1,
-		"access_rules":["$Json_MinishWoods_MinishVillage_Barrel"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Heart Piece",
-		"item_count":1,
-		"access_rules":["$Json_MinishWoods_MinishVillage_HeartPiece"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Chest",
+		"visibility_rules":["$Fusions"],
 		"item_count":1,
 		"access_rules":["$Json_MinishWoods_MinishVillage_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -220,28 +193,7 @@
 	  {
 		"map":"map",
 		"x":2175,
-		"y":1950,
-        "restrict_visibility_rules":["fusions_none"]
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Gift 1st Item",
-		"item_count":1,
-		"access_rules":["$Json_MinishWoods_Belari_Gift1stItem"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
-  },
-  {
-	"name":"Minish Woods - Belari",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":2175,
-		"y":1950,
-        "restrict_visibility_rules":["$Fusions"]
+		"y":1950
 	  }
 	],
 	"sections":[
@@ -254,6 +206,7 @@
 	  },
 	  {
 		"name":"Gift 2nd Item",
+		"visibility_rules":["$Fusions"],
 		"item_count":1,
 		"access_rules":["$Json_MinishWoods_Belari_Gift2ndItem"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -381,7 +334,7 @@
 	]
   },
   {
-	"name":"Minish Woods - Cross the Pond",
+	"name":"Minish Woods North - Cross the Pond",
 	"map_locations":[
 	  {
 		"map":"map",

@@ -1,4 +1,4 @@
-DirWorld="Dungeons/Crypt/"
+-- DirWorld="Dungeons/Crypt/"
 
 function Json_Dungeon_Crypt_Gibdos()
   if Crypt_Gibdo_LeftItem()==1 then
@@ -40,6 +40,6 @@ function Json_Dungeon_Crypt_KingGustaf()
   end
 end
 
-Tracker:AddLocations(JsLocations..""..DirWorld.."Normal/Crypt.json")
-Tracker:AddLocations(JsLocations..""..DirWorld.."Map/Crypt.json")
+-- Tracker:AddLocations(JsLocations..""..DirWorld.."Normal/Crypt.json")
+-- Tracker:AddLocations(JsLocations..""..DirWorld.."Map/Crypt.json")
 

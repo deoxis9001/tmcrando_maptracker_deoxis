@@ -141,3 +141,47 @@ function CoFBasementAccess()
 		return 0
 	end 
 end
+function AccessFortress()
+	if ( AccessRuins()==1 and HasSword()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function AccessDroplets()
+	if ( AccessLonLon()==1 and CapeExtension()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function AccessPalace()
+	if ( AccessWindTribe()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function PoW2ndHalf()
+	if ( AccessPalace()==1 and has("cape") and CanSplit3()==1 and PoWJump()==1 and PoW1stDoor()==1 and PoWBigDoor()==1) then
+		return 1
+	else
+		return 0
+	end 
+end
+function AccessDHC()
+	if ( has("dhc_open") or has("dhc_peditems") ) then
+		return 1
+	elseif ( ( has("dhc_closed") or has("dhc_none") ) and CompletePed()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function DHCBlackKnight()
+	if ( DHCBlueWarp()==1 or ( DHCRedWarp()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 and DHCBlackKnightFight()==1 ) or ( DHC1stDoor()==1 and DHC2ndCanon()==1 and BombWalls()==1 and DHCThrone()==1 and CanSplit4()==1 and DHCOutsideSwitch()==1 and DHCSwitchPuzzles()==1 and DHCChainSoldiers()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 and DHCBlackKnightFight()==1 ) ) then
+		return 1
+	else
+		return 0
+	end 
+end

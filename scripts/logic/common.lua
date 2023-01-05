@@ -132,17 +132,34 @@ end
 function GotElements()
   if has("element0Needed") then
     return 1
-  elseif has("element1Needed") and OneElement()==1 then
+  elseif has("element1Needed") and NumberElement()>=1 then
     return 1
-  elseif has("element2Needed") and TwoElements()==1 then
+  elseif has("element2Needed") and NumberElement()>=2 then
     return 1
-  elseif has("element3Needed") and ThreeElements()==1 then
+  elseif has("element3Needed") and NumberElement()>=3 then
     return 1
-  elseif has("element4Needed") and FourElements()==1 then
+  elseif has("element4Needed") and NumberElement()>=4 then
     return 1
   else
     return 0
   end
+end
+
+function NumberElement()
+	local count_element=0
+	if has("water") then
+		count_element = count_element + 1
+	end
+	if has("fire") then
+		count_element = count_element + 1
+	end
+	if has("wind") then
+		count_element = count_element + 1
+	end
+	if has("earth") then
+		count_element = count_element + 1
+	end
+	return count_element
 end
 
 function GotFigurine()
@@ -206,7 +223,7 @@ function HasSpin()
 end
 
 function CanSplit2()
-	if ( Sword3()==1 ) then
+	if ( Sword3()==1 and has("spinattack") ) then
 		return 1
 	else
 		return 0
@@ -214,7 +231,7 @@ function CanSplit2()
 end
 
 function CanSplit3()
-	if ( Sword4()==1 ) then
+	if ( Sword4()==1 and has("spinattack")  ) then
 		return 1
 	else
 		return 0
@@ -222,7 +239,7 @@ function CanSplit3()
 end
 
 function CanSplit4()
-	if ( Sword5()==1 ) then
+	if ( Sword5()==1 and has("spinattack")  ) then
 		return 1
 	else
 		return 0
@@ -506,6 +523,8 @@ function FoWPot()
 end
 function PoWJump()
 	if ( has("cape") and has("powjump_on") ) then
+		return 1
+	elseif ( has("cane") and has("powjump_off") ) then
 		return 1
 	elseif ( has("cape") and has("powjump_off") ) then
 		return 2

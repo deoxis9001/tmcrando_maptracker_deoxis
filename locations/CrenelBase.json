@@ -1,6 +1,6 @@
 [
   {
-	"name":"CrenelBase - Spring Water Path Chest",
+	"name":"Crenel Base - Spring Water Path Chest",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -20,7 +20,7 @@
 	]
   },
   {
-	"name":"CrenelBase - Chest",
+	"name":"Crenel Base - Chest",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -40,7 +40,7 @@
 	]
   },
   {
-	"name":"CrenelBase - Minish Hole",
+	"name":"Crenel Base - Minish Hole",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -59,7 +59,7 @@
 	]
   },
   {
-	"name":"CrenelBase - Minish Crack",
+	"name":"Crenel Base - Minish Crack",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -78,7 +78,7 @@
 	]
   },
   {
-	"name":"CrenelBase - Heart Piece Cave",
+	"name":"Crenel Base - Heart Piece Cave",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -104,7 +104,7 @@
 	]
   },
   {
-	"name":"CrenelBase - Vine Rupee",
+	"name":"Crenel Base - Vine Rupee",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -124,7 +124,7 @@
 	]
   },
   {
-	"name":"CrenelBase - Fairy",
+	"name":"Crenel Base - Fairy",
 	"map_locations":[
 	  {
 		"map":"map",

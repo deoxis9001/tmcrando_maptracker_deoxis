@@ -141,28 +141,7 @@
 	  {
 		"map":"map",
 		"x":25,
-		"y":1175,
-		"restrict_visibility_rules":["fusions_none"]
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Big Chest",
-		"item_count":1,
-		"access_rules":["$Json_Swamp_Mulldozers_BigChest"],
-		"chest_unopened_img":"images/items-map/big_chest_closed.png",
-		"chest_opened_img":"images/items-map/big_chest_open.png"
-	  }
-	]
-  },
-  {
-	"name":"Castor Wilds - Mulldozers",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":25,
-		"y":1175,
-		"restrict_visibility_rules":["$Fusions"]
+		"y":1175
 	  }
 	],
 	"sections":[
@@ -175,6 +154,7 @@
 	  },
 	  {
 		"name":"Left Chest",
+		"visibility_rules":["$Fusions"],
 		"item_count":1,
 		"access_rules":["$Json_Swamp_Mulldozers_LeftChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",

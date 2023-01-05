@@ -30,7 +30,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Chest",
+		"name":"Chests",
 		"item_count":2,
 		"access_rules":["$Json_Trilby_MittsCave_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -97,7 +97,7 @@
 	]
   },
   {
-	"name":"Northern Chest",
+	"name":"Trilby Highlands - Northern Chest",
 	"map_locations":[
 	  {
 		"map":"map",

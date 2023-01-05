@@ -1,4 +1,4 @@
-DirWorld="Dungeons/CaveOfFlame/"
+-- DirWorld="Dungeons/CaveOfFlame/"
 
 function Json_Dungeon_CaveOfFlame_SpinyBeetleFight()
   if CoF_1F_SpikeBeetle_BigChest()==1 then
@@ -99,7 +99,7 @@ function Json_Dungeon_CaveOfFlame_Gleerok()
 end
 
 
-Tracker:AddLocations(JsLocations..""..DirWorld.."Normal/CaveOfFlame.json")
-Tracker:AddLocations(JsLocations..""..DirWorld.."Rupee/CaveOfFlame.json")
-Tracker:AddLocations(JsLocations..""..DirWorld.."Map/CaveOfFlame.json")
+-- Tracker:AddLocations(JsLocations..""..DirWorld.."Normal/CaveOfFlame.json")
+-- Tracker:AddLocations(JsLocations..""..DirWorld.."Rupee/CaveOfFlame.json")
+-- Tracker:AddLocations(JsLocations..""..DirWorld.."Map/CaveOfFlame.json")
 

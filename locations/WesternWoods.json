@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":710,
 		"y":2005,
-		"restrict_visibility_rules":["$Fusions,rupees_on"]
+		"restrict_visibility_rules":["$Fusions"]
 	  }
 	],
 	"sections":[
@@ -19,28 +19,9 @@
 	  },
 	  {
 		"name":"Rupees",
+		"visibility_rules":["rupees_on"],
 		"item_count":16,
 		"access_rules":["$Json_WesternWoods_Beanstalk_Rupees"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
-  },
-  {
-	"name":"Western Woods - Beanstalk",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":710,
-		"y":2005,
-		"restrict_visibility_rules":["$Fusions,rupees_off"]
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Chest",
-		"item_count":1,
-		"access_rules":["$Json_WesternWoods_Beanstalk_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }
@@ -107,7 +88,7 @@
 	]
   },
   {
-	"name":"Western Wood - Chest",
+	"name":"Western Woods - Chest",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -127,7 +108,7 @@
 	]
   },
   {
-	"name":"Western Wood - Percy's House",
+	"name":"Western Woods - Percy's House",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -154,7 +135,7 @@
 	]
   },
   {
-	"name":"Western Wood - Octo Golden",
+	"name":"Western Woods - Octo Golden",
 	"map_locations":[
 	  {
 		"map":"map",
