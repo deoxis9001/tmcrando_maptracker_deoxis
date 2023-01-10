@@ -121,7 +121,7 @@ end
 
 
 function Json_MinishWoods_PreMinishVillage_MinishHole_Chest()
-  if MinishWoods_MinishPathFusion_Chest()==1 then
+  if MinishWoods_CrackFusion_Chest()==1 then
     return 1
   else
     return 0
@@ -153,7 +153,7 @@ function Json_MinishWoods_PostMinishVillage_Chest()
 end
 
 function Json_MinishWoods_GoldenOcto_Kill()
-  if MinishWoods_OctoGolden_KillOcto()==1 then
+  if MinishWoods_GoldenOcto()==1 then
     return 1
   else
     return 0

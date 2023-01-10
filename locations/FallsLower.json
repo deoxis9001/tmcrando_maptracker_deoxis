@@ -88,7 +88,7 @@
 		"map":"map",
 		"x":1820,
 		"y":686,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -108,7 +108,7 @@
 		"map":"map",
 		"x":1772,
 		"y":826,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[

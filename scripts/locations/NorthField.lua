@@ -64,16 +64,3 @@ end
 
 
 Tracker:AddLocations(JsLocations.."NorthField.json")
-
-
--- DirWorld="NorthField/"
-
--- Tracker:AddLocations(JsLocations..""..DirWorld.."".. F .."BottomLeftTree.json")
--- Tracker:AddLocations(JsLocations..""..DirWorld.."".. F .."BottomRightTree.json")
--- Tracker:AddLocations(JsLocations..""..DirWorld.."".. F .."TopLeftTree.json")
--- Tracker:AddLocations(JsLocations..""..DirWorld.."".. F .."TopRightTree.json")
--- Tracker:AddLocations(JsLocations..""..DirWorld.."".. F .."Waterfall.json")
--- Tracker:AddLocations(JsLocations..""..DirWorld.."".. F .."4TreesDone.json")
--- Tracker:AddLocations(JsLocations..""..DirWorld.."".. N .."CaveHeartPiece.json")
--- Tracker:AddLocations(JsLocations..""..DirWorld.."".. O .."DiggingSpot.json")
-

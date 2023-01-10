@@ -1136,7 +1136,7 @@
 		"map":"fow",
 		"x":2480,
 		"y":930,
-		"restrict_visibility_rules":["obscure_on"]
+		"restrict_visibility_rules":["specialpot_on"]
 	  }
 	],
 	"sections":[
@@ -1157,7 +1157,7 @@
 		"map":"fow",
 		"x":2365,
 		"y":1080,
-		"restrict_visibility_rules":["obscure_on"]
+		"restrict_visibility_rules":["specialpot_on"]
 	  }
 	],
 	"sections":[

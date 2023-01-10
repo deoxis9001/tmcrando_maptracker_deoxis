@@ -79,7 +79,7 @@ function Falls_FusionDiggingCave_Chest()
 end
 
 function Falls_TektiteGolden_Kill()
-  if Falls_TekiteGolden_KillTekite()==1 then
+  if Falls_GoldenTektite()==1 then
     return 1
   else
     return 0

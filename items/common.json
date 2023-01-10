@@ -914,6 +914,7 @@
    "codes": "figurine",
    "min_quantity":0,
    "max_quantity":136,
-   "display_as_fraction_of_max":true
- }
+   "display_as_fraction_of_max":true,
+   "badge_font_size":5
+ },
 ]

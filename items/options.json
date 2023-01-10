@@ -1,50 +1,24 @@
 [
+//option  tracker
   {
-    "name": "Obscure Locations",
+    "name": "Out of logic",
     "type": "progressive",
     "loop": true,
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/Obscure_On.png",
-        "codes":"obscure_on",
+        "img":"images/options/OtherSetting/No_Logic_off.png",
+        "codes":"nologic_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/Obscure_Off.png",
-        "codes":"obscure_off",
+        "img":"images/options/OtherSetting/No_Logic_on.png",
+        "codes":"nologic_on",
         "inherit_codes":false
       }
     ]
   },
-  {
-    "name": "Fusions",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/Kinsanity_Open.png",
-        "codes": "fusions_open",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/Kinsanity_None.png",
-        "codes": "fusions_none",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/Kinsanity_World.png",
-        "codes": "open_world",
-        "inherit_codes":false
-      },
-      // {
-      //   "img": "images/options/Kinsanity_Rando.png",
-      //   "codes": "fusions_rando",
-      //   "inherit_codes":false
-      // }
-    ]
-  },
+  //DHC requirement
   {
     "name":"DHC",
     "type":"progressive",
@@ -53,22 +27,17 @@
     "inherit_codes":false,
     "stages":[
       {
-        "img":"images/options/dhc_closed.png",
+        "img":"images/options/DHCRequirements/dhc_closed.png",
         "codes":"dhc_closed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/dhc_open.png",
+        "img":"images/options/DHCRequirements/dhc_open.png",
         "codes":"dhc_open",
         "inherit_codes":false
       },
       {
-        "img":"images/options/dhc_peditems.png",
-        "codes":"dhc_peditems",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/dhc_fast.png",
+        "img":"images/options/DHCRequirements/dhc_fast.png",
         "codes":"dhc_none",
         "inherit_codes":false
       }
@@ -81,27 +50,27 @@
     "allow_disabled":false,
     "stages":[
 	  {
-        "img":"images/options/Element4.png",
+        "img":"images/options/DHCRequirements/Element4.png",
         "inherit_codes":false,
         "codes":"element4Needed"
       },
       {
-        "img":"images/options/Element0.png",
+        "img":"images/options/DHCRequirements/Element0.png",
         "inherit_codes":false,
         "codes":"element0Needed"
       },
       {
-        "img":"images/options/Element1.png",
+        "img":"images/options/DHCRequirements/Element1.png",
         "inherit_codes":false,
         "codes":"element1Needed"
       },
       {
-        "img":"images/options/Element2.png",
+        "img":"images/options/DHCRequirements/Element2.png",
         "inherit_codes":false,
         "codes":"element2Needed"
       },
       {
-        "img":"images/options/Element3.png",
+        "img":"images/options/DHCRequirements/Element3.png",
         "inherit_codes":false,
         "codes":"element3Needed"
       }
@@ -114,77 +83,41 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img": "images/options/sword5.png",
+        "img": "images/options/DHCRequirements/sword5.png",
         "inherit_codes": false,
         "codes": "sword5Needed"
       },
       {
-        "img": "images/options/sword0.png",
+        "img": "images/options/DHCRequirements/sword0.png",
         "inherit_codes": false,
         "codes": "sword0Needed"
       },
       {
-        "img": "images/options/sword1.png",
+        "img": "images/options/DHCRequirements/sword1.png",
         "inherit_codes": false,
         "codes": "sword1Needed"
       },
       {
-        "img": "images/options/sword2.png",
+        "img": "images/options/DHCRequirements/sword2.png",
         "inherit_codes": false,
         "codes": "sword2Needed"
       },
       {
-        "img": "images/options/sword3.png",
+        "img": "images/options/DHCRequirements/sword3.png",
         "inherit_codes": false,
         "codes": "sword3Needed"
       },
       {
-        "img": "images/options/sword4.png",
+        "img": "images/options/DHCRequirements/sword4.png",
         "inherit_codes": false,
         "codes": "sword4Needed"
       }
     ]
   },
   {
-    "name":"Rupeemania",
-    "type":"progressive",
-    "loop":true,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/RupeeON.png",
-        "codes":"rupees_on",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/RupeeOFF.png",
-        "codes":"rupees_off",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Golden Enemy",
-    "type":"progressive",
-    "loop":true,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/golden_enemy_off.png",
-        "codes":"golden_enemy_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/golden_enemy_on.png",
-        "codes":"golden_enemy_on",
-        "inherit_codes":false
-      }
-    ],
-  },
-  {
    "name": "Figurine",
    "type": "consumable",
-   "img": "images/options/figurine.png",
+   "img": "images/options/DHCRequirements/figurine.png",
    "codes": "figurine_option",
    "min_quantity":0,
    "initial_quantity": 0,
@@ -197,32 +130,32 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/dungeons0.png",
+        "img":"images/options/DHCRequirements/dungeons0.png",
         "codes": "dungeons,dungeons0",
         "inherit_codes":false
       },
       {
-        "img": "images/options/dungeons1.png",
+        "img": "images/options/DHCRequirements/dungeons1.png",
         "codes": "dungeons1"
       },
       {
-        "img": "images/options/dungeons2.png",
+        "img": "images/options/DHCRequirements/dungeons2.png",
         "codes": "dungeons2"
       },
       {
-        "img": "images/options/dungeons3.png",
+        "img": "images/options/DHCRequirements/dungeons3.png",
         "codes": "dungeons3"
       },
       {
-        "img": "images/options/dungeons4.png",
+        "img": "images/options/DHCRequirements/dungeons4.png",
         "codes": "dungeons4"
       },
       {
-        "img": "images/options/dungeons5.png",
+        "img": "images/options/DHCRequirements/dungeons5.png",
         "codes": "dungeons5"
       },
       {
-        "img": "images/options/dungeons6.png",
+        "img": "images/options/DHCRequirements/dungeons6.png",
         "codes": "dungeons6"
       },
     ]
@@ -234,31 +167,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/weapons_on.png",
+        "img":"images/options/LogicSettings/weapons_on.png",
         "codes": "weapons_on",
         "inherit_codes":false
       },
       {
-        "img": "images/options/weapons_off.png",
+        "img": "images/options/LogicSettings/weapons_off.png",
         "codes": "weapons_off",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "hundo",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/hundo_off.png",
-        "codes": "hundo_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/hundo_on.png",
-        "codes": "hundo_on",
         "inherit_codes":false
       }
     ]
@@ -270,12 +185,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/GuardSkip_off.png",
+        "img": "images/options/LogicSettings/GuardSkip_off.png",
         "codes": "guardskip_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/GuardSkip_on.png",
+        "img":"images/options/LogicSettings/GuardSkip_on.png",
         "codes": "guardskip_on",
         "inherit_codes":false
       }
@@ -288,13 +203,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LikeLike_on.png",
-        "codes": "likelike_on",
+        "img": "images/options/LogicSettings/LikeLike_off.png",
+        "codes": "likelike_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LikeLike_off.png",
-        "codes": "likelike_off",
+        "img":"images/options/LogicSettings/LikeLike_on.png",
+        "codes": "likelike_on",
         "inherit_codes":false
       }
     ]
@@ -306,13 +221,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/BlowDust_on.png",
-        "codes": "blowdust_on",
+        "img":"images/options/LogicSettings/BlowDust_off.png",
+        "codes": "blowdust_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/BlowDust_off.png",
-        "codes": "blowdust_off",
+        "img": "images/options/LogicSettings/BlowDust_on.png",
+        "codes": "blowdust_on",
         "inherit_codes":false
       }
     ]
@@ -324,13 +239,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/CrenelMushroom_on.png",
-        "codes": "crenelmushroom_on",
+        "img":"images/options/LogicSettings/CrenelMushroom_off.png",
+        "codes": "crenelmushroom_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/CrenelMushroom_off.png",
-        "codes": "crenelmushroom_off",
+        "img": "images/options/LogicSettings/CrenelMushroom_on.png",
+        "codes": "crenelmushroom_on",
         "inherit_codes":false
       }
     ]
@@ -342,13 +257,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LightArrowBreak_on.png",
-        "codes": "lightarrowbreak_on",
+        "img":"images/options/LogicSettings/LightArrowBreak_off.png",
+        "codes": "lightarrowbreak_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LightArrowBreak_off.png",
-        "codes": "lightarrowbreak_off",
+        "img": "images/options/LogicSettings/LightArrowBreak_on.png",
+        "codes": "lightarrowbreak_on",
         "inherit_codes":false
       }
     ]
@@ -360,12 +275,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/CrenelBeam_off.png",
+        "img": "images/options/LogicSettings/CrenelBeam_off.png",
         "codes": "crenelbeam_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/CrenelBeam_on.png",
+        "img":"images/options/LogicSettings/CrenelBeam_on.png",
         "codes": "crenelbeam_on",
         "inherit_codes":false
       }
@@ -378,13 +293,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/DownStrikeBeetle_on.png",
-        "codes": "downstrikebeetle_on",
+        "img":"images/options/LogicSettings/DownStrikeBeetle_off.png",
+        "codes": "downstrikebeetle_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/DownStrikeBeetle_off.png",
-        "codes": "downstrikebeetle_off",
+        "img": "images/options/LogicSettings/DownStrikeBeetle_on.png",
+        "codes": "downstrikebeetle_on",
         "inherit_codes":false
       }
     ]
@@ -396,13 +311,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/CapeExtension_on.png",
-        "codes": "capeextension_on",
+        "img":"images/options/LogicSettings/CapeExtension_off.png",
+        "codes": "capeextension_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/CapeExtension_off.png",
-        "codes": "capeextension_off",
+        "img": "images/options/LogicSettings/CapeExtension_on.png",
+        "codes": "capeextension_on",
         "inherit_codes":false
       }
     ]
@@ -414,12 +329,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/DarkRooms_off.png",
+        "img":"images/options/LogicSettings/DarkRooms_off.png",
         "codes": "darkrooms_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/DarkRooms_on.png",
+        "img": "images/options/LogicSettings/DarkRooms_on.png",
         "codes": "darkrooms_on",
         "inherit_codes":false
       }
@@ -432,12 +347,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LakeMinish_off.png",
+        "img": "images/options/LogicSettings/LakeMinish_off.png",
         "codes": "lakeminish_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LakeMinish_on.png",
+        "img":"images/options/LogicSettings/LakeMinish_on.png",
         "codes": "lakeminish_on",
         "inherit_codes":false
       }
@@ -450,13 +365,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/CabinSwim_on.png",
-        "codes": "cabinswim_on",
+        "img":"images/options/LogicSettings/CabinSwim_off.png",
+        "codes": "cabinswim_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/CabinSwim_off.png",
-        "codes": "cabinswim_off",
+        "img": "images/options/LogicSettings/CabinSwim_on.png",
+        "codes": "cabinswim_on",
         "inherit_codes":false
       }
     ]
@@ -468,12 +383,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/CloudsKill_off.png",
+        "img":"images/options/LogicSettings/CloudsKill_off.png",
         "codes": "cloudskill_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/CloudsKill_on.png",
+        "img": "images/options/LogicSettings/CloudsKill_on.png",
         "codes": "cloudskill_on",
         "inherit_codes":false
       }
@@ -486,13 +401,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/FoWPot_on.png",
-        "codes": "fowpot_on",
+        "img":"images/options/LogicSettings/FoWPot_off.png",
+        "codes": "fowpot_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/FoWPot_off.png",
-        "codes": "fowpot_off",
+        "img": "images/options/LogicSettings/FoWPot_on.png",
+        "codes": "fowpot_on",
         "inherit_codes":false
       }
     ]
@@ -504,12 +419,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/PoWJump_off.png",
+        "img": "images/options/LogicSettings/PoWJump_off.png",
         "codes": "powjump_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/PoWJump_on.png",
+        "img":"images/options/LogicSettings/PoWJump_on.png",
         "codes": "powjump_on",
         "inherit_codes":false
       }
@@ -522,15 +437,16 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/PoWPotPuzzleOOL_on.png",
-        "codes": "powpotpuzzleool_on",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/PoWPotPuzzleOOL_off.png",
+        "img":"images/options/LogicSettings/PoWPotPuzzleOOL_off.png",
         "codes": "powpotpuzzleool_off",
         "inherit_codes":false
+      },
+	  {
+        "img": "images/options/LogicSettings/PoWPotPuzzleOOL_on.png",
+        "codes": "powpotpuzzleool_on",
+        "inherit_codes":false
       }
+
     ]
   },
   {
@@ -539,16 +455,17 @@
     "loop": true,
     "allow_disabled": false,
     "stages": [
-      {
-        "img": "images/options/DHCCanonHit_on.png",
-        "codes": "dhccanonhit_on",
+	  {
+        "img":"images/options/LogicSettings/DHCCanonHit_off.png",
+        "codes": "dhccanonhit_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/DHCCanonHit_off.png",
-        "codes": "dhccanonhit_off",
+        "img": "images/options/LogicSettings/DHCCanonHit_on.png",
+        "codes": "dhccanonhit_on",
         "inherit_codes":false
       }
+
     ]
   },
   {
@@ -558,13 +475,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/DHCBladePuzzleShuffle_on.png",
-        "codes": "dhcbladepuzzleshuffle_on",
+        "img":"images/options/LogicSettings/DHCBladePuzzleShuffle_off.png",
+        "codes": "dhcbladepuzzleshuffle_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/DHCBladePuzzleShuffle_off.png",
-        "codes": "dhcbladepuzzleshuffle_off",
+        "img": "images/options/LogicSettings/DHCBladePuzzleShuffle_on.png",
+        "codes": "dhcbladepuzzleshuffle_on",
         "inherit_codes":false
       }
     ]
@@ -576,64 +493,231 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/DHCSwitchHit_on.png",
-        "codes": "dhcswitchhit_on",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/DHCSwitchHit_off.png",
+        "img":"images/options/LogicSettings/DHCSwitchHit_off.png",
         "codes": "dhcswitchhit_off",
         "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Keysanity",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/keysanity_standard.png",
-        "codes": "keysanity_standard",
-        "inherit_codes":false
       },
       {
-        "img":"images/options/keysanity_ouside.png",
-        "codes": "keysanity_ouside",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/keysanity_Keasy.png",
-        "codes": "keysanity_keasy",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/keysanity_Keysanity.png",
-        "codes": "keysanity_keysanity",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/keysanity_vanilla.png",
-        "codes": "keysanity_vanilla",
+        "img": "images/options/LogicSettings/DHCSwitchHit_on.png",
+        "codes": "dhcswitchhit_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "Key Vanilla",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "stages": [
+    "name":"Rupeemania",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
       {
-        "img": "images/options/KeyVanilla_on.png",
-        "codes": "keyvanilla_on",
+        "img":"images/options/WorldSetting/rupees_on.png",
+        "codes":"rupees_on",
         "inherit_codes":false
       },
       {
-        "img":"images/options/KeyVanilla_off.png",
-        "codes": "keyvanilla_off",
+        "img":"images/options/WorldSetting/rupees_off.png",
+        "codes":"rupees_off",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Special Pots",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/specialpot_on.png",
+        "codes":"specialpot_on",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/specialpot_off.png",
+        "codes":"specialpot_off",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Dig spots",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/digging_on.png",
+        "codes":"digging_on",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/digging_off.png",
+        "codes":"digging_off",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Underwater spots",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/underwater_on.png",
+        "codes":"underwater_on",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/underwater_off.png",
+        "codes":"underwater_off",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Golden Enemies",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/golden_enemy_off.png",
+        "codes":"golden_enemy_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/golden_enemy_on.png",
+        "codes":"golden_enemy_on",
+        "inherit_codes":false
+      }
+    ],
+  },
+  {
+    "name":"Sanctuary Pedestal",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/ped_items_off.png",
+        "codes":"ped_items_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/ped_items_on.png",
+        "codes":"ped_items_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Fusion Green",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/openworld_off.png",
+        "codes":"openworld_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/openworld_on.png",
+        "codes":"openworld_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Fusion Gold",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/fusiongold_vanilla.png",
+        "codes":"fusiongold_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/fusiongold_complet.png",
+        "codes":"fusiongold_complet",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/fusiongold_removed.png",
+        "codes":"fusiongold_removed",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Fusion Red",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/fusionred_complet.png",
+        "codes":"fusionred_complet",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/fusionred_removed.png",
+        "codes":"fusionred_removed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/fusionred_vanilla.png",
+        "codes":"fusionred_vanilla",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Fusion Blue",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/fusionblue_complet.png",
+        "codes":"fusionblue_complet",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/fusionblue_removed.png",
+        "codes":"fusionblue_removed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/fusionblue_vanilla.png",
+        "codes":"fusionblue_vanilla",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Fusion Green",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WorldSetting/fusiongreen_complet.png",
+        "codes":"fusiongreen_complet",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/fusiongreen_removed.png",
+        "codes":"fusiongreen_removed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/fusiongreen_vanilla.png",
+        "codes":"fusiongreen_vanilla",
         "inherit_codes":false
       }
     ]

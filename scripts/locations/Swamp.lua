@@ -135,7 +135,7 @@ function Json_Swamp_VineMinishCrack_Chest()
 end
 
 function Json_Swamp_RopeGolden_Kill()
-  if Swamp_RopeGolden_KillRope()==1 then
+  if Swamp_GoldenRope()==1 then
     return 1
   else
     return 0

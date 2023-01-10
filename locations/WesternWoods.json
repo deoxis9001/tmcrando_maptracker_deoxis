@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":710,
 		"y":2005,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsBlue"]
 	  }
 	],
 	"sections":[
@@ -28,13 +28,32 @@
 	]
   },
   {
+	"name":"Western Woods - Minish House",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":800,
+		"y":2005,
+		"restrict_visibility_rules":["fusionblue_vanilla,openworld_off"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Forest Minish",
+		"hosted_item":"fusions24",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  }
+	]
+  },
+  {
 	"name":"Western Woods - South Digging Spots",
 	"map_locations":[
 	  {
 		"map":"map",
 		"x":945,
 		"y":1780,
-		"restrict_visibility_rules":["$Fusions,obscure_on"]
+		"restrict_visibility_rules":["$FusionsGreen,digging_on"]
 	  }
 	],
 	"sections":[
@@ -54,7 +73,7 @@
 		"map":"map",
 		"x":800,
 		"y":1475,
-		"restrict_visibility_rules":["$Fusions,obscure_on"]
+		"restrict_visibility_rules":["$FusionsGreen,digging_on"]
 	  }
 	],
 	"sections":[
@@ -74,7 +93,7 @@
 		"map":"map",
 		"x":755,
 		"y":1750,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -94,7 +113,7 @@
 		"map":"map",
 		"x":825,
 		"y":1603,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -114,7 +133,7 @@
 		"map":"map",
 		"x":765,
 		"y":1912,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -141,7 +160,7 @@
 		"map":"map",
 		"x":900,
 		"y":1912,
-		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
 	  }
 	],
 	"sections":[

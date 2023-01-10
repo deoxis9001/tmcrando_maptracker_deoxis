@@ -274,6 +274,7 @@
 		"map":"map",
 		"x":592,
 		"y":1800,
+		"restrict_visibility_rules":["$FusionsGold"]
 	  }
 	],
 	"sections":[
@@ -404,7 +405,7 @@
 	  {
 		"name":"Right Side Moldorm Top Pot",
 		"item_count":1,
-		"visibility_rules":["obscure_on"],
+		"visibility_rules":["specialpot_on"],
 		"access_rules":["$Json_Dungeon_Fortress_RightSideMoldormTopPot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -412,7 +413,7 @@
 	  {
 		"name":"Right Side Moldorm Bottom Pot",
 		"item_count":1,
-		"visibility_rules":["obscure_on"],
+		"visibility_rules":["specialpot_on"],
 		"access_rules":["$Json_Dungeon_Fortress_RightSideMoldormBottomPot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -420,7 +421,6 @@
 	  {
 		"name":"Skull Room Chest",
 		"item_count":1,
-		"visibility_rules":["obscure_on"],
 		"access_rules":["$Json_Dungeon_Fortress_SkullRoomChest"],
 		"chest_unopened_img":"images/items-map/Big_chest_closed.png",
 		"chest_opened_img":"images/items-map/Big_chest_open.png"
@@ -449,6 +449,7 @@
 		"map":"map",
 		"x":2303,
 		"y":250,
+		"restrict_visibility_rules":["$FusionsGold"]
 	  }
 	],
 	"sections":[
@@ -652,7 +653,7 @@
 	  },
 	  {
 		"name":"Upper Water Rupees",
-		"visibility_rules":["rupees_on,obscure_on"],
+		"visibility_rules":["rupees_on,underwater_on"],
 		"item_count":6,
 		"access_rules":["$Json_Dungeon_Droplet_UpperWaterRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -661,7 +662,7 @@
 	  {
 		"name":"Lower Water Rupees",
 		"item_count":6,
-		"visibility_rules":["rupees_on,obscure_on"],
+		"visibility_rules":["rupees_on,underwater_on"],
 		"access_rules":["$Json_Dungeon_Droplet_LowerWaterRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -697,7 +698,7 @@
 	  {
 		"name":"Right Path Ice Walkway Pot",
 		"item_count":1,
-		"visibility_rules":["obscure_on"],
+		"visibility_rules":["specialpot_on"],
 		"access_rules":["$Json_Dungeon_Droplet_RightPathIceWalkwayPot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -758,6 +759,30 @@
 	],
 	"sections":[
 	  {
+		"name":"Pedestal Two Elements",
+		"visibility_rules":["ped_items_on"],
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_PedestalTwoElements"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Pedestal Three Elements",
+		"visibility_rules":["ped_items_on"],
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_PedestalThreeElements"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Pedestal Four Elements",
+		"visibility_rules":["ped_items_on"],
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_PedestalFourElements"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
 		"name":"Win",
 		"visibility_rules":["dhc_none"],
 		"item_count":1,
@@ -766,32 +791,8 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Pedestal Two Elements",
-		"visibility_rules":["dhc_peditems"],
-		"item_count":1,
-		"access_rules":["$Json_Dungeon_DHC_PedestalTwoElements"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Pedestal Three Elements",
-		"visibility_rules":["dhc_peditems"],
-		"item_count":1,
-		"access_rules":["$Json_Dungeon_DHC_PedestalThreeElements"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Pedestal Four Elements",
-		"visibility_rules":["dhc_peditems"],
-		"item_count":1,
-		"access_rules":["$Json_Dungeon_DHC_PedestalFourElements"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
 		"name":"Blade Chest",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_BladeChest"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -799,7 +800,7 @@
 	  },
 	  {
 		"name":"Platform Chest",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_PlatformChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -807,7 +808,7 @@
 	  },
 	  {
 		"name":"Stone King",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_StoneKing"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -815,7 +816,7 @@
 	  },
 	  {
 		"name":"Post Throne Big Chest",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_PostThroneBigChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -823,7 +824,7 @@
 	  },
 	  {
 		"name":"Northeast Tower",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_NortheastTower"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -831,7 +832,7 @@
 	  },
 	  {
 		"name":"Southeast Tower",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_SoutheastTower"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -839,7 +840,7 @@
 	  },
 	  {
 		"name":"Southwest Tower",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_SouthwestTower"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -847,7 +848,7 @@
 	  },
 	  {
 		"name":"Northwest Tower",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_NorthwestTower"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -855,7 +856,7 @@
 	  },
 	  {
 		"name":"Big Block Chest",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_BigBlockChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -863,7 +864,7 @@
 	  },
 	  {
 		"name":"Vaati",
-		"visibility_rules":["dhc_peditems","dhc_open","dhc_closed"],
+		"visibility_rules":["dhc_open","dhc_closed"],
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_DHC_Vaati"],
 		"chest_unopened_img":"images/items-map/TriForce.png",

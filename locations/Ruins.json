@@ -5,7 +5,8 @@
 	  {
 		"map":"map",
 		"x":230,
-		"y":2000
+		"y":2000,
+		"restrict_visibility_rules":["$FusionsGold"]
 	  }
 	],
 	"sections":[
@@ -24,7 +25,8 @@
 	  {
 		"map":"map",
 		"x":50,
-		"y":2000
+		"y":2000,
+		"restrict_visibility_rules":["$FusionsGold"]
 	  }
 	],
 	"sections":[
@@ -34,6 +36,12 @@
 		"access_rules":["$Json_Ruins_MinishHole_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Fuzer Forest Minish",
+		"hosted_item":"fusions17",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },
@@ -43,7 +51,8 @@
 	  {
 		"map":"map",
 		"x":130,
-		"y":1780
+		"y":1780,
+		"restrict_visibility_rules":["$FusionsGold"]
 	  }
 	],
 	"sections":[
@@ -62,7 +71,8 @@
 	  {
 		"map":"map",
 		"x":560,
-		"y":1930
+		"y":1930,
+		"restrict_visibility_rules":["$FusionsGold"]
 	  }
 	],
 	"sections":[
@@ -82,7 +92,7 @@
 		"map":"map",
 		"x":640,
 		"y":1867,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGold,$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -102,7 +112,7 @@
 		"map":"map",
 		"x":250,
 		"y":2060,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGold,$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -122,7 +132,7 @@
 		"map":"map",
 		"x":500,
 		"y":2060,
-		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsGold,$FusionsGreen,golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -142,7 +152,7 @@
 		"map":"map",
 		"x":291,
 		"y":1953,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGold,$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -162,7 +172,7 @@
 		"map":"map",
 		"x":20,
 		"y":1850,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGold,$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -182,7 +192,7 @@
 		"map":"map",
 		"x":210,
 		"y":1795,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGold,$FusionsRed"]
 
 	  }
 	],

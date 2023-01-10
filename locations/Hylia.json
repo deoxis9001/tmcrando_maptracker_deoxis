@@ -22,6 +22,12 @@
 		"access_rules":["$Json_Hylia_Dojo_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Fuzer Waveblade",
+		"hosted_item":"fusions15",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },
@@ -82,7 +88,7 @@
 	  },
 	  {
 		"name":"Beanstalk - Chest",
-		"visibility_rules":["$Fusions"],
+		"visibility_rules":["$FusionsBlue"],
 		"item_count":2,
 		"access_rules":["$Json_Hylia_TreasureCave_BeanstalkChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -90,11 +96,17 @@
 	  },
 	  {
 		"name":"Beanstalk - Heart Piece",
-		"visibility_rules":["$Fusions"],
+		"visibility_rules":["$FusionsBlue"],
 		"item_count":1,
 		"access_rules":["$Json_Hylia_TreasureCave_BeanstalkHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Fuzer Mysterious Wall",
+		"hosted_item":"fusions2a",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },
@@ -158,7 +170,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"visibility_rules":["$Fusions"],
+		"visibility_rules":["$FusionsGreen"],
 		"access_rules":["$Json_Hylia_LakeCabin_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -221,6 +233,12 @@
 		"access_rules":["$Json_Hylia_Fifi_Item"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Fuzer Dog",
+		"hosted_item":"fusions51",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },
@@ -231,7 +249,7 @@
 		"map":"map",
 		"x":2464,
 		"y":1133,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -251,13 +269,13 @@
 		"map":"map",
 		"x":2239,
 		"y":1144,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  },
 	  {
 		"map":"map",
 		"x":2464,
 		"y":1083,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -267,7 +285,75 @@
 		"access_rules":["$Json_Hylia_Librari_Item"],
         "chest_unopened_img":"images/items-map/Heart Container.png",
         "chest_opened_img":"images/items-map/Heart Container Gray.png"
+	  },
+	  {
+		"name":"Fuzer Librari",
+		"hosted_item":"fusions54",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },
+  {
+	"name":"Hylia - Minish House Wind Crest",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2264,
+		"y":1074
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Forest Minish",
+		"hosted_item":"fusions11",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  }
+	]
+  },
+  {
+	"name":"Hylia - David Jr.",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2350,
+		"y":960,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer David Jr. 1",
+		"hosted_item":"fusions5a",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Fuzer David Jr. 2",
+		"hosted_item":"fusions45",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"chest_unopened_img":"images/items-map/KinstoneGreenN.png",
+		"chest_opened_img":"images/items-map/KinstoneGreenNGray.png"
+	  }
+	]
+  },
+  {
+	"name":"Hylia - Minish Crack",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2620,
+		"y":970,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Minish Forest",
+		"hosted_item":"fusions23",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  }
+	]
+  }
 ]

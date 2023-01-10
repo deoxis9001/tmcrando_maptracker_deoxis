@@ -72,6 +72,12 @@
 		"access_rules":["$Json_MinishWoods_MittCave_Digging"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Fuzer Mysterious Wall",
+		"hosted_item":"fusions2b",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },
@@ -120,12 +126,30 @@
 	  },
 	  {
 		"name":"Chest",
-		"visibility_rules":["$Fusions"],
+		"visibility_rules":["$FusionsGreen"],
 		"item_count":1,
 		"access_rules":["$Json_MinishWoods_MinishVillage_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
+	  {
+		"name":"Fuzer Forest Minish (Lake) 2",
+		"hosted_item":"fusions1f",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Fuzer Forest Minish (Lake) 3",
+		"hosted_item":"fusions12",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Gentari (Elder)",
+		"hosted_item":"fusions1c",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  }
 	]
   },
   {
@@ -206,11 +230,17 @@
 	  },
 	  {
 		"name":"Gift 2nd Item",
-		"visibility_rules":["$Fusions"],
+		"visibility_rules":["$FusionsRed"],
 		"item_count":1,
 		"access_rules":["$Json_MinishWoods_Belari_Gift2ndItem"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Fuzer Belari",
+		"hosted_item":"fusions0a",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	]
   },
@@ -221,7 +251,7 @@
 		"map":"map",
 		"x":2336,
 		"y":2081,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -241,7 +271,7 @@
 		"map":"map",
 		"x":2580,
 		"y":1826,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -261,7 +291,7 @@
 		"map":"map",
 		"x":2421,
 		"y":1921,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -281,7 +311,7 @@
 		"map":"map",
 		"x":2038,
 		"y":1879,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -301,7 +331,7 @@
 		"map":"map",
 		"x":2200,
 		"y":1550,
-		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -321,6 +351,7 @@
 		"map":"map",
 		"x":2112,
 		"y":1677,
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -340,7 +371,7 @@
 		"map":"map",
 		"x":2049,
 		"y":1571,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -353,5 +384,29 @@
 	  }
 	]
   },
+  {
+	"name":"Minish Woods - Business Scrub",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2330,
+		"y":1710,
+      }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Scrub 1",
+		"hosted_item":"fusions3d",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Fuzer Scrub 2",
+		"hosted_item":"fusions5b",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	]
+  }
   
 ]

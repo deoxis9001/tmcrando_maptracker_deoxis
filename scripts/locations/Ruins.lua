@@ -47,7 +47,7 @@ function Json_Ruins_4Pillars_Chest()
 end
 
 function Json_Ruins_OctoGolden_Kill()
-  if Ruins_OctoGolden_KillOcto()==1 then
+  if Ruins_GoldenOcto()==1 then
     return 1
   else
     return 0

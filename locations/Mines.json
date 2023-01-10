@@ -6,7 +6,7 @@
 		"map":"mines",
 		"x":1110,
 		"y":1100,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[
@@ -26,7 +26,7 @@
 		"map":"mines",
 		"x":580,
 		"y":1650,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[
@@ -46,7 +46,7 @@
 		"map":"mines",
 		"x":1375,
 		"y":1700,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[
@@ -66,7 +66,7 @@
 		"map":"mines",
 		"x":2080,
 		"y":1750,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[
@@ -86,7 +86,7 @@
 		"map":"mines",
 		"x":2175,
 		"y":400,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[
@@ -106,7 +106,7 @@
 		"map":"mines",
 		"x":750,
 		"y":240,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[
@@ -126,7 +126,7 @@
 		"map":"mines",
 		"x":1700,
 		"y":240,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[
@@ -146,7 +146,7 @@
 		"map":"mines",
 		"x":790,
 		"y":785,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[

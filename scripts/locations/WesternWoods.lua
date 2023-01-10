@@ -63,7 +63,7 @@ function Json_WesternWoods_Percy_PercyReward()
 end
 
 function Json_WesternWoods_OctoGolden_Kill()
-  if WesternWoods_OctoGolden_KillOcto()==1 then
+  if WesternWoods_GoldenOcto()==1 then
     return 1
   else
     return 0

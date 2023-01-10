@@ -23,7 +23,7 @@ function Json_Hills_Farm_Chest()
 end
 
 function Json_Hills_RopeGolden_Kill()
-  if Hills_RopeGolden_KillRope()==1 then
+  if Hills_GoldenRope()==1 then
     return 1
   else
     return 0

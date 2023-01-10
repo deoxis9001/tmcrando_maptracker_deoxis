@@ -48,6 +48,12 @@
 		"item_count":1,
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Fuzer Grimblade",
+		"hosted_item":"fusions1d",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },
@@ -58,7 +64,7 @@
 		"map":"map",
 		"x":1610,
 		"y":300, 
-		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -72,13 +78,33 @@
 	]
   },
   {
+	"name":"Castle - Minish Crack",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1610,
+		"y":160,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Forest Minish",
+		"hosted_item":"fusions4c",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"chest_unopened_img":"images/items-map/KinstoneGreenN.png",
+		"chest_opened_img":"images/items-map/KinstoneGreenNGray.png"
+	  }
+	]
+  },
+  {
 	"name":"Castle - Right Fountain",
 	"map_locations":[
 	  {
 		"map":"map",
 		"x":1505,
 		"y":160,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -105,7 +131,7 @@
 		"map":"map",
 		"x":1140,
 		"y":160,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[

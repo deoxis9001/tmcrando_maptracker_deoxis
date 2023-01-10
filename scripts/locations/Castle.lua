@@ -31,7 +31,7 @@ function Json_Castle_Dojo_HeartPiece()
 end
 
 function Json_Castle_RopeGolden_Kill()
-  if Castle_RopeGolden_KillRope()==1 then
+  if Castle_GoldenRope()==1 then
     return 1
   else
     return 0

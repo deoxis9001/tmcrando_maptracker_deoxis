@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":1250,
 		"y":800,
-        "restrict_visibility_rules":["obscure_on"]
+        "restrict_visibility_rules":["digging_on"]
 	  }
 	],
 	"sections":[
@@ -50,7 +50,7 @@
 		"map":"map",
 		"x":1120,
 		"y":800,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -70,7 +70,7 @@
 		"map":"map",
 		"x":1370,
 		"y":655,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -90,7 +90,7 @@
 		"map":"map",
 		"x":1275,
 		"y":655,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -110,7 +110,7 @@
 		"map":"map",
 		"x":1370,
 		"y":730,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -130,7 +130,7 @@
 		"map":"map",
 		"x":1275,
 		"y":730,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -150,7 +150,7 @@
 		"map":"map",
 		"x":1325,
 		"y":695,
-        "restrict_visibility_rules":["$Fusions"]
+        "restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -162,5 +162,23 @@
         "chest_opened_img":"images/items-map/big_chest_open.png"
 	  }
 	]
-  }
+  },
+  {
+	"name":"North Field - Minish Crack",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1600,
+		"y":730,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Forest Minish",
+		"hosted_item":"fusions64",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  }
+	]
+  },
 ]

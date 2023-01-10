@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":1700,
 		"y":1560,
-		"restrict_visibility_rules":["rupees_on"]
+		"restrict_visibility_rules":["rupees_on","fusionblue_vanilla,openworld_off"]
 	  }
 	],
 	"sections":[
@@ -16,6 +16,12 @@
 		"access_rules":["$Json_Hills_MittsCave_Rupee"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Fuzer Mysterious Wall",
+		"hosted_item":"fusions26",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },
@@ -45,7 +51,7 @@
 		"map":"map",
 		"x":1725,
 		"y":1725,
-		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -65,7 +71,7 @@
 		"map":"map",
 		"x":1795,
 		"y":1685,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -85,7 +91,7 @@
 		"map":"map",
 		"x":1705,
 		"y":1830,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsBlue"]
 	  }
 	],
 	"sections":[
@@ -102,6 +108,48 @@
 		"access_rules":["$Json_Hills_Beanstalk_HeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"Eastern Hills - Minish house",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1705,
+		"y":2000,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Forest Minish",
+		"hosted_item":"fusions2e",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  }
+	]
+  },
+  {
+	"name":"Eastern Hills - Farmer",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1795,
+		"y":1570
+      }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Meenie",
+		"hosted_item":"fusions62",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Fuzer eenie",
+		"hosted_item":"fusions25",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   }

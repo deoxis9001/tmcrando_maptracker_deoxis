@@ -11,10 +11,41 @@ function hasnot(item)
   local count = Tracker:ProviderCountForCode(item)
   return count == 0
 end
-function Fusions() 
-	if ( has("fusions_open") ) then
+
+function FusionsRed() 
+	if ( has("openworld_on") ) then
 		return 1
-	elseif ( has("open_world") ) then
+	elseif ( has("fusionred_vanilla") or has("fusionred_complet") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function FusionsBlue()
+	if ( has("openworld_on") ) then
+		return 1
+	elseif ( has("fusionblue_vanilla") or has("fusionblue_complet") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function FusionsGreen() 
+	if ( has("openworld_on") ) then
+		return 1
+	elseif ( has("fusiongreen_vanilla") or has("fusiongreen_complet") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function FusionsGold() 
+	if ( has("openworld_on") ) then
+		return 1
+	elseif ( has("fusiongold_vanilla") or has("fusiongold_complet") ) then
 		return 1
 	else
 		return 0
@@ -292,7 +323,7 @@ function HasDamageSource()
 	elseif ( ( HasBow()==1 or has("bombs") ) and has("weapons_on")) then
 		return 1
 	elseif ( ( HasBow()==1 or has("bombs") ) and has("weapons_off")) then
-		return 3
+		return 2
 	else
 		return 0
 	end
@@ -301,9 +332,9 @@ end
 function HasChuDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( has("bombs")  and has("weapons_on")) then
+	elseif (has("weapons_on") and  has("bombs") ) then
 		return 1
-	elseif ( has("bombs")  and has("weapons_off")) then
+	elseif (has("weapons_off") and  has("bombs") ) then
 		return 2
 	else
 		return 0
@@ -313,9 +344,9 @@ end
 function HasGleerokDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasBow()==1  or has("bombs30") ) and has("weapons_on")) then
+	elseif (has("weapons_on") and (HasBow()==1  or has("bombs30") ) ) then
 		return 1
-	elseif ( (HasBow()==1  or has("bombs30") ) and has("weapons_off")) then
+	elseif ( has("weapons_off") and (HasBow()==1  or has("bombs30") ) ) then
 		return 2
 	else
 		return 0
@@ -413,9 +444,9 @@ end
 function BlowDust()
 	if ( (has("bombs") or has("gust") )  and has("blowdust_on")) then
 		return 1
-	elseif ( (has("bombs") ) and has("blowdust_off")) then
-		return 1
 	elseif ( (has("gust") ) and has("blowdust_off")) then
+		return 1
+	elseif ( (has("bombs") ) and has("blowdust_off")) then
 		return 2
 	else
 		return 0
@@ -433,34 +464,34 @@ function CrenelMushroom()
 	end
 end
 function LightArrowBreak()
-	if ( HasLightBow()==1 and has("lightarrowbreak_on")) then
+	if ( has("lightarrowbreak_on") and HasLightBow()==1 ) then
 		return 1
-	elseif ( HasLightBow()==1 and has("lightarrowbreak_off")) then
+	elseif (has("lightarrowbreak_off") and HasLightBow()==1 ) then
 		return 2
 	else
 		return 0
 	end
 end
 function CrenelBeam()
-	if ( HasBeam()==1 and has("crenelbeam_on")) then
+	if ( has("crenelbeam_on") and HasBeam()==1 ) then
 		return 1
-	elseif ( HasBeam()==1 and has("crenelbeam_off")) then
+	elseif ( has("crenelbeam_off") and HasBeam()==1 ) then
 		return 2
 	else
 		return 0
 	end
 end
 function DownStrikeBeetle()
-	if ( CanDownThrust()==1 and has("downstrikebeetle_on")) then
+	if ( has("downstrikebeetle_on") and CanDownThrust()==1 ) then
 		return 1
-	elseif ( CanDownThrust()==1 and has("downstrikebeetle_off")) then
+	elseif ( has("downstrikebeetle_off") and CanDownThrust()==1 ) then
 		return 2
 	else
 		return 0
 	end 
 end
 function CapeExtension()
-	if ( (has("flippers") or has("cape")) and has("capeextension_on") ) then
+	if (has("capeextension_on") and (has("flippers") or has("cape"))  ) then
 		return 1
 	elseif ( has("flippers") and has("capeextension_off") ) then
 		return 1
@@ -471,7 +502,7 @@ function CapeExtension()
 	end 
 end
 function DarkRooms()
-	if ( has("lamp") and has("darkrooms_off")) then
+	if ( has("darkrooms_off") and has("lamp") ) then
 		return 1
 	elseif ( has("darkrooms_off") ) then
 		return 2
@@ -482,7 +513,7 @@ function DarkRooms()
 	end 
 end
 function LakeMinish()
-	if ( has("flippers") and has("lakeminish_on") ) then
+	if ( has("flippers") and has("ocarina") and has("lakeminish_on") ) then
 		return 1
 	elseif ( has("flippers") and has("lakeminish_off") ) then
 		return 2
@@ -507,7 +538,7 @@ function CloudsKill()
 	elseif ( has("cloudskill_off")  ) then
 		return 2
 	elseif ( has("cloudskill_on")  ) then
-		return 2
+		return 1
 	else
 		return 0
 	end 
@@ -522,7 +553,7 @@ function FoWPot()
 	end 
 end
 function PoWJump()
-	if ( has("cape") and has("powjump_on") ) then
+	if ( has("powjump_on") ) then
 		return 1
 	elseif ( has("cane") and has("powjump_off") ) then
 		return 1
@@ -553,7 +584,7 @@ function DHCCanonHit()
 	end 
 end
 function DHCBladePuzzleShuffle()
-	if ( CanSplit2()==1	and has("dhcbladepuzzleshuffle_on") ) then
+	if ( ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1) and has("dhcbladepuzzleshuffle_on") ) then
 		return 1
 	elseif ( CanSplit4()==1	and has("dhcbladepuzzleshuffle_off") ) then
 		return 1
@@ -575,9 +606,11 @@ function DHCSwitchHit()
 	end 
 end
 function WindPortal() 
-	if ( has("fusions_none") ) then
-		return 0
-	else
+	if (has("openworld_on") ) then
 		return 1
-	end 
+	elseif ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0f") ) ) then
+		return 1
+	else
+		return 0
+	end
 end

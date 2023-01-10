@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":660,
 		"y":1560,
-		"restrict_visibility_rules":["obscure_on"]
+		"restrict_visibility_rules":["underwater_on"]
 	  }
 	],
 	"sections":[
@@ -136,6 +136,24 @@
 	]
   },
   {
+	"name":"Castor Wilds - Business Scrub",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":350,
+		"y":1165,
+		"restrict_visibility_rules":["fusionblue_vanilla,openworld_off"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Business Scrub",
+		"hosted_item":"fusions27",
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  }
+	]
+  },
+  {
 	"name":"Castor Wilds - Mulldozers",
 	"map_locations":[
 	  {
@@ -154,7 +172,7 @@
 	  },
 	  {
 		"name":"Left Chest",
-		"visibility_rules":["$Fusions"],
+		"visibility_rules":["$FusionsGreen"],
 		"item_count":1,
 		"access_rules":["$Json_Swamp_Mulldozers_LeftChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -206,7 +224,8 @@
 	  {
 		"map":"map",
 		"x":75,
-		"y":1700
+		"y":1700,
+		"restrict_visibility_rules":["$FusionsGold"]
 	  }
 	],
 	"sections":[
@@ -226,7 +245,7 @@
 		"map":"map",
 		"x":40,
 		"y":1325,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -246,7 +265,7 @@
 		"map":"map",
 		"x":630,
 		"y":1630,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -273,7 +292,7 @@
 		"map":"map",
 		"x":590,
 		"y":1150,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -293,7 +312,7 @@
 		"map":"map",
 		"x":240,
 		"y":1600,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -313,7 +332,7 @@
 		"map":"map",
 		"x":400,
 		"y":1240,
-		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -333,7 +352,7 @@
 		"map":"map",
 		"x":131,
 		"y":1165,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -353,7 +372,7 @@
 		"map":"map",
 		"x":280,
 		"y":1465,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[

@@ -18,7 +18,7 @@
 	  },
 	  {
 		"name":"Digging",
-		"visibility_rules":["obscure_on"],
+		"visibility_rules":["digging_on"],
 		"item_count":8,
 		"access_rules":["$Json_Crenel_Mines_Digging"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -27,11 +27,41 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		 "visibility_rules":["$Fusions"],
+		"visibility_rules":["$FusionsGreen"],
 		"access_rules":["$Json_Crenel_Mines_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
+	  },
+	  {
+		"name":"Fuser Northwest",
+		"hosted_item":"fusions4f",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Fuser Bedroom",
+		"hosted_item":"fusions43",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Fuser Kitchen",
+		"hosted_item":"fusions3b",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Fuser Melari",
+		"hosted_item":"fusions1a",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
+	  {
+		"name":"Fuser Mine Exit",
+		"hosted_item":"fusions38",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+	  },
 	]
   },
   {
@@ -60,7 +90,7 @@
 		"map":"map",
 		"x":100,
 		"y":20,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -89,7 +119,7 @@
 		"map":"map",
 		"x":121,
 		"y":399,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -111,7 +141,7 @@
 		"map":"map",
 		"x":300,
 		"y":730,
-		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -131,7 +161,7 @@
 		"map":"map",
 		"x":490,
 		"y":100,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -151,7 +181,7 @@
 		"map":"map",
 		"x":425,
 		"y":470,
-		"restrict_visibility_rules":["$Fusions,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsRed,golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -251,6 +281,12 @@
 		  "access_rules":["$Json_Crenel_Dojo_Grayblade"],
 		  "chest_unopened_img":"images/items-map/Tiger Scroll.png",
 		  "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+		},
+		{
+		  "name":"Fuzer Grayblade",
+		  "hosted_item":"fusions0c",
+		  "visibility_rules":["fusionred_vanilla,openworld_off"],
+		  "access_rules":["$Json_Valley_Fuzer_Fuzer"],
 		}
 	]
   },
@@ -289,6 +325,12 @@
 		"access_rules":["$Json_Crenel_DiggingCave_Heartpiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Fuzer Mysterious Wall",
+		"hosted_item":"fusions29",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   }

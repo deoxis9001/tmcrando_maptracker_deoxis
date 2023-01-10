@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":585,
 		"y":935,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -26,7 +26,7 @@
 		"map":"map",
 		"x":78,
 		"y":858,
-		"restrict_visibility_rules":["$Fusions"]
+		"restrict_visibility_rules":["$FusionsGreen"]
 	  }
 	],
 	"sections":[
@@ -74,6 +74,12 @@
 		"access_rules":["$Json_CrenelBase_MinishCrack_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Fuzer Forest Minish",
+		"hosted_item":"fusions63",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  }
 	]
   },

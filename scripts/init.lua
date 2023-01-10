@@ -16,8 +16,10 @@ JsLocations="locations/"
 ------------------------------------------------------------------
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
+AUTOTRACKER_ENABLE_FUZER_TRACKING = true
 TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = true
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
+TMC_AUTOTRACKER_DEBUG_FUZER = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
 VERSION_ALPHA = true
 VERSION_BETA = true
@@ -46,7 +48,10 @@ ScriptHost:LoadScript(ScriptLogic.."check/Fortress.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/Droplet.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/Palace.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/DHC.lua")
-
+--temporaire
+function Json_Valley_Fuzer_Fuzer()
+return 1
+end
 ------------------------------------------------------------------
 -- Script Item for scripted systems in this pack
 ------------------------------------------------------------------
@@ -56,9 +61,9 @@ ScriptHost:LoadScript(ScriptItemSpec.."figurine.lua")
 ScriptHost:LoadScript(ScriptItemSpec.."SwordToggle.lua")
 ScriptHost:LoadScript(ScriptItemSpec.."SwordProgress.lua")
 ScriptHost:LoadScript(ScriptItemSpec.."SwordOptions.lua")
-local figurine10 = FigurineButton("figurine plus 10","figurine10",10,"images/options/figurine10.png")
-local figurine50 = FigurineButton("figurine plus 50","figurine50",50,"images/options/figurine50.png")
-local figurinemax = FigurineButton("figurine plus 136","figurinemax",136,"images/options/figurineMax.png")
+local figurine10 = FigurineButton("figurine plus 10","figurine10",10,"images/options/DHCRequirements/figurine10.png")
+local figurine50 = FigurineButton("figurine plus 50","figurine50",50,"images/options/DHCRequirements/figurine50.png")
+local figurinemax = FigurineButton("figurine plus 136","figurinemax",136,"images/options/DHCRequirements/figurineMax.png")
 smithsword = ToggleItem("Smith's Sword","smithsword","images/items/Smith's Sword.png")
 greensword = ToggleItem("Smith's Sword","greensword","images/items/Green Sword.png")
 redsword = ToggleItem("Smith's Sword","redsword","images/items/Red Sword.png")
@@ -75,6 +80,7 @@ Tracker:AddItems(JsItems.."common.json")
 Tracker:AddItems(JsItems.."dungeon_items.json")
 Tracker:AddItems(JsItems.."keys.json")
 Tracker:AddItems(JsItems.."options.json")
+Tracker:AddItems(JsItems.."fusion.json")
 if(VERSION_ALPHA==true) then
 	Tracker:AddItems(JsItems.."alpha.json")
 elseif(VERSION_BETA==true) then
@@ -103,6 +109,7 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	ScriptHost:LoadScript(ScriptLocations.."Trilby.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Valley.lua")
 	ScriptHost:LoadScript(ScriptLocations.."WesternWoods.lua")
+	ScriptHost:LoadScript(ScriptLocations.."General.lua")
 
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/CaveOfFlame.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Crypt.lua")
