@@ -250,14 +250,7 @@
     "img": "images/items/overlay_remote.png",
     "codes": "remote,bombsremote"
   },
- //Kinstone Wilds
- {
-   "name": "Gold Kinstone (Wilds)",
-   "type": "consumable",
-   "img": "images/items/Kinstone Wilds Half.png",
-   "codes": "wilds",
-   "max_quantity": 3
- },
+ 
  // Boots
  {
    "name": "Boots",
@@ -328,14 +321,6 @@
        "codes": "quiver"
      },
    ]
- },
- // Gold Kinstone (Clouds)
- {
-  "name": "Gold Kinstone (Clouds)",
-  "type": "consumable",
-  "img": "images/items/Kinstone Clouds Half.png",
-  "codes": "kinstoneClouds,clouds",
-  "max_quantity": 5
  },
  // Bottles
  {
@@ -423,13 +408,6 @@
    "type": "toggle",
    "img": "images/items/Lon Lon Ranch Key.png",
    "codes": "llrkey"
- },
- // Gold Kinstone (Falls)
- {
-   "name": "Gold Kinstone (Falls)",
-   "type": "toggle",
-   "img": "images/items/Kinstone Falls Half.png",
-   "codes": "falls"
  },
  // Grip Ring
  {

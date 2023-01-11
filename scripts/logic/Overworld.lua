@@ -285,7 +285,7 @@ end
 function RuinsFusion() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("wilds") >= 3 ) then
+	elseif ( Tracker:ProviderCountForCode("wilds") >= 3 and FUSIONS_COMBINED==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and FUSIONS_COMBINED==true ) then
 		return 1
 	else
 		return 0
@@ -357,7 +357,7 @@ end
 function FallsFusion() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( has("falls") ) then
+	elseif ( has("falls") and FUSIONS_COMBINED==false ) or ( Tracker:ProviderCountForCode("clouds") >= 8 and FUSIONS_COMBINED==true ) then
 		return 1
 	else
 		return 0

@@ -185,7 +185,7 @@ function Json_Town_Library_YellowMinishGift()
   end
 end
 
-function Json_Town_LadyNexttoCafe_Gift()
+function Json_Town_Cafe_Gift()
   if Town_CafeLady_NPC()==1 then
     return 1
   else

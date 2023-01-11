@@ -34,7 +34,6 @@
 		"map":"map",
 		"x":800,
 		"y":2005,
-		"restrict_visibility_rules":["fusionblue_vanilla,openworld_off"]
 	  }
 	],
 	"sections":[
@@ -42,7 +41,7 @@
 		"name":"Fuzer Forest Minish",
 		"hosted_item":"fusions24",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_WesternWoods_MinishHouse_Fuzer"],
 	  }
 	]
   },

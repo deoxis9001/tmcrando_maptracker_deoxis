@@ -1,508 +1,11 @@
 [
   {
-	"name":"Debug fusions",
+	"name":"Fusions Shared",
 	"map_locations":[
 	  {
 		"map":"map",
 		"x":2680,
-		"y":1700,
-	  }
-	],
-	"sections":[
-		 {
-			"name":"Fuzer 0a",
-			"hosted_item":"fusions0a",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 0b",
-			"hosted_item":"fusions0b",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 0c",
-			"hosted_item":"fusions0c",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 0d",
-			"hosted_item":"fusions0d",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 0e",
-			"hosted_item":"fusions0e",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 0f",
-			"hosted_item":"fusions0f",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 10",
-			"hosted_item":"fusions10",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 11",
-			"hosted_item":"fusions11",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 12",
-			"hosted_item":"fusions12",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 13",
-			"hosted_item":"fusions13",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 14",
-			"hosted_item":"fusions14",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 15",
-			"hosted_item":"fusions15",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 16",
-			"hosted_item":"fusions16",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 17",
-			"hosted_item":"fusions17",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 18",
-			"hosted_item":"fusions18",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 19",
-			"hosted_item":"fusions19",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 1a",
-			"hosted_item":"fusions1a",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 1b",
-			"hosted_item":"fusions1b",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 1c",
-			"hosted_item":"fusions1c",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 1d",
-			"hosted_item":"fusions1d",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 1e",
-			"hosted_item":"fusions1e",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 1f",
-			"hosted_item":"fusions1f",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 20",
-			"hosted_item":"fusions20",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 21",
-			"hosted_item":"fusions21",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 22",
-			"hosted_item":"fusions22",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 23",
-			"hosted_item":"fusions23",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 24",
-			"hosted_item":"fusions24",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 25",
-			"hosted_item":"fusions25",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 26",
-			"hosted_item":"fusions26",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 27",
-			"hosted_item":"fusions27",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 28",
-			"hosted_item":"fusions28",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 29",
-			"hosted_item":"fusions29",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 2a",
-			"hosted_item":"fusions2a",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 2b",
-			"hosted_item":"fusions2b",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 2c",
-			"hosted_item":"fusions2c",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 2d",
-			"hosted_item":"fusions2d",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 2e",
-			"hosted_item":"fusions2e",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 2f",
-			"hosted_item":"fusions2f",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 30",
-			"hosted_item":"fusions30",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 31",
-			"hosted_item":"fusions31",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 32",
-			"hosted_item":"fusions32",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 33",
-			"hosted_item":"fusions33",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 34",
-			"hosted_item":"fusions34",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 35",
-			"hosted_item":"fusions35",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 36",
-			"hosted_item":"fusions36",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 37",
-			"hosted_item":"fusions37",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 38",
-			"hosted_item":"fusions38",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 39",
-			"hosted_item":"fusions39",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 3a",
-			"hosted_item":"fusions3a",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 3b",
-			"hosted_item":"fusions3b",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 3c",
-			"hosted_item":"fusions3c",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 3d",
-			"hosted_item":"fusions3d",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 3e",
-			"hosted_item":"fusions3e",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 3f",
-			"hosted_item":"fusions3f",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 40",
-			"hosted_item":"fusions40",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 41",
-			"hosted_item":"fusions41",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 42",
-			"hosted_item":"fusions42",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 43",
-			"hosted_item":"fusions43",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 44",
-			"hosted_item":"fusions44",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 45",
-			"hosted_item":"fusions45",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 46",
-			"hosted_item":"fusions46",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 47",
-			"hosted_item":"fusions47",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 48",
-			"hosted_item":"fusions48",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 49",
-			"hosted_item":"fusions49",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 4a",
-			"hosted_item":"fusions4a",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 4b",
-			"hosted_item":"fusions4b",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 4c",
-			"hosted_item":"fusions4c",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 4d",
-			"hosted_item":"fusions4d",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 4e",
-			"hosted_item":"fusions4e",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 4f",
-			"hosted_item":"fusions4f",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 50",
-			"hosted_item":"fusions50",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 51",
-			"hosted_item":"fusions51",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 52",
-			"hosted_item":"fusions52",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 53",
-			"hosted_item":"fusions53",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 54",
-			"hosted_item":"fusions54",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 55",
-			"hosted_item":"fusions55",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 56",
-			"hosted_item":"fusions56",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 57",
-			"hosted_item":"fusions57",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 58",
-			"hosted_item":"fusions58",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 59",
-			"hosted_item":"fusions59",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 5a",
-			"hosted_item":"fusions5a",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 5b",
-			"hosted_item":"fusions5b",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 5c",
-			"hosted_item":"fusions5c",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 5d",
-			"hosted_item":"fusions5d",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 5e",
-			"hosted_item":"fusions5e",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 5f",
-			"hosted_item":"fusions5f",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 60",
-			"hosted_item":"fusions60",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 61",
-			"hosted_item":"fusions61",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 62",
-			"hosted_item":"fusions62",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 63",
-			"hosted_item":"fusions63",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-		 {
-			"name":"Fuzer 64",
-			"hosted_item":"fusions64",
-			"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-		 },
-	]
-  },
-  {
-	"name":"Town/Zill/Forest - Fuzer",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":2680,
-		"y":1767,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Fuzer 1 ( Town Minish North of Dr. Left / Zill above Library / Forest Minish Vase House in Minish Woods )",
-		"hosted_item":"fusions4b",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-	  },
-	  {
-		"name":"Fuzer 2 ( Town Minish North of Dr. Left / Zill above Library / Forest Minish Vase House in Minish Woods )",
-		"hosted_item":"fusions57",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-	  },
-	  {
-		"name":"Fuzer 3 ( Town Minish North of Dr. Left / Zill above Library / Forest Minish Vase House in Minish Woods )",
-		"hosted_item":"fusions3e",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-	  }
-	]
-  },
-  {
-	"name":"General fusions",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":2680,
-		"y":1834
+		"y":1700
 	  }
 	],
 	"sections":[
@@ -510,103 +13,86 @@
 		"name":"Castle - Right Fountain",
 		"hosted_item":"fusions18",
 		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"North Field - Fairy",
 		"hosted_item":"fusions2d",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Town - School Gardens - Minish Path Chest",
 		"hosted_item":"fusions36",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Minish Woods - Pre Shrine Chest",
 		"hosted_item":"fusions39",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Pre Royal Valley - Chest",
 		"hosted_item":"fusions5f",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Minish Woods - Minish Village - Chest",
 		"hosted_item":"fusions37",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Castle - Rope Golden",
 		"hosted_item":"fusions3c",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Minish Woods - Entrance",
 		"hosted_item":"fusions44",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Minish Woods - Chest",
 		"hosted_item":"fusions46",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Minish Woods - Pre Minish Village - Minish Hole",
 		"hosted_item":"fusions4e",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Minish Woods North - Cross The Pond",
 		"hosted_item":"fusions47",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Veil Falls South - North Ranch Chest",
 		"hosted_item":"fusions60",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Lon Lon Ranch - Bonk the Tree - Chest",
 		"hosted_item":"fusions50",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"South Field - Near link's House Chest",
 		"hosted_item":"fusions53",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Eastern Hills - Golden Rope",
 		"hosted_item":"fusions55",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"Minish Woods North - Golden Octo",
 		"hosted_item":"fusions56",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	  {
 		"name":"South Field - Rupee Cave",
 		"hosted_item":"fusions58",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
 	  },
 	]
   }

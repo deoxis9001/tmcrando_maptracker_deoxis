@@ -354,9 +354,9 @@ function Crenel_MinesPathFusion_Chest()
 end
 
 function Crenel_Melari_Mining() 
-	if ( AccessMelari()==1 ) then
+	if ( AccessMelari()==1 and has("mitts")) then
 		return 1
-	elseif ( has("nologic_on") and AccessMelari()==2 ) then
+	elseif ( has("nologic_on") and has("mitts") and AccessMelari()==2 ) then
 		return 2
 	else
 		return 0
@@ -671,7 +671,7 @@ function Hills_Fusion_Chest()
 end
 
 function Hills_BeanstalkFusion_LeftChest() 
-	if ( FusionsBlue()==1 and ( CanDestroyTrees()==1 or WindCrest()==1) ) then
+	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") )  and  ( CanDestroyTrees()==1 or WindCrest()==1) ) then
 		return 1
 	else
 		return 0
@@ -679,7 +679,7 @@ function Hills_BeanstalkFusion_LeftChest()
 end
 
 function Hills_BeanstalkFusion_HP() 
-	if ( FusionsBlue()==1 and ( CanDestroyTrees()==1 or WindCrest()==1) ) then
+	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") )  and  ( CanDestroyTrees()==1 or WindCrest()==1) ) then
 		return 1
 	else
 		return 0
@@ -687,7 +687,7 @@ function Hills_BeanstalkFusion_HP()
 end
 
 function Hills_BeanstalkFusion_RightChest() 
-	if ( FusionsBlue()==1 and ( CanDestroyTrees()==1 or WindCrest()==1) ) then
+	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") )  and  ( CanDestroyTrees()==1 or WindCrest()==1) ) then
 		return 1
 	else
 		return 0
@@ -1080,7 +1080,7 @@ function MinishWoods_CrackFusion_Chest()
 end
 
 function MinishWoods_MinishPathFusion_Chest() 
-	if ( AccessMinishWoods()==1 and FusionsGreen()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions37") ) ) and AccessMinishWoods()==1 ) then
 		return 1
 	else
 		return 0
@@ -1088,7 +1088,7 @@ function MinishWoods_MinishPathFusion_Chest()
 end
 
 function MinishVillage_BarrelHouse_Item() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions37") ) ) and AccessMinishWoods()==1) then
+	if ( AccessMinishWoods()==1) then
 		return 1
 	else
 		return 0

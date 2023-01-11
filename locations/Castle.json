@@ -53,7 +53,7 @@
 		"name":"Fuzer Grimblade",
 		"hosted_item":"fusions1d",
 		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Castle_Dojo_Fuzer"],
 	  }
 	]
   },
@@ -91,7 +91,7 @@
 		"name":"Fuzer Forest Minish",
 		"hosted_item":"fusions4c",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Castle_MinishCrack_Fuzer"],
 		"chest_unopened_img":"images/items-map/KinstoneGreenN.png",
 		"chest_opened_img":"images/items-map/KinstoneGreenNGray.png"
 	  }

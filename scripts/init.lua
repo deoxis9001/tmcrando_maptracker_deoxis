@@ -32,6 +32,7 @@ end
 -- Logic Pack
 ------------------------------------------------------------------
 ScriptHost:LoadScript(ScriptLogic.."Access.lua")
+ScriptHost:LoadScript(ScriptLogic.."Fusion.lua")
 ScriptHost:LoadScript(ScriptLogic.."Common.lua")
 ScriptHost:LoadScript(ScriptLogic.."CaveOfFlame.lua")
 ScriptHost:LoadScript(ScriptLogic.."DarkHyruleCastle.lua")
@@ -48,10 +49,6 @@ ScriptHost:LoadScript(ScriptLogic.."check/Fortress.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/Droplet.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/Palace.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/DHC.lua")
---temporaire
-function Json_Valley_Fuzer_Fuzer()
-return 1
-end
 ------------------------------------------------------------------
 -- Script Item for scripted systems in this pack
 ------------------------------------------------------------------
@@ -71,7 +68,11 @@ bluesword = ToggleItem("Smith's Sword","bluesword","images/items/Blue Sword.png"
 foursword = ToggleItem("Smith's Sword","foursword","images/items/Four Sword.png")
 sword = SwordProgress("progression sword","sword0")
 progression = SwordOptions("progressive","progressive","images/options/progressive_on.png","images/options/progressive_off.png")
-
+if (string.find(Tracker.ActiveVariantUID, "Combined")) then
+FUSIONS_COMBINED=true
+else
+FUSIONS_COMBINED=false
+end
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------
@@ -80,7 +81,14 @@ Tracker:AddItems(JsItems.."common.json")
 Tracker:AddItems(JsItems.."dungeon_items.json")
 Tracker:AddItems(JsItems.."keys.json")
 Tracker:AddItems(JsItems.."options.json")
-Tracker:AddItems(JsItems.."fusion.json")
+if FUSIONS_COMBINED==true then
+	Tracker:AddItems(JsItems.."c_Kinstone.json")
+	Tracker:AddItems(JsItems.."c_fusion.json")
+else
+	Tracker:AddItems(JsItems.."Kinstone.json")
+	Tracker:AddItems(JsItems.."fusion.json")
+end
+
 if(VERSION_ALPHA==true) then
 	Tracker:AddItems(JsItems.."alpha.json")
 elseif(VERSION_BETA==true) then
@@ -128,6 +136,7 @@ if (string.find(Tracker.ActiveVariantUID, "_h")) then
 else
     Tracker:AddLayouts(JsLayouts.."standard_broadcast.json")
 end
+
 ------------------------------------------------------------------
 -- Autotracking
 ------------------------------------------------------------------

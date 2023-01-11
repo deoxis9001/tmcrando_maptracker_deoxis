@@ -1,0 +1,10 @@
+[
+	// Gold Kinstone (Clouds)
+	{
+		"name": "Gold Kinstone (Clouds)",
+		"type": "consumable",
+		"img": "images/items/Gold Kinstone (Clouds).png",
+		"codes": "kinstoneClouds,clouds",
+		"max_quantity": 9
+	}
+]

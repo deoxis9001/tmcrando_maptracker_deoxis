@@ -58,6 +58,30 @@
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
       },
+	  {
+		"name":"Fuzer Din/Nayru/Farore 1",
+		"hosted_item":"fusions1b",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_Inn_Fuzer1"],
+	  },
+	  {
+		"name":"Fuzer Din 2",
+		"hosted_item":"fusions20",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_Inn_Fuzer2"],
+	  },
+	  {
+		"name":"Fuzer Nayru 2",
+		"hosted_item":"fusions19",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_Inn_Fuzer3"],
+	  },
+	  {
+		"name":"Fuzer Farore 2",
+		"hosted_item":"fusions10",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_Inn_Fuzer4"],
+	  }
 	]
   },
   {
@@ -84,30 +108,6 @@
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
-	  {
-		"name":"Fuzer Din/Nayru/Farore 1",
-		"hosted_item":"fusions1b",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-	  },
-	  {
-		"name":"Fuzer Din 2",
-		"hosted_item":"fusions20",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-	  },
-	  {
-		"name":"Fuzer Nayru 2",
-		"hosted_item":"fusions19",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-	  },
-	  {
-		"name":"Fuzer Farore 2",
-		"hosted_item":"fusions10",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
-	  }
 	]
   },
   {
@@ -264,7 +264,7 @@
 		"name":"Fuzer Tina",
 		"hosted_item":"fusions5e",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_School_Fuzer"],
 	  }
 	]
   },
@@ -308,13 +308,30 @@
 		"name":"Fuzer Librari",
 		"hosted_item":"fusions54",
 		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_Library_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Candy",
 		"hosted_item":"fusions22",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_Library_Fuzer2"],
+	  },{
+		"name":"Fuzer Zill 1 ( above Library )",
+		"hosted_item":"fusions4b",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_Library_Fuzer3"],
+	  },
+	  {
+		"name":"Fuzer Zill 2 ( above Library )",
+		"hosted_item":"fusions57",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_Library_Fuzer4"],
+	  },
+	  {
+		"name":"Fuzer Zill 3 ( above Library )",
+		"hosted_item":"fusions3e",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_Library_Fuzer5"],
 	  }
 	]
   },
@@ -331,7 +348,7 @@
 	  {
 		"name":"Lady Next to Cafe - Gift",
 		"item_count":1,
-		"access_rules":["$Json_Town_LadyNexttoCafe_Gift"],
+		"access_rules":["$Json_Town_Cafe_Gift"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
@@ -339,13 +356,13 @@
 		"name":"Fuzer Mama",
 		"hosted_item":"fusions34",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_Cafe_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Hurdy-gurdy Man 1",
 		"hosted_item":"fusions32",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_Cafe_Fuzer2"],
 	  }
 	]
   },
@@ -619,7 +636,7 @@
 		"name":"Fuzer Bremor",
 		"hosted_item":"fusions0b",
 		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_NearPostOffice_Fuzer"],
 	  }
 	]
   },
@@ -628,7 +645,7 @@
 	"map_locations":[
 	  {
 		"map":"map",
-		"x":1125,
+		"x":1100,
 		"y":1221,
 	  }
 	],
@@ -637,7 +654,7 @@
 		"name":"Fuzer Stranger",
 		"hosted_item":"fusions0f",
 		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_Stranger_Fuzer"],
 	  }
 	]
   },
@@ -655,7 +672,7 @@
 		"name":"Fuzer Hagen",
 		"hosted_item":"fusions1e",
 		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_Mayor_Fuzer"],
 	  }
 	]
   },
@@ -673,7 +690,37 @@
 		"name":"Fuzer Postman",
 		"hosted_item":"fusions2c",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Town_Postman_Fuzer"],
+	  }
+	]
+  },
+  {
+	"name":"Town - Minish House",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1030,
+		"y":1155,
+	  }
+	],
+	"sections":[
+{
+		"name":"Fuzer 1 Town Minish",
+		"hosted_item":"fusions4b",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_MinishHouse_Fuzer1"],
+	  },
+	  {
+		"name":"Fuzer 2 Town Minish",
+		"hosted_item":"fusions57",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_MinishHouse_Fuzer2"],
+	  },
+	  {
+		"name":"Fuzer 3 Town Minish",
+		"hosted_item":"fusions3e",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Town_MinishHouse_Fuzer3"],
 	  }
 	]
   },

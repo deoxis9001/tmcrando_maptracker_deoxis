@@ -161,13 +161,13 @@
 		"name":"Fuzer Goron (Left)",
 		"hosted_item":"fusions33",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_LonLon_GoronQuest_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Goron (Right)",
 		"hosted_item":"fusions0e",
 		"visibility_rules":["fusionred_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_LonLon_GoronQuest_Fuzer2"],
 	  }
 	]
   },
@@ -185,7 +185,7 @@
 		"name":"Fuzer Ankle",
 		"hosted_item":"fusions40",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_LonLon_Ankle_Fuzer"],
 	  }
 	]
   }

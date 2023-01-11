@@ -149,7 +149,7 @@
 	  {
 		"name":"Fuzer Business Scrub",
 		"hosted_item":"fusions27",
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Swamp_BusinessScrub_Fuzer"],
 	  }
 	]
   },

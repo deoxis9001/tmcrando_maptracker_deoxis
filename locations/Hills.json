@@ -19,9 +19,9 @@
 	  },
 	  {
 		"name":"Fuzer Mysterious Wall",
-		"hosted_item":"fusions26",
+		"hosted_item":"fusions2b",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Hills_MittsCave_Fuzer"],
 	  }
 	]
   },
@@ -112,7 +112,7 @@
 	]
   },
   {
-	"name":"Eastern Hills - Minish house",
+	"name":"Eastern Hills - Minish House",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -125,7 +125,7 @@
 		"name":"Fuzer Forest Minish",
 		"hosted_item":"fusions2e",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Hills_MinishHouse_Fuzer"],
 	  }
 	]
   },
@@ -143,13 +143,13 @@
 		"name":"Fuzer Meenie",
 		"hosted_item":"fusions62",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Hills_Farmer_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer eenie",
-		"hosted_item":"fusions25",
+		"hosted_item":"fusions29",
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
-		"access_rules":["$Json_Valley_Fuzer_Fuzer"],
+		"access_rules":["$Json_Hills_Farmer_Fuzer2"],
 	  }
 	]
   }

@@ -7,7 +7,7 @@ function Json_Ruins_MinishWallHole_HeartPiece()
 end
 
 function Json_Ruins_MinishHole_Chest()
-  if Ruins_CrackFusion_Chest()==1 then
+  if Ruins_MinishHome_Chest()==1 then
     return 1
   else
     return 0
@@ -55,7 +55,7 @@ function Json_Ruins_OctoGolden_Kill()
 end
 
 function Json_Ruins_MinishCrack_Chest()
-  if Ruins_MinishHome_Chest()==1 then
+  if Ruins_CrackFusion_Chest()==1 then
     return 1
   else
     return 0
