@@ -16,6 +16,15 @@ function BonkedTrees()
 		return 0
 	end 
 end
+function NorthFieldCrack() 
+	if ( has("openworld_on") ) then
+		return 1
+	elseif ( CanDestroyTrees()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
 function TownDog() 
 	if ( has("openworld_on") ) then
 		return 1
@@ -26,9 +35,9 @@ function TownDog()
 	end 
 end
 function WellPillar() 
-	if ( has("openworld_on") and ( has("mitts") or has("flippers") or has("cape") or has("bombs") or CanSplit3()==1) )  then
+	if ( has("openworld_on") and ( has("mitts") or has("flippers") or has("cape") or has("bombs") or CanSplit3()==1 or CanSplit4()==1) )  then
 		return 1
-	elseif ( has("mitts") and CanSplit3()==1 and ( has("flippers") or has("cape") ) ) then
+	elseif ( has("mitts") and (CanSplit3()==1 or CanSplit4()==1) and ( has("flippers") or has("cape") ) ) then
 		return 1
 	else
 		return 0
@@ -55,7 +64,7 @@ end
 function DrLeft() 
 	if ( has("openworld_on") and TownDog()==1 ) then
 		return 1
-	elseif ( TownDog()==1 and has("bracelets") and BlowDust()==1 and CanSplit2()==1) then
+	elseif ( TownDog()==1 and has("bracelets") and BlowDust()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1) then
 		return 1
 	else
 		return 0
@@ -179,7 +188,7 @@ end
 function WesternShortcut() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( AccessTrilby()==1 and ( CanSplit2()==1 or TrilbyShortcut()==1 )  ) then
+	elseif ( AccessTrilby()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1  ) ) then
 		return 1
 	else
 		return 0
@@ -188,7 +197,7 @@ end
 function TrilbyShortcut() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit2()==1 ) then
+	elseif ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) then
 		return 1
 	else
 		return 0
@@ -240,7 +249,7 @@ end
 function CrenelDojo() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit2()==1 ) then
+	elseif ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1) then
 		return 1
 	else
 		return 0
@@ -345,6 +354,16 @@ function CryptBlocks()
 		return 0
 	end 
 end
+function CryptEntrance() 
+	if ( has("openworld_on") ) then
+		return 1
+	elseif ( CanSplit3()==1 and has("lamp") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
 function CryptPuzzle() 
 	if ( has("openworld_on") ) then
 		return 1
@@ -468,10 +487,9 @@ function DeepwoodRedWarp()
 	end 
 end
 function CoFSpikeBeetle() 
---Helpers.HasDamageSource, (|Helpers.CanDownThrust, Items.PacciCane, Items.Shield, Items.BombBag)
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( HasDamageSource()==1 and (CanDownThrust()==1 or has("cane") or has("shield") or has("bombs") ) ) then
+	elseif ( HasDamageSource()==1 and (DownStrikeBeetle()==1 or has("cane") or has("shield") or has("bombs") ) ) then
 		return 1
 	else
 		return 0
@@ -548,7 +566,16 @@ end
 function FoWCloneSwitch() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit2()==1 ) then
+	elseif ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function FoWStatueCloneSwitch() 
+	if ( has("openworld_on") ) then
+		return 1
+	elseif ( CanSplit2()==1 or CanSplit3()==1 ) then
 		return 1
 	else
 		return 0
@@ -557,7 +584,7 @@ end
 function FoWLeftDrop() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif (FoWEyeSwitch()==1 and FoWStalfosFight()==1 and ( CanSplit2()==1 or has("cape") ) ) then
+	elseif (FoWEyeSwitch()==1 and FoWStalfosFight()==1 and ( has("cape") or CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1  ) ) then
 		return 1
 	else
 		return 0
@@ -826,7 +853,7 @@ end
 function PoWPeahatRoom()
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit2()==1 or ( HasSword()==1 and has("bombs") ) ) then
+	elseif ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 or ( HasSword()==1 and has("bombs") ) ) then
 		return 1
 	else
 		return 0
