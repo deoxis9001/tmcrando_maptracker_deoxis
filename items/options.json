@@ -1,23 +1,4 @@
 [
-//option  tracker
-  {
-    "name": "Out of logic",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/OtherSetting/No_Logic_off.png",
-        "codes":"nologic_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/OtherSetting/No_Logic_on.png",
-        "codes":"nologic_on",
-        "inherit_codes":false
-      }
-    ]
-  },
   //DHC requirement
   {
     "name":"DHC",

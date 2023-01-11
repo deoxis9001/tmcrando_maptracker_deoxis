@@ -65,7 +65,7 @@
     },
     "world_setting": {
       "type": "group",
-      "header": "Logic Settings",
+      "header": "World Settings",
       "content": {
 		"type": "scroll",
 		"max_height":"448",
@@ -82,7 +82,7 @@
 					  ["underwater_off","golden_enemy_off","ped_items_off"],
 					  ["openworld_off","",""],
 					  ["","",""],
-					  ["fusiongold_vanilla","",""],
+					  ["fusiongold_removed","",""],
 					  ["fusionred_removed","fusionblue_removed","fusiongreen_removed"]
 				  ]
 			  }
@@ -99,51 +99,7 @@
 		"item_height":64,
 		"item_width":320,
         "rows": [
-			  ["nologic_off"],
-		  ]
-      }
-    },
-    "Fusion": {
-      "type": "group",
-      "header": "Fusions",
-      "content": {
-        "type": "itemgrid",
-        "h_alignment": "center",
-        "item_margin": "0,0",
-		"item_height":64,
-		"item_width":320,
-        "rows": [
-			["Fuze09","Fuze10","Fuze11"],
-			["Fuze12","Fuze13","Fuze14"],
-			["Fuze15","Fuze16","Fuze17"],
-			["Fuze18","Fuze19","Fuze20"],
-			["Fuze21","Fuze22","Fuze23"],
-			["Fuze24","Fuze25","Fuze26"],
-			["Fuze27","Fuze28","Fuze29"],
-			["Fuze30","Fuze31","Fuze32"],
-			["Fuze33","Fuze34","Fuze35"],
-			["Fuze36","Fuze37","Fuze38"],
-			["Fuze39","Fuze40","Fuze41"],
-			["Fuze42","Fuze43","Fuze44"],
-			["Fuze45","Fuze46","Fuze47"],
-			["Fuze48","Fuze49","Fuze50"],
-			["Fuze51","Fuze52","Fuze53"],
-			["Fuze54","Fuze55","Fuze56"],
-			["Fuze57","Fuze58","Fuze59"],
-			["Fuze60","Fuze61","Fuze62"],
-			["Fuze63","Fuze64","Fuze65"],
-			["Fuze66","Fuze67","Fuze68"],
-			["Fuze69","Fuze70","Fuze71"],
-			["Fuze72","Fuze73","Fuze74"],
-			["Fuze75","Fuze76","Fuze77"],
-			["Fuze78","Fuze79","Fuze80"],
-			["Fuze81","Fuze82","Fuze83"],
-			["Fuze84","Fuze85","Fuze86"],
-			["Fuze87","Fuze88","Fuze89"],
-			["Fuze90","Fuze91","Fuze92"],
-			["Fuze93","Fuze94","Fuze95"],
-			["Fuze96","Fuze97","Fuze98"],
-			["Fuze99","Fuze100",""]
+			  ["progressiveitems","fusionscombined"],
 		  ]
       }
     },
@@ -211,6 +167,7 @@
                       {
                         "type":"tabbed",
                         "dock":"top",
+						"style":"wrap",
                         "tabs":[
                           {
                             "title":"Overworld",

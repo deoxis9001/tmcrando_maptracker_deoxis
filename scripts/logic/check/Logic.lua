@@ -222,8 +222,6 @@ end
 function Crenel_BridgeCave_Chest() 
 	if ( AccessCrenel()==1 and  BombWalls()==1 ) then
 		return 1
-	elseif ( has("nologic_on") and AccessCrenel()==2 and  BombWalls()==1 ) then
-		return 2
 	else
 		return 0
 	end 
@@ -232,8 +230,6 @@ end
 function Crenel_FairyCave_HP() 
 	if ( AccessCrenel()==1 and  BombWalls()==1 ) then
 		return 1
-	elseif ( has("nologic_on") and AccessCrenel()==2 and  BombWalls()==1 ) then
-		return 2
 	else
 		return 0
 	end 
@@ -242,8 +238,6 @@ end
 function Crenel_Scrub_NPC()
 	if ( AccessCrenel()==1 and BombWalls()==1 and  (has("grip") or has("bombs") or CrenelMushroom()==1 ) and Scrubs()==1 ) then
 		return 1
-	elseif ( has("nologic_on") and AccessCrenel()==2 and BombWalls()==1 and  (has("grip") or has("bombs") or CrenelMushroom()==1 ) and Scrubs()==1 ) then
-		return 2
 	else
 		return 0
 	end 
@@ -276,8 +270,6 @@ end
 function Crenel_GreatFairy_NPC()
 	if ( AccessCrenel()==1 and has("grip") and BombWalls()==1 and (has("bombs") or HasBottle()==1) ) then
 		return 1
-	elseif ( has("nologic_on") and AccessCrenel()==2 and has("grip") and BombWalls()==1 and (has("bombs") or HasBottle()==1)  ) then
-		return 2
 	else
 		return 0
 	end 
@@ -286,8 +278,6 @@ end
 function Crenel_ClimbFusion_Chest() 
 	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions62") ) ) and AccessCrenel()==1 and has("grip") ) then
 		return 1
-	elseif ( has("nologic_on") and ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions62") ) ) and AccessCrenel()==2 and has("grip") ) then
-		return 2
 	else
 		return 0
 	end 
@@ -296,8 +286,6 @@ end
 function Crenel_DigCave_HP() 
 	if ( AccessCrenel()==1 and has("grip") and has("mitts") ) then
 		return 1
-	elseif ( has("nologic_on") and AccessCrenel()==2 and has("grip") and has("mitts") ) then
-		return 2
 	else
 		return 0
 	end 
@@ -306,8 +294,6 @@ end
 function Crenel_BeanstalkFusion_HP() 
 	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1a") ) ) and AccessCrenel()==1 and has("grip") ) then
 		return 1
-	elseif ( has("nologic_on") and (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1a") ) ) and AccessCrenel()==2 and has("grip") ) then
-		return 2
 	else
 		return 0
 	end 
@@ -316,8 +302,6 @@ end
 function Crenel_BeanstalkFusion_Item() 
 	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1a") ) ) and AccessCrenel()==1 and has("grip") ) then
 		return 1
-	elseif ( has("nologic_on") and (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1a") ) ) and AccessCrenel()==2 and has("grip") ) then
-		return 2
 	else
 		return 0
 	end 
@@ -326,8 +310,6 @@ end
 function Crenel_RainPathFusion_Chest() 
 	if ( (  has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions43") ) ) and AccessCrenel()==1 and has("grip") ) then
 		return 1
-	elseif ( has("nologic_on") and (  has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions43") ) ) and AccessCrenel()==2 and has("grip") ) then
-		return 2
 	else
 		return 0
 	end 
@@ -336,8 +318,6 @@ end
 function Crenel_UpperBlock_Chest() 
 	if ( AccessMelari()==1 ) then
 		return 1
-	elseif ( has("nologic_on") and AccessMelari()==2 ) then
-		return 2
 	else
 		return 0
 	end 
@@ -346,8 +326,6 @@ end
 function Crenel_MinesPathFusion_Chest() 
 	if ( (  has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions45") ) ) and AccessMelari()==1 ) then
 		return 1
-	elseif ( has("nologic_on") and (  has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions45") ) ) and AccessMelari()==2 ) then
-		return 2
 	else
 		return 0
 	end 
@@ -356,8 +334,6 @@ end
 function Crenel_Melari_Mining() 
 	if ( AccessMelari()==1 and has("mitts")) then
 		return 1
-	elseif ( has("nologic_on") and has("mitts") and AccessMelari()==2 ) then
-		return 2
 	else
 		return 0
 	end 
@@ -366,8 +342,6 @@ end
 function Crenel_Melari_NPC() 
 	if ( CompleteCoF()==1 ) then
 		return 1
-	elseif ( has("nologic_on") and CompleteCoF()==2 ) then
-		return 2
 	else
 		return 0
 	end 
@@ -391,8 +365,6 @@ end
 function CrenelBase_EntranceVine()
     if AccessTrilby()==1 then
         return 1
-    elseif has("nologic_on") and AccessTrilby()==2 then
-        return 2
     else
         return 0
     end
@@ -401,8 +373,6 @@ end
 function CrenelBase_FairyCave_Item()
     if ( AccessTrilby()==1  and LowerBean()==1 and BombWalls()==1 ) or (WindCrest()==1 and (UpperBean()==1 or has("grip")) and BombWalls()==1) then
         return 1
-    elseif ( has("nologic_on") and ( AccessTrilby()==1 or AccessTrilby()==2 )  and LowerBean()==1 and BombWalls()==1 ) or (WindCrest()==1 and (UpperBean()==1 or has("grip")) and BombWalls()==1) then
-        return 2
     else
         return 0
     end
@@ -413,8 +383,6 @@ function CrenelBase_GreenWaterFusion_Chest()
         return 1
     elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and WindCrest()==1 and (UpperBean()==1 or has("grip") ) and BombWalls()==1 and OverworldBlocks()==1 then
         return 1
-    elseif ( has("nologic_on") and ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and ( AccessTrilby()==1 or AccessTrilby()==2 )  and LowerBean()==1 and BombWalls()==1 and OverworldBlocks()==1) then
-        return 2
     else
         return 0
     end
@@ -425,8 +393,6 @@ function CrenelBase_WestFusion_Chest()
         return 1
     elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1  or has("cape") ) ) ) then
         return 1
-    elseif has("nologic_on") and ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and ( AccessTrilby()==1 or AccessTrilby()==2 ) and LowerBean()==1 and (BombWalls()==1 or has("cape")) then
-        return 2
     else
         return 0
     end
@@ -437,8 +403,6 @@ function CrenelBase_WaterCave_Chest()
         return 1
     elseif  WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( Helpers.BombWalls()==1 or has("cape") ) ) ) and Helpers.BombWalls()==1 and ( has("bombs") or has("cape") ) then
         return 1
-    elseif has("nologic_on") and ( AccessTrilby()==1 or AccessTrilby()==2 ) and LowerBean()==1 and BombWalls()==1 and ( has("bombs") or has("cape") ) then
-        return 2
     else
         return 0
     end
@@ -449,9 +413,7 @@ function CrenelBase_WaterCave_HP()
         return 1
     elseif WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and ( has("bombs") or has("cape") or has("flippers") ) then
         return 1
-    elseif has("nologic_on") and ( AccessTrilby()==1 or AccessTrilby()==2 ) and LowerBean()==1 and BombWalls()==1 and ( has("bombs") or has("cape") or has("flippers") ) then
-        return 2
-     else
+    else
         return 0
     end
 end
@@ -461,8 +423,6 @@ function CrenelBase_MinishVineHole_Chest()
         return 1
     elseif  WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
         return 1
-    elseif has("nologic_on") and ( AccessTrilby()==1 or AccessTrilby()==2 )  and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) and CrenelDust()==1  then
-        return 2
     else
         return 0
     end
@@ -473,8 +433,6 @@ function CrenelBase_MinishCrack_Chest()
         return 1
     elseif  WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
         return 1
-    elseif has("nologic_on") and ( AccessTrilby()==1 or AccessTrilby()==2 ) and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) and CrenelDust()==1  then
-        return 2
     else
         return 0
     end
@@ -1783,8 +1741,6 @@ end
 function Trilby_MiddleFusion_Chest() 
 	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5e") ) ) and AccessTrilby()==1) then
 		return 1
-	elseif ( has("nologic_on") and  ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5e") ) ) and AccessTrilby()==2) then
-		return 2
 	else
 		return 0
 	end 
@@ -1793,8 +1749,6 @@ end
 function Trilby_TopFusion_Chest() 
 	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions52") ) ) and AccessTrilby()==1) then
 		return 1
-	elseif ( has("nologic_on") and  ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions52") ) ) and AccessTrilby()==2) then
-		return 2
 	else
 		return 0
 	end 
@@ -1803,8 +1757,6 @@ end
 function Trilby_DigCave_LeftChest() 
 	if ( AccessTrilby()==1 and has("mitts")) then
 		return 1
-	elseif ( has("nologic_on") and AccessTrilby()==2 and has("mitts")) then
-		return 2
 	else
 		return 0
 	end 
@@ -1813,8 +1765,6 @@ end
 function Trilby_DigCave_RightChest() 
 	if ( AccessTrilby()==1 and has("mitts") ) then
 		return 1
-	elseif ( has("nologic_on") and  AccessTrilby()==2 and has("mitts")) then
-		return 2
 	else
 		return 0
 	end 
@@ -1823,8 +1773,6 @@ end
 function Trilby_DigCave_WaterFusion_Chest() 
 	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions22") ) ) and AccessTrilby()==1 and has("mitts") and ( has("cape") or has("flippers") ) ) then
 		return 1
-	elseif ( has("nologic_on") and  ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions22") ) ) and AccessTrilby()==2 and has("mitts") and ( has("cape") or has("flippers") ) ) then
-		return 2
 	else
 		return 0
 	end 
@@ -1833,8 +1781,6 @@ end
 function Trilby_Scrub_NPC() 
 	if ( AccessTrilby()==1 and BombWalls()==1 and Scrubs()==1) then
 		return 1
-	elseif ( has("nologic_on") and  (AccessTrilby()==2 or AccessTrilby()==1 ) and BombWalls()==1 and Scrubs()==1 ) then
-		return 2
 	else
 		return 0
 	end 

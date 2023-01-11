@@ -49,8 +49,6 @@ end
 function AccessTrilby() 
 	if ( has("openworld_on") or has("flippers") or has("cape") or ( HasSword()==1 and HasSpin()==1 ) or GuardSkip()==1 or (WindCrest()==1 and (UperBean()==1 or has("grip")))) then
 		return 1
-	elseif ( has("nologic_on") and GuardSkip()==2 ) then
-		return 2
 	else
 		return 0
 	end 
@@ -65,8 +63,6 @@ end
 function AccessCrenel() 
 	if ( ( AccessTrilby()==1 and LowerBean()==1 and ( has("grip")  or ( ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 ) ) ) or WindCrest()==1 ) then
 		return 1
-	elseif ( has("nologic_on") and ( ( AccessTrilby()==1 or AccessTrilby()==2) and LowerBean()==1 and ( has("grip")  or ( ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 ) ) ) ) then
-		return 2
 	else
 		return 0
 	end 
@@ -74,8 +70,6 @@ end
 function AccessMelari() 
 	if ( WindCrest()==1 or ( AccessCrenel()==1  and ( ( has("cane") and ( has("grip") or CrenelMushroom()==1 ) ) or ( has("grip") and ( has("cape") or LightArrowBreak()==1 or has("gust") ) and CrenelSwitch()==1 ) ) ) )	then
 		return 1
-	elseif ( has("nologic_on") and ( ( AccessTrilby()==1 or AccessTrilby()==2)  and ( ( has("cane") and ( has("grip") or CrenelMushroom()==1 ) ) or ( has("grip") and ( has("cape") or LightArrowBreak()==1 or has("gust") ) and CrenelSwitch()==1 ) ) ) )	then
-		return 2
 	else
 		return 0
 	end 
@@ -132,8 +126,6 @@ end
 function CoFAccess()
 	if AccessMelari()==1 then
 		return 1
-	elseif has("nologic_on") and AccessMelari()==2 then
-		return 2
 	else
 		return 0
 	end 
@@ -141,8 +133,6 @@ end
 function CoFBasementAccess()
 	if  CoFAccess()==1 and (CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( BombWalls()==1 and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 )) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 )) then
 		return 1
-	elseif  has("nologic_on") and CoFAccess()==2 and (CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( BombWalls()==1 and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 )) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 )) then
-		return 2
 	else
 		return 0
 	end 

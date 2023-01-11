@@ -67,7 +67,7 @@ redsword = ToggleItem("Smith's Sword","redsword","images/items/Red Sword.png")
 bluesword = ToggleItem("Smith's Sword","bluesword","images/items/Blue Sword.png")
 foursword = ToggleItem("Smith's Sword","foursword","images/items/Four Sword.png")
 sword = SwordProgress("progression sword","sword0")
-progression = SwordOptions("progressive","progressive","images/options/progressive_on.png","images/options/progressive_off.png")
+progression = SwordOptions("progressive","progressiveitems","images/options/progressive_on.png","images/options/progressive_off.png")
 if (string.find(Tracker.ActiveVariantUID, "Combined")) then
 FUSIONS_COMBINED=true
 else
