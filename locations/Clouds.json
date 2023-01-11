@@ -1,5 +1,30 @@
 [
   {
+	"name":"Clouds - Fuzer",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2970,
+		"y":1110,
+		"restrict_visibility_rules":["$FusionsGold"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Fuzer Gale",
+		"hosted_item":"fusions13",
+		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"access_rules":["$Json_Clouds_Fuzer_Fuzer1"],
+	  },
+	  {
+		"name":"Fuzer Hailey",
+		"hosted_item":"fusions4a",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"access_rules":["$Json_Clouds_Fuzer_Fuzer2"],
+	  },
+	]
+  },
+  {
 	"name":"Clouds - Central Fusion",
 	"map_locations":[
 	  {

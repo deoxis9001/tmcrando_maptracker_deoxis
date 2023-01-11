@@ -35,7 +35,7 @@ function Json_Clouds_WindTribeHouse_Fuzer3()
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer4() 
-	if ( AccessClouds()==1 ) then
+	if ( AccessWindTribe()==1 ) then
 		return 1
 	else
 		return 0
@@ -43,7 +43,7 @@ function Json_Clouds_WindTribeHouse_Fuzer4()
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer5() 
-	if ( AccessClouds()==1 ) then
+	if ( AccessWindTribe()==1 ) then
 		return 1
 	else
 		return 0
@@ -65,6 +65,23 @@ function Json_Clouds_WindTribeHouse_Fuzer7()
 		return 0
 	end 
 end
+
+function Json_Clouds_Fuzer_Fuzer1() 
+	if ( AccessClouds()==1 and AccessWindTribe()==0 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Json_Clouds_Fuzer_Fuzer2() 
+	if ( AccessClouds()==1 and AccessWindTribe()==0 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
 
 function Json_Crenel_Mines_Fuzer1() 
 	if ( AccessMelari()==1 ) then
