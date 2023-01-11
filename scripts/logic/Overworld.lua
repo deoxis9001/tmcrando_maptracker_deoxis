@@ -64,7 +64,7 @@ end
 function DrLeft() 
 	if ( has("openworld_on") and TownDog()==1 ) then
 		return 1
-	elseif ( TownDog()==1 and has("bracelets") and BlowDust()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1) then
+	elseif ( TownDog()==1 and has("bracelets") and BlowDust()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1)) then
 		return 1
 	else
 		return 0
