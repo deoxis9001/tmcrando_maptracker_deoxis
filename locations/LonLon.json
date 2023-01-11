@@ -184,7 +184,7 @@
 	  {
 		"name":"Fuzer Ankle",
 		"hosted_item":"fusions40",
-		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
 		"access_rules":["$Json_LonLon_Ankle_Fuzer"],
 	  }
 	]

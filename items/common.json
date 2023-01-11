@@ -1,83 +1,11 @@
 [
-  // Progressive Swords (Overworld)
-  //    {
-  //      "name": "Sword",
-  //      "type": "progressive",
-  //      "allow_disabled": false,
-  //      "initial_stage_idx": 0,
-  //      "stages": [
-  //      {
-  //        "img": "images/items/Smith's Sword.png",
-  //        "inherit_codes": false,
-  //        "img_mods": "@disabled",
-  //        "codes": ""
-  //      },
-  //      {
-  //        "img": "images/items/Smith's Sword.png",
-  //        "inherit_codes": false,
-  //        "codes": "sword"
-  //      },
-  //      {
-  //      "img": "images/items/Green Sword.png",
-  //      "inherit_codes": false,
-  //      "codes": "sword2"
-  //      },
-  //      {
-  //        "img": "images/items/Red Sword.png",
-  //        "inherit_codes": false,
-  //        "codes": "sword3"
-  //      },
-  //      {
-  //        "img": "images/items/Blue Sword.png",
-  //        "inherit_codes": false,
-  //        "codes": "sword4"
-  //       },
-  //       {
-  //         "img": "images/items/Four Sword.png",
-  //         "inherit_codes": false,
-  //         "codes": "sword5"
-  //       }
-  //     ]
-  //    },
-  //No Progressive Swords Smith (Overworld)
-  //  {
-  //  "name": "Smith Sword",
-  //  "type": "toggle",
-  //  "img": "images/items/Smith's Sword.png",
-  //  "inherit_codes": false,
-  //  "codes": "smithsword"
-  //  },
-  //No Progressive Swords Green (Overworld)
-  //  {
-  //  "name": "Green Sword",
-  //  "type": "toggle",
-  //  "img": "images/items/Green Sword.png",
-  //  "codes": "greensword"
-  //  },
-  //No Progressive Swords Red (Overworld)
-  //  {
-  //  "name": "Red Sword",
-  //  "type": "toggle",
-  //  "img": "images/items/Red Sword.png",
-  //  "inherit_codes": false,
-  //  "codes": "redsword"
-  //  },
-  //No Progressive Swords Blue (Overworld)
-  //  {
-  //  "name": "Blue Sword",
-  //  "type": "toggle",
-  //  "img": "images/items/Blue Sword.png",
-  //  "inherit_codes": false,
-  //  "codes": "bluesword"
-  //  },
-  //No Progressive Swords Four (Overworld)
-  //  {
-  //  "name": "Four Sword",
-  //  "type": "toggle",
-  //  "img": "images/items/Four Sword.png",
-  //  "inherit_codes": false,
-  //  "codes": "foursword"
-  //  },
+  {
+	  "name": "Smith Sword",
+	  "type": "toggle",
+	  "img": "images/items/Smith's Sword.png",
+	  "inherit_codes": false,
+	  "codes": "swordcapture"
+  },
   //Gust Jar
   {
     "name": "Gust Jar",
@@ -847,6 +775,24 @@
        "img": "images/items/Both_Keys.png"
      }
    ]
+ },
+ {
+   "name": "Generic Red Kinstone",
+   "type": "toggle",
+   "img": "images/items/Generic Red Kinstone.png",
+   "codes": "genericred"
+ },
+ {
+   "name": "Generic Blue Kinstone",
+   "type": "toggle",
+   "img": "images/items/Generic Blue Kinstone.png",
+   "codes": "genericblue"
+ },
+ {
+   "name": "Generic Green Kinstone",
+   "type": "toggle",
+   "img": "images/items/Generic Green Kinstone.png",
+   "codes": "genericgreen"
  },
  {
    "name": "Generic Yellow Kinstone",

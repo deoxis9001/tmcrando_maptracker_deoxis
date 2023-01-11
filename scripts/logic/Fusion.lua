@@ -285,7 +285,32 @@ end
 
 
 function Json_MinishWoods_MinishVillage_Fuzer1() 
-	if ( has("fusions18") and  has("fusions2d") and has("fusions35") and has("fusions36") and has("fusions37") and has("fusions39") and has("fusions3c") and has("fusions44") and has("fusions46") and  has("fusions47") and has("fusions4e") and has("fusions50") and  has("fusions53") and has("fusions55") and  has("fusions560") and has("fusions55") and  has("fusions55") and  has("fusions5f") and  has("fusions60")) then
+	local count=0
+	if(has("fusions13")) then
+		count = count + 1
+	end
+	if(has("fusions14")) then
+		count = count + 1
+	end
+	if(has("fusions15")) then
+		count = count + 1
+	end
+	if(has("fusions16")) then
+		count = count + 1
+	end
+	if(has("fusions17")) then
+		count = count + 1
+	end
+	if(has("fusions18")) then
+		count = count + 1
+	end
+	if(has("fusions19")) then
+		count = count + 1
+	end
+	if(has("fusions1a")) then
+		count = count + 1
+	end
+	if ( count >=7 ) then
 		return 1
 	else
 		return 0
@@ -294,7 +319,29 @@ end
 
 
 function Json_MinishWoods_MinishVillage_Fuzer2() 
-	if ( Json_MinishWoods_MinishVillage_Fuzer1()==1 ) then
+	local count=0
+	if(has("fusions1b")) then
+		count = count + 1
+	end
+	if(has("fusions1c")) then
+		count = count + 1
+	end
+	if(has("fusions1d")) then
+		count = count + 1
+	end
+	if(has("fusions1e")) then
+		count = count + 1
+	end
+	if(has("fusions1f")) then
+		count = count + 1
+	end
+	if(has("fusions20")) then
+		count = count + 1
+	end
+	if(has("fusions21")) then
+		count = count + 1
+	end
+	if ( count >=7 and Json_MinishWoods_MinishVillage_Fuzer1()==1 ) then
 		return 1
 	else
 		return 0
@@ -503,7 +550,7 @@ end
 
 
 function Json_Trilby_Knuckle_Fuzer() 
-	if ( Trilby_DigCave_RightChest()==1 ) then
+	if ( Trilby_DigCave_RightChest()==1 and has("cane") and CanDestroyTrees()==1 ) then
 		return 1
 	else
 		return 0

@@ -110,9 +110,9 @@
         "h_alignment": "center",
         "item_margin": "0,0,2,10",
         "rows": [
-          ["sword", "gust", "cane", "boomerang", "wallet","wilds"],
-          ["shield", "mitts", "lamp", "bombs", "remotebombs","clouds"],
-          ["boots", "cape", "ocarina", "bow", "quiver","falls"],
+          ["swordcapture", "gust", "cane", "boomerang", "wallet","genericred"],
+          ["shield", "mitts", "lamp", "bombs", "remotebombs","genericblue"],
+          ["boots", "cape", "ocarina", "bow", "quiver","genericgreen"],
           ["dogfood","grip","carlov","jabber","llrkey","genericyellow"],
           ["bottle","bracelets","trophy","mushroom","gravekey","bigkey"],
           ["10hearts","heartpiece","sevenscrolls","flippers", "butterfly","smallkey"],

@@ -17,9 +17,9 @@ JsLocations="locations/"
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUZER_TRACKING = true
-TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = true
+TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
-TMC_AUTOTRACKER_DEBUG_FUZER = false
+TMC_AUTOTRACKER_DEBUG_FUZER = true
 TMC_AUTOTRACKER_DEBUG_ITEM = false
 VERSION_ALPHA = true
 VERSION_BETA = true
@@ -67,7 +67,7 @@ redsword = ToggleItem("Smith's Sword","redsword","images/items/Red Sword.png")
 bluesword = ToggleItem("Smith's Sword","bluesword","images/items/Blue Sword.png")
 foursword = ToggleItem("Smith's Sword","foursword","images/items/Four Sword.png")
 sword = SwordProgress("progression sword","sword0")
-progression = SwordOptions("progressive","progressiveitems","images/options/progressive_on.png","images/options/progressive_off.png")
+progression = SwordOptions("progressive","progressiveitems","images/options/OtherSetting/progressive_on.png","images/options/OtherSetting/progressive_off.png")
 if (string.find(Tracker.ActiveVariantUID, "Combined")) then
 FUSIONS_COMBINED=true
 else
