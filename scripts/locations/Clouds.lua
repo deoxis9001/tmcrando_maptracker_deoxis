@@ -7,7 +7,7 @@ function Json_Clouds_CentralFusion_Fusion()
 end
 
 function Json_Clouds_BottomLeftChest_Chest()
-  if Clouds_South_RightChest()==1 then
+  if Clouds_South_Chest()==1 then
     return 1
   else
     return 0
@@ -161,7 +161,7 @@ function Json_Clouds_TopRightDiggingSpot_Digging()
 end
 
 function Json_Clouds_BottomLeftDiggingSpot_Digging()
-  if Clouds_South_Chest()==1 then
+  if Clouds_South_DigSpot()==1 then
     return 1
   else
     return 0

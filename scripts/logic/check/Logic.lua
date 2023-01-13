@@ -1395,7 +1395,7 @@ function Swamp_Dojo_NPC()
 end
 
 function Swamp_MinishFusion_NorthCrack_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4b") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
 		return 1
 	else
 		return 0
