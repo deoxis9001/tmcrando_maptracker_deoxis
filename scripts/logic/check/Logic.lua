@@ -859,7 +859,7 @@ function LonLon_Path_HP()
 end
 
 function LonLon_DigSpot() 
-	if ( AccessLonLon()==1 and ( has("cane") or has("cape") ) ) then
+	if ( AccessLonLon()==1 and ( has("cane") or has("cape") ) and has("mitts") ) then
 		return 1
 	else
 		return 0

@@ -4,7 +4,7 @@ end
 function ToDLeftBlock() 
 	if ( Tracker:ProviderCountForCode("tod_smallkey") >= 4 and has("tod_bigkey") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("tod_smallkey") == 1 and hasnot("tod_bigkey") ) then
+	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 1 and hasnot("tod_bigkey") ) then
 		return 1
 	else
 		return 0
@@ -32,7 +32,7 @@ function ToDDarkDoor()
 	end 
 end
 function ToDEitherDoor() 
-	if ( Tracker:ProviderCountForCode("tod_smallkey") >= 3 ) then
+	if ( Tracker:ProviderCountForCode("tod_smallkey") >= 4 ) then
 		return 1
 	else
 		return 0

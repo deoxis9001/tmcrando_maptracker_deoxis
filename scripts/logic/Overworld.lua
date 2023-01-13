@@ -1,7 +1,7 @@
 function CanDestroyTrees() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( HasSword()==1 or LightArrowBreak()==1 or has("bombs") or has("lamp") ) then
+	elseif ( has("lamp") or has("bombs") or HasSword()==1 or LightArrowBreak()==1 ) then
 		return 1
 	else
 		return 0
@@ -16,19 +16,10 @@ function BonkedTrees()
 		return 0
 	end 
 end
-function NorthFieldCrack() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( CanDestroyTrees()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function TownDog() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( has("cane") or has("cape") or has("flippers") ) then
+	elseif (  has("cape") or has("flippers") or has("cane") ) then
 		return 1
 	else
 		return 0
@@ -64,7 +55,7 @@ end
 function DrLeft() 
 	if ( has("openworld_on") and TownDog()==1 ) then
 		return 1
-	elseif ( TownDog()==1 and has("bracelets") and BlowDust()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1)) then
+	elseif ( has("bracelets") and TownDog()==1 and BlowDust()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1)) then
 		return 1
 	else
 		return 0
@@ -91,7 +82,7 @@ end
 function TownMulldozers() 
 	if ( has("openworld_on") and has("cane") and Fountain()==1 ) then
 		return 1
-	elseif ( Fountain()==1 and has("cane") and HasSword()==1 ) then
+	elseif ( has("cane") and Fountain()==1 and HasSword()==1 ) then
 		return 1
 	else
 		return 0
@@ -154,7 +145,7 @@ end
 function MayorCabin() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( ( ( BonkedTrees()==1 and CabinSwim()==1 ) or (LakeMinish()==1 and has("flippers") and CabinSwim()==1 ) ) and has("bracelets")  ) then
+	elseif ( has("bracelets") and ( ( BonkedTrees()==1 and CabinSwim()==1 ) or (has("flippers") and LakeMinish()==1 and CabinSwim()==1 ) ) ) then
 		return 1
 	else
 		return 0
@@ -267,7 +258,7 @@ end
 function SwampShortcut() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( WindCrest()==1 or has("flippers") or has ("cape") or ( has("boots") and HasBow()==1 ) ) then
+	elseif (  has("flippers") or has ("cape") or ( has("boots") and HasBow()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -830,7 +821,7 @@ end
 function PoWPotPuzzle() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( has("bracelets") and PoWPotPuzzleOOL()==1 ) then
+	elseif ( has("bracelets") or PoWPotPuzzleOOL()==1 ) then
 		return 1
 	else
 		return 0
