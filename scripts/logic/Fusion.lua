@@ -249,7 +249,7 @@ end
 
 
 function Json_LonLon_GoronQuest_Fuzer1() 
-	if ( GoronCave()==1 and (CanDestroyTrees()==1 or Ocarina() )) then
+	if ( GoronCave()==1 and (CanDestroyTrees()==1 or has("ocarina") )) then
 		return 1
 	else
 		return 0

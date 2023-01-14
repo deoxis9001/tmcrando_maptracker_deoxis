@@ -68,7 +68,16 @@ function testFlag(segment, address, flag)
     return false
   end
 end
-
+function updateWall(segment, code, address)
+  local item = Tracker:FindObjectForCode(code)
+  if ReadU8(segment, address) == 0xF3 then
+            item.Active = true
+  elseif ReadU8(segment, address) == 0xF2 then
+            item.Active = true
+  else
+            item.Active = false
+  end
+end
 function updateFusion(segment, code, address, flag)
     local item = Tracker:FindObjectForCode(code)
     if item then
@@ -1143,6 +1152,7 @@ function updateLocations(segment)
 		updateCloudsUsedFixed(segment, {{0x2002c81,0x02},{0x2002c81,0x04},{0x2002c81,0x08},{0x2002c81,0x10},{0x2002c81,0x20}})
 	end
   end
+
   if AUTOTRACKER_ENABLE_FUZER_TRACKING then
 		updateFusion(segment, "fusions0a", 0x2002c82, 0x04)
 		updateFusion(segment, "fusions0b", 0x2002c82, 0x08)
@@ -1171,17 +1181,17 @@ function updateLocations(segment)
 		updateFusion(segment, "fusions22", 0x2002c85, 0x04)
 		updateFusion(segment, "fusions23", 0x2002c85, 0x08)
 		updateFusion(segment, "fusions24", 0x2002c85, 0x10)
-		updateFusion(segment, "fusions25", 0x2002c85, 0x20)
-		updateFusion(segment, "fusions26", 0x2002c85, 0x40)
+		-- updateFusion(segment, "fusions25", 0x2002c85, 0x20)--goron
+		-- updateFusion(segment, "fusions26", 0x2002c85, 0x40)--goron
 		updateFusion(segment, "fusions27", 0x2002c85, 0x80)
 		updateFusion(segment, "fusions28", 0x2002c86, 0x01)
-		updateFusion(segment, "fusions29", 0x2002c86, 0x02)
-		updateFusion(segment, "fusions2a", 0x2002c86, 0x04)
-		updateFusion(segment, "fusions2b", 0x2002c86, 0x08)
+		-- updateFusion(segment, "fusions29", 0x2002c86, 0x02)--goron
+		-- updateFusion(segment, "fusions2a", 0x2002c86, 0x04)--goron
+		-- updateFusion(segment, "fusions2b", 0x2002c86, 0x08)--goron
 		updateFusion(segment, "fusions2c", 0x2002c86, 0x10)
 		updateFusion(segment, "fusions2d", 0x2002c86, 0x20)
 		updateFusion(segment, "fusions2e", 0x2002c86, 0x40)
-		updateFusion(segment, "fusions2f", 0x2002c86, 0x80)
+		-- updateFusion(segment, "fusions2f", 0x2002c86, 0x80)--goron
 		updateFusion(segment, "fusions30", 0x2002c87, 0x01)
 		updateFusion(segment, "fusions31", 0x2002c87, 0x02)
 		updateFusion(segment, "fusions32", 0x2002c87, 0x04)
@@ -1847,6 +1857,17 @@ function updateKeys(segment)
     -- updateSectionChestCountFromByteAndFlag(segment, "@Pedestal Items/Four Elements", 0x2002ea8, 0x02)
   end
 end
+function UpdateWallLocation(segment)
+  if AUTOTRACKER_ENABLE_FUZER_TRACKING then
+		updateWall(segment, "fusions29",0x2002c40)--eenie
+		updateWall(segment, "fusions25",0x2002c67)--Trilby
+		updateWall(segment, "fusions2b",0x2002c68)--Hills
+		updateWall(segment, "fusions2f",0x2002c69)--Crenel
+		updateWall(segment, "fusions26",0x2002c6a)--Minishwoods
+		updateWall(segment, "fusions2a",0x2002c6b)--hylia
+  end
+end
+ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)
 ScriptHost:AddMemoryWatch("TMC Locations and Bosses", 0x2002c81, 0x200, updateLocations)
 ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x45, updateItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("TMC Item Upgrades", 0x2002ae4, 0x0c, updateGearFromMemory)
