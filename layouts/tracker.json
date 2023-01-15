@@ -4,14 +4,51 @@
         "h_alignment": "center",
         "item_margin": "1,1",
         "rows": [
-			["smithsword","greensword","redsword","bluesword","foursword","wallet","dwsx","cofx","fowx","todx","rcx","powx","dhc"],
-			["sword0","gust","cane","boomerang","wilds","10hearts","dws_smallkey","cof_smallkey","fow_smallkey","tod_smallkey","rc_smallkey","pow_smallkey","dhc_smallkey"],
-			["shield","mittsandfly","lamp","bombsremote","clouds","dogbottle","dws_bigkey","cof_bigkey","fow_bigkey","tod_bigkey","","pow_bigkey","dhc_bigkey"],
-			["boots","cape","ocarina","bowandfly","falls","quiver","dws_cm","cof_cm","fow_cm","tod_cm","","pow_cm","dhc_cm"],
-			["flippersandfly","ringandbracelets","carlovtingle","nutandshroom","bothkeys","books","figurine","gomode","earth","fire","water","wind",""],
-			["beta","spinattack","fastspin","fastsplit","greatspin","longspin","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack","sevenscrolls"],
+			["smithsword","greensword","redsword","bluesword","foursword","wallet","earth","dwsx","cofx","fowx","todx","rcx","powx","dhc"],
+			["sword0","gust","cane","boomerang","10hearts","books","fire","dws_smallkey","cof_smallkey","fow_smallkey","tod_smallkey","rc_smallkey","pow_smallkey","dhc_smallkey"],
+			["shield","mittsandfly","lamp","bombsremote","dogbottle","figurine","water","dws_bigkey","cof_bigkey","fow_bigkey","tod_bigkey","","pow_bigkey","dhc_bigkey"],
+			["boots","cape","ocarina","bowandfly","quiver","gomode","wind","dws_cm","cof_cm","fow_cm","tod_cm","beta","pow_cm","dhc_cm"],
+			["flippersandfly","ringandbracelets","carlovtingle","nutandshroom","bothkeys","clouds","wilds","falls","spinattack","fastspin","fastsplit","greatspin","longspin","sevenscrolls"],
+			["redW","redV","redE","blueL","blueS","greenV","greenN","greenZ","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack"],
 		]
     },
+	"settings":  {
+        "type": "container",
+        "content": {
+			"type": "dock",
+			"dropshadow": true,
+			"content": [ {
+				"type":"tabbed",
+				"tabs":[
+				  {
+					"title":"Dark Hyrule Castle Requirements",
+					"icon":"images/icon-maps/Elements.png",
+					"content":{
+					  "type":"layout",
+					  "key": "dhc_requirement"
+					}
+				  },
+				  {
+					"title":"Logic Settings",
+					"icon":"images/icon-maps/Elements.png",
+					"content":{
+					  "type":"layout",
+					  "key": "logic_settings"
+					}
+				  },
+				  {
+					"title":"World Setting",
+					"icon":"images/icon-maps/Elements.png",
+					"content":{
+					  "type":"layout",
+					  "key": "world_setting"
+					}
+				  },
+				]
+			  }
+			]
+		}
+	},
     "dhc_requirement": {
       "type": "group",
       "header": "Dark Hyrule Castle Requirements",
@@ -81,8 +118,9 @@
 					  ["rupees_off","specialpot_off","digging_off"],
 					  ["underwater_off","golden_enemy_off","ped_items_off"],
 					  ["openworld_off","",""],
-					  ["","",""],
+					  ["fusiongoldcombined","",""],
 					  ["fusiongold_removed","",""],
+					  ["fusionredcombined","fusionbluecombined","fusiongreencombined"],
 					  ["fusionred_removed","fusionblue_removed","fusiongreen_removed"]
 				  ]
 			  }
@@ -99,7 +137,7 @@
 		"item_height":64,
 		"item_width":320,
         "rows": [
-			  ["progressiveitems","fusionscombined"],
+			  ["progressiveitems"],
 		  ]
       }
     },
@@ -189,8 +227,8 @@
                             "title":"Dark Hyrule Castle Requirements",
                             "icon":"images/icon-maps/Elements.png",
                             "content":{
-                              "type":"layout",
-							  "key": "dhc_requirement"
+								"type":"layout",
+								"key": "dhc_requirement"
                             }
                           },
                           {

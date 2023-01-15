@@ -413,7 +413,7 @@ end
 
 
 function Json_SouthHyruleField_Tingle_Fuzer2() 
-	if ( has("cane") and (CanDestroyTrees()==1 or WindCrest()==1) ) then
+	if ( has("cane") and (CanDestroyTrees()==1 or WindCrest()==1) and HasMagicBoomerang()==1 ) then
 		return 1
 	else
 		return 0

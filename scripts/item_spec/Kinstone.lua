@@ -4,11 +4,11 @@ function Kinstone:init(name, code, imagePathActive1, imagePathActive2, numbermax
 	self:createItem(name) 
 	self.code = code
 	self.image = 0
+	self.choice = true
 	self.InfoStage = 0
     self:setProperty("CurrentStage", 0)
-    self:setProperty("CurrentStage2", 0)
-	self:setProperty("count_max1", numbermax1)
-	self:setProperty("count_max2", numbermax2)
+	self:setProperty("count_max", numbermax1)
+	self.countactive=numbermax1
     self.noImage = nil
     self.activeImage1 = ImageReference:FromPackRelativePath(imagePathActive1)
 	if imagePathActive2==nil then
@@ -25,16 +25,15 @@ function Kinstone:init(name, code, imagePathActive1, imagePathActive2, numbermax
 end
 
 function Kinstone:setActive(active)
+	if self:getActiveCount()<active then
+		active=self:getActiveCount()
+	end
 	self:setProperty("CurrentStage", active)
 	self:updateIcon()
 end
 
 function Kinstone:setActiveCount(active)
-	if self.image == 0 then
-		self:setProperty("count_max1", active)
-	else
-		self:setProperty("count_max2", active)
-	end
+	self:setProperty("count_max", active)
 	self:updateIcon()
 end
 
@@ -43,23 +42,35 @@ function Kinstone:getActive()
 end
 
 function Kinstone:getActiveCount()
-	if self.image == 0 then
-		return self:getProperty("count_max1")
-	else
-		return self:getProperty("count_max2")
-	end
+	return self:getProperty("count_max")
 end
 
-function Kinstone:Switch(number)
-	if number == true then
+function Kinstone:Switch(choice,number)
+	if self.choice == true and self.image==0 then
 		self.image = 1
-		self:setProperty("CurrentStage", 0)
-	else
+		self:setActive(0)
+		self.choice = false
+	elseif self.choice == false and self.image==1 then
 		self.image = 0
-		self:setProperty("CurrentStage", 0)
+		self:setActive(0)
+		self.choice = true
 	end
+		--self:setActive(0)
+		self:setActiveCount(number)
+		self.countactive=number
 	self:updateIcon()
 end
+
+function Kinstone:update_count(number)
+-- print(self.code..":"..number)
+	if (self:getActive()>number) then
+		self:setActive(number)
+	end
+		self:setActiveCount(number)
+		self.countactive=number
+		self:updateIcon()
+end
+
 
 function Kinstone:updateIcon()
 	if self:getActive()==1 then

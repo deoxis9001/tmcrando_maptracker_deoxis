@@ -12,22 +12,45 @@ function hasnot(item)
   return count == 0
 end
 
-function FusionsRed() 
-	if ( has("openworld_on") ) then
+function FusionsRed()
+	if ( has("openworld_on") ) then	
 		return 1
 	elseif ( has("fusionred_vanilla") or has("fusionred_complet") ) then
+		if(redflag==false or redflag==nil) then
+			fusiongreencombined:updateMax()
+			redflag=true
+		end
 		return 1
 	else
+		if(redflag==true or redflag==nil) then
+			fusiongreencombined:updateMax()
+			redflag=false
+		end
 		return 0
 	end 
 end
 
 function FusionsBlue()
 	if ( has("openworld_on") ) then
+		if(blueflag==false or blueflag==nil) then
+			fusionredcombined:updateMax()
+			fusiongreencombined:updateMax()
+			blueflag=true
+		end
 		return 1
 	elseif ( has("fusionblue_vanilla") or has("fusionblue_complet") ) then
+		if(blueflag==false or blueflag==nil) then
+			fusionredcombined:updateMax()
+			fusiongreencombined:updateMax()
+			blueflag=true
+		end
 		return 1
 	else
+		if(blueflag==true or blueflag==nil) then
+			fusionredcombined:updateMax()
+			fusiongreencombined:updateMax()
+			blueflag=false
+		end
 		return 0
 	end 
 end
@@ -42,18 +65,27 @@ function FusionsGreen()
 	end 
 end
 
-function FusionsGold() 
-	if ( has("openworld_on") or has("fusiongold_complet") ) then
-		-- kingstone1:Switch(false)
-		-- kingstone2:Switch(false)
-		-- kingstone3:Switch(false)
+function FusionsGold()
+	if ( has("openworld_on") ) then
+		if(goldflag==false or goldflag==nil) then
+			fusionredcombined:updateMax()
+			fusiongreencombined:updateMax()
+			goldflag=true
+		end
 		return 1
-	elseif ( has("fusiongold_vanilla")  ) then
-		-- kingstone1:Switch(true)
-		-- kingstone2:Switch(true)
-		-- kingstone3:Switch(true)
+	elseif ( has("fusiongold_vanilla") or has("fusiongold_complet") ) then
+		if(goldflag==false or goldflag==nil) then
+			fusionredcombined:updateMax()
+			fusiongreencombined:updateMax()
+			goldflag=true
+		end
 		return 1
 	else
+		if(goldflag==true or goldflag==nil) then
+			fusionredcombined:updateMax()
+			fusiongreencombined:updateMax()
+			goldflag=false
+		end
 		return 0
 	end 
 end

@@ -4,6 +4,24 @@ WildsFused = 0
 WildsBag = 0
 CloudsFused = 0
 CloudsBag = 0
+CloudsFused = 0
+CloudsBag = 0
+RedWFused = 0
+RedWBag = 0
+RedVFused = 0
+RedVBag = 0
+RedEFused = 0
+RedEBag = 0
+BlueLFused = 0
+BlueLBag = 0
+BlueSFused = 0
+BlueSBag = 0
+GreenNFused = 0
+GreenNBag = 0
+GreenVFused = 0
+GreenVBag = 0
+GreenZFused = 0
+GreenZBag = 0
 KEY_STOLEN = false
 ---------------------------------------
 
@@ -538,34 +556,557 @@ end
 function updateGoldFallsUsed(segment, address, flag)
   local item = Tracker:FindObjectForCode("falls")
   if testFlag(segment, address, flag) then
-    item.Active = true
+    falls:setActive(1)
   end
 end
 
 function updateGoldFalls(segment)
   local item = Tracker:FindObjectForCode("falls")
   if ReadU8(segment, 0x2002b58) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b59) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b5a) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b5b) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b5c) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b5d) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b5e) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b5f) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b60) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b61) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
   elseif ReadU8(segment, 0x2002b62) == 0x6d then
-    item.Active = true
+    falls:setActive(1)
+  end
+end
+
+function updateRedW(segment, flag)
+  if ReadU8(segment, 0x2002b58) == flag then
+    RedWBag = ReadU8(segment, 0x2002b6b)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b6b))
+	end
+  elseif ReadU8(segment, 0x2002b59) == flag then
+    RedWBag = ReadU8(segment, 0x2002b6c)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b6c))
+	end
+
+  elseif ReadU8(segment, 0x2002b5a) == flag then
+    RedWBag = ReadU8(segment, 0x2002b6d)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b6d))
+	end
+  elseif ReadU8(segment, 0x2002b5b) == flag then
+    RedWBag = ReadU8(segment, 0x2002b6e)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b6e))
+	end
+  elseif ReadU8(segment, 0x2002b5c) == flag then
+    RedWBag = ReadU8(segment, 0x2002b6f)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b6f))
+	end
+  elseif ReadU8(segment, 0x2002b5d) == flag then
+    RedWBag = ReadU8(segment, 0x2002b70)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b70))
+	end
+  elseif ReadU8(segment, 0x2002b5e) == flag then
+    RedWBag = ReadU8(segment, 0x2002b71)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b71))
+	end
+  elseif ReadU8(segment, 0x2002b5f) == flag then
+    RedWBag = ReadU8(segment, 0x2002b72)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b72))
+	end
+  elseif ReadU8(segment, 0x2002b60) == flag then
+    RedWBag = ReadU8(segment, 0x2002b73)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b73))
+	end
+  elseif ReadU8(segment, 0x2002b61) == flag then
+    RedWBag = ReadU8(segment, 0x2002b74)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b74))
+	end
+  elseif ReadU8(segment, 0x2002b62) == flag then
+    RedWBag = ReadU8(segment, 0x2002b75)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red W in Bag", ReadU8(segment, 0x2002b75))
+	end
+  else
+	RedWBag = 0
+  end
+  redW:setActive(RedWFused + RedWBag)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+	print("Red W Obtained", RedWBag)
+  end
+end
+
+function updateRedV(segment, flag)
+  if ReadU8(segment, 0x2002b58) == flag then
+    RedVBag = ReadU8(segment, 0x2002b6b)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b6b))
+	end
+  elseif ReadU8(segment, 0x2002b59) == flag then
+    RedVBag = ReadU8(segment, 0x2002b6c)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b6c))
+	end
+
+  elseif ReadU8(segment, 0x2002b5a) == flag then
+    RedVBag = ReadU8(segment, 0x2002b6d)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b6d))
+	end
+  elseif ReadU8(segment, 0x2002b5b) == flag then
+    RedVBag = ReadU8(segment, 0x2002b6e)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b6e))
+	end
+  elseif ReadU8(segment, 0x2002b5c) == flag then
+    RedVBag = ReadU8(segment, 0x2002b6f)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b6f))
+	end
+  elseif ReadU8(segment, 0x2002b5d) == flag then
+    RedVBag = ReadU8(segment, 0x2002b70)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b70))
+	end
+  elseif ReadU8(segment, 0x2002b5e) == flag then
+    RedVBag = ReadU8(segment, 0x2002b71)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b71))
+	end
+  elseif ReadU8(segment, 0x2002b5f) == flag then
+    RedVBag = ReadU8(segment, 0x2002b72)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b72))
+	end
+  elseif ReadU8(segment, 0x2002b60) == flag then
+    RedVBag = ReadU8(segment, 0x2002b73)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b73))
+	end
+  elseif ReadU8(segment, 0x2002b61) == flag then
+    RedVBag = ReadU8(segment, 0x2002b74)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b74))
+	end
+  elseif ReadU8(segment, 0x2002b62) == flag then
+    RedVBag = ReadU8(segment, 0x2002b75)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red V in Bag", ReadU8(segment, 0x2002b75))
+	end
+  else
+	RedVBag = 0
+  end
+  redV:setActive(RedVFused + RedVBag)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+	print("Red V Obtained", RedVBag)
+  end
+end
+
+function updateRedE(segment, flag)
+  if ReadU8(segment, 0x2002b58) == flag then
+    RedEBag = ReadU8(segment, 0x2002b6b)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b6b))
+	end
+  elseif ReadU8(segment, 0x2002b59) == flag then
+    RedEBag = ReadU8(segment, 0x2002b6c)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b6c))
+	end
+  elseif ReadU8(segment, 0x2002b5a) == flag then
+    RedEBag = ReadU8(segment, 0x2002b6d)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b6d))
+	end
+  elseif ReadU8(segment, 0x2002b5b) == flag then
+    RedEBag = ReadU8(segment, 0x2002b6e)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b6e))
+	end
+  elseif ReadU8(segment, 0x2002b5c) == flag then
+    RedEBag = ReadU8(segment, 0x2002b6f)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b6f))
+	end
+  elseif ReadU8(segment, 0x2002b5d) == flag then
+    RedEBag = ReadU8(segment, 0x2002b70)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b70))
+	end
+  elseif ReadU8(segment, 0x2002b5e) == flag then
+    RedEBag = ReadU8(segment, 0x2002b71)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b71))
+	end
+  elseif ReadU8(segment, 0x2002b5f) == flag then
+    RedEBag = ReadU8(segment, 0x2002b72)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b72))
+	end
+  elseif ReadU8(segment, 0x2002b60) == flag then
+    RedEBag = ReadU8(segment, 0x2002b73)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b73))
+	end
+  elseif ReadU8(segment, 0x2002b61) == flag then
+    RedEBag = ReadU8(segment, 0x2002b74)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b74))
+	end
+  elseif ReadU8(segment, 0x2002b62) == flag then
+    RedEBag = ReadU8(segment, 0x2002b75)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Red E in Bag", ReadU8(segment, 0x2002b75))
+	end
+  else
+	RedEBag = 0
+  end
+  redE:setActive(RedEFused + RedEBag)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+	print("Red E Obtained", RedEBag)
+  end
+end
+
+function updateBlueL(segment, flag)
+  if ReadU8(segment, 0x2002b58) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b6b)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b6b))
+	end
+  elseif ReadU8(segment, 0x2002b59) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b6c)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b6c))
+	end
+
+  elseif ReadU8(segment, 0x2002b5a) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b6d)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b6d))
+	end
+  elseif ReadU8(segment, 0x2002b5b) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b6e)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b6e))
+	end
+  elseif ReadU8(segment, 0x2002b5c) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b6f)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b6f))
+	end
+  elseif ReadU8(segment, 0x2002b5d) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b70)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b70))
+	end
+  elseif ReadU8(segment, 0x2002b5e) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b71)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b71))
+	end
+  elseif ReadU8(segment, 0x2002b5f) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b72)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b72))
+	end
+  elseif ReadU8(segment, 0x2002b60) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b73)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b73))
+	end
+  elseif ReadU8(segment, 0x2002b61) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b74)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b74))
+	end
+  elseif ReadU8(segment, 0x2002b62) == flag then
+    BlueLBag = ReadU8(segment, 0x2002b75)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue L in Bag", ReadU8(segment, 0x2002b75))
+	end
+  else
+	BlueLBag = 0
+  end
+  blueL:setActive(BlueLFused + BlueLBag)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+	print("Blue L Obtained", BlueLBag)
+  end
+end
+
+function updateBlueS(segment, flag)
+  if ReadU8(segment, 0x2002b58) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b6b)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b6b))
+	end
+  elseif ReadU8(segment, 0x2002b59) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b6c)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b6c))
+	end
+  elseif ReadU8(segment, 0x2002b5a) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b6d)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b6d))
+	end
+  elseif ReadU8(segment, 0x2002b5b) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b6e)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b6e))
+	end
+  elseif ReadU8(segment, 0x2002b5c) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b6f)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b6f))
+	end
+  elseif ReadU8(segment, 0x2002b5d) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b70)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b70))
+	end
+  elseif ReadU8(segment, 0x2002b5e) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b71)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b71))
+	end
+  elseif ReadU8(segment, 0x2002b5f) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b72)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b72))
+	end
+  elseif ReadU8(segment, 0x2002b60) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b73)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b73))
+	end
+  elseif ReadU8(segment, 0x2002b61) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b74)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b74))
+	end
+  elseif ReadU8(segment, 0x2002b62) == flag then
+    BlueSBag = ReadU8(segment, 0x2002b75)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Blue S in Bag", ReadU8(segment, 0x2002b75))
+	end
+  else
+	BlueSBag = 0
+  end
+  blueS:setActive(BlueSFused + BlueSBag)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+	print("Blue S Obtained", BlueSBag)
+  end
+end
+
+function updateGreenN(segment, flag)
+  if ReadU8(segment, 0x2002b58) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b6b)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b6b))
+	end
+  elseif ReadU8(segment, 0x2002b59) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b6c)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b6c))
+	end
+  elseif ReadU8(segment, 0x2002b5a) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b6d)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b6d))
+	end
+  elseif ReadU8(segment, 0x2002b5b) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b6e)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b6e))
+	end
+  elseif ReadU8(segment, 0x2002b5c) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b6f)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b6f))
+	end
+  elseif ReadU8(segment, 0x2002b5d) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b70)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b70))
+	end
+  elseif ReadU8(segment, 0x2002b5e) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b71)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b71))
+	end
+  elseif ReadU8(segment, 0x2002b5f) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b72)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b72))
+	end
+  elseif ReadU8(segment, 0x2002b60) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b73)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b73))
+	end
+  elseif ReadU8(segment, 0x2002b61) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b74)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b74))
+	end
+  elseif ReadU8(segment, 0x2002b62) == flag then
+    GreenNBag = ReadU8(segment, 0x2002b75)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green N in Bag", ReadU8(segment, 0x2002b75))
+	end
+  else
+	GreenNBag = 0
+  end
+  greenN:setActive(GreenNFused + GreenNBag)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+	print("Green N Obtained", GreenNBag)
+  end
+end
+
+function updateGreenV(segment, flag)
+  if ReadU8(segment, 0x2002b58) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b6b)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b6b))
+	end
+  elseif ReadU8(segment, 0x2002b59) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b6c)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b6c))
+	end
+  elseif ReadU8(segment, 0x2002b5a) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b6d)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b6d))
+	end
+  elseif ReadU8(segment, 0x2002b5b) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b6e)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b6e))
+	end
+  elseif ReadU8(segment, 0x2002b5c) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b6f)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b6f))
+	end
+  elseif ReadU8(segment, 0x2002b5d) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b70)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b70))
+	end
+  elseif ReadU8(segment, 0x2002b5e) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b71)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b71))
+	end
+  elseif ReadU8(segment, 0x2002b5f) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b72)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b72))
+	end
+  elseif ReadU8(segment, 0x2002b60) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b73)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b73))
+	end
+  elseif ReadU8(segment, 0x2002b61) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b74)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b74))
+	end
+  elseif ReadU8(segment, 0x2002b62) == flag then
+    GreenVBag = ReadU8(segment, 0x2002b75)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green V in Bag", ReadU8(segment, 0x2002b75))
+	end
+  else
+	GreenVBag = 0
+  end
+  greenV:setActive(GreenVFused + GreenVBag)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+	print("Green V Obtained", GreenVBag)
+  end
+end
+
+function updateGreenZ(segment, flag)
+  if ReadU8(segment, 0x2002b58) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b6b)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b6b))
+	end
+  elseif ReadU8(segment, 0x2002b59) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b6c)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b6c))
+	end
+  elseif ReadU8(segment, 0x2002b5a) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b6d)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b6d))
+	end
+  elseif ReadU8(segment, 0x2002b5b) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b6e)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b6e))
+	end
+  elseif ReadU8(segment, 0x2002b5c) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b6f)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b6f))
+	end
+  elseif ReadU8(segment, 0x2002b5d) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b70)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b70))
+	end
+  elseif ReadU8(segment, 0x2002b5e) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b71)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b71))
+	end
+  elseif ReadU8(segment, 0x2002b5f) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b72)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b72))
+	end
+  elseif ReadU8(segment, 0x2002b60) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b73)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b73))
+	end
+  elseif ReadU8(segment, 0x2002b61) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b74)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b74))
+	end
+  elseif ReadU8(segment, 0x2002b62) == flag then
+    GreenZBag = ReadU8(segment, 0x2002b75)
+	if TMC_AUTOTRACKER_DEBUG_ITEM then
+		print("Green Z in Bag", ReadU8(segment, 0x2002b75))
+	end
+  else
+	GreenZBag = 0
+  end
+  greenZ:setActive(GreenZFused + GreenZBag)
+  if TMC_AUTOTRACKER_DEBUG_ITEM then
+	print("Green Z Obtained", GreenZBag)
   end
 end
 
@@ -584,7 +1125,7 @@ function updateWildsUsedFixed(segment, locationData)
         WildsFused = WildsFused + 1
       end
     end
-    item.AcquiredCount = WildsFused + WildsBag
+    wilds:setActive(WildsFused + WildsBag)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Wilds Used", WildsFused)
 	end
@@ -653,8 +1194,7 @@ function updateWilds(segment, code, flag)
   else
 	WildsBag = 0
   end
-
-  item.AcquiredCount = WildsFused + WildsBag
+  wilds:setActive(WildsFused + WildsBag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
 	print("Wilds Obtained", WildsBag)
   end
@@ -675,7 +1215,7 @@ function updateCloudsUsedFixed(segment, locationData)
         CloudsFused = CloudsFused + 1
       end
     end
-    item.AcquiredCount = CloudsFused + CloudsBag
+    clouds:setActive(CloudsFused + CloudsBag)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
       print("Clouds Fused", CloudsFused)
 	end
@@ -683,7 +1223,6 @@ function updateCloudsUsedFixed(segment, locationData)
 end
 
 function updateClouds(segment, code, flag)
-  local item = Tracker:FindObjectForCode(code)
   if ReadU8(segment, 0x2002b58) == flag then
     CloudsBag = ReadU8(segment, 0x2002b6b)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
@@ -749,7 +1288,7 @@ function updateClouds(segment, code, flag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
    print("Clouds in Bag", CloudsBag)	
   end
-  item.AcquiredCount = CloudsBag + CloudsFused
+  clouds:setActive(CloudsBag + CloudsFused)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
 	print("Clouds Obtained", CloudsFused)
   end
@@ -1096,13 +1635,24 @@ function updateItemsFromMemorySegment(segment)
     updateLamp(segment)
     updateBottles(segment)
     updateScrolls(segment)
-	if FUSIONS_COMBINED then
+	if fusiongoldcombined:getActive() then
 		updateClouds(segment, "clouds", 0x65)
 	else
 		updateGoldFalls(segment)
 		updateWilds(segment, "wilds", 0x6a)
 		updateClouds(segment, "clouds", 0x65)
 	end
+	
+	updateRedW(segment,0x6e)
+	updateRedV(segment,0x6f)
+	updateRedE(segment,0x70)
+	
+	updateBlueL(segment,0x71)
+	updateBlueS(segment,0x72)
+	
+	updateGreenN(segment,0x75)
+	updateGreenV(segment,0x73)
+	updateGreenZ(segment,0x74)
 	
   end
 
@@ -1144,13 +1694,14 @@ function updateLocations(segment)
     updateToggleItemFromByteAndFlag(segment, "pow", 0x2002c9c, 0x40)
     updateToggleItemFromByteAndFlag(segment, "rc", 0x2002d02, 0x04)
     updateToggleItemFromByteAndFlag(segment, "dhc", 0x2002ca6, 0x20)
-	if FUSIONS_COMBINED then
+	if fusiongoldcombined:getActive() then
 		updateCloudsUsedFixed(segment, {{0x2002c81,0x02},{0x2002c81,0x04},{0x2002c81,0x08},{0x2002c81,0x10},{0x2002c81,0x20},{0x2002c81,0x40},{0x2002c81,0x80},{0x2002c82,0x01},{0x2002c82,0x02}})
 	else
 		updateGoldFallsUsed(segment, 0x2002c82, 0x02)
 		updateWildsUsedFixed(segment, {{0x2002c81,0x40},{0x2002c81,0x80},{0x2002c82,0x01}})
 		updateCloudsUsedFixed(segment, {{0x2002c81,0x02},{0x2002c81,0x04},{0x2002c81,0x08},{0x2002c81,0x10},{0x2002c81,0x20}})
 	end
+	
   end
 
   if AUTOTRACKER_ENABLE_FUZER_TRACKING then

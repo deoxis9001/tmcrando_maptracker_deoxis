@@ -19,8 +19,8 @@ AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUZER_TRACKING = true
 TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
-TMC_AUTOTRACKER_DEBUG_FUZER = true
-TMC_AUTOTRACKER_DEBUG_ITEM = false
+TMC_AUTOTRACKER_DEBUG_FUZER = false
+TMC_AUTOTRACKER_DEBUG_ITEM = true
 VERSION_ALPHA = true
 VERSION_BETA = true
 if TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND == true or TMC_AUTOTRACKER_DEBUG_LOCATION == true or TMC_AUTOTRACKER_DEBUG_ITEM == true then
@@ -58,6 +58,8 @@ ScriptHost:LoadScript(ScriptItemSpec.."figurine.lua")
 ScriptHost:LoadScript(ScriptItemSpec.."SwordToggle.lua")
 ScriptHost:LoadScript(ScriptItemSpec.."SwordProgress.lua")
 ScriptHost:LoadScript(ScriptItemSpec.."SwordOptions.lua")
+ScriptHost:LoadScript(ScriptItemSpec.."Kinstone.lua")
+ScriptHost:LoadScript(ScriptItemSpec.."KinstoneOptions.lua")
 local figurine10 = FigurineButton("figurine plus 10","figurine10",10,"images/options/DHCRequirements/figurine10.png")
 local figurine50 = FigurineButton("figurine plus 50","figurine50",50,"images/options/DHCRequirements/figurine50.png")
 local figurinemax = FigurineButton("figurine plus 136","figurinemax",136,"images/options/DHCRequirements/figurineMax.png")
@@ -67,12 +69,22 @@ redsword = ToggleItem("Smith's Sword","redsword","images/items/Red Sword.png")
 bluesword = ToggleItem("Smith's Sword","bluesword","images/items/Blue Sword.png")
 foursword = ToggleItem("Smith's Sword","foursword","images/items/Four Sword.png")
 sword = SwordProgress("progression sword","sword0")
+clouds = Kinstone("Kinstone1","clouds","images/items/Kinstone Clouds Half.png","images/items/Kinstone Clouds Half.png",5,0)
+falls = Kinstone("Kinstone2","falls","images/items/Kinstone Falls Half.png",nil,1,0)
+wilds = Kinstone("Kinstone3","wilds","images/items/Kinstone Wilds Half.png",nil,3,0)
+blueL = Kinstone("Kinstone4","blueL","images/items/KinstoneBlueL.png","images/items/KinstoneBlueL.png",9,0)
+blueS = Kinstone("Kinstone5","blueS","images/items/KinstoneBlueS.png",nil,9,0)
+redE = Kinstone("Kinstone6","redE","images/items/KinstoneRedE.png",nil,9,0)
+redV = Kinstone("Kinstone7","redV","images/items/KinstoneRedV.png",nil,7,0)
+redW = Kinstone("Kinstone8","redW","images/items/KinstoneRedW.png","images/items/KinstoneRedW.png",9,0)
+greenN = Kinstone("Kinstone9","greenN","images/items/KinstoneGreenN.png",nil,16,0)
+greenV = Kinstone("Kinstone10","greenV","images/items/KinstoneGreenV.png","images/items/KinstoneGreenV.png",17,0)
+greenZ = Kinstone("Kinstone11","greenZ","images/items/KinstoneGreenZ.png",nil,16,0)
+fusiongoldcombined = KinstoneOptions("fusiongoldcombined", "fusiongoldcombined","images/options/WorldSetting/fusiongoldcombined_on.png","images/options/WorldSetting/fusiongoldcombined_off.png",0)
+fusionredcombined = KinstoneOptions("fusionredcombined", "fusionredcombined","images/options/WorldSetting/fusionredcombined_on.png","images/options/WorldSetting/fusionredcombined_off.png",1)
+fusiongreencombined = KinstoneOptions("fusiongreencombined", "fusiongreencombined","images/options/WorldSetting/fusiongreencombined_on.png","images/options/WorldSetting/fusiongreencombined_off.png",2)
+fusionbluecombined = KinstoneOptions("fusionbluecombined", "fusionbluecombined","images/options/WorldSetting/fusionbluecombined_on.png","images/options/WorldSetting/fusionbluecombined_off.png",3)
 progression = SwordOptions("progressive","progressiveitems","images/options/OtherSetting/progressive_on.png","images/options/OtherSetting/progressive_off.png")
-if (string.find(Tracker.ActiveVariantUID, "Combined")) then
-FUSIONS_COMBINED=true
-else
-FUSIONS_COMBINED=false
-end
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------
@@ -81,13 +93,7 @@ Tracker:AddItems(JsItems.."common.json")
 Tracker:AddItems(JsItems.."dungeon_items.json")
 Tracker:AddItems(JsItems.."keys.json")
 Tracker:AddItems(JsItems.."options.json")
-if FUSIONS_COMBINED==true then
-	Tracker:AddItems(JsItems.."c_Kinstone.json")
-	Tracker:AddItems(JsItems.."c_fusion.json")
-else
-	Tracker:AddItems(JsItems.."Kinstone.json")
-	Tracker:AddItems(JsItems.."fusion.json")
-end
+Tracker:AddItems(JsItems.."fusion.json")
 
 if(VERSION_ALPHA==true) then
 	Tracker:AddItems(JsItems.."alpha.json")
@@ -136,7 +142,6 @@ if (string.find(Tracker.ActiveVariantUID, "_h")) then
 else
     Tracker:AddLayouts(JsLayouts.."standard_broadcast.json")
 end
-
 ------------------------------------------------------------------
 -- Autotracking
 ------------------------------------------------------------------

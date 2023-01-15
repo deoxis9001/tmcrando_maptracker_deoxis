@@ -367,7 +367,7 @@ end
 function FallsFusion() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( has("falls") and FUSIONS_COMBINED==false ) or ( Tracker:ProviderCountForCode("clouds") >= 8 and FUSIONS_COMBINED==true ) then
+	elseif ( has("falls") and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 4 and fusiongoldcombined:getActive() ) then
 		return 1
 	else
 		return 0
@@ -376,7 +376,7 @@ end
 function AccessWindTribe() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( AccessClouds()==1 and ( has("cape") or has("mitts")) and Tracker:ProviderCountForCode("clouds") >= 5   ) then
+	elseif ( AccessClouds()==1 and ( has("cape") or has("mitts")) and ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() )  ) then
 		return 1
 	else
 		return 0
