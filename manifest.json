@@ -12,12 +12,6 @@
     "Standard_h": {
       "display_name": "Standard Map Tracker - Broadcast (F2) Horizontal"
     },
-    "Combined": {
-      "display_name": "Combined Fusions Map Tracker - Broadcast (F2) Vertical"
-    },
-    "Combined_h": {
-      "display_name": "Combined Fusions Map Tracker - Broadcast (F2) Horizontal"
-    },
     "items_only": {
       "display_name": "Standard Items Tracker - Vertical"
     },
