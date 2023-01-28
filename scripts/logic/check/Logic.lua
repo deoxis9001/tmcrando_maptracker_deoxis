@@ -1511,7 +1511,7 @@ function Town_Dojo_NPC1()
 	end 
 end
 function Town_Dojo_NPC2() 
-	if ( ( Sword2()==1 or (has("progressiveitems") and (Sword4()==1 or Sword3()==1)) ) ) then
+	if ( ( Sword2()==1 or (has("progressiveitems") and (Sword5()==1 or Sword4()==1 or Sword3()==1)) ) ) then
 		return 1
 	else
 		return 0

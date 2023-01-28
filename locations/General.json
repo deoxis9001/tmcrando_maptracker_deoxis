@@ -20,6 +20,11 @@
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
 	  },
 	  {
+		"name":"Castle - Left Fountain",
+		"hosted_item":"fusions35",
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+	  },
+	  {
 		"name":"Town - School Gardens - Minish Path Chest",
 		"hosted_item":"fusions36",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
