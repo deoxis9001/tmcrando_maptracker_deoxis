@@ -16,7 +16,7 @@ function Json_LonLon_MalonPot_Pot()
   end
 end
 
-function LonLon_MinishCrack_Chest()
+function Json_LonLon_MinishCrack_Chest()
   if LonLon_NorthMinishCrack_Chest()==1 then
     return 1
   else

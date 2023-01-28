@@ -282,10 +282,10 @@ function SwampSouthShortcut()
 		return 0
 	end 
 end
-function RuinsFusion() 
+function RuinsFusion()
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("wilds") >= 3 and FUSIONS_COMBINED==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and FUSIONS_COMBINED==true ) then
+	elseif ( Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false  ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
 		return 1
 	else
 		return 0
@@ -367,7 +367,7 @@ end
 function FallsFusion() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( has("falls") and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 4 and fusiongoldcombined:getActive() ) then
+	elseif ( ( fusiongoldcombined:getActive()==false and has("falls",1) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4  ) ) and OverworldBlocks()==1 then
 		return 1
 	else
 		return 0
@@ -376,7 +376,7 @@ end
 function AccessWindTribe() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( AccessClouds()==1 and ( has("cape") or has("mitts")) and ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() )  ) then
+	elseif ( AccessClouds()==1 and ( has("cape") or has("mitts")) and ( ( fusiongoldcombined:getActive()==false and Tracker:ProviderCountForCode("clouds")>=4  ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=9 )  )) then
 		return 1
 	else
 		return 0
@@ -767,7 +767,7 @@ end
 function ToDRedWarp() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( ToD2ndRupeePath()==1 and CanSplit2()==1 and ToDRightIce()==1 and CapeExtension()==1 ) then
+	elseif ( ToD2ndRupeePath()==1 and ( CanSplit2()==1 or (has("progressiveitems") and (CanSplit4()==1 or CanSplit3()==1)) ) and ToDRightIce()==1 and CapeExtension()==1 ) then
 		return 1
 	else
 		return 0
@@ -785,7 +785,7 @@ end
 function ToDEastSwitch() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( ToDBlueWarp()==1 and CanSplit2()==1) then
+	elseif ( ToDBlueWarp()==1 and ( CanSplit2()==1 or (has("progressiveitems") and (CanSplit4()==1 or CanSplit3()==1)) )) then
 		return 1
 	else
 		return 0
@@ -794,7 +794,7 @@ end
 function ToDWestSwitch() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( ToDRedWarp()==1 and BombWalls()==1 and ToDWeb()==1 and ToDMadderpillars()==1 and CanSplit2() ) then
+	elseif ( ToDRedWarp()==1 and BombWalls()==1 and ToDWeb()==1 and ToDMadderpillars()==1 and ( CanSplit2()==1 or (has("progressiveitems") and (CanSplit4()==1 or CanSplit3()==1)) ) ) then
 		return 1
 	else
 		return 0

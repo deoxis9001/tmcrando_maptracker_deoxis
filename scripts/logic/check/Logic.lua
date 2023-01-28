@@ -472,7 +472,7 @@ function Falls_1stCave_Chest()
 end
 
 function Falls_Cliff_Chest()
-	if ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and BombWalls()==1 and CanSplit3()==1 ) or ( AccessFalls()==1 and has("grip") and BombWalls()==1 and DarkRooms()==1 and CanSplit3()==1 ) then
+	if ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and BombWalls()==1 and ( CanSplit3()==1 or CanSplit4()==1 ) ) or ( AccessFalls()==1 and has("grip") and BombWalls()==1 and DarkRooms()==1 and CanSplit3()==1 ) then
 		return 1
 	else
 		return 0
@@ -827,7 +827,7 @@ function LonLon_PuddleFusion_BigChest()
 end
 
 function LonLon_Cave_Chest() 
-	if ( AccessLonLon()==1 and CanSplit2()==1 ) then
+	if ( AccessLonLon()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -835,7 +835,7 @@ function LonLon_Cave_Chest()
 end
 
 function LonLon_CaveSecret_Chest() 
-	if ( AccessLonLon()==1 and CanSplit2()==1  and BombWalls()==1 and has("lamp") ) then
+	if ( AccessLonLon()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) and BombWalls()==1 and has("lamp") ) then
 		return 1
 	else
 		return 0
@@ -1460,7 +1460,7 @@ end
 
 
 function Swamp_Fusion() 
-	if ( AccessSwamp()==1 and RuinsFusion()==1 and ( has("boots") or ( has("cape") and has("flippers") ) ) ) then
+	if ( AccessSwamp()==1 and RuinsFusion()==1 and ( ( has("boots") and has("flippers")) or  has("cape") )) then
 		return 1
 	else
 		return 0
@@ -1511,7 +1511,7 @@ function Town_Dojo_NPC1()
 	end 
 end
 function Town_Dojo_NPC2() 
-	if ( Sword2()==1 ) then
+	if ( ( Sword2()==1 or (has("progressiveitems") and (Sword4()==1 or Sword3()==1)) ) ) then
 		return 1
 	else
 		return 0

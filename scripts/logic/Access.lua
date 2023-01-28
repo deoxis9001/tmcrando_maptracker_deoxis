@@ -96,7 +96,7 @@ function AccessRuins()
 	end 
 end
 function AccessValley() 
-	if CanSplit3()==1 and (OverworldBlocks()==1 or has("cape") or has("flippers"))	then
+	if (CanSplit3()==1 or CanSplit4()==1) and (OverworldBlocks()==1 or has("cape") or has("flippers"))	then
 		return 1
 	else
 		return 0
@@ -159,7 +159,7 @@ function AccessPalace()
 	end 
 end
 function PoW2ndHalf()
-	if ( AccessPalace()==1 and has("cape") and CanSplit3()==1 and PoWJump()==1 and PoW1stDoor()==1 and PoWBigDoor()==1) then
+	if ( AccessPalace()==1 and has("cape") and (CanSplit3()==1 or CanSplit4()==1 )and PoWJump()==1 and PoW1stDoor()==1 and PoWBigDoor()==1) then
 		return 1
 	else
 		return 0

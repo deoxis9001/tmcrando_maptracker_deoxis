@@ -2,6 +2,7 @@ Kinstone = CustomItem:extend()
 
 function Kinstone:init(name, code, imagePathActive1, imagePathActive2, numbermax1,numbermax2)
 	self:createItem(name) 
+	self.codebase = code
 	self.code = code
 	self.image = 0
 	self.choice = true
@@ -29,7 +30,8 @@ function Kinstone:setActive(active)
 		active=self:getActiveCount()
 	end
 	self:setProperty("CurrentStage", active)
-	self:updateIcon()
+	self.InfoStage=active 
+	return true
 end
 
 function Kinstone:setActiveCount(active)
@@ -38,6 +40,7 @@ function Kinstone:setActiveCount(active)
 end
 
 function Kinstone:getActive()
+    -- print(self:getProperty("CurrentStage"))
     return self:getProperty("CurrentStage")
 end
 
@@ -75,22 +78,31 @@ end
 function Kinstone:updateIcon()
 	if self:getActive()==1 then
 		self.ItemInstance.BadgeText="1"
+		self.code = self.codebase.."1"
 	elseif self:getActive()==2 then
 		self.ItemInstance.BadgeText="2"
+		self.code = self.codebase.."2"
 	elseif self:getActive()==3 then
 		self.ItemInstance.BadgeText="3"
+		self.code = self.codebase.."3"
 	elseif self:getActive()==4 then
 		self.ItemInstance.BadgeText="4"
+		self.code = self.codebase.."4"
 	elseif self:getActive()==5 then
 		self.ItemInstance.BadgeText="5"
+		self.code = self.codebase.."5"
 	elseif self:getActive()==6 then
 		self.ItemInstance.BadgeText="6"
+		self.code = self.codebase.."6"
 	elseif self:getActive()==7 then
 		self.ItemInstance.BadgeText="7"
+		self.code = self.codebase.."7"
 	elseif self:getActive()==8 then
 		self.ItemInstance.BadgeText="8"
+		self.code = self.codebase.."8"
 	elseif self:getActive()==9 then
 		self.ItemInstance.BadgeText="9"
+		self.code = self.codebase.."9"
 	elseif self:getActive()==10 then
 		self.ItemInstance.BadgeText="10"
 	elseif self:getActive()==11 then
@@ -173,12 +185,15 @@ function Kinstone:updateIcon()
 		self.ItemInstance.BadgeText="49"
 	else
 		self.ItemInstance.BadgeText=nil
+		self.code = self.codebase
 	end
 	if self:getActiveCount()==self:getActive() then
 		self.ItemInstance.BadgeTextColor="#0f0"
 	else
 		self.ItemInstance.BadgeTextColor="#fff"
 	end
+		self.code = self.codebase
+		self.ItemInstance.Icon=self.disabledImage1
 	if self.image == 0 then
 		if self:getActive()== 0 then
 			self.ItemInstance.Icon=self.disabledImage1
@@ -210,34 +225,50 @@ end
 
 function Kinstone:canProvideCode(code)
     if code == self.code then
+		-- print("Kinstone->providesCode->code :"..self.code)
+		-- print("Kinstone->self:getActive() :"..self:getActive())
         return true
     else
         return false
     end
 end
-
 function Kinstone:providesCode(code)
-    if code == self.code and self:getActive() then
-        return 1
+-- print("Kinstone->providesCode->code :"..self.code)
+    if code == self.code then
+		-- print("Kinstone->providesCode->code :"..self.code)
+		-- print("Kinstone->self:getActive() :"..self:getActive())
+        return self:getActive()
     end
     return 0
 end
 
+
 function Kinstone:advanceToCode(code)
-    if code == nil or code == self.code then
-        self:setActive(true)
+    if code == self.code then
+        return self:setActive((self:getActive()+1))
     end
+	return 0
 end
 
 function Kinstone:save()
     local saveData = {}
-    saveData["active"] = self:getActive()
+    saveData["CurrentStage"] = self:getActive()
+    saveData["CountMax"] = self:getActiveCount()
+	saveData["Type"] = self.image
     return saveData
 end
 
 function Kinstone:Load(data)
-    if data["active"] ~= nil then
-        self:setActive(data["active"])
+    if data["CurrentStage"] ~= nil then
+        self:setActive(data["CurrentStage"])
+		
+    end
+    if data["CountMax"] ~= nil then
+        self:setActive(data["CountMax"])
+		
+    end
+    if data["Type"] ~= nil then
+        self.image=data["Type"]
     end
     return true
 end

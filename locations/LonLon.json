@@ -51,7 +51,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$LonLon_MinishCrack_Chest"],
+		"access_rules":["$Json_LonLon_MinishCrack_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }
