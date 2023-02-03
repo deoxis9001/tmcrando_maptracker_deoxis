@@ -1,6 +1,6 @@
 [
   {
-	"name":"Spiny Beetle Fight",
+	"name":"Cave Of Flame - Spiny Beetle Fight",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -10,7 +10,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Spiny Beetle Fight",
+		"name":"Kill",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_SpinyBeetleFight"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -20,7 +20,7 @@
 	]
   },
   {
-	"name":"Rupees",
+	"name":"Cave Of Flame - Rupees",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -41,7 +41,7 @@
 	]
   },
   {
-	"name":"Big Chest Room Big Chest",
+	"name":"Cave Of Flame - Room Big Chest",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -51,7 +51,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Big Chest Room Big Chest",
+		"name":"Big Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_BigChestRoom"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -61,7 +61,7 @@
 	]
   },
   {
-	"name":"West Side Big Chest",
+	"name":"Cave Of Flame - Room Big Chest",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -71,7 +71,7 @@
 	],
 	"sections":[
 	  {
-		"name":"West Side Big Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_BigChestRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -81,7 +81,7 @@
 	]
   },
   {
-	"name":"First Rollobite Room Free Chest",
+	"name":"Cave Of Flame - First Rollobite Room",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -91,7 +91,7 @@
 	],
 	"sections":[
 	  {
-		"name":"First Rollobite Room Free Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -101,7 +101,7 @@
 	]
   },
   {
-	"name":"First Rollobite Room Pillar Chest",
+	"name":"Cave Of Flame - First Rollobite Room",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -111,7 +111,7 @@
 	],
 	"sections":[
 	  {
-		"name":"First Rollobite Room Pillar Chest",
+		"name":"Pillar Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -121,7 +121,7 @@
 	]
   },
   {
-	"name":"Bombable Wall Heart Piece",
+	"name":"Cave Of Flame - Bombable Wall",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -131,7 +131,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Bombable Wall Heart Piece",
+		"name":"Heart Piece",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_BombableWallHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
@@ -141,7 +141,7 @@
 	]
   },
   {
-	"name":"Spiny Chu Fight",
+	"name":"Cave Of Flame - Spiny Chu",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -151,7 +151,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Spiny Chu Fight",
+		"name":"Kill",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_SpinyChuFight"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -161,7 +161,7 @@
 	]
   },
   {
-	"name":"Spiny Chu Pillar Chest",
+	"name":"Cave Of Flame - Spiny Chu",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -171,7 +171,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Spiny Chu Pillar Chest",
+		"name":"Pillar Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_SpinyChuPillarChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -181,7 +181,7 @@
 	]
   },
   {
-	"name":"Pre Lava Basement Room Block Chest",
+	"name":"Cave Of Flame - Pre Lava Basement Room Block Chest",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -191,7 +191,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Pre Lava Basement Room Block Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_PreLavaBasementRoom"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
@@ -201,7 +201,7 @@
 	]
   },
   {
-	"name":"Pre Lava Basement Room Ledge",
+	"name":"Cave Of Flame - Pre Lava Basement Room Ledge",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -211,7 +211,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Pre Lava Basement Room Ledge",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_PreLavaBasementRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -221,7 +221,7 @@
 	]
   },
   {
-	"name":"Blade Chest",
+	"name":"Cave Of Flame - Blade Chest",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -231,7 +231,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Blade Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_BladeChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -241,7 +241,7 @@
 	]
   },
   {
-	"name":"Lava Basement Left",
+	"name":"Cave Of Flame - Lava Basement Left",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -251,7 +251,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Lava Basement Left",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_LavaBasement"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -261,7 +261,7 @@
 	]
   },
   {
-	"name":"Lava Basement Right",
+	"name":"Cave Of Flame - Lava Basement Right",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -271,7 +271,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Lava Basement Right",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_LavaBasement"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -281,7 +281,7 @@
 	]
   },
   {
-	"name":"Lava Basement Big Chest",
+	"name":"Cave Of Flame - Lava Basement Big Chest",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -291,7 +291,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Lava Basement Big Chest",
+		"name":"Big Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_LavaBasementBigChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -301,7 +301,7 @@
 	]
   },
   {
-	"name":"Gleerok",
+	"name":"Cave Of Flame - Gleerok",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -311,7 +311,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Gleerok",
+		"name":"Heart",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_Gleerok"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -321,7 +321,7 @@
 	]
   },
   {
-	"name":"Gibdos",
+	"name":"Crypt - Gibdos",
 	"map_locations":[
 	  {
 		"map":"rc",
@@ -331,14 +331,14 @@
 	],
 	"sections":[
 	  {
-		"name":"First Gibdos",
+		"name":"First Kill",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_Gibdos"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  },
 	  {
-		"name":"Other Gibdos",
+		"name":"Second Kill",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_OtherGibdos"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -349,7 +349,7 @@
 	]
   },
   {
-	"name":"Left Path",
+	"name":"Crypt - Left Path",
 	"map_locations":[
 	  {
 		"map":"rc",
@@ -359,7 +359,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Left Path",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_LeftPath"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -368,7 +368,7 @@
 	]
   },
   {
-	"name":"Right Path",
+	"name":"Crypt - Right Path",
 	"map_locations":[
 	  {
 		"map":"rc",
@@ -378,7 +378,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Left Path",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_RightPath"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -387,7 +387,7 @@
 	]
   },
   {
-	"name":"King Gustaf",
+	"name":"Crypt - King Gustaf",
 	"map_locations":[
 	  {
 		"map":"rc",
@@ -397,7 +397,7 @@
 	],
 	"sections":[
 	  {
-		"name":"King Gustaf",
+		"name":"Gift",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_KingGustaf"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -406,7 +406,7 @@
 	]
   },
   {
-	"name":"Slug Room",
+	"name":"Deepwoods - Slug Room",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -416,7 +416,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Slug Room",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_SlugRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -426,7 +426,7 @@
 	]
   },
   {
-	"name":"Upstairs Room",
+	"name":"Deepwoods - Upstairs Room",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -436,7 +436,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Upstairs Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_UpstairsChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -446,7 +446,7 @@
 	]
   },
   {
-	"name":"Barrel Room Northwest",
+	"name":"Deepwoods - Barrel Room Northwest",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -456,7 +456,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Barrel Room Northwest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_BarrelRoomNorthwest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -466,7 +466,7 @@
 	]
   },
   {
-	"name":"West Side Big Chest",
+	"name":"Deepwoods - West Side",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -476,7 +476,7 @@
 	],
 	"sections":[
 	  {
-		"name":"West Side Big Chest",
+		"name":"Big Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_WestSideBigChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -486,7 +486,7 @@
 	]
   },
   {
-	"name":"Two Statue Room",
+	"name":"Deepwoods - Two Statue Room",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -496,7 +496,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Two Statue Room",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_TwoStatueRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -506,7 +506,7 @@
 	]
   },
   {
-	"name":"Mulldozer Key",
+	"name":"Deepwoods - Mulldozer Key",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -516,7 +516,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Mulldozer Key",
+		"name":"Kill",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_MulldozerKey"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
@@ -526,7 +526,7 @@
 	]
   },
   {
-	"name":"Two Lamp Chest",
+	"name":"Deepwoods - Two Lamp",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -536,7 +536,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Two Lamp Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_TwoLampChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -546,7 +546,7 @@
 	]
   },
   {
-	"name":"Basement Switch Room Big Chest",
+	"name":"Deepwoods - Basement Switch Room",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -556,7 +556,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Basement Switch Room Big Chest",
+		"name":"Big Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_BasementSwitchRoomBigChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -566,7 +566,7 @@
 	]
   },
   {
-	"name":"Basement Switch Chest",
+	"name":"Deepwoods - Basement Switch Room Chest",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -576,7 +576,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Basement Switch Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_BasementSwitchChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -586,7 +586,7 @@
 	]
   },
   {
-	"name":"Blue Warp Heart Piece",
+	"name":"Deepwoods - Blue Warp",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -596,7 +596,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Blue Warp Heart Piece",
+		"name":"Heart Piece",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_BlueWarpHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
@@ -606,7 +606,7 @@
 	]
   },
   {
-	"name":"Puffstool Room",
+	"name":"Deepwoods - Puffstool Room",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -616,7 +616,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Puffstool Room",
+		"name":"Chest",
 		"item_count":2,
 		"access_rules":["$Json_Dungeon_Deepwood_PuffstoolRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -626,7 +626,7 @@
 	]
   },
   {
-	"name":"Madderpillar Chest",
+	"name":"Deepwoods - Madderpillar",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -636,7 +636,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Madderpillar Chest",
+		"name":"Kill",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_MadderpillarChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -646,7 +646,7 @@
 	]
   },
   {
-	"name":"Madderpillar Heart Piece",
+	"name":"Deepwoods - Madderpillar",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -656,7 +656,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Madderpillar Heart Piece",
+		"name":"Heart Piece",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_MadderpillarHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
@@ -666,7 +666,7 @@
 	]
   },
   {
-	"name":"Basement Big Chest",
+	"name":"Deepwoods - Basement Big Chest",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -676,7 +676,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Basement Big Chest",
+		"name":"Big Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_BasementBigChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
@@ -686,7 +686,7 @@
 	]
   },
   {
-	"name":"Green Chu",
+	"name":"Deepwoods - Green Chu",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -696,7 +696,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Green Chu",
+		"name":"Heart",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_GreenChu"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -706,7 +706,7 @@
 	]
   },
   {
-	"name":"Far Left Entrance Room",
+	"name":"Fortress - Far Left Entrance Room",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -718,7 +718,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_EntranceFarLeft"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -726,7 +726,7 @@
 	]
   },
   {
-	"name":"Entrance Rupee",
+	"name":"Fortress - Entrance Rupee",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -739,7 +739,7 @@
 	  {
 		"name":"Rupee",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_EntranceLargeRupee"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -747,7 +747,7 @@
 	]
   },
   {
-	"name":"Wizzrobe Fight",
+	"name":"Fortress - Wizzrobe Fight",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -759,7 +759,7 @@
 	  {
 		"name":"Kill",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_WizzrobeFight"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -767,7 +767,7 @@
 	]
   },
   {
-	"name":"Left Side 2nd Floor Mitts",
+	"name":"Fortress - Left Side 2nd Floor Mitts",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -779,7 +779,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_LeftSideMittsChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -787,7 +787,7 @@
 	]
   },
   {
-	"name":"Left Side Left Rupees",
+	"name":"Fortress - Left Side Left Rupees",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -800,7 +800,7 @@
 	  {
 		"name":"Rupees",
 		"item_count":4,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_LeftSideRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -808,7 +808,7 @@
 	]
   },
   {
-	"name":"Left Side Right Rupees",
+	"name":"Fortress - Left Side Right Rupees",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -821,7 +821,7 @@
 	  {
 		"name":"Rupees",
 		"item_count":3,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_LeftSideRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -829,7 +829,7 @@
 	]
   },
   {
-	"name":"Left Side 3rd Floor Mitts Chest",
+	"name":"Fortress - Left Side 3rd Floor Mitts Chest",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -841,7 +841,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_LeftSideMittsChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -849,7 +849,7 @@
 	]
   },
   {
-	"name":"Eyegores",
+	"name":"Fortress - Eyegores",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -861,7 +861,7 @@
 	  {
 		"name":"Kill",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_Eyegores"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -869,7 +869,7 @@
 	]
   },
   {
-	"name":"Left Side Key Drop",
+	"name":"Fortress - Left Side Key",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -881,7 +881,7 @@
 	  {
 		"name":"Drop",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_LeftSideKeyDrop"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  }  
@@ -889,7 +889,7 @@
 	]
   },
   {
-	"name":"Two Lever Room Right Chest",
+	"name":"Fortress - Two Lever Room Right",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -901,7 +901,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_RightSideTwoLeverRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -909,7 +909,7 @@
 	]
   },
   {
-	"name":"Two Lever Room Left Chest",
+	"name":"Fortress - Two Lever Room Left",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -921,7 +921,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_RightSideTwoLeverRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -929,7 +929,7 @@
 	]
   },
   {
-	"name":"Right Side 2nd Floor Mitts Chest",
+	"name":"Fortress - Right Side 2nd Floor Mitts",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -941,7 +941,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_RightSideMittsChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -949,7 +949,7 @@
 	]
   },
   {
-	"name":"Right Side 3rd Floor Mitts Chest",
+	"name":"Fortress - Right Side 3rd Floor Mitts",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -961,7 +961,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_RightSideMittsChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -969,7 +969,7 @@
 	]
   },
   {
-	"name":"Right Side Key Drop",
+	"name":"Fortress - Right Side Key",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -981,7 +981,7 @@
 	  {
 		"name":"Drop",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_RightSideKeyDrop"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  }  
@@ -989,7 +989,7 @@
 	]
   },
   {
-	"name":"Right Side Heart Piece",
+	"name":"Fortress - Right Side Heart Piece",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1001,7 +1001,7 @@
 	  {
 		"name":"Heart Piece",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_RightSideHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png",
 	  }  
@@ -1009,19 +1009,19 @@
 	]
   },
   {
-	"name":"Pedestal Chest",
+	"name":"Fortress - Pedestal",
 	"map_locations":[
 	  {
 		"map":"fow",
-		"x":2080,
+		"x":2075,
 		"y":610
 	  }
 	],
 	"sections":[
 	  {
-		"name":"Chest",
+		"name":"Big Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_PedestalChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
 		"chest_opened_img":"images/items-map/big_chest_open.png",
 	  }  
@@ -1029,7 +1029,7 @@
 	]
   },
   {
-	"name":"Center Path Switch",
+	"name":"Fortress - Center Path Switch",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1039,9 +1039,9 @@
 	],
 	"sections":[
 	  {
-		"name":"Switch",
+		"name":"Drop",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_CenterPathSwitch"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -1049,7 +1049,7 @@
 	]
   },
   {
-	"name":"Bombable Wall Big Chest",
+	"name":"Fortress - Bombable Wall",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1061,7 +1061,7 @@
 	  {
 		"name":"Big Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_BombableWallBigChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
 		"chest_opened_img":"images/items-map/big_chest_open.png",
 	  }  
@@ -1069,7 +1069,7 @@
 	]
   },
   {
-	"name":"Bombable Wall Chest",
+	"name":"Fortress - Bombable Wall",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1081,7 +1081,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_BombableWallSmallChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -1089,7 +1089,7 @@
 	]
   },
   {
-	"name":"Clone Puzzle Key Drop",
+	"name":"Fortress - Clone Puzzle Key",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1101,7 +1101,7 @@
 	  {
 		"name":"Drop",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_ClonePuzzleKeyDrop"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  }  
@@ -1109,7 +1109,7 @@
 	]
   },
   {
-	"name":"Minish Dirt Room Key Drop",
+	"name":"Fortress - Minish Dirt Room Key",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1122,7 +1122,7 @@
 		"name":"Drop",
 		"item_count":1,
         "capture_item":true,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_MinishDirtRoomKeyDrop"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -1130,7 +1130,7 @@
 	]
   },
   {
-	"name":"Right Side Top Moldorm Pot",
+	"name":"Fortress - Right Side Top Moldorm Pot",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1141,9 +1141,9 @@
 	],
 	"sections":[
 	  {
-		"name":"Pot",
+		"name":"Drop",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_RightSideMoldormTopPot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -1151,7 +1151,7 @@
 	]
   },
   {
-	"name":"Right Side Left Moldorm Pot",
+	"name":"Fortress - Right Side Left Moldorm Pot",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1162,9 +1162,9 @@
 	],
 	"sections":[
 	  {
-		"name":"Pot",
+		"name":"Drop",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_RightSideMoldormBottomPot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -1172,7 +1172,7 @@
 	]
   },
   {
-	"name":"Skull Room Chest",
+	"name":"Fortress - Skull Room Chest",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1182,17 +1182,17 @@
 	],
 	"sections":[
 	  {
-		"name":"Chest",
+		"name":"Big Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png",
+		"access_rules":["$Json_Dungeon_Fortress_SkullRoomChest"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
 	  }  
 	  
 	]
   },
   {
-	"name":"Mazaal",
+	"name":"Fortress - Mazaal",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1204,12 +1204,1070 @@
 	  {
 		"name":"Heart",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Fortress_test"],
+		"access_rules":["$Json_Dungeon_Fortress_Mazaal"],
 		"chest_unopened_img":"images/items-map/Heart Container.png",
 		"chest_opened_img":"images/items-map/Heart Container Gray.png",
 	  }  
 	  
 	]
+  },
+  {
+	"name":"Palace - Firebar Grate",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":630,
+		"y":90
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_FirebarGrate"],
+		"chest_unopened_img":"images/items-map/chest_open.png",
+		"chest_opened_img":"images/items-map/chest_closed.png",
+	  }  
+	]
+  },
+  {
+	"name":"Wizzrobe Platform Fight",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":120,
+		"y":215
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_WizzrobePlatformFight"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Pot Puzzle Key",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":3720,
+		"y":535
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Drop",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_PotPuzzleKey"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Rupees",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":1930,
+		"y":383,
+        "restrict_visibility_rules":["rupees_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":5,
+		"access_rules":["$Json_Dungeon_Palace_Rupees"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Moblin Archer Chest",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":585,
+		"y":1645
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_MoblinArcherChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Flail Soldiers",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":2385,
+		"y":2125
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Drop",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_FlailSoldiers"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Spark",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":2110,
+		"y":2075
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_SparkChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Pre Big Key Door",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":2140,
+		"y":1865
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Big Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_PreBigKeyDoorBigChest"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Roller",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":1595,
+		"y":825
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_RollerChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Dark Room",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":775,
+		"y":627
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Big Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_DarkRoomBig"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Dark Room",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":600,
+		"y":520
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_DarkRoomSmall"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Twin Wizzrobe Fight",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":2090,
+		"y":695
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_TwinWizzrobeFight"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Firerobe Fight",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":3400,
+		"y":355
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_FireWizzrobeFight"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Heart Piece",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":425,
+		"y":1660
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+        "capture_item":true,
+		"access_rules":["$Json_Dungeon_Palace_HeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Switch",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":710,
+		"y":1915
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_SwitchChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Bombarossa Maze",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":2625,
+		"y":1820
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_BombarossaMaze"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Block Maze Room",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":950,
+		"y":1660
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_BlockMazeRoom"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Block Maze Room Detour",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":3340,
+		"y":1870
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_BlockMazeDetour"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Palace - Gyorg",
+	"map_locations":[
+	  {
+		"map":"pow",
+		"x":3010,
+		"y":1580
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_Gyorg"],
+		"chest_unopened_img":"images/items-map/Heart Container.png",
+		"chest_opened_img":"images/items-map/Heart Container Gray.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - First Ice Block",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1225,
+		"y":110
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Ice Block",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_FirstIceBlock"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Key Locked Ice Bloc",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":905,
+		"y":140
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Ice Bloc",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_LockedIceBlock"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Post Madderpillar",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1505,
+		"y":1215
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_PostMadderpillarChest"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Underwater Pot",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":910,
+		"y":1420
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Drop",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_UnderwaterPot"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Overhang",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":740,
+		"y":2925
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_OverhangChest"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Left Path",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":690,
+		"y":2815,
+        "restrict_visibility_rules":["rupees_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":5,
+		"access_rules":["$Json_Dungeon_Droplet_LeftPathRupees"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Right Path",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1450,
+		"y":517,
+        "restrict_visibility_rules":["rupees_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":5,
+		"access_rules":["$Json_Dungeon_Droplet_RightPathRupees"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Upper Underwater",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":370,
+		"y":2350,
+		"restrict_visibility_rules":["rupees_on,underwater_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":6,
+		"access_rules":["$Json_Dungeon_Droplet_UpperWaterRupees"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Lower Underwater",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":600,
+		"y":1215,
+		"restrict_visibility_rules":["rupees_on,underwater_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Rupees",
+		"item_count":6,
+		"access_rules":["$Json_Dungeon_Droplet_IcePuzzleFreeChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Ice Puzzle",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1000,
+		"y":830
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_IcePuzzleFrozenChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Ice Puzzle",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1110,
+		"y":975
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Frozen Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_IcePuzzleFrozenChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Post Ice Puzzle",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":695,
+		"y":1025
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_PostIcePuzzleFrozenChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Right Path Ice Walkway",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1475,
+		"y":2365
+	  }
+	],
+	"sections":[
+	  {
+		"name":"First Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_RightPathIceWalkwayChests"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Right Path Ice Walkway",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1680,
+		"y":2545
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Second Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_RightPathIceWalkwayChests"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Right Path Ice Walkway Pot",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1780,
+		"y":2780,
+        "restrict_visibility_rules":["specialpot_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Drop",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_RightPathIceWalkwayPot"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Blue Chu",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1440,
+		"y":3010
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_BlueChu"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Basement Frozen",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1720,
+		"y":1440
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_BasementFrozenChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Post Blue Chu Frozen",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1385,
+		"y":1235
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_PostBlueChuFrozenChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Dark Maze",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1895,
+		"y":1120
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Bottom Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Dark Maze",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1850,
+		"y":800
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Top Left Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Dark Maze",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1990,
+		"y":720
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Top Right Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Dark Maze Bombable Wall",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1670,
+		"y":975
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_DarkMazeBombWall"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Droplet - Octo",
+	"map_locations":[
+	  {
+		"map":"tod",
+		"x":1040,
+		"y":2875
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Droplet_Octo"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Blade Chest",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":2265,
+		"y":870,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_BladeChest"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Gray.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Platform Chest",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":3090,
+		"y":1800,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Big Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_PlatformChest"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Stone King",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":3295,
+		"y":110,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Gift",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_StoneKing"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Post Throne",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":2230,
+		"y":70,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Big Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_PostThroneBigChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Northwest Tower",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":220,
+		"y":130,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_NorthwestTower"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Gray.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Southwest Tower",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":220,
+		"y":1490,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_SouthwestTower"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Gray.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Southeast Tower",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":1315,
+		"y":1490,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_SoutheastTower"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Gray.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Northeast Tower",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":1305,
+		"y":135,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_NortheastTower"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Gray.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Big Block",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":765,
+		"y":225,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Big Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_BigBlockChest"],
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Dark Hyrule Castle - Vaati",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":1630,
+		"y":300,
+        "restrict_visibility_rules":["dhc_open","dhc_closed"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_Vaati"],
+		"chest_unopened_img":"images/items-map/TriForce.png",
+		"chest_opened_img":"images/items-map/TriForce_Gray.png",
+	  }  
+	]
+  },
+  {
+	"name":"Pedestal Items",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":3090,
+		"y":1480,
+        "restrict_visibility_rules":["ped_items_on,dhc_open"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Two Elements",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_PedestalTwoElements"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  } ,
+	  {
+		"name":"Three Elements",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_PedestalThreeElements"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  } ,
+	  {
+		"name":"Four Elements",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_PedestalFourElements"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
+  },
+  {
+	"name":"Pull the Pedestal",
+	"map_locations":[
+	  {
+		"map":"dhc",
+		"x":3090,
+		"y":1480,
+        "restrict_visibility_rules":["dhc_none"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Win",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_DHC_Win"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  }  
+	]
   }
-  
 ]

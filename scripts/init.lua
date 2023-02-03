@@ -133,7 +133,7 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Palace.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/DHC.lua")
 	Tracker:AddLocations(JsLocations.."Dungeons.json")
-	-- Tracker:AddLocations(JsLocations.."Maps.json")
+	Tracker:AddLocations(JsLocations.."Maps.json")
 
 end
 	Tracker:AddLayouts(JsLayouts.."tracker.json")

@@ -332,6 +332,62 @@
                               "key": "fusion_setting"
                             }
                           },
+                          {
+                            "title":"Deepwood Shrine",
+                            "icon":"images/icon-maps/Gust Jar.png",
+                            "content":{
+                              "type":"map",
+                              "maps":["dws"]
+                            }
+                          },
+                          {
+                            "title":"Cave of Flames",
+                            "icon":"images/icon-maps/Cane of Pacci.png",
+                            "content":{
+                              "type":"map",
+                              "maps":["cof"]
+                            }
+                          },
+                          {
+                            "title":"Fortress of Winds",
+                            "icon":"images/icon-maps/Mole Mitts.png",
+                            "content":{
+                              "type":"map",
+                              "maps":["fow"]
+                            }
+                          },
+                          {
+                            "title":"Temple of Droplets",
+                            "icon":"images/icon-maps/Lamp (Lit).png",
+                            "content":{
+                              "type":"map",
+                              "maps":["tod"]
+                            }
+                          },
+                          {
+                            "title":"Royal Crypt",
+                            "icon":"images/icon-maps/Gold Kinstone (Falls).png",
+                            "content":{
+                              "type":"map",
+                              "maps":["rc"]
+                            }
+                          },
+                          {
+                            "title":"Palace of Winds",
+                            "icon":"images/icon-maps/Roc's Cape.png",
+                            "content":{
+                              "type":"map",
+                              "maps":["pow"]
+                            }
+                          },
+                          {
+                            "title":"Dark Hyrule Castle",
+                            "icon":"images/icon-maps/vaati.png",
+                            "content":{
+                              "type":"map",
+                              "maps":["dhc"]
+                            }
+                          },
                         ]
                       }
                     ]
