@@ -41,7 +41,7 @@
 	]
   },
   {
-	"name":"Cave Of Flame - Room Big Chest",
+	"name":"Cave Of Flame - Big Chest Room Big Chest",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -61,7 +61,7 @@
 	]
   },
   {
-	"name":"Cave Of Flame - Room Big Chest",
+	"name":"Cave Of Flame - Big Chest Room Chest",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -101,7 +101,7 @@
 	]
   },
   {
-	"name":"Cave Of Flame - First Rollobite Room",
+	"name":"Cave Of Flame - First Rollobite Room Pillar",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -111,7 +111,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Pillar Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -141,7 +141,7 @@
 	]
   },
   {
-	"name":"Cave Of Flame - Spiny Chu",
+	"name":"Cave Of Flame - Spiny Chu Fight",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -161,7 +161,7 @@
 	]
   },
   {
-	"name":"Cave Of Flame - Spiny Chu",
+	"name":"Cave Of Flame - Spiny Chu Pillar Chest",
 	"map_locations":[
 	  {
 		"map":"cof",
@@ -171,7 +171,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Pillar Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_SpinyChuPillarChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -546,7 +546,7 @@
 	]
   },
   {
-	"name":"Deepwoods - Basement Switch Room",
+	"name":"Deepwoods - Basement Switch Room Big Chest",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -626,7 +626,7 @@
 	]
   },
   {
-	"name":"Deepwoods - Madderpillar",
+	"name":"Deepwoods - Madderpillar Fight",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -646,7 +646,7 @@
 	]
   },
   {
-	"name":"Deepwoods - Madderpillar",
+	"name":"Deepwoods - Madderpillar Heart Piece",
 	"map_locations":[
 	  {
 		"map":"dws",
@@ -829,7 +829,7 @@
 	]
   },
   {
-	"name":"Fortress - Left Side 3rd Floor Mitts Chest",
+	"name":"Fortress - Left Side 3rd Floor Mitts",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1049,7 +1049,7 @@
 	]
   },
   {
-	"name":"Fortress - Bombable Wall",
+	"name":"Fortress - Bombable Wall Big Chest",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1069,7 +1069,7 @@
 	]
   },
   {
-	"name":"Fortress - Bombable Wall",
+	"name":"Fortress - Bombable Wall Chest",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1172,7 +1172,7 @@
 	]
   },
   {
-	"name":"Fortress - Skull Room Chest",
+	"name":"Fortress - Skull Room",
 	"map_locations":[
 	  {
 		"map":"fow",
@@ -1231,7 +1231,7 @@
 	]
   },
   {
-	"name":"Wizzrobe Platform Fight",
+	"name":"Palace - Wizzrobe Platform Fight",
 	"map_locations":[
 	  {
 		"map":"pow",
@@ -1384,7 +1384,7 @@
 	]
   },
   {
-	"name":"Palace - Dark Room",
+	"name":"Palace - Dark Room Big Chest",
 	"map_locations":[
 	  {
 		"map":"pow",
@@ -1403,7 +1403,7 @@
 	]
   },
   {
-	"name":"Palace - Dark Room",
+	"name":"Palace - Dark Room Chest",
 	"map_locations":[
 	  {
 		"map":"pow",
@@ -1594,7 +1594,7 @@
 	]
   },
   {
-	"name":"Droplet - Key Locked Ice Bloc",
+	"name":"Droplet - Key Locked Ice Block",
 	"map_locations":[
 	  {
 		"map":"tod",
@@ -1604,7 +1604,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Ice Bloc",
+		"name":"Ice Block",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_LockedIceBlock"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -1769,7 +1769,7 @@
 	]
   },
   {
-	"name":"Droplet - Ice Puzzle",
+	"name":"Droplet - Ice Puzzle Frozen",
 	"map_locations":[
 	  {
 		"map":"tod",
@@ -1779,7 +1779,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Frozen Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_IcePuzzleFrozenChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -1807,7 +1807,7 @@
 	]
   },
   {
-	"name":"Droplet - Right Path Ice Walkway",
+	"name":"Droplet - Right Path Ice Walkway First",
 	"map_locations":[
 	  {
 		"map":"tod",
@@ -1817,7 +1817,7 @@
 	],
 	"sections":[
 	  {
-		"name":"First Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_RightPathIceWalkwayChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -1826,7 +1826,7 @@
 	]
   },
   {
-	"name":"Droplet - Right Path Ice Walkway",
+	"name":"Droplet - Right Path Ice Walkway Second",
 	"map_locations":[
 	  {
 		"map":"tod",
@@ -1836,7 +1836,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Second Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_RightPathIceWalkwayChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -1922,7 +1922,7 @@
 	]
   },
   {
-	"name":"Droplet - Dark Maze",
+	"name":"Droplet - Dark Maze Bottom",
 	"map_locations":[
 	  {
 		"map":"tod",
@@ -1932,7 +1932,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Bottom Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -1941,7 +1941,7 @@
 	]
   },
   {
-	"name":"Droplet - Dark Maze",
+	"name":"Droplet - Dark Maze Top Left",
 	"map_locations":[
 	  {
 		"map":"tod",
@@ -1951,7 +1951,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Top Left Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -1960,7 +1960,7 @@
 	]
   },
   {
-	"name":"Droplet - Dark Maze",
+	"name":"Droplet - Dark Maze Top Right",
 	"map_locations":[
 	  {
 		"map":"tod",
@@ -1970,7 +1970,7 @@
 	],
 	"sections":[
 	  {
-		"name":"Top Right Chest",
+		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -2017,7 +2017,7 @@
 	]
   },
   {
-	"name":"Blade Chest",
+	"name":"Dark Hyrule Castle - Blade",
 	"map_locations":[
 	  {
 		"map":"dhc",
@@ -2037,7 +2037,7 @@
 	]
   },
   {
-	"name":"Dark Hyrule Castle - Platform Chest",
+	"name":"Dark Hyrule Castle - Platform",
 	"map_locations":[
 	  {
 		"map":"dhc",
@@ -2217,7 +2217,7 @@
 	]
   },
   {
-	"name":"Pedestal Items",
+	"name":"Dark Hyrule Castle - Pedestal Items",
 	"map_locations":[
 	  {
 		"map":"dhc",
@@ -2251,7 +2251,7 @@
 	]
   },
   {
-	"name":"Pull the Pedestal",
+	"name":"Dark Hyrule Castle - Pull the Pedestal",
 	"map_locations":[
 	  {
 		"map":"dhc",
