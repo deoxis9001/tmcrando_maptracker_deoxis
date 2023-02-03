@@ -1279,12 +1279,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSetting/WeaponsLamp_yes.png",
+        "img": "images/options/WorldSetting/weaponslamp_yes.png",
         "codes": "weaponslamp_yes",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/WeaponsLamp_no.png",
+        "img":"images/options/WorldSetting/weaponslamp_no.png",
         "codes": "weaponslamp_no",
         "inherit_codes":false
       },
