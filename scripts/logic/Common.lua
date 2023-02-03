@@ -237,8 +237,24 @@ function HasSword()
 	end
 end
 
+function HasGreenSword()
+	if ( Sword2()==1 ) then
+		return 1
+	else
+		return 0
+	end
+end
+
 function HasSpin()
 	if ( has("spinattack") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasDojoSword()
+	if ( Sword1()==1 or Sword2()==1 ) then
 		return 1
 	else
 		return 0
@@ -285,6 +301,14 @@ function HasBow()
 	end
 end
 
+function HasLightBow()
+	if ( has("lights") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
 function HasBoomerang()
 	if ( has("boomerang") or has("magicboomerang") ) then
 		return 1
@@ -301,96 +325,14 @@ function HasMagicBoomerang()
 	end
 end
 
-function HasDamageSource()
-	if ( HasSword()==1 ) then
+function HasShield()
+	if ( has("shield") or has("mirrorshield") ) then
 		return 1
-	elseif ( has("weapons_on") and ( HasBow()==1 or has("bombs") ) ) then
-		return 1
-	elseif ( has("weapons_off") and ( HasBow()==1 or has("bombs") ) ) then
-		return 2
 	else
 		return 0
 	end
 end
 
-function HasChuDamage()
-	if ( HasSword()==1 ) then
-		return 1
-	elseif (has("weapons_on") and  has("bombs") ) then
-		return 1
-	elseif (has("weapons_off") and  has("bombs") ) then
-		return 2
-	else
-		return 0
-	end
-end
-
-function HasGleerokDamage()
-	if ( HasSword()==1 ) then
-		return 1
-	elseif (has("weapons_on") and (HasBow()==1  or has("bombs30") ) ) then
-		return 1
-	elseif ( has("weapons_off") and (HasBow()==1  or has("bombs30") ) ) then
-		return 2
-	else
-		return 0
-	end
-end
-function HasWizrobeDamage()
-	if ( HasSword()==1 ) then
-		return 1
-	elseif ( ( HasBow()==1  or has("bombs")  or has("lamp")) and has("weapons_on")) then
-		return 1
-	elseif ( ( HasBow()==1  or has("bombs")  or has("lamp")) and has("weapons_off")) then
-		return 2
-	else
-		return 0
-	end
-end
-function HasDarknutDamage()
-	if ( HasSword()==1 ) then
-		return 1
-	elseif ( HasBow()==1  or has("bombs") ) and has("weapons_on") then
-		return 1
-	elseif ( HasBow()==1  or has("bombs") ) and has("weapons_off") then
-		return 2
-	else
-		return 0
-	end
-end
-function HasHandDamage()
-	if ( HasSword()==1 ) then
-		return 1
-	elseif ( (HasBow()==1  or has("bombs")) and has("weapons_on")) then
-		return 1
-	elseif ( (HasBow()==1  or has("bombs")) and has("weapons_off")) then
-		return 2
-	else
-		return 0
-	end
-end
-function HasMazaalDamage()
-	if ( HasSword()==1 ) then
-		return 1
-	elseif ( has("weapons_on")) then
-		return 1
-	elseif ( has("weapons_off")) then
-		return 2
-	else
-		return 0
-	end
-end
-function HasGhiniDamage()
-	if ( HasSword()==1 ) then
-		return 1
-	elseif ( (HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_on")) then
-		return 1
-	elseif ( (HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_off")) then
-		return 2
-	else
-		return 0
-	end
-end
 function HasBeam()
 	if ( HasSword()==1 and ( ( has("swordbeam")  and HasBottle()==1) or has("perilbeam") ) ) then
 		return 1
@@ -405,6 +347,110 @@ function CanDownThrust()
 		return 0
 	end
 end
+
+
+function HasDamageSource()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif ( has("weapons_on") and ( HasBow()==1 or has("bombs") ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasMadderDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif (has("weapons_on") and  has("bombs") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasChuDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif (has("weapons_on") and  has("bombs") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasHelmasaurDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif ( has("weapons_on") and (HasBow()==1  or has("bombs") or has("bombs30") or has("gust"))) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasGleerokDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif (has("weapons_on") and (HasBow()==1  or has("bombs30") ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasWizrobeDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif ( has("weapons_on") and ( HasBow()==1  or has("bombs")  or has("lamp") ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasDarknutDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif ( has("weapons_on") and ( HasBow()==1  or has("bombs") ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasMazaalDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif (  has("weapons_on") and (HasBow()==1  or has("bombs") ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasScissorDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif (  has("weapons_on") and  has("bombs30") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function HasGhiniDamage()
+	if ( HasSword()==1 ) then
+		return 1
+	elseif ( (HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_on")) then
+		return 1
+	elseif ( (HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_off")) then
+		return 2
+	else
+		return 0
+	end
+end
+
 function GuardSkip()
 	if ( has("guardskip_on") and has("boots")  ) then
 		return 1
@@ -456,6 +502,17 @@ function LightArrowBreak()
 		return 0
 	end
 end
+function Bobombs()
+	if ( has("bobombs_on") ) then
+		return 1
+	elseif ( has("bobombs_off") and (HasSword()==1 or has("gust") or has("bombs") ) ) then
+		return 1
+	elseif ( has("bobombs_off") ) then
+		return 2
+	else
+		return 0
+	end
+end
 function CrenelBeam()
 	if ( has("crenelbeam_on") and HasBeam()==1 ) then
 		return 1
@@ -465,7 +522,7 @@ function CrenelBeam()
 		return 0
 	end
 end
-function DownStrikeBeetle()
+function DownThrustBeetle()
 	if ( has("downstrikebeetle_on") and CanDownThrust()==1 ) then
 		return 1
 	elseif ( has("downstrikebeetle_off") and CanDownThrust()==1 ) then
@@ -592,6 +649,120 @@ function WindPortal()
 		return 1
 	elseif ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0f") ) ) then
 		return 1
+	else
+		return 0
+	end
+end
+function CryptDungeons()
+	if (has("dungeonser_off")) then
+		return AccessCrypt()
+	elseif (has("crypt_dws")) then
+		return AccessDeepwood()
+	elseif (has("crypt_cof")) then
+		return AccessCoF()
+	elseif (has("crypt_fow")) then
+		return AccessFortress()
+	elseif (has("crypt_tod")) then
+		return AccessDroplets()
+	elseif (has("crypt_crypt")) then
+		return AccessCrypt()
+	elseif (has("crypt_pow")) then
+		return AccessPalace()
+	else
+		return 0
+	end
+end
+function DeepwoodDungeons()
+	if (has("dungeonser_off")) then
+		return AccessDeepwood()
+	elseif (has("dws_dws")) then
+		return AccessDeepwood()
+	elseif (has("dws_cof")) then
+		return AccessCoF()
+	elseif (has("dws_fow")) then
+		return AccessFortress()
+	elseif (has("dws_tod")) then
+		return AccessDroplets()
+	elseif (has("dws_crypt")) then
+		return AccessCrypt()
+	elseif (has("dws_pow")) then
+		return AccessPalace()
+	else
+		return 0
+	end
+end
+function CofDungeons()
+	if (has("dungeonser_off")) then
+		return AccessCoF()
+	elseif (has("cof_dws")) then
+		return AccessDeepwood()
+	elseif (has("cof_cof")) then
+		return AccessCoF()
+	elseif (has("cof_fow")) then
+		return AccessFortress()
+	elseif (has("cof_tod")) then
+		return AccessDroplets()
+	elseif (has("cof_crypt")) then
+		return AccessCrypt()
+	elseif (has("cof_pow")) then
+		return AccessPalace()
+	else
+		return 0
+	end
+end
+function FowDungeons()
+	if (has("dungeonser_off")) then
+		return AccessFortress()
+	elseif (has("fow_dws")) then
+		return AccessDeepwood()
+	elseif (has("fow_cof")) then
+		return AccessCoF()
+	elseif (has("fow_fow")) then
+		return AccessFortress()
+	elseif (has("fow_tod")) then
+		return AccessDroplets()
+	elseif (has("fow_crypt")) then
+		return AccessCrypt()
+	elseif (has("fow_pow")) then
+		return AccessPalace()
+	else
+		return 0
+	end
+end
+function TodDungeons()
+	if (has("dungeonser_off")) then
+		return AccessDroplets()
+	elseif (has("tod_dws")) then
+		return AccessDeepwood()
+	elseif (has("tod_cof")) then
+		return AccessCoF()
+	elseif (has("tod_fow")) then
+		return AccessFortress()
+	elseif (has("tod_tod")) then
+		return AccessDroplets()
+	elseif (has("tod_crypt")) then
+		return AccessCrypt()
+	elseif (has("tod_pow")) then
+		return AccessPalace()
+	else
+		return 0
+	end
+end
+function PowDungeons()
+	if (has("dungeonser_off")) then
+		return AccessPalace()
+	elseif (has("pow_dws")) then
+		return AccessDeepwood()
+	elseif (has("pow_cof")) then
+		return AccessCoF()
+	elseif (has("pow_fow")) then
+		return AccessFortress()
+	elseif (has("pow_tod")) then
+		return AccessDroplets()
+	elseif (has("pow_crypt")) then
+		return AccessCrypt()
+	elseif (has("pow_pow")) then
+		return AccessPalace()
 	else
 		return 0
 	end

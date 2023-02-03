@@ -82,7 +82,7 @@ end
 function TownMulldozers() 
 	if ( has("openworld_on") and has("cane") and Fountain()==1 ) then
 		return 1
-	elseif ( has("cane") and Fountain()==1 and HasSword()==1 ) then
+	elseif ( has("cane") and Fountain()==1 and HasDamageSource()==1 ) then
 		return 1
 	else
 		return 0
@@ -169,8 +169,55 @@ function LakeShortcut()
 		return 0
 	end 
 end
-function WindCrest() 
+function CrenelWindCrest() 
 	if ( has("openworld_on") and has("ocarina") ) then
+		return 1
+	elseif ( has("crenelwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function FallsWindCrest() 
+	if ( has("openworld_on") and has("ocarina") ) then
+		return 1
+	elseif ( has("fallswindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function CloudWindCrest() 
+	if ( has("openworld_on") and has("ocarina") ) then
+		return 1
+	elseif ( has("cloudwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function SwampWindCrest() 
+	if ( has("openworld_on") and has("ocarina") ) then
+		return 1
+	elseif ( has("swampwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function SHFWindCrest() 
+	if ( has("openworld_on") and has("ocarina") ) then
+		return 1
+	elseif ( has("shfwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function MinishWindCrest() 
+	if ( has("openworld_on") and has("ocarina") ) then
+		return 1
+	elseif ( has("minishwindcrest_yes") and has("ocarina") ) then
 		return 1
 	else
 		return 0
@@ -258,7 +305,7 @@ end
 function SwampShortcut() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif (  has("flippers") or has ("cape") or ( has("boots") and HasBow()==1 ) ) then
+	elseif (  has("flippers") or has ("cape") or ( has("boots") and HasBow()==1 ) or SwampWindCrest()==1 ) then
 		return 1
 	else
 		return 0
@@ -348,7 +395,7 @@ end
 function CryptEntrance() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit3()==1 and has("lamp") ) then
+	elseif ( CanSplit3()==1 ) then
 		return 1
 	else
 		return 0
@@ -358,7 +405,7 @@ end
 function CryptPuzzle() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( has("lamp") ) then
+	elseif ( has("lamp") and HasDamageSource()==1 ) then
 		return 1
 	else
 		return 0
@@ -373,10 +420,8 @@ function FallsFusion()
 		return 0
 	end 
 end
-function AccessWindTribe() 
+function OpenWindTribe() 
 	if ( has("openworld_on") ) then
-		return 1
-	elseif ( AccessClouds()==1 and ( has("cape") or has("mitts")) and ( ( fusiongoldcombined:getActive()==false and Tracker:ProviderCountForCode("clouds")>=4  ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=9 )  )) then
 		return 1
 	else
 		return 0
@@ -418,10 +463,10 @@ function DeepwoodWarpSwitch()
 		return 0
 	end 
 end
-function DeepwoodBlueWarp() 
+function DeepwoodBlueWarp()
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( ( Deepwood1stDoor()==1 and has("gust") ) or ( Deepwood1stDoor()==1 and ( Deepwood2ndDoor()==1 or Tracker:ProviderCountForCode("dws_smallkey") >= 2 ) ) ) then
+	elseif ( Deepwood1stDoor()==1 and ( Deepwood2ndDoor()==1 or Tracker:ProviderCountForCode("dws_smallkey") >= 2 or has("gust") ) ) then
 		return 1
 	else
 		return 0
@@ -445,17 +490,10 @@ function DeepwoodWarpChests()
 		return 0
 	end 
 end
-function DeepwoodMadderpillarWeb() 
-	if ( has("openworld_on") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function DeepwoodMadderpillarFight() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( HasSword()==1 ) then
+	elseif ( HasMadderDamage()==1 ) then
 		return 1
 	else
 		return 0
@@ -480,7 +518,7 @@ end
 function CoFSpikeBeetle() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( HasDamageSource()==1 and (DownStrikeBeetle()==1 or has("cane") or has("shield") or has("bombs") ) ) then
+	elseif ( HasDamageSource()==1 and (DownThrustBeetle()==1 or has("cane") or has("shield") or has("bombs") ) ) then
 		return 1
 	else
 		return 0
@@ -489,7 +527,7 @@ end
 function CoFHelmasaur() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( HasDamageSource()==1 ) then
+	elseif ( HasHelmasaurDamage()==1 ) then
 		return 1
 	else
 		return 0
@@ -722,7 +760,7 @@ end
 function ToDScissorBeetles() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( HasDamageSource()==1 ) then
+	elseif ( HasScissorDamage()==1 ) then
 		return 1
 	else
 		return 0
@@ -776,7 +814,7 @@ end
 function ToDMadderpillars() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( HasSword()==1 ) then
+	elseif ( HasMadderDamage()==1 ) then
 		return 1
 	else
 		return 0
@@ -810,9 +848,9 @@ function ToDMulldozer()
 	end 
 end
 function AccessOcto() 
-	if ( has("openworld_on") and AccessDroplets()==1 and ToDMainRoom()==1 ) then
+	if ( has("openworld_on") and TodDungeons()==1 and ToDMainRoom()==1 ) then
 		return 1
-	elseif ( AccessDroplets()==1 and ToDMainRoom()==1 and ToDEastSwitch()==1 and ToDWestSwitch()==1 ) then
+	elseif ( TodDungeons()==1 and ToDMainRoom()==1 and ToDEastSwitch()==1 and ToDWestSwitch()==1 ) then
 		return 1
 	else
 		return 0

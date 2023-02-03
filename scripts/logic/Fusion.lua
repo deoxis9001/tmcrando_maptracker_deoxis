@@ -156,7 +156,7 @@ function Json_Hills_MittsCave_Fuzer()
 end
 
 function Json_Hills_MinishHouse_Fuzer() 
-	if ( CanDestroyTrees()==1 or WindCrest()==1 ) then
+	if ( AccessEasternHills()==1 ) then
 		return 1
 	else
 		return 0
@@ -222,7 +222,7 @@ end
 
 
 function Json_Hylia_DavidJr_Fuzer1() 
-	if ( AccessLonLon()==1 and has("cane") and CanDestroyTrees()==1 ) then
+	if ( AccessLonLon()==1 and has("cane") and AccessEasternHills()==1 ) then
 		return 1
 	else
 		return 0
@@ -267,7 +267,7 @@ end
 
 
 function Json_LonLon_Ankle_Fuzer() 
-	if ( LonLon_Cave_Chest()==1 and has("cane") and CanDestroyTrees()==1 ) then
+	if ( LonLon_Cave_Chest()==1 and has("cane") and AccessEasternHills()==1 ) then
 		return 1
 	else
 		return 0
@@ -404,7 +404,7 @@ end
 
 
 function Json_SouthHyruleField_Tingle_Fuzer1() 
-	if ( has("cane") and (CanDestroyTrees()==1 or WindCrest()==1) ) then
+	if ( has("cane") and (AccessEasternHills()==1) and HasMagicBoomerang()==1 ) then
 		return 1
 	else
 		return 0
@@ -413,7 +413,7 @@ end
 
 
 function Json_SouthHyruleField_Tingle_Fuzer2() 
-	if ( has("cane") and (CanDestroyTrees()==1 or WindCrest()==1) and HasMagicBoomerang()==1 ) then
+	if ( has("cane") and (AccessEasternHills()==1) and HasMagicBoomerang()==1 ) then
 		return 1
 	else
 		return 0
@@ -550,7 +550,7 @@ end
 
 
 function Json_Trilby_Knuckle_Fuzer() 
-	if ( Trilby_DigCave_RightChest()==1 and has("cane") and CanDestroyTrees()==1 ) then
+	if ( Trilby_DigCave_RightChest()==1 and has("cane") and AccessEasternHills()==1 ) then
 		return 1
 	else
 		return 0

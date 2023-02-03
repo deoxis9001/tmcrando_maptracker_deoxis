@@ -49,6 +49,52 @@
 			]
 		}
 	},
+    "windcrest_settings": {
+      "type": "group",
+      "header": "Wind Crest Setting",
+      "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					  ["crenelwindcrest_no","swampwindcrest_no"],
+					  ["fallswindcrest_no","shfwindcrest_no"],
+					  ["cloudwindcrest_no","minishwindcrest_no"]
+				  ]
+			  }
+		  ]
+      }
+    },
+    "dungeon_shuffle": {
+      "type": "group",
+      "header": "Dungeons shuffle",
+      "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					  ["dws_none","tod_none"],
+					  ["cof_none","crypt_none"],
+					  ["fow_none","pow_none"]
+				  ]
+			  }
+		  ]
+      }
+    },
     "dhc_requirement": {
       "type": "group",
       "header": "Dark Hyrule Castle Requirements",
@@ -115,14 +161,39 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					  ["rupees_off","specialpot_off","digging_off"],
-					  ["underwater_off","golden_enemy_off","ped_items_off"],
+					  ["rupees_off","","golden_enemy_off"],
+					  ["underwater_off","specialpot_off","digging_off"],
+					  ["dungeonser_off","","progressiveitems"],
+					  ["ped_items_off","",""],
 					  ["openworld_off","",""],
-					  ["fusiongoldcombined","",""],
-					  ["fusiongold_removed","",""],
-					  ["fusionredcombined","fusionbluecombined","fusiongreencombined"],
-					  ["fusionred_removed","fusionblue_removed","fusiongreen_removed"]
+					  ["","",""]
 				  ]
+			  }
+		  ]
+      }
+    },
+    "fusion_setting": {
+      "type": "group",
+      "header": "Fusion Settings",
+      "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					  ["fusiongoldcombined","fusiongold_removed",""],
+					  ["fusionredcombined","fusionred_removed",""],
+					  ["fusionbluecombined","fusionblue_removed",""],
+					  ["fusiongreencombined","fusiongreen_removed",""],
+					  ["","",""],
+					  ["","",""]
+				]
 			  }
 		  ]
       }
@@ -177,7 +248,7 @@
 							   "type": "button_popup",
 							   "style": "settings",
 							   "popup_background": "#50877373",
-							   "layout": "options_tracker"
+							   "layout": "dungeon_shuffle"
 							},
                             "dock": "left",
                             "content": {
@@ -217,7 +288,7 @@
                           },
                           {
                             "title":"Melari's Mines",
-                            "icon":"images/icon-maps/Obscure_On.png",
+                            "icon":"images/icon-maps/Melari.png",
                             "content":{
                               "type":"map",
                               "maps":["mines"]
@@ -225,7 +296,7 @@
                           },
                           {
                             "title":"Dark Hyrule Castle Requirements",
-                            "icon":"images/icon-maps/Elements.png",
+                            "icon":"images/icon-maps/Light Force.png",
                             "content":{
 								"type":"layout",
 								"key": "dhc_requirement"
@@ -233,28 +304,36 @@
                           },
                           {
                             "title":"Logic Settings",
-                            "icon":"images/icon-maps/Elements.png",
+                            "icon":"images/icon-maps/Treasure Icon.png",
                             "content":{
                               "type":"layout",
                               "key": "logic_settings"
                             }
                           },
                           {
+                            "title":"Wind Crest Setting",
+                            "icon":"images/icon-maps/Wind Tablet.png",
+                            "content":{
+                              "type":"layout",
+                              "key": "windcrest_settings"
+                            }
+                          },
+                          {
                             "title":"World Setting",
-                            "icon":"images/icon-maps/Elements.png",
+                            "icon":"images/icon-maps/Sign.png",
                             "content":{
                               "type":"layout",
                               "key": "world_setting"
                             }
                           },
-                          //{
-                          //  "title":"Settings - Fusions",
-                          //  "icon":"images/icon-maps/Elements.png",
-                          //  "content":{
-                          //    "type":"layout",
-                          //    "key": "option_fusion"
-                          //  }
-                          //},
+                          {
+                            "title":"Fusions Setting",
+                            "icon":"images/icon-maps/Kinstone Bag (Giant).png",
+                            "content":{
+                              "type":"layout",
+                              "key": "fusion_setting"
+                            }
+                          },
                         ]
                       }
                     ]

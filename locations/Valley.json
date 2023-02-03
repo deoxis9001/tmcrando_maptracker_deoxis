@@ -169,13 +169,13 @@
 	  {
 		"name":"Fuzer Spekter 1",
 		"hosted_item":"fusions31",
-		"visibility_rules":"fusionblue_vanilla,openworld_off",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
 		"access_rules":["$Json_Valley_Spekter_Fuzer1"]
 	  },
 	  {
 		"name":"Fuzer Spekter 2",
 		"hosted_item":"fusions28",
-		"visibility_rules":"fusionblue_vanilla,openworld_off",
+		"visibility_rules":["fusionblue_vanilla,openworld_off"],
 		"access_rules":["$Json_Valley_Spekter_Fuzer2"]
 	  }
 	]

@@ -160,6 +160,114 @@
     ]
   },
   {
+    "name": "Crest Crenel",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/CrestCrenelNo.png",
+        "codes": "crestcrenel_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/CrestSettings/CrestCrenelYes.png",
+        "codes": "crestcrenel_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "Crest Falls",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/CrestFallsNo.png",
+        "codes": "crestfalls_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/CrestSettings/CrestFallsYes.png",
+        "codes": "crestfalls_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "Crest Clouds",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/CrestCloudsNo.png",
+        "codes": "crestclouds_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/CrestSettings/CrestCloudsYes.png",
+        "codes": "crestclouds_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "Crest Swamp",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/CrestSwampNo.png",
+        "codes": "crestswamp_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/CrestSettings/CrestSwampYes.png",
+        "codes": "crestswamp_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "Crest Shf",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/CrestShfNo.png",
+        "codes": "crestshf_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/CrestSettings/CrestShfYes.png",
+        "codes": "crestshf_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "Crest Minish",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/CrestMinishNo.png",
+        "codes": "crestminish_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/CrestSettings/CrestMinishYes.png",
+        "codes": "crestminish_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
     "name": "Guard Skip",
     "type": "progressive",
     "loop": true,
@@ -701,6 +809,390 @@
         "codes":"fusiongreen_vanilla",
         "inherit_codes":false
       }
+    ]
+  },
+  {
+    "name":"Crenel Wind Crest",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WindCrestSetting/crenel_no.png",
+        "codes":"crenelwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WindCrestSetting/crenel_yes.png",
+        "codes":"crenelwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Falls Wind Crest",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WindCrestSetting/falls_no.png",
+        "codes":"fallswindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WindCrestSetting/falls_yes.png",
+        "codes":"fallswindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Cloud Wind Crest",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WindCrestSetting/cloud_no.png",
+        "codes":"cloudwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WindCrestSetting/cloud_yes.png",
+        "codes":"cloudwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Swamp Wind Crest",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WindCrestSetting/swamp_no.png",
+        "codes":"swampwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WindCrestSetting/swamp_yes.png",
+        "codes":"swampwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"SHF Wind Crest",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WindCrestSetting/shf_no.png",
+        "codes":"shfwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WindCrestSetting/shf_yes.png",
+        "codes":"shfwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Minish Wind Crest",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/WindCrestSetting/minish_no.png",
+        "codes":"minishwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WindCrestSetting/minish_yes.png",
+        "codes":"minishwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Dungeons Deepwoods",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/Dungeons/dws_none.png",
+        "codes":"dws_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/dws_dws.png",
+        "codes":"dws_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/dws_cof.png",
+        "codes":"dws_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/dws_fow.png",
+        "codes":"dws_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/dws_tod.png",
+        "codes":"dws_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/dws_crypt.png",
+        "codes":"dws_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/dws_pow.png",
+        "codes":"dws_pow",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Cave Of Flame",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/Dungeons/cof_none.png",
+        "codes":"cof_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/cof_dws.png",
+        "codes":"cof_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/cof_cof.png",
+        "codes":"cof_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/cof_fow.png",
+        "codes":"cof_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/cof_tod.png",
+        "codes":"cof_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/cof_crypt.png",
+        "codes":"cof_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/cof_pow.png",
+        "codes":"cof_pow",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Fortress",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/Dungeons/fow_none.png",
+        "codes":"fow_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/fow_dws.png",
+        "codes":"fow_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/fow_cof.png",
+        "codes":"fow_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/fow_fow.png",
+        "codes":"fow_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/fow_tod.png",
+        "codes":"fow_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/fow_crypt.png",
+        "codes":"fow_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/fow_pow.png",
+        "codes":"fow_pow",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Droplet",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/Dungeons/tod_none.png",
+        "codes":"tod_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/tod_dws.png",
+        "codes":"tod_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/tod_cof.png",
+        "codes":"tod_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/tod_fow.png",
+        "codes":"tod_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/tod_tod.png",
+        "codes":"tod_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/tod_crypt.png",
+        "codes":"tod_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/tod_pow.png",
+        "codes":"tod_pow",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Crypt",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/Dungeons/crypt_none.png",
+        "codes":"crypt_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/crypt_dws.png",
+        "codes":"crypt_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/crypt_cof.png",
+        "codes":"crypt_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/crypt_fow.png",
+        "codes":"crypt_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/crypt_tod.png",
+        "codes":"crypt_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/crypt_crypt.png",
+        "codes":"crypt_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/crypt_pow.png",
+        "codes":"crypt_pow",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Palace",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/Dungeons/pow_none.png",
+        "codes":"pow_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/pow_dws.png",
+        "codes":"pow_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/pow_cof.png",
+        "codes":"pow_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/pow_fow.png",
+        "codes":"pow_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/pow_tod.png",
+        "codes":"pow_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/pow_crypt.png",
+        "codes":"pow_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/Dungeons/pow_pow.png",
+        "codes":"pow_pow",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name": "Dungeons Entrance",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSetting/DungeonsER_off.png",
+        "codes": "dungeonser_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/DungeonsER_on.png",
+        "codes": "dungeonser_on",
+        "inherit_codes":false
+      },
     ]
   },
 ]

@@ -1,62 +1,4 @@
-function Castle_RightFountainFusion_HP() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions18") ) ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
 
-function Castle_Dojo_HP() 
-		return 1 
-end
-
-function Castle_Dojo_NPC() 
-	if ( CastleDojo()==1 and HasSword()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Castle_RightFountainFusion_MinishHoleChest() 
-	if (( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions18") ) ) and BonkedTrees()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Castle_LeftFountainFusion_MinishHoleChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions35") ) ) and BonkedTrees()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Castle_Moat_LeftChest() 
-	if ( has("flippers") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Castle_Moat_RightChest() 
-	if ( has("flippers") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Castle_GoldenRope() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3c") ) ) and has("golden_enemy_on") and HasSword()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
 
 function Clouds_FreeChest()
 	if ( AccessClouds()==1 ) then
@@ -371,7 +313,7 @@ function CrenelBase_EntranceVine()
 end
 
 function CrenelBase_FairyCave_Item()
-    if ( AccessTrilby()==1  and LowerBean()==1 and BombWalls()==1 ) or (WindCrest()==1 and (UpperBean()==1 or has("grip")) and BombWalls()==1) then
+    if ( AccessTrilby()==1  and LowerBean()==1 and BombWalls()==1 ) or (CrenelWindCrest()==1 and (UpperBean()==1 or has("grip")) and BombWalls()==1) then
         return 1
     else
         return 0
@@ -381,7 +323,7 @@ end
 function CrenelBase_GreenWaterFusion_Chest()
     if ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and OverworldBlocks()==1 then
         return 1
-    elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and WindCrest()==1 and (UpperBean()==1 or has("grip") ) and BombWalls()==1 and OverworldBlocks()==1 then
+    elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and CrenelWindCrest()==1 and (UpperBean()==1 or has("grip") ) and BombWalls()==1 and OverworldBlocks()==1 then
         return 1
     else
         return 0
@@ -391,7 +333,7 @@ end
 function CrenelBase_WestFusion_Chest()
     if( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and  AccessTrilby()==1 and LowerBean()==1 and (BombWalls()==1 or has("cape")) then
         return 1
-    elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1  or has("cape") ) ) ) then
+    elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1  or has("cape") ) ) ) then
         return 1
     else
         return 0
@@ -401,7 +343,7 @@ end
 function CrenelBase_WaterCave_Chest()
     if AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and ( has("bombs") or has("cape") ) then
         return 1
-    elseif  WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( Helpers.BombWalls()==1 or has("cape") ) ) ) and Helpers.BombWalls()==1 and ( has("bombs") or has("cape") ) then
+    elseif  CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and ( has("bombs") or has("cape") ) then
         return 1
     else
         return 0
@@ -411,7 +353,7 @@ end
 function CrenelBase_WaterCave_HP()
     if AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and ( has("bombs") or has("cape") or has("flippers") ) then
         return 1
-    elseif WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and ( has("bombs") or has("cape") or has("flippers") ) then
+    elseif CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and ( has("bombs") or has("cape") or has("flippers") ) then
         return 1
     else
         return 0
@@ -421,7 +363,7 @@ end
 function CrenelBase_MinishVineHole_Chest()
     if AccessTrilby()==1 and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) and CrenelDust()==1  then
         return 1
-    elseif  WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
+    elseif  CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
         return 1
     else
         return 0
@@ -431,7 +373,7 @@ end
 function CrenelBase_MinishCrack_Chest()
     if AccessTrilby()==1 and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) and CrenelDust()==1  then
         return 1
-    elseif  WindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
+    elseif  CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
         return 1
     else
         return 0
@@ -620,61 +562,6 @@ function FallsLower_DigCave_RightChest()
 	end 
 end
 
-function Hills_Fusion_Chest() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions16") ) ) and ( CanDestroyTrees()==1 or WindCrest()==1) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Hills_BeanstalkFusion_LeftChest() 
-	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") )  and  ( CanDestroyTrees()==1 or WindCrest()==1) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Hills_BeanstalkFusion_HP() 
-	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") )  and  ( CanDestroyTrees()==1 or WindCrest()==1) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Hills_BeanstalkFusion_RightChest() 
-	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") )  and  ( CanDestroyTrees()==1 or WindCrest()==1) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Hills_BombCave_Chest() 
-	if ( (CanDestroyTrees()==1 or WindCrest()==1) and BombWalls()==1) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Hills_FarmDigCave_Item() 
-	if ( has("rupees_on") and AccessMinishWoods()==1 and has("mitts") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Hills_GoldenRope() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions55") ) ) and has("golden_enemy_on") and HasSword()==1 and (CanDestroyTrees()==1 or WindCrest()==1) ) then
-		return 1
-	else
-		return 0
-	end 
-end
 
 function Hylia_SunkenHP() 
 	if ( AccessLonLon()==1 and has("flippers")  ) then
@@ -810,136 +697,6 @@ function Hylia_BeanstalkFusion_Chest()
 	end 
 end
 
-function LonLon_RanchPot() 
-	if ( CanDestroyTrees()==1 or has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_PuddleFusion_BigChest() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1e") ) ) and AccessLonLon()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_Cave_Chest() 
-	if ( AccessLonLon()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_CaveSecret_Chest() 
-	if ( AccessLonLon()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) and BombWalls()==1 and has("lamp") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_Path_FusionChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions50") ) ) and AccessLonLon()==1 and BonkedTrees()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_Path_HP() 
-	if ( AccessLonLon()==1 and BonkedTrees()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_DigSpot() 
-	if ( AccessLonLon()==1 and ( has("cane") or has("cape") ) and has("mitts") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_NorthMinishCrack_Chest() 
-	if ( AccessLonLon()==1 and ( has("cane") or has("cape") ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_GoronCaveFusion_SmallChest() 
-	if has("fusionblue_vanilla") then
-		GoronNumber=0;
-		if (has("fusions25")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions26")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions29")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions2a")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions2b")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions2f")) then
-			GoronNumber = GoronNumber + 1
-		end
-	elseif has("openworld_on") or has("fusionblue_complet") then
-		GoronNumber = 6
-	else
-		GoronNumber = 0
-	end
-	if ( GoronNumber >=4 and GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina"))) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function LonLon_GoronCaveFusion_BigChest() 
-	if has("fusionblue_vanilla") then
-		local GoronNumber=0;
-		if (has("fusions25")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions26")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions29")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions2a")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions2b")) then
-			GoronNumber = GoronNumber + 1
-		end
-		if (has("fusions2f")) then
-			GoronNumber = GoronNumber + 1
-		end
-	elseif has("openworld_on") or has("fusionblue_complet") then
-		GoronNumber = 6
-	else
-		GoronNumber = 0
-	end
-
-	if ( GoronNumber>=6 and GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina"))) then
-		return 1
-	else
-		return 0
-	end 
-end
 
 function MinishWoods_GreatFairy_NPC() 
 	if ( AccessMinishWoods()==1 and has("cane")) then
@@ -1125,64 +882,6 @@ function MinishWoods_GoldenOcto()
 	end 
 end
 
-function NorthField_DigSpot() 
-	if ( has("mitts") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function NorthField_HP() 
-	if ( OverworldBlocks()==1 or CapeExtension()==1 ) then
-		return 1
-	elseif ( CapeExtension()==2 ) then
-		return 2
-	else
-		return 0
-	end 
-end
-function NorthField_TreeFusion_TopLeftChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions59") ) ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function NorthField_TreeFusion_TopRightChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions40") ) ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function NorthField_TreeFusion_BottomLeftChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4d") ) ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function NorthField_TreeFusion_BottomRightChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5a") ) ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function NorthField_TreeFusion_CenterBigChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions59") and has("fusions40") and has("fusions5a") and has("fusions4d")) ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function NorthField_WaterfallFusion_DojoNPC() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions15") ) ) and has("flippers") and HasSword()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function Ruins_ButterflyFusion_Item() 
 	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions20") ) ) and AccessRuins()==1 ) then
 		return 1
@@ -1280,14 +979,14 @@ function SouthField_PuddleFusion_Item()
 	end 
 end
 function SouthField_Fusion_Chest()
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions53") ) ) and ( CanDestroyTrees()==1 or WindCrest()==1 ) ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions53") ) ) and AccessEasternHills()==1 ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function SouthField_TreeFusion_HP()
-	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions32") ) ) and( CanDestroyTrees()==1 or WindCrest()==1 ) ) then
+	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions32") ) ) and AccessEasternHills()==1 ) then
 		return 1
 	else
 		return 0
@@ -1301,166 +1000,7 @@ function SouthField_MinishSize_WaterHole_HP()
 	end 
 end
 function SouthField_Tingle_NPC() 
-	if ( has("cane")  and has("trophy") and ( CanDestroyTrees()==1 or WindCrest()==1 ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function Swamp_ButterflyFusion_Item() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions10") ) ) and AccessSwamp()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_CenterCave_DarknutChest() 
-	if ( AccessSwamp()==1 and HasDamageSource()==1) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_CenterChest() 
-	if ( AccessSwamp()==1 and HasBow()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_NearWaterfall_CaveHP() 
-	if ( AccessSwamp()==1  and SwampNorthShortcut()==1 and ( has("cape") or has("flippers") ) ) then
-		return 1 
-	else
-		return 0
-	end 
-end
-
-function Swamp_WaterfallFusion_DojoNPC() 
-	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and AccessSwamp()==1  and SwampNorthShortcut()==1 and ( has("cape") or has("flippers") ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_NorthCave_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4b") ) ) and AccessSwamp()==1 and SwampNorthShortcut()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_DiggingCave_Chest() 
-	if ( AccessSwamp()==1 and has("mitts") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_Underwater() 
-	if ( AccessSwamp()==1 and has("flippers")  ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_SouthCave_Chest() 
-	if ( AccessSwamp()==1 and SwampShortcut()==1 and SwampSouthShortcut()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_Dojo_HP() 
-	if ( (AccessSwamp()==1 and (has("cape") or HasBow()==1)  ) or (WindCrest()==1 and has("boots")) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function Swamp_Dojo_NPC() 
-	if ( (AccessSwamp()==1 and (has("cape") or HasBow()==1) and GotScrolls()==1 and HasSword()==1  ) or (WindCrest()==1 and has("boots")  and GotScrolls()==1 and HasSword()==1) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_MinishFusion_NorthCrack_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4b") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_Minish_Mulldozer_BigChest() 
-	if ( AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and ( has("flippers") or has("gust") ) and HasDamageSource()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_MinishFusion_NorthWestCrack_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5b") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and ( has("flippers") or has("gust") ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_MinishFusion_WestCrack_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_MinishFusion_VineCrack_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3e") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_MinishFusion_WaterHole_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and has("flippers")) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_MinishFusion_WaterHole_HP() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and has("flippers")) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function Swamp_GoldenRope() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions49") ) ) and has("golden_enemy_on") and AccessSwamp()==1 and HasSword()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-
-function Swamp_Fusion() 
-	if ( AccessSwamp()==1 and RuinsFusion()==1 and ( ( has("boots") and has("flippers")) or  has("cape") )) then
+	if ( has("cane")  and has("trophy") and AccessEasternHills()==1 ) then
 		return 1
 	else
 		return 0
@@ -1493,6 +1033,27 @@ function Town_Shop_BehindCounterItem()
 		return 0
 	end 
 end
+function Town_Shop_AtticChest() 
+	if ( TownDog()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Town_Bakery_AtticChest() 
+	if ( TownDog()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Town_Inn_LedgeChest() 
+	if ( InnLedge()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
 function Town_Inn_Pot() 
 	if ( has("specialpot_on") ) then
 		return 1
@@ -1511,21 +1072,21 @@ function Town_Dojo_NPC1()
 	end 
 end
 function Town_Dojo_NPC2() 
-	if ( ( Sword2()==1 or (has("progressiveitems") and (Sword5()==1 or Sword4()==1 or Sword3()==1)) ) ) then
+	if ( HasGreenSword()==1 ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function Town_Dojo_NPC3() 
-	if ( HasSword()==1 and has("boots") ) then
+	if ( HasDojoSword()==1 and has("boots") ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function Town_Dojo_NPC4() 
-	if ( HasSword()==1 and has("cape") ) then
+	if ( HasDojoSword()==1 and has("cape") ) then
 		return 1
 	else
 		return 0
@@ -1624,29 +1185,8 @@ function Town_Jullieta_Item()
 		return 0
 	end 
 end
-function Town_Shop_AtticChest() 
-	if ( TownDog()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function Town_Bakery_AtticChest() 
-	if ( TownDog()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function Town_Inn_BackdoorHP() 
 	if ( TownDog()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function Town_Inn_LedgeChest() 
-	if ( InnLedge()==1 ) then
 		return 1
 	else
 		return 0
@@ -1733,6 +1273,467 @@ function Town_UnderLibrary_BigChest()
 end
 function Town_UnderLibrary_Underwater() 
 	if ( has("rupees_on") and has("underwater_on") and Library()==1 and has("flippers") and has("cane") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function NorthField_DigSpot() 
+	if ( has("mitts") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function NorthField_HP() 
+	if ( OverworldBlocks()==1 or CapeExtension()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function NorthField_TreeFusion_TopLeftChest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions59") ) ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function NorthField_TreeFusion_TopRightChest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions40") ) ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function NorthField_TreeFusion_BottomLeftChest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4d") ) ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function NorthField_TreeFusion_BottomRightChest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5a") ) ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function NorthField_TreeFusion_CenterBigChest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions59") and has("fusions40") and has("fusions5a") and has("fusions4d")) ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function NorthField_WaterfallFusion_DojoNPC() 
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions15") ) ) and has("flippers") and HasSword()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Castle_Moat_LeftChest() 
+	if ( has("flippers") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Castle_Moat_RightChest() 
+	if ( has("flippers") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Castle_GoldenRope() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3c") ) ) and has("golden_enemy_on") and HasSword()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Castle_RightFountainFusion_HP() 
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions18") ) ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Castle_Dojo_HP() 
+		return 1 
+end
+
+function Castle_Dojo_NPC() 
+	if ( CastleDojo()==1 and HasSword()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Castle_RightFountainFusion_MinishHoleChest() 
+	if (( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions18") ) ) and BonkedTrees()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Castle_LeftFountainFusion_MinishHoleChest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions35") ) ) and BonkedTrees()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Hills_GoldenRope() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions55") ) ) and has("golden_enemy_on") and HasSword()==1 and (AccessEasternHills()==1) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Hills_Fusion_Chest() 
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions16") ) ) and AccessEasternHills()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Hills_BeanstalkFusion_LeftChest() 
+	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") ) ) and AccessEasternHills()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Hills_BeanstalkFusion_HP() 
+	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") ) ) and AccessEasternHills()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Hills_BeanstalkFusion_RightChest() 
+	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions2e") ) ) and AccessEasternHills()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Hills_BombCave_Chest() 
+	if ( AccessEasternHills()==1 and BombWalls()==1) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Hills_FarmDigCave_Item() 
+	if ( has("rupees_on") and AccessMinishWoods()==1 and has("mitts") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_RanchPot() 
+	if ( CanDestroyTrees()==1 or has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_PuddleFusion_BigChest() 
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1e") ) ) and AccessLonLon()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_Cave_Chest() 
+	if ( AccessLonLon()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_CaveSecret_Chest() 
+	if ( AccessLonLon()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) and BombWalls()==1 and has("lamp") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_Path_FusionChest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions50") ) ) and AccessLonLon()==1 and BonkedTrees()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_Path_HP() 
+	if ( AccessLonLon()==1 and BonkedTrees()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_DigSpot() 
+	if ( AccessLonLon()==1 and ( has("cane") or has("cape") ) and has("mitts") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_NorthMinishCrack_Chest() 
+	if ( AccessLonLon()==1 and ( has("cane") or has("cape") ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_GoronCaveFusion_SmallChest() 
+	if has("fusionblue_vanilla") then
+		GoronNumber=0;
+		if (has("fusions25")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions26")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions29")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions2a")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions2b")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions2f")) then
+			GoronNumber = GoronNumber + 1
+		end
+	elseif has("openworld_on") or has("fusionblue_complet") then
+		GoronNumber = 6
+	else
+		GoronNumber = 0
+	end
+	if ( GoronNumber >=4 and GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina"))) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function LonLon_GoronCaveFusion_BigChest() 
+	if has("fusionblue_vanilla") then
+		local GoronNumber=0;
+		if (has("fusions25")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions26")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions29")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions2a")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions2b")) then
+			GoronNumber = GoronNumber + 1
+		end
+		if (has("fusions2f")) then
+			GoronNumber = GoronNumber + 1
+		end
+	elseif has("openworld_on") or has("fusionblue_complet") then
+		GoronNumber = 6
+	else
+		GoronNumber = 0
+	end
+
+	if ( GoronNumber>=6 and GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina"))) then
+		return 1
+	else
+		return 0
+	end 
+end
+--ici
+function Swamp_ButterflyFusion_Item() 
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions10") ) ) and AccessSwamp()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_CenterCave_DarknutChest() 
+	if ( AccessSwamp()==1 and HasDamageSource()==1) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_CenterChest() 
+	if ( AccessSwamp()==1 and HasBow()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_NearWaterfall_CaveHP() 
+	if ( AccessSwamp()==1  and SwampNorthShortcut()==1 and ( has("cape") or has("flippers") ) ) then
+		return 1 
+	else
+		return 0
+	end 
+end
+
+function Swamp_WaterfallFusion_DojoNPC() 
+	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and AccessSwamp()==1  and SwampNorthShortcut()==1 and ( has("cape") or has("flippers") ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_NorthCave_Chest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4b") ) ) and AccessSwamp()==1 and SwampNorthShortcut()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_DiggingCave_Chest() 
+	if ( AccessSwamp()==1 and has("mitts") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_Underwater() 
+	if ( AccessSwamp()==1 and has("flippers")  ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_SouthCave_Chest() 
+	if ( AccessSwamp()==1 and SwampShortcut()==1 and SwampSouthShortcut()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_Dojo_HP() 
+	if ( (AccessSwamp()==1 and (has("cape") or HasBow()==1)  ) or (SwampWindCrest()==1 and has("boots")) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Swamp_Dojo_NPC() 
+	if ( (AccessSwamp()==1 and (has("cape") or HasBow()==1) and GotScrolls()==1 and HasSword()==1  ) or (SwampWindCrest()==1 and has("boots")  and GotScrolls()==1 and HasSword()==1) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_MinishFusion_NorthCrack_Chest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4b") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_Minish_Mulldozer_BigChest() 
+	if ( AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and ( has("flippers") or has("gust") ) and HasDamageSource()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_MinishFusion_NorthWestCrack_Chest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5b") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and ( has("flippers") or has("gust") ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_MinishFusion_WestCrack_Chest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_MinishFusion_VineCrack_Chest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3e") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_MinishFusion_WaterHole_Chest() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and has("flippers")) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_MinishFusion_WaterHole_HP() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and has("flippers")) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Swamp_GoldenRope() 
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions49") ) ) and has("golden_enemy_on") and AccessSwamp()==1 and HasSword()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+
+function Swamp_Fusion() 
+	if ( AccessSwamp()==1 and RuinsFusion()==1 and ( ( has("boots") and has("flippers")) or  has("cape") )) then
 		return 1
 	else
 		return 0
