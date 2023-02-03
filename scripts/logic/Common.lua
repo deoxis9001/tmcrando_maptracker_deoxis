@@ -352,7 +352,9 @@ end
 function HasDamageSource()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( has("weapons_on") and ( HasBow()==1 or has("bombs") ) ) then
+	elseif ( has("weaponsbombs_yes") and has("bombs") ) then
+		return 1
+	elseif ( has("weaponsbow_yes") and HasBow()==1 ) then
 		return 1
 	else
 		return 0
@@ -362,7 +364,7 @@ end
 function HasMadderDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif (has("weapons_on") and  has("bombs") ) then
+	elseif ( has("weaponsbombs_boss") and has("bombs") ) then
 		return 1
 	else
 		return 0
@@ -372,7 +374,7 @@ end
 function HasChuDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif (has("weapons_on") and  has("bombs") ) then
+	elseif ( has("weaponsbombs_boss") and has("bombs") ) then
 		return 1
 	else
 		return 0
@@ -382,7 +384,11 @@ end
 function HasHelmasaurDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( has("weapons_on") and (HasBow()==1  or has("bombs") or has("bombs30") or has("gust"))) then
+	elseif ( has("weaponsbombs_yes") and has("bombs") ) then
+		return 1
+	elseif ( has("weaponsgust_yes") and has("gust") ) then
+		return 1
+	elseif ( has("weaponsbow_yes") and HasBow()==1 ) then
 		return 1
 	else
 		return 0
@@ -392,7 +398,9 @@ end
 function HasGleerokDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif (has("weapons_on") and (HasBow()==1  or has("bombs30") ) ) then
+	elseif ( has("weaponsbow_yes") and HasBow()==1 ) then
+		return 1
+	elseif ( has("weaponsbombs_boss") and has("bombs30") ) then
 		return 1
 	else
 		return 0
@@ -402,7 +410,11 @@ end
 function HasWizrobeDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( has("weapons_on") and ( HasBow()==1  or has("bombs")  or has("lamp") ) ) then
+	elseif ( has("weaponsbow_yes") and HasBow()==1 ) then
+		return 1
+	elseif ( has("weaponsbombs_yes") and has("bombs") ) then
+		return 1
+	elseif ( has("weaponslamp_yes") and has("lamp") ) then
 		return 1
 	else
 		return 0
@@ -412,7 +424,7 @@ end
 function HasDarknutDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( has("weapons_on") and ( HasBow()==1  or has("bombs") ) ) then
+	elseif ( has("weaponsbombs_boss") and has("bombs") ) then
 		return 1
 	else
 		return 0
@@ -422,7 +434,9 @@ end
 function HasMazaalDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif (  has("weapons_on") and (HasBow()==1  or has("bombs") ) ) then
+	elseif ( has("weaponsbow_yes") and HasBow()==1 ) then
+		return 1
+	elseif ( has("weaponsbombs_boss") and has("bombs30") ) then
 		return 1
 	else
 		return 0
@@ -432,7 +446,7 @@ end
 function HasScissorDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif (  has("weapons_on") and  has("bombs30") ) then
+	elseif ( has("weaponsbombs_boss") and has("bombs30") ) then
 		return 1
 	else
 		return 0
@@ -442,10 +456,12 @@ end
 function HasGhiniDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( (HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_on")) then
+	elseif ( has("weaponsbombs_yes") and has("bombs") ) then
 		return 1
-	elseif ( (HasBow()==1  or has("bombs") or has("bombs30") or has("gust")) and has("weapons_off")) then
-		return 2
+	elseif ( has("weaponsgust_yes") and has("gust") ) then
+		return 1
+	elseif ( has("weaponsbow_yes") and HasBow()==1 ) then
+		return 1
 	else
 		return 0
 	end

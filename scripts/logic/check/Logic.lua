@@ -598,7 +598,7 @@ function Hylia_MiddleIslandFusion_DigCaveChest()
 end
 
 function Hylia_BottomHP() 
-	if ( AccessLonLon()==1 and has("cape")  ) then
+	if ( AccessLonLon()==1 and CapeExtension()==1  ) then
 		return 1
 	else
 		return 0
@@ -606,7 +606,7 @@ function Hylia_BottomHP()
 end
 
 function Hylia_Dojo_HP() 
-	if ( AccessLonLon()==1 and (has("cape") or LakeShortcut()==1 ) ) then
+	if ( AccessLonLon()==1 and (CapeExtension()==1  or LakeShortcut()==1 ) ) then
 		return 1
 	else
 		return 0

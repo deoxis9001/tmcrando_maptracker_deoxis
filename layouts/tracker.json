@@ -135,7 +135,7 @@
 				"item_height":64,
 				"rows": [
 					  ["blowdust_off","crenelmushroom_off","lightarrowbreak_off"],
-					  ["weapons_off","guardskip_off","likelike_off"],
+					  ["bobombs_off","likelike_off","guardskip_off"],
 					  ["crenelbeam_off","downstrikebeetle_off","darkrooms_off"],
 					  ["capeextension_off","lakeminish_off","cabinswim_off"],
 					  ["cloudskill_off","powjump_off","powpotpuzzleool_off"],
@@ -161,12 +161,12 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					  ["rupees_off","","golden_enemy_off"],
-					  ["underwater_off","specialpot_off","digging_off"],
-					  ["dungeonser_off","","progressiveitems"],
-					  ["ped_items_off","",""],
-					  ["openworld_off","",""],
-					  ["","",""]
+					  ["rupees_off","specialpot_off","digging_off"],
+					  ["underwater_off","golden_enemy_off","ped_items_off"],
+					  ["dungeonser_off","progressiveitems","openworld_off"],
+					  ["","",""],
+					  ["weaponsbombs_no","weaponsbow_no",""],
+					  ["weaponsgust_no","weaponslamp_no",""]
 				  ]
 			  }
 		  ]
@@ -187,12 +187,10 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					  ["fusiongoldcombined","fusiongold_removed",""],
-					  ["fusionredcombined","fusionred_removed",""],
-					  ["fusionbluecombined","fusionblue_removed",""],
-					  ["fusiongreencombined","fusiongreen_removed",""],
-					  ["","",""],
-					  ["","",""]
+					  ["fusiongoldcombined","fusiongold_removed"],
+					  ["fusionredcombined","fusionred_removed"],
+					  ["fusionbluecombined","fusionblue_removed"],
+					  ["fusiongreencombined","fusiongreen_removed"]
 				]
 			  }
 		  ]

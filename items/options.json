@@ -268,21 +268,75 @@
     ]
   },
   {
-    "name": "Guard Skip",
+    "name": "Blow Dust",
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/GuardSkip_off.png",
-        "codes": "guardskip_off",
+        "img": "images/options/LogicSettings/BlowDust_on.png",
+        "codes": "blowdust_on",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/GuardSkip_on.png",
-        "codes": "guardskip_on",
+        "img":"images/options/LogicSettings/BlowDust_off.png",
+        "codes": "blowdust_off",
         "inherit_codes":false
-      }
+      },
+    ]
+  },
+  {
+    "name": "Crenel Mushroom",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/CrenelMushroom_on.png",
+        "codes": "crenelmushroom_on",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/LogicSettings/CrenelMushroom_off.png",
+        "codes": "crenelmushroom_off",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name": "Light Arrow Break",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/LightArrowBreak_on.png",
+        "codes": "lightarrowbreak_on",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/LogicSettings/LightArrowBreak_off.png",
+        "codes": "lightarrowbreak_off",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name": "Bobombs",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/LogicSettings/bobombs_on.png",
+        "codes": "bobombs_on",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/LogicSettings/bobombs_off.png",
+        "codes": "bobombs_off",
+        "inherit_codes":false
+      },
     ]
   },
   {
@@ -304,55 +358,19 @@
     ]
   },
   {
-    "name": "Blow Dust",
+    "name": "Guard Skip",
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/BlowDust_off.png",
-        "codes": "blowdust_off",
+        "img": "images/options/LogicSettings/GuardSkip_off.png",
+        "codes": "guardskip_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/BlowDust_on.png",
-        "codes": "blowdust_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Crenel Mushroom",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/LogicSettings/CrenelMushroom_off.png",
-        "codes": "crenelmushroom_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/LogicSettings/CrenelMushroom_on.png",
-        "codes": "crenelmushroom_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Light Arrow Break",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/LogicSettings/LightArrowBreak_off.png",
-        "codes": "lightarrowbreak_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/LogicSettings/LightArrowBreak_on.png",
-        "codes": "lightarrowbreak_on",
+        "img":"images/options/LogicSettings/GuardSkip_on.png",
+        "codes": "guardskip_on",
         "inherit_codes":false
       }
     ]
@@ -364,15 +382,15 @@
     "allow_disabled": false,
     "stages": [
       {
+        "img":"images/options/LogicSettings/CrenelBeam_on.png",
+        "codes": "crenelbeam_on",
+        "inherit_codes":false
+      },
+      {
         "img": "images/options/LogicSettings/CrenelBeam_off.png",
         "codes": "crenelbeam_off",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/LogicSettings/CrenelBeam_on.png",
-        "codes": "crenelbeam_on",
-        "inherit_codes":false
-      }
     ]
   },
   {
@@ -382,33 +400,15 @@
     "allow_disabled": false,
     "stages": [
       {
+        "img": "images/options/LogicSettings/DownStrikeBeetle_on.png",
+        "codes": "downstrikebeetle_on",
+        "inherit_codes":false
+      },
+      {
         "img":"images/options/LogicSettings/DownStrikeBeetle_off.png",
         "codes": "downstrikebeetle_off",
         "inherit_codes":false
       },
-      {
-        "img": "images/options/LogicSettings/DownStrikeBeetle_on.png",
-        "codes": "downstrikebeetle_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Cape Extension",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/LogicSettings/CapeExtension_off.png",
-        "codes": "capeextension_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/LogicSettings/CapeExtension_on.png",
-        "codes": "capeextension_on",
-        "inherit_codes":false
-      }
     ]
   },
   {
@@ -427,6 +427,24 @@
         "codes": "darkrooms_on",
         "inherit_codes":false
       }
+    ]
+  },
+  {
+    "name": "Cape Extension",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/CapeExtension_on.png",
+        "codes": "capeextension_on",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/LogicSettings/CapeExtension_off.png",
+        "codes": "capeextension_off",
+        "inherit_codes":false
+      },
     ]
   },
   {
@@ -454,15 +472,15 @@
     "allow_disabled": false,
     "stages": [
       {
+        "img": "images/options/LogicSettings/CabinSwim_on.png",
+        "codes": "cabinswim_on",
+        "inherit_codes":false
+      },
+      {
         "img":"images/options/LogicSettings/CabinSwim_off.png",
         "codes": "cabinswim_off",
         "inherit_codes":false
       },
-      {
-        "img": "images/options/LogicSettings/CabinSwim_on.png",
-        "codes": "cabinswim_on",
-        "inherit_codes":false
-      }
     ]
   },
   {
@@ -490,15 +508,15 @@
     "allow_disabled": false,
     "stages": [
       {
+        "img": "images/options/LogicSettings/FoWPot_on.png",
+        "codes": "fowpot_on",
+        "inherit_codes":false
+      },
+      {
         "img":"images/options/LogicSettings/FoWPot_off.png",
         "codes": "fowpot_off",
         "inherit_codes":false
       },
-      {
-        "img": "images/options/LogicSettings/FoWPot_on.png",
-        "codes": "fowpot_on",
-        "inherit_codes":false
-      }
     ]
   },
   {
@@ -508,15 +526,15 @@
     "allow_disabled": false,
     "stages": [
       {
+        "img":"images/options/LogicSettings/PoWJump_on.png",
+        "codes": "powjump_on",
+        "inherit_codes":false
+      },
+      {
         "img": "images/options/LogicSettings/PoWJump_off.png",
         "codes": "powjump_off",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/LogicSettings/PoWJump_on.png",
-        "codes": "powjump_on",
-        "inherit_codes":false
-      }
     ]
   },
   {
@@ -1191,6 +1209,83 @@
       {
         "img":"images/options/WorldSetting/DungeonsER_on.png",
         "codes": "dungeonser_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name": "Weapons Bow",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSetting/WeaponsBow_yes.png",
+        "codes": "weaponsbow_yes",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/WeaponsBow_no.png",
+        "codes": "weaponsbow_no",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name": "Weapons Gust",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSetting/WeaponsGust_yes.png",
+        "codes": "weaponsgust_yes",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/WeaponsGust_no.png",
+        "codes": "weaponsgust_no",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name": "Weapons Bombs",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSetting/WeaponsBombs_yes.png",
+        "codes": "weaponsbombs_yes",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/WorldSetting/WeaponsBombs_boss.png",
+        "codes": "weaponsbombs_yes,weaponsbombs_boss",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/WeaponsBombs_no.png",
+        "codes": "weaponsbombs_no",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name": "Weapons Lamp",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSetting/WeaponsLamp_yes.png",
+        "codes": "weaponslamp_yes",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/WeaponsLamp_no.png",
+        "codes": "weaponslamp_no",
         "inherit_codes":false
       },
     ]

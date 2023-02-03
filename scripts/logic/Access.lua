@@ -7,7 +7,7 @@ function AccessEasternHills()
 end
 
 function AccessLonLon() 
-	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or has("openworld_on") or (has("flippers") and ("mitts") )))) then
+	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or has("openworld_on") or (has("flippers") and has("mitts") )))) then
 		return 1
 	else
 		return 0
