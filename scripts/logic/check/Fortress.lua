@@ -170,7 +170,7 @@ end
 
 
 function Fortress_BackRight_Minish_ItemDrop() 
-	if ( FowDungeons()==1 and ( FoWBlueWarp()==1 or FoWEyegores()==1) and FoWRightDoor()==1 and HasHandDamage()==1 and FoWMiddleDoor()==1 and has("mitts") ) then
+	if ( FowDungeons()==1 and ( FoWBlueWarp()==1 or FoWEyegores()==1) and FoWRightDoor()==1 and HasDamageSource()==1 and FoWMiddleDoor()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -179,7 +179,7 @@ end
 
 
 function Fortress_BackRight_DigRoom_TopPot() 
-	if ( FowDungeons()==1 and (FoWBlueWarp()==1 or FoWEyegores()==1 ) and FoWRightDoor()==1 and HasHandDamage()==1 and FoWMiddleDoor()==1 and has("mitts")) then
+	if ( FowDungeons()==1 and (FoWBlueWarp()==1 or FoWEyegores()==1 ) and FoWRightDoor()==1 and HasDamageSource()==1 and FoWMiddleDoor()==1 and has("mitts")) then
 		return 1
 	else
 		return 0
@@ -188,7 +188,7 @@ end
 
 
 function Fortress_BackRight_DigRoom_BottomPot() 
-	if ( ( FowDungeons()==1 and (FoWBlueWarp()==1 or FoWEyegores()==1 ) and FoWRightDoor()==1 and HasHandDamage()==1 and FoWMiddleDoor()==1 and has("mitts") ) or (FowDungeons()==1 and FoWPot()==1) ) then
+	if ( ( FowDungeons()==1 and (FoWBlueWarp()==1 or FoWEyegores()==1 ) and FoWRightDoor()==1 and HasDamageSource()==1 and FoWMiddleDoor()==1 and has("mitts") ) or (FowDungeons()==1 and FoWPot()==1) ) then
 		return 1
 	else
 		return 0
@@ -197,7 +197,7 @@ end
 
 
 function Fortress_BackRight_BigChest() 
-	if ( FowDungeons()==1 and (FoWBlueWarp()==1 or FoWEyegores()==1 ) and FoWRightDoor()==1 and HasHandDamage()==1 and FoWMiddleDoor()==1 and has("mitts") and FoWLastDoor()==1 ) then
+	if ( FowDungeons()==1 and (FoWBlueWarp()==1 or FoWEyegores()==1 ) and FoWRightDoor()==1 and HasDamageSource()==1 and FoWMiddleDoor()==1 and has("mitts") and FoWLastDoor()==1 ) then
 		return 1
 	else
 		return 0

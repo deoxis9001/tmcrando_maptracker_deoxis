@@ -326,7 +326,7 @@ function Json_Town_GoronShop_Set1_Item2()
 end
 
 function Json_Town_GoronShop_Set1_Item1()
-	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions24") )
+	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions33") ) ) then
 		return 1
 	else
 		return 0
