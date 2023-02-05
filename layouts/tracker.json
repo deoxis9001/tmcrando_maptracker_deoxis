@@ -164,9 +164,9 @@
 					  ["rupees_off","specialpot_off","digging_off"],
 					  ["underwater_off","golden_enemy_off","ped_items_off"],
 					  ["dungeonser_off","progressiveitems","openworld_off"],
-					  ["","",""],
-					  ["weaponsbombs_no","weaponsbow_no",""],
-					  ["weaponsgust_no","weaponslamp_no",""]
+					  ["cucco_none","goron_none","goron_eu"],
+					  ["","weaponsbombs_no","weaponsbow_no"],
+					  ["","weaponsgust_no","weaponslamp_no"]
 				  ]
 			  }
 		  ]

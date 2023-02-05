@@ -69,7 +69,7 @@ function AccessWestern()
 	end 
 end
 function AccessCrenel() 
-	if ( ( AccessTrilby()==1 and LowerBean()==1 and ( has("grip")  or ( ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 ) ) ) or CrenelWindCrest()==1 ) then
+	if ( ( AccessTrilby()==1 and LowerBean()==1 and ( has("grip")  or ( ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 and ( UpperBean()==1 or (BombWalls()==1 and OverworldBlocks()==1))))) or CrenelWindCrest()==1 ) then
 		return 1
 	else
 		return 0

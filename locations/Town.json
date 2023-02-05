@@ -594,11 +594,84 @@
 	],
 	"sections":[
 	  {
-		"name":"Heart Piece",
+		"name":"Round 1 Gift",
 		"item_count":1,
-		"access_rules":["$Json_Town_Anju_HeartPiece"],
-        "chest_unopened_img":"images/items-map/Heart Piece.png",
-        "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+		"visibility_rules":["cucco_10"],
+		"access_rules":["$Json_Town_Anju_Gift1"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 2 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_9"],
+		"access_rules":["$Json_Town_Anju_Gift2"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 3 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_8"],
+		"access_rules":["$Json_Town_Anju_Gift3"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 4 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_7"],
+		"access_rules":["$Json_Town_Anju_Gift4"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 5 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_6"],
+		"access_rules":["$Json_Town_Anju_Gift5"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 6 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_5"],
+		"access_rules":["$Json_Town_Anju_Gift6"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 7 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_4"],
+		"access_rules":["$Json_Town_Anju_Gift7"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 8 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_3"],
+		"access_rules":["$Json_Town_Anju_Gift8"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 9 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_2"],
+		"access_rules":["$Json_Town_Anju_Gift9"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Round 10 Gift",
+		"item_count":1,
+		"visibility_rules":["cucco_1"],
+		"access_rules":["$Json_Town_Anju_Gift10"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
 	  }
 	]
   },
@@ -682,7 +755,7 @@
 	  {
 		"map":"map",
 		"x":1325,
-		"y":1375,
+		"y":1275,
 	  }
 	],
 	"sections":[
@@ -692,6 +765,114 @@
 		"visibility_rules":["fusionblue_vanilla,openworld_off"],
 		"access_rules":["$Json_Town_Postman_Fuzer"],
 	  }
+	]
+  },
+  {
+	"name":"Town - Goron Shop",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":1350,
+		"y":1350,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Set 1 - Item Left",
+		"item_count":1,
+		"visibility_rules":["goron_eu,goron_1"],
+		"access_rules":["$Json_Town_GoronShop_Set1_Item2"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 1 - Item Center and Right",
+		"item_count":2,
+		"visibility_rules":["goron_eu,goron_1"],
+		"access_rules":["$Json_Town_GoronShop_Set1_Item1"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 1 - Item Left and Center",
+		"item_count":2,
+		"visibility_rules":["goron_jp,goron_1"],
+		"access_rules":["$Json_Town_GoronShop_Set1_Item2"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 1 - Item Right",
+		"item_count":1,
+		"visibility_rules":["goron_jp,goron_1"],
+		"access_rules":["$Json_Town_GoronShop_Set1_Item1"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 2 - Items",
+		"item_count":3,
+		"visibility_rules":["goron_2"],
+		"access_rules":["$Json_Town_GoronShop_Set2_Items"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 3 - Item Left",
+		"item_count":1,
+		"visibility_rules":["goron_eu,goron_3"],
+		"access_rules":["$Json_Town_GoronShop_Set3_Item1"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 3 - Items Other",
+		"item_count":2,
+		"visibility_rules":["goron_eu,goron_3"],
+		"access_rules":["$Json_Town_GoronShop_Set3_Items"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 3 - Items",
+		"item_count":3,
+		"visibility_rules":["goron_jp,goron_3"],
+		"access_rules":["$Json_Town_GoronShop_Set3_Items"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 4 - Items",
+		"item_count":3,
+		"visibility_rules":["goron_4"],
+		"access_rules":["$Json_Town_GoronShop_Set4_Items"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 5 - Item Left",
+		"item_count":1,
+		"visibility_rules":["goron_eu,goron_5"],
+		"access_rules":["$Json_Town_GoronShop_Set5_Item1"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 5 - Items Other",
+		"item_count":2,
+		"visibility_rules":["goron_eu,goron_5"],
+		"access_rules":["$Json_Town_GoronShop_Set5_Items"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Set 5 - Items",
+		"item_count":3,
+		"visibility_rules":["goron_jp,goron_5"],
+		"access_rules":["$Json_Town_GoronShop_Set5_Items"],
+        "chest_unopened_img":"images/items-map/chest_closed.png",
+        "chest_opened_img":"images/items-map/chest_open.png"
+	  },
 	]
   },
   {

@@ -4,6 +4,7 @@
     "name":"DHC",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "inherit_codes":false,
     "stages":[
@@ -13,21 +14,22 @@
         "inherit_codes":false
       },
       {
+        "img":"images/options/DHCRequirements/dhc_fast.png",
+        "codes":"dhc_none",
+        "inherit_codes":false
+      },
+      {
         "img":"images/options/DHCRequirements/dhc_open.png",
         "codes":"dhc_open",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/DHCRequirements/dhc_fast.png",
-        "codes":"dhc_none",
-        "inherit_codes":false
-      }
     ]
   },
   {
     "name":"Elements Needed",
     "type":"progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
 	  {
@@ -36,14 +38,9 @@
         "codes":"element4Needed"
       },
       {
-        "img":"images/options/DHCRequirements/Element0.png",
+        "img":"images/options/DHCRequirements/Element3.png",
         "inherit_codes":false,
-        "codes":"element0Needed"
-      },
-      {
-        "img":"images/options/DHCRequirements/Element1.png",
-        "inherit_codes":false,
-        "codes":"element1Needed"
+        "codes":"element3Needed"
       },
       {
         "img":"images/options/DHCRequirements/Element2.png",
@@ -51,23 +48,24 @@
         "codes":"element2Needed"
       },
       {
-        "img":"images/options/DHCRequirements/Element3.png",
+        "img":"images/options/DHCRequirements/Element1.png",
         "inherit_codes":false,
-        "codes":"element3Needed"
-      }
+        "codes":"element1Needed"
+      },
+      {
+        "img":"images/options/DHCRequirements/Element0.png",
+        "inherit_codes":false,
+        "codes":"element0Needed"
+      },
     ]
   },
   {
     "name":"Swords Needed",
     "type":"progressive",
     "loop": true,
+	"initial_stage_idx":5,
     "allow_disabled":false,
     "stages":[
-      {
-        "img": "images/options/DHCRequirements/sword5.png",
-        "inherit_codes": false,
-        "codes": "sword5Needed"
-      },
       {
         "img": "images/options/DHCRequirements/sword0.png",
         "inherit_codes": false,
@@ -92,7 +90,12 @@
         "img": "images/options/DHCRequirements/sword4.png",
         "inherit_codes": false,
         "codes": "sword4Needed"
-      }
+      },
+      {
+        "img": "images/options/DHCRequirements/sword5.png",
+        "inherit_codes": false,
+        "codes": "sword5Needed"
+      },
     ]
   },
   {
@@ -108,6 +111,7 @@
     "name": "Dungeons",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -142,27 +146,10 @@
     ]
   },
   {
-    "name": "Weapons",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/LogicSettings/weapons_on.png",
-        "codes": "weapons_on",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/LogicSettings/weapons_off.png",
-        "codes": "weapons_off",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
     "name": "Crest Crenel",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -181,6 +168,7 @@
     "name": "Crest Falls",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -199,6 +187,7 @@
     "name": "Crest Clouds",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -217,6 +206,7 @@
     "name": "Crest Swamp",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -235,6 +225,7 @@
     "name": "Crest Shf",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -253,6 +244,7 @@
     "name": "Crest Minish",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -271,16 +263,17 @@
     "name": "Blow Dust",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/BlowDust_on.png",
-        "codes": "blowdust_on",
+        "img":"images/options/LogicSettings/BlowDust_off.png",
+        "codes": "blowdust_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/BlowDust_off.png",
-        "codes": "blowdust_off",
+        "img": "images/options/LogicSettings/BlowDust_on.png",
+        "codes": "blowdust_on",
         "inherit_codes":false
       },
     ]
@@ -289,16 +282,17 @@
     "name": "Crenel Mushroom",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CrenelMushroom_on.png",
-        "codes": "crenelmushroom_on",
+        "img":"images/options/LogicSettings/CrenelMushroom_off.png",
+        "codes": "crenelmushroom_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/CrenelMushroom_off.png",
-        "codes": "crenelmushroom_off",
+        "img": "images/options/LogicSettings/CrenelMushroom_on.png",
+        "codes": "crenelmushroom_on",
         "inherit_codes":false
       },
     ]
@@ -307,16 +301,17 @@
     "name": "Light Arrow Break",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/LightArrowBreak_on.png",
-        "codes": "lightarrowbreak_on",
+        "img":"images/options/LogicSettings/LightArrowBreak_off.png",
+        "codes": "lightarrowbreak_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/LightArrowBreak_off.png",
-        "codes": "lightarrowbreak_off",
+        "img": "images/options/LogicSettings/LightArrowBreak_on.png",
+        "codes": "lightarrowbreak_on",
         "inherit_codes":false
       },
     ]
@@ -325,16 +320,17 @@
     "name": "Bobombs",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/bobombs_on.png",
-        "codes": "bobombs_on",
+        "img": "images/options/LogicSettings/bobombs_off.png",
+        "codes": "bobombs_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/bobombs_off.png",
-        "codes": "bobombs_off",
+        "img":"images/options/LogicSettings/bobombs_on.png",
+        "codes": "bobombs_on",
         "inherit_codes":false
       },
     ]
@@ -343,6 +339,7 @@
     "name": "Like Like",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -361,6 +358,7 @@
     "name": "Guard Skip",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -379,16 +377,17 @@
     "name": "Crenel Beam",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/CrenelBeam_on.png",
-        "codes": "crenelbeam_on",
+        "img": "images/options/LogicSettings/CrenelBeam_off.png",
+        "codes": "crenelbeam_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/CrenelBeam_off.png",
-        "codes": "crenelbeam_off",
+        "img":"images/options/LogicSettings/CrenelBeam_on.png",
+        "codes": "crenelbeam_on",
         "inherit_codes":false
       },
     ]
@@ -397,16 +396,17 @@
     "name": "Down Strike Beetle",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/DownStrikeBeetle_on.png",
-        "codes": "downstrikebeetle_on",
+        "img":"images/options/LogicSettings/DownStrikeBeetle_off.png",
+        "codes": "downstrikebeetle_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/DownStrikeBeetle_off.png",
-        "codes": "downstrikebeetle_off",
+        "img": "images/options/LogicSettings/DownStrikeBeetle_on.png",
+        "codes": "downstrikebeetle_on",
         "inherit_codes":false
       },
     ]
@@ -415,6 +415,7 @@
     "name": "Dark Rooms",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -433,16 +434,17 @@
     "name": "Cape Extension",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CapeExtension_on.png",
-        "codes": "capeextension_on",
+        "img":"images/options/LogicSettings/CapeExtension_off.png",
+        "codes": "capeextension_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/CapeExtension_off.png",
-        "codes": "capeextension_off",
+        "img": "images/options/LogicSettings/CapeExtension_on.png",
+        "codes": "capeextension_on",
         "inherit_codes":false
       },
     ]
@@ -451,6 +453,7 @@
     "name": "Lake Minish",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -469,16 +472,17 @@
     "name": "Cabin Swim",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CabinSwim_on.png",
-        "codes": "cabinswim_on",
+        "img":"images/options/LogicSettings/CabinSwim_off.png",
+        "codes": "cabinswim_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/CabinSwim_off.png",
-        "codes": "cabinswim_off",
+        "img": "images/options/LogicSettings/CabinSwim_on.png",
+        "codes": "cabinswim_on",
         "inherit_codes":false
       },
     ]
@@ -487,6 +491,7 @@
     "name": "Clouds Kill",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -505,16 +510,17 @@
     "name": "FoW Pot",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/FoWPot_on.png",
-        "codes": "fowpot_on",
+        "img":"images/options/LogicSettings/FoWPot_off.png",
+        "codes": "fowpot_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/FoWPot_off.png",
-        "codes": "fowpot_off",
+        "img": "images/options/LogicSettings/FoWPot_on.png",
+        "codes": "fowpot_on",
         "inherit_codes":false
       },
     ]
@@ -523,16 +529,17 @@
     "name": "PoW Jump",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/PoWJump_on.png",
-        "codes": "powjump_on",
+        "img": "images/options/LogicSettings/PoWJump_off.png",
+        "codes": "powjump_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/PoWJump_off.png",
-        "codes": "powjump_off",
+        "img":"images/options/LogicSettings/PoWJump_on.png",
+        "codes": "powjump_on",
         "inherit_codes":false
       },
     ]
@@ -541,6 +548,7 @@
     "name": "PoW Pot Puzzle OOL",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -560,6 +568,7 @@
     "name": "DHC Canon Hit",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
 	  {
@@ -579,6 +588,7 @@
     "name": "DHC Blade Puzzle Shuffle",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -597,6 +607,7 @@
     "name": "DHC Switch Hit",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -615,78 +626,83 @@
     "name":"Rupeemania",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":1,
     "allow_disabled":false,
     "stages":[
+      {
+        "img":"images/options/WorldSetting/rupees_off.png",
+        "codes":"rupees_off",
+        "inherit_codes":false
+      },
       {
         "img":"images/options/WorldSetting/rupees_on.png",
         "codes":"rupees_on",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/WorldSetting/rupees_off.png",
-        "codes":"rupees_off",
-        "inherit_codes":false
-      }
     ]
   },
   {
     "name":"Special Pots",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":1,
     "allow_disabled":false,
     "stages":[
+      {
+        "img":"images/options/WorldSetting/specialpot_off.png",
+        "codes":"specialpot_off",
+        "inherit_codes":false
+      },
       {
         "img":"images/options/WorldSetting/specialpot_on.png",
         "codes":"specialpot_on",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/WorldSetting/specialpot_off.png",
-        "codes":"specialpot_off",
-        "inherit_codes":false
-      }
     ]
   },
   {
     "name":"Dig spots",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":1,
     "allow_disabled":false,
     "stages":[
+      {
+        "img":"images/options/WorldSetting/digging_off.png",
+        "codes":"digging_off",
+        "inherit_codes":false
+      },
       {
         "img":"images/options/WorldSetting/digging_on.png",
         "codes":"digging_on",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/WorldSetting/digging_off.png",
-        "codes":"digging_off",
-        "inherit_codes":false
-      }
     ]
   },
   {
     "name":"Underwater spots",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":1,
     "allow_disabled":false,
     "stages":[
+      {
+        "img":"images/options/WorldSetting/underwater_off.png",
+        "codes":"underwater_off",
+        "inherit_codes":false
+      },
       {
         "img":"images/options/WorldSetting/underwater_on.png",
         "codes":"underwater_on",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/WorldSetting/underwater_off.png",
-        "codes":"underwater_off",
-        "inherit_codes":false
-      }
     ]
   },
   {
     "name":"Golden Enemies",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -705,6 +721,7 @@
     "name":"Sanctuary Pedestal",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -723,6 +740,7 @@
     "name":"Fusion Green",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -741,8 +759,14 @@
     "name":"Fusion Gold",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":1,
     "allow_disabled":false,
     "stages":[
+      {
+        "img":"images/options/WorldSetting/fusiongold_removed.png",
+        "codes":"fusiongold_removed",
+        "inherit_codes":false
+      },
       {
         "img":"images/options/WorldSetting/fusiongold_vanilla.png",
         "codes":"fusiongold_vanilla",
@@ -753,24 +777,15 @@
         "codes":"fusiongold_complet",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/WorldSetting/fusiongold_removed.png",
-        "codes":"fusiongold_removed",
-        "inherit_codes":false
-      }
     ]
   },
   {
     "name":"Fusion Red",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":2,
     "allow_disabled":false,
     "stages":[
-      {
-        "img":"images/options/WorldSetting/fusionred_complet.png",
-        "codes":"fusionred_complet",
-        "inherit_codes":false
-      },
       {
         "img":"images/options/WorldSetting/fusionred_removed.png",
         "codes":"fusionred_removed",
@@ -780,20 +795,21 @@
         "img":"images/options/WorldSetting/fusionred_vanilla.png",
         "codes":"fusionred_vanilla",
         "inherit_codes":false
-      }
+      },
+      {
+        "img":"images/options/WorldSetting/fusionred_complet.png",
+        "codes":"fusionred_complet",
+        "inherit_codes":false
+      },
     ]
   },
   {
     "name":"Fusion Blue",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":2,
     "allow_disabled":false,
     "stages":[
-      {
-        "img":"images/options/WorldSetting/fusionblue_complet.png",
-        "codes":"fusionblue_complet",
-        "inherit_codes":false
-      },
       {
         "img":"images/options/WorldSetting/fusionblue_removed.png",
         "codes":"fusionblue_removed",
@@ -802,21 +818,22 @@
       {
         "img":"images/options/WorldSetting/fusionblue_vanilla.png",
         "codes":"fusionblue_vanilla",
+        "inherit_codes":false,
+      },
+	  {
+        "img":"images/options/WorldSetting/fusionblue_complet.png",
+        "codes":"fusionblue_complet",
         "inherit_codes":false
-      }
+      },
     ]
   },
   {
     "name":"Fusion Green",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":2,
     "allow_disabled":false,
     "stages":[
-      {
-        "img":"images/options/WorldSetting/fusiongreen_complet.png",
-        "codes":"fusiongreen_complet",
-        "inherit_codes":false
-      },
       {
         "img":"images/options/WorldSetting/fusiongreen_removed.png",
         "codes":"fusiongreen_removed",
@@ -826,13 +843,19 @@
         "img":"images/options/WorldSetting/fusiongreen_vanilla.png",
         "codes":"fusiongreen_vanilla",
         "inherit_codes":false
-      }
+      },
+      {
+        "img":"images/options/WorldSetting/fusiongreen_complet.png",
+        "codes":"fusiongreen_complet",
+        "inherit_codes":false
+      },
     ]
   },
   {
     "name":"Crenel Wind Crest",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -851,6 +874,7 @@
     "name":"Falls Wind Crest",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -869,6 +893,7 @@
     "name":"Cloud Wind Crest",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -887,6 +912,7 @@
     "name":"Swamp Wind Crest",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -905,6 +931,7 @@
     "name":"SHF Wind Crest",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -923,6 +950,7 @@
     "name":"Minish Wind Crest",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -941,6 +969,7 @@
     "name":"Dungeons Deepwoods",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -984,6 +1013,7 @@
     "name":"Dungeons Cave Of Flame",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -1027,6 +1057,7 @@
     "name":"Dungeons Fortress",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -1070,6 +1101,7 @@
     "name":"Dungeons Droplet",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -1113,6 +1145,7 @@
     "name":"Dungeons Crypt",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -1156,6 +1189,7 @@
     "name":"Dungeons Palace",
     "type":"progressive",
     "loop":true,
+	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
@@ -1199,6 +1233,7 @@
     "name": "Dungeons Entrance",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1217,16 +1252,17 @@
     "name": "Weapons Bow",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSetting/WeaponsBow_yes.png",
-        "codes": "weaponsbow_yes",
+        "img":"images/options/WorldSetting/WeaponsBow_no.png",
+        "codes": "weaponsbow_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/WeaponsBow_no.png",
-        "codes": "weaponsbow_no",
+        "img": "images/options/WorldSetting/WeaponsBow_yes.png",
+        "codes": "weaponsbow_yes",
         "inherit_codes":false
       },
     ]
@@ -1235,16 +1271,17 @@
     "name": "Weapons Gust",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSetting/WeaponsGust_yes.png",
-        "codes": "weaponsgust_yes",
+        "img":"images/options/WorldSetting/WeaponsGust_no.png",
+        "codes": "weaponsgust_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/WeaponsGust_no.png",
-        "codes": "weaponsgust_no",
+        "img": "images/options/WorldSetting/WeaponsGust_yes.png",
+        "codes": "weaponsgust_yes",
         "inherit_codes":false
       },
     ]
@@ -1253,8 +1290,14 @@
     "name": "Weapons Bombs",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
+      {
+        "img":"images/options/WorldSetting/WeaponsBombs_no.png",
+        "codes": "weaponsbombs_no",
+        "inherit_codes":false
+      },
       {
         "img": "images/options/WorldSetting/WeaponsBombs_yes.png",
         "codes": "weaponsbombs_yes",
@@ -1265,29 +1308,132 @@
         "codes": "weaponsbombs_yes,weaponsbombs_boss",
         "inherit_codes":false
       },
-      {
-        "img":"images/options/WorldSetting/WeaponsBombs_no.png",
-        "codes": "weaponsbombs_no",
-        "inherit_codes":false
-      },
     ]
   },
   {
     "name": "Weapons Lamp",
     "type": "progressive",
     "loop": true,
+	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
-      {
-        "img": "images/options/WorldSetting/weaponslamp_yes.png",
-        "codes": "weaponslamp_yes",
-        "inherit_codes":false
-      },
       {
         "img":"images/options/WorldSetting/weaponslamp_no.png",
         "codes": "weaponslamp_no",
         "inherit_codes":false
       },
+      {
+        "img": "images/options/WorldSetting/weaponslamp_yes.png",
+        "codes": "weaponslamp_yes",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name": "Cucco setting",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSetting/cucco_none.png",
+        "codes": "cucco_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_1.png",
+        "codes": "cucco_1",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_2.png",
+        "codes": "cucco_2",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_3.png",
+        "codes": "cucco_3",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_4.png",
+        "codes": "cucco_4",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_5.png",
+        "codes": "cucco_5",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_6.png",
+        "codes": "cucco_6",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_7.png",
+        "codes": "cucco_7",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_8.png",
+        "codes": "cucco_8",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_9.png",
+        "codes": "cucco_9",
+      },
+      {
+        "img":"images/options/WorldSetting/cucco_10.png",
+        "codes": "cucco_10",
+      },
+    ]
+  },
+  {
+    "name": "Goron Shop Settings",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSetting/goron_none.png",
+        "codes": "goron_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/goron_1.png",
+        "codes": "goron_1",
+      },
+      {
+        "img":"images/options/WorldSetting/goron_2.png",
+        "codes": "goron_2",
+      },
+      {
+        "img":"images/options/WorldSetting/goron_3.png",
+        "codes": "goron_3",
+      },
+      {
+        "img":"images/options/WorldSetting/goron_4.png",
+        "codes": "goron_4",
+      },
+      {
+        "img":"images/options/WorldSetting/goron_5.png",
+        "codes": "goron_5",
+      },
+    ]
+  },
+  {
+    "name": "Goron Shop Price",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSetting/goron_eu.png",
+        "codes": "goron_eu",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSetting/goron_jp.png",
+        "codes": "goron_jp",
+        "inherit_codes":false
+      }
     ]
   },
 ]

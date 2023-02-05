@@ -241,6 +241,19 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
     end
 end
 
+function updateSectionChestCheck(locationRef, flag)
+    local location = Tracker:FindObjectForCode(locationRef)
+    if location then
+        --Don't undo what user has done
+        if location.Owner.ModifiedByUser then
+            return
+        end
+        location.AvailableChestCount = flag
+    elseif TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND then
+		print("Location not found", locationRef)
+    end
+end
+
 function decreaseChestCount(segment, locationRef, chestData)
   local location = Tracker:FindObjectForCode(locationRef)
   if location then
@@ -268,7 +281,18 @@ function decreaseChestCount(segment, locationRef, chestData)
     print("Location not found", locationRef)
   end
 end
+function decreaseChestCountChest(segment, locationRef,cleared)
+  local location = Tracker:FindObjectForCode(locationRef)
+  if location then
+    if location.Owner.ModifiedByUser then
+      return
+    end
+    location.AvailableChestCount = cleared
 
+  elseif TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND then
+    print("Location not found", locationRef)
+  end
+end
 function updateDogFood(segment, code, address, flag)
   local item = Tracker:FindObjectForCode(code)
   if item then
@@ -1576,6 +1600,185 @@ function figurine(segment)
     updatefigurine(segment, "figurine", 0x2002af0)																   
   end
 end
+function UpdateCucco(segment)
+  local count = 0
+  if testFlag(segment, 0x2002ca5, 0x08) then
+    count = count + 1
+  end
+  if testFlag(segment, 0x2002ca5, 0x10) then
+    count = count + 2
+  end
+  if testFlag(segment, 0x2002ca5, 0x20) then
+    count = count + 4
+  end
+  if testFlag(segment, 0x2002ca5, 0x40) then
+    count = count + 8
+  end
+  if count >= 1 then
+	updateSectionChestCheck("@Town - Anju/Round 1 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 1 Gift",1)
+  end
+  if count >= 2 then
+	updateSectionChestCheck("@Town - Anju/Round 2 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 2 Gift",1)
+  end
+  if count >= 3 then
+	updateSectionChestCheck("@Town - Anju/Round 3 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 3 Gift",1)
+  end
+  if count >= 4 then
+	updateSectionChestCheck("@Town - Anju/Round 4 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 4 Gift",1)
+  end
+  if count >= 5 then
+	updateSectionChestCheck("@Town - Anju/Round 5 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 5 Gift",1)
+  end
+  if count >= 6 then
+	updateSectionChestCheck("@Town - Anju/Round 6 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 6 Gift",1)
+  end
+  if count >= 7 then
+	updateSectionChestCheck("@Town - Anju/Round 7 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 7 Gift",1)
+  end
+  if count >= 8 then
+	updateSectionChestCheck("@Town - Anju/Round 8 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 8 Gift",1)
+  end
+  if count >= 9 then
+	updateSectionChestCheck("@Town - Anju/Round 9 Gift",0)
+  else
+	updateSectionChestCheck("@Town - Anju/Round 9 Gift",1)
+  end
+end
+function UpdateGoronShop(segment)
+  local count = 0
+  local left = 1
+  local center = 1
+  local right = 1
+  if testFlag(segment, 0x2002ca3, 0x40) then
+    count = count + 1
+  end
+  if testFlag(segment, 0x2002ca3, 0x80) then
+    count = count + 1
+  end
+  if testFlag(segment, 0x2002ca4, 0x01) then
+    count = count + 1
+  end
+  if testFlag(segment, 0x2002ca4, 0x02) then
+    count = count + 1
+  end
+  if count == 0 then
+    if testFlag(segment, 0x2002ca4, 0x04) then
+		left = 0	
+	end
+    if testFlag(segment, 0x2002ca4, 0x08) then
+		center = 0
+	end
+    if testFlag(segment, 0x2002ca4, 0x10) then
+		right = 0
+	end
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Left",left)
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Center and Right",(center+right))
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Right",right)
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Left and Center",(center+left))
+  elseif count > 0 then
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Left",0)
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Center and Right",0)
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Right",0)
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Left and Center",0)
+  else
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Left",1)
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Center and Right",2)
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Right",1)
+		updateSectionChestCheck("@Town - Goron Shop/Set 1 - Item Left and Center",2)
+  end
+  if count == 1 then
+    if testFlag(segment, 0x2002ca4, 0x04) then
+		left = 0	
+	end
+    if testFlag(segment, 0x2002ca4, 0x08) then
+		center = 0
+	end
+    if testFlag(segment, 0x2002ca4, 0x10) then
+		right = 0
+	end
+		updateSectionChestCheck("@Town - Goron Shop/Set 2 - Items",(left+center+right))
+  elseif count > 1 then
+		updateSectionChestCheck("@Town - Goron Shop/Set 2 - Items",0)
+  else
+		updateSectionChestCheck("@Town - Goron Shop/Set 2 - Items",3)
+  end
+  if count == 2 then
+    if testFlag(segment, 0x2002ca4, 0x04) then
+		left = 0	
+	end
+    if testFlag(segment, 0x2002ca4, 0x08) then
+		center = 0
+	end
+    if testFlag(segment, 0x2002ca4, 0x10) then
+		right = 0
+	end
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Items",(left+center+right))
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Item Left",left)
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Items Other",(center+right))
+  elseif count > 2 then
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Items",0)
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Item Left",0)
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Items Other",0)
+  else
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Items",3)
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Item Left",1)
+		updateSectionChestCheck("@Town - Goron Shop/Set 3 - Items Other",2)
+  end
+  if count == 3 then
+    if testFlag(segment, 0x2002ca4, 0x04) then
+		left = 0	
+	end
+    if testFlag(segment, 0x2002ca4, 0x08) then
+		center = 0
+	end
+    if testFlag(segment, 0x2002ca4, 0x10) then
+		right = 0
+	end
+		updateSectionChestCheck("@Town - Goron Shop/Set 4 - Items",(left+center+right))
+  elseif count > 3 then
+		updateSectionChestCheck("@Town - Goron Shop/Set 4 - Items",0)
+  else
+		updateSectionChestCheck("@Town - Goron Shop/Set 4 - Items",3)
+  end
+  if count == 4 then
+    if testFlag(segment, 0x2002ca4, 0x04) then
+		left = 0	
+	end
+    if testFlag(segment, 0x2002ca4, 0x08) then
+		center = 0
+	end
+    if testFlag(segment, 0x2002ca4, 0x10) then
+		right = 0
+	end
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Items",(left+center+right))
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Item Left",left)
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Items Other",(center+right))
+  elseif count > 4 then
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Items",0)
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Item Left",0)
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Items Other",0)
+  else
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Items",3)
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Item Left",1)
+		updateSectionChestCheck("@Town - Goron Shop/Set 5 - Items Other",2)
+  end
+end
 
 function updateItemsFromMemorySegment(segment)
   if not isInGame() then
@@ -1948,7 +2151,9 @@ function updateLocations(segment)
 
 	  --HYRULE TOWN
 	  updateSectionChestCountFromByteAndFlag(segment, "@Town - Eastern Shops/Simon's Simulations", 0x2002c9c, 0x02)
-	  updateSectionChestCountFromByteAndFlag(segment, "@Town - Anju/Heart Piece", 0x2002ca5, 0x80)
+	  updateSectionChestCountFromByteAndFlag(segment, "@Town - Anju/Round 10 Gift", 0x2002ca5, 0x80)
+	  UpdateCucco(segment)
+	  UpdateGoronShop(segment)
 	  updateSectionChestCountFromByteAndFlag(segment, "@Town - Hearth Ledge/Chest", 0x2002cd5, 0x01)
 	  updateSectionChestCountFromByteAndFlag(segment, "@Town - School/Roof Chest", 0x2002cd5, 0x02)
 	  updateSectionChestCountFromByteAndFlag(segment, "@Town - School/Pull the Statue", 0x2002cfc, 0x40)
