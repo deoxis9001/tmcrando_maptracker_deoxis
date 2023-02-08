@@ -1056,4 +1056,124 @@
 	  }
 	]
   },
+  {
+	"name":"Droplet Entrance",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2337,
+		"y":1035,
+		"force_invisibility_rules":["dungeonser_off","dws_tod","cof_tod","fow_tod","tod_tod","crypt_tod","pow_tod"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Entrance",
+		"item_count":1,
+		"access_rules":["$AccessDroplets"],
+		"chest_unopened_img":"images/items-map/Cave Entrance Icon.png",
+		"chest_opened_img":"images/items-map/Cave Entrance Icon.png"
+	  }
+	]
+  },
+  {
+	"name":"Palace Entrance",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2303,
+		"y":250,
+		"force_invisibility_rules":["dungeonser_off","dws_pow","cof_pow","fow_pow","tod_pow","crypt_pow","pow_pow"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Entrance",
+		"item_count":1,
+		"access_rules":["$AccessPalace"],
+		"chest_unopened_img":"images/items-map/Cave Entrance Icon.png",
+		"chest_opened_img":"images/items-map/Cave Entrance Icon.png"
+	  }
+	]
+  },
+  {
+	"name":"Fortress Entrance",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":592,
+		"y":1800,
+		"force_invisibility_rules":["dungeonser_off","dws_fow","cof_fow","fow_fow","tod_fow","crypt_fow","pow_fow"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Entrance",
+		"item_count":1,
+		"access_rules":["$AccessFortress"],
+		"chest_unopened_img":"images/items-map/Cave Entrance Icon.png",
+		"chest_opened_img":"images/items-map/Cave Entrance Icon.png"
+	  }
+	]
+  },
+  {
+	"name":"Cave Of Flame Entrance",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":323,
+		"y":200,
+		"force_invisibility_rules":["dungeonser_off","dws_cof","cof_cof","fow_cof","tod_cof","crypt_cof","pow_cof"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Entrance",
+		"item_count":1,
+		"access_rules":["$AccessCoF"],
+		"chest_unopened_img":"images/items-map/Cave Entrance Icon.png",
+		"chest_opened_img":"images/items-map/Cave Entrance Icon.png"
+	  }
+	]
+  },
+  {
+	"name":"Crypt Entrance",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":827,
+		"y":150,
+		"force_invisibility_rules":["dungeonser_off","dws_crypt","cof_crypt","fow_crypt","tod_crypt","crypt_crypt","pow_crypt"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Entrance",
+		"item_count":1,
+		"access_rules":["$AccessCrypt"],
+		"chest_unopened_img":"images/items-map/Cave Entrance Icon.png",
+		"chest_opened_img":"images/items-map/Cave Entrance Icon.png"
+	  }
+	]
+  },
+  {
+	"name":"Deepwood Entrance",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":2282,
+		"y":1800,
+		"force_invisibility_rules":["dungeonser_off","dws_dws","cof_dws","fow_dws","tod_dws","crypt_dws","pow_dws"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Entrance",
+		"item_count":1,
+		"access_rules":["$AccessDeepwood"],
+		"chest_unopened_img":"images/items-map/Cave Entrance Icon.png",
+		"chest_opened_img":"images/items-map/Cave Entrance Icon.png"
+	  }
+	]
+  }
 ]
