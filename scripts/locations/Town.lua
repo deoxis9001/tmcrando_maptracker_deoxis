@@ -276,7 +276,7 @@ function Json_Town_EasternShops_FigurineHouse()
 end
 
 function Json_Town_EasternShops_FigurineHouseHeartPiece()
-  if Town_MusicHouse()==1 then
+  if Town_MusicHouse_HP()==1 then
     return 1
   else
     return 1, AccessibilityLevel.Inspect
@@ -316,9 +316,7 @@ function Json_Town_BakeryAttic_Chest()
 end
 
 function Json_Town_GoronShop_Set1_Item2()
-	if Json_Town_GoronShop_Set1_Item1()==1 and has("goron_eu") and has("wallet") then
-		return 1
-	elseif Json_Town_GoronShop_Set1_Item1()==1 and has("goron_jp") and has("wallet")  then
+	if ( Town_GoronShop_Set1_Item2()==1 ) then
 		return 1
 	else
 		return 0
@@ -326,7 +324,7 @@ function Json_Town_GoronShop_Set1_Item2()
 end
 
 function Json_Town_GoronShop_Set1_Item1()
-	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions33") ) ) then
+	if ( Town_GoronShop_Set1_Item1()==1 ) then
 		return 1
 	else
 		return 0
@@ -334,9 +332,7 @@ function Json_Town_GoronShop_Set1_Item1()
 end
 
 function Json_Town_GoronShop_Set2_Items()
-	if Json_Town_GoronShop_Set1_Item1()==1 and has("goron_eu") and has("wallet") then
-		return 1
-	elseif Json_Town_GoronShop_Set1_Item1()==1 and has("goron_jp") and has("wallet")  then
+	if ( Town_GoronShop_Set2_Items()==1 ) then
 		return 1
 	else
 		return 0
@@ -344,9 +340,9 @@ function Json_Town_GoronShop_Set2_Items()
 end
 
 function Json_Town_GoronShop_Set3_Item1()
-	if Json_Town_GoronShop_Set2_Items()==1 and has("goron_eu") and has("wallet2") then
-		return 1
-	elseif Json_Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet")  then
+
+
+	if ( Town_GoronShop_Set3_Item1()==1 ) then
 		return 1
 	else
 		return 0
@@ -354,9 +350,7 @@ function Json_Town_GoronShop_Set3_Item1()
 end
 
 function Json_Town_GoronShop_Set3_Items()
-	if Json_Town_GoronShop_Set2_Items()==1 and has("goron_eu") and has("wallet2") then
-		return 1
-	elseif Json_Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet")  then
+	if ( Town_GoronShop_Set3_Items()==1 ) then
 		return 1
 	else
 		return 0
@@ -364,9 +358,7 @@ function Json_Town_GoronShop_Set3_Items()
 end
 
 function Json_Town_GoronShop_Set4_Items()
-	if Json_Town_GoronShop_Set3_Items()==1 and has("goron_eu") and has("wallet2") then
-		return 1
-	elseif Json_Town_GoronShop_Set3_Items()==1 and has("goron_jp") and has("wallet")  then
+	if ( Town_GoronShop_Set4_Items()==1 ) then
 		return 1
 	else
 		return 0
@@ -374,9 +366,7 @@ function Json_Town_GoronShop_Set4_Items()
 end
 
 function Json_Town_GoronShop_Set5_Item1()
-	if Json_Town_GoronShop_Set4_Items()==1 and has("goron_eu") and has("wallet3") then
-		return 1
-	elseif Json_Town_GoronShop_Set4_Items()==1 and has("goron_jp") and has("wallet")  then
+	if ( Town_GoronShop_Set5_Item1()==1 ) then
 		return 1
 	else
 		return 0
@@ -384,9 +374,7 @@ function Json_Town_GoronShop_Set5_Item1()
 end
 
 function Json_Town_GoronShop_Set5_Items()
-	if Json_Town_GoronShop_Set4_Items()==1 and has("goron_eu") and has("wallet2") then
-		return 1
-	elseif Json_Town_GoronShop_Set4_Items()==1 and has("goron_jp") and has("wallet")  then
+	if ( Town_GoronShop_Set5_Items()==1 ) then
 		return 1
 	else
 		return 0

@@ -820,7 +820,14 @@
 	"sections":[
 	  {
 		"name":"Rupees",
-		"item_count":3,
+		"item_count":2,
+		"access_rules":["$Json_Dungeon_Fortress_LeftSideRupees"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  } ,
+	  {
+		"name":"Rupees Grabbable",
+		"item_count":1,
 		"access_rules":["$Json_Dungeon_Fortress_LeftSideRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
@@ -1702,8 +1709,15 @@
 	"sections":[
 	  {
 		"name":"Rupees",
-		"item_count":5,
+		"item_count":3,
 		"access_rules":["$Json_Dungeon_Droplet_RightPathRupees"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
+	  } ,
+	  {
+		"name":"Rupees Grabbable",
+		"item_count":2,
+		"access_rules":["$Json_Dungeon_Droplet_RightPathRupees1_2"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  

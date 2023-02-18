@@ -214,7 +214,19 @@ function GotDungeons()
 	if has("pow") then
 		CountDungeons = CountDungeons + 1
 	end
-	if CountDungeons >= Tracker:ProviderCountForCode("dungeons") then
+	if CountDungeons >= 0 and has("dungeons0") then
+		return 1
+	elseif CountDungeons >= 1 and has("dungeons1") then
+		return 1
+	elseif CountDungeons >= 2 and has("dungeons2") then
+		return 1
+	elseif CountDungeons >= 3 and has("dungeons3") then
+		return 1
+	elseif CountDungeons >= 4 and has("dungeons4") then
+		return 1
+	elseif CountDungeons >= 5 and has("dungeons5") then
+		return 1
+	elseif CountDungeons >= 6 and has("dungeons6") then
 		return 1
 	else
 		return 0
@@ -237,8 +249,8 @@ function HasSword()
 	end
 end
 
-function HasGreenSword()
-	if ( Sword2()==1 ) then
+function HasWhiteSword()
+	if ( Sword2()==1  or Sword3()==1  or Sword4()==1  or Sword5()==1 ) then
 		return 1
 	else
 		return 0
@@ -247,14 +259,6 @@ end
 
 function HasSpin()
 	if ( has("spinattack") ) then
-		return 1
-	else
-		return 0
-	end
-end
-
-function HasDojoSword()
-	if ( Sword1()==1 or Sword2()==1 ) then
 		return 1
 	else
 		return 0
@@ -398,7 +402,7 @@ end
 function HasGleerokDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( has("weaponsbow_yes") and HasBow()==1 ) then
+	elseif ( has("weaponsbow_boss") and HasBow()==1 ) then
 		return 1
 	elseif ( has("weaponsbombs_boss") and has("bombs30") ) then
 		return 1
@@ -434,7 +438,7 @@ end
 function HasMazaalDamage()
 	if ( HasSword()==1 ) then
 		return 1
-	elseif ( has("weaponsbow_yes") and HasBow()==1 ) then
+	elseif ( has("weaponsbow_boss") and HasBow()==1 ) then
 		return 1
 	elseif ( has("weaponsbombs_boss") and has("bombs30") ) then
 		return 1
@@ -467,6 +471,261 @@ function HasGhiniDamage()
 	end
 end
 
+function ShopBack()
+	if ( TownDog()==1 ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and has("gust") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function SchoolHP()
+	if ( has("cane") and CanSplit4()==1) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and  has("cane") and has("gust") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function MusicHouseHP()
+	if ( MusicHouse()==1 ) then
+		return 1
+	elseif( ( has("grabbable_easy") or has("grabbable_hard")  ) and (HasBoomerang()==1 or has("gust") )) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function FountainHP()
+	if ( has("cape")  ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and ( has("gust") or ( HasBoomerang()==1 and ( LightArrowBreak()==1 or has("cane") ) ) ) ) then
+		return 1
+	elseif ( has("grabbable_hard") and HasMagicBoomerang()==1) then
+		return 1
+	else
+		return 0
+	end
+end
+
+function LowerFallsItems()
+	if ( AccessMinishWoods()==1 and has("cane") and ( has("flippers") or has("cape")) ) then
+		return 1
+	elseif ( has("grabbable_easy") and OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and has ("gust") )  then
+		return 1
+	elseif ( has("grabbable_easy") and AccessFalls()==1 and has("grip") and has ("gust") )  then
+		return 1
+	elseif ( has("grabbable_hard") and OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and ( HasMagicBoomerang()==1 or has ("gust") ) )  then
+		return 1
+	elseif ( has("grabbable_hard") and AccessFalls()==1 and has("grip") and ( HasMagicBoomerang()==1 or has ("gust") ) )  then
+		return 1
+	else
+		return 0
+	end
+end
+
+function LakeIslandHP()
+	if ( has("cape")  ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and HasMagicBoomerang()==1 ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function LakeSouthHP()
+	if ( AccessLonLon()==1 and CapeExtension()==1  ) then
+		return 1
+	elseif ( AccessSouthLake()==1 and ( has("cape") or has("flippers") ) ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") ) and AccessLonLon()==1 and LakeShortcut()==1 and HasMagicBoomerang()==1  ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") )  and  AccessSouthLake()==1 and ( has("gust") or  HasMagicBoomerang()==1 ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function MinishNorthHP()
+	if ( AccessNorthMinish()==1  ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") ) and ( has("gust") or HasMagicBoomerang()==1 ) ) then
+		return 1
+	elseif ( has("grabbable_hard") and  HasBoomerang()==1 ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function MinishSouthHP()
+	if ( AccessNorthMinish()==1  ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") ) and AccessBelari()==1 and  has("gust") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function CrenelWaterCaveHP()
+	if ( has("bombs") or has("cape") or has("flippers") ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") or HasMagicBoomerang()==1 ) then
+		return 1
+	elseif ( has("grabbable_hard") and HasBoomerang()==1 ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function LeftGraveHP()
+	if ( CanSplit4()==1 or  CanSplit3()==1 ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+		return 1
+	elseif ( has("grabbable_hard") and HasBoomerang()==1 ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function FallsHP()
+	if ( OverworldBlocks()==1 and CapeExtension()==1 ) then
+		return 1
+	elseif ( AccessFalls()==1 and has("grip") and ( has("flippers") or ( DarkRooms()==1 and CapeExtension()==1 ) ) ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and OverworldBlocks()==1 and ( has("gust") or HasMagicBoomerang()==1 ) ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessFalls()==1 and has("grip") and ( DarkRooms()==1 and ( has("gust") or HasMagicBoomerang()==1 ) ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function DeepwoodMadderHP()
+	if ( DeepwoodBlueWarp()==1 and DeepwoodMadderpillarDoor()==1 and DeepwoodWeb()==1 ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has ("gust") and ( Deepwood1stDoor()==1 or DeepwoodBlueWarp()==1 ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function CoFRupees()
+	if ( ( BombWalls()==1 or  Bobombs()==1 ) and CoFSpikeBeetle()==1 ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function FoWLeftRupee()
+	if ( FoWEyeSwitch()==1 and FoWStalfosFight()==1 ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function FoWEntranceRupee()
+	if ( has("mitts")  ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function FoWHP()
+	if ( FoWCloneSwitch()==1  ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function ToDRightRupees()
+	if ( ToD2ndRupeePath()==1  ) then
+		return 1
+	elseif ( has("grabbable_hard") and has("gust") ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function PoWRupees()
+	if ( PoWJump()==1  ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and HasMagicBoomerang()==1) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function PoWDrop()
+	if ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and has("cane")  and PoWPotPuzzle()==1 ) then
+		return 1
+	elseif ( has("grabbable_easy") and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 ) and DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and ( HasBoomerang()==1 and ( LightArrowBreak()==1 or has("cane") ) ) ) then
+		return 1
+	elseif ( has("grabbable_easy") and PoWRedWarp()==1 and OverworldBlocks()==1 and ( has("gust") or ( HasBoomerang()==1 and ( LightArrowBreak()==1 or has("cane") ) ) ) ) then
+		return 1
+	elseif ( has("grabbable_hard") and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 ) and DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and HasBoomerang()==1 ) then
+		return 1
+	elseif ( has("grabbable_hard") and PoWRedWarp()==1 and OverworldBlocks()==1 and ( has("gust") or  HasBoomerang()==1 ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
+
+function PoWHP()
+	if ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) then
+		return 1
+	elseif ( PoWRedWarp()==1 and OverworldBlocks()==1 ) then
+		return 1
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( CanSplit3()==1 or CanSplit4()==1) and PoWJump()==1 and PoWPostKeyDoor()==1 and ( has("gust") or HasBoomerang()==1 ) ) then
+		return 1
+	else
+		return 0
+	end
+end
+
 function GuardSkip()
 	if ( has("guardskip_on") and has("boots")  ) then
 		return 1
@@ -476,6 +735,7 @@ function GuardSkip()
 		return 0
 	end
 end
+
 function LikeLike()
 	if ( has("likelike_on") ) then
 		return 1

@@ -121,27 +121,33 @@
       },
       {
         "img": "images/options/DHCRequirements/dungeons1.png",
-        "codes": "dungeons1"
+        "codes": "dungeons1",
+        "inherit_codes":false
       },
       {
         "img": "images/options/DHCRequirements/dungeons2.png",
-        "codes": "dungeons2"
+        "codes": "dungeons2",
+        "inherit_codes":false
       },
       {
         "img": "images/options/DHCRequirements/dungeons3.png",
-        "codes": "dungeons3"
+        "codes": "dungeons3",
+        "inherit_codes":false
       },
       {
         "img": "images/options/DHCRequirements/dungeons4.png",
-        "codes": "dungeons4"
+        "codes": "dungeons4",
+        "inherit_codes":false
       },
       {
         "img": "images/options/DHCRequirements/dungeons5.png",
-        "codes": "dungeons5"
+        "codes": "dungeons5",
+        "inherit_codes":false
       },
       {
         "img": "images/options/DHCRequirements/dungeons6.png",
-        "codes": "dungeons6"
+        "codes": "dungeons6",
+        "inherit_codes":false
       },
     ]
   },
@@ -1265,6 +1271,11 @@
         "codes": "weaponsbow_yes",
         "inherit_codes":false
       },
+      {
+        "img": "images/options/WorldSetting/WeaponsBow_boss.png",
+        "codes": "weaponsbow_boss",
+        "inherit_codes":false
+      },
     ]
   },
   {
@@ -1432,6 +1443,30 @@
       {
         "img":"images/options/WorldSetting/goron_jp.png",
         "codes": "goron_jp",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "Grab items from a distance",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/LogicSettings/grabbable_none.png",
+        "codes": "grabbable_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/LogicSettings/grabbable_easy.png",
+        "codes": "grabbable_easy",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/LogicSettings/grabbable_hard.png",
+        "codes": "grabbable_hard",
         "inherit_codes":false
       }
     ]

@@ -8,7 +8,7 @@ end
 
 
 function CoF_1F_Item() 
-	if ( CofDungeons()==1 and BombWalls()==1 and CoFSpikeBeetle()==1 ) then
+	if ( CofDungeons()==1 and CoFRupees()==1 ) then
 		return 1
 	else
 		return 0

@@ -124,10 +124,26 @@ function BombWalls()
 		return 0
 	end 
 end
-function LonLonNorthShortcut() 
+function LonLonNorthShortcut_settings() 
 	if ( has("openworld_on") ) then
 		return 1
+	else
+		return 0
+	end 
+end
+function LonLonNorthShortcut() 
+	if ( LonLonNorthShortcut_settings()==1 ) then
+		return 1
 	elseif ( AccessLonLon()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function LonLonSecret() 
+	if ( has("openworld_on") ) then
+		return 1
+	elseif ( has("lamp") ) then
 		return 1
 	else
 		return 0

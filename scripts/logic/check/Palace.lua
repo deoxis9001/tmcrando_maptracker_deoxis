@@ -15,7 +15,7 @@ function Palace_1stHalf_1F_Wizrobe_BigChest()
 end
 
 function Palace_1stHalf_2F_Item() 
-	if ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or  CanSplit4()==1)  and PoWJump()==1 and PoWPreKeyDoor()==1) then
+	if ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or  CanSplit4()==1)  and PoWRupees()==1) then
 		return 1
 	else
 		return 0
@@ -23,7 +23,7 @@ function Palace_1stHalf_2F_Item()
 end
 
 function Palace_1stHalf_3F_PotPuzzle_ItemDrop() 
-	if ( ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and has("cane") and PoWPotPuzzle()==1  and PoWPreKeyDoor()==1)) then
+	if ( ( PowDungeons()==1 and PoWDrop()==1)) then
 		return 1
 	else
 		return 0
@@ -103,7 +103,7 @@ function Palace_2ndHalf_3F_FireWizrobes_BigChest()
 end
 
 function Palace_2ndHalf_4F_HP() 
-	if ( PowDungeons()==1 and has("cape") and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) or ( PoWRedWarp()==1 and OverworldBlocks()==1 )))  then
+	if ( PowDungeons()==1 and has("cape") and PoWHP()==1 )  then
 		return 1
 	else
 		return 0

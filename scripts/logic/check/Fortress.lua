@@ -17,7 +17,7 @@ end
 
 
 function Fortress_Entrance_1F_RightItem() 
-	if ( FowDungeons()==1 and has("mitts")) then
+	if ( FowDungeons()==1 and FoWEntranceRupee()==1) then
 		return 1
 	else
 		return 0
@@ -36,6 +36,13 @@ end
 
 function Fortress_Left_2F_Item() 
 	if ( FowDungeons()==1 and FoWEyeSwitch()==1 and FoWStalfosFight()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Fortress_Left_2F_Item5() 
+	if ( FowDungeons()==1 and FoWLeftRupee()==1 ) then
 		return 1
 	else
 		return 0
@@ -134,7 +141,7 @@ end
 
 
 function Fortress_Entrance_1F_RightHP() 
-	if ( FowDungeons()==1 and FoWCloneSwitch()==1) then
+	if ( FowDungeons()==1 and FoWHP()==1) then
 		return 1
 	else
 		return 0

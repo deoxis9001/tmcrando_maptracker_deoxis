@@ -12,46 +12,9 @@
 			["redW","redV","redE","blueL","blueS","greenV","greenN","greenZ","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack"],
 		]
     },
-	"settings":  {
-        "type": "container",
-        "content": {
-			"type": "dock",
-			"dropshadow": true,
-			"content": [ {
-				"type":"tabbed",
-				"tabs":[
-				  {
-					"title":"Dark Hyrule Castle Requirements",
-					"icon":"images/icon-maps/Elements.png",
-					"content":{
-					  "type":"layout",
-					  "key": "dhc_requirement"
-					}
-				  },
-				  {
-					"title":"Logic Settings",
-					"icon":"images/icon-maps/Elements.png",
-					"content":{
-					  "type":"layout",
-					  "key": "logic_settings"
-					}
-				  },
-				  {
-					"title":"World Setting",
-					"icon":"images/icon-maps/Elements.png",
-					"content":{
-					  "type":"layout",
-					  "key": "world_setting"
-					}
-				  },
-				]
-			  }
-			]
-		}
-	},
     "windcrest_settings": {
       "type": "group",
-      "header": "Wind Crest Setting",
+      "header": "Wind Crest Settings",
       "content": {
 		"type": "scroll",
 		"max_height":"448",
@@ -110,6 +73,7 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
+					  ["ped_items_off"],
 					  ["dhc_closed","figurine_option"],
 					  ["element4Needed","figurine10"],
 					  ["sword5Needed","figurine50"],
@@ -134,19 +98,45 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					  ["blowdust_off","crenelmushroom_off","lightarrowbreak_off"],
-					  ["bobombs_off","likelike_off","guardskip_off"],
-					  ["crenelbeam_off","downstrikebeetle_off","darkrooms_off"],
-					  ["capeextension_off","lakeminish_off","cabinswim_off"],
-					  ["cloudskill_off","powjump_off","powpotpuzzleool_off"],
-					  ["dhccanonhit_off","dhcbladepuzzleshuffle_off","dhcswitchhit_off"],
-					  ["fowpot_off","",""]
+					  ["grabbable_none","blowdust_off",],
+					  ["crenelmushroom_off","lightarrowbreak_off"],
+					  ["bobombs_off","likelike_off"],
+					  ["guardskip_off","crenelbeam_off"],
+					  ["downstrikebeetle_off","darkrooms_off"],
+					  ["capeextension_off","lakeminish_off"],
+					  ["cabinswim_off","cloudskill_off"],
+					  ["powjump_off","powpotpuzzleool_off"],
+					  ["dhccanonhit_off","dhcbladepuzzleshuffle_off"],
+					  ["dhcswitchhit_off","fowpot_off"]
 				  ]
 			  }
 		  ]
       }
     },
-    "world_setting": {
+    "weapons_settings": {
+      "type": "group",
+      "header": "Weapons Settings",
+      "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					  ["progressiveitems"],
+					  ["weaponsbombs_no","weaponsbow_no"],
+					  ["weaponsgust_no","weaponslamp_no"],
+				  ]
+			  }
+		  ]
+      }
+    },
+    "world_settings": {
       "type": "group",
       "header": "World Settings",
       "content": {
@@ -161,18 +151,17 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					  ["rupees_off","specialpot_off","digging_off"],
-					  ["underwater_off","golden_enemy_off","ped_items_off"],
-					  ["dungeonser_off","progressiveitems","openworld_off"],
-					  ["cucco_none","goron_none","goron_eu"],
-					  ["","weaponsbombs_no","weaponsbow_no"],
-					  ["","weaponsgust_no","weaponslamp_no"]
+					  ["specialpot_off","digging_off",],
+					  ["underwater_off",""],
+					  ["rupees_off","golden_enemy_off"],
+					  ["cucco_none",""],
+					  ["goron_none","goron_eu"],
 				  ]
 			  }
 		  ]
       }
     },
-    "fusion_setting": {
+    "fusion_settings": {
       "type": "group",
       "header": "Fusion Settings",
       "content": {
@@ -196,20 +185,6 @@
 		  ]
       }
     },
-    "options_tracker": {
-      "type": "group",
-      "header": "Settings - Tracker",
-      "content": {
-        "type": "itemgrid",
-        "h_alignment": "center",
-        "item_margin": "0,0",
-		"item_height":64,
-		"item_width":320,
-        "rows": [
-			  ["progressiveitems"],
-		  ]
-      }
-    },
     "tracker_capture_item": {
       "type": "container",
       "content": {
@@ -228,6 +203,176 @@
         ]        
       }
     },
+    "open_world_settings": {
+      "type": "group",
+      "header": "Settings",
+      "content": {
+        "type": "itemgrid",
+        "h_alignment": "center",
+        "item_margin": "0,0",
+		"item_height":64,
+		"item_width":320,
+        "rows": [
+          ["dungeonser_off","openworld_off"],
+        ]
+      }
+    },
+	"settings_tab_open_world":  {
+		"type": "dock",
+		"content":[
+		  {
+			"type":"tabbed",
+			"dock":"top",
+			"style":"wrap",
+			"tabs":[
+			  {
+				"title":"Wind Crest Settings",
+				"icon":"images/icon-maps/Wind Tablet.png",
+				"content":{
+				  "type":"layout",
+				  "key": "windcrest_settings"
+				}
+			  },
+			  {
+				"title":"Settings",
+				"icon":"images/icon-maps/Entrance Icon.png",
+				"content":{
+				  "type":"layout",
+				  "key": "open_world_settings"
+				}
+			  },
+			]
+		  }
+		]
+	},
+	"settings":  {
+		"type": "dock",
+		"content":[
+		  {
+			"type":"tabbed",
+			"dock":"top",
+			"style":"wrap",
+			"tabs":[
+			  {
+				"title":"Dark Hyrule Castle Requirements",
+				"icon":"images/icon-maps/Light Force.png",
+				"content":{
+					"type":"layout",
+					"key": "dhc_requirement"
+				}
+			  },
+			  {
+				"title":"Logic Settings",
+				"icon":"images/icon-maps/Treasure Icon.png",
+				"content":{
+				  "type":"layout",
+				  "key": "logic_settings"
+				}
+			  },
+			  {
+				"title":"World Settings",
+				"icon":"images/icon-maps/Cave Entrance Icon.png",
+				"content":{
+				  "type":"layout",
+				  "key": "settings_tab_open_world"
+				}
+			  },
+			  {
+				"title":"Locations Settings",
+				"icon":"images/icon-maps/Sign.png",
+				"content":{
+				  "type":"layout",
+				  "key": "world_settings"
+				}
+			  },
+			  {
+				"title":"Weapons Settings",
+				"icon":"images/icon-maps/Four Sword.png",
+				"content":{
+				  "type":"layout",
+				  "key": "weapons_settings"
+				}
+			  },
+			  {
+				"title":"Fusions Settings",
+				"icon":"images/icon-maps/Kinstone Bag (Giant).png",
+				"content":{
+				  "type":"layout",
+				  "key": "fusion_settings"
+				}
+			  }
+			]
+		  }
+		]
+	},
+	"maps":  {
+		"type": "dock",
+		"content":[
+		  {
+			"type":"tabbed",
+			"dock":"top",
+			"style":"wrap",
+			"tabs":[
+				  {
+					"title":"Deepwood Shrine",
+					"icon":"images/icon-maps/Gust Jar.png",
+					"content":{
+					  "type":"map",
+					  "maps":["dws"]
+					}
+				  },
+				  {
+					"title":"Cave of Flames",
+					"icon":"images/icon-maps/Cane of Pacci.png",
+					"content":{
+					  "type":"map",
+					  "maps":["cof"]
+					}
+				  },
+				  {
+					"title":"Fortress of Winds",
+					"icon":"images/icon-maps/Mole Mitts.png",
+					"content":{
+					  "type":"map",
+					  "maps":["fow"]
+					}
+				  },
+				  {
+					"title":"Temple of Droplets",
+					"icon":"images/icon-maps/Lamp (Lit).png",
+					"content":{
+					  "type":"map",
+					  "maps":["tod"]
+					}
+				  },
+				  {
+					"title":"Royal Crypt",
+					"icon":"images/icon-maps/Gold Kinstone (Falls).png",
+					"content":{
+					  "type":"map",
+					  "maps":["rc"]
+					}
+				  },
+				  {
+					"title":"Palace of Winds",
+					"icon":"images/icon-maps/Roc's Cape.png",
+					"content":{
+					  "type":"map",
+					  "maps":["pow"]
+					}
+				  },
+				  {
+					"title":"Dark Hyrule Castle",
+					"icon":"images/icon-maps/vaati.png",
+					"content":{
+					  "type":"map",
+					  "maps":["dhc"]
+					}
+				  },
+			]
+		  }
+		]
+	},
     "tracker_default": {
         "type": "container",
         "background": "#877373",
@@ -278,114 +423,34 @@
                         "tabs":[
                           {
                             "title":"Overworld",
-                            "icon":"images/icon-maps/Four Sword.png",
+                            "icon":"images/icon-maps/Map.png",
                             "content":{
                               "type":"map",
                               "maps":["map"]
                             }
                           },
+						  {
+							"title":"Melari's Mines",
+							"icon":"images/icon-maps/Melari.png",
+							"content":{
+							  "type":"map",
+							  "maps":["mines"]
+							}
+						  },
                           {
-                            "title":"Melari's Mines",
-                            "icon":"images/icon-maps/Melari.png",
-                            "content":{
-                              "type":"map",
-                              "maps":["mines"]
-                            }
-                          },
-                          {
-                            "title":"Dark Hyrule Castle Requirements",
-                            "icon":"images/icon-maps/Light Force.png",
+                            "title":"Maps Dungeons",
+                            "icon":"images/icon-maps/Map.png",
                             "content":{
 								"type":"layout",
-								"key": "dhc_requirement"
+								"key": "maps"
                             }
                           },
                           {
-                            "title":"Logic Settings",
-                            "icon":"images/icon-maps/Treasure Icon.png",
+                            "title":"Settings",
+                            "icon":"images/icon-maps/Key Block.png",
                             "content":{
-                              "type":"layout",
-                              "key": "logic_settings"
-                            }
-                          },
-                          {
-                            "title":"Wind Crest Setting",
-                            "icon":"images/icon-maps/Wind Tablet.png",
-                            "content":{
-                              "type":"layout",
-                              "key": "windcrest_settings"
-                            }
-                          },
-                          {
-                            "title":"World Setting",
-                            "icon":"images/icon-maps/Sign.png",
-                            "content":{
-                              "type":"layout",
-                              "key": "world_setting"
-                            }
-                          },
-                          {
-                            "title":"Fusions Setting",
-                            "icon":"images/icon-maps/Kinstone Bag (Giant).png",
-                            "content":{
-                              "type":"layout",
-                              "key": "fusion_setting"
-                            }
-                          },
-                          {
-                            "title":"Deepwood Shrine",
-                            "icon":"images/icon-maps/Gust Jar.png",
-                            "content":{
-                              "type":"map",
-                              "maps":["dws"]
-                            }
-                          },
-                          {
-                            "title":"Cave of Flames",
-                            "icon":"images/icon-maps/Cane of Pacci.png",
-                            "content":{
-                              "type":"map",
-                              "maps":["cof"]
-                            }
-                          },
-                          {
-                            "title":"Fortress of Winds",
-                            "icon":"images/icon-maps/Mole Mitts.png",
-                            "content":{
-                              "type":"map",
-                              "maps":["fow"]
-                            }
-                          },
-                          {
-                            "title":"Temple of Droplets",
-                            "icon":"images/icon-maps/Lamp (Lit).png",
-                            "content":{
-                              "type":"map",
-                              "maps":["tod"]
-                            }
-                          },
-                          {
-                            "title":"Royal Crypt",
-                            "icon":"images/icon-maps/Gold Kinstone (Falls).png",
-                            "content":{
-                              "type":"map",
-                              "maps":["rc"]
-                            }
-                          },
-                          {
-                            "title":"Palace of Winds",
-                            "icon":"images/icon-maps/Roc's Cape.png",
-                            "content":{
-                              "type":"map",
-                              "maps":["pow"]
-                            }
-                          },
-                          {
-                            "title":"Dark Hyrule Castle",
-                            "icon":"images/icon-maps/vaati.png",
-                            "content":{
-                              "type":"map",
-                              "maps":["dhc"]
+								"type":"layout",
+								"key": "settings"
                             }
                           },
                         ]
@@ -394,5 +459,5 @@
                 }
             ]
         }
-    }
+    },
   }

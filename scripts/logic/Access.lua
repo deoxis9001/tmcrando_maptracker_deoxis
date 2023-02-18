@@ -1,4 +1,4 @@
-function AccessEasternHills() 
+function AccessEasternHills()
 	if ( CanDestroyTrees()==1 or SHFWindCrest()==1 or (OverworldBlocks()==1 and AccessMinishWoods()==1) ) then
 		return 1
 	else
@@ -6,8 +6,8 @@ function AccessEasternHills()
 	end 
 end
 
-function AccessLonLon() 
-	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or has("openworld_on") or (has("flippers") and has("mitts") )))) then
+function AccessLonLon()
+	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or LonLonNorthShortcut_settings()==1 or (has("flippers") and has("mitts") )))) then
 		return 1
 	else
 		return 0

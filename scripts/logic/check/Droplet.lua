@@ -175,6 +175,14 @@ function Droplets_RightPath_B2_UnderpassItem()
 	end 
 end
 
+function Droplets_RightPath_B2_UnderpassItem1_2() 
+	if ( TodDungeons()==1 and ToDRightRupees()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
 function CompleteDroplets() 
 	if ( has("tod") ) then
 		return 1

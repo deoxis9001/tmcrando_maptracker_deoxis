@@ -351,9 +351,9 @@ function CrenelBase_WaterCave_Chest()
 end
 
 function CrenelBase_WaterCave_HP()
-    if AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and ( has("bombs") or has("cape") or has("flippers") ) then
+    if ( AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and CrenelWaterCaveHP()==1 ) then
         return 1
-    elseif CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and ( has("bombs") or has("cape") or has("flippers") ) then
+    elseif CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and CrenelWaterCaveHP()==1 then
         return 1
     else
         return 0
@@ -381,8 +381,7 @@ function CrenelBase_MinishCrack_Chest()
 end
 
 function Falls_Entrance_HP()
-	if ( OverworldBlocks()==1 and CapeExtension()==1 ) or ( AccessFalls()==1 and has("grip") and ( has("flippers") or ( has("cape") and DarkRooms()==1 ) ) )
-    then
+	if ( FallsHP()==1 ) then
 		return 1
 	else
 		return 0
@@ -518,7 +517,7 @@ function FallsLower_WaterfallFusion_DojoNPC()
 end
 
 function FallsLower_RockItem1() 
-	if ( AccessMinishWoods()==1 and has("cane") and (has("flippers") or has("cape") ) ) then
+	if ( LowerFallsItems()==1 ) then
 		return 1
 	elseif ( Falls_Entrance_HP()==1 ) then
 		return 2
@@ -528,7 +527,7 @@ function FallsLower_RockItem1()
 end
 
 function FallsLower_RockItem2() 
-	if ( AccessMinishWoods()==1 and has("cane") and (has("flippers") or has("cape") ) ) then
+	if ( LowerFallsItems()==1 ) then
 		return 1
 	elseif ( Falls_Entrance_HP()==1 ) then
 		return 2
@@ -538,7 +537,7 @@ function FallsLower_RockItem2()
 end
 
 function FallsLower_RockItem3() 
-	if ( AccessMinishWoods()==1 and has("cane") and (has("flippers") or has("cape") ) ) then
+	if ( LowerFallsItems()==1 ) then
 		return 1
 	elseif ( Falls_Entrance_HP()==1 ) then
 		return 2
@@ -580,7 +579,7 @@ function Hylia_DogNPC()
 end
 
 function Hylia_SmallIsland_HP() 
-	if ( AccessLonLon()==1 and has("cape")  ) then
+	if ( AccessLonLon()==1 and LakeIslandHP()==1 ) then
 		return 1
 	elseif ( AccessLonLon()==1 ) then
 		return 3
@@ -598,7 +597,7 @@ function Hylia_MiddleIslandFusion_DigCaveChest()
 end
 
 function Hylia_BottomHP() 
-	if ( AccessLonLon()==1 and CapeExtension()==1  ) then
+	if ( LakeSouthHP()==1 ) then
 		return 1
 	else
 		return 0
@@ -731,7 +730,7 @@ function MinishWoods_NorthFusion_Chest()
 end
 
 function MinishWoods_TopHP() 
-	if ( AccessNorthMinish()==1 ) then
+	if ( MinishNorthHP()==1 ) then
 		return 1
 	else
 		return 0
@@ -779,7 +778,7 @@ function MinishWoods_SouthFusion_Chest()
 end
 
 function MinishWoods_BottomHP() 
-	if ( AccessMinishWoods()==1) then
+	if ( MinishSouthHP()==1) then
 		return 1
 	else
 		return 0
@@ -972,7 +971,7 @@ function Smith_Floor_Item2()
   return 1
 end
 function SouthField_PuddleFusion_Item()
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions58") ) ) and  has("rupees_on") and ( CanDestroyTrees()==1 or has("cape") or has("flippers") or AccessWestern()==1 ) ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions58") ) ) and ( CanDestroyTrees()==1 or has("cape") or has("flippers") or AccessWestern()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -1027,7 +1026,7 @@ function Town_Shop_600Item()
 	end 
 end
 function Town_Shop_BehindCounterItem() 
-	if ( TownDog()==1 ) then
+	if ( ShopBack()==1 ) then
 		return 1
 	else
 		return 0
@@ -1047,6 +1046,13 @@ function Town_Bakery_AtticChest()
 		return 0
 	end 
 end
+function Town_Inn_BackdoorHP() 
+	if ( TownDog()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
 function Town_Inn_LedgeChest() 
 	if ( InnLedge()==1 ) then
 		return 1
@@ -1055,15 +1061,89 @@ function Town_Inn_LedgeChest()
 	end 
 end
 function Town_Inn_Pot() 
-	if ( has("specialpot_on") ) then
+		return 1
+end
+function Town_Well_RightChest() 
+	return 1
+end
+function Town_GoronShop_Set1_Item2() 
+	if ( has("goron_eu") and Town_GoronShop_Set1_Item1()==1 and has("wallet") ) then
+		return 1
+	elseif  (has("goron_jp") and Town_GoronShop_Set1_Item1()==1 and has("wallet") ) then
 		return 1
 	else
 		return 0
 	end 
 end
-function Town_Well_RightChest() 
-	return 1
+
+function Town_GoronShop_Set1_Item1() 
+	if ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions33") ) ) then
+		return 1
+	else
+		return 0
+	end 
 end
+
+function Town_GoronShop_Set2_Items()
+	if Town_GoronShop_Set1_Item1()==1 and has("goron_eu") and has("wallet2") then
+		return 1
+	elseif Town_GoronShop_Set1_Item1()==1 and has("goron_jp") and has("wallet")  then
+		return 1
+	else
+		return 0
+	end
+end
+
+function Town_GoronShop_Set3_Item1()
+	if Town_GoronShop_Set2_Items()==1 and has("goron_eu") and has("wallet2") then
+		return 1
+	elseif Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet")  then
+		return 1
+	else
+		return 0
+	end
+end
+
+function Town_GoronShop_Set3_Items()
+	if Town_GoronShop_Set2_Items()==1 and has("goron_eu") and has("wallet2") then
+		return 1
+	elseif Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet")  then
+		return 1
+	else
+		return 0
+	end
+end
+
+function Town_GoronShop_Set4_Items()
+	if Town_GoronShop_Set3_Items()==1 and has("goron_eu") and has("wallet2") then
+		return 1
+	elseif Town_GoronShop_Set3_Items()==1 and has("goron_jp") and has("wallet")  then
+		return 1
+	else
+		return 0
+	end
+end
+
+function Town_GoronShop_Set5_Item1()
+	if Town_GoronShop_Set4_Items()==1 and has("goron_eu") and has("wallet3") then
+		return 1
+	elseif Town_GoronShop_Set4_Items()==1 and has("goron_jp") and has("wallet")  then
+		return 1
+	else
+		return 0
+	end
+end
+
+function Town_GoronShop_Set5_Items()
+	if Town_GoronShop_Set4_Items()==1 and has("goron_eu") and has("wallet2") then
+		return 1
+	elseif Town_GoronShop_Set4_Items()==1 and has("goron_jp") and has("wallet")  then
+		return 1
+	else
+		return 0
+	end
+end
+
 function Town_Dojo_NPC1() 
 	if ( HasSword()==1 ) then
 		return 1
@@ -1072,21 +1152,21 @@ function Town_Dojo_NPC1()
 	end 
 end
 function Town_Dojo_NPC2() 
-	if ( HasGreenSword()==1 ) then
+	if ( HasWhiteSword()==1 ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function Town_Dojo_NPC3() 
-	if ( HasDojoSword()==1 and has("boots") ) then
+	if ( HasSword()==1 and has("boots") ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function Town_Dojo_NPC4() 
-	if ( HasDojoSword()==1 and has("cape") ) then
+	if ( HasSword()==1 and has("cape") ) then
 		return 1
 	else
 		return 0
@@ -1121,10 +1201,8 @@ function Town_School_Path_Chest()
 	end 
 end
 function Town_School_Path_HP() 
-	if ( has("cane") and CanSplit4()==1 ) then
+	if ( SchoolHP()==1 ) then
 		return 1
-	elseif ( has("cane") ) then
-		return 2
 	else
 		return 0
 	end 
@@ -1185,13 +1263,6 @@ function Town_Jullieta_Item()
 		return 0
 	end 
 end
-function Town_Inn_BackdoorHP() 
-	if ( TownDog()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function Town_Simulation_Chest() 
 	if ( HasSword()==1 ) then
 		return 1
@@ -1208,6 +1279,13 @@ function Town_ShoeShop_NPC()
 end
 function Town_MusicHouse() 
 	if ( MusicHouse()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Town_MusicHouse_HP() 
+	if ( MusicHouseHP()==1 ) then
 		return 1
 	else
 		return 0
@@ -1242,7 +1320,7 @@ function Town_Fountain_SmallChest()
 	end 
 end
 function Town_Fountain_HP() 
-	if ( Fountain()==1 and has("cape") ) then
+	if ( Fountain()==1 and FountainHP()==1 ) then
 		return 1
 	elseif ( Fountain()==1 ) then
 		return 2
@@ -1272,7 +1350,7 @@ function Town_UnderLibrary_BigChest()
 	end 
 end
 function Town_UnderLibrary_Underwater() 
-	if ( has("rupees_on") and has("underwater_on") and Library()==1 and has("flippers") and has("cane") ) then
+	if ( Library()==1 and has("flippers") and has("cane") ) then
 		return 1
 	else
 		return 0
@@ -1351,7 +1429,7 @@ function Castle_Moat_RightChest()
 	end 
 end
 function Castle_GoldenRope() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3c") ) ) and has("golden_enemy_on") and HasSword()==1 ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3c") ) ) and HasSword()==1 ) then
 		return 1
 	else
 		return 0
@@ -1395,7 +1473,7 @@ function Castle_LeftFountainFusion_MinishHoleChest()
 end
 
 function Hills_GoldenRope() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions55") ) ) and has("golden_enemy_on") and HasSword()==1 and (AccessEasternHills()==1) ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions55") ) ) and HasSword()==1 ) then
 		return 1
 	else
 		return 0
@@ -1442,7 +1520,7 @@ function Hills_BombCave_Chest()
 end
 
 function Hills_FarmDigCave_Item() 
-	if ( has("rupees_on") and AccessMinishWoods()==1 and has("mitts") ) then
+	if ( AccessMinishWoods()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -1474,7 +1552,7 @@ function LonLon_Cave_Chest()
 end
 
 function LonLon_CaveSecret_Chest() 
-	if ( AccessLonLon()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) and BombWalls()==1 and has("lamp") ) then
+	if ( AccessLonLon()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) and BombWalls()==1 and LonLonSecret()==1 ) then
 		return 1
 	else
 		return 0
@@ -1613,7 +1691,7 @@ function Swamp_NearWaterfall_CaveHP()
 end
 
 function Swamp_WaterfallFusion_DojoNPC() 
-	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and AccessSwamp()==1  and SwampNorthShortcut()==1 and ( has("cape") or has("flippers") ) ) then
+	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and AccessSwamp()==1  and SwampNorthShortcut()==1 and has("flippers")  ) then
 		return 1
 	else
 		return 0
@@ -1853,7 +1931,7 @@ function Valley_GraveyardLeftFusion_Chest()
 end
 
 function Valley_GraveyardLeftGrave_HP() 
-	if ( AccessValley()==1 and DarkRooms()==1 and Graveyard()==1 ) then
+	if ( AccessValley()==1 and DarkRooms()==1 and Graveyard()==1 and LeftGraveHP()==1) then
 		return 1
 	else
 		return 0

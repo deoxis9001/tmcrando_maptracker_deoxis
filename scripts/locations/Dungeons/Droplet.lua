@@ -54,6 +54,14 @@ function Json_Dungeon_Droplet_RightPathRupees()
 	end 
 end
 
+function Json_Dungeon_Droplet_RightPathRupees1_2()
+	if ( Droplets_RightPath_B2_UnderpassItem1_2()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
 function Json_Dungeon_Droplet_UpperWaterRupees()
 	if ( Droplets_LeftPath_B1_Waterfall_Underwater()==1 ) then
 		return 1

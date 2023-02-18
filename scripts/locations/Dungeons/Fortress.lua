@@ -46,6 +46,14 @@ function Json_Dungeon_Fortress_LeftSideRupees()
   end
 end
 
+function Json_Dungeon_Fortress_LeftSideRupees5()
+  if Fortress_Left_2F_Item5()==1 then
+    return 1
+  else
+    return 0
+  end
+end
+
 function Json_Dungeon_Fortress_Eyegores()
   if Fortress_Left_3F_Eyegore_BigChest()==1 then
     return 1
