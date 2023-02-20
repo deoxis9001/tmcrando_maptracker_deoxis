@@ -7,7 +7,7 @@ function Palace_1stHalf_1F_GrateChest()
 end
 
 function Palace_1stHalf_1F_Wizrobe_BigChest() 
-	if ( PowDungeons()==1 and ( has("cape") or has("bombs") or HasMagicBoomerang()==1 ) and ( CanSplit3()==1 or CanSplit4()==1)  and PoWPreKeyDoor()==1) then
+	if ( PowDungeons()==1 and ( has("cape") or has("bombs") or HasMagicBoomerang()==1 ) and ( CanSplit3()==1 or CanSplit4()==1 ) ) then
 		return 1
 	else
 		return 0

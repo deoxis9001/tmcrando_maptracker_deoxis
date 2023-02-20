@@ -3,7 +3,7 @@ SwordOptions = CustomItem:extend()
 function SwordOptions:init(name, code, imagePathActive, imagePathDesactive)
     self:createItem(name)
     self.code = code
-    self:setProperty("Active", true)
+    self:setProperty("active", true)
     self.activeImage = ImageReference:FromPackRelativePath(imagePathActive)
     self.disabledImage = ImageReference:FromPackRelativePath(imagePathDesactive)
     self.noImage = nil
@@ -15,11 +15,11 @@ function SwordOptions:init(name, code, imagePathActive, imagePathDesactive)
 end
 
 function SwordOptions:setActive(active)
-    self:setProperty("Active", active)
+    self:setProperty("active", active)
 end
 
 function SwordOptions:getActive()
-    return self:getProperty("Active")
+    return self:getProperty("active")
 end
 
 function SwordOptions:updateIcon()
@@ -180,7 +180,7 @@ function SwordOptions:save()
     return saveData
 end
 
-function SwordOptions:Load(data)
+function SwordOptions:load(data)
     if data["active"] ~= nil then
         self:setActive(data["active"])
     end

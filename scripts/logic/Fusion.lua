@@ -11,7 +11,7 @@ function Json_Castle_MinishCrack_Fuzer()
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer1() 
-	if ( AccessWindTribe()==1 or WindPortal()==1 ) then
+	if ( AccessWindTribe()==1 or StrangerFusion()==1 ) then
 		return 1
 	else
 		return 0
@@ -27,7 +27,7 @@ function Json_Clouds_WindTribeHouse_Fuzer2()
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer3() 
-	if ( AccessWindTribe()==1 or WindPortal()==1 ) then
+	if ( AccessWindTribe()==1 or StrangerFusion()==1 ) then
 		return 1
 	else
 		return 0

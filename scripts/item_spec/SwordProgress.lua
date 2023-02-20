@@ -138,7 +138,7 @@ function SwordProgress:save()
     return saveData
 end
 
-function SwordProgress:Load(data)
+function SwordProgress:load(data)
     if data["CurrentStage"] ~= nil then
         self:setActive(data["CurrentStage"])
     end

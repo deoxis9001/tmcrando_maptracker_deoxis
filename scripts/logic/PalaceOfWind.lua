@@ -29,12 +29,7 @@ function PoWBigDoor()
 		return 0
 	end 
 end
-function UpperWindTribeKeys() 
-	return 1 
-end
-function LowerWindTribeKeys() 
-	return 1 
-end
+
 function PoW1stDoor() 
 	if ( Tracker:ProviderCountForCode("pow_smallkey") >= 1 and PoWNoWarps()==1 ) then
 		return 1

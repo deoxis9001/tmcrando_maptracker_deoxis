@@ -71,7 +71,7 @@ function ToggleItem:save()
     return saveData
 end
 
-function ToggleItem:Load(data)
+function ToggleItem:load(data)
     if data["Active"] ~= nil then
         self:setActive(data["Active"])
     end

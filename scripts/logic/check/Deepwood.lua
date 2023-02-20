@@ -90,7 +90,7 @@ end
 
 
 function Deepwood_1F_BlueWarp_Chest() 
-	if ( DeepwoodDungeons()==1 and DeepwoodWarpChests()==1 and DeepwoodWarpSwitch()==1 ) then
+	if ( DeepwoodDungeons()==1 and DeepwoodBlueWarp()==1 and DeepwoodWarpChests()==1 ) then
 		return 1
 	else
 		return 0

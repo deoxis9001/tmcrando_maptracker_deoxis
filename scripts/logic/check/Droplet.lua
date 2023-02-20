@@ -55,7 +55,7 @@ function Droplets_LeftPath_B2_Underwater_Pot()
 end
 
 function Droplets_LeftPath_B2_IceMadderpillar_BigChest() 
-	if ( TodDungeons()==1 and has("gust") and ToDMadderpillars()==1 and ( ToDBlueWarp()==1 or (ToDMainRoom()==1 or ToDBasementLilySpawn()==1 ) ) ) then
+	if ( TodDungeons()==1 and has("gust") and ToDMadderpillars()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1 or ToDBasementLilySpawn()==1 ) ) ) then
 		return 1
 	else
 		return 0
@@ -111,16 +111,16 @@ function Droplets_RightPath_B1_Pot()
 	end 
 end
 
-function Droplets_RightPath_B1_BluChu_BigChest() 
-	if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and ToDRightIceBlock()==1 ) or ( ToD2ndRupeePath()==1 and ToDDarkMazeReverse()==1 and ToDScissorBeetles()==1 and ToDRightIce()==1 )) and ToDChuDoor()==1 and HasChuDamage()==1 and has("gust") ) then
+function Droplets_RightPath_B3_FrozenChest() 
+	if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and ToDRightIceBlock()==1 ) or ( ToD2ndRupeePath()==1 and ToDDarkMazeReverse()==1 and ToDScissorBeetles()==1 and ToDRightIce()==1 ))) then
 		return 1
 	else
 		return 0
 	end 
 end
 
-function Droplets_RightPath_B3_FrozenChest() 
-	if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and ToDRightIceBlock()==1 ) or ( ToD2ndRupeePath()==1 and ToDDarkMazeReverse()==1 and ToDScissorBeetles()==1 and ToDRightIce()==1 ))) then
+function Droplets_RightPath_B1_BluChu_BigChest() 
+	if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and ToDRightIceBlock()==1 ) or ( ToD2ndRupeePath()==1 and ToDDarkMazeReverse()==1 and ToDScissorBeetles()==1 and ToDRightIce()==1 )) and ToDChuDoor()==1 and HasChuDamage()==1 and has("gust") ) then
 		return 1
 	else
 		return 0

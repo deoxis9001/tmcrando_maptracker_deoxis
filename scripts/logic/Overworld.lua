@@ -239,8 +239,17 @@ function MinishWindCrest()
 		return 0
 	end 
 end
-function WesternShortcut() 
+
+function WesternShortcut_setting() 
 	if ( has("openworld_on") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function WesternShortcut() 
+	if ( WesternShortcut_setting()==1 ) then
 		return 1
 	elseif ( AccessTrilby()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1  ) ) then
 		return 1
@@ -248,6 +257,7 @@ function WesternShortcut()
 		return 0
 	end 
 end
+
 function TrilbyShortcut() 
 	if ( has("openworld_on") ) then
 		return 1

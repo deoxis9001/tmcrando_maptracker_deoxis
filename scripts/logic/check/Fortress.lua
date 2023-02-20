@@ -168,7 +168,7 @@ end
 
 
 function Fortress_BackRight_Statue_ItemDrop() 
-	if ( FowDungeons()==1 and ( FoWBlueWarp()==1 or FoWEyegores()==1) and FoWRightDoor()==1 and FoWCloneSwitch()==1 ) then
+	if ( FowDungeons()==1 and ( FoWBlueWarp()==1 or FoWEyegores()==1) and FoWRightDoor()==1 and FoWStatueCloneSwitch()==1 ) then
 		return 1
 	else
 		return 0
@@ -204,7 +204,7 @@ end
 
 
 function Fortress_BackRight_BigChest() 
-	if ( FowDungeons()==1 and (FoWBlueWarp()==1 or FoWEyegores()==1 ) and FoWRightDoor()==1 and HasDamageSource()==1 and FoWMiddleDoor()==1 and has("mitts") and FoWLastDoor()==1 ) then
+	if ( FowDungeons()==1 and (FoWBlueWarp()==1 or FoWEyegores()==1 ) and FoWRightDoor()==1  and FoWMiddleDoor()==1 and has("mitts") and FoWLastDoor()==1 ) then
 		return 1
 	else
 		return 0

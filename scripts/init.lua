@@ -84,7 +84,7 @@ fusiongoldcombined = KinstoneOptions("fusiongoldcombined", "fusiongoldcombined",
 fusionredcombined = KinstoneOptions("fusionredcombined", "fusionredcombined","images/options/WorldSetting/fusionredcombined_on.png","images/options/WorldSetting/fusionredcombined_off.png",1)
 fusiongreencombined = KinstoneOptions("fusiongreencombined", "fusiongreencombined","images/options/WorldSetting/fusiongreencombined_on.png","images/options/WorldSetting/fusiongreencombined_off.png",2)
 fusionbluecombined = KinstoneOptions("fusionbluecombined", "fusionbluecombined","images/options/WorldSetting/fusionbluecombined_on.png","images/options/WorldSetting/fusionbluecombined_off.png",3)
-progression = SwordOptions("progressive","progressiveitems","images/options/OtherSetting/progressive_on.png","images/options/OtherSetting/progressive_off.png")
+swordprogress = SwordOptions("swordoptions","progressiveitems","images/options/OtherSetting/progressive_on.png","images/options/OtherSetting/progressive_off.png")
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------

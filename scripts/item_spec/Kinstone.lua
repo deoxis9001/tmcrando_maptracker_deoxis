@@ -258,13 +258,13 @@ function Kinstone:save()
     return saveData
 end
 
-function Kinstone:Load(data)
+function Kinstone:load(data)
     if data["CurrentStage"] ~= nil then
         self:setActive(data["CurrentStage"])
 		
     end
     if data["CountMax"] ~= nil then
-        self:setActive(data["CountMax"])
+        self:setActiveCount(data["CountMax"])
 		
     end
     if data["Type"] ~= nil then

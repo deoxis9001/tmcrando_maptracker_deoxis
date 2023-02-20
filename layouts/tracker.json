@@ -23,6 +23,7 @@
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
+				"v_alignment": "top",
 				"item_margin": "0,0",
 				"item_width":320,
 				"item_height":64,
@@ -46,6 +47,7 @@
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
+				"v_alignment": "top",
 				"item_margin": "0,0",
 				"item_width":320,
 				"item_height":64,
@@ -69,6 +71,7 @@
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
+				"v_alignment": "top",
 				"item_margin": "0,0",
 				"item_width":320,
 				"item_height":64,
@@ -85,7 +88,7 @@
     },
     "logic_settings": {
       "type": "group",
-      "header": "Logic Settings",
+      "header": "Logic Settings Part 1",
       "content": {
 		"type": "scroll",
 		"max_height":"448",
@@ -94,6 +97,7 @@
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
+				"v_alignment": "top",
 				"item_margin": "0,0",
 				"item_width":320,
 				"item_height":64,
@@ -103,6 +107,27 @@
 					  ["bobombs_off","likelike_off"],
 					  ["guardskip_off","crenelbeam_off"],
 					  ["downstrikebeetle_off","darkrooms_off"],
+				  ]
+			  }
+		  ]
+      }
+    },
+    "logic_settings2": {
+      "type": "group",
+      "header": "Logic Settings Part 2",
+      "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
 					  ["capeextension_off","lakeminish_off"],
 					  ["cabinswim_off","cloudskill_off"],
 					  ["powjump_off","powpotpuzzleool_off"],
@@ -124,6 +149,7 @@
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
+				"v_alignment": "top",
 				"item_margin": "0,0",
 				"item_width":320,
 				"item_height":64,
@@ -143,10 +169,12 @@
 		"type": "scroll",
 		"max_height":"448",
 		"h_alignment": "center",
+		"v_alignment": "top",
 		"content": [
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
+				"v_alignment": "top",
 				"item_margin": "0,0",
 				"item_width":320,
 				"item_height":64,
@@ -172,6 +200,7 @@
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
+				"v_alignment": "top",
 				"item_margin": "0,0",
 				"item_width":320,
 				"item_height":64,
@@ -190,6 +219,7 @@
       "content": {
         "type": "itemgrid",
         "h_alignment": "center",
+				"v_alignment": "top",
         "item_margin": "0,0,2,10",
         "rows": [
           ["swordcapture", "gust", "cane", "boomerang", "wallet","genericred"],
@@ -209,6 +239,7 @@
       "content": {
         "type": "itemgrid",
         "h_alignment": "center",
+				"v_alignment": "top",
         "item_margin": "0,0",
 		"item_height":64,
 		"item_width":320,
@@ -245,6 +276,34 @@
 		  }
 		]
 	},
+	"settings_tab_logic_settings":  {
+		"type": "dock",
+		"content":[
+		  {
+			"type":"tabbed",
+			"dock":"top",
+			"style":"wrap",
+			"tabs":[
+			  {
+				"title":"Part 1",
+				"icon":"images/icon-maps/Treasure Icon.png",
+				"content":{
+				  "type":"layout",
+				  "key": "logic_settings"
+				}
+			  },
+			  {
+				"title":"Part 2",
+				"icon":"images/icon-maps/Treasure Icon.png",
+				"content":{
+				  "type":"layout",
+				  "key": "logic_settings2"
+				}
+			  },
+			]
+		  }
+		]
+	},
 	"settings":  {
 		"type": "dock",
 		"content":[
@@ -266,7 +325,7 @@
 				"icon":"images/icon-maps/Treasure Icon.png",
 				"content":{
 				  "type":"layout",
-				  "key": "logic_settings"
+				  "key": "settings_tab_logic_settings"
 				}
 			  },
 			  {

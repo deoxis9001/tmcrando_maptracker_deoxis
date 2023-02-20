@@ -920,7 +920,7 @@ function DHCSwitchHit()
 		return 0
 	end 
 end
-function WindPortal() 
+function StrangerFusion() 
 	if ( has("openworld_on") ) then
 		return 1
 	elseif ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0f") ) ) then

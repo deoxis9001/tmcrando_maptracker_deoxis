@@ -207,7 +207,7 @@ function KinstoneOptions:save()
     return saveData
 end
 
-function KinstoneOptions:Load(data)
+function KinstoneOptions:load(data)
     if data["active"] ~= nil then
         self:setActive(data["active"])
     end

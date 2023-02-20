@@ -66,7 +66,7 @@ function Json_Hylia_MinishWoods_NorthMinishHole_Chest()
 end
 
 function Json_Hylia_LonLon_NorthHeartPiece_HeartPiece()
-  if Hylia_CapeCave_HP()==1 then
+  if Hylia_CapeCave_LonLonHP()==1 then
     return 1
   else
     return 0
