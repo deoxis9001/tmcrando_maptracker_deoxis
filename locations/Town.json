@@ -492,7 +492,7 @@
 	  },
 	  {
 		"name":"Figurine House",
-		"item_count":1,
+		"item_count":3,
 		"access_rules":["$Json_Town_EasternShops_FigurineHouse"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"

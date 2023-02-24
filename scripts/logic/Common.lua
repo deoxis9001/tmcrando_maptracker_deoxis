@@ -569,7 +569,7 @@ end
 
 
 function MinishSouthHP()
-	if ( AccessNorthMinish()==1  ) then
+	if ( AccessMinishWoods()==1  ) then
 		return 1
 	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") ) and AccessBelari()==1 and  has("gust") ) then
 		return 1

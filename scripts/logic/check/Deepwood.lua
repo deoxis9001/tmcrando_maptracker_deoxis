@@ -108,7 +108,7 @@ end
 
 
 function Deepwood_1F_Madderpillar_HP() 
-    if ( DeepwoodMadderHP()==1 ) then
+    if ( DeepwoodDungeons()==1 and DeepwoodMadderHP()==1 ) then
         return 1
 	else
 		return 0

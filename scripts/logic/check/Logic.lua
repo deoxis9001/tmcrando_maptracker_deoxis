@@ -187,7 +187,7 @@ end
 
 
 function Crenel_BelowCoF_GoldenTektite() 
-	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0d") ) ) and AccessCrenel()==1 and HasSword()==1 and ( has("grip") or has("bombs") or CrenelMushroom()==1 or WindCrest()==1 ) ) then
+	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0d") ) ) and AccessCrenel()==1 and HasSword()==1 and ( has("grip") or has("bombs") or CrenelMushroom()==1 or CrenelWindCrest()==1 ) ) then
 		return 1
 	else
 		return 0

@@ -423,6 +423,8 @@ function CryptEntrance()
 		return 1
 	elseif ( CanSplit3()==1 ) then
 		return 1
+	elseif ( has("progressiveitems") and  CanSplit4()==1 ) then
+		return 1
 	else
 		return 0
 	end 
@@ -1012,7 +1014,7 @@ end
 function DHCOutsideSwitch() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( HasBow()==1 and HasMagicBoomerang()==1 and HasBeam()==1 ) then
+	elseif ( HasBow()==1 or HasMagicBoomerang()==1 or HasBeam()==1 ) then
 		return 1
 	else
 		return 0
