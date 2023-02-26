@@ -63,7 +63,7 @@ function Palace_1stHalf_5F_BigChest()
 end
 
 function Palace_2ndHalf_1F_DarkRoom_BigChest() 
-	if ( PowDungeons()==1 and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 or (PoWRedWarp()==1 and OverworldBlocks()==1 )) and DarkRooms()==1) then
+	if ( PowDungeons()==1 and ( PoW2ndHalf()==1 or (PoWRedWarp()==1 and OverworldBlocks()==1 )) and DarkRooms()==1) then
 		return 1
 	else
 		return 0
@@ -71,7 +71,7 @@ function Palace_2ndHalf_1F_DarkRoom_BigChest()
 end
 
 function Palace_2ndHalf_1F_DarkRoom_SmallChest() 
-	if ( PowDungeons()==1 and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 or (PoWRedWarp()==1 and OverworldBlocks()==1 )) and DarkRooms()==1) then
+	if ( PowDungeons()==1 and ( PoW2ndHalf()==1 or (PoWRedWarp()==1 and OverworldBlocks()==1 )) and DarkRooms()==1) then
 		return 1
 	else
 		return 0
@@ -79,7 +79,7 @@ function Palace_2ndHalf_1F_DarkRoom_SmallChest()
 end
 
 function Palace_2ndHalf_2F_ManyRollers_Chest() 
-	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and (PoW2ndHalf()==1 or PoWBlueWarp()==1 )) or (PoWRedWarp()==1 and OverworldBlocks()==1) ) and PoWPeahatRoom()==1 ) then
+	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and PoW2ndHalf()==1 ) or (PoWRedWarp()==1 and OverworldBlocks()==1) ) and PoWPeahatRoom()==1 ) then
 		return 1
 	else
 		return 0
@@ -87,7 +87,7 @@ function Palace_2ndHalf_2F_ManyRollers_Chest()
 end
 
 function Palace_2ndHalf_2F_TwinWizrobes_Chest() 
-	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) or ( PoWRedWarp()==1 and OverworldBlocks()==1 )) and PoWDoubleWiz()==1 )  then
+	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoW2ndHalf()==1 ) or ( PoWRedWarp()==1 and OverworldBlocks()==1 ) ) and PoWDoubleWiz()==1 )  then
 		return 1
 	else
 		return 0
@@ -95,7 +95,7 @@ function Palace_2ndHalf_2F_TwinWizrobes_Chest()
 end
 
 function Palace_2ndHalf_3F_FireWizrobes_BigChest() 
-	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) or ( PoWRedWarp()==1 and OverworldBlocks()==1 )) and PoWTribleWiz()==1 )  then
+	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and  PoW2ndHalf()==1 ) or ( PoWRedWarp()==1 and OverworldBlocks()==1 )) and PoWTribleWiz()==1 )  then
 		return 1
 	else
 		return 0
@@ -111,7 +111,7 @@ function Palace_2ndHalf_4F_HP()
 end
 
 function Palace_2ndHalf_4F_SwitchHit_Chest() 
-	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and has("cape") and PoWSwitch()==1 and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) or ( PoWRedWarp()==1 and OverworldBlocks()==1 and PoWSwitch()==1 and ( has("cape") or PoWHandRoom()==1 ) ) ) )  then
+	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and has("cape") and PoWSwitch()==1 and PoW2ndHalf()==1 ) or ( PoWRedWarp()==1 and OverworldBlocks()==1 and PoWSwitch()==1 and ( has("cape") or PoWHandRoom()==1 ) ) ) )  then
 		return 1
 	else
 		return 0
@@ -119,7 +119,7 @@ function Palace_2ndHalf_4F_SwitchHit_Chest()
 end
 
 function Palace_2ndHalf_5F_Bombarossa_Chest() 
-	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and has("cape") and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) or  PoWRedWarp()==1 )  and PoWRedWarpDoor()==1 and BombWalls()==1 and OverworldBlocks()==1 )  then
+	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and has("cape") and PoW2ndHalf()==1 ) or  PoWRedWarp()==1 )  and PoWRedWarpDoor()==1 and BombWalls()==1 and OverworldBlocks()==1 )  then
 		return 1
 	else
 		return 0
@@ -127,7 +127,7 @@ function Palace_2ndHalf_5F_Bombarossa_Chest()
 end
 
 function Palace_2ndHalf_4F_BlockMaze_Chest() 
-	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and has("cape") and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) or  PoWRedWarp()==1 )  and PoWRedWarpDoor()==1 and BombWalls()==1 and OverworldBlocks()==1 and PoWLastDoor()==1 )  then
+	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and has("cape") and PoW2ndHalf()==1 ) or  PoWRedWarp()==1 )  and PoWRedWarpDoor()==1 and BombWalls()==1 and OverworldBlocks()==1 and PoWLastDoor()==1 )  then
 		return 1
 	else
 		return 0
@@ -135,7 +135,7 @@ function Palace_2ndHalf_4F_BlockMaze_Chest()
 end
 
 function Palace_2ndHalf_5F_RightSide_Chest() 
-	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and has("cape") and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) or  PoWRedWarp()==1 )  and PoWRedWarpDoor()==1 and BombWalls()==1 and OverworldBlocks()==1 and PoWLastDoor()==1 and has("cape"))  then
+	if ( PowDungeons()==1 and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and has("cape") and PoW2ndHalf()==1 ) or  PoWRedWarp()==1 )  and PoWRedWarpDoor()==1 and BombWalls()==1 and OverworldBlocks()==1 and PoWLastDoor()==1 and has("cape") )  then
 		return 1
 	else
 		return 0

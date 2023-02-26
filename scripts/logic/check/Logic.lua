@@ -391,7 +391,7 @@ function Falls_Entrance_HP()
 end
 
 function Falls_WaterDigCaveFusion_HP()
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1f") ) ) and ( OverworldBlocks()==1 and CapeExtension()==1 and has("mitts") ) or ( AccessFalls()==1 and has("grip")==1 and ( has("flippers")==1 or ( has("cape")==1 and DarkRooms()==1 ) ) and has("mitts") ) ) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1f") ) ) and ( ( OverworldBlocks()==1 and CapeExtension()==1 ) or ( AccessFalls()==1 and has("grip")==1 and ( has("flippers")==1 or ( has("cape")==1 and DarkRooms()==1 ) ) ) and has("mitts") ) ) then
 		return 1
 	else
 		return 0
@@ -399,7 +399,7 @@ function Falls_WaterDigCaveFusion_HP()
 end
 
 function Falls_WaterDigCaveFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1f") ) ) and ( OverworldBlocks()==1 and CapeExtension()==1 and has("mitts") ) or ( AccessFalls()==1 and has("grip")==1 and ( has("flippers")==1 or ( has("cape")==1 and DarkRooms()==1 ) ) and has("mitts") ) ) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1f") ) ) and ( ( OverworldBlocks()==1 and CapeExtension()==1 ) or ( AccessFalls()==1 and has("grip")==1 and ( has("flippers")==1 or ( has("cape")==1 and DarkRooms()==1 ) ) ) and has("mitts") ) ) then
 		return 1
 	else
 		return 0
@@ -906,7 +906,7 @@ function Ruins_MinishHome_Chest()
 end
 
 function Ruins_PillarsFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions64") ) ) and AccessRuins()==1 and RuinsShortcut()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions64") ) ) and AccessRuins()==1 and RuinsArmos()==1) then
 		return 1
 	else
 		return 0
@@ -914,7 +914,7 @@ function Ruins_PillarsFusion_Chest()
 end
 
 function Ruins_BeanStalkFusion_BigChest() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions17") ) ) and AccessRuins()==1 and RuinsShortcut()==1 and RuinsTektites()==1) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions17") ) ) and AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1) then
 		return 1
 	else
 		return 0
@@ -922,7 +922,7 @@ function Ruins_BeanStalkFusion_BigChest()
 end
 
 function Ruins_CrackFusion_Chest()
-    if (( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions41") ) ) and  AccessRuins()==1 and RuinsShortcut()==1 and RuinsTektites()==1) then
+    if (( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions41") ) ) and  AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1) then
         return 1
 	else
 		return 0
@@ -930,7 +930,7 @@ function Ruins_CrackFusion_Chest()
 end
 
 function Ruins_MinishCave_HP() 
-    if ( AccessRuins()==1 and RuinsShortcut()==1 and RuinsTektites()==1) then
+    if ( AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1) then
 		return 1
 	else
 		return 0
@@ -1085,7 +1085,7 @@ function Town_GoronShop_Set1_Item1()
 end
 
 function Town_GoronShop_Set2_Items()
-	if Town_GoronShop_Set1_Item1()==1 and has("goron_eu") and has("wallet2") then
+	if Town_GoronShop_Set1_Item1()==1 and has("goron_eu") and has("wallet") then
 		return 1
 	elseif Town_GoronShop_Set1_Item1()==1 and has("goron_jp") and has("wallet")  then
 		return 1
@@ -1105,7 +1105,7 @@ function Town_GoronShop_Set3_Item1()
 end
 
 function Town_GoronShop_Set3_Items()
-	if Town_GoronShop_Set2_Items()==1 and has("goron_eu") and has("wallet2") then
+	if Town_GoronShop_Set2_Items()==1 and has("goron_eu") and has("wallet") then
 		return 1
 	elseif Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet")  then
 		return 1
@@ -1667,7 +1667,7 @@ function Swamp_ButterflyFusion_Item()
 end
 
 function Swamp_CenterCave_DarknutChest() 
-	if ( AccessSwamp()==1 and HasDamageSource()==1) then
+	if ( AccessSwamp()==1 and SwampDarknut()==1 ) then
 		return 1
 	else
 		return 0
@@ -1692,7 +1692,7 @@ function Swamp_GoldenRope()
 end
 
 function Swamp_NearWaterfall_CaveHP() 
-	if ( AccessSwamp()==1  and SwampNorthShortcut()==1 and ( has("cape") or has("flippers") ) ) then
+	if ( AccessSwamp()==1  and ( SwampNorthShortcut()==1 or HasBow()==1 )  and ( has("cape") or has("flippers") ) ) then
 		return 1 
 	else
 		return 0
@@ -1700,7 +1700,7 @@ function Swamp_NearWaterfall_CaveHP()
 end
 
 function Swamp_WaterfallFusion_DojoNPC() 
-	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and AccessSwamp()==1  and SwampNorthShortcut()==1 and has("flippers")  ) then
+	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and AccessSwamp()==1  and ( SwampNorthShortcut()==1 or HasBow()==1 ) and has("flippers")  ) then
 		return 1
 	else
 		return 0
@@ -1708,7 +1708,7 @@ function Swamp_WaterfallFusion_DojoNPC()
 end
 
 function Swamp_NorthCave_Chest() 
-	if ( AccessSwamp()==1 and SwampNorthShortcut()==1 ) then
+	if ( AccessSwamp()==1 and ( SwampNorthShortcut()==1 or HasBow()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -1732,7 +1732,7 @@ function Swamp_Underwater()
 end
 
 function Swamp_SouthCave_Chest() 
-	if ( AccessSwamp()==1 and SwampShortcut()==1 and SwampSouthShortcut()==1 ) then
+	if ( AccessSwamp()==1 and ( has("flippers") or has("cape") or ( HasBow()==1 and has("boots") ) or ( SwampShortcut()==1 and SwampSouthShortcut()==1 ) or ( SwampWindCrest()==1 and ( HasBow()==1 or SwampSouthShortcut()==1 ) ) ) ) then
 		return 1
 	else
 		return 0
@@ -1740,7 +1740,7 @@ function Swamp_SouthCave_Chest()
 end
 
 function Swamp_Dojo_HP()
-	if ( (AccessSwamp()==1 and (has("cape") or HasBow()==1 or ( has("boots") and has("flippers") ) ) ) or (SwampWindCrest()==1 and has("boots")) ) then
+	if ( ( AccessSwamp()==1 and (has("cape") or HasBow()==1 or ( has("boots") and has("flippers") ) ) ) or (SwampWindCrest()==1 and has("boots") ) ) then
 		return 1
 	else
 		return 0

@@ -80,11 +80,11 @@ redW = Kinstone("redW","redW","images/items/KinstoneRedW.png","images/items/Kins
 greenN = Kinstone("greenN","greenN","images/items/KinstoneGreenN.png",nil,16,0)
 greenV = Kinstone("greenV","greenV","images/items/KinstoneGreenV.png","images/items/KinstoneGreenV.png",17,0)
 greenZ = Kinstone("greenZ","greenZ","images/items/KinstoneGreenZ.png",nil,16,0)
-fusiongoldcombined = KinstoneOptions("fusiongoldcombined", "fusiongoldcombined","images/options/WorldSetting/fusiongoldcombined_on.png","images/options/WorldSetting/fusiongoldcombined_off.png",0)
-fusionredcombined = KinstoneOptions("fusionredcombined", "fusionredcombined","images/options/WorldSetting/fusionredcombined_on.png","images/options/WorldSetting/fusionredcombined_off.png",1)
-fusiongreencombined = KinstoneOptions("fusiongreencombined", "fusiongreencombined","images/options/WorldSetting/fusiongreencombined_on.png","images/options/WorldSetting/fusiongreencombined_off.png",2)
-fusionbluecombined = KinstoneOptions("fusionbluecombined", "fusionbluecombined","images/options/WorldSetting/fusionbluecombined_on.png","images/options/WorldSetting/fusionbluecombined_off.png",3)
-swordprogress = SwordOptions("swordoptions","progressiveitems","images/options/OtherSetting/progressive_on.png","images/options/OtherSetting/progressive_off.png")
+fusiongoldcombined = KinstoneOptions("fusiongoldcombined", "fusiongoldcombined","images/options/FusionSettings/fusiongoldcombined_on.png","images/options/FusionSettings/fusiongoldcombined_off.png",0)
+fusionredcombined = KinstoneOptions("fusionredcombined", "fusionredcombined","images/options/FusionSettings/fusionredcombined_on.png","images/options/FusionSettings/fusionredcombined_off.png",1)
+fusiongreencombined = KinstoneOptions("fusiongreencombined", "fusiongreencombined","images/options/FusionSettings/fusiongreencombined_on.png","images/options/FusionSettings/fusiongreencombined_off.png",2)
+fusionbluecombined = KinstoneOptions("fusionbluecombined", "fusionbluecombined","images/options/FusionSettings/fusionbluecombined_on.png","images/options/FusionSettings/fusionbluecombined_off.png",3)
+swordprogress = SwordOptions("swordoptions","progressiveitems","images/options/WeaponsSettings/progressive_on.png","images/options/WeaponsSettings/progressive_off.png")
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------

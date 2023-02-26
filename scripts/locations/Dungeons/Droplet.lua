@@ -142,8 +142,24 @@ function Json_Dungeon_Droplet_PostBlueChuFrozenChest()
 	end 
 end
 
-function Json_Dungeon_Droplet_DarkMaze()
+function Json_Dungeon_Droplet_DarkMazeBottomChest()
 	if ( Droplets_RightPath_B2_DarkMaze_BottomChest()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Json_Dungeon_Droplets_DarkMazeTopRightChest()
+	if ( Droplets_RightPath_B2_DarkMaze_TopRightChest()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Json_Dungeon_Droplets_DarkMazeTopLeftChest()
+	if ( Droplets_RightPath_B2_DarkMaze_TopLeftChest()==1 ) then
 		return 1
 	else
 		return 0

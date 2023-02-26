@@ -91,7 +91,15 @@ function FusionsGold()
 end
 
 function Sword1()
-  if Tracker:ProviderCountForCode("sword") > 0 then
+  if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword2") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword") > 0 then
     return 1
   elseif has("smithsword") then
     return 1
@@ -101,7 +109,13 @@ function Sword1()
 end
 
 function Sword2()
-  if Tracker:ProviderCountForCode("sword2") > 0 then
+  if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword2") > 0 then
     return 1
   elseif has("greensword") then
     return 1
@@ -111,7 +125,11 @@ function Sword2()
 end
 
 function Sword3()
-  if Tracker:ProviderCountForCode("sword3") > 0 then
+  if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword3") > 0 then
     return 1
   elseif has("redsword") then
     return 1
@@ -120,7 +138,9 @@ function Sword3()
   end
 end
 function Sword4()
-  if Tracker:ProviderCountForCode("sword4") > 0 then
+  if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+    return 1
+  elseif Tracker:ProviderCountForCode("sword4") > 0 then
     return 1
   elseif has("bluesword") then
     return 1
@@ -621,9 +641,9 @@ end
 
 
 function DeepwoodMadderHP()
-	if ( DeepwoodBlueWarp()==1 and DeepwoodMadderpillarDoor()==1 and DeepwoodWeb()==1 ) then
+	if ( DeepwoodPreMadderpillar()==1 and DeepwoodMadderpillarDoor()==1 and DeepwoodWeb()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has ("gust") and ( Deepwood1stDoor()==1 or DeepwoodBlueWarp()==1 ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( ( DeepwoodPreMadderpillar()==1 and DeepwoodMadderpillarDoor()==1 and DeepwoodWeb()==1 ) or has("gust") and ( Deepwood1stDoor()==1 or DeepwoodPreMadderpillar()==1 ) ) ) then
 		return 1
 	else
 		return 0
@@ -678,7 +698,7 @@ end
 function ToDRightRupees()
 	if ( ToD2ndRupeePath()==1  ) then
 		return 1
-	elseif ( has("grabbable_hard") and has("gust") ) then
+	elseif ( has("grabbable_hard") and has("gust") and ToDLilypadEnd()==1 ) then
 		return 1
 	else
 		return 0

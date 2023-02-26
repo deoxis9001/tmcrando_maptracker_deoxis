@@ -32,6 +32,7 @@
 	  {
 		"name":"Pot",
 		"item_count":1,
+		"visibility_rules":["specialpot_on"],
 		"access_rules":["$Json_LonLon_MalonPot_Pot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"

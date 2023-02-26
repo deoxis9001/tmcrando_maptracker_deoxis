@@ -6,13 +6,13 @@
 		"map":"map",
 		"x":1700,
 		"y":1560,
-		"restrict_visibility_rules":["rupees_on","fusionblue_vanilla,openworld_off"]
 	  }
 	],
 	"sections":[
 	  {
 		"name":"Rupee",
 		"item_count":1,
+		"visibility_rules":["rupees_on"],
 		"access_rules":["$Json_Hills_MittsCave_Rupee"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -142,7 +142,7 @@
 	  {
 		"name":"Fuzer Meenie",
 		"hosted_item":"fusions62",
-		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
 		"access_rules":["$Json_Hills_Farmer_Fuzer1"],
 	  },
 	  {

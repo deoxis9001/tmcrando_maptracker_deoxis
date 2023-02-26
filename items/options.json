@@ -159,7 +159,7 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CrestCrenelNo.png",
+        "img": "images/options/CrestSettings/CrestCrenelNo.png",
         "codes": "crestcrenel_no",
         "inherit_codes":false
       },
@@ -178,7 +178,7 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CrestFallsNo.png",
+        "img": "images/options/CrestSettings/CrestFallsNo.png",
         "codes": "crestfalls_no",
         "inherit_codes":false
       },
@@ -197,7 +197,7 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CrestCloudsNo.png",
+        "img": "images/options/CrestSettings/CrestCloudsNo.png",
         "codes": "crestclouds_no",
         "inherit_codes":false
       },
@@ -216,7 +216,7 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CrestSwampNo.png",
+        "img": "images/options/CrestSettings/CrestSwampNo.png",
         "codes": "crestswamp_no",
         "inherit_codes":false
       },
@@ -235,7 +235,7 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CrestShfNo.png",
+        "img": "images/options/CrestSettings/CrestShfNo.png",
         "codes": "crestshf_no",
         "inherit_codes":false
       },
@@ -254,7 +254,7 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CrestMinishNo.png",
+        "img": "images/options/CrestSettings/CrestMinishNo.png",
         "codes": "crestminish_no",
         "inherit_codes":false
       },
@@ -636,12 +636,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/rupees_off.png",
+        "img":"images/options/LocationsSettings/rupees_off.png",
         "codes":"rupees_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/rupees_on.png",
+        "img":"images/options/LocationsSettings/rupees_on.png",
         "codes":"rupees_on",
         "inherit_codes":false
       },
@@ -655,12 +655,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/specialpot_off.png",
+        "img":"images/options/LocationsSettings/specialpot_off.png",
         "codes":"specialpot_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/specialpot_on.png",
+        "img":"images/options/LocationsSettings/specialpot_on.png",
         "codes":"specialpot_on",
         "inherit_codes":false
       },
@@ -674,12 +674,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/digging_off.png",
+        "img":"images/options/LocationsSettings/digging_off.png",
         "codes":"digging_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/digging_on.png",
+        "img":"images/options/LocationsSettings/digging_on.png",
         "codes":"digging_on",
         "inherit_codes":false
       },
@@ -693,12 +693,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/underwater_off.png",
+        "img":"images/options/LocationsSettings/underwater_off.png",
         "codes":"underwater_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/underwater_on.png",
+        "img":"images/options/LocationsSettings/underwater_on.png",
         "codes":"underwater_on",
         "inherit_codes":false
       },
@@ -712,12 +712,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/golden_enemy_off.png",
+        "img":"images/options/LocationsSettings/golden_enemy_off.png",
         "codes":"golden_enemy_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/golden_enemy_on.png",
+        "img":"images/options/LocationsSettings/golden_enemy_on.png",
         "codes":"golden_enemy_on",
         "inherit_codes":false
       }
@@ -731,31 +731,31 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/ped_items_off.png",
+        "img":"images/options/DHCRequirements/ped_items_off.png",
         "codes":"ped_items_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/ped_items_on.png",
+        "img":"images/options/DHCRequirements/ped_items_on.png",
         "codes":"ped_items_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name":"Fusion Green",
+    "name":"OpenWord",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/openworld_off.png",
+        "img":"images/options/WorldSettings/Settings/openworld_off.png",
         "codes":"openworld_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/openworld_on.png",
+        "img":"images/options/WorldSettings/Settings/openworld_on.png",
         "codes":"openworld_on",
         "inherit_codes":false
       }
@@ -769,17 +769,17 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/fusiongold_removed.png",
+        "img":"images/options/FusionSettings/fusiongold_removed.png",
         "codes":"fusiongold_removed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/fusiongold_vanilla.png",
+        "img":"images/options/FusionSettings/fusiongold_vanilla.png",
         "codes":"fusiongold_vanilla",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/fusiongold_complet.png",
+        "img":"images/options/FusionSettings/fusiongold_complet.png",
         "codes":"fusiongold_complet",
         "inherit_codes":false
       },
@@ -793,17 +793,17 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/fusionred_removed.png",
+        "img":"images/options/FusionSettings/fusionred_removed.png",
         "codes":"fusionred_removed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/fusionred_vanilla.png",
+        "img":"images/options/FusionSettings/fusionred_vanilla.png",
         "codes":"fusionred_vanilla",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/fusionred_complet.png",
+        "img":"images/options/FusionSettings/fusionred_complet.png",
         "codes":"fusionred_complet",
         "inherit_codes":false
       },
@@ -817,17 +817,17 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/fusionblue_removed.png",
+        "img":"images/options/FusionSettings/fusionblue_removed.png",
         "codes":"fusionblue_removed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/fusionblue_vanilla.png",
+        "img":"images/options/FusionSettings/fusionblue_vanilla.png",
         "codes":"fusionblue_vanilla",
         "inherit_codes":false,
       },
 	  {
-        "img":"images/options/WorldSetting/fusionblue_complet.png",
+        "img":"images/options/FusionSettings/fusionblue_complet.png",
         "codes":"fusionblue_complet",
         "inherit_codes":false
       },
@@ -841,17 +841,17 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSetting/fusiongreen_removed.png",
+        "img":"images/options/FusionSettings/fusiongreen_removed.png",
         "codes":"fusiongreen_removed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/fusiongreen_vanilla.png",
+        "img":"images/options/FusionSettings/fusiongreen_vanilla.png",
         "codes":"fusiongreen_vanilla",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/fusiongreen_complet.png",
+        "img":"images/options/FusionSettings/fusiongreen_complet.png",
         "codes":"fusiongreen_complet",
         "inherit_codes":false
       },
@@ -865,12 +865,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WindCrestSetting/crenel_no.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/crenel_no.png",
         "codes":"crenelwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WindCrestSetting/crenel_yes.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/crenel_yes.png",
         "codes":"crenelwindcrest_yes",
         "inherit_codes":false
       }
@@ -884,12 +884,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WindCrestSetting/falls_no.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/falls_no.png",
         "codes":"fallswindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WindCrestSetting/falls_yes.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/falls_yes.png",
         "codes":"fallswindcrest_yes",
         "inherit_codes":false
       }
@@ -903,12 +903,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WindCrestSetting/cloud_no.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/cloud_no.png",
         "codes":"cloudwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WindCrestSetting/cloud_yes.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/cloud_yes.png",
         "codes":"cloudwindcrest_yes",
         "inherit_codes":false
       }
@@ -922,12 +922,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WindCrestSetting/swamp_no.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/swamp_no.png",
         "codes":"swampwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WindCrestSetting/swamp_yes.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/swamp_yes.png",
         "codes":"swampwindcrest_yes",
         "inherit_codes":false
       }
@@ -941,12 +941,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WindCrestSetting/shf_no.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/shf_no.png",
         "codes":"shfwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WindCrestSetting/shf_yes.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/shf_yes.png",
         "codes":"shfwindcrest_yes",
         "inherit_codes":false
       }
@@ -960,12 +960,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WindCrestSetting/minish_no.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/minish_no.png",
         "codes":"minishwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WindCrestSetting/minish_yes.png",
+        "img":"images/options/WorldSettings/WindCrestSetting/minish_yes.png",
         "codes":"minishwindcrest_yes",
         "inherit_codes":false
       }
@@ -1243,12 +1243,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSetting/DungeonsER_off.png",
+        "img": "images/options/WorldSettings/Settings/DungeonsER_off.png",
         "codes": "dungeonser_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/DungeonsER_on.png",
+        "img":"images/options/WorldSettings/Settings/DungeonsER_on.png",
         "codes": "dungeonser_on",
         "inherit_codes":false
       },
@@ -1262,17 +1262,17 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/WorldSetting/WeaponsBow_no.png",
+        "img":"images/options/WeaponsSettings/WeaponsBow_no.png",
         "codes": "weaponsbow_no",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WorldSetting/WeaponsBow_yes.png",
+        "img": "images/options/WeaponsSettings/WeaponsBow_yes.png",
         "codes": "weaponsbow_yes",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WorldSetting/WeaponsBow_boss.png",
+        "img": "images/options/WeaponsSettings/WeaponsBow_boss.png",
         "codes": "weaponsbow_boss",
         "inherit_codes":false
       },
@@ -1286,12 +1286,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/WorldSetting/WeaponsGust_no.png",
+        "img":"images/options/WeaponsSettings/WeaponsGust_no.png",
         "codes": "weaponsgust_no",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WorldSetting/WeaponsGust_yes.png",
+        "img": "images/options/WeaponsSettings/WeaponsGust_yes.png",
         "codes": "weaponsgust_yes",
         "inherit_codes":false
       },
@@ -1305,17 +1305,17 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/WorldSetting/WeaponsBombs_no.png",
+        "img":"images/options/WeaponsSettings/WeaponsBombs_no.png",
         "codes": "weaponsbombs_no",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WorldSetting/WeaponsBombs_yes.png",
+        "img": "images/options/WeaponsSettings/WeaponsBombs_yes.png",
         "codes": "weaponsbombs_yes",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WorldSetting/WeaponsBombs_boss.png",
+        "img": "images/options/WeaponsSettings/WeaponsBombs_boss.png",
         "codes": "weaponsbombs_yes,weaponsbombs_boss",
         "inherit_codes":false
       },
@@ -1329,12 +1329,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/WorldSetting/weaponslamp_no.png",
+        "img":"images/options/WeaponsSettings/weaponslamp_no.png",
         "codes": "weaponslamp_no",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WorldSetting/weaponslamp_yes.png",
+        "img": "images/options/WeaponsSettings/weaponslamp_yes.png",
         "codes": "weaponslamp_yes",
         "inherit_codes":false
       },
@@ -1348,48 +1348,48 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSetting/cucco_none.png",
+        "img": "images/options/LocationsSettings/cucco_none.png",
         "codes": "cucco_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/cucco_1.png",
+        "img":"images/options/LocationsSettings/cucco_1.png",
         "codes": "cucco_1",
       },
       {
-        "img":"images/options/WorldSetting/cucco_2.png",
+        "img":"images/options/LocationsSettings/cucco_2.png",
         "codes": "cucco_2",
       },
       {
-        "img":"images/options/WorldSetting/cucco_3.png",
+        "img":"images/options/LocationsSettings/cucco_3.png",
         "codes": "cucco_3",
       },
       {
-        "img":"images/options/WorldSetting/cucco_4.png",
+        "img":"images/options/LocationsSettings/cucco_4.png",
         "codes": "cucco_4",
       },
       {
-        "img":"images/options/WorldSetting/cucco_5.png",
+        "img":"images/options/LocationsSettings/cucco_5.png",
         "codes": "cucco_5",
       },
       {
-        "img":"images/options/WorldSetting/cucco_6.png",
+        "img":"images/options/LocationsSettings/cucco_6.png",
         "codes": "cucco_6",
       },
       {
-        "img":"images/options/WorldSetting/cucco_7.png",
+        "img":"images/options/LocationsSettings/cucco_7.png",
         "codes": "cucco_7",
       },
       {
-        "img":"images/options/WorldSetting/cucco_8.png",
+        "img":"images/options/LocationsSettings/cucco_8.png",
         "codes": "cucco_8",
       },
       {
-        "img":"images/options/WorldSetting/cucco_9.png",
+        "img":"images/options/LocationsSettings/cucco_9.png",
         "codes": "cucco_9",
       },
       {
-        "img":"images/options/WorldSetting/cucco_10.png",
+        "img":"images/options/LocationsSettings/cucco_10.png",
         "codes": "cucco_10",
       },
     ]
@@ -1402,28 +1402,28 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSetting/goron_none.png",
+        "img": "images/options/LocationsSettings/goron_none.png",
         "codes": "goron_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/goron_1.png",
+        "img":"images/options/LocationsSettings/goron_1.png",
         "codes": "goron_1",
       },
       {
-        "img":"images/options/WorldSetting/goron_2.png",
+        "img":"images/options/LocationsSettings/goron_2.png",
         "codes": "goron_2",
       },
       {
-        "img":"images/options/WorldSetting/goron_3.png",
+        "img":"images/options/LocationsSettings/goron_3.png",
         "codes": "goron_3",
       },
       {
-        "img":"images/options/WorldSetting/goron_4.png",
+        "img":"images/options/LocationsSettings/goron_4.png",
         "codes": "goron_4",
       },
       {
-        "img":"images/options/WorldSetting/goron_5.png",
+        "img":"images/options/LocationsSettings/goron_5.png",
         "codes": "goron_5",
       },
     ]
@@ -1436,12 +1436,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSetting/goron_eu.png",
+        "img": "images/options/LocationsSettings/goron_eu.png",
         "codes": "goron_eu",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSetting/goron_jp.png",
+        "img":"images/options/LocationsSettings/goron_jp.png",
         "codes": "goron_jp",
         "inherit_codes":false
       }
@@ -1467,6 +1467,180 @@
       {
         "img":"images/options/LogicSettings/grabbable_hard.png",
         "codes": "grabbable_hard",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "DWS warp",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSettings/WarpsSettings/dws_warps_none.png",
+        "codes": "dws_warps_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/dws_warps_blue.png",
+        "codes": "dws_warps_blue",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/dws_warps_red.png",
+        "codes": "dws_warps_red",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/dws_warps_all.png",
+        "codes": "dws_warps_blue,dws_warps_red",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "CoF warp",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSettings/WarpsSettings/cof_warps_none.png",
+        "codes": "cof_warps_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/cof_warps_blue.png",
+        "codes": "cof_warps_blue",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/cof_warps_red.png",
+        "codes": "cof_warps_red",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/cof_warps_all.png",
+        "codes": "cof_warps_blue,cof_warps_red",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "FOW warp",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSettings/WarpsSettings/fow_warps_none.png",
+        "codes": "fow_warps_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/fow_warps_blue.png",
+        "codes": "fow_warps_blue",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/fow_warps_red.png",
+        "codes": "fow_warps_red",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/fow_warps_all.png",
+        "codes": "fow_warps_blue,fow_warps_red",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "TOD warp",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSettings/WarpsSettings/tod_warps_none.png",
+        "codes": "tod_warps_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/tod_warps_blue.png",
+        "codes": "tod_warps_blue",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/tod_warps_red.png",
+        "codes": "tod_warps_red",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/tod_warps_all.png",
+        "codes": "tod_warps_blue,tod_warps_red",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "POW warp",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSettings/WarpsSettings/pow_warps_none.png",
+        "codes": "pow_warps_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/pow_warps_blue.png",
+        "codes": "pow_warps_blue",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/pow_warps_red.png",
+        "codes": "pow_warps_red",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/pow_warps_all.png",
+        "codes": "pow_warps_blue,pow_warps_red",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "DHC warp",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/WorldSettings/WarpsSettings/dhc_warps_none.png",
+        "codes": "dhc_warps_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/dhc_warps_blue.png",
+        "codes": "dhc_warps_blue",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/dhc_warps_red.png",
+        "codes": "dhc_warps_red",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/WorldSettings/WarpsSettings/dhc_warps_all.png",
+        "codes": "dhc_warps_blue,dhc_warps_red",
         "inherit_codes":false
       }
     ]

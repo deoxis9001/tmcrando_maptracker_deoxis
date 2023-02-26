@@ -7,7 +7,7 @@ function AccessEasternHills()
 end
 
 function AccessLonLon()
-	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or LonLonNorthShortcut_settings()==1 or (has("flippers") and has("mitts") )))) then
+	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or LonLonNorthShortcut()==1 or (has("flippers") and has("mitts") )))) then
 		return 1
 	else
 		return 0
@@ -39,7 +39,7 @@ function AccessMinishWoods()
 end
 
 function AccessNorthMinish() 
-	if ( AccessMinishWoods()==1 and ( has("flippers") or has("cape") or LonLonSouthShortcut()==1 )) then
+	if ( AccessMinishWoods()==1 and ( has("flippers") or has("cape") or LonLonSouthShortcut()==1 or ( AccessLonLon()==1 and has("cane") ) ) ) then
 		return 1
 	else
 		return 0
@@ -47,7 +47,7 @@ function AccessNorthMinish()
 end
 
 function AccessBelari() 
-	if ( ( AccessMinishWoods()==1 and OverworldBlocks()==1) or MinishWindCrest()==1 or CompleteDeepwood()==1 ) then
+	if ( ( AccessMinishWoods()==1 and ( OverworldBlocks()==1 or CompleteDeepwood()==1 ) ) or MinishWindCrest()==1 ) then
 		return 1
 	else
 		return 0
@@ -99,7 +99,7 @@ function GotScrolls()
 	end 
 end
 function AccessRuins() 
-	if ( ( has("boots") or has("cape") ) and ( ( AccessSwamp()==1 and SwampShortcut()==1 ) or SwampWindCrest()==1 ) and RuinsFusion()==1 )	then
+	if ( RuinsFusion()==1 and AccessSwamp()==1 and ( has("cape") or ( has("boots") and ( has("flippers") or HasBow()==1 or SwampShortcut()==1 or SwampWindCrest()==1 ) ) ) ) then
 		return 1
 	else
 		return 0
@@ -121,7 +121,7 @@ function AccessCrypt()
 	
 end
 function AccessFalls()
-	if ( ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and has("grip") ) or FallsWindCrest()==1 or ( AccessWindTribe_Setting()==1 and has("grip") )) then
+	if ( ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and has("grip") ) or FallsWindCrest()==1 or ( has("grip") and ( CloudWindCrest()==1 or ( StrangerFusion()==1 and CompletedGolds()==1 ) ) ) ) then
 		return 1
 	else
 		return 0
@@ -129,15 +129,7 @@ function AccessFalls()
 end
 
 function AccessClouds()
-	if ( ( AccessFalls()==1 and has("grip") ) or AccessWindTribe_Setting()==1 )then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function AccessWindTribe_Setting() 
-	if ( OpenWindTribe()==1 or CloudWindCrest()==1 ) then
+	if ( ( AccessFalls()==1 and has("grip") ) or CloudWindCrest()==1 or ( StrangerFusion()==1 and CompletedGolds()==1 ) )then
 		return 1
 	else
 		return 0
@@ -145,7 +137,7 @@ function AccessWindTribe_Setting()
 end
 
 function AccessWindTribe() 
-	if ( CloudWindCrest()==1 or OpenWindTribe()==1 or ( AccessClouds()==1 and ( ( fusiongoldcombined:getActive()==false and Tracker:ProviderCountForCode("clouds")>=4  ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=9 )  ))) then
+	if ( ( StrangerFusion()==1 and CompletedGolds()==1 ) or ( AccessClouds()==1 and CloudFusions()==1 ) or CloudWindCrest()==1 ) then
 		return 1
 	else
 		return 0
@@ -167,7 +159,9 @@ function AccessCoF()
 	end 
 end
 function CoFBasementAccess()
-	if  CofDungeons()==1 and (CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 )) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 )) then
+	if has("openworld_on") then
+		return 1
+	elseif  (CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 )) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 )) then
 		return 1
 	else
 		return 0
@@ -211,7 +205,7 @@ function AccessDHC()
 	end 
 end
 function DHCBlackKnight()
-	if ( DHCBlueWarp()==1 or ( DHCRedWarp()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 and DHCBlackKnightFight()==1 ) or ( DHC1stDoor()==1 and DHC2ndCanon()==1 and BombWalls()==1 and DHCThrone()==1 and CanSplit4()==1 and DHCOutsideSwitch()==1 and DHCSwitchPuzzles()==1 and DHCChainSoldiers()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 and DHCBlackKnightFight()==1 ) ) then
+	if ( DHCBlackKnightFight()==1 and ( DHCBlueWarp()==1 or ( DHCRedWarp()==1 and DHCChainSoldiers()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 ) or ( DHC1stDoor()==1 and DHC2ndCanon()==1 and BombWalls()==1 and DHCThrone()==1 and CanSplit4()==1 and DHCOutsideSwitch()==1 and DHCSwitchPuzzles()==1 and DHCChainSoldiers()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 ) ) ) then
 		return 1
 	else
 		return 0

@@ -1948,7 +1948,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
+		"access_rules":["$Json_Dungeon_Droplet_DarkMazeBottomChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -1967,7 +1967,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
+		"access_rules":["$Json_Dungeon_Droplets_DarkMazeTopLeftChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -1986,7 +1986,7 @@
 	  {
 		"name":"Chest",
 		"item_count":1,
-		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
+		"access_rules":["$Json_Dungeon_Droplets_DarkMazeTopRightChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  

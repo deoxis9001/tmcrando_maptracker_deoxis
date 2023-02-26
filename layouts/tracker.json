@@ -19,6 +19,7 @@
 		"type": "scroll",
 		"max_height":"448",
 		"h_alignment": "center",
+		"v_alignment": "top",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -36,6 +37,31 @@
 		  ]
       }
     },
+    "warp_settings": {
+      "type": "group",
+      "header": "Warp Settings",
+      "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					  ["dws_warps_none","tod_warps_none"],
+					  ["cof_warps_none","pow_warps_none"],
+					  ["fow_warps_none","dhc_warps_none"]
+				  ]
+			  }
+		  ]
+      }
+    },
     "dungeon_shuffle": {
       "type": "group",
       "header": "Dungeons shuffle",
@@ -43,6 +69,7 @@
 		"type": "scroll",
 		"max_height":"448",
 		"h_alignment": "center",
+		"v_alignment": "top",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -67,6 +94,7 @@
 		"type": "scroll",
 		"max_height":"448",
 		"h_alignment": "center",
+		"v_alignment": "top",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -93,6 +121,7 @@
 		"type": "scroll",
 		"max_height":"448",
 		"h_alignment": "center",
+		"v_alignment": "top",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -119,6 +148,7 @@
 		"type": "scroll",
 		"max_height":"448",
 		"h_alignment": "center",
+		"v_alignment": "top",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -145,6 +175,7 @@
 		"type": "scroll",
 		"max_height":"448",
 		"h_alignment": "center",
+		"v_alignment": "top",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -162,7 +193,7 @@
 		  ]
       }
     },
-    "world_settings": {
+    "locations_settings": {
       "type": "group",
       "header": "World Settings",
       "content": {
@@ -196,6 +227,7 @@
 		"type": "scroll",
 		"max_height":"448",
 		"h_alignment": "center",
+		"v_alignment": "top",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -219,7 +251,7 @@
       "content": {
         "type": "itemgrid",
         "h_alignment": "center",
-				"v_alignment": "top",
+		"v_alignment": "top",
         "item_margin": "0,0,2,10",
         "rows": [
           ["swordcapture", "gust", "cane", "boomerang", "wallet","genericred"],
@@ -239,7 +271,7 @@
       "content": {
         "type": "itemgrid",
         "h_alignment": "center",
-				"v_alignment": "top",
+		"v_alignment": "top",
         "item_margin": "0,0",
 		"item_height":64,
 		"item_width":320,
@@ -262,6 +294,14 @@
 				"content":{
 				  "type":"layout",
 				  "key": "windcrest_settings"
+				}
+			  },
+			  {
+				"title":"Warps Dungeons Settings",
+				"icon":"images/icon-maps/Blue_Warp.png",
+				"content":{
+				  "type":"layout",
+				  "key": "warp_settings"
 				}
 			  },
 			  {
@@ -341,7 +381,7 @@
 				"icon":"images/icon-maps/Sign.png",
 				"content":{
 				  "type":"layout",
-				  "key": "world_settings"
+				  "key": "locations_settings"
 				}
 			  },
 			  {

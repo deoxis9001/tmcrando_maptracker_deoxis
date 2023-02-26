@@ -925,10 +925,26 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Dark Maze",
-		"item_count":3,
+		"name":"Dark Maze Bottom",
+		"item_count":1,
         "clear_as_group": false,
-		"access_rules":["$Json_Dungeon_Droplet_DarkMaze"],
+		"access_rules":["$Json_Dungeon_Droplet_DarkMazeBottomChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Dark Maze Top Left",
+		"item_count":1,
+        "clear_as_group": false,
+		"access_rules":["$Json_Dungeon_Droplets_DarkMazeTopLeftChest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Dark Maze Top Right",
+		"item_count":1,
+        "clear_as_group": false,
+		"access_rules":["$Json_Dungeon_Droplets_DarkMazeTopRightChest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },

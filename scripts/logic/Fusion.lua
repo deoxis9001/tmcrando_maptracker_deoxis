@@ -276,7 +276,7 @@ end
 
 
 function Json_MinishWoods_MittCave_Fuzer() 
-	if ( AccessMinishWoods()==1 and has("mitts")) then
+	if ( WitchDiggingCave_Chest()==1 ) then
 		return 1
 	else
 		return 0

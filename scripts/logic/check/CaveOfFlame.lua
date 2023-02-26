@@ -63,7 +63,7 @@ end
 
 
 function CoF_B2_PreLava_Chest() 
-	if ( CoFBasementAccess()==1 and has("cane") ) then
+	if ( CofDungeons()==1 and CoFBasementAccess()==1 and has("cane") ) then
 		return 1
 	else
 		return 0
@@ -72,7 +72,7 @@ end
 
 
 function CoF_B2_LavaRoom_BladeChest() 
-	if ( CoFBasementAccess()==1 and ( has("cane") or has("cape") ) ) then
+	if ( CofDungeons()==1 and CoFBasementAccess()==1 and ( has("cane") or has("cape") ) ) then
 		return 1
 	else
 		return 0
@@ -81,7 +81,7 @@ end
 
 
 function CoF_B2_LavaRoom_Chest() 
-	if ( CoFBasementAccess()==1 and ( has("cane") or has("cape") ) ) then
+	if ( CofDungeons()==1 and CoFBasementAccess()==1 and ( has("cane") or has("cape") ) ) then
 		return 1
 	else
 		return 0
@@ -91,7 +91,7 @@ end
 
 
 function CoF_B2_LavaRoom_BigChest() 
-    if ( CoFBasementAccess()==1 and ( has("cane") or has("cape") ) ) then
+    if ( CofDungeons()==1 and CoFBasementAccess()==1 and ( has("cane") or has("cape") ) ) then
 		return 1
 	else
 		return 0
@@ -109,7 +109,7 @@ end
 
 
 function CoF_BossItem() 
-	if ( CoFBasementAccess()==1 and CoFBossDoor()==1 and has("cane") and HasGleerokDamage()==1 ) then
+	if ( CofDungeons()==1 and CoFBasementAccess()==1 and CoFBossDoor()==1 and has("cane") and HasGleerokDamage()==1 ) then
 		return 1
 	else
 		return 0

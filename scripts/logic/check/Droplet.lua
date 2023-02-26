@@ -39,7 +39,7 @@ function Droplets_LeftPath_B1_Waterfall_Underwater()
 end
 
 function Droplets_LeftPath_B2_Waterfall_Underwater() 
-	if ( TodDungeons()==1 and has("flippers") and ( ( ToDMainRoom()==1 and ToDLeftMushroomSwitch()==1 ) or (ToDBlueWarp()==1 and ToDLeftReverse()==1 ) )) then
+	if ( TodDungeons()==1 and has("flippers") and ( ( ToDMainRoom()==1 and ToDLeftMushroomSwitch()==1 ) or (ToDLilypadEnd()==1 and ToDLeftReverse()==1 ) )) then
 		return 1
 	else
 		return 0
@@ -47,7 +47,7 @@ function Droplets_LeftPath_B2_Waterfall_Underwater()
 end
 
 function Droplets_LeftPath_B2_Underwater_Pot() 
-	if ( TodDungeons()==1  and has("flippers")  and ( ( ToDMainRoom()==1 and ToDLeftPillars()==1 ) or ToDBlueWarp()==1 ) ) then
+	if ( TodDungeons()==1  and has("flippers")  and ( ( ToDMainRoom()==1 and ToDLeftPillars()==1 ) or ToDLilypadEnd()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -55,7 +55,7 @@ function Droplets_LeftPath_B2_Underwater_Pot()
 end
 
 function Droplets_LeftPath_B2_IceMadderpillar_BigChest() 
-	if ( TodDungeons()==1 and has("gust") and ToDMadderpillars()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1 or ToDBasementLilySpawn()==1 ) ) ) then
+	if ( TodDungeons()==1 and has("gust") and ToDMadderpillars()==1 and ( ToDLilypadEnd()==1 or ( ToDMainRoom()==1 or ToDBasementLilySpawn()==1 ) ) ) then
 		return 1
 	else
 		return 0
@@ -63,7 +63,7 @@ function Droplets_LeftPath_B2_IceMadderpillar_BigChest()
 end
 
 function Droplets_LeftPath_B2_IcePlain_FrozenChest() 
-	if ( TodDungeons()==1 and has("lamp") and ( ( ToDMainRoom()==1 and has("flippers") and ToDWestDoor()==1 and ToDLeftPillars()==1 ) or ( ToDBlueWarp()==1 and ( has("gust") or has("flippers") or ("cape") ) ) ) ) then
+	if ( TodDungeons()==1 and has("lamp") and ( ( ToDMainRoom()==1 and has("flippers") and ToDWestDoor()==1 and ToDLeftPillars()==1 ) or ( ToDLilypadEnd()==1 and ( has("gust") or has("flippers") or ("cape") ) ) ) ) then
 		return 1
 	else
 		return 0
@@ -71,7 +71,7 @@ function Droplets_LeftPath_B2_IcePlain_FrozenChest()
 end
 
 function Droplets_LeftPath_B2_IcePlain_Chest() 
-	if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and has("flippers") and ToDWestDoor()==1 and ToDLeftMushroomSwitch()==1 and ToDLeftPillars()==1 ) or ( ToDBlueWarp()==1 and ( has("gust") or has("flippers") or ("cape") ) ) ) ) then
+	if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and has("flippers") and ToDWestDoor()==1 and ToDLeftMushroomSwitch()==1 and ToDLeftPillars()==1 ) or ( ToDLilypadEnd()==1 and ( has("gust") or has("flippers") or ("cape") ) ) ) ) then
 		return 1
 	else
 		return 0
@@ -79,7 +79,7 @@ function Droplets_LeftPath_B2_IcePlain_Chest()
 end
 
 function Droplets_LeftPath_B2_LilypadCorner_FrozenChest() 
-	if ( TodDungeons()==1 and has("gust") and has("lamp") and ( ( ToDMainRoom()==1 and ToDBasementLilySpawn()==1 ) or  ToDBlueWarp()==1 ) ) then
+	if ( TodDungeons()==1 and has("gust") and has("lamp") and ( ( ToDMainRoom()==1 and ToDBasementLilySpawn()==1 ) or  ToDLilypadEnd()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -151,21 +151,21 @@ function Droplets_RightPath_B2_Mulldozers_ItemDrop()
 	end 
 end
 
--- function Droplets_RightPath_B2_DarkMaze_TopRightChest() 
-	-- if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and ToDRightIceBlock()==1 and ToDRightIce()==1 and ToDScissorBeetles()==1 and DarkRooms()==1 and ToDDarkMaze()==1 ) or ( ToD2ndRupeePath()==1 and ToDDarkMazeReverse()==1 ) ) ) then
-		-- return 1
-	-- else
-		-- return 0
-	-- end 
--- end
+function Droplets_RightPath_B2_DarkMaze_TopRightChest() 
+	if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and ToDRightIceBlock()==1 and ToDRightIce()==1 and ToDScissorBeetles()==1 and DarkRooms()==1 and ToDDarkMaze()==1 ) or ( ToD2ndRupeePath()==1 and ToDDarkMazeReverse()==1 ) ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
 
--- function Droplets_RightPath_B2_DarkMaze_TopLeftChest() 
-	-- if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and ToDRightIceBlock()==1 and ToDRightIce()==1 and ToDScissorBeetles()==1 and DarkRooms()==1 and ToDDarkMaze()==1 ) or ( ToD2ndRupeePath()==1 and ToDDarkMazeReverse()==1 ) ) ) then
-		-- return 1
-	-- else
-		-- return 0
-	-- end 
--- end
+function Droplets_RightPath_B2_DarkMaze_TopLeftChest() 
+	if ( TodDungeons()==1 and ( ( ToDMainRoom()==1 and ToDRightIceBlock()==1 and ToDRightIce()==1 and ToDScissorBeetles()==1 and DarkRooms()==1 and ToDDarkMaze()==1 ) or ( ToD2ndRupeePath()==1 and ( ToDDarkMazeReverse()==1 or ( ToDDarkMazeDoor()==1 and has("lamp") ) ) ) ) ) then
+		return 1
+	else
+		return 0
+	end 
+end
 
 function Droplets_RightPath_B2_UnderpassItem() 
 	if ( TodDungeons()==1 and ToD2ndRupeePath()==1 ) then
@@ -192,7 +192,7 @@ function CompleteDroplets()
 end
 
 function Droplets_BossItem() 
-	if ( AccessOcto()==1 and has("lamp") and ( HasSword()==1 or has("shield") ) ) then
+	if ( TodDungeons()==1 and AccessOcto()==1 and has("lamp") and ( HasSword()==1 or has("shield") ) ) then
 		return 1
 	else
 		return 0
@@ -200,7 +200,7 @@ function Droplets_BossItem()
 end
 
 function Droplets_Prize() 
-	if ( AccessOcto()==1 and has("lamp") and ( HasSword()==1 or has("shield") ) ) then
+	if ( TodDungeons()==1 and AccessOcto()==1 and has("lamp") and ( HasSword()==1 or has("shield") ) ) then
 		return 1
 	else
 		return 0
