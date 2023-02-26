@@ -9,17 +9,17 @@
     "inherit_codes":false,
     "stages":[
       {
-        "img":"images/options/DHCRequirements/dhc_closed.png",
+        "img":"images/options/dhc_requirements/dhc_closed.png",
         "codes":"dhc_closed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/DHCRequirements/dhc_fast.png",
+        "img":"images/options/dhc_requirements/dhc_fast.png",
         "codes":"dhc_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/DHCRequirements/dhc_open.png",
+        "img":"images/options/dhc_requirements/dhc_open.png",
         "codes":"dhc_open",
         "inherit_codes":false
       },
@@ -33,27 +33,27 @@
     "allow_disabled":false,
     "stages":[
 	  {
-        "img":"images/options/DHCRequirements/Element4.png",
+        "img":"images/options/dhc_requirements/element4.png",
         "inherit_codes":false,
         "codes":"element4Needed"
       },
       {
-        "img":"images/options/DHCRequirements/Element3.png",
+        "img":"images/options/dhc_requirements/element3.png",
         "inherit_codes":false,
         "codes":"element3Needed"
       },
       {
-        "img":"images/options/DHCRequirements/Element2.png",
+        "img":"images/options/dhc_requirements/element2.png",
         "inherit_codes":false,
         "codes":"element2Needed"
       },
       {
-        "img":"images/options/DHCRequirements/Element1.png",
+        "img":"images/options/dhc_requirements/element1.png",
         "inherit_codes":false,
         "codes":"element1Needed"
       },
       {
-        "img":"images/options/DHCRequirements/Element0.png",
+        "img":"images/options/dhc_requirements/element0.png",
         "inherit_codes":false,
         "codes":"element0Needed"
       },
@@ -67,503 +67,389 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img": "images/options/DHCRequirements/sword0.png",
+        "img": "images/options/dhc_requirements/sword0.png",
         "inherit_codes": false,
         "codes": "sword0Needed"
       },
       {
-        "img": "images/options/DHCRequirements/sword1.png",
+        "img": "images/options/dhc_requirements/sword1.png",
         "inherit_codes": false,
         "codes": "sword1Needed"
       },
       {
-        "img": "images/options/DHCRequirements/sword2.png",
+        "img": "images/options/dhc_requirements/sword2.png",
         "inherit_codes": false,
         "codes": "sword2Needed"
       },
       {
-        "img": "images/options/DHCRequirements/sword3.png",
+        "img": "images/options/dhc_requirements/sword3.png",
         "inherit_codes": false,
         "codes": "sword3Needed"
       },
       {
-        "img": "images/options/DHCRequirements/sword4.png",
+        "img": "images/options/dhc_requirements/sword4.png",
         "inherit_codes": false,
         "codes": "sword4Needed"
       },
       {
-        "img": "images/options/DHCRequirements/sword5.png",
+        "img": "images/options/dhc_requirements/sword5.png",
         "inherit_codes": false,
         "codes": "sword5Needed"
       },
     ]
   },
   {
-   "name": "Figurine",
+   "name":"Figurine",
    "type": "consumable",
-   "img": "images/options/DHCRequirements/figurine.png",
+   "img": "images/options/dhc_requirements/figurine.png",
    "codes": "figurine_option",
    "min_quantity":0,
    "initial_quantity": 0,
    "max_quantity":136,
  },  
  {
-    "name": "Dungeons",
+    "name":"Dungeons",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/DHCRequirements/dungeons0.png",
+        "img":"images/options/dhc_requirements/dungeons0.png",
         "codes": "dungeons,dungeons0",
         "inherit_codes":false
       },
       {
-        "img": "images/options/DHCRequirements/dungeons1.png",
+        "img": "images/options/dhc_requirements/dungeons1.png",
         "codes": "dungeons1",
         "inherit_codes":false
       },
       {
-        "img": "images/options/DHCRequirements/dungeons2.png",
+        "img": "images/options/dhc_requirements/dungeons2.png",
         "codes": "dungeons2",
         "inherit_codes":false
       },
       {
-        "img": "images/options/DHCRequirements/dungeons3.png",
+        "img": "images/options/dhc_requirements/dungeons3.png",
         "codes": "dungeons3",
         "inherit_codes":false
       },
       {
-        "img": "images/options/DHCRequirements/dungeons4.png",
+        "img": "images/options/dhc_requirements/dungeons4.png",
         "codes": "dungeons4",
         "inherit_codes":false
       },
       {
-        "img": "images/options/DHCRequirements/dungeons5.png",
+        "img": "images/options/dhc_requirements/dungeons5.png",
         "codes": "dungeons5",
         "inherit_codes":false
       },
       {
-        "img": "images/options/DHCRequirements/dungeons6.png",
+        "img": "images/options/dhc_requirements/dungeons6.png",
         "codes": "dungeons6",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Crest Crenel",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/CrestSettings/CrestCrenelNo.png",
-        "codes": "crestcrenel_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/CrestSettings/CrestCrenelYes.png",
-        "codes": "crestcrenel_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Crest Falls",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/CrestSettings/CrestFallsNo.png",
-        "codes": "crestfalls_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/CrestSettings/CrestFallsYes.png",
-        "codes": "crestfalls_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Crest Clouds",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/CrestSettings/CrestCloudsNo.png",
-        "codes": "crestclouds_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/CrestSettings/CrestCloudsYes.png",
-        "codes": "crestclouds_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Crest Swamp",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/CrestSettings/CrestSwampNo.png",
-        "codes": "crestswamp_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/CrestSettings/CrestSwampYes.png",
-        "codes": "crestswamp_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Crest Shf",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/CrestSettings/CrestShfNo.png",
-        "codes": "crestshf_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/CrestSettings/CrestShfYes.png",
-        "codes": "crestshf_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Crest Minish",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/CrestSettings/CrestMinishNo.png",
-        "codes": "crestminish_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/CrestSettings/CrestMinishYes.png",
-        "codes": "crestminish_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name": "Blow Dust",
+    "name":"Blow Dust",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/BlowDust_off.png",
+        "img":"images/options/logic_settings/blow_dust_off.png",
         "codes": "blowdust_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/BlowDust_on.png",
+        "img": "images/options/logic_settings/blow_dust_on.png",
         "codes": "blowdust_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Crenel Mushroom",
+    "name":"Crenel Mushroom",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/CrenelMushroom_off.png",
+        "img":"images/options/logic_settings/crenel_mushroom_off.png",
         "codes": "crenelmushroom_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/CrenelMushroom_on.png",
+        "img": "images/options/logic_settings/crenel_mushroom_on.png",
         "codes": "crenelmushroom_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Light Arrow Break",
+    "name":"Light Arrow Break",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/LightArrowBreak_off.png",
+        "img":"images/options/logic_settings/light_arrow_break_off.png",
         "codes": "lightarrowbreak_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/LightArrowBreak_on.png",
+        "img": "images/options/logic_settings/light_arrow_break_on.png",
         "codes": "lightarrowbreak_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Bobombs",
+    "name":"Bobombs",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/bobombs_off.png",
+        "img": "images/options/logic_settings/bobombs_off.png",
         "codes": "bobombs_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/bobombs_on.png",
+        "img":"images/options/logic_settings/bobombs_on.png",
         "codes": "bobombs_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Like Like",
+    "name":"Like Like",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/LikeLike_off.png",
+        "img": "images/options/logic_settings/like_like_off.png",
         "codes": "likelike_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/LikeLike_on.png",
+        "img":"images/options/logic_settings/like_like_on.png",
         "codes": "likelike_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "Guard Skip",
+    "name":"Guard Skip",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/GuardSkip_off.png",
+        "img": "images/options/logic_settings/guard_skip_off.png",
         "codes": "guardskip_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/GuardSkip_on.png",
+        "img":"images/options/logic_settings/guard_skip_on.png",
         "codes": "guardskip_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "Crenel Beam",
+    "name":"Crenel Beam",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/CrenelBeam_off.png",
+        "img": "images/options/logic_settings/crenel_beam_off.png",
         "codes": "crenelbeam_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/CrenelBeam_on.png",
+        "img":"images/options/logic_settings/crenel_beam_on.png",
         "codes": "crenelbeam_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Down Strike Beetle",
+    "name":"Down Strike Beetle",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/DownStrikeBeetle_off.png",
+        "img":"images/options/logic_settings/down_strike_beetle_off.png",
         "codes": "downstrikebeetle_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/DownStrikeBeetle_on.png",
+        "img": "images/options/logic_settings/down_strike_beetle_on.png",
         "codes": "downstrikebeetle_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Dark Rooms",
+    "name":"Dark rooms",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/DarkRooms_off.png",
+        "img":"images/options/logic_settings/dark_rooms_off.png",
         "codes": "darkrooms_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/DarkRooms_on.png",
+        "img": "images/options/logic_settings/dark_rooms_on.png",
         "codes": "darkrooms_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "Cape Extension",
+    "name":"Cape Extension",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/CapeExtension_off.png",
+        "img":"images/options/logic_settings/cape_extension_off.png",
         "codes": "capeextension_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/CapeExtension_on.png",
+        "img": "images/options/logic_settings/cape_extension_on.png",
         "codes": "capeextension_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Lake Minish",
+    "name":"Lake Minish",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/LakeMinish_off.png",
+        "img": "images/options/logic_settings/lake_minish_off.png",
         "codes": "lakeminish_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/LakeMinish_on.png",
+        "img":"images/options/logic_settings/lake_minish_on.png",
         "codes": "lakeminish_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "Cabin Swim",
+    "name":"Cabin Swim",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/CabinSwim_off.png",
+        "img":"images/options/logic_settings/cabin_swim_off.png",
         "codes": "cabinswim_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/CabinSwim_on.png",
+        "img": "images/options/logic_settings/cabin_swim_on.png",
         "codes": "cabinswim_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Clouds Kill",
+    "name":"Clouds Kill",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/CloudsKill_off.png",
+        "img":"images/options/logic_settings/clouds_kill_off.png",
         "codes": "cloudskill_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/CloudsKill_on.png",
+        "img": "images/options/logic_settings/clouds_kill_on.png",
         "codes": "cloudskill_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "FoW Pot",
+    "name":"FoW Pot",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/FoWPot_off.png",
+        "img":"images/options/logic_settings/fow_pot_off.png",
         "codes": "fowpot_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/FoWPot_on.png",
+        "img": "images/options/logic_settings/fow_pot_on.png",
         "codes": "fowpot_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "PoW Jump",
+    "name":"PoW Jump",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/PoWJump_off.png",
+        "img": "images/options/logic_settings/pow_jump_off.png",
         "codes": "powjump_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/PoWJump_on.png",
+        "img":"images/options/logic_settings/pow_jump_on.png",
         "codes": "powjump_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "PoW Pot Puzzle OOL",
+    "name":"PoW Pot Puzzle OOL",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/PoWPotPuzzleOOL_off.png",
+        "img":"images/options/logic_settings/pow_pot_puzzle_ool_off.png",
         "codes": "powpotpuzzleool_off",
         "inherit_codes":false
       },
 	  {
-        "img": "images/options/LogicSettings/PoWPotPuzzleOOL_on.png",
+        "img": "images/options/logic_settings/pow_pot_puzzle_ool_on.png",
         "codes": "powpotpuzzleool_on",
         "inherit_codes":false
       }
@@ -571,19 +457,19 @@
     ]
   },
   {
-    "name": "DHC Canon Hit",
+    "name":"DHC Canon Hit",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
 	  {
-        "img":"images/options/LogicSettings/DHCCanonHit_off.png",
+        "img":"images/options/logic_settings/dhc_canon_hit_off.png",
         "codes": "dhccanonhit_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/DHCCanonHit_on.png",
+        "img": "images/options/logic_settings/dhc_canon_hit_on.png",
         "codes": "dhccanonhit_on",
         "inherit_codes":false
       }
@@ -591,57 +477,57 @@
     ]
   },
   {
-    "name": "DHC Blade Puzzle Shuffle",
+    "name":"DHC Blade Puzzle Shuffle",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/DHCBladePuzzleShuffle_off.png",
+        "img":"images/options/logic_settings/dhc_blade_puzzle_shuffle_off.png",
         "codes": "dhcbladepuzzleshuffle_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/DHCBladePuzzleShuffle_on.png",
+        "img": "images/options/logic_settings/dhc_blade_puzzle_shuffle_on.png",
         "codes": "dhcbladepuzzleshuffle_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "DHC Switch Hit",
+    "name":"DHC Switch Hit",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/LogicSettings/DHCSwitchHit_off.png",
+        "img":"images/options/logic_settings/dhc_switch_hit_off.png",
         "codes": "dhcswitchhit_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/LogicSettings/DHCSwitchHit_on.png",
+        "img": "images/options/logic_settings/dhc_switch_hit_on.png",
         "codes": "dhcswitchhit_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name":"Rupeemania",
+    "name":"rupeemania",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":1,
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/LocationsSettings/rupees_off.png",
+        "img":"images/options/locations_settings/rupees_off.png",
         "codes":"rupees_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LocationsSettings/rupees_on.png",
+        "img":"images/options/locations_settings/rupees_on.png",
         "codes":"rupees_on",
         "inherit_codes":false
       },
@@ -655,12 +541,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/LocationsSettings/specialpot_off.png",
+        "img":"images/options/locations_settings/special_pot_off.png",
         "codes":"specialpot_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LocationsSettings/specialpot_on.png",
+        "img":"images/options/locations_settings/special_pot_on.png",
         "codes":"specialpot_on",
         "inherit_codes":false
       },
@@ -674,12 +560,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/LocationsSettings/digging_off.png",
+        "img":"images/options/locations_settings/digging_off.png",
         "codes":"digging_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LocationsSettings/digging_on.png",
+        "img":"images/options/locations_settings/digging_on.png",
         "codes":"digging_on",
         "inherit_codes":false
       },
@@ -693,12 +579,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/LocationsSettings/underwater_off.png",
+        "img":"images/options/locations_settings/under_water_off.png",
         "codes":"underwater_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LocationsSettings/underwater_on.png",
+        "img":"images/options/locations_settings/under_water_on.png",
         "codes":"underwater_on",
         "inherit_codes":false
       },
@@ -712,12 +598,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/LocationsSettings/golden_enemy_off.png",
+        "img":"images/options/locations_settings/golden_enemy_off.png",
         "codes":"golden_enemy_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LocationsSettings/golden_enemy_on.png",
+        "img":"images/options/locations_settings/golden_enemy_on.png",
         "codes":"golden_enemy_on",
         "inherit_codes":false
       }
@@ -731,31 +617,31 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/DHCRequirements/ped_items_off.png",
+        "img":"images/options/dhc_requirements/ped_items_off.png",
         "codes":"ped_items_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/DHCRequirements/ped_items_on.png",
+        "img":"images/options/dhc_requirements/ped_items_on.png",
         "codes":"ped_items_on",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name":"OpenWord",
+    "name":"Open_Word",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSettings/Settings/openworld_off.png",
+        "img":"images/options/world_settings/settings/open_world_off.png",
         "codes":"openworld_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/Settings/openworld_on.png",
+        "img":"images/options/world_settings/settings/open_world_on.png",
         "codes":"openworld_on",
         "inherit_codes":false
       }
@@ -769,41 +655,41 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/FusionSettings/fusiongold_removed.png",
+        "img":"images/options/fusions_settings/gold_removed.png",
         "codes":"fusiongold_removed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/FusionSettings/fusiongold_vanilla.png",
+        "img":"images/options/fusions_settings/gold_vanilla.png",
         "codes":"fusiongold_vanilla",
         "inherit_codes":false
       },
       {
-        "img":"images/options/FusionSettings/fusiongold_complet.png",
+        "img":"images/options/fusions_settings/gold_complet.png",
         "codes":"fusiongold_complet",
         "inherit_codes":false
       },
     ]
-  },
+  }, 
   {
-    "name":"Fusion Red",
+    "name":"Fusion red",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":2,
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/FusionSettings/fusionred_removed.png",
+        "img":"images/options/fusions_settings/red_removed.png",
         "codes":"fusionred_removed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/FusionSettings/fusionred_vanilla.png",
+        "img":"images/options/fusions_settings/red_vanilla.png",
         "codes":"fusionred_vanilla",
         "inherit_codes":false
       },
       {
-        "img":"images/options/FusionSettings/fusionred_complet.png",
+        "img":"images/options/fusions_settings/red_complet.png",
         "codes":"fusionred_complet",
         "inherit_codes":false
       },
@@ -817,17 +703,17 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/FusionSettings/fusionblue_removed.png",
+        "img":"images/options/fusions_settings/blue_removed.png",
         "codes":"fusionblue_removed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/FusionSettings/fusionblue_vanilla.png",
+        "img":"images/options/fusions_settings/blue_vanilla.png",
         "codes":"fusionblue_vanilla",
         "inherit_codes":false,
       },
 	  {
-        "img":"images/options/FusionSettings/fusionblue_complet.png",
+        "img":"images/options/fusions_settings/blue_complet.png",
         "codes":"fusionblue_complet",
         "inherit_codes":false
       },
@@ -841,17 +727,17 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/FusionSettings/fusiongreen_removed.png",
+        "img":"images/options/fusions_settings/green_removed.png",
         "codes":"fusiongreen_removed",
         "inherit_codes":false
       },
       {
-        "img":"images/options/FusionSettings/fusiongreen_vanilla.png",
+        "img":"images/options/fusions_settings/green_vanilla.png",
         "codes":"fusiongreen_vanilla",
         "inherit_codes":false
       },
       {
-        "img":"images/options/FusionSettings/fusiongreen_complet.png",
+        "img":"images/options/fusions_settings/green_complet.png",
         "codes":"fusiongreen_complet",
         "inherit_codes":false
       },
@@ -865,12 +751,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/crenel_no.png",
+        "img":"images/options/world_settings/wind_crest_settings/crenel_no.png",
         "codes":"crenelwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/crenel_yes.png",
+        "img":"images/options/world_settings/wind_crest_settings/crenel_yes.png",
         "codes":"crenelwindcrest_yes",
         "inherit_codes":false
       }
@@ -884,12 +770,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/falls_no.png",
+        "img":"images/options/world_settings/wind_crest_settings/falls_no.png",
         "codes":"fallswindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/falls_yes.png",
+        "img":"images/options/world_settings/wind_crest_settings/falls_yes.png",
         "codes":"fallswindcrest_yes",
         "inherit_codes":false
       }
@@ -903,12 +789,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/cloud_no.png",
+        "img":"images/options/world_settings/wind_crest_settings/cloud_no.png",
         "codes":"cloudwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/cloud_yes.png",
+        "img":"images/options/world_settings/wind_crest_settings/cloud_yes.png",
         "codes":"cloudwindcrest_yes",
         "inherit_codes":false
       }
@@ -922,31 +808,31 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/swamp_no.png",
+        "img":"images/options/world_settings/wind_crest_settings/swamp_no.png",
         "codes":"swampwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/swamp_yes.png",
+        "img":"images/options/world_settings/wind_crest_settings/swamp_yes.png",
         "codes":"swampwindcrest_yes",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name":"SHF Wind Crest",
+    "name":"ShF Wind Crest",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/shf_no.png",
+        "img":"images/options/world_settings/wind_crest_settings/shf_no.png",
         "codes":"shfwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/shf_yes.png",
+        "img":"images/options/world_settings/wind_crest_settings/shf_yes.png",
         "codes":"shfwindcrest_yes",
         "inherit_codes":false
       }
@@ -960,12 +846,12 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/minish_no.png",
+        "img":"images/options/world_settings/wind_crest_settings/minish_no.png",
         "codes":"minishwindcrest_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WindCrestSetting/minish_yes.png",
+        "img":"images/options/world_settings/wind_crest_settings/minish_yes.png",
         "codes":"minishwindcrest_yes",
         "inherit_codes":false
       }
@@ -979,37 +865,37 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/items/Dungeons/dws_none.png",
+        "img":"images/items/dungeons/dws_none.png",
         "codes":"dws_none",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/dws_dws.png",
+        "img":"images/items/dungeons/dws_dws.png",
         "codes":"dws_dws",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/dws_cof.png",
+        "img":"images/items/dungeons/dws_cof.png",
         "codes":"dws_cof",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/dws_fow.png",
+        "img":"images/items/dungeons/dws_fow.png",
         "codes":"dws_fow",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/dws_tod.png",
+        "img":"images/items/dungeons/dws_tod.png",
         "codes":"dws_tod",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/dws_crypt.png",
+        "img":"images/items/dungeons/dws_crypt.png",
         "codes":"dws_crypt",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/dws_pow.png",
+        "img":"images/items/dungeons/dws_pow.png",
         "codes":"dws_pow",
         "inherit_codes":false
       },
@@ -1023,37 +909,37 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/items/Dungeons/cof_none.png",
+        "img":"images/items/dungeons/cof_none.png",
         "codes":"cof_none",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/cof_dws.png",
+        "img":"images/items/dungeons/cof_dws.png",
         "codes":"cof_dws",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/cof_cof.png",
+        "img":"images/items/dungeons/cof_cof.png",
         "codes":"cof_cof",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/cof_fow.png",
+        "img":"images/items/dungeons/cof_fow.png",
         "codes":"cof_fow",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/cof_tod.png",
+        "img":"images/items/dungeons/cof_tod.png",
         "codes":"cof_tod",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/cof_crypt.png",
+        "img":"images/items/dungeons/cof_crypt.png",
         "codes":"cof_crypt",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/cof_pow.png",
+        "img":"images/items/dungeons/cof_pow.png",
         "codes":"cof_pow",
         "inherit_codes":false
       },
@@ -1067,37 +953,37 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/items/Dungeons/fow_none.png",
+        "img":"images/items/dungeons/fow_none.png",
         "codes":"fow_none",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/fow_dws.png",
+        "img":"images/items/dungeons/fow_dws.png",
         "codes":"fow_dws",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/fow_cof.png",
+        "img":"images/items/dungeons/fow_cof.png",
         "codes":"fow_cof",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/fow_fow.png",
+        "img":"images/items/dungeons/fow_fow.png",
         "codes":"fow_fow",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/fow_tod.png",
+        "img":"images/items/dungeons/fow_tod.png",
         "codes":"fow_tod",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/fow_crypt.png",
+        "img":"images/items/dungeons/fow_crypt.png",
         "codes":"fow_crypt",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/fow_pow.png",
+        "img":"images/items/dungeons/fow_pow.png",
         "codes":"fow_pow",
         "inherit_codes":false
       },
@@ -1111,37 +997,37 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/items/Dungeons/tod_none.png",
+        "img":"images/items/dungeons/tod_none.png",
         "codes":"tod_none",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/tod_dws.png",
+        "img":"images/items/dungeons/tod_dws.png",
         "codes":"tod_dws",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/tod_cof.png",
+        "img":"images/items/dungeons/tod_cof.png",
         "codes":"tod_cof",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/tod_fow.png",
+        "img":"images/items/dungeons/tod_fow.png",
         "codes":"tod_fow",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/tod_tod.png",
+        "img":"images/items/dungeons/tod_tod.png",
         "codes":"tod_tod",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/tod_crypt.png",
+        "img":"images/items/dungeons/tod_crypt.png",
         "codes":"tod_crypt",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/tod_pow.png",
+        "img":"images/items/dungeons/tod_pow.png",
         "codes":"tod_pow",
         "inherit_codes":false
       },
@@ -1155,37 +1041,37 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/items/Dungeons/crypt_none.png",
+        "img":"images/items/dungeons/crypt_none.png",
         "codes":"crypt_none",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/crypt_dws.png",
+        "img":"images/items/dungeons/crypt_dws.png",
         "codes":"crypt_dws",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/crypt_cof.png",
+        "img":"images/items/dungeons/crypt_cof.png",
         "codes":"crypt_cof",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/crypt_fow.png",
+        "img":"images/items/dungeons/crypt_fow.png",
         "codes":"crypt_fow",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/crypt_tod.png",
+        "img":"images/items/dungeons/crypt_tod.png",
         "codes":"crypt_tod",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/crypt_crypt.png",
+        "img":"images/items/dungeons/crypt_crypt.png",
         "codes":"crypt_crypt",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/crypt_pow.png",
+        "img":"images/items/dungeons/crypt_pow.png",
         "codes":"crypt_pow",
         "inherit_codes":false
       },
@@ -1199,447 +1085,447 @@
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/items/Dungeons/pow_none.png",
+        "img":"images/items/dungeons/pow_none.png",
         "codes":"pow_none",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/pow_dws.png",
+        "img":"images/items/dungeons/pow_dws.png",
         "codes":"pow_dws",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/pow_cof.png",
+        "img":"images/items/dungeons/pow_cof.png",
         "codes":"pow_cof",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/pow_fow.png",
+        "img":"images/items/dungeons/pow_fow.png",
         "codes":"pow_fow",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/pow_tod.png",
+        "img":"images/items/dungeons/pow_tod.png",
         "codes":"pow_tod",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/pow_crypt.png",
+        "img":"images/items/dungeons/pow_crypt.png",
         "codes":"pow_crypt",
         "inherit_codes":false
       },
       {
-        "img":"images/items/Dungeons/pow_pow.png",
+        "img":"images/items/dungeons/pow_pow.png",
         "codes":"pow_pow",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Dungeons Entrance",
+    "name":"Dungeons Entrance",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSettings/Settings/DungeonsER_off.png",
+        "img": "images/options/world_settings/settings/dungeons_er_off.png",
         "codes": "dungeonser_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/Settings/DungeonsER_on.png",
+        "img":"images/options/world_settings/settings/dungeons_er_on.png",
         "codes": "dungeonser_on",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Weapons Bow",
+    "name":"Weapons Bow",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/WeaponsSettings/WeaponsBow_no.png",
+        "img":"images/options/weapons_settings/bow_no.png",
         "codes": "weaponsbow_no",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WeaponsSettings/WeaponsBow_yes.png",
+        "img": "images/options/weapons_settings/bow_yes.png",
         "codes": "weaponsbow_yes",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WeaponsSettings/WeaponsBow_boss.png",
+        "img": "images/options/weapons_settings/bow_boss.png",
         "codes": "weaponsbow_boss",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Weapons Gust",
+    "name":"Weapons Gust",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/WeaponsSettings/WeaponsGust_no.png",
+        "img":"images/options/weapons_settings/gust_no.png",
         "codes": "weaponsgust_no",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WeaponsSettings/WeaponsGust_yes.png",
+        "img": "images/options/weapons_settings/gust_yes.png",
         "codes": "weaponsgust_yes",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Weapons Bombs",
+    "name":"Weapons Bombs",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/WeaponsSettings/WeaponsBombs_no.png",
+        "img":"images/options/weapons_settings/bombs_no.png",
         "codes": "weaponsbombs_no",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WeaponsSettings/WeaponsBombs_yes.png",
+        "img": "images/options/weapons_settings/bombs_yes.png",
         "codes": "weaponsbombs_yes",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WeaponsSettings/WeaponsBombs_boss.png",
+        "img": "images/options/weapons_settings/bombs_boss.png",
         "codes": "weaponsbombs_yes,weaponsbombs_boss",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Weapons Lamp",
+    "name":"Weapons Lamp",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/WeaponsSettings/weaponslamp_no.png",
+        "img":"images/options/weapons_settings/lamp_no.png",
         "codes": "weaponslamp_no",
         "inherit_codes":false
       },
       {
-        "img": "images/options/WeaponsSettings/weaponslamp_yes.png",
+        "img": "images/options/weapons_settings/lamp_yes.png",
         "codes": "weaponslamp_yes",
         "inherit_codes":false
       },
     ]
   },
   {
-    "name": "Cucco setting",
+    "name":"Cucco setting",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LocationsSettings/cucco_none.png",
+        "img": "images/options/locations_settings/cucco_none.png",
         "codes": "cucco_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LocationsSettings/cucco_1.png",
+        "img":"images/options/locations_settings/cucco_1.png",
         "codes": "cucco_1",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_2.png",
+        "img":"images/options/locations_settings/cucco_2.png",
         "codes": "cucco_2",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_3.png",
+        "img":"images/options/locations_settings/cucco_3.png",
         "codes": "cucco_3",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_4.png",
+        "img":"images/options/locations_settings/cucco_4.png",
         "codes": "cucco_4",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_5.png",
+        "img":"images/options/locations_settings/cucco_5.png",
         "codes": "cucco_5",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_6.png",
+        "img":"images/options/locations_settings/cucco_6.png",
         "codes": "cucco_6",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_7.png",
+        "img":"images/options/locations_settings/cucco_7.png",
         "codes": "cucco_7",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_8.png",
+        "img":"images/options/locations_settings/cucco_8.png",
         "codes": "cucco_8",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_9.png",
+        "img":"images/options/locations_settings/cucco_9.png",
         "codes": "cucco_9",
       },
       {
-        "img":"images/options/LocationsSettings/cucco_10.png",
+        "img":"images/options/locations_settings/cucco_10.png",
         "codes": "cucco_10",
       },
     ]
   },
   {
-    "name": "Goron Shop Settings",
+    "name":"Goron Shop Settings",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LocationsSettings/goron_none.png",
+        "img": "images/options/locations_settings/goron_none.png",
         "codes": "goron_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LocationsSettings/goron_1.png",
+        "img":"images/options/locations_settings/goron_1.png",
         "codes": "goron_1",
       },
       {
-        "img":"images/options/LocationsSettings/goron_2.png",
+        "img":"images/options/locations_settings/goron_2.png",
         "codes": "goron_2",
       },
       {
-        "img":"images/options/LocationsSettings/goron_3.png",
+        "img":"images/options/locations_settings/goron_3.png",
         "codes": "goron_3",
       },
       {
-        "img":"images/options/LocationsSettings/goron_4.png",
+        "img":"images/options/locations_settings/goron_4.png",
         "codes": "goron_4",
       },
       {
-        "img":"images/options/LocationsSettings/goron_5.png",
+        "img":"images/options/locations_settings/goron_5.png",
         "codes": "goron_5",
       },
     ]
   },
   {
-    "name": "Goron Shop Price",
+    "name":"Goron Shop Price",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LocationsSettings/goron_eu.png",
+        "img": "images/options/locations_settings/goron_eu.png",
         "codes": "goron_eu",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LocationsSettings/goron_jp.png",
+        "img":"images/options/locations_settings/goron_jp.png",
         "codes": "goron_jp",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "Grab items from a distance",
+    "name":"Grab items from a distance",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/LogicSettings/grabbable_none.png",
+        "img": "images/options/logic_settings/grabbable_none.png",
         "codes": "grabbable_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/grabbable_easy.png",
-        "codes": "grabbable_easy",
+        "img":"images/options/logic_settings/grabbable_easy.png",
+        "codes": "grabbableeasy",
         "inherit_codes":false
       },
       {
-        "img":"images/options/LogicSettings/grabbable_hard.png",
+        "img":"images/options/logic_settings/grabbable_hard.png",
         "codes": "grabbable_hard",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "DWS warp",
+    "name":"D_W_s warp",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSettings/WarpsSettings/dws_warps_none.png",
+        "img": "images/options/world_settings/warps_settings/dws_warps_none.png",
         "codes": "dws_warps_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/dws_warps_blue.png",
+        "img":"images/options/world_settings/warps_settings/dws_warps_blue.png",
         "codes": "dws_warps_blue",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/dws_warps_red.png",
+        "img":"images/options/world_settings/warps_settings/dws_warps_red.png",
         "codes": "dws_warps_red",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/dws_warps_all.png",
+        "img":"images/options/world_settings/warps_settings/dws_warps_all.png",
         "codes": "dws_warps_blue,dws_warps_red",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "CoF warp",
+    "name":"Co_F warp",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSettings/WarpsSettings/cof_warps_none.png",
+        "img": "images/options/world_settings/warps_settings/cof_warps_none.png",
         "codes": "cof_warps_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/cof_warps_blue.png",
+        "img":"images/options/world_settings/warps_settings/cof_warps_blue.png",
         "codes": "cof_warps_blue",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/cof_warps_red.png",
+        "img":"images/options/world_settings/warps_settings/cof_warps_red.png",
         "codes": "cof_warps_red",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/cof_warps_all.png",
+        "img":"images/options/world_settings/warps_settings/cof_warps_all.png",
         "codes": "cof_warps_blue,cof_warps_red",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "FOW warp",
+    "name":"F_O_W warp",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSettings/WarpsSettings/fow_warps_none.png",
+        "img": "images/options/world_settings/warps_settings/fow_warps_none.png",
         "codes": "fow_warps_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/fow_warps_blue.png",
+        "img":"images/options/world_settings/warps_settings/fow_warps_blue.png",
         "codes": "fow_warps_blue",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/fow_warps_red.png",
+        "img":"images/options/world_settings/warps_settings/fow_warps_red.png",
         "codes": "fow_warps_red",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/fow_warps_all.png",
+        "img":"images/options/world_settings/warps_settings/fow_warps_all.png",
         "codes": "fow_warps_blue,fow_warps_red",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "TOD warp",
+    "name":"T_O_d warp",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSettings/WarpsSettings/tod_warps_none.png",
+        "img": "images/options/world_settings/warps_settings/tod_warps_none.png",
         "codes": "tod_warps_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/tod_warps_blue.png",
+        "img":"images/options/world_settings/warps_settings/tod_warps_blue.png",
         "codes": "tod_warps_blue",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/tod_warps_red.png",
+        "img":"images/options/world_settings/warps_settings/tod_warps_red.png",
         "codes": "tod_warps_red",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/tod_warps_all.png",
+        "img":"images/options/world_settings/warps_settings/tod_warps_all.png",
         "codes": "tod_warps_blue,tod_warps_red",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "POW warp",
+    "name":"P_O_W warp",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSettings/WarpsSettings/pow_warps_none.png",
+        "img": "images/options/world_settings/warps_settings/pow_warps_none.png",
         "codes": "pow_warps_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/pow_warps_blue.png",
+        "img":"images/options/world_settings/warps_settings/pow_warps_blue.png",
         "codes": "pow_warps_blue",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/pow_warps_red.png",
+        "img":"images/options/world_settings/warps_settings/pow_warps_red.png",
         "codes": "pow_warps_red",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/pow_warps_all.png",
+        "img":"images/options/world_settings/warps_settings/pow_warps_all.png",
         "codes": "pow_warps_blue,pow_warps_red",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name": "DHC warp",
+    "name":"DHC warp",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/WorldSettings/WarpsSettings/dhc_warps_none.png",
+        "img": "images/options/world_settings/warps_settings/dhc_warps_none.png",
         "codes": "dhc_warps_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/dhc_warps_blue.png",
+        "img":"images/options/world_settings/warps_settings/dhc_warps_blue.png",
         "codes": "dhc_warps_blue",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/dhc_warps_red.png",
+        "img":"images/options/world_settings/warps_settings/dhc_warps_red.png",
         "codes": "dhc_warps_red",
         "inherit_codes":false
       },
       {
-        "img":"images/options/WorldSettings/WarpsSettings/dhc_warps_all.png",
+        "img":"images/options/world_settings/warps_settings/dhc_warps_all.png",
         "codes": "dhc_warps_blue,dhc_warps_red",
         "inherit_codes":false
       }

@@ -131,7 +131,7 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					  ["grabbable_none","blowdust_off",],
+					  ["grabbable_none","blowdust_off"],
 					  ["crenelmushroom_off","lightarrowbreak_off"],
 					  ["bobombs_off","likelike_off"],
 					  ["guardskip_off","crenelbeam_off"],
