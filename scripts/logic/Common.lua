@@ -739,7 +739,7 @@ function PoWHP()
 		return 1
 	elseif ( PoWRedWarp()==1 and OverworldBlocks()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( CanSplit3()==1 or CanSplit4()==1) and PoWJump()==1 and PoWPostKeyDoor()==1 and ( has("gust") or HasBoomerang()==1 ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( CanSplit3()==1 or CanSplit4()==1) and PoWJump()==1 and PoW1stDoor()==1 and ( has("gust") or HasBoomerang()==1 ) ) then
 		return 1
 	else
 		return 0

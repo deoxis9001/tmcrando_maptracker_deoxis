@@ -172,60 +172,7 @@ function LakeShortcut()
 		return 0
 	end 
 end
-function CrenelWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("crenelwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function FallsWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("fallswindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function CloudWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("cloudwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function SwampWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("swampwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function SHFWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("shfwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function MinishWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("minishwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
+
 
 function WesternShortcut_setting() 
 	if ( has("openworld_on") ) then
@@ -477,24 +424,6 @@ function DeepwoodMulldozers()
 		return 0
 	end 
 end
-function DeepwoodWarpSwitch() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( BlowDust()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function DeepwoodBlueWarp()
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("dws_warps_blue") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function DeepwoodPreMadderpillar()
 	if ( has("openworld_on") ) then
 		return 1
@@ -540,15 +469,6 @@ function DeepwoodMadderpillarWeb()
 		return 0
 	end 
 end
-function DeepwoodRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("dws_warps_red") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function CoFSpikeBeetle() 
 	if ( has("openworld_on") ) then
 		return 1
@@ -567,35 +487,10 @@ function CoFHelmasaur()
 		return 0
 	end 
 end
-function CoFNoBlueWarp() 
-	if ( CoFBlueWarp()==0 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function CoFBlueWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("cof_warps_blue") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function CoFChuFight() 
 	if ( has("openworld_on") ) then
 		return 1
 	elseif ( HasDamageSource()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function CoFRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("cof_warps_red") ) then
 		return 1
 	else
 		return 0
@@ -673,15 +568,6 @@ function FoWEyegores()
 		return 0
 	end 
 end
-function FoWBlueWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("fow_warps_blue") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function FoWRightDrop() 
 	if ( has("openworld_on") ) then
 		return 1
@@ -716,26 +602,6 @@ function ToDMainRoom()
 		return 1
 	else
 		return 0
-	end 
-end
-function ToDBlueWarp()
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("tod_warps_blue") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function ToDNoWarp()
-	if ( has("openworld_on") ) then
-		return 0
-	elseif ( has("tod_warps_blue") ) then
-		return 0
-	elseif ( has("tod_warps_red") ) then
-		return 0
-	else
-		return 1
 	end 
 end
 function ToDLeftMushroomSwitch() 
@@ -885,15 +751,6 @@ function ToD2ndRupeePath()
 		return 0
 	end 
 end
-function ToDRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("tod_warps_red") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function ToDMadderpillars() 
 	if ( has("openworld_on") ) then
 		return 1
@@ -952,26 +809,6 @@ function PoWPotPuzzle()
 	if ( has("openworld_on") ) then
 		return 1
 	elseif ( has("bracelets") or PoWPotPuzzleOOL()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function PoWNoWarps() 
-	if ( has("openworld_on") ) then
-		return 0
-	elseif ( has("pow_warps_blue") ) then
-		return 0
-	elseif ( has("pow_warps_red") ) then
-		return 0
-	else
-		return 1
-	end 
-end
-function PoWBlueWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("pow_warps_blue") ) then
 		return 1
 	else
 		return 0
@@ -1050,15 +887,6 @@ function PoWSwitch()
 		return 0
 	end 
 end
-function PoWRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("pow_warps_red") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function DHCKing() 
 	if ( has("openworld_on") ) then
 		return 1
@@ -1066,17 +894,6 @@ function DHCKing()
 		return 1
 	else
 		return 0
-	end 
-end
-function DHCNoWarps() 
-	if ( has("openworld_on") ) then
-		return 0
-	elseif ( has("dhc_warps_blue") ) then
-		return 0
-	elseif ( has("dhc_warps_red") ) then
-		return 0
-	else
-		return 1
 	end 
 end
 function DHCFirstCanon() 
@@ -1187,19 +1004,164 @@ function DHCGhini()
 		return 0
 	end 
 end
-function DHCBlueWarp() 
-	if ( has("openworld_on") ) then
+function CrenelWindCrest() 
+	if ( has("crenelwindcrest_yes") and has("ocarina") ) then
 		return 1
-	elseif ( has("dhc_warps_blue") ) then
+	else
+		return 0
+	end 
+end
+function FallsWindCrest() 
+	if ( has("fallswindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function CloudWindCrest()
+	if ( has("cloudwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function SwampWindCrest() 
+	if ( has("swampwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function SHFWindCrest() 
+	if ( has("shfwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function MinishWindCrest() 
+	if ( has("minishwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function DeepwoodWarpSwitch() 
+	if ( has("dws_warps_blue") ) then
+		return 1
+	elseif ( BlowDust()==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function DeepwoodBlueWarp()
+	if ( has("dws_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function DeepwoodRedWarp() 
+	if ( has("dws_warps_red") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function CoFNoBlueWarp() 
+	if ( CoFBlueWarp()==1 ) then
+		return 0
+	else
+		return 1
+	end 
+end
+function CoFBlueWarp() 
+	if ( has("cof_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function CoFRedWarp() 
+	if ( has("cof_warps_red") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function FoWBlueWarp() 
+	if ( has("fow_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function ToDBlueWarp()
+	if ( has("tod_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function ToDNoWarp()
+	if ( has("tod_warps_blue") ) then
+		return 0
+	elseif ( has("tod_warps_red") ) then
+		return 0
+	else
+		return 1
+	end 
+end
+function ToDRedWarp() 
+	if ( has("tod_warps_red") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function PoWNoWarps() 
+	if ( has("pow_warps_blue") ) then
+		return 0
+	elseif ( has("pow_warps_red") ) then
+		return 0
+	else
+		return 1
+	end 
+end
+function PoWBlueWarp() 
+	if ( has("pow_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function PoWRedWarp() 
+	if ( has("pow_warps_red") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function DHCNoWarps() 
+	if ( has("dhc_warps_blue") ) then
+		return 0
+	elseif ( has("dhc_warps_red") ) then
+		return 0
+	else
+		return 1
+	end 
+end
+function DHCBlueWarp() 
+	if ( has("dhc_warps_blue") ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function DHCRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("dhc_warps_red") ) then
+	if ( has("dhc_warps_red") ) then
 		return 1
 	else
 		return 0

@@ -31,7 +31,7 @@ function Palace_1stHalf_3F_PotPuzzle_ItemDrop()
 end
 
 function Palace_1stHalf_4F_BowMoblins_Chest() 
-	if ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or CanSplit4()==1)  and PoWJump()==1 and PoWPostKeyDoor()==1) then
+	if ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or CanSplit4()==1)  and PoWJump()==1 and PoW1stDoor()==1) then
 		return 1
 	else
 		return 0
@@ -39,7 +39,7 @@ function Palace_1stHalf_4F_BowMoblins_Chest()
 end
 
 function Palace_1stHalf_5F_BallAndChainSoldiers_ItemDrop() 
-	if ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoWPostKeyDoor()==1) then
+	if ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1) then
 		return 1
 	else
 		return 0
