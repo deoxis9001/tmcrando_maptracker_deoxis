@@ -1,5 +1,5 @@
 function AccessEasternHills()
-	if ( CanDestroyTrees()==1 or SHFWindCrest()==1 or (OverworldBlocks()==1 and AccessMinishWoods()==1) ) then
+	if ( CanDestroyTrees()==1 or SHFWindCrest()==1 or ( OverworldBlocks()==1 and AccessMinishWoods()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -7,7 +7,7 @@ function AccessEasternHills()
 end
 
 function AccessLonLon()
-	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or LonLonNorthShortcut()==1 or (has("flippers") and has("mitts") )))) then
+	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or LonLonNorthShortcut()==1 or ( has("flippers") and has("mitts") ) ) ) ) then
 		return 1
 	else
 		return 0
@@ -15,7 +15,7 @@ function AccessLonLon()
 end
 
 function AccessSouthLake() 
-	if ( (AccessLonLon()==1 and CapeExtension()==1 ) or (AccessNorthMinish()==1 and has("mitts") ) ) then
+	if ( ( AccessLonLon()==1 and CapeExtension()==1 ) or ( AccessNorthMinish()==1 and has("mitts") ) ) then
 		return 1
 	else
 		return 0
@@ -55,7 +55,15 @@ function AccessBelari()
 end
 
 function AccessTrilby() 
-	if ( WesternShortcut_setting()==1 or has("flippers") or has("cape") or ( HasSword()==1 and HasSpin()==1 ) or GuardSkip()==1 or (CrenelWindCrest()==1 and (UpperBean()==1 or has("grip")))) then
+	if ( AccessWestern_Settings()==1 or WesternShortcut()==1 or has("flippers") or has("cape") or ( HasSword()==1 and HasSpin()==1 ) or GuardSkip()==1 or ( CrenelWindCrest()==1 and ( UpperBean()==1 or has("grip") ) )  ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function AccessWestern_Settings() 
+	if ( WesternShortcut()==1 or ( SwampWindCrest()==1 and ( HasBow()==1 or has("boots") or has("cape") ) ) ) then
 		return 1
 	else
 		return 0
@@ -63,7 +71,7 @@ function AccessTrilby()
 end
 
 function AccessWestern() 
-	if ( WesternShortcut()==1 or ( AccessTrilby()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 or TrilbyShortcut()==1 ) ) or  ( SwampWindCrest()==1 and ( HasBow()==1 or has("boots") or has("cape") ) ) ) then
+	if ( WesternShortcut()==1 or ( AccessTrilby()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 or TrilbyShortcut()==1 ) ) or ( SwampWindCrest()==1 and ( HasBow()==1 or has("boots") or has("cape") ) ) ) then
 		return 1
 	else
 		return 0
@@ -71,21 +79,21 @@ function AccessWestern()
 end
 
 function AccessCrenel() 
-	if ( ( AccessTrilby()==1 and LowerBean()==1 and ( has("grip")  or ( ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 and ( UpperBean()==1 or (BombWalls()==1 and OverworldBlocks()==1))))) or CrenelWindCrest()==1 ) then
+	if ( ( AccessTrilby()==1 and LowerBean()==1 and ( has("grip") or ( ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 and ( UpperBean()==1 or ( BombWalls()==1 and OverworldBlocks()==1 ) ) ) ) ) or CrenelWindCrest()==1 ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function AccessMelari() 
-	if ( CrenelWindCrest()==1 or ( AccessCrenel()==1  and ( ( has("cane") and ( has("grip") or CrenelMushroom()==1 ) ) or ( has("grip") and ( has("cape") or LightArrowBreak()==1 or has("gust") ) and CrenelSwitch()==1 ) ) ) )	then
+	if ( CrenelWindCrest()==1 or ( AccessCrenel()==1 and ( ( has("cane") and ( has("grip") or CrenelMushroom()==1 ) ) or ( has("grip") and ( has("cape") or LightArrowBreak()==1 or has("gust") ) and CrenelSwitch()==1 ) ) ) )	then
 		return 1
 	else
 		return 0
 	end 
 end
 function AccessSwamp() 
-	if ( SwampWindCrest()==1 or (AccessWestern()==1 and ( has("boots") or has("cape") ) ) )	then
+	if ( SwampWindCrest()==1 or ( AccessWestern()==1 and ( has("boots") or has("cape") ) ) )	then
 		return 1
 	else
 		return 0
@@ -106,14 +114,14 @@ function AccessRuins()
 	end 
 end
 function AccessValley() 
-	if (CanSplit3()==1 or CanSplit4()==1) and (OverworldBlocks()==1 or CapeExtension()==1)	then
+	if ( CanSplit3()==1 or CanSplit4()==1 ) and ( OverworldBlocks()==1 or CapeExtension()==1 )	then
 		return 1
 	else
 		return 0
 	end 
 end
 function AccessCrypt() 
-	if (AccessValley()==1 and DarkRooms()==1 and Graveyard()==1 and CryptEntrance()==1)	then
+	if ( AccessValley()==1 and DarkRooms()==1 and Graveyard()==1 and CryptEntrance()==1 )	then
 		return 1
 	else
 		return 0
@@ -161,7 +169,7 @@ end
 function CoFBasementAccess()
 	if has("openworld_on") then
 		return 1
-	elseif  (CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 )) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 )) then
+	elseif ( CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 ) ) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -189,7 +197,7 @@ function AccessPalace()
 	end 
 end
 function PoW2ndHalf()
-	if ( PowDungeons()==1 and has("cape") and (CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1) then
+	if ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1 ) then
 		return 1
 	else
 		return 0

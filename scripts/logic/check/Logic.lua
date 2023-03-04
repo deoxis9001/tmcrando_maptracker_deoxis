@@ -17,7 +17,7 @@ function Clouds_NorthEast_DigSpot()
 end
 
 function Clouds_North_Kill() 
-	if ( AccessClouds()==1 and ( has("cape") or has("mitts") ) and CloudsKill()==1) then
+	if ( AccessClouds()==1 and ( has("cape") or has("mitts") ) and CloudsKill()==1 ) then
 		return 1
 	else
 		return 0
@@ -49,7 +49,7 @@ function Clouds_NorthWest_BottomChest()
 end
 
 function Clouds_South_Chest() 
-    if ( AccessClouds()==1 and has("mitts") ) then
+ if ( AccessClouds()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -57,7 +57,7 @@ function Clouds_South_Chest()
 end
 
 function Clouds_South_DigSpot() 
-    if ( AccessClouds()==1 and has("mitts") ) then
+ if ( AccessClouds()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -65,47 +65,47 @@ function Clouds_South_DigSpot()
 end
 
 function Clouds_South_MiddleChest() 
-    if ( AccessClouds()==1 and ( has("cape") or has("mitts") ) ) then
-        return 1
+ if ( AccessClouds()==1 and ( has("cape") or has("mitts") ) ) then
+ return 1
 	else
 		return 0
 	end 
 end
 
 function Clouds_South_MiddleDigSpot() 
-    if ( AccessClouds()==1 and has("mitts") ) then
-        return 1
+ if ( AccessClouds()==1 and has("mitts") ) then
+ return 1
 	else
 		return 0
 	end 
 end
 
 function Clouds_South_Kill() 
-    if ( AccessClouds()==1 and ( has("cape") or has("mitts") ) and CloudsKill()==1 ) then   
-        return 1
+ if ( AccessClouds()==1 and ( has("cape") or has("mitts") ) and CloudsKill()==1 ) then 
+ return 1
 	else
 		return 0
 	end 
 end
 
 function Clouds_South_RightChest() 
-    if ( AccessClouds()==1 and ( has("cape") or has("mitts") ) ) then
-        return 1
+ if ( AccessClouds()==1 and ( has("cape") or has("mitts") ) ) then
+ return 1
 	else
 		return 0
 	end 
 end
 
 function Clouds_South_RightDigSpot()
-    if ( AccessClouds()==1 and has("mitts") ) then
-        return 1
+ if ( AccessClouds()==1 and has("mitts") ) then
+ return 1
 	else
 		return 0
 	end 
 end
 
 function Clouds_SouthEast_BottomDigSpot()
-    if ( AccessClouds()==1 and has("mitts") ) then
+ if ( AccessClouds()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -113,7 +113,7 @@ function Clouds_SouthEast_BottomDigSpot()
 end
 
 function Clouds_SouthEast_TopDigSpot() 
-    if ( AccessClouds()==1 and has("mitts") ) then
+ if ( AccessClouds()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -162,7 +162,7 @@ function Clouds_Fusion_Center()
 end
 
 function Crenel_VineTop_GoldenTektite() 
-	if (  ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3b") ) ) and AccessCrenel()==1 and HasSword()==1 ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3b") ) ) and AccessCrenel()==1 and HasSword()==1 ) then
 		return 1
 	else
 		return 0
@@ -170,7 +170,7 @@ function Crenel_VineTop_GoldenTektite()
 end
 
 function Crenel_BridgeCave_Chest() 
-	if ( AccessCrenel()==1 and  BombWalls()==1 ) then
+	if ( AccessCrenel()==1 and BombWalls()==1 ) then
 		return 1
 	else
 		return 0
@@ -178,7 +178,7 @@ function Crenel_BridgeCave_Chest()
 end
 
 function Crenel_FairyCave_HP() 
-	if ( AccessCrenel()==1 and  BombWalls()==1 ) then
+	if ( AccessCrenel()==1 and BombWalls()==1 ) then
 		return 1
 	else
 		return 0
@@ -195,7 +195,7 @@ function Crenel_BelowCoF_GoldenTektite()
 end
 
 function Crenel_Scrub_NPC()
-	if ( AccessCrenel()==1 and BombWalls()==1 and  (has("grip") or has("bombs") or CrenelMushroom()==1 or CrenelWindCrest()==1 ) and Scrubs()==1 ) then
+	if ( AccessCrenel()==1 and BombWalls()==1 and ( has("grip") or has("bombs") or CrenelMushroom()==1 or CrenelWindCrest()==1 ) and Scrubs()==1 ) then
 		return 1
 	else
 		return 0
@@ -219,7 +219,7 @@ function Crenel_Dojo_HP()
 end
 
 function Crenel_Dojo_NPC() 
-	if ( AccessCrenel()==1 and has("grip") and CrenelDojo()==1 and HasSword()==1) then
+	if ( AccessCrenel()==1 and has("grip") and CrenelDojo()==1 and HasSword()==1 ) then
 		return 1
 	else
 		return 0
@@ -227,7 +227,7 @@ function Crenel_Dojo_NPC()
 end
 
 function Crenel_GreatFairy_NPC()
-	if ( AccessCrenel()==1 and has("grip") and BombWalls()==1 and (has("bombs") or HasBottle()==1) ) then
+	if ( AccessCrenel()==1 and has("grip") and BombWalls()==1 and ( has("bombs") or HasBottle()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -251,7 +251,7 @@ function Crenel_DigCave_HP()
 end
 
 function Crenel_BeanstalkFusion_HP() 
-	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1a") ) ) and AccessCrenel()==1 and has("grip") ) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1a") ) ) and AccessCrenel()==1 and has("grip") ) then
 		return 1
 	else
 		return 0
@@ -259,7 +259,7 @@ function Crenel_BeanstalkFusion_HP()
 end
 
 function Crenel_BeanstalkFusion_Item() 
-	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1a") ) ) and AccessCrenel()==1 and has("grip") ) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1a") ) ) and AccessCrenel()==1 and has("grip") ) then
 		return 1
 	else
 		return 0
@@ -267,7 +267,7 @@ function Crenel_BeanstalkFusion_Item()
 end
 
 function Crenel_RainPathFusion_Chest() 
-	if ( (  has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions43") ) ) and AccessCrenel()==1 and has("grip") ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions43") ) ) and AccessCrenel()==1 and has("grip") ) then
 		return 1
 	else
 		return 0
@@ -283,7 +283,7 @@ function Crenel_UpperBlock_Chest()
 end
 
 function Crenel_MinesPathFusion_Chest() 
-	if ( (  has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions45") ) ) and AccessMelari()==1 ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions45") ) ) and AccessMelari()==1 ) then
 		return 1
 	else
 		return 0
@@ -291,7 +291,7 @@ function Crenel_MinesPathFusion_Chest()
 end
 
 function Crenel_Melari_Mining() 
-	if ( AccessMelari()==1 and has("mitts")) then
+	if ( AccessMelari()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -307,79 +307,79 @@ function Crenel_Melari_NPC()
 end
 
 function CrenelBase_EntranceVine()
-    if AccessTrilby()==1 then
-        return 1
-    else
-        return 0
-    end
+ if AccessTrilby()==1 then
+ return 1
+ else
+ return 0
+ end
 end
 
 function CrenelBase_FairyCave_Item()
-    if ( AccessTrilby()==1  and LowerBean()==1 and BombWalls()==1 ) or (CrenelWindCrest()==1 and (UpperBean()==1 or has("grip")) and BombWalls()==1) then
-        return 1
-    else
-        return 0
-    end
+ if ( AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 ) or ( CrenelWindCrest()==1 and ( UpperBean()==1 or has("grip") ) and BombWalls()==1 ) then
+ return 1
+ else
+ return 0
+ end
 end
 
 function CrenelBase_GreenWaterFusion_Chest()
-    if ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and OverworldBlocks()==1 then
-        return 1
-    elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and CrenelWindCrest()==1 and (UpperBean()==1 or has("grip") ) and BombWalls()==1 and OverworldBlocks()==1 then
-        return 1
-    else
-        return 0
-    end
+ if ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and OverworldBlocks()==1 then
+ return 1
+ elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4f") ) ) and CrenelWindCrest()==1 and ( UpperBean()==1 or has("grip") ) and BombWalls()==1 and OverworldBlocks()==1 then
+ return 1
+ else
+ return 0
+ end
 end
 
 function CrenelBase_WestFusion_Chest()
-    if( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and  AccessTrilby()==1 and LowerBean()==1 and (BombWalls()==1 or has("cape")) then
-        return 1
-    elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1  or has("cape") ) ) ) then
-        return 1
-    else
-        return 0
-    end
+ if( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and AccessTrilby()==1 and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) then
+ return 1
+ elseif ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions63") ) ) and CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) then
+ return 1
+ else
+ return 0
+ end
 end
 
 function CrenelBase_WaterCave_Chest()
-    if AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and ( has("bombs") or has("cape") ) then
-        return 1
-    elseif  CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and ( has("bombs") or has("cape") ) then
-        return 1
-    else
-        return 0
-    end
+ if AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and ( has("bombs") or has("cape") ) then
+ return 1
+ elseif CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and ( has("bombs") or has("cape") ) then
+ return 1
+ else
+ return 0
+ end
 end
 
 function CrenelBase_WaterCave_HP()
-    if ( AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and CrenelWaterCaveHP()==1 ) then
-        return 1
-    elseif CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and CrenelWaterCaveHP()==1 then
-        return 1
-    else
-        return 0
-    end
+ if ( AccessTrilby()==1 and LowerBean()==1 and BombWalls()==1 and CrenelWaterCaveHP()==1 ) then
+ return 1
+ elseif CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and BombWalls()==1 and CrenelWaterCaveHP()==1 then
+ return 1
+ else
+ return 0
+ end
 end
 
 function CrenelBase_MinishVineHole_Chest()
-    if AccessTrilby()==1 and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) and CrenelDust()==1  then
-        return 1
-    elseif  CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
-        return 1
-    else
-        return 0
-    end
+ if AccessTrilby()==1 and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 then
+ return 1
+ elseif CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
+ return 1
+ else
+ return 0
+ end
 end
 
 function CrenelBase_MinishCrack_Chest()
-    if AccessTrilby()==1 and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) and CrenelDust()==1  then
-        return 1
-    elseif  CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
-        return 1
-    else
-        return 0
-    end
+ if AccessTrilby()==1 and LowerBean()==1 and ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 then
+ return 1
+ elseif CrenelWindCrest()==1 and ( UpperBean()==1 or ( has("grip") and ( BombWalls()==1 or has("cape") ) ) ) and CrenelDust()==1 then
+ return 1
+ else
+ return 0
+ end
 end
 
 function Falls_Entrance_HP()
@@ -391,7 +391,7 @@ function Falls_Entrance_HP()
 end
 
 function Falls_WaterDigCaveFusion_HP()
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1f") ) ) and ( ( OverworldBlocks()==1 and CapeExtension()==1 ) or ( AccessFalls()==1 and has("grip")==1 and ( has("flippers")==1 or ( has("cape")==1 and DarkRooms()==1 ) ) ) and has("mitts") ) ) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1f") ) ) and ( ( OverworldBlocks()==1 and CapeExtension()==1 ) or ( AccessFalls()==1 and has("grip") and ( has("flippers") or ( has("cape") and DarkRooms()==1 ) ) ) ) and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -399,7 +399,8 @@ function Falls_WaterDigCaveFusion_HP()
 end
 
 function Falls_WaterDigCaveFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1f") ) ) and ( ( OverworldBlocks()==1 and CapeExtension()==1 ) or ( AccessFalls()==1 and has("grip")==1 and ( has("flippers")==1 or ( has("cape")==1 and DarkRooms()==1 ) ) ) and has("mitts") ) ) then
+
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions1f") ) ) and ( ( OverworldBlocks()==1 and CapeExtension()==1 ) or ( AccessFalls()==1 and has("grip") and ( has("flippers") or ( has("cape") and DarkRooms()==1 ) ) ) ) and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -455,8 +456,8 @@ function Falls_RockFusion_Chest()
 end
 
 function Falls_WaterfallFusion_HP() 
-    if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions13") ) ) and AccessFalls()==1 and has("flippers") ) then   
-        return 1
+ if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions13") ) ) and AccessFalls()==1 and has("flippers") ) then 
+ return 1
 	else
 		return 0
 	end 
@@ -471,8 +472,8 @@ function Falls_RupeeCave_Item()
 end
 
 function Falls_RupeeCave_Underwater() 
-    if ( AccessFalls()==1 and has("flippers") ) then   
-       return 1
+ if ( AccessFalls()==1 and has("flippers") ) then 
+ return 1
 	else
 		return 0
 	end 
@@ -548,14 +549,14 @@ function FallsLower_RockItem3()
 end
 
 function FallsLower_DigCave_LeftChest() 
-	if ( AccessMinishWoods()==1 and has("cane") and (has("cape") or has("flippers")) and has("mitts") ) then
+	if ( AccessMinishWoods()==1 and has("cane") and ( has("cape") or has("flippers") ) and has("mitts") ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function FallsLower_DigCave_RightChest() 
-	if ( AccessMinishWoods()==1 and has("cane") and (has("cape") or has("flippers")) and has("mitts") ) then
+	if ( AccessMinishWoods()==1 and has("cane") and ( has("cape") or has("flippers") ) and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -564,7 +565,7 @@ end
 
 
 function Hylia_SunkenHP() 
-	if ( AccessLonLon()==1 and has("flippers")  ) then
+	if ( AccessLonLon()==1 and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -572,7 +573,7 @@ function Hylia_SunkenHP()
 end
 
 function Hylia_DogNPC() 
-	if ( AccessLonLon()==1 and has("dogbottle")  ) then
+	if ( AccessLonLon()==1 and has("dogbottle") ) then
 		return 1
 	else
 		return 0
@@ -622,7 +623,7 @@ function Hylia_BeanstalkFusion_Chest()
 end
 
 function Hylia_MiddleIslandFusion_DigCaveChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions34") ) ) and (  AccessLonLon()==1 and has("mitts") and CapeExtension()==1 ) ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions34") ) ) and ( AccessLonLon()==1 and has("mitts") and CapeExtension()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -638,7 +639,7 @@ function Hylia_BottomHP()
 end
 
 function Hylia_Dojo_HP() 
-	if ( AccessLonLon()==1 and (CapeExtension()==1  or LakeShortcut()==1 ) ) then
+	if ( AccessLonLon()==1 and ( CapeExtension()==1 or LakeShortcut()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -646,7 +647,7 @@ function Hylia_Dojo_HP()
 end
 
 function Hylia_Dojo_NPC() 
-	if ( AccessLonLon()==1 and has("10hearts")  and HasSword()==1 and ( CapeExtension()==1 or LakeShortcut()==1 )) then
+	if ( AccessLonLon()==1 and has("10hearts") and HasSword()==1 and ( CapeExtension()==1 or LakeShortcut()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -654,7 +655,7 @@ function Hylia_Dojo_NPC()
 end
 
 function Hylia_CrackFusion_LibrariNPC() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions12") ) ) and has("ocarina") and ( has("flippers") or has("cape") )  ) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions12") ) ) and has("ocarina") and ( has("flippers") or has("cape") ) ) then
 		return 1
 	else
 		return 0
@@ -678,9 +679,9 @@ function Hylia_SouthMinishHole_Chest()
 end
 
 function Hylia_CabinPathFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions51") ) ) and AccessSouthLake()==1 and ( (BonkedTrees()==1 and CabinSwim()==1 ) or ( LakeMinish()==1 and has("flippers") and CabinSwim()==1 )))then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions51") ) ) and AccessSouthLake()==1 and ( ( BonkedTrees()==1 and CabinSwim()==1 ) or ( LakeMinish()==1 and has("flippers") and CabinSwim()==1 ) ) )then
 		return 1
-	elseif ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions51") ) ) and AccessSouthLake()==1 and ( (BonkedTrees()==1 and CabinSwim()==2 ) or ( LakeMinish()==1 and has("flippers") and CabinSwim()==2 )))then
+	elseif ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions51") ) ) and AccessSouthLake()==1 and ( ( BonkedTrees()==1 and CabinSwim()==2 ) or ( LakeMinish()==1 and has("flippers") and CabinSwim()==2 ) ) )then
 		return 2
 	else
 		return 0
@@ -688,9 +689,9 @@ function Hylia_CabinPathFusion_Chest()
 end
 
 function Hylia_MayorCabin_Item() 
-	if ( AccessSouthLake()==1 and MayorCabin()==1  ) then
+	if ( AccessSouthLake()==1 and MayorCabin()==1 ) then
 		return 1
-	elseif ( AccessSouthLake()==1 and MayorCabin()==2  ) then
+	elseif ( AccessSouthLake()==1 and MayorCabin()==2 ) then
 		return 2
 	else
 		return 0
@@ -698,7 +699,7 @@ function Hylia_MayorCabin_Item()
 end
 
 function MinishWoods_GreatFairy_NPC() 
-	if ( AccessMinishWoods()==1 and has("cane")) then
+	if ( AccessMinishWoods()==1 and has("cane") ) then
 		return 1
 	else
 		return 0
@@ -714,7 +715,7 @@ function MinishWoods_GoldenOcto()
 end
 
 function MinishWoods_WitchHut_Item() 
-	if ( AccessNorthMinish()==1) then
+	if ( AccessNorthMinish()==1 ) then
 		return 1
 	else
 		return 0
@@ -722,7 +723,7 @@ function MinishWoods_WitchHut_Item()
 end
 
 function WitchDiggingCave_Chest() 
-	if ( AccessNorthMinish()==1 and has("mitts")) then
+	if ( AccessNorthMinish()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -730,7 +731,7 @@ function WitchDiggingCave_Chest()
 end
 
 function MinishWoods_NorthFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions44") ) ) and AccessNorthMinish()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions44") ) ) and AccessNorthMinish()==1 ) then
 		return 1
 	else
 		return 0
@@ -746,7 +747,7 @@ function MinishWoods_TopHP()
 end
 
 function MinishWoods_WestFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions47") ) ) and AccessMinishWoods()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions47") ) ) and AccessMinishWoods()==1 ) then
 		return 1
 	else
 		return 0
@@ -754,7 +755,7 @@ function MinishWoods_WestFusion_Chest()
 end
 
 function MinishWoods_LikeLikeDiggingCave_LeftChest() 
-	if ( AccessMinishWoods()==1 and has("mitts") and LikeLike()==1) then
+	if ( AccessMinishWoods()==1 and has("mitts") and LikeLike()==1 ) then
 		return 1
 	else
 		return 0
@@ -762,7 +763,7 @@ function MinishWoods_LikeLikeDiggingCave_LeftChest()
 end
 
 function MinishWoods_LikeLikeDiggingCave_RightChest() 
-	if ( AccessMinishWoods()==1 and has("mitts") and LikeLike()==1) then
+	if ( AccessMinishWoods()==1 and has("mitts") and LikeLike()==1 ) then
 		return 1
 	else
 		return 0
@@ -778,7 +779,7 @@ function MinishWoods_EastFusion_Chest()
 end
 
 function MinishWoods_SouthFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions39") ) ) and AccessMinishWoods()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions39") ) ) and AccessMinishWoods()==1 ) then
 		return 1
 	else
 		return 0
@@ -786,7 +787,7 @@ function MinishWoods_SouthFusion_Chest()
 end
 
 function MinishWoods_BottomHP() 
-	if ( MinishSouthHP()==1) then
+	if ( MinishSouthHP()==1 ) then
 		return 1
 	else
 		return 0
@@ -794,7 +795,7 @@ function MinishWoods_BottomHP()
 end
 
 function MinishWoods_CrackFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4e") ) ) and AccessMinishWoods()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4e") ) ) and AccessMinishWoods()==1 ) then
 		return 1
 	else
 		return 0
@@ -810,7 +811,7 @@ function MinishWoods_MinishPathFusion_Chest()
 end
 
 function MinishVillage_BarrelHouse_Item() 
-	if ( AccessMinishWoods()==1) then
+	if ( AccessMinishWoods()==1 ) then
 		return 1
 	else
 		return 0
@@ -818,7 +819,7 @@ function MinishVillage_BarrelHouse_Item()
 end
 
 function MinishVillage_HP() 
-	if ( AccessMinishWoods()==1) then
+	if ( AccessMinishWoods()==1 ) then
 		return 1
 	else
 		return 0
@@ -826,7 +827,7 @@ function MinishVillage_HP()
 end
 
 function MinishWoods_BombMinish_NPC1() 
-	if ( AccessBelari()==1) then
+	if ( AccessBelari()==1 ) then
 		return 1
 	else
 		return 0
@@ -850,7 +851,7 @@ function MinishWoods_PostVillageFusion_Chest()
 end
 
 function MinishWoods_FlipperHole_MiddleChest() 
-	if ( AccessBelari()==1 and has("flippers")) then
+	if ( AccessBelari()==1 and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -858,7 +859,7 @@ function MinishWoods_FlipperHole_MiddleChest()
 end
 
 function MinishWoods_FlipperHole_RightChest() 
-	if ( AccessBelari()==1 and has("flippers")) then
+	if ( AccessBelari()==1 and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -866,7 +867,7 @@ function MinishWoods_FlipperHole_RightChest()
 end
 
 function MinishWoods_FlipperHole_LeftChest() 
-	if ( AccessBelari()==1 and has("flippers")) then
+	if ( AccessBelari()==1 and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -874,7 +875,7 @@ function MinishWoods_FlipperHole_LeftChest()
 end
 
 function MinishWoods_FlipperHole_HP() 
-	if ( AccessBelari()==1 and has("flippers")) then
+	if ( AccessBelari()==1 and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -890,8 +891,8 @@ function Ruins_ButterflyFusion_Item()
 end
 
 function Ruins_BombCave_Chest() 
-    if ( AccessRuins()==1 and BombWalls()==1 ) then
-        return 1
+ if ( AccessRuins()==1 and BombWalls()==1 ) then
+ return 1
 	else
 		return 0
 	end 
@@ -906,7 +907,7 @@ function Ruins_MinishHome_Chest()
 end
 
 function Ruins_PillarsFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions64") ) ) and AccessRuins()==1 and RuinsArmos()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions64") ) ) and AccessRuins()==1 and RuinsArmos()==1 ) then
 		return 1
 	else
 		return 0
@@ -914,7 +915,7 @@ function Ruins_PillarsFusion_Chest()
 end
 
 function Ruins_BeanStalkFusion_BigChest() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions17") ) ) and AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions17") ) ) and AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1 ) then
 		return 1
 	else
 		return 0
@@ -922,15 +923,15 @@ function Ruins_BeanStalkFusion_BigChest()
 end
 
 function Ruins_CrackFusion_Chest()
-    if (( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions41") ) ) and  AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1) then
-        return 1
+ if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions41") ) ) and AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1 ) then
+ return 1
 	else
 		return 0
 	end 
 end
 
 function Ruins_MinishCave_HP() 
-    if ( AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1) then
+ if ( AccessRuins()==1 and RuinsArmos()==1 and RuinsTektites()==1 ) then
 		return 1
 	else
 		return 0
@@ -962,13 +963,13 @@ function Ruins_NearFoWFusion_Chest()
 end
 
 function Smith_House_Chest() 
-  return 1
+ return 1
 end
 function Smith_Floor_Item1() 
-  return 1
+ return 1
 end
 function Smith_Floor_Item2() 
-  return 1
+ return 1
 end
 function SouthField_PuddleFusion_Item()
 	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions58") ) ) and ( CanDestroyTrees()==1 or has("cape") or has("flippers") or AccessWestern()==1 ) ) then
@@ -999,7 +1000,7 @@ function SouthField_MinishSize_WaterHole_HP()
 	end 
 end
 function SouthField_Tingle_NPC() 
-	if ( has("cane")  and has("trophy") and AccessEasternHills()==1 ) then
+	if ( has("cane") and has("trophy") and AccessEasternHills()==1 ) then
 		return 1
 	else
 		return 0
@@ -1069,7 +1070,7 @@ end
 function Town_GoronShop_Set1_Item2() 
 	if ( has("goron_eu") and Town_GoronShop_Set1_Item1()==1 and has("wallet") ) then
 		return 1
-	elseif  (has("goron_jp") and Town_GoronShop_Set1_Item1()==1 and has("wallet") ) then
+	elseif ( has("goron_jp") and Town_GoronShop_Set1_Item1()==1 and has("wallet") ) then
 		return 1
 	else
 		return 0
@@ -1087,7 +1088,7 @@ end
 function Town_GoronShop_Set2_Items()
 	if Town_GoronShop_Set1_Item1()==1 and has("goron_eu") and has("wallet") then
 		return 1
-	elseif Town_GoronShop_Set1_Item1()==1 and has("goron_jp") and has("wallet")  then
+	elseif Town_GoronShop_Set1_Item1()==1 and has("goron_jp") and has("wallet") then
 		return 1
 	else
 		return 0
@@ -1097,7 +1098,7 @@ end
 function Town_GoronShop_Set3_Item1()
 	if Town_GoronShop_Set2_Items()==1 and has("goron_eu") and has("wallet2") then
 		return 1
-	elseif Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet")  then
+	elseif Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet") then
 		return 1
 	else
 		return 0
@@ -1107,7 +1108,7 @@ end
 function Town_GoronShop_Set3_Items()
 	if Town_GoronShop_Set2_Items()==1 and has("goron_eu") and has("wallet") then
 		return 1
-	elseif Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet")  then
+	elseif Town_GoronShop_Set2_Items()==1 and has("goron_jp") and has("wallet") then
 		return 1
 	else
 		return 0
@@ -1117,7 +1118,7 @@ end
 function Town_GoronShop_Set4_Items()
 	if Town_GoronShop_Set3_Items()==1 and has("goron_eu") and has("wallet2") then
 		return 1
-	elseif Town_GoronShop_Set3_Items()==1 and has("goron_jp") and has("wallet")  then
+	elseif Town_GoronShop_Set3_Items()==1 and has("goron_jp") and has("wallet") then
 		return 1
 	else
 		return 0
@@ -1127,7 +1128,7 @@ end
 function Town_GoronShop_Set5_Item1()
 	if Town_GoronShop_Set4_Items()==1 and has("goron_eu") and has("wallet3") then
 		return 1
-	elseif Town_GoronShop_Set4_Items()==1 and has("goron_jp") and has("wallet")  then
+	elseif Town_GoronShop_Set4_Items()==1 and has("goron_jp") and has("wallet") then
 		return 1
 	else
 		return 0
@@ -1137,7 +1138,7 @@ end
 function Town_GoronShop_Set5_Items()
 	if Town_GoronShop_Set4_Items()==1 and has("goron_eu") and has("wallet2") then
 		return 1
-	elseif Town_GoronShop_Set4_Items()==1 and has("goron_jp") and has("wallet")  then
+	elseif Town_GoronShop_Set4_Items()==1 and has("goron_jp") and has("wallet") then
 		return 1
 	else
 		return 0
@@ -1299,7 +1300,7 @@ function Town_Well_PillarChest()
 	end 
 end
 function Town_DrLeft_AtticItem() 
-	if ( DrLeft()==1 and TownDog()==1 )  then
+	if ( DrLeft()==1 and TownDog()==1 ) then
 		return 1
 	else
 		return 0
@@ -1343,7 +1344,7 @@ function Town_UnderLibrary_FrozenChest()
 	end 
 end
 function Town_UnderLibrary_BigChest() 
-	if ( ( Library()==1 and has("cane") and HasDamageSource()==1 and ( has("flippers") or  (has("book3") and has("grip") and ( has("gust") or has("cape")))))) then
+	if ( ( Library()==1 and has("cane") and HasDamageSource()==1 and ( has("flippers") or ( has("book3") and has("grip") and ( has("gust") or has("cape") ) ) ) ) ) then
 		return 1
 	else
 		return 0
@@ -1399,7 +1400,7 @@ function NorthField_TreeFusion_BottomRightChest()
 	end 
 end
 function NorthField_TreeFusion_CenterBigChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions59") and has("fusions40") and has("fusions5a") and has("fusions4d")) ) ) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions59") and has("fusions40") and has("fusions5a") and has("fusions4d") ) ) ) then
 		return 1
 	else
 		return 0
@@ -1457,7 +1458,7 @@ function Castle_Dojo_NPC()
 end
 
 function Castle_RightFountainFusion_MinishHoleChest() 
-	if (( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions18") ) ) and BonkedTrees()==1 ) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions18") ) ) and BonkedTrees()==1 ) then
 		return 1
 	else
 		return 0
@@ -1512,7 +1513,7 @@ function Hills_BeanstalkFusion_RightChest()
 end
 
 function Hills_BombCave_Chest() 
-	if ( AccessEasternHills()==1 and BombWalls()==1) then
+	if ( AccessEasternHills()==1 and BombWalls()==1 ) then
 		return 1
 	else
 		return 0
@@ -1594,22 +1595,22 @@ end
 function LonLon_GoronCaveFusion_SmallChest() 
 	if has("fusionblue_vanilla") then
 		GoronNumber=0;
-		if (has("fusions25")) then
+		if ( has("fusions25") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions26")) then
+		if ( has("fusions26") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions29")) then
+		if ( has("fusions29") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions2a")) then
+		if ( has("fusions2a") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions2b")) then
+		if ( has("fusions2b") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions2f")) then
+		if ( has("fusions2f") ) then
 			GoronNumber = GoronNumber + 1
 		end
 	elseif has("openworld_on") or has("fusionblue_complet") then
@@ -1617,7 +1618,7 @@ function LonLon_GoronCaveFusion_SmallChest()
 	else
 		GoronNumber = 0
 	end
-	if ( GoronNumber >=4 and GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina"))) then
+	if ( GoronNumber >=4 and GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina") ) ) then
 		return 1
 	else
 		return 0
@@ -1627,22 +1628,22 @@ end
 function LonLon_GoronCaveFusion_BigChest() 
 	if has("fusionblue_vanilla") then
 		local GoronNumber=0;
-		if (has("fusions25")) then
+		if ( has("fusions25") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions26")) then
+		if ( has("fusions26") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions29")) then
+		if ( has("fusions29") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions2a")) then
+		if ( has("fusions2a") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions2b")) then
+		if ( has("fusions2b") ) then
 			GoronNumber = GoronNumber + 1
 		end
-		if (has("fusions2f")) then
+		if ( has("fusions2f") ) then
 			GoronNumber = GoronNumber + 1
 		end
 	elseif has("openworld_on") or has("fusionblue_complet") then
@@ -1651,7 +1652,7 @@ function LonLon_GoronCaveFusion_BigChest()
 		GoronNumber = 0
 	end
 
-	if ( GoronNumber>=6 and GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina"))) then
+	if ( GoronNumber>=6 and GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina") ) ) then
 		return 1
 	else
 		return 0
@@ -1692,7 +1693,7 @@ function Swamp_GoldenRope()
 end
 
 function Swamp_NearWaterfall_CaveHP() 
-	if ( AccessSwamp()==1  and ( SwampNorthShortcut()==1 or HasBow()==1 )  and ( has("cape") or has("flippers") ) ) then
+	if ( AccessSwamp()==1 and ( SwampNorthShortcut()==1 or HasBow()==1 ) and ( has("cape") or has("flippers") ) ) then
 		return 1 
 	else
 		return 0
@@ -1700,7 +1701,7 @@ function Swamp_NearWaterfall_CaveHP()
 end
 
 function Swamp_WaterfallFusion_DojoNPC() 
-	if ( (  has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and AccessSwamp()==1  and ( SwampNorthShortcut()==1 or HasBow()==1 ) and has("flippers")  ) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and AccessSwamp()==1 and ( SwampNorthShortcut()==1 or HasBow()==1 ) and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -1724,7 +1725,7 @@ function Swamp_DiggingCave_Chest()
 end
 
 function Swamp_Underwater() 
-	if ( AccessSwamp()==1 and has("flippers")  ) then
+	if ( AccessSwamp()==1 and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -1740,14 +1741,14 @@ function Swamp_SouthCave_Chest()
 end
 
 function Swamp_Dojo_HP()
-	if ( ( AccessSwamp()==1 and (has("cape") or HasBow()==1 or ( has("boots") and has("flippers") ) ) ) or (SwampWindCrest()==1 and has("boots") ) ) then
+	if ( ( AccessSwamp()==1 and ( has("cape") or HasBow()==1 or ( has("boots") and has("flippers") ) ) ) or ( SwampWindCrest()==1 and has("boots") ) ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function Swamp_Dojo_NPC() 
-	if ( (AccessSwamp()==1 and (has("cape") or HasBow()==1 or ( has("boots") and has("flippers") ) ) and GotScrolls()==1 and HasSword()==1  ) or (SwampWindCrest()==1 and has("boots")  and GotScrolls()==1 and HasSword()==1) ) then
+	if ( ( AccessSwamp()==1 and ( has("cape") or HasBow()==1 or ( has("boots") and has("flippers") ) ) and GotScrolls()==1 and HasSword()==1 ) or ( SwampWindCrest()==1 and has("boots") and GotScrolls()==1 and HasSword()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -1755,7 +1756,7 @@ function Swamp_Dojo_NPC()
 end
 
 function Swamp_MinishFusion_NorthCrack_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4b") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4b") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -1779,7 +1780,7 @@ function Swamp_MinishFusion_NorthWestCrack_Chest()
 end
 
 function Swamp_MinishFusion_WestCrack_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -1787,7 +1788,7 @@ function Swamp_MinishFusion_WestCrack_Chest()
 end
 
 function Swamp_MinishFusion_VineCrack_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3e") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 )) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3e") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -1795,7 +1796,7 @@ function Swamp_MinishFusion_VineCrack_Chest()
 end
 
 function Swamp_MinishFusion_WaterHole_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and has("flippers")) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -1803,7 +1804,7 @@ function Swamp_MinishFusion_WaterHole_Chest()
 end
 
 function Swamp_MinishFusion_WaterHole_HP() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and has("flippers")) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions57") ) ) and AccessSwamp()==1 and ( has("boots") or has("cape") or HasBow()==1 ) and has("flippers") ) then
 		return 1
 	else
 		return 0
@@ -1812,7 +1813,7 @@ end
 
 
 function Swamp_Fusion() 
-	if ( AccessSwamp()==1 and RuinsFusion()==1 and ( ( has("boots") and has("flippers")) or  has("cape") )) then
+	if ( AccessSwamp()==1 and RuinsFusion()==1 and ( ( has("boots") and has("flippers") ) or has("cape") ) ) then
 		return 1
 	else
 		return 0
@@ -1820,7 +1821,7 @@ function Swamp_Fusion()
 end
 
 function Trilby_MiddleFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5e") ) ) and AccessTrilby()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5e") ) ) and AccessTrilby()==1 ) then
 		return 1
 	else
 		return 0
@@ -1828,7 +1829,7 @@ function Trilby_MiddleFusion_Chest()
 end
 
 function Trilby_TopFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions52") ) ) and AccessTrilby()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions52") ) ) and AccessTrilby()==1 ) then
 		return 1
 	else
 		return 0
@@ -1836,7 +1837,7 @@ function Trilby_TopFusion_Chest()
 end
 
 function Trilby_DigCave_LeftChest() 
-	if ( AccessTrilby()==1 and has("mitts")) then
+	if ( AccessTrilby()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -1860,7 +1861,7 @@ function Trilby_DigCave_WaterFusion_Chest()
 end
 
 function Trilby_Scrub_NPC() 
-	if ( AccessTrilby()==1 and BombWalls()==1 and Scrubs()==1) then
+	if ( AccessTrilby()==1 and BombWalls()==1 and Scrubs()==1 ) then
 		return 1
 	else
 		return 0
@@ -1883,7 +1884,7 @@ function Trilby_PuddleFusion_Item()
 	end 
 end
 function Valley_PreValleyFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5f") ) ) and AccessValley()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions5f") ) ) and AccessValley()==1 ) then
 		return 1
 	else
 		return 0
@@ -1900,16 +1901,16 @@ end
 
 function Valley_LostWoods_Chest() 
 if ( AccessValley()==1 and DarkRooms()==1 ) then
-    return 1
+ return 1
 	else
 		return 0
 	end 
 end
 
 function Valley_Dampe_NPC() 
-	if ( AccessValley()==1 and DarkRooms()==1) then
+	if ( AccessValley()==1 and DarkRooms()==1 ) then
 		return 1
-	elseif ( AccessValley()==1 and DarkRooms()==2) then
+	elseif ( AccessValley()==1 and DarkRooms()==2 ) then
 		return 2
 	else
 		return 0
@@ -1933,7 +1934,7 @@ function Valley_GraveyardLeftFusion_Chest()
 end
 
 function Valley_GraveyardLeftGrave_HP() 
-	if ( AccessValley()==1 and DarkRooms()==1 and Graveyard()==1 and LeftGraveHP()==1) then
+	if ( AccessValley()==1 and DarkRooms()==1 and Graveyard()==1 and LeftGraveHP()==1 ) then
 		return 1
 	else
 		return 0
@@ -1956,7 +1957,7 @@ function Valley_GraveyardRightGraveFusion_Chest()
 	end 
 end
 function WesternWoods_FusionChest() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3a") ) ) and AccessWestern()==1) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3a") ) ) and AccessWestern()==1 ) then
 		return 1
 	else
 		return 0
@@ -1964,7 +1965,7 @@ function WesternWoods_FusionChest()
 end
 
 function WesternWoods_TreeFusion_HP() 
-	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions11") ) ) and AccessWestern()==1) then
+	if ( ( has("openworld_on") or has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions11") ) ) and AccessWestern()==1 ) then
 		return 1
 	else
 		return 0
@@ -1972,7 +1973,7 @@ function WesternWoods_TreeFusion_HP()
 end
 
 function WesternWoods_TopDig() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions48") ) ) and AccessWestern()==1 and has("mitts")) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions48") ) ) and AccessWestern()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -1996,7 +1997,7 @@ function WesternWoods_PercyFusion_Percy()
 end
 
 function WesternWoods_BottomDig() 
-	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4c") ) ) and AccessWestern()==1 and has("mitts")) then
+	if ( ( has("openworld_on") or has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions4c") ) ) and AccessWestern()==1 and has("mitts") ) then
 		return 1
 	else
 		return 0
@@ -2012,7 +2013,7 @@ function WesternWoods_GoldenOcto()
 end
 
 function WesternWoods_BeanstalkFusion_Chest() 
-	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions24") ) ) and AccessWestern()==1) then
+	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions24") ) ) and AccessWestern()==1 ) then
 		return 1
 	else
 		return 0
@@ -2020,7 +2021,7 @@ function WesternWoods_BeanstalkFusion_Chest()
 end
 
 function WesternWoods_BeanstalkFusion_Item() 
-	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions24") ) ) and AccessWestern()==1) then
+	if ( ( has("openworld_on") or has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions24") ) ) and AccessWestern()==1 ) then
 		return 1
 	else
 		return 0
@@ -2036,7 +2037,7 @@ function WindTribe_1F_Chest()
 end
 
 function WindTribe_2F_Chest() 
-	if ( ( StrangerFusion()==1 or AccessWindTribe()==1 )) then
+	if ( ( StrangerFusion()==1 or AccessWindTribe()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -2044,7 +2045,7 @@ function WindTribe_2F_Chest()
 end
 
 function WindTribe_2F_Gregal_NPC1() 
-	if ( Gregal()==1  and ( StrangerFusion()==1 or AccessWindTribe()==1 )) then
+	if ( Gregal()==1 and ( StrangerFusion()==1 or AccessWindTribe()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -2052,7 +2053,7 @@ function WindTribe_2F_Gregal_NPC1()
 end
 
 function WindTribe_2F_Gregal_NPC2() 
-	if ( Gregal()==1 and AccessWindTribe()==1) then
+	if ( Gregal()==1 and AccessWindTribe()==1 ) then
 		return 1
 	else
 		return 0
@@ -2060,7 +2061,7 @@ function WindTribe_2F_Gregal_NPC2()
 end
 
 function WindTribe_3F_Chest() 
-	if ( AccessWindTribe()==1) then
+	if ( AccessWindTribe()==1 ) then
 		return 1
 	else
 		return 0
@@ -2068,8 +2069,8 @@ function WindTribe_3F_Chest()
 end
 
 function WindTribe_4F_Chest() 
-    if ( AccessWindTribe()==1) then
-        return 1
+ if ( AccessWindTribe()==1 ) then
+ return 1
 	else
 		return 0
 	end 

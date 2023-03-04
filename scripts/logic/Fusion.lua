@@ -116,7 +116,7 @@ function Json_Crenel_Mines_Fuzer4()
 end
 
 function Json_Crenel_Mines_Fuzer5() 
-	if ( AccessMelari()==1 )  then
+	if ( AccessMelari()==1 ) then
 		return 1
 	else
 		return 0
@@ -124,7 +124,7 @@ function Json_Crenel_Mines_Fuzer5()
 end
 
 function Json_Crenel_DiggingCave_Fuzer() 
-	if ( Crenel_DigCave_HP()==1 )  then
+	if ( Crenel_DigCave_HP()==1 ) then
 		return 1
 	else
 		return 0
@@ -132,7 +132,7 @@ function Json_Crenel_DiggingCave_Fuzer()
 end
 
 function Json_Crenel_Dojo_Fuzer() 
-	if ( Crenel_Dojo_HP()==1 )  then
+	if ( Crenel_Dojo_HP()==1 ) then
 		return 1
 	else
 		return 0
@@ -204,7 +204,7 @@ function Json_Hylia_Fifi_Fuzer()
 end
 
 function Json_Hylia_Librari_Fuzer() 
-	if ( Hylia_CrackFusion_LibrariNPC()==1) then
+	if ( Hylia_CrackFusion_LibrariNPC()==1 ) then
 		return 1
 	else
 		return 0
@@ -249,7 +249,7 @@ end
 
 
 function Json_LonLon_GoronQuest_Fuzer1() 
-	if ( GoronCave()==1 and (CanDestroyTrees()==1 or has("ocarina") )) then
+	if ( GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina") ) ) then
 		return 1
 	else
 		return 0
@@ -258,7 +258,7 @@ end
 
 
 function Json_LonLon_GoronQuest_Fuzer2() 
-	if(LonLon_GoronCaveFusion_BigChest()==1 ) then
+	if( LonLon_GoronCaveFusion_BigChest()==1 ) then
 		return 1
 	else
 		return 0
@@ -286,28 +286,28 @@ end
 
 function Json_MinishWoods_MinishVillage_Fuzer1() 
 	local count=0
-	if(has("fusions13")) then
+	if( has("fusions13") ) then
 		count = count + 1
 	end
-	if(has("fusions14")) then
+	if( has("fusions14") ) then
 		count = count + 1
 	end
-	if(has("fusions15")) then
+	if( has("fusions15") ) then
 		count = count + 1
 	end
-	if(has("fusions16")) then
+	if( has("fusions16") ) then
 		count = count + 1
 	end
-	if(has("fusions17")) then
+	if( has("fusions17") ) then
 		count = count + 1
 	end
-	if(has("fusions18")) then
+	if( has("fusions18") ) then
 		count = count + 1
 	end
-	if(has("fusions19")) then
+	if( has("fusions19") ) then
 		count = count + 1
 	end
-	if(has("fusions1a")) then
+	if( has("fusions1a") ) then
 		count = count + 1
 	end
 	if ( count >=7 ) then
@@ -320,25 +320,25 @@ end
 
 function Json_MinishWoods_MinishVillage_Fuzer2() 
 	local count=0
-	if(has("fusions1b")) then
+	if( has("fusions1b") ) then
 		count = count + 1
 	end
-	if(has("fusions1c")) then
+	if( has("fusions1c") ) then
 		count = count + 1
 	end
-	if(has("fusions1d")) then
+	if( has("fusions1d") ) then
 		count = count + 1
 	end
-	if(has("fusions1e")) then
+	if( has("fusions1e") ) then
 		count = count + 1
 	end
-	if(has("fusions1f")) then
+	if( has("fusions1f") ) then
 		count = count + 1
 	end
-	if(has("fusions20")) then
+	if( has("fusions20") ) then
 		count = count + 1
 	end
-	if(has("fusions21")) then
+	if( has("fusions21") ) then
 		count = count + 1
 	end
 	if ( count >=7 and Json_MinishWoods_MinishVillage_Fuzer1()==1 ) then
@@ -404,7 +404,7 @@ end
 
 
 function Json_SouthHyruleField_Tingle_Fuzer1() 
-	if ( has("cane") and (AccessEasternHills()==1) and HasMagicBoomerang()==1 ) then
+	if ( has("cane") and ( AccessEasternHills()==1 ) and HasMagicBoomerang()==1 ) then
 		return 1
 	else
 		return 0
@@ -413,7 +413,7 @@ end
 
 
 function Json_SouthHyruleField_Tingle_Fuzer2() 
-	if ( has("cane") and (AccessEasternHills()==1) and HasMagicBoomerang()==1 ) then
+	if ( has("cane") and ( AccessEasternHills()==1 ) and HasMagicBoomerang()==1 ) then
 		return 1
 	else
 		return 0
@@ -427,7 +427,7 @@ end
 
 
 function Json_SouthHyruleField_SmithsHouse_Fuzer2() 
-	if ( ( has("fusionred_vanilla") and Json_SouthHyruleField_SmithsHouse_Fuzer1()==1) or FusionsRed()==0) then
+	if ( ( has("fusionred_vanilla") and Json_SouthHyruleField_SmithsHouse_Fuzer1()==1 ) or FusionsRed()==0 ) then
 		return 1
 	else
 		return 0
@@ -489,7 +489,7 @@ function Json_Town_School_Fuzer()
 end
 
 function Json_Town_Library_Fuzer1() 
-	if ( Library()==1 and has("cane") and has("book3") and has("grip")) then
+	if ( Library()==1 and has("cane") and has("book3") and has("grip") ) then
 		return 1
 	else
 		return 0
@@ -576,7 +576,7 @@ function Json_Trilby_MinishHouse_Fuzer()
 end
 
 function Json_Valley_Dampe_Fuzer1() 
-	if ( Valley_Dampe_NPC()==1) then
+	if ( Valley_Dampe_NPC()==1 ) then
 		return 1
 	else
 		return 0
@@ -592,7 +592,7 @@ function Json_Valley_Dampe_Fuzer2()
 end
 
 function Json_Valley_NortheastGrave_Fuzer1() 
-	if ( Valley_GraveyardRightGraveFusion_Chest()==1) then
+	if ( Valley_GraveyardRightGraveFusion_Chest()==1 ) then
 		return 1
 	else
 		return 0
@@ -608,7 +608,7 @@ function Json_Valley_NortheastGrave_Fuzer2()
 end
 
 function Json_Valley_Spekter_Fuzer1() 
-	if ( Valley_GraveyardLeftGrave_HP()==1) then
+	if ( Valley_GraveyardLeftGrave_HP()==1 ) then
 		return 1
 	else
 		return 0
@@ -616,7 +616,7 @@ function Json_Valley_Spekter_Fuzer1()
 end
 
 function Json_Valley_Spekter_Fuzer2() 
-	if (Json_Valley_Spekter_Fuzer1()==1) then
+	if ( Json_Valley_Spekter_Fuzer1()==1 ) then
 		return 1
 	else
 		return 0
@@ -624,7 +624,7 @@ function Json_Valley_Spekter_Fuzer2()
 end
 
 function Json_WesternWoods_MinishHouse_Fuzer() 
-	if ( AccessWestern()==1) then
+	if ( AccessWestern()==1 ) then
 		return 1
 	else
 		return 0
