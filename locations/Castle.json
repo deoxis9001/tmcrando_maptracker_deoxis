@@ -91,9 +91,7 @@
 		"name":"Fuzer Forest Minish",
 		"hosted_item":"fusions4c",
 		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
-		"access_rules":["$Json_Castle_MinishCrack_Fuzer"],
-		"chest_unopened_img":"images/items-map/KinstoneGreenN.png",
-		"chest_opened_img":"images/items-map/KinstoneGreenNGray.png"
+		"access_rules":["$Json_Castle_MinishCrack_Fuzer"]
 	  }
 	]
   },

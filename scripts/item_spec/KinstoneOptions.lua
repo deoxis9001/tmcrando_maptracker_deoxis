@@ -40,22 +40,22 @@ function KinstoneOptions:updateIcon()
 			redV:Switch(true,0)
 			redW:Switch(true,countredW)
 		elseif self.id == 2 then
-		countgreenV=49
+		countgreenC=49
 		if (has("fusionblue_removed")) then
-			countgreenV=countgreenV-1
-			countgreenV=countgreenV-1
+			countgreenC=countgreenC-1
+			countgreenC=countgreenC-1
 		end
 		if (has("fusiongold_removed")) then
-			countgreenV=countgreenV-1
-			countgreenV=countgreenV-2
+			countgreenC=countgreenC-1
+			countgreenC=countgreenC-2
 		end
 		if (has("fusiongold_removed") and has("fusionred_removed")) then
-			countgreenV=countgreenV-2
-			countgreenV=countgreenV-1
+			countgreenC=countgreenC-2
+			countgreenC=countgreenC-1
 		end
-			greenN:Switch(true,0)
-			greenV:Switch(true,countgreenV)
-			greenZ:Switch(true,0)
+			greenG:Switch(true,0)
+			greenC:Switch(true,countgreenC)
+			greenP:Switch(true,0)
 		elseif self.id == 3 then
 			blueL:Switch(true,18)
 			blueS:Switch(true,0)
@@ -79,24 +79,24 @@ function KinstoneOptions:updateIcon()
 			redV:Switch(false,countredV)
 			redW:Switch(false,countredW)
 		elseif self.id == 2 then
-		countgreenN=16
-		countgreenV=17
-		countgreenZ=9
+		countgreenG=16
+		countgreenC=17
+		countgreenP=9
 		if (has("fusionblue_removed")) then
-			countgreenV=countgreenV-1
-			countgreenZ=countgreenZ-1
+			countgreenC=countgreenC-1
+			countgreenP=countgreenP-1
 		end
 		if (has("fusiongold_removed")) then
-			countgreenV=countgreenV-1
-			countgreenN=countgreenN-2
+			countgreenC=countgreenC-1
+			countgreenG=countgreenG-2
 		end
 		if (has("fusiongold_removed") and has("fusionred_removed")) then
-			countgreenN=countgreenN-2
-			countgreenZ=countgreenZ-1
+			countgreenG=countgreenG-2
+			countgreenP=countgreenP-1
 		end
-			greenN:Switch(false,countgreenN)
-			greenV:Switch(false,countgreenV)
-			greenZ:Switch(false,countgreenZ)
+			greenG:Switch(false,countgreenG)
+			greenC:Switch(false,countgreenC)
+			greenP:Switch(false,countgreenP)
 		elseif self.id == 3 then
 			blueL:Switch(false,9)
 			blueS:Switch(false,9)
@@ -115,20 +115,20 @@ function KinstoneOptions:updateMax()
 			end
 			redW:update_count(countredW)
 		elseif self.id == 2 then
-			countgreenV=49
+			countgreenC=49
 			if (has("fusionblue_removed")) then
-				countgreenV=countgreenV-1
-				countgreenV=countgreenV-1
+				countgreenC=countgreenC-1
+				countgreenC=countgreenC-1
 			end
 			if (has("fusiongold_removed")) then
-				countgreenV=countgreenV-1
-				countgreenV=countgreenV-2
+				countgreenC=countgreenC-1
+				countgreenC=countgreenC-2
 			end
 			if (has("fusiongold_removed") and has("fusionred_removed")) then
-				countgreenV=countgreenV-2
-				countgreenV=countgreenV-1
+				countgreenC=countgreenC-2
+				countgreenC=countgreenC-1
 			end
-			greenV:update_count(countgreenV)
+			greenC:update_count(countgreenC)
 		end
 	else
 		if self.id == 1 then
@@ -143,24 +143,24 @@ function KinstoneOptions:updateMax()
 			redV:update_count(countredV)
 			redW:update_count(countredW)
 		elseif self.id == 2 then
-			countgreenN=16
-			countgreenV=17
-			countgreenZ=9
+			countgreenG=16
+			countgreenC=17
+			countgreenP=9
 			if (has("fusionblue_removed")) then
-				countgreenV=countgreenV-1
-				countgreenZ=countgreenZ-1
+				countgreenC=countgreenC-1
+				countgreenP=countgreenP-1
 			end
 			if (has("fusiongold_removed")) then
-				countgreenV=countgreenV-1
-				countgreenN=countgreenN-2
+				countgreenC=countgreenC-1
+				countgreenG=countgreenG-2
 			end
 			if (has("fusiongold_removed") and has("fusionred_removed")) then
-				countgreenN=countgreenN-2
-				countgreenZ=countgreenZ-1
+				countgreenG=countgreenG-2
+				countgreenP=countgreenP-1
 			end
-			greenN:update_count(countgreenN)
-			greenV:update_count(countgreenV)
-			greenZ:update_count(countgreenZ)
+			greenG:update_count(countgreenG)
+			greenC:update_count(countgreenC)
+			greenP:update_count(countgreenP)
 		end
     end
 end

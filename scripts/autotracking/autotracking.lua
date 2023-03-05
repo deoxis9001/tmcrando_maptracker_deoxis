@@ -16,12 +16,12 @@ BlueLFused = 0
 BlueLBag = 0
 BlueSFused = 0
 BlueSBag = 0
-GreenNFused = 0
-GreenNBag = 0
-GreenVFused = 0
-GreenVBag = 0
-GreenZFused = 0
-GreenZBag = 0
+GreenGFused = 0
+GreenGBag = 0
+GreenCFused = 0
+GreenCBag = 0
+GreenPFused = 0
+GreenPBag = 0
 KEY_STOLEN = false
 ---------------------------------------
 
@@ -939,198 +939,198 @@ function updateBlueS(segment, flag)
   end
 end
 
-function updateGreenN(segment, flag)
+function updateGreenG(segment, flag)
   if ReadU8(segment, 0x2002b58) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6b)
+    GreenGBag = ReadU8(segment, 0x2002b6b)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6b))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6b))
 	end
   elseif ReadU8(segment, 0x2002b59) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6c)
+    GreenGBag = ReadU8(segment, 0x2002b6c)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6c))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6c))
 	end
   elseif ReadU8(segment, 0x2002b5a) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6d)
+    GreenGBag = ReadU8(segment, 0x2002b6d)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6d))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6d))
 	end
   elseif ReadU8(segment, 0x2002b5b) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6e)
+    GreenGBag = ReadU8(segment, 0x2002b6e)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6e))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6e))
 	end
   elseif ReadU8(segment, 0x2002b5c) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6f)
+    GreenGBag = ReadU8(segment, 0x2002b6f)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6f))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6f))
 	end
   elseif ReadU8(segment, 0x2002b5d) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b70)
+    GreenGBag = ReadU8(segment, 0x2002b70)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b70))
+		print("Green G in Bag", ReadU8(segment, 0x2002b70))
 	end
   elseif ReadU8(segment, 0x2002b5e) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b71)
+    GreenGBag = ReadU8(segment, 0x2002b71)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b71))
+		print("Green G in Bag", ReadU8(segment, 0x2002b71))
 	end
   elseif ReadU8(segment, 0x2002b5f) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b72)
+    GreenGBag = ReadU8(segment, 0x2002b72)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b72))
+		print("Green G in Bag", ReadU8(segment, 0x2002b72))
 	end
   elseif ReadU8(segment, 0x2002b60) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b73)
+    GreenGBag = ReadU8(segment, 0x2002b73)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b73))
+		print("Green G in Bag", ReadU8(segment, 0x2002b73))
 	end
   elseif ReadU8(segment, 0x2002b61) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b74)
+    GreenGBag = ReadU8(segment, 0x2002b74)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b74))
+		print("Green G in Bag", ReadU8(segment, 0x2002b74))
 	end
   elseif ReadU8(segment, 0x2002b62) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b75)
+    GreenGBag = ReadU8(segment, 0x2002b75)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b75))
+		print("Green G in Bag", ReadU8(segment, 0x2002b75))
 	end
   else
-	GreenNBag = 0
+	GreenGBag = 0
   end
-  greenN:setActive(GreenNFused + GreenNBag)
+  greenG:setActive(GreenGFused + GreenGBag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
-	print("Green N Obtained", GreenNBag)
+	print("Green G Obtained", GreenGBag)
   end
 end
 
-function updateGreenV(segment, flag)
+function updateGreenC(segment, flag)
   if ReadU8(segment, 0x2002b58) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6b)
+    GreenCBag = ReadU8(segment, 0x2002b6b)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6b))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6b))
 	end
   elseif ReadU8(segment, 0x2002b59) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6c)
+    GreenCBag = ReadU8(segment, 0x2002b6c)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6c))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6c))
 	end
   elseif ReadU8(segment, 0x2002b5a) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6d)
+    GreenCBag = ReadU8(segment, 0x2002b6d)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6d))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6d))
 	end
   elseif ReadU8(segment, 0x2002b5b) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6e)
+    GreenCBag = ReadU8(segment, 0x2002b6e)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6e))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6e))
 	end
   elseif ReadU8(segment, 0x2002b5c) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6f)
+    GreenCBag = ReadU8(segment, 0x2002b6f)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6f))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6f))
 	end
   elseif ReadU8(segment, 0x2002b5d) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b70)
+    GreenCBag = ReadU8(segment, 0x2002b70)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b70))
+		print("Green C in Bag", ReadU8(segment, 0x2002b70))
 	end
   elseif ReadU8(segment, 0x2002b5e) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b71)
+    GreenCBag = ReadU8(segment, 0x2002b71)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b71))
+		print("Green C in Bag", ReadU8(segment, 0x2002b71))
 	end
   elseif ReadU8(segment, 0x2002b5f) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b72)
+    GreenCBag = ReadU8(segment, 0x2002b72)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b72))
+		print("Green C in Bag", ReadU8(segment, 0x2002b72))
 	end
   elseif ReadU8(segment, 0x2002b60) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b73)
+    GreenCBag = ReadU8(segment, 0x2002b73)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b73))
+		print("Green C in Bag", ReadU8(segment, 0x2002b73))
 	end
   elseif ReadU8(segment, 0x2002b61) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b74)
+    GreenCBag = ReadU8(segment, 0x2002b74)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b74))
+		print("Green C in Bag", ReadU8(segment, 0x2002b74))
 	end
   elseif ReadU8(segment, 0x2002b62) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b75)
+    GreenCBag = ReadU8(segment, 0x2002b75)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b75))
+		print("Green C in Bag", ReadU8(segment, 0x2002b75))
 	end
   else
-	GreenVBag = 0
+	GreenCBag = 0
   end
-  greenV:setActive(GreenVFused + GreenVBag)
+  greenC:setActive(GreenCFused + GreenCBag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
-	print("Green V Obtained", GreenVBag)
+	print("Green C Obtained", GreenCBag)
   end
 end
 
-function updateGreenZ(segment, flag)
+function updateGreenP(segment, flag)
   if ReadU8(segment, 0x2002b58) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6b)
+    GreenPBag = ReadU8(segment, 0x2002b6b)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6b))
+		print("green P in Bag", ReadU8(segment, 0x2002b6b))
 	end
   elseif ReadU8(segment, 0x2002b59) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6c)
+    GreenPBag = ReadU8(segment, 0x2002b6c)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6c))
+		print("green P in Bag", ReadU8(segment, 0x2002b6c))
 	end
   elseif ReadU8(segment, 0x2002b5a) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6d)
+    GreenPBag = ReadU8(segment, 0x2002b6d)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6d))
+		print("green P in Bag", ReadU8(segment, 0x2002b6d))
 	end
   elseif ReadU8(segment, 0x2002b5b) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6e)
+    GreenPBag = ReadU8(segment, 0x2002b6e)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6e))
+		print("green P in Bag", ReadU8(segment, 0x2002b6e))
 	end
   elseif ReadU8(segment, 0x2002b5c) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6f)
+    GreenPBag = ReadU8(segment, 0x2002b6f)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6f))
+		print("green P in Bag", ReadU8(segment, 0x2002b6f))
 	end
   elseif ReadU8(segment, 0x2002b5d) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b70)
+    GreenPBag = ReadU8(segment, 0x2002b70)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b70))
+		print("green P in Bag", ReadU8(segment, 0x2002b70))
 	end
   elseif ReadU8(segment, 0x2002b5e) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b71)
+    GreenPBag = ReadU8(segment, 0x2002b71)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b71))
+		print("green P in Bag", ReadU8(segment, 0x2002b71))
 	end
   elseif ReadU8(segment, 0x2002b5f) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b72)
+    GreenPBag = ReadU8(segment, 0x2002b72)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b72))
+		print("green P in Bag", ReadU8(segment, 0x2002b72))
 	end
   elseif ReadU8(segment, 0x2002b60) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b73)
+    GreenPBag = ReadU8(segment, 0x2002b73)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b73))
+		print("green P in Bag", ReadU8(segment, 0x2002b73))
 	end
   elseif ReadU8(segment, 0x2002b61) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b74)
+    GreenPBag = ReadU8(segment, 0x2002b74)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b74))
+		print("green P in Bag", ReadU8(segment, 0x2002b74))
 	end
   elseif ReadU8(segment, 0x2002b62) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b75)
+    GreenPBag = ReadU8(segment, 0x2002b75)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b75))
+		print("green P in Bag", ReadU8(segment, 0x2002b75))
 	end
   else
-	GreenZBag = 0
+	GreenPBag = 0
   end
-  greenZ:setActive(GreenZFused + GreenZBag)
+  GreenP:setActive(GreenPFused + GreenPBag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
-	print("Green Z Obtained", GreenZBag)
+	print("Green P Obtained", GreenPBag)
   end
 end
 
@@ -1853,9 +1853,9 @@ function updateItemsFromMemorySegment(segment)
 	updateBlueL(segment,0x71)
 	updateBlueS(segment,0x72)
 	
-	updateGreenN(segment,0x75)
-	updateGreenV(segment,0x73)
-	updateGreenZ(segment,0x74)
+	updateGreenG(segment,0x75)
+	updateGreenC(segment,0x73)
+	updateGreenP(segment,0x74)
 	
   end
 
