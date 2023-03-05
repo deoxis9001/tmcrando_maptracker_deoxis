@@ -1854,8 +1854,8 @@ function updateItemsFromMemorySegment(segment)
 	updateBlueS(segment,0x72)
 	
 	updateGreenG(segment,0x75)
-	updateGreenC(segment,0x73)
-	updateGreenP(segment,0x74)
+	updateGreenC(segment,0x74)
+	updateGreenP(segment,0x73)
 	
   end
 
