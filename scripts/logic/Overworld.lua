@@ -496,6 +496,13 @@ function CoFChuFight()
 		return 0
 	end 
 end
+function CoFChuFightBackDoor() 
+	if ( has("openworld_on") and has("cape") ) then
+		return 1
+	else
+		return 0
+	end 
+end
 function FoWWizrobes() 
 	if ( has("openworld_on") ) then
 		return 1
@@ -763,7 +770,7 @@ end
 function ToDEastSwitch_settings() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( Helpers()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ToDEitherPath()==1 ) ) ) ) then
+	elseif ( CanSplit2()==1 and ToDBlueWarp()==1 or ( ToDMainRoom()==1  and ( ToDLeftPath()==1 or ToDEitherPath()==1 ) ) ) then
 		return 1
 	else
 		return 0
@@ -772,7 +779,7 @@ end
 function ToDEastSwitch() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( Helpers()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) ) then
+	elseif ( CanSplit2()==1 and ToDBlueWarp()==1 or ( ToDMainRoom()==1  and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) then
 		return 1
 	else
 		return 0

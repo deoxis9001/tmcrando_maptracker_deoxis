@@ -54,7 +54,7 @@ end
 
 
 function CoF_B1_SpikeyChus_BigChest() 
-	if ( ( CofDungeons()==1 and ( ( CoFBlueWarp()==1 and (has("cane") or has("cape") ) and CoFChuFight()==1) or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 )))) then
+	if ( ( CofDungeons()==1 and ( ( CoFBlueWarp()==1 and (has("cane") or CoFChuFightBackDoor()==1 ) and CoFChuFight()==1) or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 )))) then
 		return 1
 	else
 		return 0
