@@ -81,7 +81,8 @@
 				"rows": [
 					  ["dws_none","tod_none"],
 					  ["cof_none","crypt_none"],
-					  ["fow_none","pow_none"]
+					  ["fow_none","pow_none"],
+					  ["dhc_none"]
 				  ]
 			  }
 		  ]
@@ -210,8 +211,8 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					  ["specialpot_off","digging_off",],
-					  ["underwater_off",""],
+					  ["hp_shuffle","specialpot_off",],
+					  ["digging_off","underwater_off"],
 					  ["rupees_off","golden_enemy_off"],
 					  ["cucco_none",""],
 					  ["goron_none","goron_eu"],
@@ -277,6 +278,7 @@
 		"item_width":320,
         "rows": [
           ["dungeonser_off","openworld_off"],
+		  ["small_key_none","big_key_none"]
         ]
       }
     },

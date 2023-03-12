@@ -15,7 +15,7 @@
       },
       {
         "img":"images/options/dhc_requirements/dhc_fast.png",
-        "codes":"dhc_none",
+        "codes":"dhc_ped",
         "inherit_codes":false
       },
       {
@@ -240,6 +240,25 @@
     ]
   },
   {
+    "name":" If enabled will shuffle Heart Pieces and Heart Containers into the pool, otherwise Heart Pieces and Containers will always be found in their vanilla location. This makes any items randomized to Heart Piece locations visible prior to collecting them. ",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/locations_settings/hp_shuffle.png",
+        "codes":"hp_shuffle",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/locations_settings/hp_vanilla.png",
+        "codes":"hp_vanilla",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
     "name":"If enabled will shuffle any free standing Rupees normally found in the world that are one off collectable, this adds a lot of extra money in the pool and certain locations will be very item dense.",
     "type":"progressive",
     "loop":true,
@@ -391,7 +410,7 @@
       },
     ]
   },{
-    "name":"Dungeons Entrance\n Deepwoods\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW",
+    "name":"Dungeons Entrance\n Deepwoods\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
@@ -432,10 +451,15 @@
         "codes":"dws_pow",
         "inherit_codes":false
       },
+      {
+        "img":"images/items/dungeons/dws_dhc.png",
+        "codes":"dws_dhc",
+        "inherit_codes":false
+      },
     ]
   },
   {
-	"name":"Dungeons Entrance\n Cave Of Flame\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW",
+	"name":"Dungeons Entrance\n Cave Of Flame\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
@@ -476,10 +500,15 @@
         "codes":"cof_pow",
         "inherit_codes":false
       },
+      {
+        "img":"images/items/dungeons/cof_dhc.png",
+        "codes":"cof_dhc",
+        "inherit_codes":false
+      },
     ]
   },
   {
-    "name":"Dungeons Entrance\n Fortress\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW",
+    "name":"Dungeons Entrance\n Fortress\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
@@ -520,10 +549,15 @@
         "codes":"fow_pow",
         "inherit_codes":false
       },
+      {
+        "img":"images/items/dungeons/fow_dhc.png",
+        "codes":"fow_dhc",
+        "inherit_codes":false
+      },
     ]
   },
   {
-    "name":"Dungeons Entrance\n Droplet\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW",
+    "name":"Dungeons Entrance\n Droplet\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
@@ -564,10 +598,15 @@
         "codes":"tod_pow",
         "inherit_codes":false
       },
+      {
+        "img":"images/items/dungeons/tod_dhc.png",
+        "codes":"tod_dhc",
+        "inherit_codes":false
+      },
     ]
   },
   {
-    "name":"Dungeons Entrance\n Crypt\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW",
+    "name":"Dungeons Entrance\n Crypt\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
@@ -608,10 +647,15 @@
         "codes":"crypt_pow",
         "inherit_codes":false
       },
+      {
+        "img":"images/items/dungeons/crypt_dhc.png",
+        "codes":"crypt_dhc",
+        "inherit_codes":false
+      },
     ]
   },
   {
-    "name":"Dungeons Entrance\n Palace\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW",
+    "name":"Dungeons Entrance\n Palace\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
@@ -650,6 +694,60 @@
       {
         "img":"images/items/dungeons/pow_pow.png",
         "codes":"pow_pow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/pow_dhc.png",
+        "codes":"pow_dhc",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Entrance\n Dark Hyrule Castle\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/dungeons/dhc_none.png",
+        "codes":"dhc_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_dws.png",
+        "codes":"dhc_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_cof.png",
+        "codes":"dhc_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_fow.png",
+        "codes":"dhc_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_tod.png",
+        "codes":"dhc_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_crypt.png",
+        "codes":"dhc_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_dhc.png",
+        "codes":"dhc_dhc",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_dhc.png",
+        "codes":"dhc_dhc",
         "inherit_codes":false
       },
     ]
@@ -1524,6 +1622,54 @@
       {
         "img":"images/options/locations_settings/goron_jp.png",
         "codes": "goron_jp",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Small Keys",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":2,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/small_key_none.png",
+        "codes": "small_key_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/small_key_vanilla.png",
+        "codes": "small_key_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/small_key_shuffle.png",
+        "codes": "small_key_shuffle",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Big Keys",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":2,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/big_key_none.png",
+        "codes": "big_key_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/big_key_vanilla.png",
+        "codes": "big_key_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/big_key_shuffle.png",
+        "codes": "big_key_shuffle",
         "inherit_codes":false
       }
     ]
