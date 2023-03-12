@@ -142,7 +142,7 @@
 		"map":"map",
 		"x":350,
 		"y":1165,
-		"restrict_visibility_rules":["fusionblue_vanilla,openworld_off"]
+		"restrict_visibility_rules":["fusionblue_vanilla"]
 	  }
 	],
 	"sections":[

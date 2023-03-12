@@ -35,31 +35,31 @@
 	  {
 		"name":"Fuser Northwest",
 		"hosted_item":"fusions4f",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Crenel_Mines_Fuzer1"],
 	  },
 	  {
 		"name":"Fuser Bedroom",
 		"hosted_item":"fusions43",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Crenel_Mines_Fuzer2"],
 	  },
 	  {
 		"name":"Fuser Kitchen",
 		"hosted_item":"fusions3b",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Crenel_Mines_Fuzer3"],
 	  },
 	  {
 		"name":"Fuser Melari",
 		"hosted_item":"fusions1a",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"visibility_rules":["fusionred_vanilla"],
 		"access_rules":["$Json_Crenel_Mines_Fuzer4"],
 	  },
 	  {
 		"name":"Fuser Mine Exit",
 		"hosted_item":"fusions38",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Crenel_Mines_Fuzer5"],
 	  },
 	]
@@ -285,7 +285,7 @@
 		{
 		  "name":"Fuzer Grayblade",
 		  "hosted_item":"fusions0c",
-		  "visibility_rules":["fusionred_vanilla,openworld_off"],
+		  "visibility_rules":["fusionred_vanilla"],
 		  "access_rules":["$Json_Crenel_Dojo_Fuzer"],
 		}
 	]
@@ -329,7 +329,7 @@
 	  {
 		"name":"Fuzer Mysterious Wall",
 		"hosted_item":"fusions2f",
-		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"visibility_rules":["fusionblue_vanilla"],
 		"access_rules":["$Json_Crenel_DiggingCave_Fuzer"],
 	  }
 	]

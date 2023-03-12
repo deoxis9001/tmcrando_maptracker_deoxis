@@ -38,7 +38,7 @@
 	  {
 		"name":"Fuzer Forest Minish",
 		"hosted_item":"fusions17",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"visibility_rules":["fusionred_vanilla"],
 		"access_rules":["$Json_Ruins_MinishHole_Fuzer"],
 	  }
 	]

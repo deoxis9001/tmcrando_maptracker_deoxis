@@ -19,13 +19,13 @@
 	  {
 		"name":"Fuzer Tingle 1",
 		"hosted_item":"fusions59",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_SouthHyruleField_Tingle_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Tingle 2",
 		"hosted_item":"fusions0d",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"visibility_rules":["fusionred_vanilla"],
 		"access_rules":["$Json_SouthHyruleField_Tingle_Fuzer2"],
 	  }
 	]
@@ -51,13 +51,13 @@
 	  {
 		"name":"Fuzer Smith 1",
 		"hosted_item":"fusions16",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"visibility_rules":["fusionred_vanilla"],
 		"access_rules":["$Json_SouthHyruleField_SmithsHouse_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Smith 2",
 		"hosted_item":"fusions52",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_SouthHyruleField_SmithsHouse_Fuzer2"],
 	  }
 	]
@@ -155,7 +155,7 @@
 	  {
 		"name":"Fuzer Forest Minish",
 		"hosted_item":"fusions14",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"visibility_rules":["fusionred_vanilla"],
 		"access_rules":["$Json_SouthField_MinishHouse_Fuzer"],
 	  }
 	]

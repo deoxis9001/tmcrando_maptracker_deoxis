@@ -26,14 +26,14 @@
 		"map":"map",
 		"x":720,
 		"y":1395,
-		"restrict_visibility_rules":["fusionred_vanilla,openworld_off","fusiongreen_vanilla,openworld_off"]
+		"restrict_visibility_rules":["fusionred_vanilla","fusiongreen_vanilla"]
 	  }
 	],
 	"sections":[
 	  {
 		"name":"Fuzer Percy",
 		"hosted_item":"fusions21",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"visibility_rules":["fusionred_vanilla"],
 		"access_rules":["$Json_Trilby_TreeHouse_Fuzer"],
 	  }
 	]
@@ -51,7 +51,7 @@
 	  {
 		"name":"Fuzer Knuckle",
 		"hosted_item":"fusions4d",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Trilby_Knuckle_Fuzer"],
 	  }
 	]
@@ -76,7 +76,7 @@
 	  {
 		"name":"Fuzer Mysterious Wall",
 		"hosted_item":"fusions25",
-		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"visibility_rules":["fusionblue_vanilla"],
 		"access_rules":["$Json_Trilby_MittsCave_Fuzer"],
 	  }
 	]
@@ -186,14 +186,14 @@
 		"map":"map",
 		"x":700,
 		"y":825,
-		"restrict_visibility_rules":["fusiongreen_vanilla,openworld_off"]
+		"restrict_visibility_rules":["fusiongreen_vanilla"]
 	  }
 	],
 	"sections":[
 	  {
 		"name":"Fuzer Forest Minish",
 		"hosted_item":"fusions3f",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Trilby_MinishHouse_Fuzer"],
 	  }
 	]

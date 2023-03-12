@@ -84,13 +84,13 @@
 	  {
 		"name":"Fuzer Dampe 1",
 		"hosted_item":"fusions30",
-		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"visibility_rules":["fusionblue_vanilla"],
 		"access_rules":["$Json_Valley_Dampe_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Dampe 2",
 		"hosted_item":"fusions41",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Valley_Dampe_Fuzer2"],
 	  }
 	]
@@ -125,13 +125,13 @@
 	  {
 		"name":"Fuzer Gina 1",
 		"hosted_item":"fusions42",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Valley_NortheastGrave_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Gina 2",
 		"hosted_item":"fusions3a",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Valley_NortheastGrave_Fuzer2"],
 	  }
 	]
@@ -169,13 +169,13 @@
 	  {
 		"name":"Fuzer Spekter 1",
 		"hosted_item":"fusions31",
-		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"visibility_rules":["fusionblue_vanilla"],
 		"access_rules":["$Json_Valley_Spekter_Fuzer1"]
 	  },
 	  {
 		"name":"Fuzer Spekter 2",
 		"hosted_item":"fusions28",
-		"visibility_rules":["fusionblue_vanilla,openworld_off"],
+		"visibility_rules":["fusionblue_vanilla"],
 		"access_rules":["$Json_Valley_Spekter_Fuzer2"]
 	  }
 	]
