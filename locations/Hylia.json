@@ -350,7 +350,7 @@
 	  {
 		"name":"Fuzer Minish Forest",
 		"hosted_item":"fusions23",
-		"visibility_rules":["fusiongreen_vanilla"],
+		"visibility_rules":["fusionblue_vanilla"],
 		"access_rules":["$Json_Hylia_MinishCrack_Fuzer"],
 	  }
 	]
