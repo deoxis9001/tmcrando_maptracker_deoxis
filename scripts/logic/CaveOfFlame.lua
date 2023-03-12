@@ -1,5 +1,5 @@
-function CoF1stDoor() 
-	if ( Tracker:ProviderCountForCode("cof_smallkey") >= 1 ) then
+function CoF1stDoor()
+	if ( Tracker:ProviderCountForCode("cof_smallkey") >= 2 or (CoFNoBlueWarp()==1 and Tracker:ProviderCountForCode("cof_smallkey") >= 1 ) ) then
 		return 1
 	else
 		return 0
@@ -7,8 +7,6 @@ function CoF1stDoor()
 end
 function CoF2ndDoor() 
 	if ( Tracker:ProviderCountForCode("cof_smallkey") >= 2 ) then
-		return 1
-	elseif ( Tracker:ProviderCountForCode("cof_smallkey") >= 1 and CoFBlueWarp()==1) then
 		return 1
 	else
 		return 0

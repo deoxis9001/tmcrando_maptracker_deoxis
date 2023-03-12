@@ -352,18 +352,14 @@ function Graveyard()
 	end 
 end
 function CryptDoor() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( Tracker:ProviderCountForCode("rc_smallkey") >= 1 ) then
+	if ( Tracker:ProviderCountForCode("rc_smallkey") >= 1 ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function CryptBlocks() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( Tracker:ProviderCountForCode("rc_smallkey") >= 3 ) then
+	if ( Tracker:ProviderCountForCode("rc_smallkey") >= 3 ) then
 		return 1
 	else
 		return 0
@@ -425,9 +421,7 @@ function DeepwoodMulldozers()
 	end 
 end
 function DeepwoodPreMadderpillar()
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( DeepwoodBlueWarp()==1 or ( Deepwood1stDoor()==1 and ( Deepwood2ndDoor()==1 or Tracker:ProviderCountForCode("dws_smallkey") >= 2 or has("gust") ) ) ) then
+	if ( DeepwoodBlueWarp()==1 or ( Deepwood1stDoor()==1 and ( Deepwood2ndDoor()==1 or Tracker:ProviderCountForCode("dws_smallkey") >= 2 or has("gust") ) ) ) then
 		return 1
 	else
 		return 0
@@ -603,9 +597,7 @@ function ToDWeb()
 	end 
 end
 function ToDMainRoom() 
-	if ( has("openworld_on") and ToDBigDoor()==1 ) then
-		return 1
-	elseif ( ToDBigDoor()==1 or ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDRedWarp()==1 and BombWalls()==1 and ToDWeb()==1 and ToDMadderpillars()==1 ) ) then
+	if ( ToDBigDoor()==1 or ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDRedWarp()==1 and BombWalls()==1 and ToDWeb()==1 and ToDMadderpillars()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -671,9 +663,7 @@ function ToDDarkMazeReverse()
 	end 
 end
 function ToDLilypadEnd() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) then
+	if ( ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) then
 		return 1
 	else
 		return 0
@@ -716,25 +706,21 @@ function ToDDarkMaze()
 	end 
 end
 function ToDRightPath() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( ToDRightIceBlock()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and ToDDarkDoor()==1 ) then
+	if ( ToDRightIceBlock()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and ToDDarkDoor()==1 ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function ToDEitherPath() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( ToDEitherDoor()==1 and has("flippers") and ToDLeftPillars()==1 and ToDRightIceBlock()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and has("cape") ) then
+	if ( ToDEitherDoor()==1 and has("flippers") and ToDLeftPillars()==1 and ToDRightIceBlock()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and has("cape") ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function ToDDarkMazeDoor() 
-	if ( has("openworld_on") ) then
+	if ( has("small_key_none") ) then
 		return 1
 	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 4 ) then
 		return 1
@@ -750,9 +736,7 @@ function ToDDarkMazeReverse()
 	end 
 end
 function ToD2ndRupeePath() 
-	if ( has("openworld_on") and ( ( ToDMainRoom()==1 and ( ( ToDLeftPath()==1 and has("cape") ) or ToDRightPath()==1 ) ) and ( ToDBlueWarp()==1 and has("cape") and DarkRooms()==1 ) ) ) then
-		return 1
-	elseif ( ( ToDMainRoom()==1 and ( ( ToDLeftPath()==1 and has("cape") ) or ToDRightPath()==1 or ToDEitherPath()==1 ) ) or ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 and has("cape") and DarkRooms()==1 ) ) then
+	if ( ( ToDMainRoom()==1 and ( ( ToDLeftPath()==1 and has("cape") ) or ToDRightPath()==1 or ToDEitherPath()==1 ) ) or ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 and has("cape") and DarkRooms()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -804,9 +788,7 @@ function ToDMulldozer()
 	end 
 end
 function AccessOcto() 
-	if ( has("openworld_on") and ToDMainRoom()==1 ) then
-		return 1
-	elseif ( ToDMainRoom()==1 and ToDEastSwitch()==1 and ToDWestSwitch()==1 ) then
+	if ( ToDMainRoom()==1 and ToDEastSwitch()==1 and ToDWestSwitch()==1 ) then
 		return 1
 	else
 		return 0
@@ -833,9 +815,7 @@ function PoWDarknut()
 end
 
 function PoW2ndHalf()
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( ( PoWBlueWarp()==1 and PoWDarknut()==1 ) or ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1 ) ) then
+	if ( ( PoWBlueWarp()==1 and PoWDarknut()==1 ) or ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1 ) ) then
 		return 1
 	else
 		return 0

@@ -1,28 +1,28 @@
-function has(item, amount)
-  local count = Tracker:ProviderCountForCode(item)
-  amount = tonumber(amount)
-  if not amount then
-    return count >= 1
-  else
-    return count >= amount
-  end
+function has( item, amount )
+ local count = Tracker:ProviderCountForCode( item )
+ amount = tonumber( amount )
+ if not amount then
+  return count >= 1
+ else
+  return count >= amount
+ end
 end
-function hasnot(item)
-  local count = Tracker:ProviderCountForCode(item)
-  return count == 0
+function hasnot( item )
+ local count = Tracker:ProviderCountForCode( item )
+ return count == 0
 end
 
 function FusionsRed()
 	if ( has("openworld_on") ) then	
 		return 1
 	elseif ( has("fusionred_vanilla") or has("fusionred_complet") ) then
-		if(redflag==false or redflag==nil) then
+		if( redflag==false or redflag==nil ) then
 			fusiongreencombined:updateMax()
 			redflag=true
 		end
 		return 1
 	else
-		if(redflag==true or redflag==nil) then
+		if( redflag==true or redflag==nil ) then
 			fusiongreencombined:updateMax()
 			redflag=false
 		end
@@ -32,21 +32,21 @@ end
 
 function FusionsBlue()
 	if ( has("openworld_on") ) then
-		if(blueflag==false or blueflag==nil) then
+		if( blueflag==false or blueflag==nil ) then
 			fusionredcombined:updateMax()
 			fusiongreencombined:updateMax()
 			blueflag=true
 		end
 		return 1
 	elseif ( has("fusionblue_vanilla") or has("fusionblue_complet") ) then
-		if(blueflag==false or blueflag==nil) then
+		if( blueflag==false or blueflag==nil ) then
 			fusionredcombined:updateMax()
 			fusiongreencombined:updateMax()
 			blueflag=true
 		end
 		return 1
 	else
-		if(blueflag==true or blueflag==nil) then
+		if( blueflag==true or blueflag==nil ) then
 			fusionredcombined:updateMax()
 			fusiongreencombined:updateMax()
 			blueflag=false
@@ -67,21 +67,21 @@ end
 
 function FusionsGold()
 	if ( has("openworld_on") ) then
-		if(goldflag==false or goldflag==nil) then
+		if( goldflag==false or goldflag==nil ) then
 			fusionredcombined:updateMax()
 			fusiongreencombined:updateMax()
 			goldflag=true
 		end
 		return 1
 	elseif ( has("fusiongold_vanilla") or has("fusiongold_complet") ) then
-		if(goldflag==false or goldflag==nil) then
+		if( goldflag==false or goldflag==nil ) then
 			fusionredcombined:updateMax()
 			fusiongreencombined:updateMax()
 			goldflag=true
 		end
 		return 1
 	else
-		if(goldflag==true or goldflag==nil) then
+		if( goldflag==true or goldflag==nil ) then
 			fusionredcombined:updateMax()
 			fusiongreencombined:updateMax()
 			goldflag=false
@@ -91,90 +91,90 @@ function FusionsGold()
 end
 
 function Sword1()
-  if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword2") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword") > 0 then
-    return 1
-  elseif has("smithsword") then
-    return 1
-  else
-    return 0
-  end
+ if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword2") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword") > 0 then
+  return 1
+ elseif has("smithsword") then
+  return 1
+ else
+  return 0
+ end
 end
 
 function Sword2()
-  if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword2") > 0 then
-    return 1
-  elseif has("greensword") then
-    return 1
-  else
-    return 0
-  end
+ if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword2") > 0 then
+  return 1
+ elseif has("greensword") then
+  return 1
+ else
+  return 0
+ end
 end
 
 function Sword3()
-  if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword3") > 0 then
-    return 1
-  elseif has("redsword") then
-    return 1
-  else
-    return 0
-  end
+ if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword3") > 0 then
+  return 1
+ elseif has("redsword") then
+  return 1
+ else
+  return 0
+ end
 end
 function Sword4()
-  if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-    return 1
-  elseif Tracker:ProviderCountForCode("sword4") > 0 then
-    return 1
-  elseif has("bluesword") then
-    return 1
-  else
-    return 0
-  end
+ if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+  return 1
+ elseif Tracker:ProviderCountForCode("sword4") > 0 then
+  return 1
+ elseif has("bluesword") then
+  return 1
+ else
+  return 0
+ end
 end
 
 function Sword5()
-  if Tracker:ProviderCountForCode("sword5") > 0 then
-    return 1
-  elseif has("foursword") then
-    return 1
-  else
-    return 0
-  end
+ if Tracker:ProviderCountForCode("sword5") > 0 then
+  return 1
+ elseif has("foursword") then
+  return 1
+ else
+  return 0
+ end
 end
 
 function GotSwords()
-  if has("sword0needed") then
-    return 1
-  elseif Sword1()==1 and has("sword1needed") then
-    return 1
-  elseif Sword2()==1 and has("sword2needed") then
-    return 1
-  elseif Sword3()==1 and has("sword3needed") then
-    return 1
-  elseif Sword4()==1 and has("sword4needed") then
-    return 1
-  elseif Sword5()==1 and has("sword5needed") then
-    return 1
-  else
-    return 0
-  end
+ if has("sword0needed") then
+  return 1
+ elseif Sword1()==1 and has("sword1needed") then
+  return 1
+ elseif Sword2()==1 and has("sword2needed") then
+  return 1
+ elseif Sword3()==1 and has("sword3needed") then
+  return 1
+ elseif Sword4()==1 and has("sword4needed") then
+  return 1
+ elseif Sword5()==1 and has("sword5needed") then
+  return 1
+ else
+  return 0
+ end
 end
 
 function GotElements()
@@ -191,27 +191,27 @@ function GotElements()
 	if has("earth") then
 		CountElement = CountElement + 1
 	end
-  if has("element0Needed") then
-    return 1
-  elseif has("element1Needed") and CountElement>=1 then
-    return 1
-  elseif has("element2Needed") and CountElement>=2 then
-    return 1
-  elseif has("element3Needed") and CountElement>=3 then
-    return 1
-  elseif has("element4Needed") and CountElement>=4 then
-    return 1
-  else
-    return 0
-  end
+ if has("element0Needed") then
+  return 1
+ elseif has("element1Needed") and CountElement>=1 then
+  return 1
+ elseif has("element2Needed") and CountElement>=2 then
+  return 1
+ elseif has("element3Needed") and CountElement>=3 then
+  return 1
+ elseif has("element4Needed") and CountElement>=4 then
+  return 1
+ else
+  return 0
+ end
 end
 
 function GotFigurine()
-  if Tracker:ProviderCountForCode("figurine") >= Tracker:ProviderCountForCode("figurine_option") then
-    return 1
-  else
-    return 0
-  end
+ if Tracker:ProviderCountForCode("figurine") >= Tracker:ProviderCountForCode("figurine_option") then
+  return 1
+ else
+  return 0
+ end
 end
 
 function GotDungeons()
@@ -254,7 +254,7 @@ function GotDungeons()
 end
 
 function CompletePed()
-	if (  GotSwords()==1  and  GotElements()==1  and  GotDungeons()==1 and  GotFigurine()==1  ) then
+	if (  GotSwords()==1 and GotElements()==1 and GotDungeons()==1 and GotFigurine()==1  ) then
 		return 1
 	else
 		return 0
@@ -262,7 +262,7 @@ function CompletePed()
 end
 
 function HasSword()
-	if ( Sword1()==1 or Sword2()==1  or Sword3()==1  or Sword4()==1  or Sword5()==1 ) then
+	if ( Sword1()==1 or Sword2()==1 or Sword3()==1 or Sword4()==1 or Sword5()==1 ) then
 		return 1
 	else
 		return 0
@@ -270,7 +270,7 @@ function HasSword()
 end
 
 function HasWhiteSword()
-	if ( Sword2()==1  or Sword3()==1  or Sword4()==1  or Sword5()==1 ) then
+	if ( Sword2()==1 or Sword3()==1 or Sword4()==1 or Sword5()==1 ) then
 		return 1
 	else
 		return 0
@@ -358,7 +358,7 @@ function HasShield()
 end
 
 function HasBeam()
-	if ( HasSword()==1 and ( ( has("swordbeam")  and HasBottle()==1) or has("perilbeam") ) ) then
+	if ( HasSword()==1 and ( ( has("swordbeam") and HasBottle()==1 ) or has("perilbeam") ) ) then
 		return 1
 	else
 		return 0
@@ -502,9 +502,9 @@ function ShopBack()
 end
 
 function SchoolHP()
-	if ( has("cane") and CanSplit4()==1) then
+	if ( has("cane") and CanSplit4()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and  has("cane") and has("gust") ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and has("cane") and has("gust") ) then
 		return 1
 	else
 		return 0
@@ -514,7 +514,7 @@ end
 function MusicHouseHP()
 	if ( MusicHouse()==1 ) then
 		return 1
-	elseif( ( has("grabbable_easy") or has("grabbable_hard")  ) and (HasBoomerang()==1 or has("gust") )) then
+	elseif( ( has("grabbable_easy") or has("grabbable_hard")  ) and ( HasBoomerang()==1 or has("gust") ) ) then
 		return 1
 	else
 		return 0
@@ -526,7 +526,7 @@ function FountainHP()
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and ( has("gust") or ( HasBoomerang()==1 and ( LightArrowBreak()==1 or has("cane") ) ) ) ) then
 		return 1
-	elseif ( has("grabbable_hard") and HasMagicBoomerang()==1) then
+	elseif ( has("grabbable_hard") and HasMagicBoomerang()==1 ) then
 		return 1
 	else
 		return 0
@@ -534,15 +534,15 @@ function FountainHP()
 end
 
 function LowerFallsItems()
-	if ( AccessMinishWoods()==1 and has("cane") and ( has("flippers") or has("cape")) ) then
+	if ( AccessMinishWoods()==1 and has("cane") and ( has("flippers") or has("cape") ) ) then
 		return 1
-	elseif ( has("grabbable_easy") and OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and has ("gust") )  then
+	elseif ( has("grabbable_easy") and OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and has ("gust") ) then
 		return 1
-	elseif ( has("grabbable_easy") and AccessFalls()==1 and has("grip") and has ("gust") )  then
+	elseif ( has("grabbable_easy") and AccessFalls()==1 and has("grip") and has ("gust") ) then
 		return 1
-	elseif ( has("grabbable_hard") and OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and ( HasMagicBoomerang()==1 or has ("gust") ) )  then
+	elseif ( has("grabbable_hard") and OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and ( HasMagicBoomerang()==1 or has ("gust") ) ) then
 		return 1
-	elseif ( has("grabbable_hard") and AccessFalls()==1 and has("grip") and ( HasMagicBoomerang()==1 or has ("gust") ) )  then
+	elseif ( has("grabbable_hard") and AccessFalls()==1 and has("grip") and ( HasMagicBoomerang()==1 or has ("gust") ) ) then
 		return 1
 	else
 		return 0
@@ -565,9 +565,9 @@ function LakeSouthHP()
 		return 1
 	elseif ( AccessSouthLake()==1 and ( has("cape") or has("flippers") ) ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") ) and AccessLonLon()==1 and LakeShortcut()==1 and HasMagicBoomerang()==1  ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessLonLon()==1 and LakeShortcut()==1 and HasMagicBoomerang()==1  ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") )  and  AccessSouthLake()==1 and ( has("gust") or  HasMagicBoomerang()==1 ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessSouthLake()==1 and ( has("gust") or HasMagicBoomerang()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -578,9 +578,9 @@ end
 function MinishNorthHP()
 	if ( AccessNorthMinish()==1  ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") ) and ( has("gust") or HasMagicBoomerang()==1 ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( has("gust") or HasMagicBoomerang()==1 ) ) then
 		return 1
-	elseif ( has("grabbable_hard") and  HasBoomerang()==1 ) then
+	elseif ( has("grabbable_hard") and HasBoomerang()==1 ) then
 		return 1
 	else
 		return 0
@@ -591,7 +591,7 @@ end
 function MinishSouthHP()
 	if ( AccessMinishWoods()==1  ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or  has("grabbable_hard") ) and AccessBelari()==1 and  has("gust") ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessBelari()==1 and has("gust") ) then
 		return 1
 	else
 		return 0
@@ -613,9 +613,9 @@ end
 
 
 function LeftGraveHP()
-	if ( CanSplit4()==1 or  CanSplit3()==1 ) then
+	if ( CanSplit4()==1 or CanSplit3()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
 	elseif ( has("grabbable_hard") and HasBoomerang()==1 ) then
 		return 1
@@ -652,9 +652,9 @@ end
 
 
 function CoFRupees()
-	if ( ( BombWalls()==1 or  Bobombs()==1 ) and CoFSpikeBeetle()==1 ) then
+	if ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
 	else
 		return 0
@@ -665,7 +665,7 @@ end
 function FoWLeftRupee()
 	if ( FoWEyeSwitch()==1 and FoWStalfosFight()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
 	else
 		return 0
@@ -676,7 +676,7 @@ end
 function FoWEntranceRupee()
 	if ( has("mitts")  ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
 	else
 		return 0
@@ -687,7 +687,7 @@ end
 function FoWHP()
 	if ( FoWCloneSwitch()==1  ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust")) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
 	else
 		return 0
@@ -709,7 +709,7 @@ end
 function PoWRupees()
 	if ( PoWJump()==1  ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and HasMagicBoomerang()==1) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and HasMagicBoomerang()==1 ) then
 		return 1
 	else
 		return 0
@@ -718,7 +718,7 @@ end
 
 
 function PoWDrop()
-	if ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and has("cane")  and PoWPotPuzzle()==1 ) then
+	if ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and has("cane") and PoWPotPuzzle()==1 ) then
 		return 1
 	elseif ( has("grabbable_easy") and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 ) and DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and ( HasBoomerang()==1 and ( LightArrowBreak()==1 or has("cane") ) ) ) then
 		return 1
@@ -726,7 +726,7 @@ function PoWDrop()
 		return 1
 	elseif ( has("grabbable_hard") and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 ) and DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and HasBoomerang()==1 ) then
 		return 1
-	elseif ( has("grabbable_hard") and PoWRedWarp()==1 and OverworldBlocks()==1 and ( has("gust") or  HasBoomerang()==1 ) ) then
+	elseif ( has("grabbable_hard") and PoWRedWarp()==1 and OverworldBlocks()==1 and ( has("gust") or HasBoomerang()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -735,11 +735,11 @@ end
 
 
 function PoWHP()
-	if ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 )) then
+	if ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and PoWHandRoom()==1 and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 ) ) then
 		return 1
 	elseif ( PoWRedWarp()==1 and OverworldBlocks()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( CanSplit3()==1 or CanSplit4()==1) and PoWJump()==1 and PoW1stDoor()==1 and ( has("gust") or HasBoomerang()==1 ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and ( has("gust") or HasBoomerang()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -768,22 +768,22 @@ function LikeLike()
 	end
 end
 function BlowDust()
-	if ( has("blowdust_on") and (has("bombs") or has("gust") ) ) then
+	if ( has("blowdust_on") and ( has("bombs") or has("gust") ) ) then
 		return 1
-	elseif (has("blowdust_off") and has("gust") ) then
+	elseif ( has("blowdust_off") and has("gust") ) then
 		return 1
-	elseif (has("blowdust_off") and has("bombs") ) then
+	elseif ( has("blowdust_off") and has("bombs") ) then
 		return 2
 	else
 		return 0
 	end
 end
 function CrenelMushroom()
-	if ( has("crenelmushroom_on") and (has("bombs") or has("gust") ) ) then
+	if ( has("crenelmushroom_on") and ( has("bombs") or has("gust") ) ) then
 		return 1
-	elseif ( has("crenelmushroom_off") and (has("bombs") ) ) then
+	elseif ( has("crenelmushroom_off") and ( has("bombs") ) ) then
 		return 1
-	elseif (has("crenelmushroom_off") and has("gust") ) then
+	elseif ( has("crenelmushroom_off") and has("gust") ) then
 		return 2
 	else
 		return 0
@@ -792,7 +792,7 @@ end
 function LightArrowBreak()
 	if ( has("lightarrowbreak_on") and has("lights") ) then
 		return 1
-	elseif (has("lightarrowbreak_off") and has("lights") ) then
+	elseif ( has("lightarrowbreak_off") and has("lights") ) then
 		return 2
 	else
 		return 0
@@ -801,7 +801,7 @@ end
 function Bobombs()
 	if ( has("bobombs_on") ) then
 		return 1
-	elseif ( has("bobombs_off") and (HasSword()==1 or has("gust") or has("bombs") ) ) then
+	elseif ( has("bobombs_off") and ( HasSword()==1 or has("gust") or has("bombs") ) ) then
 		return 1
 	elseif ( has("bobombs_off") ) then
 		return 2
@@ -828,7 +828,7 @@ function DownThrustBeetle()
 	end 
 end
 function CapeExtension()
-	if ( has("capeextension_on") and (has("flippers") or has("cape"))  ) then
+	if ( has("capeextension_on") and ( has("flippers") or has("cape") )  ) then
 		return 1
 	elseif ( has("capeextension_off") and has("flippers")  ) then
 		return 1
@@ -901,7 +901,7 @@ function PoWJump()
 	end 
 end
 function PoWPotPuzzleOOL()
-	if ( has("powpotpuzzleool_on") and (( HasSword()==1 or HasBoomerang()==1 or has("bombs") or HasBow()==1)  and ( (DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and (PoW2ndHalf()==1 or PoWBlueWarp()==1) ) or (PoWRedWarp()==1 and OverworldBlocks()==1)) ) ) then
+	if ( has("powpotpuzzleool_on") and ( ( HasSword()==1 or HasBoomerang()==1 or has("bombs") or HasBow()==1 ) and ( ( DarkRooms()==1 and ( ( PoW2ndHalf1stDoor()==1 and has("cape") ) or PoWShortcuts()==1 ) and ( PoW2ndHalf()==1 or PoWBlueWarp()==1 ) ) or ( PoWRedWarp()==1 and OverworldBlocks()==1 ) ) ) ) then
 		return 1
 	else
 		return 0
@@ -919,11 +919,11 @@ function DHCCanonHit()
 	end 
 end
 function DHCBladePuzzleShuffle()
-	if ( has("dhcbladepuzzleshuffle_on") and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1) ) then
+	if ( has("dhcbladepuzzleshuffle_on") and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) ) then
 		return 1
 	elseif ( has("dhcbladepuzzleshuffle_off") and CanSplit4()==1 ) then
 		return 1
-	elseif ( has("dhcbladepuzzleshuffle_off") and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1) ) then
+	elseif ( has("dhcbladepuzzleshuffle_off") and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) ) then
 		return 2
 	else
 		return 0
@@ -950,115 +950,148 @@ function StrangerFusion()
 	end
 end
 function CryptDungeons()
-	if (has("dungeonser_off")) then
+	if ( has("dungeonser_off") ) then
 		return AccessCrypt()
-	elseif (has("crypt_dws")) then
+	elseif ( has("crypt_dws") ) then
 		return AccessDeepwood()
-	elseif (has("crypt_cof")) then
+	elseif ( has("crypt_cof") ) then
 		return AccessCoF()
-	elseif (has("crypt_fow")) then
+	elseif ( has("crypt_fow") ) then
 		return AccessFortress()
-	elseif (has("crypt_tod")) then
+	elseif ( has("crypt_tod") ) then
 		return AccessDroplets()
-	elseif (has("crypt_crypt")) then
+	elseif ( has("crypt_crypt") ) then
 		return AccessCrypt()
-	elseif (has("crypt_pow")) then
+	elseif ( has("crypt_pow") ) then
 		return AccessPalace()
+	elseif ( has("crypt_dhc") ) then
+		return 1
 	else
 		return 0
 	end
 end
 function DeepwoodDungeons()
-	if (has("dungeonser_off")) then
+	if ( has("dungeonser_off") ) then
 		return AccessDeepwood()
-	elseif (has("dws_dws")) then
+	elseif ( has("dws_dws") ) then
 		return AccessDeepwood()
-	elseif (has("dws_cof")) then
+	elseif ( has("dws_cof") ) then
 		return AccessCoF()
-	elseif (has("dws_fow")) then
+	elseif ( has("dws_fow") ) then
 		return AccessFortress()
-	elseif (has("dws_tod")) then
+	elseif ( has("dws_tod") ) then
 		return AccessDroplets()
-	elseif (has("dws_crypt")) then
+	elseif ( has("dws_crypt") ) then
 		return AccessCrypt()
-	elseif (has("dws_pow")) then
+	elseif ( has("dws_pow") ) then
 		return AccessPalace()
+	elseif ( has("dws_dhc") ) then
+		return 1
 	else
 		return 0
 	end
 end
 function CofDungeons()
-	if (has("dungeonser_off")) then
+	if ( has("dungeonser_off") ) then
 		return AccessCoF()
-	elseif (has("cof_dws")) then
+	elseif ( has("cof_dws") ) then
 		return AccessDeepwood()
-	elseif (has("cof_cof")) then
+	elseif ( has("cof_cof") ) then
 		return AccessCoF()
-	elseif (has("cof_fow")) then
+	elseif ( has("cof_fow") ) then
 		return AccessFortress()
-	elseif (has("cof_tod")) then
+	elseif ( has("cof_tod") ) then
 		return AccessDroplets()
-	elseif (has("cof_crypt")) then
+	elseif ( has("cof_crypt") ) then
 		return AccessCrypt()
-	elseif (has("cof_pow")) then
+	elseif ( has("cof_pow") ) then
 		return AccessPalace()
+	elseif ( has("cof_dhc") ) then
+		return 1
 	else
 		return 0
 	end
 end
 function FowDungeons()
-	if (has("dungeonser_off")) then
+	if ( has("dungeonser_off") ) then
 		return AccessFortress()
-	elseif (has("fow_dws")) then
+	elseif ( has("fow_dws") ) then
 		return AccessDeepwood()
-	elseif (has("fow_cof")) then
+	elseif ( has("fow_cof") ) then
 		return AccessCoF()
-	elseif (has("fow_fow")) then
+	elseif ( has("fow_fow") ) then
 		return AccessFortress()
-	elseif (has("fow_tod")) then
+	elseif ( has("fow_tod") ) then
 		return AccessDroplets()
-	elseif (has("fow_crypt")) then
+	elseif ( has("fow_crypt") ) then
 		return AccessCrypt()
-	elseif (has("fow_pow")) then
+	elseif ( has("fow_pow") ) then
 		return AccessPalace()
+	elseif ( has("fow_dhc") ) then
+		return 1
 	else
 		return 0
 	end
 end
 function TodDungeons()
-	if (has("dungeonser_off")) then
+	if ( has("dungeonser_off") ) then
 		return AccessDroplets()
-	elseif (has("tod_dws")) then
+	elseif ( has("tod_dws") ) then
 		return AccessDeepwood()
-	elseif (has("tod_cof")) then
+	elseif ( has("tod_cof") ) then
 		return AccessCoF()
-	elseif (has("tod_fow")) then
+	elseif ( has("tod_fow") ) then
 		return AccessFortress()
-	elseif (has("tod_tod")) then
+	elseif ( has("tod_tod") ) then
 		return AccessDroplets()
-	elseif (has("tod_crypt")) then
+	elseif ( has("tod_crypt") ) then
 		return AccessCrypt()
-	elseif (has("tod_pow")) then
+	elseif ( has("tod_pow") ) then
 		return AccessPalace()
+	elseif ( has("tod_dhc") ) then
+		return 1
 	else
 		return 0
 	end
 end
 function PowDungeons()
-	if (has("dungeonser_off")) then
+	if ( has("dungeonser_off") ) then
 		return AccessPalace()
-	elseif (has("pow_dws")) then
+	elseif ( has("pow_dws") ) then
 		return AccessDeepwood()
-	elseif (has("pow_cof")) then
+	elseif ( has("pow_cof") ) then
 		return AccessCoF()
-	elseif (has("pow_fow")) then
+	elseif ( has("pow_fow") ) then
 		return AccessFortress()
-	elseif (has("pow_tod")) then
+	elseif ( has("pow_tod") ) then
 		return AccessDroplets()
-	elseif (has("pow_crypt")) then
+	elseif ( has("pow_crypt") ) then
 		return AccessCrypt()
-	elseif (has("pow_pow")) then
+	elseif ( has("pow_pow") ) then
 		return AccessPalace()
+	elseif ( has("pow_dhc") ) then
+		return 1
+	else
+		return 0
+	end
+end
+function DhcDungeons()
+	if ( has("dungeonser_off") ) then
+		return 1
+	elseif ( has("dhc_dws") ) then
+		return AccessDeepwood()
+	elseif ( has("dhc_cof") ) then
+		return AccessCoF()
+	elseif ( has("dhc_fow") ) then
+		return AccessFortress()
+	elseif ( has("dhc_tod") ) then
+		return AccessDroplets()
+	elseif ( has("dhc_crypt") ) then
+		return AccessCrypt()
+	elseif ( has("dhc_pow") ) then
+		return AccessPalace()
+	elseif ( has("dhc_dhc") ) then
+		return 1
 	else
 		return 0
 	end

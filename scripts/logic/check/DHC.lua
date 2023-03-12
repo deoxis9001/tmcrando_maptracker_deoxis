@@ -12,7 +12,7 @@ function Sanctuary_Pedestal_Item1()
 	if has("earth") then
 		count_element = count_element + 1
 	end
-	if ( count_element>=2 ) then
+	if ( count_element>=2 and AccessDHC()==1 ) then
 		return 1
 	else
 		return 0
@@ -33,7 +33,7 @@ function Sanctuary_Pedestal_Item2()
 	if has("earth") then
 		count_element = count_element + 1
 	end
-	if ( count_element>=3 ) then
+	if ( count_element>=3 and AccessDHC()==1 ) then
 		return 1
 	else
 		return 0
@@ -55,7 +55,7 @@ function Sanctuary_Pedestal_Item3()
 	if has("earth") then
 		count_element = count_element + 1
 	end
-	if ( count_element>=4 ) then
+	if ( count_element>=4 and AccessDHC()==1 ) then
 		return 1
 	else
 		return 0

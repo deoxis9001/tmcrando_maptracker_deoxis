@@ -167,9 +167,7 @@ function AccessCoF()
 	end 
 end
 function CoFBasementAccess()
-	if has("openworld_on") then
-		return 1
-	elseif ( CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 ) ) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 ) ) then
+	if ( CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 ) ) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 ) ) then
 		return 1
 	else
 		return 0
@@ -204,9 +202,9 @@ function PoW2ndHalf()
 	end 
 end
 function AccessDHC()
-	if ( has("dhc_open") or has("dhc_peditems") ) then
+	if ( DhcDungeons()==1 and has("dhc_open") ) then
 		return 1
-	elseif ( ( has("dhc_closed") or has("dhc_none") ) and CompletePed()==1 ) then
+	elseif ( ( DhcDungeons()==1 and has("dhc_closed") or has("dhc_ped") ) and CompletePed()==1 ) then
 		return 1
 	else
 		return 0

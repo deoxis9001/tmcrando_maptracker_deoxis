@@ -1128,7 +1128,7 @@ function updateGreenP(segment, flag)
   else
 	GreenPBag = 0
   end
-  GreenP:setActive(GreenPFused + GreenPBag)
+  greenP:setActive(GreenPFused + GreenPBag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
 	print("Green P Obtained", GreenPBag)
   end
@@ -1853,9 +1853,9 @@ function updateItemsFromMemorySegment(segment)
 	updateBlueL(segment,0x71)
 	updateBlueS(segment,0x72)
 	
-	updateGreenG(segment,0x75)
-	updateGreenC(segment,0x74)
-	updateGreenP(segment,0x73)
+	updateGreenG(segment,0x74)
+	updateGreenC(segment,0x73)
+	updateGreenP(segment,0x75)
 	
   end
 
@@ -2638,7 +2638,7 @@ function UpdateWallLocation(segment)
 end
 ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)
 ScriptHost:AddMemoryWatch("TMC Locations and Bosses", 0x2002c81, 0x200, updateLocations)
-ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x45, updateItemsFromMemorySegment)
+ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x46, updateItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("TMC Item Upgrades", 0x2002ae4, 0x0c, updateGearFromMemory)
 ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey)
 ScriptHost:AddMemoryWatch("TMC Keys", 0x2002d00, 0x200, updateKeys)

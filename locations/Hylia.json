@@ -45,6 +45,7 @@
 		"name":"Diving",
 		"item_count":1,
 		"access_rules":["$Json_Hylia_PondHeartPiece_Chest"],
+		"visibility_rules":["underwater_on","hp_vanilla"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }
