@@ -1,11 +1,52 @@
+has_item_data={}
+has_item_option={}
+has_item_cache = {}
+function_data = {}
+has_item_option["fusionred_complet"] = true
+has_item_option["fusiongreen_complet"] = true
+has_item_option["lightarrowbreak_on"] = true
+has_item_option["fusionblue_complet"] = true
+has_item_option["fusiongold_vanilla"] = true
+
+
+notracking=true
+function tracker_on_accessibility_updating()
+  has_item_data = {}
+  has_item_cache = {}
+  function_data = {}
+  -- print("-------------------reset-------------------")
+end
+function tracker_on_pack_ready()
+	notracking=false
+end
+
 function has( item, amount )
- local count = Tracker:ProviderCountForCode( item )
- amount = tonumber( amount )
- if not amount then
-  return count >= 1
- else
-  return count >= amount
- end
+	if has_item_option[item]==nil then
+		if notracking then
+			return false
+		end
+	end
+	if has_item_data[item] == nil then
+		has_item_data[item]=false
+	elseif  has_item_data[item] == 0 then
+		has_item_data[item]=false
+	else
+		-- if has_item_cache[item] == nil then
+			-- has_item_cache[item]=true
+			-- print("cache: " , item , has_item_data[item])
+		-- end
+		return has_item_data[item]
+	end
+	local count = Tracker:ProviderCountForCode( item )
+	amount = tonumber( amount )
+
+	if not amount then
+		has_item_data[item] = count >= 1
+		return count >= 1
+	else
+		has_item_data[item] = count >= amount
+		return count >= amount
+		end
 end
 function hasnot( item )
  local count = Tracker:ProviderCountForCode( item )
@@ -13,37 +54,37 @@ function hasnot( item )
 end
 
 function FusionsRed()
-	if ( has("openworld_on") ) then	
-		return 1
-	elseif ( has("fusionred_vanilla") or has("fusionred_complet") ) then
+	if function_data["FusionsRed"] ~= nil then
+		return function_data["FusionsRed"]
+	end
+	if ( has("fusionred_vanilla") or has("fusionred_complet") ) then
 		if( redflag==false or redflag==nil ) then
 			fusiongreencombined:updateMax()
 			redflag=true
 		end
+		function_data["FusionsRed"]=1
 		return 1
 	else
 		if( redflag==true or redflag==nil ) then
 			fusiongreencombined:updateMax()
 			redflag=false
 		end
+		function_data["FusionsRed"]=0
 		return 0
 	end 
 end
 
 function FusionsBlue()
-	if ( has("openworld_on") ) then
+	if function_data["FusionsBlue"] ~= nil then
+		return function_data["FusionsBlue"]
+	end
+	if ( has("fusionblue_vanilla") or has("fusionblue_complet") ) then
 		if( blueflag==false or blueflag==nil ) then
 			fusionredcombined:updateMax()
 			fusiongreencombined:updateMax()
 			blueflag=true
 		end
-		return 1
-	elseif ( has("fusionblue_vanilla") or has("fusionblue_complet") ) then
-		if( blueflag==false or blueflag==nil ) then
-			fusionredcombined:updateMax()
-			fusiongreencombined:updateMax()
-			blueflag=true
-		end
+		function_data["FusionsBlue"]=1
 		return 1
 	else
 		if( blueflag==true or blueflag==nil ) then
@@ -51,34 +92,35 @@ function FusionsBlue()
 			fusiongreencombined:updateMax()
 			blueflag=false
 		end
+		function_data["FusionsBlue"]=0
 		return 0
 	end 
 end
 
 function FusionsGreen() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("fusiongreen_vanilla") or has("fusiongreen_complet") ) then
+	if function_data["FusionsGreen"] ~= nil then
+		return function_data["FusionsGreen"]
+	end
+	if ( has("fusiongreen_vanilla") or has("fusiongreen_complet") ) then
+		function_data["FusionsGreen"]=1
 		return 1
 	else
+		function_data["FusionsGreen"]=0
 		return 0
 	end 
 end
 
-function FusionsGold()
-	if ( has("openworld_on") ) then
+function FusionsGold() 
+	if function_data["FusionsGold"] ~= nil then
+		return function_data["FusionsGold"]
+	end
+	if ( has("fusiongold_vanilla") or has("fusiongold_complet") ) then
 		if( goldflag==false or goldflag==nil ) then
 			fusionredcombined:updateMax()
 			fusiongreencombined:updateMax()
 			goldflag=true
 		end
-		return 1
-	elseif ( has("fusiongold_vanilla") or has("fusiongold_complet") ) then
-		if( goldflag==false or goldflag==nil ) then
-			fusionredcombined:updateMax()
-			fusiongreencombined:updateMax()
-			goldflag=true
-		end
+		function_data["FusionsGold"]=1
 		return 1
 	else
 		if( goldflag==true or goldflag==nil ) then
@@ -86,98 +128,170 @@ function FusionsGold()
 			fusiongreencombined:updateMax()
 			goldflag=false
 		end
+		function_data["FusionsGold"]=0
 		return 0
 	end 
 end
+function CloudTopFallVisibility() 
+	if function_data["CloudTopFallVisibility"] ~= nil then
+		return function_data["CloudTopFallVisibility"]
+	end
+	if FusionsGold()==1 then
+		function_data["CloudTopFallVisibility"]=1
+		return 1
+	elseif has("cloudwindcrest_yes") then
+		function_data["CloudTopFallVisibility"]=1
+		return 1
+	elseif has("fallswindcrest_yes") then
+		function_data["CloudTopFallVisibility"]=1
+		return 1
+	else
+		function_data["CloudTopFallVisibility"]=0
+		return 0
+	end
+end
 
 function Sword1()
- if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword2") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword") > 0 then
-  return 1
- elseif has("smithsword") then
-  return 1
- else
-  return 0
- end
+	if function_data["Sword1"] ~= nil then
+		return function_data["Sword1"]
+	end
+	if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+		function_data["Sword1"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+		function_data["Sword1"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
+		function_data["Sword1"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword2") > 0 and has("progressiveitems") then
+		function_data["Sword1"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword") > 0 then
+		function_data["Sword1"]=1
+		return 1
+	elseif has("smithsword") then
+		function_data["Sword1"]=1
+		return 1
+	else
+		function_data["Sword1"]=0
+		return 0
+	end
 end
 
 function Sword2()
- if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword2") > 0 then
-  return 1
- elseif has("greensword") then
-  return 1
- else
-  return 0
- end
+	if function_data["Sword2"] ~= nil then
+		return function_data["Sword2"]
+	end
+	if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+		function_data["Sword2"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+		function_data["Sword2"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
+		function_data["Sword2"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword2") > 0 then
+		function_data["Sword2"]=1
+		return 1
+	elseif has("greensword") then
+		function_data["Sword2"]=1
+		return 1
+	else
+		function_data["Sword2"]=0
+		return 0
+	end
 end
 
 function Sword3()
- if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword3") > 0 then
-  return 1
- elseif has("redsword") then
-  return 1
- else
-  return 0
- end
+	if function_data["Sword3"] ~= nil then
+		return function_data["Sword3"]
+	end
+	if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+		function_data["Sword3"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
+		function_data["Sword3"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword3") > 0 then
+		function_data["Sword3"]=1
+		return 1
+	elseif has("redsword") then
+		function_data["Sword3"]=1
+		return 1
+	else
+		function_data["Sword3"]=0
+		return 0
+	end
 end
 function Sword4()
- if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-  return 1
- elseif Tracker:ProviderCountForCode("sword4") > 0 then
-  return 1
- elseif has("bluesword") then
-  return 1
- else
-  return 0
- end
+	if function_data["Sword4"] ~= nil then
+		return function_data["Sword4"]
+	end
+	if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
+		function_data["Sword4"]=1
+		return 1
+	elseif Tracker:ProviderCountForCode("sword4") > 0 then
+		function_data["Sword4"]=1
+		return 1
+	elseif has("bluesword") then
+		function_data["Sword4"]=1
+		return 1
+	else
+		function_data["Sword4"]=0
+		return 0
+	end
 end
 
 function Sword5()
+	if function_data["Sword5"] ~= nil then
+		return function_data["Sword5"]
+	end
  if Tracker:ProviderCountForCode("sword5") > 0 then
+		function_data["Sword5"]=1
   return 1
  elseif has("foursword") then
+		function_data["Sword5"]=1
   return 1
  else
+		function_data["Sword5"]=1
   return 0
  end
 end
 
 function GotSwords()
- if has("sword0needed") then
-  return 1
- elseif Sword1()==1 and has("sword1needed") then
-  return 1
- elseif Sword2()==1 and has("sword2needed") then
-  return 1
- elseif Sword3()==1 and has("sword3needed") then
-  return 1
- elseif Sword4()==1 and has("sword4needed") then
-  return 1
- elseif Sword5()==1 and has("sword5needed") then
-  return 1
- else
-  return 0
- end
+	if function_data["GotSwords"] ~= nil then
+		return function_data["GotSwords"]
+	end
+	if has("sword0needed") then
+		function_data["GotSwords"]=1
+		return 1
+	elseif Sword1()==1 and has("sword1needed") then
+		function_data["GotSwords"]=1
+		return 1
+	elseif Sword2()==1 and has("sword2needed") then
+		function_data["GotSwords"]=1
+		return 1
+	elseif Sword3()==1 and has("sword3needed") then
+		function_data["GotSwords"]=1
+		return 1
+	elseif Sword4()==1 and has("sword4needed") then
+		function_data["GotSwords"]=1
+		return 1
+	elseif Sword5()==1 and has("sword5needed") then
+		function_data["GotSwords"]=1
+		return 1
+	else
+		function_data["GotSwords"]=0
+		return 0
+	end
 end
 
 function GotElements()
+	if function_data["GotElements"] ~= nil then
+		return function_data["GotElements"]
+	end
 	local CountElement=0
 	if has("water") then
 		CountElement = CountElement + 1
@@ -191,30 +305,44 @@ function GotElements()
 	if has("earth") then
 		CountElement = CountElement + 1
 	end
- if has("element0Needed") then
-  return 1
- elseif has("element1Needed") and CountElement>=1 then
-  return 1
- elseif has("element2Needed") and CountElement>=2 then
-  return 1
- elseif has("element3Needed") and CountElement>=3 then
-  return 1
- elseif has("element4Needed") and CountElement>=4 then
-  return 1
- else
-  return 0
- end
+	if has("element0Needed") then
+		function_data["GotElements"]=1
+		return 1
+	elseif has("element1Needed") and CountElement>=1 then
+		function_data["GotElements"]=1
+		return 1
+	elseif has("element2Needed") and CountElement>=2 then
+		function_data["GotElements"]=1
+		return 1
+	elseif has("element3Needed") and CountElement>=3 then
+		function_data["GotElements"]=1
+		return 1
+	elseif has("element4Needed") and CountElement>=4 then
+		function_data["GotElements"]=1
+		return 1
+	else
+		function_data["GotElements"]=0
+		return 0
+	end
 end
 
 function GotFigurine()
- if Tracker:ProviderCountForCode("figurine") >= Tracker:ProviderCountForCode("figurine_option") then
-  return 1
- else
-  return 0
- end
+	if function_data["GotFigurine"] ~= nil then
+		return function_data["GotFigurine"]
+	end
+	if Tracker:ProviderCountForCode("figurine") >= Tracker:ProviderCountForCode("figurine_option") then
+		function_data["GotFigurine"]=1
+		return 1
+	else
+		function_data["GotFigurine"]=0
+		return 0
+	end
 end
 
 function GotDungeons()
+	if function_data["GotDungeons"] ~= nil then
+		return function_data["GotDungeons"]
+	end
 	local CountDungeons = 0
 	if has("dws") then
 		CountDungeons = CountDungeons + 1
@@ -235,92 +363,145 @@ function GotDungeons()
 		CountDungeons = CountDungeons + 1
 	end
 	if CountDungeons >= 0 and has("dungeons0") then
+		function_data["GotDungeons"]=1
 		return 1
 	elseif CountDungeons >= 1 and has("dungeons1") then
+		function_data["GotDungeons"]=1
 		return 1
 	elseif CountDungeons >= 2 and has("dungeons2") then
+		function_data["GotDungeons"]=1
 		return 1
 	elseif CountDungeons >= 3 and has("dungeons3") then
+		function_data["GotDungeons"]=1
 		return 1
 	elseif CountDungeons >= 4 and has("dungeons4") then
+		function_data["GotDungeons"]=1
 		return 1
 	elseif CountDungeons >= 5 and has("dungeons5") then
+		function_data["GotDungeons"]=1
 		return 1
 	elseif CountDungeons >= 6 and has("dungeons6") then
+		function_data["GotDungeons"]=1
 		return 1
 	else
+		function_data["GotDungeons"]=0
 		return 0
 	end
 end
 
 function CompletePed()
+	if function_data["CompletePed"] ~= nil then
+		return function_data["CompletePed"]
+	end
 	if (  GotSwords()==1 and GotElements()==1 and GotDungeons()==1 and GotFigurine()==1  ) then
+		function_data["CompletePed"]=1
 		return 1
 	else
+		function_data["CompletePed"]=0
 		return 0
 	end
 end
 
 function HasSword()
+	if function_data["HasSword"] ~= nil then
+		return function_data["HasSword"]
+	end
 	if ( Sword1()==1 or Sword2()==1 or Sword3()==1 or Sword4()==1 or Sword5()==1 ) then
+		function_data["HasSword"]=1
 		return 1
 	else
+		function_data["HasSword"]=0
 		return 0
 	end
 end
 
 function HasWhiteSword()
+	if function_data["HasWhiteSword"] ~= nil then
+		return function_data["HasWhiteSword"]
+	end
 	if ( Sword2()==1 or Sword3()==1 or Sword4()==1 or Sword5()==1 ) then
+		function_data["HasWhiteSword"]=1
 		return 1
 	else
+		function_data["HasWhiteSword"]=0
 		return 0
 	end
 end
 
 function HasSpin()
+	if function_data["HasSpin"] ~= nil then
+		return function_data["HasSpin"]
+	end
 	if ( has("spinattack") ) then
+		function_data["HasSpin"]=1
 		return 1
 	else
+		function_data["HasSpin"]=1
 		return 0
 	end
 end
 
 function CanSplit2()
+	if function_data["CanSplit2"] ~= nil then
+		return function_data["CanSplit2"]
+	end
 	if ( Sword3()==1 and has("spinattack") ) then
+		function_data["CanSplit2"]=1
 		return 1
 	else
+		function_data["CanSplit2"]=0
 		return 0
 	end
 end
 
 function CanSplit3()
-	if ( Sword4()==1 and has("spinattack")  ) then
+	if function_data["CanSplit3"] ~= nil then
+		return function_data["CanSplit3"]
+	end
+	if ( Sword4()==1 and has("spinattack") ) then
+		function_data["CanSplit3"]=1
 		return 1
 	else
+		function_data["CanSplit3"]=0
 		return 0
 	end
 end
 
 function CanSplit4()
-	if ( Sword5()==1 and has("spinattack")  ) then
+	if function_data["CanSplit4"] ~= nil then
+		return function_data["CanSplit4"]
+	end
+	if ( Sword5()==1 and has("spinattack") ) then
+		function_data["CanSplit4"]=1
 		return 1
 	else
+		function_data["CanSplit4"]=0
 		return 0
 	end
 end
 
 function HasBottle()
+	if function_data["HasBottle"] ~= nil then
+		return function_data["HasBottle"]
+	end
 	if ( Tracker:ProviderCountForCode("bottle") > 0 ) then
+		function_data["HasBottle"]=1
 		return 1
 	else
+		function_data["HasBottle"]=0
 		return 0
 	end
 end
 
 function HasBow()
+	if function_data["HasBow"] ~= nil then
+		return function_data["HasBow"]
+	end
 	if ( has("bow") or has("lights") ) then
+		function_data["HasBow"]=1
 		return 1
 	else
+		function_data["HasBow"]=0
 		return 0
 	end
 end

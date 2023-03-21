@@ -1,30 +1,3 @@
--- Configuration ----------------------
-BOW_VALUE = 0
-WildsFused = 0
-WildsBag = 0
-CloudsFused = 0
-CloudsBag = 0
-CloudsFused = 0
-CloudsBag = 0
-RedWFused = 0
-RedWBag = 0
-RedVFused = 0
-RedVBag = 0
-RedEFused = 0
-RedEBag = 0
-BlueLFused = 0
-BlueLBag = 0
-BlueSFused = 0
-BlueSBag = 0
-GreenGFused = 0
-GreenGBag = 0
-GreenCFused = 0
-GreenCBag = 0
-GreenPFused = 0
-GreenPBag = 0
-KEY_STOLEN = false
----------------------------------------
-
 print("")
 print("Active Auto-Tracker Configuration")
 print("")
@@ -41,21 +14,45 @@ end
 print("")
 
 function autotracker_started()
-  print("Started Tracking")
-  DWS_KEY_COUNT = 0
-  DWS_KEY_USED = 0
-  COF_KEY_COUNT = 0
-  COF_KEY_USED = 0
-  FOW_KEY_COUNT = 0
-  FOW_KEY_USED = 0
-  TOD_KEY_COUNT = 0
-  TOD_KEY_USED = 0
-  POW_KEY_COUNT = 0
-  POW_KEY_USED = 0
-  DHC_KEY_COUNT = 0
-  DHC_KEY_USED = 0
-  RC_KEY_COUNT = 0
-  RC_KEY_USED = 0
+	print("Started Tracking")
+	DWS_KEY_COUNT = 0
+	DWS_KEY_USED = 0
+	COF_KEY_COUNT = 0
+	COF_KEY_USED = 0
+	FOW_KEY_COUNT = 0
+	FOW_KEY_USED = 0
+	TOD_KEY_COUNT = 0
+	TOD_KEY_USED = 0
+	POW_KEY_COUNT = 0
+	POW_KEY_USED = 0
+	DHC_KEY_COUNT = 0
+	DHC_KEY_USED = 0
+	RC_KEY_COUNT = 0
+	RC_KEY_USED = 0
+	BOW_VALUE = 0
+	WildsFused = 0
+	WildsBag = 0
+	CloudsFused = 0
+	CloudsBag = 0
+	CloudsFused = 0
+	CloudsBag = 0
+	RedWFused = 0
+	RedWBag = 0
+	RedVFused = 0
+	RedVBag = 0
+	RedEFused = 0
+	RedEBag = 0
+	BlueLFused = 0
+	BlueLBag = 0
+	BlueSFused = 0
+	BlueSBag = 0
+	GreenGFused = 0
+	GreenGBag = 0
+	GreenCFused = 0
+	GreenCBag = 0
+	GreenPFused = 0
+	GreenPBag = 0
+	KEY_STOLEN = false
 end
 
 U8_READ_CACHE = 0
@@ -96,7 +93,7 @@ function updateWall(segment, code, address)
             item.Active = false
   end
 end
-function updateFusion(segment, code, address, flag)
+function updateFusion(item, segment, code, address, flag)
     local item = Tracker:FindObjectForCode(code)
     if item then
         local value = ReadU8(segment, address)
@@ -939,198 +936,198 @@ function updateBlueS(segment, flag)
   end
 end
 
-function updateGreenN(segment, flag)
+function updateGreenG(segment, flag)
   if ReadU8(segment, 0x2002b58) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6b)
+    GreenGBag = ReadU8(segment, 0x2002b6b)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6b))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6b))
 	end
   elseif ReadU8(segment, 0x2002b59) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6c)
+    GreenGBag = ReadU8(segment, 0x2002b6c)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6c))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6c))
 	end
   elseif ReadU8(segment, 0x2002b5a) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6d)
+    GreenGBag = ReadU8(segment, 0x2002b6d)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6d))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6d))
 	end
   elseif ReadU8(segment, 0x2002b5b) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6e)
+    GreenGBag = ReadU8(segment, 0x2002b6e)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6e))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6e))
 	end
   elseif ReadU8(segment, 0x2002b5c) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b6f)
+    GreenGBag = ReadU8(segment, 0x2002b6f)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b6f))
+		print("Green G in Bag", ReadU8(segment, 0x2002b6f))
 	end
   elseif ReadU8(segment, 0x2002b5d) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b70)
+    GreenGBag = ReadU8(segment, 0x2002b70)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b70))
+		print("Green G in Bag", ReadU8(segment, 0x2002b70))
 	end
   elseif ReadU8(segment, 0x2002b5e) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b71)
+    GreenGBag = ReadU8(segment, 0x2002b71)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b71))
+		print("Green G in Bag", ReadU8(segment, 0x2002b71))
 	end
   elseif ReadU8(segment, 0x2002b5f) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b72)
+    GreenGBag = ReadU8(segment, 0x2002b72)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b72))
+		print("Green G in Bag", ReadU8(segment, 0x2002b72))
 	end
   elseif ReadU8(segment, 0x2002b60) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b73)
+    GreenGBag = ReadU8(segment, 0x2002b73)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b73))
+		print("Green G in Bag", ReadU8(segment, 0x2002b73))
 	end
   elseif ReadU8(segment, 0x2002b61) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b74)
+    GreenGBag = ReadU8(segment, 0x2002b74)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b74))
+		print("Green G in Bag", ReadU8(segment, 0x2002b74))
 	end
   elseif ReadU8(segment, 0x2002b62) == flag then
-    GreenNBag = ReadU8(segment, 0x2002b75)
+    GreenGBag = ReadU8(segment, 0x2002b75)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green N in Bag", ReadU8(segment, 0x2002b75))
+		print("Green G in Bag", ReadU8(segment, 0x2002b75))
 	end
   else
-	GreenNBag = 0
+	GreenGBag = 0
   end
-  greenN:setActive(GreenNFused + GreenNBag)
+  greenG:setActive(GreenGFused + GreenGBag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
-	print("Green N Obtained", GreenNBag)
+	print("Green G Obtained", GreenGBag)
   end
 end
 
-function updateGreenV(segment, flag)
+function updateGreenC(segment, flag)
   if ReadU8(segment, 0x2002b58) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6b)
+    GreenCBag = ReadU8(segment, 0x2002b6b)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6b))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6b))
 	end
   elseif ReadU8(segment, 0x2002b59) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6c)
+    GreenCBag = ReadU8(segment, 0x2002b6c)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6c))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6c))
 	end
   elseif ReadU8(segment, 0x2002b5a) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6d)
+    GreenCBag = ReadU8(segment, 0x2002b6d)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6d))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6d))
 	end
   elseif ReadU8(segment, 0x2002b5b) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6e)
+    GreenCBag = ReadU8(segment, 0x2002b6e)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6e))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6e))
 	end
   elseif ReadU8(segment, 0x2002b5c) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b6f)
+    GreenCBag = ReadU8(segment, 0x2002b6f)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b6f))
+		print("Green C in Bag", ReadU8(segment, 0x2002b6f))
 	end
   elseif ReadU8(segment, 0x2002b5d) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b70)
+    GreenCBag = ReadU8(segment, 0x2002b70)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b70))
+		print("Green C in Bag", ReadU8(segment, 0x2002b70))
 	end
   elseif ReadU8(segment, 0x2002b5e) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b71)
+    GreenCBag = ReadU8(segment, 0x2002b71)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b71))
+		print("Green C in Bag", ReadU8(segment, 0x2002b71))
 	end
   elseif ReadU8(segment, 0x2002b5f) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b72)
+    GreenCBag = ReadU8(segment, 0x2002b72)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b72))
+		print("Green C in Bag", ReadU8(segment, 0x2002b72))
 	end
   elseif ReadU8(segment, 0x2002b60) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b73)
+    GreenCBag = ReadU8(segment, 0x2002b73)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b73))
+		print("Green C in Bag", ReadU8(segment, 0x2002b73))
 	end
   elseif ReadU8(segment, 0x2002b61) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b74)
+    GreenCBag = ReadU8(segment, 0x2002b74)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b74))
+		print("Green C in Bag", ReadU8(segment, 0x2002b74))
 	end
   elseif ReadU8(segment, 0x2002b62) == flag then
-    GreenVBag = ReadU8(segment, 0x2002b75)
+    GreenCBag = ReadU8(segment, 0x2002b75)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green V in Bag", ReadU8(segment, 0x2002b75))
+		print("Green C in Bag", ReadU8(segment, 0x2002b75))
 	end
   else
-	GreenVBag = 0
+	GreenCBag = 0
   end
-  greenV:setActive(GreenVFused + GreenVBag)
+  greenC:setActive(GreenCFused + GreenCBag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
-	print("Green V Obtained", GreenVBag)
+	print("Green C Obtained", GreenCBag)
   end
 end
 
-function updateGreenZ(segment, flag)
+function updateGreenP(segment, flag)
   if ReadU8(segment, 0x2002b58) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6b)
+    GreenPBag = ReadU8(segment, 0x2002b6b)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6b))
+		print("green P in Bag", ReadU8(segment, 0x2002b6b))
 	end
   elseif ReadU8(segment, 0x2002b59) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6c)
+    GreenPBag = ReadU8(segment, 0x2002b6c)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6c))
+		print("green P in Bag", ReadU8(segment, 0x2002b6c))
 	end
   elseif ReadU8(segment, 0x2002b5a) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6d)
+    GreenPBag = ReadU8(segment, 0x2002b6d)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6d))
+		print("green P in Bag", ReadU8(segment, 0x2002b6d))
 	end
   elseif ReadU8(segment, 0x2002b5b) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6e)
+    GreenPBag = ReadU8(segment, 0x2002b6e)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6e))
+		print("green P in Bag", ReadU8(segment, 0x2002b6e))
 	end
   elseif ReadU8(segment, 0x2002b5c) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b6f)
+    GreenPBag = ReadU8(segment, 0x2002b6f)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b6f))
+		print("green P in Bag", ReadU8(segment, 0x2002b6f))
 	end
   elseif ReadU8(segment, 0x2002b5d) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b70)
+    GreenPBag = ReadU8(segment, 0x2002b70)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b70))
+		print("green P in Bag", ReadU8(segment, 0x2002b70))
 	end
   elseif ReadU8(segment, 0x2002b5e) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b71)
+    GreenPBag = ReadU8(segment, 0x2002b71)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b71))
+		print("green P in Bag", ReadU8(segment, 0x2002b71))
 	end
   elseif ReadU8(segment, 0x2002b5f) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b72)
+    GreenPBag = ReadU8(segment, 0x2002b72)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b72))
+		print("green P in Bag", ReadU8(segment, 0x2002b72))
 	end
   elseif ReadU8(segment, 0x2002b60) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b73)
+    GreenPBag = ReadU8(segment, 0x2002b73)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b73))
+		print("green P in Bag", ReadU8(segment, 0x2002b73))
 	end
   elseif ReadU8(segment, 0x2002b61) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b74)
+    GreenPBag = ReadU8(segment, 0x2002b74)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b74))
+		print("green P in Bag", ReadU8(segment, 0x2002b74))
 	end
   elseif ReadU8(segment, 0x2002b62) == flag then
-    GreenZBag = ReadU8(segment, 0x2002b75)
+    GreenPBag = ReadU8(segment, 0x2002b75)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
-		print("Green Z in Bag", ReadU8(segment, 0x2002b75))
+		print("green P in Bag", ReadU8(segment, 0x2002b75))
 	end
   else
-	GreenZBag = 0
+	GreenPBag = 0
   end
-  greenZ:setActive(GreenZFused + GreenZBag)
+  greenP:setActive(GreenPFused + GreenPBag)
   if TMC_AUTOTRACKER_DEBUG_ITEM then
-	print("Green Z Obtained", GreenZBag)
+	print("Green P Obtained", GreenPBag)
   end
 end
 
@@ -1853,9 +1850,9 @@ function updateItemsFromMemorySegment(segment)
 	updateBlueL(segment,0x71)
 	updateBlueS(segment,0x72)
 	
-	updateGreenN(segment,0x75)
-	updateGreenV(segment,0x73)
-	updateGreenZ(segment,0x74)
+	updateGreenG(segment,0x74)
+	updateGreenC(segment,0x73)
+	updateGreenP(segment,0x75)
 	
   end
 
@@ -1908,6 +1905,18 @@ function updateLocations(segment)
   end
 
   if AUTOTRACKER_ENABLE_FUZER_TRACKING then
+		updateFusionUsedFixed("RedW",segment,{
+		{0x2002c82,0x04},
+		{0x2002c82,0x08},
+		{0x2002c82,0x10},
+		{0x2002c82,0x20},
+		{0x2002c82,0x40},
+		{0x2002c82,0x80},
+		{0x2002c83,0x01},
+		{0x2002c83,0x02},
+		{0x2002c83,0x04},
+		}
+		)
 		updateFusion("RedW",segment, "fusions0a", 0x2002c82, 0x04)
 		updateFusion("RedW",segment, "fusions0b", 0x2002c82, 0x08)
 		updateFusion("RedW",segment, "fusions0c", 0x2002c82, 0x10)
@@ -1917,14 +1926,40 @@ function updateLocations(segment)
 		updateFusion("RedW",segment, "fusions10", 0x2002c83, 0x01)
 		updateFusion("RedW",segment, "fusions11", 0x2002c83, 0x02)
 		updateFusion("RedW",segment, "fusions12", 0x2002c83, 0x04)
+		
+		updateFusionUsedFixed("RedV",segment,{
+		{0x2002c83,0x08},
+		{0x2002c83,0x10},
+		{0x2002c83,0x20},
+		{0x2002c83,0x40},
+		{0x2002c84,0x01},
+		{0x2002c84,0x02},
+		{0x2002c84,0x04},
+		}
+		)
+		
 		updateFusion("RedV",segment, "fusions13", 0x2002c83, 0x08)
 		updateFusion("RedV",segment, "fusions14", 0x2002c83, 0x10)
 		updateFusion("RedV",segment, "fusions15", 0x2002c83, 0x20)
 		updateFusion("RedV",segment, "fusions16", 0x2002c83, 0x40)
-		updateFusion("RedE",segment, "fusions17", 0x2002c83, 0x80)
 		updateFusion("RedV",segment, "fusions18", 0x2002c84, 0x01)
 		updateFusion("RedV",segment, "fusions19", 0x2002c84, 0x02)
 		updateFusion("RedV",segment, "fusions1a", 0x2002c84, 0x04)
+		
+		updateFusionUsedFixed("RedE",segment,{
+		{0x2002c83,0x80},
+		
+		{0x2002c84,0x08},
+		{0x2002c84,0x10},
+		{0x2002c84,0x20},
+		{0x2002c84,0x40},
+		{0x2002c84,0x80},
+		{0x2002c85,0x01},
+		{0x2002c85,0x02},
+		}
+		)
+		
+		updateFusion("RedE",segment, "fusions17", 0x2002c83, 0x80)
 		updateFusion("RedE",segment, "fusions1b", 0x2002c84, 0x08)
 		updateFusion("RedE",segment, "fusions1c", 0x2002c84, 0x10)
 		updateFusion("RedE",segment, "fusions1d", 0x2002c84, 0x20)
@@ -1932,6 +1967,17 @@ function updateLocations(segment)
 		updateFusion("RedE",segment, "fusions1f", 0x2002c84, 0x80)
 		updateFusion("RedE",segment, "fusions20", 0x2002c85, 0x01)
 		updateFusion("RedE",segment, "fusions21", 0x2002c85, 0x02)
+		
+		updateFusionUsedFixed("BlueL",segment,{
+		{0x2002c85,0x04},
+		{0x2002c85,0x08},
+		{0x2002c85,0x10},
+		{0x2002c85,0x20},
+		{0x2002c85,0x80},
+		{0x2002c86,0x01},
+		{0x2002c86,0x10},
+		}
+		)
 
 		updateFusion("BlueL",segment, "fusions22", 0x2002c85, 0x04)
 		updateFusion("BlueL",segment, "fusions23", 0x2002c85, 0x08)
@@ -1939,12 +1985,43 @@ function updateLocations(segment)
 		updateFusion("BlueL",segment, "fusions27", 0x2002c85, 0x80)
 		updateFusion("BlueL",segment, "fusions28", 0x2002c86, 0x01)
 		updateFusion("BlueL",segment, "fusions2c", 0x2002c86, 0x10)
+		
+		updateFusionUsedFixed("BlueS",segment,{
+		{0x2002c86,0x20},
+		{0x2002c86,0x40},
+		{0x2002c87,0x01},
+		{0x2002c87,0x02},
+		{0x2002c87,0x04},
+		{0x2002c87,0x08},
+		}
+		)
+		
 		updateFusion("BlueS",segment, "fusions2d", 0x2002c86, 0x20)
 		updateFusion("BlueS",segment, "fusions2e", 0x2002c86, 0x40)
 		updateFusion("BlueS",segment, "fusions30", 0x2002c87, 0x01)
 		updateFusion("BlueS",segment, "fusions31", 0x2002c87, 0x02)
 		updateFusion("BlueS",segment, "fusions32", 0x2002c87, 0x04)
 		updateFusion("BlueS",segment, "fusions33", 0x2002c87, 0x08)
+		
+		updateFusionUsedFixed("BlueS",segment,{
+		{0x2002c87,0x10},
+		{0x2002c87,0x20},
+		{0x2002c87,0x40},
+		{0x2002c87,0x80},
+		{0x2002c88,0x01},
+		{0x2002c88,0x02},
+		{0x2002c88,0x04},
+		{0x2002c88,0x08},
+		{0x2002c88,0x10},
+		{0x2002c88,0x20},
+		{0x2002c88,0x40},
+		{0x2002c88,0x80},
+		{0x2002c88,0x01},
+		{0x2002c89,0x01},
+		{0x2002c89,0x02},
+		{0x2002c89,0x04},
+		}
+		)
 		
 		updateFusion("GreenC",segment, "fusions34", 0x2002c87, 0x10)--GreenC
 		updateFusion("GreenC",segment, "fusions35", 0x2002c87, 0x20)--GreenC
@@ -2314,7 +2391,7 @@ function updateLocations(segment)
 	  updateSectionFlag(segment, "@DeepWoods/Basement Big Chest", 0x2002d43, 0x80)
 	  updateSectionFlag(segment, "@DeepWoods/Green Chu", 0x2002d44, 0x80)
 
-	  -- MAP DWS no used
+	  -- MAP DWS
 	  updateSectionFlag(segment, "@Deepwoods - Slug Room/Chest", 0x2002d43, 0x20)
 	  updateSectionFlag(segment, "@Deepwoods - Upstairs Room/Chest", 0x2002d45, 0x04)
 	  updateSectionFlag(segment, "@Deepwoods - Barrel Room Northwest/Chest", 0x2002d41, 0x08)
@@ -2346,7 +2423,7 @@ function updateLocations(segment)
 	  updateSectionFlag(segment, "@Cave Of Flame/Gleerok", 0x2002d5b, 0x04)
 
 	  
-	  -- MAP COF no used	  
+	  -- MAP COF	  
 	  updateSectionFlag(segment, "@Cave Of Flame - Spiny Beetle Fight/Kill", 0x2002d5a, 0x04)
 	  updateDecreaseCount(segment, "@Cave Of Flame - Rupees/Rupees", {{0x2002d5b, 0x40},{0x2002d5b, 0x80},{0x2002d5c, 0x01},{0x2002d5c, 0x02},{0x2002d5c, 0x04}})
 	  updateSectionFlag(segment, "@Cave Of Flame - Big Chest Room Big Chest/Big Chest", 0x2002d59, 0x04)
@@ -2389,7 +2466,7 @@ function updateLocations(segment)
 	  updateSectionFlag(segment, "@Fortress/Mazaal", 0x2002d72, 0x04)
 	  updateSectionFlag(segment, "@Fortress/FOW Reward", 0x2002d74, 0x20)
 	  
-	  -- MAP FOW no used	  
+	  -- MAP FOW	  
 	  updateSectionFlag(segment, "@Fortress - Far Left Entrance Room/Chest", 0x2002d05, 0x80)
 	  updateSectionFlag(segment, "@Fortress - Entrance Rupee/Rupee", 0x2002d05, 0x40)
 	  updateSectionFlag(segment, "@Fortress - Wizzrobe Fight/Kill", 0x2002d74, 0x08)
@@ -2436,12 +2513,14 @@ function updateLocations(segment)
 	  updateSectionFlag(segment, "@Droplet/Basement Frozen Chest", 0x2002d8d, 0x10)
 	  updateSectionFlag(segment, "@Droplet/Blue Chu", 0x2002d8c, 0x80)
 	  updateSectionFlag(segment, "@Droplet/Post Blue Chu Frozen Chest", 0x2002d92, 0x40)
-	  updateDecreaseCount(segment, "@Droplet/Dark Maze", {{0x2002d8f, 0x20},{0x2002d8f, 0x40},{0x2002d8f,0x80}})
+	  updateSectionFlag(segment, "@Droplet/Dark Maze Bottom/Chest", 0x2002d8f, 0x80)
+	  updateSectionFlag(segment, "@Droplet/Dark Maze Top Right", 0x2002d8f, 0x20)
+	  updateSectionFlag(segment, "@Droplet/Dark Maze Top Left", 0x2002d8f, 0x40)
 	  updateSectionFlag(segment, "@Droplet/Dark Maze Bomb Wall", 0x2002d91, 0x80)
 	  updateSectionFlag(segment, "@Droplet/Octo", 0x2002d8c, 0x01)
 	  
 	  
-	  -- MAP TOD no used
+	  -- MAP TOD
 	  updateSectionFlag(segment, "@Droplet - First Ice Block/Ice Block", 0x2002d8e, 0x04)
 	  updateSectionFlag(segment, "@Droplet - Key Locked Ice Block/Ice Block", 0x2002d8d, 0x80)
 	  updateSectionFlag(segment, "@Droplet - Post Madderpillar/Chest", 0x2002d92, 0x80)
@@ -2490,7 +2569,7 @@ function updateLocations(segment)
 	  updateSectionFlag(segment, "@Palace/Gyorg", 0x2002dab, 0x20)
 
 	  
-	  -- MAP POW no used
+	  -- MAP POW
 	  updateSectionFlag(segment, "@Palace - Firebar Grate/Chest", 0x2002daa, 0x40)
 	  updateSectionFlag(segment, "@Palace - Wizzrobe Platform Fight/Kill", 0x2002daa, 0x10)
 	  updateSectionFlag(segment, "@Palace - Pot Puzzle Key/Drop", 0x2002da7, 0x02)
@@ -2525,7 +2604,7 @@ function updateLocations(segment)
 	  updateSectionFlag(segment, "@DHC/Vaati", 0x2002ca6, 0x20)
 	  
 	  
-	  -- MAP DHC no used
+	  -- MAP DHC
 	  updateSectionFlag(segment, "@Dark Hyrule Castle - Pull the Pedestal/Win", 0x2002ca6, 0x20)
 	  updateSectionFlag(segment, "@Dark Hyrule Castle - Blade/Chest", 0x2002dc0, 0x20)
 	  updateSectionFlag(segment, "@Dark Hyrule Castle - Platform/Big Chest", 0x2002dc1, 0x08)
@@ -2555,18 +2634,21 @@ function updateKeys(segment)
     updateBigKeys(segment, "tod_bigkey")
     updateBigKeys(segment, "pow_bigkey")
     updateBigKeys(segment, "dhc_bigkey")
+	
     updateToggleFlag(segment, "dws_map", 0x2002ead, 0x01)
     updateToggleFlag(segment, "cof_map", 0x2002eae, 0x01)
     updateToggleFlag(segment, "fow_map", 0x2002eaf, 0x01)
     updateToggleFlag(segment, "tod_map", 0x2002eb0, 0x01)
     updateToggleFlag(segment, "pow_map", 0x2002eb1, 0x01)
     updateToggleFlag(segment, "dhc_map", 0x2002eb2, 0x01)
+	
     updateToggleFlag(segment, "dws_compass", 0x2002ead, 0x02)
     updateToggleFlag(segment, "cof_compass", 0x2002eae, 0x02)
     updateToggleFlag(segment, "fow_compass", 0x2002eaf, 0x02)
     updateToggleFlag(segment, "tod_compass", 0x2002eb0, 0x02)
     updateToggleFlag(segment, "pow_compass", 0x2002eb1, 0x02)
     updateToggleFlag(segment, "dhc_compass", 0x2002eb2, 0x02)
+
     updateSmallKeys(segment, "dws_smallkey", 0x2002e9d)
     updateSmallKeys(segment, "cof_smallkey", 0x2002e9e)
     updateSmallKeys(segment, "fow_smallkey", 0x2002e9f)
@@ -2635,7 +2717,7 @@ function UpdateWallLocation(segment)
 end
 ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)
 ScriptHost:AddMemoryWatch("TMC Locations and Bosses", 0x2002c81, 0x200, updateLocations)
-ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x45, updateItemsFromMemorySegment)
+ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x46, updateItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("TMC Item Upgrades", 0x2002ae4, 0x0c, updateGearFromMemory)
 ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey)
 ScriptHost:AddMemoryWatch("TMC Keys", 0x2002d00, 0x200, updateKeys)

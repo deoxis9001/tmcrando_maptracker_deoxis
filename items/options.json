@@ -1150,7 +1150,7 @@
       },
       {
         "img":"images/options/logic_settings/grabbable_easy.png",
-        "codes": "grabbableeasy",
+        "codes": "grabbable_easy",
         "inherit_codes":false
       },
       {
