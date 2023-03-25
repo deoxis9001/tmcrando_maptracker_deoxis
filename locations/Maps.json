@@ -1758,7 +1758,7 @@
 	  {
 		"name":"Rupees",
 		"item_count":6,
-		"access_rules":["$Json_Dungeon_Droplet_IcePuzzleFreeChest"],
+		"access_rules":["$Json_Dungeon_Droplet_LowerWaterRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  

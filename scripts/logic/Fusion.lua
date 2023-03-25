@@ -158,6 +158,8 @@ end
 function Json_Hills_MinishHouse_Fuzer() 
 	if ( AccessEasternHills()==1 ) then
 		return 1
+	elseif ( AccessEasternHills()==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -198,6 +200,8 @@ end
 function Json_Hylia_Fifi_Fuzer() 
 	if ( AccessLonLon()==1 and has("cane") ) then
 		return 1
+	elseif ( AccessLonLon()==2 and has("cane") ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -224,6 +228,8 @@ end
 function Json_Hylia_DavidJr_Fuzer1() 
 	if ( AccessLonLon()==1 and has("cane") and AccessEasternHills()==1 ) then
 		return 1
+	elseif ( ( AccessLonLon()==1 or AccessLonLon()==2) and has("cane") and ( AccessEasternHills()==1 or AccessEasternHills()==2 ) ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -231,7 +237,9 @@ end
 
 
 function Json_Hylia_DavidJr_Fuzer2() 
-	if ( Json_Hylia_DavidJr_Fuzer1()==1 and HasMagicBoomerang()==1 ) then
+	if ( AccessLonLon()==1 and has("cane") and AccessEasternHills()==1 and HasMagicBoomerang()==1 ) then
+		return 1
+	elseif ( ( AccessLonLon()==1 or AccessLonLon()==2) and has("cane") and ( AccessEasternHills()==1 or AccessEasternHills()==2 ) and HasMagicBoomerang()==1 ) then
 		return 1
 	else
 		return 0
@@ -269,6 +277,8 @@ end
 function Json_LonLon_Ankle_Fuzer() 
 	if ( LonLon_Cave_Chest()==1 and has("cane") and AccessEasternHills()==1 ) then
 		return 1
+	elseif ( LonLon_Cave_Chest()==1 and has("cane") and AccessEasternHills()==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -406,6 +416,8 @@ end
 function Json_SouthHyruleField_Tingle_Fuzer1() 
 	if ( has("cane") and ( AccessEasternHills()==1 ) and HasMagicBoomerang()==1 ) then
 		return 1
+	elseif ( has("cane") and ( AccessEasternHills()==2 ) and HasMagicBoomerang()==1 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -415,6 +427,8 @@ end
 function Json_SouthHyruleField_Tingle_Fuzer2() 
 	if ( has("cane") and ( AccessEasternHills()==1 ) and HasMagicBoomerang()==1 ) then
 		return 1
+	elseif ( has("cane") and ( AccessEasternHills()==2 ) and HasMagicBoomerang()==1 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -548,10 +562,11 @@ function Json_Trilby_TreeHouse_Fuzer()
 	end 
 end
 
-
 function Json_Trilby_Knuckle_Fuzer() 
 	if ( Trilby_DigCave_RightChest()==1 and has("cane") and AccessEasternHills()==1 ) then
 		return 1
+	elseif ( Trilby_DigCave_RightChest()==1 and has("cane") and AccessEasternHills()==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 

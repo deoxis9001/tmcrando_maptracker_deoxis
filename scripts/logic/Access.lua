@@ -1,6 +1,8 @@
 function AccessEasternHills()
 	if ( CanDestroyTrees()==1 or SHFWindCrest()==1 or ( OverworldBlocks()==1 and AccessMinishWoods()==1 ) ) then
 		return 1
+	elseif ( CanDestroyTrees()==2 or ( OverworldBlocks()==1 and AccessMinishWoods()==2 ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -9,6 +11,8 @@ end
 function AccessLonLon()
 	if ( has("ocarina") or ( CanDestroyTrees()==1 and ( has("llrkey") or has("cape") or LonLonNorthShortcut()==1 or ( has("flippers") and has("mitts") ) ) ) ) then
 		return 1
+	elseif ( (CanDestroyTrees()==2 and ( has("llrkey") or has("cape") or LonLonNorthShortcut()==1 or ( has("flippers") and has("mitts") ) ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -17,6 +21,8 @@ end
 function AccessSouthLake() 
 	if ( ( AccessLonLon()==1 and CapeExtension()==1 ) or ( AccessNorthMinish()==1 and has("mitts") ) ) then
 		return 1
+	elseif ( (AccessLonLon()==1 or AccessLonLon()==2) and (CapeExtension()==1 or CapeExtension()==2 ) ) or ( ( AccessNorthMinish()==1 or AccessNorthMinish()==2 ) and has("mitts") )  then
+		return 2
 	else
 		return 0
 	end 
@@ -25,6 +31,8 @@ end
 function AccessTreasureCave() 
 	if ( AccessMinishWoods()==1 and has("mitts") and has("cape") ) then
 		return 1
+	elseif ( AccessMinishWoods()==2 and has("mitts") and has("cape") ) then
+		return 2
 	else
 		return 0
 	end 
@@ -33,6 +41,8 @@ end
 function AccessMinishWoods()
 	if ( CanDestroyTrees()==1 or has("ocarina") ) then
 		return 1
+	elseif ( CanDestroyTrees()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -41,6 +51,8 @@ end
 function AccessNorthMinish() 
 	if ( AccessMinishWoods()==1 and ( has("flippers") or has("cape") or LonLonSouthShortcut()==1 or ( AccessLonLon()==1 and has("cane") ) ) ) then
 		return 1
+	elseif ( ( AccessMinishWoods()==1 or AccessMinishWoods()==2 ) and ( has("flippers") or has("cape") or LonLonSouthShortcut()==1 or ( ( AccessLonLon()==1 or AccessLonLon()==2) and has("cane") ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -49,22 +61,18 @@ end
 function AccessBelari() 
 	if ( ( AccessMinishWoods()==1 and ( OverworldBlocks()==1 or CompleteDeepwood()==1 ) ) or MinishWindCrest()==1 ) then
 		return 1
+	elseif ( ( AccessMinishWoods()==2 and ( OverworldBlocks()==1 or CompleteDeepwood()==1 ) ) ) then
+		return 2
 	else
 		return 0
 	end 
 end
 
 function AccessTrilby() 
-	if ( AccessWestern_Settings()==1 or WesternShortcut()==1 or has("flippers") or has("cape") or ( HasSword()==1 and HasSpin()==1 ) or GuardSkip()==1 or ( CrenelWindCrest()==1 and ( UpperBean()==1 or has("grip") ) )  ) then
+	if ( WesternShortcut()==1 or has("flippers") or has("cape") or ( HasSword()==1 and HasSpin()==1 ) or GuardSkip()==1 or ( CrenelWindCrest()==1 and ( UpperBean()==1 or has("grip") ) ) or ( SwampWindCrest()==1 and ( HasBow()==1 or has("boots") or has("cape") ) ) ) then
 		return 1
-	else
-		return 0
-	end 
-end
-
-function AccessWestern_Settings() 
-	if ( WesternShortcut()==1 or ( SwampWindCrest()==1 and ( HasBow()==1 or has("boots") or has("cape") ) ) ) then
-		return 1
+	elseif ( GuardSkip()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -81,6 +89,8 @@ end
 function AccessCrenel() 
 	if ( ( AccessTrilby()==1 and LowerBean()==1 and ( has("grip") or ( ( BombWalls()==1 or has("cape") ) and CrenelDust()==1 and ( UpperBean()==1 or ( BombWalls()==1 and OverworldBlocks()==1 ) ) ) ) ) or CrenelWindCrest()==1 ) then
 		return 1
+	elseif ( ( ( AccessTrilby()==1 or AccessTrilby()==2 ) and LowerBean()==1 and ( has("grip") or ( ( BombWalls()==1 or has("cape") ) and ( CrenelDust()==1 or CrenelDust()==2 ) and ( UpperBean()==1 or ( BombWalls()==1 and OverworldBlocks()==1 ) ) ) ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -88,6 +98,8 @@ end
 function AccessMelari() 
 	if ( CrenelWindCrest()==1 or ( AccessCrenel()==1 and ( ( has("cane") and ( has("grip") or CrenelMushroom()==1 ) ) or ( has("grip") and ( has("cape") or LightArrowBreak()==1 or has("gust") ) and CrenelSwitch()==1 ) ) ) )	then
 		return 1
+	elseif ( ( ( AccessCrenel()==1 or AccessCrenel()==2 ) and ( ( has("cane") and ( has("grip") or ( CrenelMushroom()==1 or CrenelMushroom()==2 ) ) ) or ( has("grip") and ( has("cape") or ( LightArrowBreak()==1 or LightArrowBreak()==2 ) or has("gust") ) and ( CrenelSwitch()==1 or CrenelSwitch()==2 ) ) ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -116,6 +128,8 @@ end
 function AccessValley() 
 	if ( CanSplit3()==1 or CanSplit4()==1 ) and ( OverworldBlocks()==1 or CapeExtension()==1 )	then
 		return 1
+	elseif ( CanSplit3()==1 or CanSplit4()==1 ) and CapeExtension()==2 	then
+		return 2
 	else
 		return 0
 	end 
@@ -123,6 +137,8 @@ end
 function AccessCrypt() 
 	if ( AccessValley()==1 and DarkRooms()==1 and Graveyard()==1 and CryptEntrance()==1 )	then
 		return 1
+	elseif ( ( AccessValley()==1 or AccessValley()==2 ) and ( DarkRooms()==1 or DarkRooms()==2 ) and Graveyard()==1 and CryptEntrance()==1 )	then
+		return 2
 	else
 		return 0
 	end 
@@ -131,22 +147,28 @@ end
 function AccessFalls()
 	if ( ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and has("grip") ) or FallsWindCrest()==1 or ( has("grip") and ( CloudWindCrest()==1 or ( StrangerFusion()==1 and CompletedGolds()==1 ) ) ) ) then
 		return 1
+	elseif ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==2 and has("grip") ) then
+		return 2
 	else
 		return 0
 	end 
 end
 
 function AccessClouds()
-	if ( ( AccessFalls()==1 and has("grip") ) or CloudWindCrest()==1 or ( StrangerFusion()==1 and CompletedGolds()==1 ) )then
+	if ( AccessFalls()==1 and has("grip") ) or CloudWindCrest()==1 or ( StrangerFusion()==1 and CompletedGolds()==1 ) then
 		return 1
+	elseif AccessFalls()==2 and has("grip") then
+		return 2
 	else
 		return 0
 	end 
 end
 
 function AccessWindTribe() 
-	if ( ( StrangerFusion()==1 and CompletedGolds()==1 ) or ( AccessClouds()==1 and CloudFusions()==1 ) or CloudWindCrest()==1 ) then
+	if  ( StrangerFusion()==1 and CompletedGolds()==1 ) or ( AccessClouds()==1 and CloudFusions()==1 ) or CloudWindCrest()==1  then
 		return 1
+	elseif ( AccessClouds()==2 and CloudFusions()==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -155,6 +177,8 @@ end
 function AccessDeepwood()
 	if AccessMinishWoods()==1 and Festari()==1 then
 		return 1
+	elseif AccessMinishWoods()==2 and Festari()==1 then
+		return 2
 	else
 		return 0
 	end 
@@ -162,6 +186,8 @@ end
 function AccessCoF()
 	if AccessMelari()==1 then
 		return 1
+	elseif AccessMelari()==2 then
+		return 2
 	else
 		return 0
 	end 
@@ -169,6 +195,8 @@ end
 function CoFBasementAccess()
 	if ( CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 ) ) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 ) ) then
 		return 1
+	elseif ( CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 or Bobombs()==2 ) and ( CoFSpikeBeetle()==1 or CoFSpikeBeetle()==2 )  and ( CoF1stDoor()==1 or CoF1stDoor()==2 ) and HasSword()==1 ) ) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -183,6 +211,8 @@ end
 function AccessDroplets()
 	if ( AccessLonLon()==1 and CapeExtension()==1 ) then
 		return 1
+	elseif ( (AccessLonLon()==1 or AccessLonLon()==2) and (CapeExtension()==1 or CapeExtension()==2 ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -190,13 +220,8 @@ end
 function AccessPalace()
 	if ( AccessWindTribe()==1 ) then
 		return 1
-	else
-		return 0
-	end 
-end
-function PoW2ndHalf()
-	if ( PowDungeons()==1 and has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1 ) then
-		return 1
+	elseif ( AccessWindTribe()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -206,6 +231,10 @@ function AccessDHC()
 		return 1
 	elseif ( ( DhcDungeons()==1 and has("dhc_closed") or has("dhc_ped") ) and CompletePed()==1 ) then
 		return 1
+	elseif ( DhcDungeons()==2 and has("dhc_open") ) then
+		return 2
+	elseif ( ( DhcDungeons()==2 and has("dhc_closed") or has("dhc_ped") ) and CompletePed()==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -213,6 +242,8 @@ end
 function DHCBlackKnight()
 	if ( DHCBlackKnightFight()==1 and ( DHCBlueWarp()==1 or ( DHCRedWarp()==1 and DHCChainSoldiers()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 ) or ( DHC1stDoor()==1 and DHC2ndCanon()==1 and BombWalls()==1 and DHCThrone()==1 and CanSplit4()==1 and DHCOutsideSwitch()==1 and DHCSwitchPuzzles()==1 and DHCChainSoldiers()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 ) ) ) then
 		return 1
+	elseif ( ( DHCBlackKnightFight()==1 or DHCBlackKnightFight()==2 ) and ( DHCBlueWarp()==1 or ( DHCRedWarp()==1 and ( DHCChainSoldiers()==1 or DHCChainSoldiers()==2 ) and DHCGrateRoom()==1 and OverworldBlocks()==1 ) or ( ( DHC1stDoor()==1 or DHC1stDoor()==2 ) and DHC2ndCanon()==1 and BombWalls()==1 and ( DHCThrone()==1 or DHCThrone()==2 ) and CanSplit4()==1 and DHCOutsideSwitch()==1 and ( DHCSwitchPuzzles()==1 or DHCSwitchPuzzles()==2 ) and DHCChainSoldiers()==1 and DHCGrateRoom()==1 and OverworldBlocks()==1 ) ) ) then
+		return 2
 	else
 		return 0
 	end 
