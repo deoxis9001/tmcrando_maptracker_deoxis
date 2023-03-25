@@ -12,13 +12,13 @@
 	  {
 		"name":"Fuzer Gale",
 		"hosted_item":"fusions13",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"visibility_rules":["$CloudTopFallVisibility,fusionred_vanilla"],
 		"access_rules":["$Json_Clouds_Fuzer_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Hailey",
 		"hosted_item":"fusions4a",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["$CloudTopFallVisibility,fusiongreen_vanilla"],
 		"access_rules":["$Json_Clouds_Fuzer_Fuzer2"],
 	  },
 	]
@@ -29,7 +29,8 @@
 	  {
 		"map":"map",
 		"x":3150,
-		"y":1110
+		"y":1110,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -49,7 +50,7 @@
 		"map":"map",
 		"x":2670,
 		"y":730,
-		"restrict_visibility_rules":["digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,digging_on"]
 	  }
 	],
 	"sections":[
@@ -69,7 +70,7 @@
 		"map":"map",
 		"x":3300,
 		"y":175,
-		"restrict_visibility_rules":["digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,digging_on"]
 	  }
 	],
 	"sections":[
@@ -88,7 +89,8 @@
 	  {
 		"map":"map",
 		"x":2730,
-		"y":150
+		"y":150,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -116,7 +118,7 @@
 		"map":"map",
 		"x":3300,
 		"y":730,
-		"restrict_visibility_rules":["digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,digging_on"]
 	  }
 	],
 	"sections":[
@@ -136,7 +138,7 @@
 		"map":"map",
 		"x":3300,
 		"y":600,
-		"restrict_visibility_rules":["digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,digging_on"]
 	  }
 	],
 	"sections":[
@@ -156,7 +158,7 @@
 		"map":"map",
 		"x":3150,
 		"y":730,
-		"restrict_visibility_rules":["digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,digging_on"]
 	  }
 	],
 	"sections":[
@@ -176,7 +178,7 @@
 		"map":"map",
 		"x":2920,
 		"y":550,
-		"restrict_visibility_rules":["digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,digging_on"]
 	  }
 	],
 	"sections":[
@@ -195,7 +197,8 @@
 	  {
 		"map":"map",
 		"x":2970,
-		"y":840
+		"y":840,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -214,7 +217,8 @@
 	  {
 		"map":"map",
 		"x":3010,
-		"y":1270
+		"y":1270,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -233,7 +237,8 @@
 	  {
 		"map":"map",
 		"x":3290,
-		"y":450
+		"y":450,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -252,7 +257,8 @@
 	  {
 		"map":"map",
 		"x":2700,
-		"y":830
+		"y":830,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -271,7 +277,8 @@
 	  {
 		"map":"map",
 		"x":2710,
-		"y":260
+		"y":260,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -290,7 +297,8 @@
 	  {
 		"map":"map",
 		"x":3275,
-		"y":850
+		"y":850,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -309,7 +317,8 @@
 	  {
 		"map":"map",
 		"x":2303,
-		"y":350
+		"y":350,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  },
 	  {
 		"map":"map",
@@ -343,6 +352,7 @@
 	  {
 		"name":"2F Gregal's Gift",
 		"item_count":1,
+		"visibility_rules":["$CloudTopFallVisibility"],
 		"access_rules":["$Json_WindTribe_WindTribeHouse_2FGregalGift"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -350,6 +360,7 @@
 	  {
 		"name":"3F Chests",
 		"item_count":3,
+		"visibility_rules":["$CloudTopFallVisibility"],
 		"access_rules":["$Json_WindTribe_WindTribeHouse_3FChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -357,6 +368,7 @@
 	  {
 		"name":"4F Chests",
 		"item_count":2,
+		"visibility_rules":["$CloudTopFallVisibility"],
 		"access_rules":["$Json_WindTribe_WindTribeHouse_4FChests"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -364,43 +376,43 @@
 	  {
 		"name":"Fuzer Flurris 1",
 		"hosted_item":"fusions49",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer1"],
 	  },
 	  {
 		"name":"Fuzer Flurris 2",
 		"hosted_item":"fusions48",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer2"],
 	  },
 	  {
 		"name":"Fuzer Caprice",
 		"hosted_item":"fusions61",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer3"],
 	  },
 	  {
 		"name":"Fuzer Gale",
 		"hosted_item":"fusions13",
-		"visibility_rules":["fusionred_vanilla,openworld_off"],
+		"visibility_rules":["fusionred_vanilla"],
 		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer4"],
 	  },
 	  {
 		"name":"Fuzer Hailey",
 		"hosted_item":"fusions4a",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer5"],
 	  },
 	  {
 		"name":"Fuzer Siroc 1",
 		"hosted_item":"fusions5c",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer6"],
 	  },
 	  {
 		"name":"Fuzer Siroc 2",
 		"hosted_item":"fusions5d",
-		"visibility_rules":["fusiongreen_vanilla,openworld_off"],
+		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer7"],
 	  }
 	]
@@ -411,7 +423,8 @@
 	  {
 		"map":"map",
 		"x":2730,
-		"y":680
+		"y":680,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -430,7 +443,8 @@
 	  {
 		"map":"map",
 		"x":2855,
-		"y":1270
+		"y":1270,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -449,7 +463,8 @@
 	  {
 		"map":"map",
 		"x":3275,
-		"y":1270
+		"y":1270,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -468,7 +483,8 @@
 	  {
 		"map":"map",
 		"x":2845,
-		"y":575
+		"y":575,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -487,7 +503,8 @@
 	  {
 		"map":"map",
 		"x":3000,
-		"y":575
+		"y":575,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[

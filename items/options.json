@@ -1,7 +1,7 @@
 [
   //DHC requirement
   {
-    "name":"DHC",
+    "name":"Dark Hyrule Castle is the last dungeon in the game, it has the final boss Vaati.",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":0,
@@ -15,7 +15,7 @@
       },
       {
         "img":"images/options/dhc_requirements/dhc_fast.png",
-        "codes":"dhc_none",
+        "codes":"dhc_ped",
         "inherit_codes":false
       },
       {
@@ -25,90 +25,8 @@
       },
     ]
   },
-  {
-    "name":"Elements Needed",
-    "type":"progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-	  {
-        "img":"images/options/dhc_requirements/element4.png",
-        "inherit_codes":false,
-        "codes":"element4Needed"
-      },
-      {
-        "img":"images/options/dhc_requirements/element3.png",
-        "inherit_codes":false,
-        "codes":"element3Needed"
-      },
-      {
-        "img":"images/options/dhc_requirements/element2.png",
-        "inherit_codes":false,
-        "codes":"element2Needed"
-      },
-      {
-        "img":"images/options/dhc_requirements/element1.png",
-        "inherit_codes":false,
-        "codes":"element1Needed"
-      },
-      {
-        "img":"images/options/dhc_requirements/element0.png",
-        "inherit_codes":false,
-        "codes":"element0Needed"
-      },
-    ]
-  },
-  {
-    "name":"Swords Needed",
-    "type":"progressive",
-    "loop": true,
-	"initial_stage_idx":5,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img": "images/options/dhc_requirements/sword0.png",
-        "inherit_codes": false,
-        "codes": "sword0Needed"
-      },
-      {
-        "img": "images/options/dhc_requirements/sword1.png",
-        "inherit_codes": false,
-        "codes": "sword1Needed"
-      },
-      {
-        "img": "images/options/dhc_requirements/sword2.png",
-        "inherit_codes": false,
-        "codes": "sword2Needed"
-      },
-      {
-        "img": "images/options/dhc_requirements/sword3.png",
-        "inherit_codes": false,
-        "codes": "sword3Needed"
-      },
-      {
-        "img": "images/options/dhc_requirements/sword4.png",
-        "inherit_codes": false,
-        "codes": "sword4Needed"
-      },
-      {
-        "img": "images/options/dhc_requirements/sword5.png",
-        "inherit_codes": false,
-        "codes": "sword5Needed"
-      },
-    ]
-  },
-  {
-   "name":"Figurine",
-   "type": "consumable",
-   "img": "images/options/dhc_requirements/figurine.png",
-   "codes": "figurine_option",
-   "min_quantity":0,
-   "initial_quantity": 0,
-   "max_quantity":136,
- },  
  {
-    "name":"Dungeons",
+    "name":"The number of dungeons that have to be beaten to activate the Sanctuary. There are 6 dungeons in the game that count:\n Deepwood Shrine\n Cave of Flames\n Fortress of Winds\n Temple of Droplets\n Royal Crypt\n Palace of Winds",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -152,1082 +70,89 @@
     ]
   },
   {
-    "name":"Blow Dust",
-    "type": "progressive",
+    "name":"The level of sword that needs to be collected to activate the Sanctuary",
+    "type":"progressive",
     "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
+	"initial_stage_idx":5,
+    "allow_disabled":false,
+    "stages":[
       {
-        "img":"images/options/logic_settings/blow_dust_off.png",
-        "codes": "blowdust_off",
-        "inherit_codes":false
+        "img": "images/options/dhc_requirements/sword0.png",
+        "inherit_codes": false,
+        "codes": "sword0Needed"
       },
       {
-        "img": "images/options/logic_settings/blow_dust_on.png",
-        "codes": "blowdust_on",
-        "inherit_codes":false
+        "img": "images/options/dhc_requirements/sword1.png",
+        "inherit_codes": false,
+        "codes": "sword1Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword2.png",
+        "inherit_codes": false,
+        "codes": "sword2Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword3.png",
+        "inherit_codes": false,
+        "codes": "sword3Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword4.png",
+        "inherit_codes": false,
+        "codes": "sword4Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword5.png",
+        "inherit_codes": false,
+        "codes": "sword5Needed"
       },
     ]
   },
   {
-    "name":"Crenel Mushroom",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/crenel_mushroom_off.png",
-        "codes": "crenelmushroom_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/crenel_mushroom_on.png",
-        "codes": "crenelmushroom_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Light Arrow Break",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/light_arrow_break_off.png",
-        "codes": "lightarrowbreak_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/light_arrow_break_on.png",
-        "codes": "lightarrowbreak_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Bobombs",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/logic_settings/bobombs_off.png",
-        "codes": "bobombs_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/logic_settings/bobombs_on.png",
-        "codes": "bobombs_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Like Like",
-    "type": "progressive",
+    "name":"The number of Elements that need to be collected to activate the Sanctuary",
+    "type":"progressive",
     "loop": true,
 	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/logic_settings/like_like_off.png",
-        "codes": "likelike_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/logic_settings/like_like_on.png",
-        "codes": "likelike_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Guard Skip",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/logic_settings/guard_skip_off.png",
-        "codes": "guardskip_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/logic_settings/guard_skip_on.png",
-        "codes": "guardskip_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Crenel Beam",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/logic_settings/crenel_beam_off.png",
-        "codes": "crenelbeam_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/logic_settings/crenel_beam_on.png",
-        "codes": "crenelbeam_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Down Strike Beetle",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/down_strike_beetle_off.png",
-        "codes": "downstrikebeetle_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/down_strike_beetle_on.png",
-        "codes": "downstrikebeetle_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Dark rooms",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/dark_rooms_off.png",
-        "codes": "darkrooms_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/dark_rooms_on.png",
-        "codes": "darkrooms_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Cape Extension",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/cape_extension_off.png",
-        "codes": "capeextension_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/cape_extension_on.png",
-        "codes": "capeextension_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Lake Minish",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/logic_settings/lake_minish_off.png",
-        "codes": "lakeminish_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/logic_settings/lake_minish_on.png",
-        "codes": "lakeminish_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Cabin Swim",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/cabin_swim_off.png",
-        "codes": "cabinswim_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/cabin_swim_on.png",
-        "codes": "cabinswim_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Clouds Kill",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/clouds_kill_off.png",
-        "codes": "cloudskill_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/clouds_kill_on.png",
-        "codes": "cloudskill_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"FoW Pot",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/fow_pot_off.png",
-        "codes": "fowpot_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/fow_pot_on.png",
-        "codes": "fowpot_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"PoW Jump",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/logic_settings/pow_jump_off.png",
-        "codes": "powjump_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/logic_settings/pow_jump_on.png",
-        "codes": "powjump_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"PoW Pot Puzzle OOL",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/pow_pot_puzzle_ool_off.png",
-        "codes": "powpotpuzzleool_off",
-        "inherit_codes":false
-      },
+    "allow_disabled":false,
+    "stages":[
 	  {
-        "img": "images/options/logic_settings/pow_pot_puzzle_ool_on.png",
-        "codes": "powpotpuzzleool_on",
-        "inherit_codes":false
-      }
-
-    ]
-  },
-  {
-    "name":"DHC Canon Hit",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-	  {
-        "img":"images/options/logic_settings/dhc_canon_hit_off.png",
-        "codes": "dhccanonhit_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/dhc_canon_hit_on.png",
-        "codes": "dhccanonhit_on",
-        "inherit_codes":false
-      }
-
-    ]
-  },
-  {
-    "name":"DHC Blade Puzzle Shuffle",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/dhc_blade_puzzle_shuffle_off.png",
-        "codes": "dhcbladepuzzleshuffle_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/dhc_blade_puzzle_shuffle_on.png",
-        "codes": "dhcbladepuzzleshuffle_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"DHC Switch Hit",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic_settings/dhc_switch_hit_off.png",
-        "codes": "dhcswitchhit_off",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic_settings/dhc_switch_hit_on.png",
-        "codes": "dhcswitchhit_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"rupeemania",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":1,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/locations_settings/rupees_off.png",
-        "codes":"rupees_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/locations_settings/rupees_on.png",
-        "codes":"rupees_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Special Pots",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":1,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/locations_settings/special_pot_off.png",
-        "codes":"specialpot_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/locations_settings/special_pot_on.png",
-        "codes":"specialpot_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Dig spots",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":1,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/locations_settings/digging_off.png",
-        "codes":"digging_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/locations_settings/digging_on.png",
-        "codes":"digging_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Underwater spots",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":1,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/locations_settings/under_water_off.png",
-        "codes":"underwater_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/locations_settings/under_water_on.png",
-        "codes":"underwater_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Golden Enemies",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/locations_settings/golden_enemy_off.png",
-        "codes":"golden_enemy_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/locations_settings/golden_enemy_on.png",
-        "codes":"golden_enemy_on",
-        "inherit_codes":false
-      }
-    ],
-  },
-  {
-    "name":"Sanctuary Pedestal",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/dhc_requirements/ped_items_off.png",
-        "codes":"ped_items_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/dhc_requirements/ped_items_on.png",
-        "codes":"ped_items_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Open_Word",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/world_settings/settings/open_world_off.png",
-        "codes":"openworld_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/settings/open_world_on.png",
-        "codes":"openworld_on",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Fusion Gold",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":1,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/fusions_settings/gold_removed.png",
-        "codes":"fusiongold_removed",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/fusions_settings/gold_vanilla.png",
-        "codes":"fusiongold_vanilla",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/fusions_settings/gold_complet.png",
-        "codes":"fusiongold_complet",
-        "inherit_codes":false
-      },
-    ]
-  }, 
-  {
-    "name":"Fusion red",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":2,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/fusions_settings/red_removed.png",
-        "codes":"fusionred_removed",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/fusions_settings/red_vanilla.png",
-        "codes":"fusionred_vanilla",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/fusions_settings/red_complet.png",
-        "codes":"fusionred_complet",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Fusion Blue",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":2,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/fusions_settings/blue_removed.png",
-        "codes":"fusionblue_removed",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/fusions_settings/blue_vanilla.png",
-        "codes":"fusionblue_vanilla",
+        "img":"images/options/dhc_requirements/element4.png",
         "inherit_codes":false,
-      },
-	  {
-        "img":"images/options/fusions_settings/blue_complet.png",
-        "codes":"fusionblue_complet",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Fusion Green",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":2,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/fusions_settings/green_removed.png",
-        "codes":"fusiongreen_removed",
-        "inherit_codes":false
+        "codes":"element4Needed"
       },
       {
-        "img":"images/options/fusions_settings/green_vanilla.png",
-        "codes":"fusiongreen_vanilla",
-        "inherit_codes":false
+        "img":"images/options/dhc_requirements/element3.png",
+        "inherit_codes":false,
+        "codes":"element3Needed"
       },
       {
-        "img":"images/options/fusions_settings/green_complet.png",
-        "codes":"fusiongreen_complet",
-        "inherit_codes":false
+        "img":"images/options/dhc_requirements/element2.png",
+        "inherit_codes":false,
+        "codes":"element2Needed"
+      },
+      {
+        "img":"images/options/dhc_requirements/element1.png",
+        "inherit_codes":false,
+        "codes":"element1Needed"
+      },
+      {
+        "img":"images/options/dhc_requirements/element0.png",
+        "inherit_codes":false,
+        "codes":"element0Needed"
       },
     ]
   },
   {
-    "name":"Crenel Wind Crest",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/world_settings/wind_crest_settings/crenel_no.png",
-        "codes":"crenelwindcrest_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/wind_crest_settings/crenel_yes.png",
-        "codes":"crenelwindcrest_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Falls Wind Crest",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/world_settings/wind_crest_settings/falls_no.png",
-        "codes":"fallswindcrest_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/wind_crest_settings/falls_yes.png",
-        "codes":"fallswindcrest_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Cloud Wind Crest",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/world_settings/wind_crest_settings/cloud_no.png",
-        "codes":"cloudwindcrest_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/wind_crest_settings/cloud_yes.png",
-        "codes":"cloudwindcrest_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Swamp Wind Crest",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/world_settings/wind_crest_settings/swamp_no.png",
-        "codes":"swampwindcrest_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/wind_crest_settings/swamp_yes.png",
-        "codes":"swampwindcrest_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"ShF Wind Crest",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/world_settings/wind_crest_settings/shf_no.png",
-        "codes":"shfwindcrest_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/wind_crest_settings/shf_yes.png",
-        "codes":"shfwindcrest_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Minish Wind Crest",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/options/world_settings/wind_crest_settings/minish_no.png",
-        "codes":"minishwindcrest_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/wind_crest_settings/minish_yes.png",
-        "codes":"minishwindcrest_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
-    "name":"Dungeons Deepwoods",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/items/dungeons/dws_none.png",
-        "codes":"dws_none",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/dws_dws.png",
-        "codes":"dws_dws",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/dws_cof.png",
-        "codes":"dws_cof",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/dws_fow.png",
-        "codes":"dws_fow",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/dws_tod.png",
-        "codes":"dws_tod",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/dws_crypt.png",
-        "codes":"dws_crypt",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/dws_pow.png",
-        "codes":"dws_pow",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Dungeons Cave Of Flame",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/items/dungeons/cof_none.png",
-        "codes":"cof_none",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/cof_dws.png",
-        "codes":"cof_dws",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/cof_cof.png",
-        "codes":"cof_cof",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/cof_fow.png",
-        "codes":"cof_fow",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/cof_tod.png",
-        "codes":"cof_tod",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/cof_crypt.png",
-        "codes":"cof_crypt",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/cof_pow.png",
-        "codes":"cof_pow",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Dungeons Fortress",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/items/dungeons/fow_none.png",
-        "codes":"fow_none",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/fow_dws.png",
-        "codes":"fow_dws",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/fow_cof.png",
-        "codes":"fow_cof",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/fow_fow.png",
-        "codes":"fow_fow",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/fow_tod.png",
-        "codes":"fow_tod",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/fow_crypt.png",
-        "codes":"fow_crypt",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/fow_pow.png",
-        "codes":"fow_pow",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Dungeons Droplet",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/items/dungeons/tod_none.png",
-        "codes":"tod_none",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/tod_dws.png",
-        "codes":"tod_dws",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/tod_cof.png",
-        "codes":"tod_cof",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/tod_fow.png",
-        "codes":"tod_fow",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/tod_tod.png",
-        "codes":"tod_tod",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/tod_crypt.png",
-        "codes":"tod_crypt",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/tod_pow.png",
-        "codes":"tod_pow",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Dungeons Crypt",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/items/dungeons/crypt_none.png",
-        "codes":"crypt_none",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/crypt_dws.png",
-        "codes":"crypt_dws",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/crypt_cof.png",
-        "codes":"crypt_cof",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/crypt_fow.png",
-        "codes":"crypt_fow",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/crypt_tod.png",
-        "codes":"crypt_tod",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/crypt_crypt.png",
-        "codes":"crypt_crypt",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/crypt_pow.png",
-        "codes":"crypt_pow",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Dungeons Palace",
-    "type":"progressive",
-    "loop":true,
-	"initial_stage_idx":0,
-    "allow_disabled":false,
-    "stages":[
-      {
-        "img":"images/items/dungeons/pow_none.png",
-        "codes":"pow_none",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/pow_dws.png",
-        "codes":"pow_dws",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/pow_cof.png",
-        "codes":"pow_cof",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/pow_fow.png",
-        "codes":"pow_fow",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/pow_tod.png",
-        "codes":"pow_tod",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/pow_crypt.png",
-        "codes":"pow_crypt",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/items/dungeons/pow_pow.png",
-        "codes":"pow_pow",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Dungeons Entrance",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/world_settings/settings/dungeons_er_off.png",
-        "codes": "dungeonser_off",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/settings/dungeons_er_on.png",
-        "codes": "dungeonser_on",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Weapons Bow",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/weapons_settings/bow_no.png",
-        "codes": "weaponsbow_no",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/weapons_settings/bow_yes.png",
-        "codes": "weaponsbow_yes",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/weapons_settings/bow_boss.png",
-        "codes": "weaponsbow_boss",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Weapons Gust",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/weapons_settings/gust_no.png",
-        "codes": "weaponsgust_no",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/weapons_settings/gust_yes.png",
-        "codes": "weaponsgust_yes",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Weapons Bombs",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/weapons_settings/bombs_no.png",
-        "codes": "weaponsbombs_no",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/weapons_settings/bombs_yes.png",
-        "codes": "weaponsbombs_yes",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/weapons_settings/bombs_boss.png",
-        "codes": "weaponsbombs_yes,weaponsbombs_boss",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Weapons Lamp",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/weapons_settings/lamp_no.png",
-        "codes": "weaponslamp_no",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/weapons_settings/lamp_yes.png",
-        "codes": "weaponslamp_yes",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Cucco setting",
+   "name":"The total number of Figurines that get added to the item pool, the maximum amount is 136.",
+   "type": "consumable",
+   "img": "images/options/dhc_requirements/figurine.png",
+   "codes": "figurine_option",
+   "min_quantity":0,
+   "initial_quantity": 0,
+   "max_quantity":136,
+ },
+ {
+    "name":"How many rounds of the Cucco Minigame are playable and have an item.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":1,
@@ -1281,7 +206,7 @@
     ]
   },
   {
-    "name":"Goron Shop Settings",
+    "name":"How many sets of Goron Merchant items are included in the random item pool.\nEach set consists of 3 items, and all 3 must be bought to advance to the next set.\nThere are 5 sets in total.\nThe remaining sets will be filled with junk items.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -1315,50 +240,730 @@
     ]
   },
   {
-    "name":"Goron Shop Price",
+    "name":" If enabled will shuffle Heart Pieces and Heart Containers into the pool, otherwise Heart Pieces and Containers will always be found in their vanilla location. This makes any items randomized to Heart Piece locations visible prior to collecting them. ",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/locations_settings/hp_shuffle.png",
+        "codes":"hp_shuffle",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/locations_settings/hp_vanilla.png",
+        "codes":"hp_vanilla",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"If enabled will shuffle any free standing Rupees normally found in the world that are one off collectable, this adds a lot of extra money in the pool and certain locations will be very item dense.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":1,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/locations_settings/rupees_off.png",
+        "codes":"rupees_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/locations_settings/rupees_on.png",
+        "codes":"rupees_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"If enabled will shuffle items found is special pots around the world that contain one off collectables. This setting does not affect the LonLonRanch Key Item which will always shuffled, however if this setting is off then the pot in the ranch will always contain junk.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":1,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/locations_settings/special_pot_off.png",
+        "codes":"specialpot_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/locations_settings/special_pot_on.png",
+        "codes":"specialpot_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"If enabled will shuffle items found at special digging locations around the world that are one off collectables, Use the mitts on a patch of ground to dig up an item.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":1,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/locations_settings/digging_off.png",
+        "codes":"digging_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/locations_settings/digging_on.png",
+        "codes":"digging_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"If enabled will shuffle items found when swimming underwater at special locations (Mostly near waterfalls).\n The Locations that normally contain a Heart Piece found underwater in the lake and the Small Key found underwater in Temple of Droplets will always be junk if this setting is disabled, unless Hearts are not shuffled or Small Keys are set to Vanilla respectively.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":1,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/locations_settings/under_water_off.png",
+        "codes":"underwater_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/locations_settings/under_water_on.png",
+        "codes":"underwater_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"If enabled will shuffle items dropped by Golden Enemies once then are defeated. There are 3 kinds of Golden Enemy: \"Golden Octo\", \"Golden Tektite\" and \"Golden Rope\".\n These Enemies are spawned by completing certain Kinstone Fusions in the game, if you remove certain kinstone colors then those enemies made innaccessible will not have items.\n These enemies have a lot of health but are not invulnerable, Keep hitting them",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/locations_settings/golden_enemy_off.png",
+        "codes":"golden_enemy_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/locations_settings/golden_enemy_on.png",
+        "codes":"golden_enemy_on",
+        "inherit_codes":false
+      }
+    ],
+  },
+  {
+    "name":"This setting is force disabled when playing on any DHC setting other than 'Always Open'.\n If enabled will shuffle 3 items onto the pedestal found in the Sanctuary, these can be collected when the pedestal is visited with 2 elements, 3 elements and 4 elements respectively.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/dhc_requirements/ped_items_off.png",
+        "codes":"ped_items_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_requirements/ped_items_on.png",
+        "codes":"ped_items_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Opens every obstacle in the game: Every tree, block, bomb wall, boulder, non key door, vine, switch, lever, barricade, bridge.\n\n The World is open from the start. Does not affect Key Doors, Fusions, Wind Crests and Dungeon Warps.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world_settings/settings/open_world_off.png",
+        "codes":"openworld_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/open_world_on.png",
+        "codes":"openworld_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"The 6 Dungeons that can hold elements may have their entrances shuffled. These are always coupled entrance swaps which means when you leave a shuffled dungeon you will always go back to the place you originally came from.\n Dark Hyrule Castle is not currently shuffled.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/locations_settings/goron_eu.png",
-        "codes": "goron_eu",
+        "img": "images/options/world_settings/settings/dungeons_er_off.png",
+        "codes": "dungeonser_off",
         "inherit_codes":false
       },
       {
-        "img":"images/options/locations_settings/goron_jp.png",
-        "codes": "goron_jp",
+        "img":"images/options/world_settings/settings/dungeons_er_on.png",
+        "codes": "dungeonser_on",
         "inherit_codes":false
-      }
+      },
     ]
-  },
-  {
-    "name":"Grab items from a distance",
-    "type": "progressive",
-    "loop": true,
+  },{
+    "name":"Dungeons Entrance\n Deepwoods\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
+    "type":"progressive",
+    "loop":true,
 	"initial_stage_idx":0,
-    "allow_disabled": false,
-    "stages": [
+    "allow_disabled":false,
+    "stages":[
       {
-        "img": "images/options/logic_settings/grabbable_none.png",
-        "codes": "grabbable_none",
+        "img":"images/items/dungeons/dws_none.png",
+        "codes":"dws_none",
         "inherit_codes":false
       },
       {
-        "img":"images/options/logic_settings/grabbable_easy.png",
-        "codes": "grabbableeasy",
+        "img":"images/items/dungeons/dws_dws.png",
+        "codes":"dws_dws",
         "inherit_codes":false
       },
       {
-        "img":"images/options/logic_settings/grabbable_hard.png",
-        "codes": "grabbable_hard",
+        "img":"images/items/dungeons/dws_cof.png",
+        "codes":"dws_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dws_fow.png",
+        "codes":"dws_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dws_tod.png",
+        "codes":"dws_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dws_crypt.png",
+        "codes":"dws_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dws_pow.png",
+        "codes":"dws_pow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dws_dhc.png",
+        "codes":"dws_dhc",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+	"name":"Dungeons Entrance\n Cave Of Flame\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/dungeons/cof_none.png",
+        "codes":"cof_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/cof_dws.png",
+        "codes":"cof_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/cof_cof.png",
+        "codes":"cof_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/cof_fow.png",
+        "codes":"cof_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/cof_tod.png",
+        "codes":"cof_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/cof_crypt.png",
+        "codes":"cof_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/cof_pow.png",
+        "codes":"cof_pow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/cof_dhc.png",
+        "codes":"cof_dhc",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Entrance\n Fortress\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/dungeons/fow_none.png",
+        "codes":"fow_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/fow_dws.png",
+        "codes":"fow_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/fow_cof.png",
+        "codes":"fow_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/fow_fow.png",
+        "codes":"fow_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/fow_tod.png",
+        "codes":"fow_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/fow_crypt.png",
+        "codes":"fow_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/fow_pow.png",
+        "codes":"fow_pow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/fow_dhc.png",
+        "codes":"fow_dhc",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Entrance\n Droplet\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/dungeons/tod_none.png",
+        "codes":"tod_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/tod_dws.png",
+        "codes":"tod_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/tod_cof.png",
+        "codes":"tod_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/tod_fow.png",
+        "codes":"tod_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/tod_tod.png",
+        "codes":"tod_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/tod_crypt.png",
+        "codes":"tod_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/tod_pow.png",
+        "codes":"tod_pow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/tod_dhc.png",
+        "codes":"tod_dhc",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Entrance\n Crypt\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/dungeons/crypt_none.png",
+        "codes":"crypt_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/crypt_dws.png",
+        "codes":"crypt_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/crypt_cof.png",
+        "codes":"crypt_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/crypt_fow.png",
+        "codes":"crypt_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/crypt_tod.png",
+        "codes":"crypt_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/crypt_crypt.png",
+        "codes":"crypt_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/crypt_pow.png",
+        "codes":"crypt_pow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/crypt_dhc.png",
+        "codes":"crypt_dhc",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Entrance\n Palace\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/dungeons/pow_none.png",
+        "codes":"pow_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/pow_dws.png",
+        "codes":"pow_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/pow_cof.png",
+        "codes":"pow_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/pow_fow.png",
+        "codes":"pow_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/pow_tod.png",
+        "codes":"pow_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/pow_crypt.png",
+        "codes":"pow_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/pow_pow.png",
+        "codes":"pow_pow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/pow_dhc.png",
+        "codes":"pow_dhc",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Dungeons Entrance\n Dark Hyrule Castle\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/items/dungeons/dhc_none.png",
+        "codes":"dhc_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_dws.png",
+        "codes":"dhc_dws",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_cof.png",
+        "codes":"dhc_cof",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_fow.png",
+        "codes":"dhc_fow",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_tod.png",
+        "codes":"dhc_tod",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_crypt.png",
+        "codes":"dhc_crypt",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_dhc.png",
+        "codes":"dhc_dhc",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/items/dungeons/dhc_dhc.png",
+        "codes":"dhc_dhc",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Golden Kinstones come in 3 shapes: 5 for Cloud Tops, 3 for Castor Wilds (Swamp), and 1 for Veil Falls (A Crown) for 9 in Total.\n The fusions that require Golden Kinstones lock major areas of the game.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":1,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/fusions_settings/gold_removed.png",
+        "codes":"fusiongold_removed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/fusions_settings/gold_vanilla.png",
+        "codes":"fusiongold_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/fusions_settings/gold_complet.png",
+        "codes":"fusiongold_complet",
+        "inherit_codes":false
+      },
+    ]
+  }, 
+  {
+    "name":"Red Kinstones come in 3 shapes, Fusions can be found everywhere but are mostly from unique individuals.\n There are 24 Fusions in total, There are more Kinstones in the pool than fusions available just to be generous.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":2,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/fusions_settings/red_removed.png",
+        "codes":"fusionred_removed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/fusions_settings/red_vanilla.png",
+        "codes":"fusionred_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/fusions_settings/red_complet.png",
+        "codes":"fusionred_complet",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Blue Kinstones come in 2 shapes, Fusions can be found everywhere but are mostly from Walls or unique individuals.\n There are 18 Fusions in total, There are more Kinstones in the pool than fusions available just to be generous.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":2,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/fusions_settings/blue_removed.png",
+        "codes":"fusionblue_removed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/fusions_settings/blue_vanilla.png",
+        "codes":"fusionblue_vanilla",
+        "inherit_codes":false,
+      },
+	  {
+        "img":"images/options/fusions_settings/blue_complet.png",
+        "codes":"fusionblue_complet",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Green Kinstones come in 3 shapes, Fusions can be found everywhere and a large amount are shared between many people.\n There are 49 Fusions in total, There are more Kinstones in the pool than fusions available just to be generous.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":2,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/fusions_settings/green_removed.png",
+        "codes":"fusiongreen_removed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/fusions_settings/green_vanilla.png",
+        "codes":"fusiongreen_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/fusions_settings/green_complet.png",
+        "codes":"fusiongreen_complet",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"If enabled, will activate the wind crest in Mt Crenel from the start of the game.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world_settings/wind_crest_settings/crenel_no.png",
+        "codes":"crenelwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/wind_crest_settings/crenel_yes.png",
+        "codes":"crenelwindcrest_yes",
         "inherit_codes":false
       }
     ]
   },
   {
-    "name":"D_W_s warp",
+    "name":"If enabled, will activate the wind crest in Veil Falls from the start of the game.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world_settings/wind_crest_settings/falls_no.png",
+        "codes":"fallswindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/wind_crest_settings/falls_yes.png",
+        "codes":"fallswindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, will activate the wind crest in Cloud Tops from the start of the game.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world_settings/wind_crest_settings/cloud_no.png",
+        "codes":"cloudwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/wind_crest_settings/cloud_yes.png",
+        "codes":"cloudwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, will activate the wind crest in Swamp from the start of the game.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world_settings/wind_crest_settings/swamp_no.png",
+        "codes":"swampwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/wind_crest_settings/swamp_yes.png",
+        "codes":"swampwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, will activate the wind crest near Link's House from the start of the game.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world_settings/wind_crest_settings/shf_no.png",
+        "codes":"shfwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/wind_crest_settings/shf_yes.png",
+        "codes":"shfwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, will activate the wind crest in Minish Woods from the start of the game.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world_settings/wind_crest_settings/minish_no.png",
+        "codes":"minishwindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/wind_crest_settings/minish_yes.png",
+        "codes":"minishwindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, will activate the DeepwoodShrine Red Warp or/and Blue Warp from the start of the game.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -1387,7 +992,7 @@
     ]
   },
   {
-    "name":"Co_F warp",
+    "name":"If enabled, will activate the Cave of Flames Red Warp or/and Blue Warp from the start of the game.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -1416,7 +1021,7 @@
     ]
   },
   {
-    "name":"F_O_W warp",
+    "name":"If enabled, will activate the Fortress of Winds Red Warp or/and Blue Warp from the start of the game.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -1445,7 +1050,7 @@
     ]
   },
   {
-    "name":"T_O_d warp",
+    "name":"If enabled, will activate the Temple of Droplets Red Warp or/and Blue Warp from the start of the game.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -1474,7 +1079,7 @@
     ]
   },
   {
-    "name":"P_O_W warp",
+    "name":"If enabled, will activate the Palace of Winds Red Warp from the start of the game.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -1503,7 +1108,7 @@
     ]
   },
   {
-    "name":"DHC warp",
+    "name":"If enabled, will activate the Dark Hyrule Castle Red Warp or/and Blue Warp from the start of the game.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -1527,6 +1132,544 @@
       {
         "img":"images/options/world_settings/warps_settings/dhc_warps_all.png",
         "codes": "dhc_warps_blue,dhc_warps_red",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Items can be collected from a distance with either Gust Jar, Boomerang, or even a Sword Slash.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic_settings/grabbable_none.png",
+        "codes": "grabbable_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/logic_settings/grabbable_easy.png",
+        "codes": "grabbable_easy",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/logic_settings/grabbable_hard.png",
+        "codes": "grabbable_hard",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Bombs can damage nearly every enemy, Bombs are never considered for Simon Simulations, and Golden Enemies.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/weapons_settings/bombs_no.png",
+        "codes": "weaponsbombs_no",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/weapons_settings/bombs_yes.png",
+        "codes": "weaponsbombs_yes",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/weapons_settings/bombs_boss.png",
+        "codes": "weaponsbombs_yes,weaponsbombs_boss",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Bow can damage most enemies, many enemies are very resiliant to damage. Chu Bosses and Darknuts are Immune.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/weapons_settings/bow_no.png",
+        "codes": "weaponsbow_no",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/weapons_settings/bow_yes.png",
+        "codes": "weaponsbow_yes",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/weapons_settings/bow_boss.png",
+        "codes": "weaponsbow_boss",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Gust Jar can suck up various enemies like Ghini(Ghosts) and Beetles (The things that grab onto link). It can also grab objects and fire them like projectiles to kill enemies, some enemies or parts of enemies can be used as projectiles such as Helmasaurs and Stalfos.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/weapons_settings/gust_no.png",
+        "codes": "weaponsgust_no",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/weapons_settings/gust_yes.png",
+        "codes": "weaponsgust_yes",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"The lit Lantern can instantly kill wizrobes by walking through them.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/weapons_settings/lamp_no.png",
+        "codes": "weaponslamp_no",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/weapons_settings/lamp_yes.png",
+        "codes": "weaponslamp_yes",
+        "inherit_codes":false
+      },
+    ]
+  },{
+    "name":"Low Difficulty:\n Dust piles can be found that can be blown away to what is underneath.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/blow_dust_off.png",
+        "codes": "blowdust_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/blow_dust_on.png",
+        "codes": "blowdust_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Low Difficulty:\n Half way up Mt Crenel across the wooden bridge, the mushroom on the ledge above can be grabbed with the Gust Jar to continue climbing up the mountain.\n This only matters when playing with 'OpenWorld' enabled, since reaching this area requires either Bombs or Grip ring.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/crenel_mushroom_off.png",
+        "codes": "crenelmushroom_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/crenel_mushroom_on.png",
+        "codes": "crenelmushroom_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Low Difficulty:\n Fully charged Light Arrow shots can break pots, bushes, and small trees.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/light_arrow_break_off.png",
+        "codes": "lightarrowbreak_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/light_arrow_break_on.png",
+        "codes": "lightarrowbreak_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Low Difficulty:\n Bobombs can be used in 2 rooms in Cave of Flames, when a Bobomb is killed it explodes which can open Bomb Walls.\n Items such as Sword and Gust Jar can easily be used to move the Bobombs near the bomb wall to blow it up.\n Other items like the Boomerang, Shield, Bow, and even thrown pots can be used to make bobombs explode but with much higher difficulty, these will never be required due to it being mostly luck.\n If you killed all the bobombs in a room without blowing up the wall, they will respawn after you do a QUICKWARP.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic_settings/bobombs_off.png",
+        "codes": "bobombs_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/logic_settings/bobombs_on.png",
+        "codes": "bobombs_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Medium Difficulty:\n The LikeLike digging cave in Minish Woods has 2 chests and has several LikeLikes that grab you when you try to open them.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic_settings/like_like_off.png",
+        "codes": "likelike_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/logic_settings/like_like_on.png",
+        "codes": "likelike_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"High Difficulty:\n The Guard found on the West side of Town blocks your path to Trilby Highlands and beyond, unless you have: a Sword+Spin, a Cape, or Flippers.\n It is possible to dash with the boots faster than the guard and then quickly roll past them.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic_settings/guard_skip_off.png",
+        "codes": "guardskip_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/logic_settings/guard_skip_on.png",
+        "codes": "guardskip_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Medium Difficulty:\n In the section after the rain on Mt Crenel is a series of caves, one cave has a switch on the other side of a gap that needs to be hit to extend a bridge.\n This switch can be hit with any of: Boomerang, Bomb Bag, Bow, Sword and Peril Beam, Sword and Sword Beam, or can be skipped entirely with the Rocs Cape.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic_settings/crenel_beam_off.png",
+        "codes": "crenelbeam_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/logic_settings/crenel_beam_on.png",
+        "codes": "crenelbeam_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Low Difficulty:\n The spikey beetles found in the entrance of Cave of Flames need to be flipped onto their back in order to be killed.\n The actions that can do this are: Cane shot, Shield bonk, Bomb explosion, or Down Strike.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/down_strike_beetle_off.png",
+        "codes": "downstrikebeetle_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/down_strike_beetle_on.png",
+        "codes": "downstrikebeetle_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Low/Medium Difficulty:\n Various rooms in the game are dark which makes the room black except for a small circle around link at all times, if the Lantern is equipped then the light extends to a much larger circle.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/dark_rooms_off.png",
+        "codes": "darkrooms_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/dark_rooms_on.png",
+        "codes": "darkrooms_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Medium Difficulty:\n The Cape can be used to make many unintended jumps across bodies of water you wouldn't expect. Some gaps seem too far to be reachable normally or require jumping at a weird angle, however the distance of the cape glide can be extended:\n Instead of holding the cape button the entire time, tap the cape to do a hop and then press and hold to glide after link is near the end of his hop.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/cape_extension_off.png",
+        "codes": "capeextension_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/cape_extension_on.png",
+        "codes": "capeextension_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Medium Difficulty:\n Turning Minish in lake normally requires using the boots to bonk into a tree near the cabin, however that is not the only way of turning minish in lake.\n If Red Fusions are enabled then you can ocarina warp to lake to shrink at the stump located there instead, navigate through the path opened by the crack to reach the island in the middle of the lake where Librari can be found.\n From here you can then jump off the ledge into the middle of the lake. You can always regrow at the tree without having to bonk into it first so you will never be softlocked.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic_settings/lake_minish_off.png",
+        "codes": "lakeminish_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/logic_settings/lake_minish_on.png",
+        "codes": "lakeminish_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Low Difficulty:\n In the Minish path located at the lake cabin, there is a lilypad you can use to reach the pier on the bottom side of the path. If you try and swim down to the pier you cannot climb up onto it from in the water,\n however you can instead swim to the screen transition at the bottom which will make you enter the cabin, you can then exit the doorway you came from to be placed on the pier.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/cabin_swim_off.png",
+        "codes": "cabinswim_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/cabin_swim_on.png",
+        "codes": "cabinswim_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Medium Difficulty:\n The Cloud Shark enemies found in Cloud Tops can be killed with various damaging items like Sword, Bombs or Bow.\n However they can die if they jump off a ledge into the void, this can be easy to do by just standing still on the edge of the platform and waiting for them to jump attack you.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/clouds_kill_off.png",
+        "codes": "cloudskill_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/clouds_kill_on.png",
+        "codes": "cloudskill_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"High Difficulty:\n In Palace of Winds 2F is a sequence of rooms that at the end requires the Cane of Pacci to hole jump up to a higher platform.\n However the majority of the floor can be skipped with a reasonably precise jump to a moving platform seen when first entering that floor at the bottom of the screen, this skips all the other rooms on this floor which never have any items.\n The jump can be done either with a known setup to make it completely consistent, or the player can just attempt to jump and land on the platform when it stops moving.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic_settings/pow_jump_off.png",
+        "codes": "powjump_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/logic_settings/pow_jump_on.png",
+        "codes": "powjump_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Medium Difficulty:\n In Palace of Winds 3F is a section you have to push some pots while minish to reach an item, these pots require the Power Bracelets to be pushed.\n Once you regrow, you then must hit a switch which makes the item drop and a door open. This switch is reachable from a later part of the dungeon, which means the Power Bracelets can be avoided by reaching this later part of the dungeon, hitting the switch, and then backtracking back to the beginning.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/pow_pot_puzzle_ool_off.png",
+        "codes": "powpotpuzzleool_off",
+        "inherit_codes":false
+      },
+	  {
+        "img": "images/options/logic_settings/pow_pot_puzzle_ool_on.png",
+        "codes": "powpotpuzzleool_on",
+        "inherit_codes":false
+      }
+
+    ]
+  },
+  {
+    "name":"High Difficulty:\n In Dark Hyrule are two rooms that require knocking canon balls back at canons to complete a puzzle.\n These two rooms are located near the main entrance of the dungeon, one on 1F found by heading north from the main entrance, the other found on B1 by going down the right staircase from the main entrance.\n The intended method of completing these puzzles is by creating 4 Links with the Four Sword, and then doing a sword slash to knock all of the 4 canonballs back simultanously.\n However, it is possible (with setups and practice) to complete these without cloning but by instead using a well timed and placed bomb and sword slash.\n Despite this being a High Difficulty setting, it is unlikely to be required without Four Sword unless you play on the DHC: 'Always Open' setting. Having Four Sword as a requirement for entering DHC will make this always require Four Sword.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+	  {
+        "img":"images/options/logic_settings/dhc_canon_hit_off.png",
+        "codes": "dhccanonhit_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/dhc_canon_hit_on.png",
+        "codes": "dhccanonhit_on",
+        "inherit_codes":false
+      }
+
+    ]
+  },
+  {
+    "name":"High Difficulty:\n After the 1F Canon room in the room with the moving blade trap, there are 4 pressure pads that must be depressed to spawn a chest containing an item.\n The intended method to do this puzzle is to use the Four Sword and create 4 Links to stand on these pads simultanously, however it is possible to this with less clones.\n These pads have a slight lag in their detection, which means you can use 2 Links (the amount you get with Red Sword) and make Link quickly walk between 2 pads adjacent to each other for the game to detect both as pressed,\n the clone will mirror the main link and do the same on the other 2 switches to trigger all the pads simultanously and spawn the chest.\n Similar to the DHC Canon setting, this is unlikely to be required unless you play on the DHC: 'Always Open' setting, and will always require Four Sword if one of the DHC requirements is Four Sword.\n This trick is relatively low difficulty to execute, however to reach this area without the Four Sword you must pass a Canon room which will never be required unless the DHC Canon setting is set to 'Yes'.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/dhc_blade_puzzle_shuffle_off.png",
+        "codes": "dhcbladepuzzleshuffle_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/dhc_blade_puzzle_shuffle_on.png",
+        "codes": "dhcbladepuzzleshuffle_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Medium/High Difficulty:\n In Dark Hyrule Castle 2F are 2 rooms that contain puzzles which require hitting 4 switches simultanously to solve the puzzle,\n these switches are close enough together at each location that a single spin attack from a precise spot can hit all the switches and solve the puzzle without having to create clones.\n However because they are located late in the dungeon behind puzzles that always require the Four Sword, this setting will only matter when playing Open World and going through the red warp to reach this floor.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/dhc_switch_hit_off.png",
+        "codes": "dhcswitchhit_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/dhc_switch_hit_on.png",
+        "codes": "dhcswitchhit_on",
+        "inherit_codes":false
+      }
+    ]
+  }, {
+    "name":"Low Difficulty:\n In Fortress of Winds there are 2 pots that contain items when playing with 'Special Pots', these are located in a dirt filled room in the back right section of the dungeon on 2F locked behind various locked doors.\n However the lower of the 2 pots can be grabbed with the Gust Jar from a much earlier part of the dungeon located in the front right section 2F.\n The pot can accidentally be released inside the wall which makes the item unobtainable, simply reload the room and the pot and item will respawn.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/logic_settings/fow_pot_off.png",
+        "codes": "fowpot_off",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/logic_settings/fow_pot_on.png",
+        "codes": "fowpot_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"If enabled will use the prices found in the JP and US versions.\nThese are the prices from left to right:\nEU 1st set: 200, 100, 50\nEU 2nd set: 300, 200, 100\nEU 3rd set: 400, 300, 200\nEU 4th set: 500, 400, 300\nEU 5th set: 600, 500, 400\nJP any set: 300, 200, 50",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/locations_settings/goron_eu.png",
+        "codes": "goron_eu",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/locations_settings/goron_jp.png",
+        "codes": "goron_jp",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Small Keys",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":2,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/small_key_none.png",
+        "codes": "small_key_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/small_key_vanilla.png",
+        "codes": "small_key_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/small_key_shuffle.png",
+        "codes": "small_key_shuffle",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Big Keys",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":2,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/big_key_none.png",
+        "codes": "big_key_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/big_key_vanilla.png",
+        "codes": "big_key_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/big_key_shuffle.png",
+        "codes": "big_key_shuffle",
         "inherit_codes":false
       }
     ]

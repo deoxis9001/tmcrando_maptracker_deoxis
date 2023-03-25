@@ -1652,6 +1652,7 @@
 		"name":"Drop",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_UnderwaterPot"],
+		"visibility_rules":["underwater_on","small_key_vanilla"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  }  
@@ -1757,7 +1758,7 @@
 	  {
 		"name":"Rupees",
 		"item_count":6,
-		"access_rules":["$Json_Dungeon_Droplet_IcePuzzleFreeChest"],
+		"access_rules":["$Json_Dungeon_Droplet_LowerWaterRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
@@ -2271,7 +2272,7 @@
 		"map":"dhc",
 		"x":3090,
 		"y":1480,
-        "restrict_visibility_rules":["dhc_none"]
+        "restrict_visibility_rules":["dhc_ped"]
 	  }
 	],
 	"sections":[

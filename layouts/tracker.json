@@ -9,7 +9,7 @@
 			["shield","mittsandfly","lamp","bombsremote","dogbottle","figurine","water","dws_bigkey","cof_bigkey","fow_bigkey","tod_bigkey","","pow_bigkey","dhc_bigkey"],
 			["boots","cape","ocarina","bowandfly","quiver","gomode","wind","dws_cm","cof_cm","fow_cm","tod_cm","beta","pow_cm","dhc_cm"],
 			["flippersandfly","ringandbracelets","carlovtingle","nutandshroom","bothkeys","clouds","wilds","falls","spinattack","fastspin","fastsplit","greatspin","longspin","sevenscrolls"],
-			["redW","redV","redE","blueL","blueS","greenV","greenN","greenZ","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack"],
+			["redW","redV","redE","blueL","blueS","greenC","greenG","greenP","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack"],
 		]
     },
     "windcrest_settings": {
@@ -81,7 +81,8 @@
 				"rows": [
 					  ["dws_none","tod_none"],
 					  ["cof_none","crypt_none"],
-					  ["fow_none","pow_none"]
+					  ["fow_none","pow_none"],
+					  ["dhc_none"]
 				  ]
 			  }
 		  ]
@@ -210,8 +211,8 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					  ["specialpot_off","digging_off",],
-					  ["underwater_off",""],
+					  ["hp_shuffle","specialpot_off",],
+					  ["digging_off","underwater_off"],
 					  ["rupees_off","golden_enemy_off"],
 					  ["cucco_none",""],
 					  ["goron_none","goron_eu"],
@@ -277,6 +278,7 @@
 		"item_width":320,
         "rows": [
           ["dungeonser_off","openworld_off"],
+		  ["small_key_none","big_key_none"]
         ]
       }
     },

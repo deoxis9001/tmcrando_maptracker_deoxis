@@ -3,6 +3,8 @@ function CanDestroyTrees()
 		return 1
 	elseif ( has("lamp") or has("bombs") or HasSword()==1 or LightArrowBreak()==1 ) then
 		return 1
+	elseif ( LightArrowBreak()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -57,6 +59,8 @@ function DrLeft()
 		return 1
 	elseif ( has("bracelets") and TownDog()==1 and BlowDust()==1 and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) ) then
 		return 1
+	elseif ( has("bracelets") and TownDog()==1 and ( BlowDust()==1 or BlowDust()==2 ) and ( CanSplit2()==1 or CanSplit3()==1 or CanSplit4()==1 ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -84,6 +88,8 @@ function TownMulldozers()
 		return 1
 	elseif ( has("cane") and Fountain()==1 and HasDamageSource()==1 ) then
 		return 1
+	elseif ( has("cane") and Fountain()==1 and HasDamageSource()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -145,6 +151,8 @@ function GoronCave()
 		return 1
 	elseif ( has("flippers") or has("cape") or ( has("cane") and AccessLonLon()==1 ) ) then
 		return 1
+	elseif ( has("cane") and AccessLonLon()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -154,6 +162,8 @@ function MayorCabin()
 		return 1
 	elseif ( has("bracelets") and ( ( BonkedTrees()==1 and CabinSwim()==1 ) or ( has("flippers") and LakeMinish()==1 and CabinSwim()==1 ) ) ) then
 		return 1
+	elseif ( has("bracelets") and ( ( BonkedTrees()==1 and ( CabinSwim()==1 or CabinSwim()==2 ) ) or ( has("flippers") and ( LakeMinish()==1 or LakeMinish()==2 ) and ( CabinSwim()==1 or CabinSwim()==2 ) ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -172,71 +182,9 @@ function LakeShortcut()
 		return 0
 	end 
 end
-function CrenelWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("crenelwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function FallsWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("fallswindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function CloudWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("cloudwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function SwampWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("swampwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function SHFWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("shfwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function MinishWindCrest() 
-	if ( has("openworld_on") and has("ocarina") ) then
-		return 1
-	elseif ( has("minishwindcrest_yes") and has("ocarina") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-
-function WesternShortcut_setting() 
-	if ( has("openworld_on") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 
 function WesternShortcut() 
-	if ( WesternShortcut_setting()==1 ) then
+	if ( has("openworld_on") ) then
 		return 1
 	else
 		return 0
@@ -289,6 +237,8 @@ function CrenelDust()
 		return 1
 	elseif ( BlowDust()==1 ) then
 		return 1
+	elseif ( BlowDust()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -307,6 +257,8 @@ function CrenelSwitch()
 		return 1
 	elseif ( has("bombs") or has("cape") or HasBow()==1 or HasBoomerang()==1 or CrenelBeam()==1 ) then
 		return 1
+	elseif ( CrenelBeam()==2 ) then
+		return 2
 	else
 		return 0
 	end
@@ -316,6 +268,8 @@ function SwampDarknut()
 		return 1
 	elseif ( HasDarknutDamage()==1 ) then
 		return 1
+	elseif ( HasDarknutDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -391,6 +345,8 @@ function RuinsTektites()
 		return 1
 	elseif ( HasDamageSource()==1 ) then
 		return 1
+	elseif ( HasDamageSource()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -405,18 +361,14 @@ function Graveyard()
 	end 
 end
 function CryptDoor() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( Tracker:ProviderCountForCode("rc_smallkey") >= 1 ) then
+	if ( Tracker:ProviderCountForCode("rc_smallkey") >= 1 ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function CryptBlocks() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( Tracker:ProviderCountForCode("rc_smallkey") >= 3 ) then
+	if ( Tracker:ProviderCountForCode("rc_smallkey") >= 3 ) then
 		return 1
 	else
 		return 0
@@ -437,6 +389,8 @@ function CryptPuzzle()
 		return 1
 	elseif ( has("lamp") and HasDamageSource()==1 ) then
 		return 1
+	elseif ( has("lamp") and HasDamageSource()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -473,33 +427,17 @@ function DeepwoodMulldozers()
 		return 1
 	elseif ( HasDamageSource()==1 ) then
 		return 1
-	else
-		return 0
-	end 
-end
-function DeepwoodWarpSwitch() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( BlowDust()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function DeepwoodBlueWarp()
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("dws_warps_blue") ) then
-		return 1
+	elseif ( HasDamageSource()==2 ) then
+		return 2
 	else
 		return 0
 	end 
 end
 function DeepwoodPreMadderpillar()
-	if ( has("openworld_on") ) then
+	if ( DeepwoodBlueWarp()==1 or ( Deepwood1stDoor()==1 and ( Deepwood2ndDoor()==1 or Tracker:ProviderCountForCode("dws_smallkey") >= 2 or has("gust") ) ) ) then
 		return 1
-	elseif ( DeepwoodBlueWarp()==1 or ( Deepwood1stDoor()==1 and ( Deepwood2ndDoor()==1 or Tracker:ProviderCountForCode("dws_smallkey") >= 2 or has("gust") ) ) ) then
-		return 1
+	elseif ( DeepwoodBlueWarp()==1 or ( Deepwood1stDoor()==1 and ( ( Deepwood2ndDoor()==1 or Deepwood2ndDoor()==2 ) or Tracker:ProviderCountForCode("dws_smallkey") >= 2 or has("gust") ) ) ) then
+		return 2
 	else
 		return 0
 	end
@@ -509,6 +447,8 @@ function DeepwoodNWChest()
 		return 1
 	elseif ( BlowDust()==1 ) then
 		return 1
+	elseif ( BlowDust()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -518,6 +458,8 @@ function DeepwoodWarpChests()
 		return 1
 	elseif ( BlowDust()==1 ) then
 		return 1
+	elseif ( BlowDust()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -527,6 +469,8 @@ function DeepwoodMadderpillarFight()
 		return 1
 	elseif ( HasMadderDamage()==1 ) then
 		return 1
+	elseif ( HasMadderDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -540,20 +484,13 @@ function DeepwoodMadderpillarWeb()
 		return 0
 	end 
 end
-function DeepwoodRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("dws_warps_red") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function CoFSpikeBeetle() 
 	if ( has("openworld_on") ) then
 		return 1
 	elseif ( HasDamageSource()==1 and ( DownThrustBeetle()==1 or has("cane") or has("shield") or has("bombs") ) ) then
 		return 1
+	elseif ( ( HasDamageSource()==1 or HasDamageSource()==2 )  and ( DownThrustBeetle()==1 or DownThrustBeetle()==2 or has("cane") or has("shield") or has("bombs") ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -563,22 +500,8 @@ function CoFHelmasaur()
 		return 1
 	elseif ( HasHelmasaurDamage()==1 ) then
 		return 1
-	else
-		return 0
-	end 
-end
-function CoFNoBlueWarp() 
-	if ( CoFBlueWarp()==0 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function CoFBlueWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("cof_warps_blue") ) then
-		return 1
+	elseif ( HasHelmasaurDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -588,14 +511,14 @@ function CoFChuFight()
 		return 1
 	elseif ( HasDamageSource()==1 ) then
 		return 1
+	elseif ( HasDamageSource()==2 ) then
+		return 2
 	else
 		return 0
 	end 
 end
-function CoFRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("cof_warps_red") ) then
+function CoFChuFightBackDoor() 
+	if ( has("openworld_on") and has("cape") ) then
 		return 1
 	else
 		return 0
@@ -606,6 +529,8 @@ function FoWWizrobes()
 		return 1
 	elseif ( HasWizrobeDamage()==1 ) then
 		return 1
+	elseif ( HasWizrobeDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -624,6 +549,8 @@ function FoWStalfosFight()
 		return 1
 	elseif ( HasDamageSource()==1 ) then
 		return 1
+	elseif ( HasDamageSource()==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -673,15 +600,6 @@ function FoWEyegores()
 		return 0
 	end 
 end
-function FoWBlueWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("fow_warps_blue") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 function FoWRightDrop() 
 	if ( has("openworld_on") ) then
 		return 1
@@ -696,112 +614,161 @@ function FoWDarknut()
 		return 1
 	elseif ( HasDarknutDamage()==1 ) then
 		return 1
+	elseif ( HasDarknutDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
 end
-function ToDWeb() 
+function ToDWeb()
+	if function_data["ToDWeb"] ~= nil then
+		return function_data["ToDWeb"]
+	end
 	if ( has("openworld_on") ) then
+		function_data["ToDWeb"]=1
 		return 1
 	elseif ( has("lamp") ) then
+		function_data["ToDWeb"]=1
 		return 1
 	else
+		function_data["ToDWeb"]=0
 		return 0
 	end 
 end
-function ToDMainRoom() 
-	if ( has("openworld_on") and ToDBigDoor()==1 ) then
+function ToDMainRoom()
+	if function_data["ToDMainRoom"] ~= nil then
+		return function_data["ToDMainRoom"]
+	end 
+	if ( ToDBigDoor()==1 or ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDRedWarp()==1 and BombWalls()==1 and ToDWeb()==1 and ToDMadderpillars()==1 ) ) then
+		function_data["ToDMainRoom"]=1
 		return 1
-	elseif ( ToDBigDoor()==1 or ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDRedWarp()==1 and BombWalls()==1 and ToDWeb()==1 and ToDMadderpillars()==1 ) ) then
-		return 1
+	elseif ( ToDBigDoor()==1 or ( ToDBlueWarp()==1 and ( ToDScissorBeetles()==1 or ToDScissorBeetles()==2 ) ) or ( ToDRedWarp()==1 and BombWalls()==1 and ToDWeb()==1 and ( ToDMadderpillars()==1 or ToDMadderpillars()==2 ) ) ) then
+		function_data["ToDMainRoom"]=2
+		return 2
 	else
+		function_data["ToDMainRoom"]=0
 		return 0
 	end 
 end
-function ToDBlueWarp()
+function ToDLeftMushroomSwitch()
+	if function_data["ToDLeftMushroomSwitch"] ~= nil then
+		return function_data["ToDLeftMushroomSwitch"]
+	end 
 	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("tod_warps_blue") ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function ToDNoWarp()
-	if ( has("openworld_on") ) then
-		return 0
-	elseif ( has("tod_warps_blue") ) then
-		return 0
-	elseif ( has("tod_warps_red") ) then
-		return 0
-	else
-		return 1
-	end 
-end
-function ToDLeftMushroomSwitch() 
-	if ( has("openworld_on") ) then
+		function_data["ToDLeftMushroomSwitch"]=1
 		return 1
 	elseif ( has("gust") or has("cape") ) then
+		function_data["ToDLeftMushroomSwitch"]=1
 		return 1
 	else
+		function_data["ToDLeftMushroomSwitch"]=1
 		return 0
 	end 
 end
 function ToDBasementLilySpawn() 
-	if ( has("openworld_on") and has("flippers") and ToDLeftMushroomSwitch()==1 ) then
+	if function_data["ToDBasementLilySpawn"] ~= nil then
+		return function_data["ToDBasementLilySpawn"]
+	end 
+	if ( has("openworld_on") and has("flippers") ) then
+		function_data["ToDBasementLilySpawn"]=1
 		return 1
 	elseif ( has("flippers") and ToDWestDoor()==1 and has("gust") ) then
+		function_data["ToDBasementLilySpawn"]=1
 		return 1
+	elseif ( has("flippers") and ToDWestDoor()==2 and has("gust") ) then
+		function_data["ToDBasementLilySpawn"]=2
+		return 2
 	else
+		function_data["ToDBasementLilySpawn"]=0
 		return 0
 	end 
 end
 function ToDLeftPillars() 
+	if function_data["ToDLeftPillars"] ~= nil then
+		return function_data["ToDLeftPillars"]
+	end 
 	if ( has("openworld_on") ) then
+		function_data["ToDLeftPillars"]=1
 		return 1
 	elseif ( has("gust") ) then
+		function_data["ToDLeftPillars"]=1
 		return 1
 	else
+		function_data["ToDLeftPillars"]=0
 		return 0
 	end 
 end
-function ToDLeftReverse() 
+function ToDLeftReverse()
+	if function_data["ToDLeftReverse"] ~= nil then
+		return function_data["ToDLeftReverse"]
+	end 
 	if ( has("openworld_on") ) then
+		function_data["ToDLeftReverse"]=1
 		return 1
 	else
+		function_data["ToDLeftReverse"]=0
 		return 0
 	end 
 end
-function ToDLeftIceRoom() 
+function ToDLeftIceRoom()
+	if function_data["ToDLeftIceRoom"] ~= nil then
+		return function_data["ToDLeftIceRoom"]
+	end 
 	if ( has("openworld_on")and ( has("cape") or has("gust") ) ) then
+		function_data["ToDLeftIceRoom"]=1
 		return 1
 	elseif ( ( has("gust") and ToDBasementLilySpawn()==1 ) or has("cape") ) then
+		function_data["ToDLeftIceRoom"]=1
 		return 1
+	elseif ( has("gust") and ToDBasementLilySpawn()==2 ) then
+		function_data["ToDLeftIceRoom"]=2
+		return 2
 	else
+		function_data["ToDLeftIceRoom"]=0
 		return 0
 	end 
 end
 function ToDLeftPath() 
-	if ( has("openworld_on") and has("flippers") and ToDWestDoor()==1 and ToDLeftMushroomSwitch()==1 and ToDLeftPillars()==1 and ToDLeftIceRoom()==1 ) then
+	if ( has("flippers") and ToDWestDoor()==1 and ToDLeftMushroomSwitch()==1 and ToDLeftPillars()==1 and ToDLeftIceRoom()==1 ) then
 		return 1
-	elseif ( has("flippers") and ToDWestDoor()==1 and ToDLeftMushroomSwitch()==1 and ToDLeftPillars()==1 and ToDLeftIceRoom()==1 ) then
-		return 1
+	elseif ( has("flippers") and ( ToDWestDoor()==1 or ToDWestDoor()==2 ) and ToDLeftMushroomSwitch()==1 and ToDLeftPillars()==1 and ( ToDLeftIceRoom()==1 or ToDLeftIceRoom()==2 )) then
+		return 2
 	else
 		return 0
 	end 
 end
 function ToDDarkMazeReverse() 
+	if function_data["ToDDarkMazeReverse"] ~= nil then
+		return function_data["ToDDarkMazeReverse"]
+	end 
 	if ( has("openworld_on") and DarkRooms()==1 ) then
+		function_data["ToDDarkMazeReverse"]=1
 		return 1
+	elseif ( has("openworld_on") and DarkRooms()==2 ) then
+		function_data["ToDDarkMazeReverse"]=2
+		return 2
 	else
+		function_data["ToDDarkMazeReverse"]=0
 		return 0
 	end 
 end
 function ToDLilypadEnd() 
-	if ( has("openworld_on") ) then
+	print("---ToDLilypadEnd---")
+	print("ToDBlueWarp  ==1",ToDBlueWarp()==1)
+	print("ToDScissorBeetles ==1",ToDScissorBeetles()==1)
+	print("ToDScissorBeetles ==2",ToDScissorBeetles()==2)
+	print("ToDMainRoom ==1",ToDMainRoom()==1)
+	print("ToDMainRoom ==2",ToDMainRoom()==2)
+	print("ToDLeftPath ==1",ToDLeftPath()==1)
+	print("ToDLeftPath ==2",ToDLeftPath()==2)
+	print("ToDRightPath ==1",ToDRightPath()==1)
+	print("cape",has("cape"))
+	print("ToDEitherPath ==1",ToDEitherPath()==1)
+	print("---fin ToDLilypadEnd---")
+	if ( ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) then
 		return 1
-	elseif ( ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) then
-		return 1
+	elseif ( ( ToDBlueWarp()==1 and ( ToDScissorBeetles()==1 or ToDScissorBeetles()==2 ) ) or ( ( ToDMainRoom()==1 or ToDMainRoom()==2 ) and ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) or ( ( ToDRightPath()==1 or ToDRightPath()==2 ) and has("cape") ) or ToDEitherPath()==1 ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -811,6 +778,8 @@ function ToDRightIceBlock()
 		return 1
 	elseif ( ToDEastSwitch_settings()==1 or has("lamp") ) then
 		return 1
+	elseif ( ToDEastSwitch_settings()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -829,6 +798,8 @@ function ToDScissorBeetles()
 		return 1
 	elseif ( HasScissorDamage()==1 ) then
 		return 1
+	elseif ( HasScissorDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -843,53 +814,48 @@ function ToDDarkMaze()
 	end 
 end
 function ToDRightPath() 
-	if ( has("openworld_on") ) then
+	if ( ToDRightIceBlock()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and ToDDarkDoor()==1 ) then
 		return 1
-	elseif ( ToDRightIceBlock()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and ToDDarkDoor()==1 ) then
+	elseif ( ( ToDRightIceBlock()==1 or ToDRightIceBlock()==2 ) and ToDRightIce()==1 and ( DarkRooms()==1 or DarkRooms()==2 ) and ( ToDScissorBeetles()==1 or ToDScissorBeetles()==2 ) and ToDDarkMaze()==1 and ( ToDDarkDoor()==1 or ToDDarkDoor()==2 ) ) then
+		return 2
+	else
+		return 0
+	end 
+end
+function ToDEitherPath_settings() 
+	if ( ToDEitherDoor()==1 and has("flippers") and ToDLeftPillars()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and has("cape") ) then
 		return 1
+	elseif ( ( ToDEitherDoor()==1 or ToDEitherDoor()==2 ) and has("flippers") and ToDLeftPillars()==1 and ToDRightIce()==1 and ( DarkRooms()==1 or DarkRooms()==2 ) and ( ToDScissorBeetles()==1 or ToDScissorBeetles()==2 ) and ToDDarkMaze()==1 and has("cape") ) then
+		return 2
 	else
 		return 0
 	end 
 end
 function ToDEitherPath() 
-	if ( has("openworld_on") ) then
+	if ( ToDEitherDoor()==1 and has("flippers") and ToDLeftPillars()==1 and ToDRightIceBlock()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and has("cape") ) then
 		return 1
-	elseif ( ToDEitherDoor()==1 and has("flippers") and ToDLeftPillars()==1 and ToDRightIceBlock()==1 and ToDRightIce()==1 and DarkRooms()==1 and ToDScissorBeetles()==1 and ToDDarkMaze()==1 and has("cape") ) then
-		return 1
+	elseif ( ( ToDEitherDoor()==1 or ToDEitherDoor()==2 ) and has("flippers") and ToDLeftPillars()==1 and ( ToDRightIceBlock()==1 or ToDRightIceBlock()==2 ) and ToDRightIce()==1 and ( DarkRooms()==1 or DarkRooms()==2 ) and ( ToDScissorBeetles()==1 or ToDScissorBeetles()==2 ) and ToDDarkMaze()==1 and has("cape") ) then
+		return 2
 	else
 		return 0
 	end 
 end
 function ToDDarkMazeDoor() 
-	if ( has("openworld_on") ) then
+	if ( has("small_key_none") ) then
 		return 1
 	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 4 ) then
 		return 1
-	else
-		return 0
-	end 
-end
-function ToDDarkMazeReverse() 
-	if ( has("openworld_on") and DarkRooms()==1 ) then
-		return 1
+	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
+		return 2
 	else
 		return 0
 	end 
 end
 function ToD2ndRupeePath() 
-	if ( has("openworld_on") and ( ( ToDMainRoom()==1 and ( ( ToDLeftPath()==1 and has("cape") ) or ToDRightPath()==1 ) ) and ( ToDBlueWarp()==1 and has("cape") and DarkRooms()==1 ) ) ) then
+	if ( ( ToDMainRoom()==1 and ( ( ToDLeftPath()==1 and has("cape") ) or ToDRightPath()==1 or ToDEitherPath()==1 ) ) or ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 and has("cape") and DarkRooms()==1 ) ) then
 		return 1
-	elseif ( ( ToDMainRoom()==1 and ( ( ToDLeftPath()==1 and has("cape") ) or ToDRightPath()==1 or ToDEitherPath()==1 ) ) or ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 and has("cape") and DarkRooms()==1 ) ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function ToDRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("tod_warps_red") ) then
-		return 1
+	elseif ( ( ( ToDMainRoom()==1 or ToDMainRoom()==2 ) and ( ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) and has("cape") ) or ( ToDRightPath()==1 or ToDRightPath()==2 ) or ToDEitherPath()==1 ) ) or ( ToDBlueWarp()==1 and ( ToDScissorBeetles()==1 or ToDScissorBeetles()==2 ) and has("cape") and ( DarkRooms()==1 or DarkRooms()==2 ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -899,6 +865,8 @@ function ToDMadderpillars()
 		return 1
 	elseif ( HasMadderDamage()==1 ) then
 		return 1
+	elseif ( HasMadderDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -906,8 +874,10 @@ end
 function ToDEastSwitch_settings() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit2()==1 and ToDBlueWarp()==1 or ( ToDMainRoom()==1  and ( ToDLeftPath()==1 or ToDEitherPath()==1 ) ) ) then
+	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1  and ( ToDLeftPath()==1 or ToDEitherPath_settings()==1 ) ) ) ) then
 		return 1
+	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or  ( ( ToDMainRoom()==1 or ToDMainRoom()==2 )  and ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) or ToDEitherPath_settings()==1 ) ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -915,8 +885,10 @@ end
 function ToDEastSwitch() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit2()==1 and ToDBlueWarp()==1 or ( ToDMainRoom()==1  and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) then
+	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1  and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) ) then
 		return 1
+	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ( ToDMainRoom()==1 or ToDMainRoom()==2 )  and ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) or ( ( ToDRightPath()==1 or ToDRightPath()==2 ) and has("cape") ) or ToDEitherPath()==1 ) ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -926,6 +898,8 @@ function ToDWestSwitch()
 		return 1
 	elseif ( BombWalls()==1 and ToDWeb()==1 and ToDMadderpillars()==1 and CanSplit2()==1 and ( ToDRedWarp()==1 or ( ToD2ndRupeePath()==1 and ToDRightIce()==1 and CapeExtension()==1 ) ) ) then
 		return 1
+	elseif ( BombWalls()==1 and ToDWeb()==1 and ( ToDMadderpillars()==1 or ToDMadderpillars()==2 ) and CanSplit2()==1 and ( ToDRedWarp()==1 or ( ToD2ndRupeePath()==1 and ToDRightIce()==1 and ( CapeExtension()==1 or CapeExtension()==2 ) ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -935,15 +909,17 @@ function ToDMulldozer()
 		return 1
 	elseif ( HasDamageSource()==1 ) then
 		return 1
+	elseif ( HasDamageSource()==2 ) then
+		return 2
 	else
 		return 0
 	end 
 end
 function AccessOcto() 
-	if ( has("openworld_on") and ToDMainRoom()==1 ) then
+	if ( ToDMainRoom()==1 and ToDEastSwitch()==1 and ToDWestSwitch()==1 ) then
 		return 1
-	elseif ( ToDMainRoom()==1 and ToDEastSwitch()==1 and ToDWestSwitch()==1 ) then
-		return 1
+	elseif ( ( ToDMainRoom()==1 or ToDMainRoom()==2 ) and ( ToDEastSwitch()==1 or ToDEastSwitch()==2 ) and ( ToDWestSwitch()==1 or ToDWestSwitch()==2 ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -953,26 +929,8 @@ function PoWPotPuzzle()
 		return 1
 	elseif ( has("bracelets") or PoWPotPuzzleOOL()==1 ) then
 		return 1
-	else
-		return 0
-	end 
-end
-function PoWNoWarps() 
-	if ( has("openworld_on") ) then
-		return 0
-	elseif ( has("pow_warps_blue") ) then
-		return 0
-	elseif ( has("pow_warps_red") ) then
-		return 0
-	else
-		return 1
-	end 
-end
-function PoWBlueWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("pow_warps_blue") ) then
-		return 1
+	elseif ( PoWPotPuzzleOOL()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -983,16 +941,18 @@ function PoWDarknut()
 		return 1
 	elseif ( HasDarknutDamage()==1 ) then
 		return 1
+	elseif ( HasDarknutDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
 end
 
 function PoW2ndHalf()
-	if ( has("openworld_on") ) then
+	if ( ( PoWBlueWarp()==1 and PoWDarknut()==1 ) or ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1 ) )  then
 		return 1
-	elseif ( ( PoWBlueWarp()==1 and PoWDarknut()==1 ) or ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1 ) ) then
-		return 1
+	elseif ( ( PoWBlueWarp()==1 and ( PoWDarknut()==1 or PoWDarknut()==2 ) ) or ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and ( PoWJump()==1 or PoWJump()==2 ) and ( PoW1stDoor()==1 or PoW1stDoor()==2 ) and ( PoWBossDoor()==1 or PoWBossDoor()==2 ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1019,6 +979,8 @@ function PoWDoubleWiz()
 		return 1
 	elseif ( HasWizrobeDamage()==1 ) then
 		return 1
+	elseif ( HasWizrobeDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1028,6 +990,8 @@ function PoWTribleWiz()
 		return 1
 	elseif ( HasWizrobeDamage()==1 ) then
 		return 1
+	elseif ( HasWizrobeDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1037,6 +1001,8 @@ function PoWHandRoom()
 		return 1
 	elseif ( HasDamageSource()==1 ) then
 		return 1
+	elseif ( HasDamageSource()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1045,15 +1011,6 @@ function PoWSwitch()
 	if ( has("openworld_on") ) then
 		return 1
 	elseif ( has("bombs") or HasBow()==1 or HasBeam()==1 or HasBoomerang()==1 ) then
-		return 1
-	else
-		return 0
-	end 
-end
-function PoWRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("pow_warps_red") ) then
 		return 1
 	else
 		return 0
@@ -1068,22 +1025,13 @@ function DHCKing()
 		return 0
 	end 
 end
-function DHCNoWarps() 
-	if ( has("openworld_on") ) then
-		return 0
-	elseif ( has("dhc_warps_blue") ) then
-		return 0
-	elseif ( has("dhc_warps_red") ) then
-		return 0
-	else
-		return 1
-	end 
-end
 function DHCFirstCanon() 
 	if ( has("openworld_on") ) then
 		return 1
 	elseif ( DHCCanonHit()==1 ) then
 		return 1
+	elseif ( DHCCanonHit()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1093,6 +1041,8 @@ function DHCBladePuzzle()
 		return 1
 	elseif ( DHCBladePuzzleShuffle()==1 ) then
 		return 1
+	elseif ( DHCBladePuzzleShuffle()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1102,6 +1052,8 @@ function DHC2ndCanon()
 		return 1
 	elseif ( DHCCanonHit()==1 ) then
 		return 1
+	elseif ( DHCCanonHit()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1111,6 +1063,8 @@ function DHCThrone()
 		return 1
 	elseif ( HasDarknutDamage()==1 ) then
 		return 1
+	elseif ( HasDarknutDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1129,6 +1083,8 @@ function DHCSwitchPuzzles()
 		return 1
 	elseif ( DHCSwitchHit()==1 ) then
 		return 1
+	elseif ( DHCSwitchHit()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1138,6 +1094,8 @@ function DHCChainSoldiers()
 		return 1
 	elseif ( HasDamageSource()==1 ) then
 		return 1
+	elseif ( HasDamageSource()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1156,6 +1114,8 @@ function DHCBlackKnightFight()
 		return 1
 	elseif ( HasDarknutDamage()==1 ) then
 		return 1
+	elseif ( HasDarknutDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1165,6 +1125,8 @@ function DHCTowerDarknuts()
 		return 1
 	elseif ( HasDarknutDamage()==1 ) then
 		return 1
+	elseif ( HasDarknutDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1183,23 +1145,172 @@ function DHCGhini()
 		return 1
 	elseif ( HasGhiniDamage()==1 ) then
 		return 1
+	elseif ( HasGhiniDamage()==2 ) then
+		return 2
 	else
 		return 0
 	end 
 end
-function DHCBlueWarp() 
-	if ( has("openworld_on") ) then
+function CrenelWindCrest() 
+	if ( has("crenelwindcrest_yes") and has("ocarina") ) then
 		return 1
-	elseif ( has("dhc_warps_blue") ) then
+	else
+		return 0
+	end 
+end
+function FallsWindCrest() 
+	if ( has("fallswindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function CloudWindCrest()
+	if ( has("cloudwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function SwampWindCrest() 
+	if ( has("swampwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function SHFWindCrest() 
+	if ( has("shfwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function MinishWindCrest() 
+	if ( has("minishwindcrest_yes") and has("ocarina") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function DeepwoodWarpSwitch() 
+	if ( has("dws_warps_blue") ) then
+		return 1
+	elseif ( BlowDust()==1 ) then
+		return 1
+	elseif ( BlowDust()==2 ) then
+		return 2
+	else
+		return 0
+	end 
+end
+function DeepwoodBlueWarp()
+	if ( has("dws_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function DeepwoodRedWarp() 
+	if ( has("dws_warps_red") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function CoFNoBlueWarp() 
+	if ( CoFBlueWarp()==1 ) then
+		return 0
+	else
+		return 1
+	end 
+end
+function CoFBlueWarp() 
+	if ( has("cof_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function CoFRedWarp() 
+	if ( has("cof_warps_red") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function FoWBlueWarp() 
+	if ( has("fow_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function ToDBlueWarp()
+	if ( has("tod_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function ToDNoWarp()
+	if ( has("tod_warps_blue") ) then
+		return 0
+	elseif ( has("tod_warps_red") ) then
+		return 0
+	else
+		return 1
+	end 
+end
+function ToDRedWarp() 
+	if ( has("tod_warps_red") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function PoWNoWarps() 
+	if ( has("pow_warps_blue") ) then
+		return 0
+	elseif ( has("pow_warps_red") ) then
+		return 0
+	else
+		return 1
+	end 
+end
+function PoWBlueWarp() 
+	if ( has("pow_warps_blue") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function PoWRedWarp() 
+	if ( has("pow_warps_red") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function DHCNoWarps() 
+	if ( has("dhc_warps_blue") ) then
+		return 0
+	elseif ( has("dhc_warps_red") ) then
+		return 0
+	else
+		return 1
+	end 
+end
+function DHCBlueWarp() 
+	if ( has("dhc_warps_blue") ) then
 		return 1
 	else
 		return 0
 	end 
 end
 function DHCRedWarp() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("dhc_warps_red") ) then
+	if ( has("dhc_warps_red") ) then
 		return 1
 	else
 		return 0
