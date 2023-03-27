@@ -300,6 +300,8 @@ function RuinsFusion()
 		return 1
 	elseif ( Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
 		return 1
+	elseif ( Tracker:ProviderCountForCode("clouds") >= 3 and fusiongoldcombined:getActive() ) then
+		return 2
 	else
 		return 0
 	end 
@@ -309,6 +311,8 @@ function CloudFusions()
 		return 1
 	elseif ( ( ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) ) and ( has("cape") or has("mitts") ) ) then
 		return 1
+	elseif ( fusiongoldcombined:getActive() and ( Tracker:ProviderCountForCode("clouds") >= 6 or ( Tracker:ProviderCountForCode("clouds") >= 5 and has("fallswindcrest_yes") ) ) and ( has("cape") or has("mitts") ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -400,6 +404,8 @@ function FallsFusion()
 		return 1
 	elseif ( ( fusiongoldcombined:getActive()==false and has("falls",1 ) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4 ) ) and OverworldBlocks()==1 then
 		return 1
+	elseif fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=1 and OverworldBlocks()==1 then
+		return 2
 	else
 		return 0
 	end 
@@ -489,7 +495,7 @@ function CoFSpikeBeetle()
 		return 1
 	elseif ( HasDamageSource()==1 and ( DownThrustBeetle()==1 or has("cane") or has("shield") or has("bombs") ) ) then
 		return 1
-	elseif ( ( HasDamageSource()==1 or HasDamageSource()==2 )  and ( DownThrustBeetle()==1 or DownThrustBeetle()==2 or has("cane") or has("shield") or has("bombs") ) ) then
+	elseif ( ( HasDamageSource()==1 or HasDamageSource()==2 ) and ( DownThrustBeetle()==1 or DownThrustBeetle()==2 or has("cane") or has("shield") or has("bombs") ) ) then
 		return 2
 	else
 		return 0
@@ -752,19 +758,7 @@ function ToDDarkMazeReverse()
 		return 0
 	end 
 end
-function ToDLilypadEnd() 
-	print("---ToDLilypadEnd---")
-	print("ToDBlueWarp  ==1",ToDBlueWarp()==1)
-	print("ToDScissorBeetles ==1",ToDScissorBeetles()==1)
-	print("ToDScissorBeetles ==2",ToDScissorBeetles()==2)
-	print("ToDMainRoom ==1",ToDMainRoom()==1)
-	print("ToDMainRoom ==2",ToDMainRoom()==2)
-	print("ToDLeftPath ==1",ToDLeftPath()==1)
-	print("ToDLeftPath ==2",ToDLeftPath()==2)
-	print("ToDRightPath ==1",ToDRightPath()==1)
-	print("cape",has("cape"))
-	print("ToDEitherPath ==1",ToDEitherPath()==1)
-	print("---fin ToDLilypadEnd---")
+function ToDLilypadEnd()
 	if ( ( ToDBlueWarp()==1 and ToDScissorBeetles()==1 ) or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) then
 		return 1
 	elseif ( ( ToDBlueWarp()==1 and ( ToDScissorBeetles()==1 or ToDScissorBeetles()==2 ) ) or ( ( ToDMainRoom()==1 or ToDMainRoom()==2 ) and ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) or ( ( ToDRightPath()==1 or ToDRightPath()==2 ) and has("cape") ) or ToDEitherPath()==1 ) ) ) then
@@ -874,9 +868,9 @@ end
 function ToDEastSwitch_settings() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1  and ( ToDLeftPath()==1 or ToDEitherPath_settings()==1 ) ) ) ) then
+	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ToDEitherPath_settings()==1 ) ) ) ) then
 		return 1
-	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or  ( ( ToDMainRoom()==1 or ToDMainRoom()==2 )  and ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) or ToDEitherPath_settings()==1 ) ) ) ) then
+	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ( ToDMainRoom()==1 or ToDMainRoom()==2 ) and ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) or ToDEitherPath_settings()==1 ) ) ) ) then
 		return 2
 	else
 		return 0
@@ -885,9 +879,9 @@ end
 function ToDEastSwitch() 
 	if ( has("openworld_on") ) then
 		return 1
-	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1  and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) ) then
+	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ToDMainRoom()==1 and ( ToDLeftPath()==1 or ( ToDRightPath()==1 and has("cape") ) or ToDEitherPath()==1 ) ) ) ) then
 		return 1
-	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ( ToDMainRoom()==1 or ToDMainRoom()==2 )  and ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) or ( ( ToDRightPath()==1 or ToDRightPath()==2 ) and has("cape") ) or ToDEitherPath()==1 ) ) ) ) then
+	elseif ( CanSplit2()==1 and ( ToDBlueWarp()==1 or ( ( ToDMainRoom()==1 or ToDMainRoom()==2 ) and ( ( ToDLeftPath()==1 or ToDLeftPath()==2 ) or ( ( ToDRightPath()==1 or ToDRightPath()==2 ) and has("cape") ) or ToDEitherPath()==1 ) ) ) ) then
 		return 2
 	else
 		return 0
@@ -949,7 +943,7 @@ function PoWDarknut()
 end
 
 function PoW2ndHalf()
-	if ( ( PoWBlueWarp()==1 and PoWDarknut()==1 ) or ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1 ) )  then
+	if ( ( PoWBlueWarp()==1 and PoWDarknut()==1 ) or ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and PoWJump()==1 and PoW1stDoor()==1 and PoWBossDoor()==1 ) ) then
 		return 1
 	elseif ( ( PoWBlueWarp()==1 and ( PoWDarknut()==1 or PoWDarknut()==2 ) ) or ( has("cape") and ( CanSplit3()==1 or CanSplit4()==1 ) and ( PoWJump()==1 or PoWJump()==2 ) and ( PoW1stDoor()==1 or PoW1stDoor()==2 ) and ( PoWBossDoor()==1 or PoWBossDoor()==2 ) ) ) then
 		return 2

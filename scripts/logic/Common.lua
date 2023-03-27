@@ -20,7 +20,7 @@ function tracker_on_accessibility_updating()
 end
 function tracker_on_pack_ready()
 	notracking=false
-	debug_item=true
+	debug_item=false
 end
 
 function has( item, amount )
@@ -31,7 +31,7 @@ function has( item, amount )
 	end
 	if has_item_data[item] == nil then
 		has_item_data[item]=false
-	elseif  has_item_data[item] == 0 then
+	elseif has_item_data[item] == 0 then
 		has_item_data[item]=false
 	else
 		if debug_item == true then
@@ -114,8 +114,234 @@ function FusionsGreen()
 		return 0
 	end 
 end
+function FusionsBlueSNumber() 
+	if function_data["FusionsBlueSNumber"] ~= nil then
+		return function_data["FusionsBlueSNumber"]
+	end
+	local count_fusion=0
+	local count_fusion2=0
+	if has("fusions2d") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions2e") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions30") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions31") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions32") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions33") then
+		count_fusion=count_fusion+1
+	end
+	
+	if has("fusions25") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions26") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions29") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2a") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2b") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2f") then
+		count_fusion2=count_fusion2+1
+	end
+	count_fusion3=math.floor(count_fusion2/2)
+	count_fusion=count_fusion+count_fusion3
+	if ( blueS:getActive() > count_fusion ) then
+		function_data["FusionsBlueSNumber"]=1
+		return 1
+	else
+		function_data["FusionsBlueSNumber"]=0
+		return 0
+	end 
+end
+function FusionsBlueLNumber() 
+	if function_data["FusionsBlueLNumber"] ~= nil then
+		return function_data["FusionsBlueLNumber"]
+	end
+	local count_fusion=0
+	local count_fusion2=0
+	if has("fusions22") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions23") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions24") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions27") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions28") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions2c") then
+		count_fusion=count_fusion+1
+	end
+	
+	if has("fusions25") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions26") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions29") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2a") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2b") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2f") then
+		count_fusion2=count_fusion2+1
+	end
+	count_fusion3=math.ceil(count_fusion2/2)
+	count_fusion=count_fusion+count_fusion3
+	if ( blueL:getActive() > count_fusion ) then
+		function_data["FusionsBlueLNumber"]=1
+		return 1
+	else
+		function_data["FusionsBlueLNumber"]=0
+		return 0
+	end 
+end
+function FusionsBlueWallNumber() 
+	if function_data["FusionsBlueWallNumber"] ~= nil then
+		return function_data["FusionsBlueWallNumber"]
+	end
+	local count_fusion2=0
+	if has("fusions25") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions26") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions29") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2a") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2b") then
+		count_fusion2=count_fusion2+1
+	end
+	if has("fusions2f") then
+		count_fusion2=count_fusion2+1
+	end
+	count_fusion3=math.ceil(count_fusion2/2)
+	count_fusion4=math.floor(count_fusion2/2)
+	count_fusion=count_fusion3-count_fusion4
+	if ( count_fusion == 0 ) then
+		function_data["FusionsBlueWallNumber"]=1
+		return FusionsBlueLNumber()
+	else
+		function_data["FusionsBlueWallNumber"]=0
+		return FusionsBlueSNumber()
+	end 
+end
+function FusionsBlueNumber(code)
+	if function_data["FusionsBlueNumber"] ~= nil then
+		return function_data["FusionsBlueNumber"]
+	end
+	if fusionbluecombined:getActive() then
+		if FusionsBlueLNumber()==1 and FusionsBlueSNumber()==1 then
+			function_data["FusionsBlueNumber"]=1
+			return 1
+		else
+			function_data["FusionsBlueNumber"]=0
+			return 0
+		end
+	else
+		if FusionsBlueLNumber()==1 and code=="blueL" then
+			function_data["FusionsBlueNumber"]=1
+			return 1
+		elseif FusionsBlueSNumber()==1 and code=="blueS" then
+			function_data["FusionsBlueNumber"]=1
+			return 1
+		elseif FusionsBlueWallNumber()==1 and code=="blueWall" then
+			function_data["FusionsBlueNumber"]=1
+			return 1
+		else
+			function_data["FusionsBlueNumber"]=0
+			return 0
+		end
+	end
+end
+function FusionsRedNumber(code)
+	if function_data["FusionsRedNumber"] ~= nil then
+		return function_data["FusionsRedNumber"]
+	end
+	if fusionbluecombined:getActive() then
+		if FusionsRedWNumber()==1 and FusionsRedVNumber()==1 and FusionsRedENumber()==1 then
+			function_data["FusionsRedNumber"]=1
+			return 1
+		else
+			function_data["FusionsRedNumber"]=0
+			return 0
+		end
+	else
+		if FusionsRedWNumber()==1 and code=="redW" then
+			function_data["FusionsRedNumber"]=1
+			return 1
+		elseif FusionsRedVNumber()==1 and code=="redV" then
+			function_data["FusionsRedNumber"]=1
+			return 1
+		elseif FusionsRedENumber()==1 and code=="redE" then
+			function_data["FusionsRedNumber"]=1
+			return 1
+		else
+			function_data["FusionsRedNumber"]=0
+			return 0
+		end
+	end
+end
+function FusionsGreenNumber(code)
+	if function_data["FusionsGreenNumber"] ~= nil then
+		return function_data["FusionsGreenNumber"]
+	end
+	if fusionbluecombined:getActive() then
+		if FusionsGreenCNumber()==1 and FusionsGreenGNumber()==1 and FusionsGreenPNumber()==1 then
+			function_data["FusionsGreenNumber"]=1
+			return 1
+		else
+			function_data["FusionsGreenNumber"]=0
+			return 0
+		end
+	else
+		if FusionsGreenCNumber()==1 and code=="greenC" then
+			function_data["FusionsGreenNumber"]=1
+			return 1
+		elseif FusionsGreenGNumber()==1 and code=="greenG" then
+			function_data["FusionsGreenNumber"]=1
+			return 1
+		elseif FusionsGreenPNumber()==1 and code=="greenP" then
+			function_data["FusionsGreenNumber"]=1
+			return 1
+		else
+			function_data["FusionsGreenNumber"]=0
+			return 0
+		end
+	end
+end
 
-function FusionsGold() 
+
+
+function FusionsGold()
 	if function_data["FusionsGold"] ~= nil then
 		return function_data["FusionsGold"]
 	end
@@ -255,13 +481,13 @@ function Sword5()
 	end
  if Tracker:ProviderCountForCode("sword5") > 0 then
 		function_data["Sword5"]=1
-  return 1
+ return 1
  elseif has("foursword") then
 		function_data["Sword5"]=1
-  return 1
+ return 1
  else
 		function_data["Sword5"]=0
-  return 0
+ return 0
  end
 end
 
@@ -398,7 +624,7 @@ function CompletePed()
 	if function_data["CompletePed"] ~= nil then
 		return function_data["CompletePed"]
 	end
-	if (  GotSwords()==1 and GotElements()==1 and GotDungeons()==1 and GotFigurine()==1  ) then
+	if ( GotSwords()==1 and GotElements()==1 and GotDungeons()==1 and GotFigurine()==1 ) then
 		function_data["CompletePed"]=1
 		return 1
 	else
@@ -724,7 +950,7 @@ function HasWizrobeDamage()
 	elseif ( has("weaponslamp_yes") and has("lamp") ) then
 		function_data["HasWizrobeDamage"]=1
 		return 1
-	elseif (  HasBow()==1 ) then
+	elseif ( HasBow()==1 ) then
 		function_data["HasWizrobeDamage"]=2
 		return 2
 	elseif ( has("bombs") ) then
@@ -840,7 +1066,7 @@ function ShopBack()
 	if ( TownDog()==1 ) then
 		function_data["ShopBack"]=1
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and has("gust") ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		function_data["ShopBack"]=1
 		return 1
 	else
@@ -852,7 +1078,7 @@ end
 function SchoolHP()
 	if ( has("cane") and CanSplit4()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and has("cane") and has("gust") ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("cane") and has("gust") ) then
 		return 1
 	elseif ( has("cane") ) then
 		return 3
@@ -864,7 +1090,7 @@ end
 function MusicHouseHP()
 	if ( MusicHouse()==1 ) then
 		return 1
-	elseif( ( has("grabbable_easy") or has("grabbable_hard")  ) and ( HasBoomerang()==1 or has("gust") ) ) then
+	elseif( ( has("grabbable_easy") or has("grabbable_hard") ) and ( HasBoomerang()==1 or has("gust") ) ) then
 		return 1
 	else
 		return 3
@@ -872,13 +1098,13 @@ function MusicHouseHP()
 end
 
 function FountainHP()
-	if ( has("cape")  ) then
+	if ( has("cape") ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and ( has("gust") or ( HasBoomerang()==1 and ( LightArrowBreak()==1 or has("cane") ) ) ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( has("gust") or ( HasBoomerang()==1 and ( LightArrowBreak()==1 or has("cane") ) ) ) ) then
 		return 1
 	elseif ( has("grabbable_hard") and HasMagicBoomerang()==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  ) and ( has("gust") or ( HasBoomerang()==1 and ( LightArrowBreak()==2 or has("cane") ) ) ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( has("gust") or ( HasBoomerang()==1 and ( LightArrowBreak()==2 or has("cane") ) ) ) ) then
 		return 2
 	else
 		return 0
@@ -898,11 +1124,11 @@ function LowerFallsItems()
 		return 1
 	elseif ( AccessMinishWoods()==2 and has("cane") and ( has("flippers") or has("cape") ) ) then
 		return 2
-	elseif ( has("grabbable_easy") and OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==2 and has ("gust") ) then
+	elseif ( has("grabbable_easy") and OverworldBlocks()==1 and ( FallsFusion()==1 or FallsFusion()==2 ) and ( DarkRooms()==1 or DarkRooms()==2 )and has ("gust") ) then
 		return 2
 	elseif ( has("grabbable_easy") and AccessFalls()==2 and has("grip") and has ("gust") ) then
 		return 2
-	elseif ( has("grabbable_hard") and OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==2 and ( HasMagicBoomerang()==1 or has ("gust") ) ) then
+	elseif ( has("grabbable_hard") and OverworldBlocks()==1 and ( FallsFusion()==1 or FallsFusion()==2 ) and ( DarkRooms()==1 or DarkRooms()==2 )and ( HasMagicBoomerang()==1 or has ("gust") ) ) then
 		return 2
 	elseif ( has("grabbable_hard") and AccessFalls()==1 and has("grip") and ( HasMagicBoomerang()==1 or has ("gust") ) ) then
 		return 2
@@ -912,7 +1138,7 @@ function LowerFallsItems()
 end
 
 function LakeIslandHP()
-	if ( has("cape")  ) then
+	if ( has("cape") ) then
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and HasMagicBoomerang()==1 ) then
 		return 1
@@ -923,11 +1149,11 @@ end
 
 
 function LakeSouthHP()
-	if ( AccessLonLon()==1 and CapeExtension()==1  ) then
+	if ( AccessLonLon()==1 and CapeExtension()==1 ) then
 		return 1
 	elseif ( AccessSouthLake()==1 and ( has("cape") or has("flippers") ) ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessLonLon()==1 and LakeShortcut()==1 and HasMagicBoomerang()==1  ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessLonLon()==1 and LakeShortcut()==1 and HasMagicBoomerang()==1 ) then
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessSouthLake()==1 and ( has("gust") or HasMagicBoomerang()==1 ) ) then
 		return 1
@@ -935,7 +1161,7 @@ function LakeSouthHP()
 		return 2
 	elseif ( AccessSouthLake()==2 and ( has("cape") or has("flippers") ) ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessLonLon()==2 and LakeShortcut()==1 and HasMagicBoomerang()==1  ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessLonLon()==2 and LakeShortcut()==1 and HasMagicBoomerang()==1 ) then
 		return 2
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessSouthLake()==2 and ( has("gust") or HasMagicBoomerang()==1 ) ) then
 		return 2
@@ -946,13 +1172,13 @@ end
 
 
 function MinishNorthHP()
-	if ( AccessNorthMinish()==1  ) then
+	if ( AccessNorthMinish()==1 ) then
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessMinishWoods()==1 and ( has("gust") or HasMagicBoomerang()==1 ) ) then
 		return 1
 	elseif ( has("grabbable_hard") and HasBoomerang()==1 ) then
 		return 1
-	elseif ( AccessNorthMinish()==2  ) then
+	elseif ( AccessNorthMinish()==2 ) then
 		return 2
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessMinishWoods()==2 and ( has("gust") or HasMagicBoomerang()==1 ) ) then
 		return 2
@@ -963,11 +1189,11 @@ end
 
 
 function MinishSouthHP()
-	if ( AccessMinishWoods()==1  ) then
+	if ( AccessMinishWoods()==1 ) then
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessBelari()==1 and has("gust") ) then
 		return 1
-	elseif ( AccessMinishWoods()==2  ) then
+	elseif ( AccessMinishWoods()==2 ) then
 		return 2
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and AccessBelari()==2 and has("gust") ) then
 		return 2
@@ -1014,9 +1240,9 @@ function FallsHP()
 		return 1
 	elseif ( OverworldBlocks()==1 and ( CapeExtension()==1 or CapeExtension()==2 ) ) then
 		return 2
-	elseif ( ( AccessFalls()==1 or  AccessFalls()==2 ) and has("grip") and ( has("flippers") or ( ( DarkRooms()==1 or  DarkRooms()==2 ) and ( CapeExtension()==1 or CapeExtension()==2 ) ) ) ) then
+	elseif ( ( AccessFalls()==1 or AccessFalls()==2 ) and has("grip") and ( has("flippers") or ( ( DarkRooms()==1 or DarkRooms()==2 ) and ( CapeExtension()==1 or CapeExtension()==2 ) ) ) ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( AccessFalls()==1 or  AccessFalls()==2 ) and has("grip") and ( ( DarkRooms()==1 or  DarkRooms()==2 ) and ( has("gust") or HasMagicBoomerang()==1 ) ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( AccessFalls()==1 or AccessFalls()==2 ) and has("grip") and ( ( DarkRooms()==1 or DarkRooms()==2 ) and ( has("gust") or HasMagicBoomerang()==1 ) ) ) then
 		return 2
 	else
 		return 0
@@ -1066,7 +1292,7 @@ end
 
 
 function FoWEntranceRupee()
-	if ( has("mitts")  ) then
+	if ( has("mitts") ) then
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
@@ -1077,7 +1303,7 @@ end
 
 
 function FoWHP()
-	if ( FoWCloneSwitch()==1  ) then
+	if ( FoWCloneSwitch()==1 ) then
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
@@ -1088,7 +1314,7 @@ end
 
 
 function ToDRightRupees()
-	if ( ToD2ndRupeePath()==1  ) then
+	if ( ToD2ndRupeePath()==1 ) then
 		return 1
 	elseif ( has("grabbable_hard") and has("gust") and ToDLilypadEnd()==1 ) then
 		return 1
@@ -1101,11 +1327,11 @@ end
 
 
 function PoWRupees()
-	if ( PoWJump()==1  ) then
+	if ( PoWJump()==1 ) then
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and HasMagicBoomerang()==1 ) then
 		return 1
-	elseif ( PoWJump()==2  ) then
+	elseif ( PoWJump()==2 ) then
 		return 2
 	else
 		return 0
@@ -1158,10 +1384,10 @@ function GuardSkip()
 	if function_data["GuardSkip"] ~= nil then
 		return function_data["GuardSkip"]
 	end
-	if ( has("guardskip_on") and has("boots")  ) then
+	if ( has("guardskip_on") and has("boots") ) then
 		function_data["GuardSkip"]=1
 		return 1
-	elseif ( has("guardskip_off") and has("boots")  ) then
+	elseif ( has("guardskip_off") and has("boots") ) then
 		function_data["GuardSkip"]=2
 		return 2
 	else
@@ -1288,10 +1514,10 @@ function CapeExtension()
 	if function_data["CapeExtension"] ~= nil then
 		return function_data["CapeExtension"]
 	end
-	if ( has("capeextension_on") and ( has("flippers") or has("cape") )  ) then
+	if ( has("capeextension_on") and ( has("flippers") or has("cape") ) ) then
 		function_data["CapeExtension"]=1
 		return 1
-	elseif ( has("capeextension_off") and has("flippers")  ) then
+	elseif ( has("capeextension_off") and has("flippers") ) then
 		function_data["CapeExtension"]=1
 		return 1
 	elseif ( has("capeextension_off") and has("cape") ) then
@@ -1360,13 +1586,13 @@ function CloudsKill()
 	if ( has("cloudskill_off") and HasDamageSource()==1 ) then
 		function_data["CloudsKill"]=1
 		return 1
-	elseif ( has("cloudskill_on")  ) then
+	elseif ( has("cloudskill_on") ) then
 		function_data["CloudsKill"]=1
 		return 1
 	elseif ( has("cloudskill_off") and HasDamageSource()==2 ) then
 		function_data["CloudsKill"]=2
 		return 2
-	elseif ( has("cloudskill_off")  ) then
+	elseif ( has("cloudskill_off") ) then
 		function_data["CloudsKill"]=2
 		return 2
 	else

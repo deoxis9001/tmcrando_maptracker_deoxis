@@ -21,7 +21,7 @@ end
 function AccessSouthLake() 
 	if ( ( AccessLonLon()==1 and CapeExtension()==1 ) or ( AccessNorthMinish()==1 and has("mitts") ) ) then
 		return 1
-	elseif ( (AccessLonLon()==1 or AccessLonLon()==2) and (CapeExtension()==1 or CapeExtension()==2 ) ) or ( ( AccessNorthMinish()==1 or AccessNorthMinish()==2 ) and has("mitts") )  then
+	elseif ( (AccessLonLon()==1 or AccessLonLon()==2) and (CapeExtension()==1 or CapeExtension()==2 ) ) or ( ( AccessNorthMinish()==1 or AccessNorthMinish()==2 ) and has("mitts") ) then
 		return 2
 	else
 		return 0
@@ -121,6 +121,8 @@ end
 function AccessRuins() 
 	if ( RuinsFusion()==1 and AccessSwamp()==1 and ( has("cape") or ( has("boots") and ( has("flippers") or HasBow()==1 or SwampShortcut()==1 or SwampWindCrest()==1 ) ) ) ) then
 		return 1
+	elseif ( ( RuinsFusion()==1 or RuinsFusion()==2 ) and AccessSwamp()==1 and ( has("cape") or ( has("boots") and ( has("flippers") or HasBow()==1 or SwampShortcut()==1 or SwampWindCrest()==1 ) ) ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -147,7 +149,7 @@ end
 function AccessFalls()
 	if ( ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==1 and has("grip") ) or FallsWindCrest()==1 or ( has("grip") and ( CloudWindCrest()==1 or ( StrangerFusion()==1 and CompletedGolds()==1 ) ) ) ) then
 		return 1
-	elseif ( OverworldBlocks()==1 and FallsFusion()==1 and DarkRooms()==2 and has("grip") ) then
+	elseif ( OverworldBlocks()==1 and ( FallsFusion()==1 or FallsFusion()==2 ) and ( DarkRooms()==1 or DarkRooms()==2 ) and has("grip") ) then
 		return 2
 	else
 		return 0
@@ -165,9 +167,9 @@ function AccessClouds()
 end
 
 function AccessWindTribe() 
-	if  ( StrangerFusion()==1 and CompletedGolds()==1 ) or ( AccessClouds()==1 and CloudFusions()==1 ) or CloudWindCrest()==1  then
+	if ( StrangerFusion()==1 and CompletedGolds()==1 ) or ( AccessClouds()==1 and CloudFusions()==1 ) or CloudWindCrest()==1 then
 		return 1
-	elseif ( AccessClouds()==2 and CloudFusions()==1 ) then
+	elseif ( ( AccessClouds()==1 or AccessClouds()==1 ) and ( CloudFusions()==1 or CloudFusions()==1 ) ) then
 		return 2
 	else
 		return 0
@@ -195,7 +197,7 @@ end
 function CoFBasementAccess()
 	if ( CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 ) and CoFSpikeBeetle()==1 and CoF1stDoor()==1 and HasSword()==1 ) ) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 ) ) then
 		return 1
-	elseif ( CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 or Bobombs()==2 ) and ( CoFSpikeBeetle()==1 or CoFSpikeBeetle()==2 )  and ( CoF1stDoor()==1 or CoF1stDoor()==2 ) and HasSword()==1 ) ) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 ) ) then
+	elseif ( CoFRedWarp()==1 or ( ( CoFBlueWarp()==1 or ( ( BombWalls()==1 or Bobombs()==1 or Bobombs()==2 ) and ( CoFSpikeBeetle()==1 or CoFSpikeBeetle()==2 ) and ( CoF1stDoor()==1 or CoF1stDoor()==2 ) and HasSword()==1 ) ) and CoF2ndDoor()==1 and has("cane") and HasSword()==1 ) ) then
 		return 2
 	else
 		return 0
@@ -204,6 +206,8 @@ end
 function AccessFortress()
 	if ( AccessRuins()==1 and HasSword()==1 ) then
 		return 1
+	elseif ( AccessRuins()==2 and HasSword()==1 ) then
+		return 2
 	else
 		return 0
 	end 

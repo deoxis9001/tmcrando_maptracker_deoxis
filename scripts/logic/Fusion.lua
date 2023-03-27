@@ -100,7 +100,7 @@ function Json_Crenel_Mines_Fuzer2()
 end
 
 function Json_Crenel_Mines_Fuzer3() 
-	if (  CompleteCoF()==1 ) then
+	if ( CompleteCoF()==1 ) then
 		return 1
 	else
 		return 0
@@ -140,7 +140,7 @@ function Json_Crenel_Dojo_Fuzer()
 end
 
 function Json_CrenelBase_MinishCrack_Fuzer() 
-	if ( CrenelBase_MinishCrack_Chest()==1  ) then
+	if ( CrenelBase_MinishCrack_Chest()==1 ) then
 		return 1
 	else
 		return 0
@@ -407,6 +407,8 @@ end
 function Json_Ruins_MinishHole_Fuzer() 
 	if ( AccessRuins()==1 ) then
 		return 1
+	elseif ( AccessRuins()==2 ) then
+		return 2, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 

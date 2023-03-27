@@ -20,7 +20,7 @@ AUTOTRACKER_ENABLE_FUZER_TRACKING = true
 TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = true
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_FUZER = false
-TMC_AUTOTRACKER_DEBUG_ITEM = false
+TMC_AUTOTRACKER_DEBUG_ITEM = true
 VERSION_ALPHA = true
 VERSION_BETA = true
 if TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND == true or TMC_AUTOTRACKER_DEBUG_LOCATION == true or TMC_AUTOTRACKER_DEBUG_ITEM == true then
@@ -104,7 +104,7 @@ end
 -- Managed Item in this pack
 ------------------------------------------------------------------
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
-    Tracker:AddMaps(JsMap.."maps.json")
+  Tracker:AddMaps(JsMap.."maps.json")
 	ScriptHost:LoadScript(ScriptLocations.."Castle.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Clouds.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Crenel.lua")
@@ -138,17 +138,17 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 end
 	Tracker:AddLayouts(JsLayouts.."tracker.json")
 if (string.find(Tracker.ActiveVariantUID, "_h")) then
-    Tracker:AddLayouts(JsLayouts.."standard_h_broadcast.json")
+  Tracker:AddLayouts(JsLayouts.."standard_h_broadcast.json")
 else
-    Tracker:AddLayouts(JsLayouts.."standard_broadcast.json")
+  Tracker:AddLayouts(JsLayouts.."standard_broadcast.json")
 end
 ------------------------------------------------------------------
 -- Autotracking
 ------------------------------------------------------------------
 
 if _VERSION == "Lua 5.3" then
-  ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
+ ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
 else
-  print("Your tracker version does not support autotracking")
+ print("Your tracker version does not support autotracking")
 end
 
