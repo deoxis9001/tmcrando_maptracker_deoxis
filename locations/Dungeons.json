@@ -1008,7 +1008,7 @@
 		"map":"map",
 		"x":2337,
 		"y":1035,
-		"restrict_visibility_rules":["dhc_dhc,dungeonser_on"]
+		"restrict_visibility_rules":["dhc_tod,dungeonser_on"]
 	  },
 	  {
 		"map":"map",
