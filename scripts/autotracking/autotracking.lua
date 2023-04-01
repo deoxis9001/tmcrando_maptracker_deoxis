@@ -2551,13 +2551,9 @@ function updateLocations(segment)
 
 		--HYRULE TOWN
 		updateSectionFlag(segment, "@Town - Eastern Shops/Simon's Simulations", 0x2002c9c, 0x02)
-		if hasnot("cucco_none") then
-			updateSectionFlag(segment, "@Town - Anju/Round 10 Gift", 0x2002ca5, 0x80)
-			UpdateCucco(segment)
-		end
-		if hasnot("goron_none") then
-			UpdateGoronShop(segment)
-		end
+		updateSectionFlag(segment, "@Town - Anju/Round 10 Gift", 0x2002ca5, 0x80)
+		UpdateCucco(segment)
+		UpdateGoronShop(segment)
 		updateSectionFlag(segment, "@Town - Hearth Ledge/Chest", 0x2002cd5, 0x01)
 		updateSectionFlag(segment, "@Town - School/Roof Chest", 0x2002cd5, 0x02)
 		updateSectionFlag(segment, "@Town - School/Pull the Statue", 0x2002cfc, 0x40)

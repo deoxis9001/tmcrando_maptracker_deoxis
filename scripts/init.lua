@@ -13,6 +13,9 @@ JsLocations="locations/"
 
 has_item_data={}
 function_data = {}
+has_item_option_dev={}
+has_item_option_dev["out_logic_no"]=false
+has_item_option_dev["out_logic_yes"]=true
 --Activate the cache reset
 Cache_reset=false
 
