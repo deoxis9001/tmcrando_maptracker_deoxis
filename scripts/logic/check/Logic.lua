@@ -509,7 +509,7 @@ end
 function Falls_1stCave_Chest()
 	if ( function_Cached("OverworldBlocks")==1 and function_Cached("FallsFusion")==1 and function_Cached("DarkRooms")==1 and function_Cached("BombWalls")==1 ) or ( function_Cached("AccessFalls")==1 and has("grip") and function_Cached("BombWalls")==1 ) then
 		return 1
-	elseif ( function_Cached("OverworldBlocks")==1 and function_Cached("FallsFusion")==1 and function_Cached("DarkRooms")==2 and function_Cached("BombWalls")==1 ) or ( function_Cached("AccessFalls")==2  and has("grip") and function_Cached("BombWalls")==1 ) then
+	elseif ( function_Cached("OverworldBlocks")==1 and ( function_Cached("FallsFusion")==2 or function_Cached("FallsFusion")==1 ) and ( function_Cached("DarkRooms")==2 or function_Cached("DarkRooms")==1 ) and function_Cached("BombWalls")==1 ) or ( function_Cached("AccessFalls")==2  and has("grip") and function_Cached("BombWalls")==1 ) then
 		return 2
 	else
 		return 0
@@ -519,7 +519,7 @@ end
 function Falls_Cliff_Chest()
 	if ( function_Cached("OverworldBlocks")==1 and function_Cached("FallsFusion")==1 and function_Cached("DarkRooms")==1 and function_Cached("BombWalls")==1 and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) ) or ( function_Cached("AccessFalls")==1 and has("grip") and function_Cached("BombWalls")==1 and function_Cached("DarkRooms")==1 and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) ) then
 		return 1
-	elseif ( function_Cached("OverworldBlocks")==1 and function_Cached("FallsFusion")==1 and function_Cached("DarkRooms")==2 and function_Cached("BombWalls")==1 and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) ) or ( ( function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==1) and has("grip") and function_Cached("BombWalls")==1 and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) ) then
+	elseif ( function_Cached("OverworldBlocks")==1 and ( function_Cached("FallsFusion")==2 or function_Cached("FallsFusion")==1 ) and ( function_Cached("DarkRooms")==2 or function_Cached("DarkRooms")==1 ) and function_Cached("BombWalls")==1 and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) ) or ( ( function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==2) and has("grip") and function_Cached("BombWalls")==1 and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) ) then
 		return 2
 	else
 		return 0
@@ -529,7 +529,7 @@ end
 function Falls_SouthDigSpot()
 	if ( function_Cached("OverworldBlocks")==1 and function_Cached("FallsFusion")==1 and function_Cached("DarkRooms")==1 and has("mitts") ) or ( function_Cached("AccessFalls")==1 and has("grip") and has("mitts") ) then
 		return 1
-	elseif ( function_Cached("OverworldBlocks")==1 and function_Cached("FallsFusion")==1 and function_Cached("DarkRooms")==2 and has("mitts") ) or ( function_Cached("AccessFalls")==2 and has("grip") and has("mitts") ) then
+	elseif ( function_Cached("OverworldBlocks")==1 and ( function_Cached("FallsFusion")==2 or function_Cached("FallsFusion")==1 ) and ( function_Cached("DarkRooms")==2 or function_Cached("DarkRooms")==1 ) and has("mitts") ) or ( function_Cached("AccessFalls")==2 and has("grip") and has("mitts") ) then
 		return 2
 	else
 		return 0
@@ -1102,14 +1102,18 @@ end
 function Ruins_ButterflyFusion_Item() 
 	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions20") ) ) and function_Cached("AccessRuins")==1 ) then
 		return 1
+	elseif ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions20") ) ) and function_Cached("AccessRuins")==2 ) then
+		return 2
 	else
 		return 0
 	end 
 end
 
 function Ruins_BombCave_Chest() 
- if ( function_Cached("AccessRuins")==1 and function_Cached("BombWalls")==1 ) then
- return 1
+	if ( function_Cached("AccessRuins")==1 and function_Cached("BombWalls")==1 ) then
+		return 1
+	elseif ( function_Cached("AccessRuins")==2 and function_Cached("BombWalls")==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1118,6 +1122,8 @@ end
 function Ruins_MinishHome_Chest()
 	if ( function_Cached("AccessRuins")==1 ) then
 		return 1
+	elseif ( function_Cached("AccessRuins")==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1126,6 +1132,8 @@ end
 function Ruins_PillarsFusion_Chest() 
 	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions64") ) ) and function_Cached("AccessRuins")==1 and function_Cached("RuinsArmos")==1 ) then
 		return 1
+	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions64") ) ) and function_Cached("AccessRuins")==2 and function_Cached("RuinsArmos")==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1134,7 +1142,7 @@ end
 function Ruins_BeanStalkFusion_BigChest() 
 	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions17") ) ) and function_Cached("AccessRuins")==1 and function_Cached("RuinsArmos")==1 and function_Cached("RuinsTektites")==1 ) then
 		return 1
-	elseif ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions17") ) ) and function_Cached("AccessRuins")==1 and function_Cached("RuinsArmos")==1 and function_Cached("RuinsTektites")==2 ) then
+	elseif ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions17") ) ) and ( function_Cached("AccessRuins")==1 or function_Cached("AccessRuins")==2 )  and function_Cached("RuinsArmos")==1 and ( function_Cached("RuinsTektites")==1 or function_Cached("RuinsTektites")==2 ) ) then
 		return 2
 	else
 		return 0
@@ -1144,7 +1152,7 @@ end
 function Ruins_CrackFusion_Chest()
 	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions41") ) ) and function_Cached("AccessRuins")==1 and function_Cached("RuinsArmos")==1 and function_Cached("RuinsTektites")==1 ) then
 		return 1
-	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions41") ) ) and function_Cached("AccessRuins")==1 and function_Cached("RuinsArmos")==1 and function_Cached("RuinsTektites")==2 ) then
+	elseif ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions41") ) ) and ( function_Cached("AccessRuins")==1 or function_Cached("AccessRuins")==2 )  and function_Cached("RuinsArmos")==1 and ( function_Cached("RuinsTektites")==1 or function_Cached("RuinsTektites")==2 ) ) then
 		return 2
 	else
 		return 0
@@ -1154,7 +1162,7 @@ end
 function Ruins_MinishCave_HP() 
 	if ( function_Cached("AccessRuins")==1 and function_Cached("RuinsArmos")==1 and function_Cached("RuinsTektites")==1 ) then
 		return 1
-	elseif ( function_Cached("AccessRuins")==1 and function_Cached("RuinsArmos")==1 and function_Cached("RuinsTektites")==2 ) then
+	elseif ( ( function_Cached("AccessRuins")==1 or function_Cached("AccessRuins")==2 )  and function_Cached("RuinsArmos")==1 and ( function_Cached("RuinsTektites")==1 or function_Cached("RuinsTektites")==2 ) ) then
 		return 2
 	else
 		return 0
@@ -1164,8 +1172,8 @@ end
 function Ruins_ArmosKill_Chest() 
 	if ( function_Cached("AccessRuins")==1 and function_Cached("HasDamageSource")==1 ) then
 		return 1
-	elseif ( function_Cached("AccessRuins")==1 and ( function_Cached("HasDamageSource")==1 or function_Cached("HasDamageSource")==2 ) ) then
-		return 1
+	elseif ( ( function_Cached("AccessRuins")==1 or function_Cached("AccessRuins")==2 ) and ( function_Cached("HasDamageSource")==1 or function_Cached("HasDamageSource")==2 ) ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1174,6 +1182,8 @@ end
 function Ruins_GoldenOcto() 
 	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions54") ) ) and has("golden_enemy_on") and function_Cached("AccessRuins")==1 and function_Cached("HasSword")==1 ) then
 		return 1
+	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions54") ) ) and has("golden_enemy_on") and function_Cached("AccessRuins")==2 and function_Cached("HasSword")==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1182,6 +1192,8 @@ end
 function Ruins_NearFoWFusion_Chest()
 	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0a") ) ) and function_Cached("AccessRuins")==1 and function_Cached("HasSword")==1 ) then
 		return 1
+	elseif ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0a") ) ) and function_Cached("AccessRuins")==2 and function_Cached("HasSword")==1 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -2094,6 +2106,8 @@ end
 function Swamp_Fusion() 
 	if ( function_Cached("AccessSwamp")==1 and function_Cached("RuinsFusion")==1 and ( ( has("boots") and has("flippers") ) or has("cape") ) ) then
 		return 1
+	elseif ( function_Cached("AccessSwamp")==1 and function_Cached("RuinsFusion")==2 and ( ( has("boots") and has("flippers") ) or has("cape") ) ) then
+		return 2
 	else
 		return 0
 	end 

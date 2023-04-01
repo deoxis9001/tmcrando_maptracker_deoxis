@@ -102,8 +102,6 @@ end
 function updateWallUsedFixed(code, segment, locationData)
 	local item1 = Tracker:FindObjectForCode("blueL")
 	local item2 = Tracker:FindObjectForCode("blueS")
-	print("------------------")
-	print("value")
 
 	if item1 or item2 then
 		local fusion_count_wall_local = 0
@@ -114,8 +112,6 @@ function updateWallUsedFixed(code, segment, locationData)
 			local flag1 = 0xF3
 			local flag2 = 0xF2
 			local value = ReadU8(segment, address)
-			print("------------------")
-			print(value)
 
 			-- local flagTest1 = value & flag1
 
