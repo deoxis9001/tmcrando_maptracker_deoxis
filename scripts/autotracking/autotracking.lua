@@ -1,17 +1,4 @@
-print("")
-print("Active Auto-Tracker Configuration")
-print("")
-print("Enable Item Tracking:           ", AUTOTRACKER_ENABLE_ITEM_TRACKING)
-print("Enable Location Tracking:         ", AUTOTRACKER_ENABLE_LOCATION_TRACKING)
-print("Enable Fusions Tracking:          ", AUTOTRACKER_ENABLE_FUZER_TRACKING)
-if TMC_AUTOTRACKER_DEBUG then
-	print("Enable Debug Logging :          ", TMC_AUTOTRACKER_DEBUG)
-	print("Enable Debug Logging items:       ", TMC_AUTOTRACKER_DEBUG_ITEM)
-	print("Enable Debug Logging Fusions:      ", TMC_AUTOTRACKER_DEBUG_FUZER)
-	print("Enable Debug Logging localisation:    ", TMC_AUTOTRACKER_DEBUG_LOCATION)
-	print("Enable Debug Logging error:       ", TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND)
-end
-print("")
+
 
 function autotracker_started()
 	print("Started Tracking")

@@ -189,6 +189,7 @@
 		"name":"First Gibdos",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_Gibdos"],
+        "capture_item": true,
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  },
@@ -196,6 +197,7 @@
 		"name":"Other Gibdos",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_OtherGibdos"],
+        "capture_item": true,
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  },
@@ -511,6 +513,7 @@
 		"name":"Right Side Heart Piece",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Fortress_RightSideHeartPiece"],
+        "capture_item": true,
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  },
@@ -740,6 +743,7 @@
 		"name":"Heart Piece",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Palace_HeartPiece"],
+        "capture_item":true,
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  },

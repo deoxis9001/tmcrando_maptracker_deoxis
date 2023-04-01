@@ -1,9 +1,9 @@
 function Json_Crenel_Mines_Melari()
-  if Crenel_Melari_NPC()==1 then
+  if function_Cached("Crenel_Melari_NPC")==1 then
     return 1
-  elseif Crenel_Melari_NPC()==2 then
+  elseif function_Cached("Crenel_Melari_NPC")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_Melari_NPC()==2 then
+  elseif function_Cached("Crenel_Melari_NPC")==2 then
     return 1, AccessibilityLevel.SequenceBreak
   else
     return 0
@@ -11,11 +11,11 @@ function Json_Crenel_Mines_Melari()
 end
 
 function Json_Crenel_Mines_Digging()
-  if Crenel_Melari_Mining()==1 then
+  if function_Cached("Crenel_Melari_Mining")==1 then
     return 1
-  elseif Crenel_Melari_Mining()==2 then
+  elseif function_Cached("Crenel_Melari_Mining")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_Melari_Mining()==3 then
+  elseif function_Cached("Crenel_Melari_Mining")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -23,11 +23,11 @@ function Json_Crenel_Mines_Digging()
 end
 
 function Json_Crenel_Mines_Chest()
-  if Crenel_MinesPathFusion_Chest()==1 then
+  if function_Cached("Crenel_MinesPathFusion_Chest")==1 then
     return 1
-  elseif Crenel_MinesPathFusion_Chest()==2 then
+  elseif function_Cached("Crenel_MinesPathFusion_Chest")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_MinesPathFusion_Chest()==2 then
+  elseif function_Cached("Crenel_MinesPathFusion_Chest")==2 then
     return 1, AccessibilityLevel.SequenceBreak
   else
     return 0
@@ -35,11 +35,11 @@ function Json_Crenel_Mines_Chest()
 end
 
 function Json_Crenel_GreatFairy_Item()
-  if Crenel_GreatFairy_NPC()==1 then
+  if function_Cached("Crenel_GreatFairy_NPC")==1 then
     return 1
-  elseif Crenel_GreatFairy_NPC()==2 then
+  elseif function_Cached("Crenel_GreatFairy_NPC")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_GreatFairy_NPC()==3 then
+  elseif function_Cached("Crenel_GreatFairy_NPC")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -47,11 +47,11 @@ function Json_Crenel_GreatFairy_Item()
 end
 
 function Json_Crenel_Beanstalk_HeartPiece()
-  if Crenel_BeanstalkFusion_HP()==1 then
+  if function_Cached("Crenel_BeanstalkFusion_HP")==1 then
     return 1
-  elseif Crenel_BeanstalkFusion_HP()==2 then
+  elseif function_Cached("Crenel_BeanstalkFusion_HP")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_BeanstalkFusion_HP()==3 then
+  elseif function_Cached("Crenel_BeanstalkFusion_HP")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -59,11 +59,11 @@ function Json_Crenel_Beanstalk_HeartPiece()
 end
 
 function Json_Crenel_Beanstalk_Rupees()
-  if Crenel_BeanstalkFusion_Item()==1 then
+  if function_Cached("Crenel_BeanstalkFusion_Item")==1 then
     return 1
-  elseif Crenel_BeanstalkFusion_Item()==2 then
+  elseif function_Cached("Crenel_BeanstalkFusion_Item")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_BeanstalkFusion_Item()==3 then
+  elseif function_Cached("Crenel_BeanstalkFusion_Item")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -71,11 +71,11 @@ function Json_Crenel_Beanstalk_Rupees()
 end
 
 function Json_Crenel_WallChest_Chest()
-  if Crenel_ClimbFusion_Chest()==1 then
+  if function_Cached("Crenel_ClimbFusion_Chest")==1 then
     return 1
-  elseif Crenel_ClimbFusion_Chest()==2 then
+  elseif function_Cached("Crenel_ClimbFusion_Chest")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_ClimbFusion_Chest()==3 then
+  elseif function_Cached("Crenel_ClimbFusion_Chest")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -83,11 +83,11 @@ function Json_Crenel_WallChest_Chest()
 end
 
 function Json_Crenel_MiddleCrenelTektiteGolden_Kill()
-  if Crenel_VineTop_GoldenTektite()==1 then
+  if function_Cached("Crenel_VineTop_GoldenTektite")==1 then
     return 1
-  elseif Crenel_VineTop_GoldenTektite()==2 then
+  elseif function_Cached("Crenel_VineTop_GoldenTektite")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_VineTop_GoldenTektite()==3 then
+  elseif function_Cached("Crenel_VineTop_GoldenTektite")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -95,11 +95,11 @@ function Json_Crenel_MiddleCrenelTektiteGolden_Kill()
 end
 
 function Json_Crenel_TopTektiteGolden_Kill()
-  if Crenel_BelowCoF_GoldenTektite()==1 then
+  if function_Cached("Crenel_BelowCoF_GoldenTektite")==1 then
     return 1
-  elseif Crenel_BelowCoF_GoldenTektite()==2 then
+  elseif function_Cached("Crenel_BelowCoF_GoldenTektite")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_BelowCoF_GoldenTektite()==3 then
+  elseif function_Cached("Crenel_BelowCoF_GoldenTektite")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -107,11 +107,11 @@ function Json_Crenel_TopTektiteGolden_Kill()
 end
 
 function Json_Crenel_RainyMinishPathChest_Chest()
-  if Crenel_RainPathFusion_Chest()==1 then
+  if function_Cached("Crenel_RainPathFusion_Chest")==1 then
     return 1
-  elseif Crenel_RainPathFusion_Chest()==2 then
+  elseif function_Cached("Crenel_RainPathFusion_Chest")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_RainPathFusion_Chest()==3 then
+  elseif function_Cached("Crenel_RainPathFusion_Chest")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -119,11 +119,11 @@ function Json_Crenel_RainyMinishPathChest_Chest()
 end
 
 function Json_Crenel_BridgeCave_chest()
-  if Crenel_BridgeCave_Chest()==1 then
+  if function_Cached("Crenel_BridgeCave_Chest")==1 then
     return 1
-  elseif Crenel_BridgeCave_Chest()==2 then
+  elseif function_Cached("Crenel_BridgeCave_Chest")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_BridgeCave_Chest()==3 then
+  elseif function_Cached("Crenel_BridgeCave_Chest")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -131,11 +131,11 @@ function Json_Crenel_BridgeCave_chest()
 end
 
 function Json_Crenel_BusinessScrub_Scrub()
-  if Crenel_Scrub_NPC()==1 then
+  if function_Cached("Crenel_Scrub_NPC")==1 then
     return 1
-  elseif Crenel_Scrub_NPC()==2 then
+  elseif function_Cached("Crenel_Scrub_NPC")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_Scrub_NPC()==3 then
+  elseif function_Cached("Crenel_Scrub_NPC")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -143,11 +143,11 @@ function Json_Crenel_BusinessScrub_Scrub()
 end
 
 function Json_Crenel_Fairy_HeartPiece()
-  if Crenel_FairyCave_HP()==1 then
+  if function_Cached("Crenel_FairyCave_HP")==1 then
     return 1
-  elseif Crenel_FairyCave_HP()==2 then
+  elseif function_Cached("Crenel_FairyCave_HP")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_FairyCave_HP()==3 then
+  elseif function_Cached("Crenel_FairyCave_HP")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -155,11 +155,11 @@ function Json_Crenel_Fairy_HeartPiece()
 end
 
 function Json_Crenel_Dojo_Chests()
-  if Crenel_Dojo_Chest()==1 then
+  if function_Cached("Crenel_Dojo_Chest")==1 then
     return 1
-  elseif Crenel_Dojo_Chest()==2 then
+  elseif function_Cached("Crenel_Dojo_Chest")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_Dojo_Chest()==3 then
+  elseif function_Cached("Crenel_Dojo_Chest")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -167,11 +167,11 @@ function Json_Crenel_Dojo_Chests()
 end
 
 function Json_Crenel_Dojo_HeartPiece()
-  if Crenel_Dojo_HP()==1 then
+  if function_Cached("Crenel_Dojo_HP")==1 then
     return 1
-  elseif Crenel_Dojo_HP()==2 then
+  elseif function_Cached("Crenel_Dojo_HP")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_Dojo_HP()==3 then
+  elseif function_Cached("Crenel_Dojo_HP")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -179,11 +179,11 @@ function Json_Crenel_Dojo_HeartPiece()
 end
 
 function Json_Crenel_Dojo_Grayblade()
-  if Crenel_Dojo_NPC()==1 then
+  if function_Cached("Crenel_Dojo_NPC")==1 then
     return 1
-  elseif Crenel_Dojo_NPC()==2 then
+  elseif function_Cached("Crenel_Dojo_NPC")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_Dojo_NPC()==3 then
+  elseif function_Cached("Crenel_Dojo_NPC")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -191,11 +191,11 @@ function Json_Crenel_Dojo_Grayblade()
 end
 
 function Json_Crenel_MinesCave_chest()
-  if Crenel_UpperBlock_Chest()==1 then
+  if function_Cached("Crenel_UpperBlock_Chest")==1 then
     return 1
-  elseif Crenel_UpperBlock_Chest()==2 then
+  elseif function_Cached("Crenel_UpperBlock_Chest")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_UpperBlock_Chest()==3 then
+  elseif function_Cached("Crenel_UpperBlock_Chest")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
@@ -203,16 +203,13 @@ function Json_Crenel_MinesCave_chest()
 end
 
 function Json_Crenel_DiggingCave_Heartpiece()
-  if Crenel_DigCave_HP()==1 then
+  if function_Cached("Crenel_DigCave_HP")==1 then
     return 1
-  elseif Crenel_DigCave_HP()==2 then
+  elseif function_Cached("Crenel_DigCave_HP")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif Crenel_DigCave_HP()==3 then
+  elseif function_Cached("Crenel_DigCave_HP")==3 then
     return 1, AccessibilityLevel.Inspect
   else
     return 0
   end
 end
-
-Tracker:AddLocations(JsLocations.."Crenel.json")
-Tracker:AddLocations(JsLocations.."Mines.json")

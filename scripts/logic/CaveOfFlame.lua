@@ -1,5 +1,5 @@
 function CoF1stDoor()
-	if ( Tracker:ProviderCountForCode("cof_smallkey") >= 2 or (CoFNoBlueWarp()==1 and Tracker:ProviderCountForCode("cof_smallkey") >= 1 ) ) then
+	if ( Tracker:ProviderCountForCode("cof_smallkey") >= 2 or (function_Cached("CoFNoBlueWarp")==1 and Tracker:ProviderCountForCode("cof_smallkey") >= 1 ) ) then
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
