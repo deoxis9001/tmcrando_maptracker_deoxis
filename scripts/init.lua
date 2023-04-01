@@ -22,18 +22,20 @@ Cache_reset=false
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUZER_TRACKING = true
-TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = true
+VERSION_ALPHA = true
+VERSION_BETA = false
+VERSION_RANDO = "0.7.0arev3"
+------------------------------------------------------------------
+-- Configuration Debug options
+------------------------------------------------------------------
+TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_FUZER = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
+TMC_CACHE_DEBUG_FUNCTION = false
+TMC_CACHE_DEBUG_ITEM = false
 
-VERSION_ALPHA = true
-VERSION_BETA = false
-if TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND == true or TMC_AUTOTRACKER_DEBUG_LOCATION == true or TMC_AUTOTRACKER_DEBUG_ITEM == true then
-	TMC_AUTOTRACKER_DEBUG = true
-else
-	TMC_AUTOTRACKER_DEBUG = false
-end
+
 
 ------------------------------------------------------------------
 -- Logic Pack
