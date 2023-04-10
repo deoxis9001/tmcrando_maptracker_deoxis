@@ -2104,9 +2104,9 @@ end
 
 
 function Swamp_Fusion() 
-	if ( function_Cached("AccessSwamp")==1 and function_Cached("RuinsFusion")==1 and ( ( has("boots") and has("flippers") ) or has("cape") ) ) then
+	if ( function_Cached("AccessSwamp")==1 and function_Cached("RuinsFusion")==1 ) then
 		return 1
-	elseif ( function_Cached("AccessSwamp")==1 and function_Cached("RuinsFusion")==2 and ( ( has("boots") and has("flippers") ) or has("cape") ) ) then
+	elseif ( function_Cached("AccessSwamp")==1 and function_Cached("RuinsFusion")==2 ) then
 		return 2
 	else
 		return 0

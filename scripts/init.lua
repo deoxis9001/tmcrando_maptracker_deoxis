@@ -14,10 +14,12 @@ JsLocations="locations/"
 has_item_data={}
 function_data = {}
 has_item_option_dev={}
-has_item_option_dev["out_logic_no"]=false
-has_item_option_dev["out_logic_yes"]=true
+function_data_fusion={}
+-- has_item_option_dev["out_logic_no"]=false
+-- has_item_option_dev["out_logic_yes"]=true
 --Activate the cache reset
 Cache_reset=false
+function_count = 0
 
 ------------------------------------------------------------------
 -- Configuration options for scripted systems in this pack
@@ -86,12 +88,12 @@ sword = SwordProgress("Progressive Sword","sword0")
 clouds = Kinstone("Kinstone Clouds","clouds","images/items/Kinstone Clouds Half.png","images/items/Kinstone Clouds Half.png",5,0)
 falls = Kinstone("Kinstone Viel Fall","falls","images/items/Kinstone Falls Half.png",nil,1,0)
 wilds = Kinstone("Kinstone Swamp","wilds","images/items/Kinstone Wilds Half.png",nil,3,0)
-blueL = Kinstone("Kingstone Blue L","blueL","images/items/KinstoneBlueL.png","images/items/KinstoneBlueL.png",9,0)
-blueS = Kinstone("Kingstone Blue S","blueS","images/items/KinstoneBlueS.png",nil,9,0)
+blueL = Kinstone("Kingstone Blue L","blueL","images/items/KinstoneBlueL.png","images/items/KinstoneBlueL.png",18,0)
+blueS = Kinstone("Kingstone Blue S","blueS","images/items/KinstoneBlueS.png",nil,24,0)
 redE = Kinstone("Kingstone Red E","redE","images/items/KinstoneRedE.png",nil,9,0)
 redV = Kinstone("Kingstone Red V","redV","images/items/KinstoneRedV.png",nil,7,0)
 redW = Kinstone("Kingstone Red W","redW","images/items/KinstoneRedW.png","images/items/KinstoneRedW.png",9,0)
-greenG = Kinstone("Kingstone Green G","greenG","images/items/KinstoneGreenG.png",nil,16,0)
+greenG = Kinstone("Kingstone Green G","greenG","images/items/KinstoneGreenG.png",nil,49,0)
 greenC = Kinstone("Kingstone Green C","greenC","images/items/KinstoneGreenC.png","images/items/KinstoneGreenC.png",17,0)
 greenP = Kinstone("Kingstone Green P","greenP","images/items/KinstoneGreenP.png",nil,16,0)
 fusiongoldcombined = KinstoneOptions("This converts the different shaped Golden Kinstones into a single Golden shape. 9 of these are shuffled into the world, the locations of the fusions are not shuffled and all ask for the same shape.", "fusiongoldcombined","images/options/fusions_settings/gold_combined_on.png","images/options/fusions_settings/gold_combined_off.png",0)
@@ -100,20 +102,22 @@ fusiongreencombined = KinstoneOptions("This converts the different shaped Green 
 fusionbluecombined = KinstoneOptions("This converts the different shaped Blue Kinstones into a single Blue shape. The locations of the fusions are not shuffled and all ask for the same shape.", "fusionbluecombined","images/options/fusions_settings/blue_combined_on.png","images/options/fusions_settings/blue_combined_off.png",3)
 swordprogress = SwordOptions("Some item upgrades are treated as completely independent items by the game.","progressiveitems","images/options/weapons_settings/progressive_on.png","images/options/weapons_settings/progressive_off.png")
 
+
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------
 if(VERSION_ALPHA==true) then
-	Tracker:AddItems(JsItems.."alpha.json")
+	Tracker:AddItems(JsItems.."version/alpha.json")
 elseif(VERSION_BETA==true) then
-	Tracker:AddItems(JsItems.."beta.json")
+	Tracker:AddItems(JsItems.."version/beta.json")
 end 
 
-Tracker:AddItems(JsItems.."common.json")
-Tracker:AddItems(JsItems.."dungeon_items.json")
-Tracker:AddItems(JsItems.."fusion.json")
-Tracker:AddItems(JsItems.."keys.json")
-Tracker:AddItems(JsItems.."options.json")
+Tracker:AddItems(JsItems.."items/common.json")
+Tracker:AddItems(JsItems.."items/fusion.json")
+
+Tracker:AddItems(JsItems.."dungeons/items.json")
+Tracker:AddItems(JsItems.."dungeons/keys.json")
+Tracker:AddItems(JsItems.."options/settings.json")
 
 
 ------------------------------------------------------------------

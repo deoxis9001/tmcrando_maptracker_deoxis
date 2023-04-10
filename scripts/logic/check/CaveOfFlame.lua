@@ -122,8 +122,10 @@ end
 
 
 function CompleteCoF()
-	if ( has("cof") ) then
+	if ( function_Cached("AccessMelari")==1 and has("cof") ) then
 		return 1
+	elseif ( function_Cached("AccessMelari")==2 and has("cof") ) then
+		return 2
 	else
 		return 0
 	end 

@@ -1,4 +1,4 @@
-
+items_codes_autotracking={}
 
 function autotracker_started()
 	print("Started Tracking")
@@ -147,11 +147,17 @@ function updateFusion(name, segment, code, address, flag)
 		end
 
 		local flagTest = value & flag
+		if items_codes_autotracking[code]==nil then
+			items_codes_autotracking[code]=false
+		end
 
-		if flagTest ~= 0 then
-			item.Active = true
+		if flagTest ~= 0 and items_codes_autotracking[code] then
+		  item.Active = true
+		elseif flagTest ~= 0 then
+		  item.Active = false
 		else
-			item.Active = false
+		  item.Active = false
+		  items_codes_autotracking[code]=true
 		end
 	end
 end
@@ -1193,14 +1199,19 @@ function updateFusionUsedFixed(code, segment, locationData)
 				fusion_count_used[code] = fusion_count_used[code] + 1
 			end
 		end
-		-- if code=="blueL" or code=="blueS" then
-		local count_fusion = fusion_count[code] + fusion_count_used[code] + fusion_count_wall[code]
-		-- else
-		local count_fusion = fusion_count[code] + fusion_count_used[code]
-		-- end
+		if code=="blueL" or code=="blueS" then
+			count_fusion = fusion_count[code] + fusion_count_used[code] + fusion_count_wall[code]
+		else
+			count_fusion = fusion_count[code] + fusion_count_used[code]
+		end
 		item.ItemState:setActive(count_fusion)
 		if TMC_AUTOTRACKER_DEBUG_ITEM then
-			print(code, fusion_count_used[code])
+			print("--tracking "..code.."--")
+			print("sac:", fusion_count[code])
+			print("used:",fusion_count_used[code])
+			print("wall:", fusion_count_wall[code])
+			print("total:", count_fusion)
+			print("------------------")
 		end
 	end
 end
@@ -1909,20 +1920,20 @@ function updateItemsFromMemorySegment(segment)
 			updateWilds(segment, "wilds", 0x6a)
 			updateClouds(segment, "clouds", 0x65)
 		end
-		if has("fusionred_vanilla") then
+		-- if has("fusionred_vanilla") then
 			updateRedW(segment, 0x6e)
 			updateRedV(segment, 0x6f)
 			updateRedE(segment, 0x70)
-		end
-		if has("fusionblue_vanilla") then
+		-- end
+		-- if has("fusionblue_vanilla") then
 			updateBlueL(segment, 0x71)
 			updateBlueS(segment, 0x72)
-		end
-		if has("fusiongreen_vanilla") then
+		-- end
+		-- if has("fusiongreen_vanilla") then
 			updateGreenG(segment, 0x74)
 			updateGreenC(segment, 0x73)
 			updateGreenP(segment, 0x75)
-		end
+		-- end
 	end
 
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
@@ -1957,12 +1968,19 @@ function updateLocations(segment)
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
 		updateToggleFlag(segment, "dws", 0x2002c9c, 0x04)
+
 		updateToggleFlag(segment, "cof", 0x2002c9c, 0x08)
 		updateToggleFlag(segment, "fow", 0x2002c9c, 0x10)
 		updateToggleFlag(segment, "tod", 0x2002c9c, 0x20)
 		updateToggleFlag(segment, "pow", 0x2002c9c, 0x40)
 		updateToggleFlag(segment, "rc", 0x2002d02, 0x04)
 		updateToggleFlag(segment, "dhc", 0x2002ca6, 0x20)
+		updateSectionFlag(segment, "@DeepWoods/Prize", 0x2002c9c, 0x04)
+		updateSectionFlag(segment, "@Cave Of Flame/Prize", 0x2002c9c, 0x08)
+		updateSectionFlag(segment, "@Fortress/Prize", 0x2002c9c, 0x10)
+		updateSectionFlag(segment, "@Droplet/Prize", 0x2002c9c, 0x20)
+		updateSectionFlag(segment, "@Palace/Prize", 0x2002c9c, 0x40)
+		updateSectionFlag(segment, "@Royal Crypt/Prize", 0x2002d02, 0x04)
 		if has("fusiongold_vanilla") then
 			if fusiongoldcombined:getActive() then
 				updateCloudsUsedFixed(
@@ -2092,12 +2110,26 @@ function updateLocations(segment)
 				updateFusionUsedFixed(
 					"blueL",
 					segment,
-					{{0x2002c85, 0x04}, {0x2002c85, 0x08}, {0x2002c85, 0x10}, {0x2002c85, 0x80}, {0x2002c86, 0x01}, {0x2002c86, 0x10}}
+					{
+						{0x2002c85, 0x04},
+						{0x2002c85, 0x08},
+						{0x2002c85, 0x10},
+						{0x2002c85, 0x80},
+						{0x2002c86, 0x01},
+						{0x2002c86, 0x10}
+					}
 				)
 				updateFusionUsedFixed(
 					"blueS",
 					segment,
-					{{0x2002c86, 0x20}, {0x2002c86, 0x40}, {0x2002c87, 0x01}, {0x2002c87, 0x02}, {0x2002c87, 0x04}, {0x2002c87, 0x08}}
+					{
+						{0x2002c86, 0x20},
+						{0x2002c86, 0x40},
+						{0x2002c87, 0x01},
+						{0x2002c87, 0x02},
+						{0x2002c87, 0x04},
+						{0x2002c87, 0x08}
+					}
 				)
 			end
 		end
@@ -2326,7 +2358,7 @@ function updateLocations(segment)
 		end
 	end
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
-		if has("golden_enemy_on") then
+		-- if has("golden_enemy_on") then
 			--GOLDEN
 			updateSectionFlag(segment, "@Wind Ruins - Octo Golden/Kill", 0x2002ca2, 0x02)
 			updateSectionFlag(segment, "@Crenel - Middle Tektite Golden/Kill", 0x2002ca2, 0x04)
@@ -2337,7 +2369,7 @@ function updateLocations(segment)
 			updateSectionFlag(segment, "@Crenel - Top Tektite Golden/Kill", 0x2002ca2, 0x80)
 			updateSectionFlag(segment, "@Minish Woods North - Octo Golden/Kill", 0x2002ca3, 0x01)
 			updateSectionFlag(segment, "@Western Woods - Octo Golden/Kill", 0x2002ca3, 0x02)
-		end
+		-- end
 		--FUSIONS
 		updateSectionFlag(segment, "@Clouds - Top Right Fusion/Fusion", 0x2002c81, 0x02)
 		updateSectionFlag(segment, "@Clouds - Bottom Left Fusion/Fusion", 0x2002c81, 0x04)
@@ -3055,14 +3087,14 @@ function updateKeys(segment)
 	InvalidateReadCaches()
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
-		if has("big_key_shuffle") or has("big_key_vanilla") then
+		-- if has("big_key_shuffle") or has("big_key_vanilla") then
 			updateBigKeys(segment, "dws_bigkey")
 			updateBigKeys(segment, "cof_bigkey")
 			updateBigKeys(segment, "fow_bigkey")
 			updateBigKeys(segment, "tod_bigkey")
 			updateBigKeys(segment, "pow_bigkey")
 			updateBigKeys(segment, "dhc_bigkey")
-		end
+		-- end
 		updateToggleFlag(segment, "dws_map", 0x2002ead, 0x01)
 		updateToggleFlag(segment, "cof_map", 0x2002eae, 0x01)
 		updateToggleFlag(segment, "fow_map", 0x2002eaf, 0x01)
@@ -3076,7 +3108,7 @@ function updateKeys(segment)
 		updateToggleFlag(segment, "tod_compass", 0x2002eb0, 0x02)
 		updateToggleFlag(segment, "pow_compass", 0x2002eb1, 0x02)
 		updateToggleFlag(segment, "dhc_compass", 0x2002eb2, 0x02)
-		if has("small_key_shuffle") or has("small_key_vanilla") then
+		-- if has("small_key_shuffle") or has("small_key_vanilla") then
 			updateSmallKeys(segment, "dws_smallkey", 0x2002e9d)
 			updateSmallKeys(segment, "cof_smallkey", 0x2002e9e)
 			updateSmallKeys(segment, "fow_smallkey", 0x2002e9f)
@@ -3084,7 +3116,7 @@ function updateKeys(segment)
 			updateSmallKeys(segment, "pow_smallkey", 0x2002ea1)
 			updateSmallKeys(segment, "dhc_smallkey", 0x2002ea2)
 			updateSmallKeys(segment, "rc_smallkey", 0x2002ea3)
-		end
+		-- end
 	end
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		-- Town
@@ -3148,7 +3180,9 @@ function UpdateWallLocation(segment)
 		updateWall(segment, "fusions26", 0x2002c6a)
 		 --hylia
 		updateWall(segment, "fusions2a", 0x2002c6b)
-		updateWallUsedFixed("blueL", segment, {{0x2002c40}, {0x2002c67}, {0x2002c68}, {0x2002c69}, {0x2002c6a}, {0x2002c6b}})
+		if has("fusionblue_vanilla") then
+			updateWallUsedFixed("blueL", segment, {{0x2002c40}, {0x2002c67}, {0x2002c68}, {0x2002c69}, {0x2002c6a}, {0x2002c6b}})
+		end
 	end
 end
 ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)

@@ -266,6 +266,19 @@
     ]    
    }
   },
+  "Element_capture": {
+   "type": "container",
+   "content": {
+    "type": "itemgrid",
+    "h_alignment": "center",
+		"v_alignment": "top",
+    "item_margin": "0,0,2,10",
+    "rows": [
+     ["earth","fire"],
+     ["water","wind"]		     
+    ]    
+   }
+  },
   "open_world_settings": {
    "type": "group",
    "header": "Settings",

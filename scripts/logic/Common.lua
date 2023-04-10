@@ -1,6 +1,4 @@
 
-
-
 function FusionsRed()
 
 	if ( has("fusionred_vanilla") or has("fusionred_complet") ) then
@@ -45,8 +43,93 @@ function FusionsGreen()
 		return 0
 	end 
 end
-function FusionsBlueSNumber() 
+function FusionsRedWNumber() 
 
+	local count_fusion=0
+	if has("fusions0a") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions0b") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions0c") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions0d") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions0e") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions0f") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions10") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions11") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions12") then
+		count_fusion=count_fusion+1
+	end
+		return count_fusion
+end
+function FusionsRedVNumber() 
+
+	local count_fusion=0
+	if has("fusions13") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions14") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions15") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions16") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions18") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions19") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions1a") then
+		count_fusion=count_fusion+1
+	end
+		return count_fusion
+end
+function FusionsRedENumber() 
+	local count_fusion=0
+	if has("fusions17") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions1b") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions1c") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions1d") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions1e") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions1f") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions20") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions21") then
+		count_fusion=count_fusion+1
+	end
+	return count_fusion
+end
+function FusionsBlueSNumber() 
 	local count_fusion=0
 	local count_fusion2=0
 	if has("fusions2d") then
@@ -88,14 +171,9 @@ function FusionsBlueSNumber()
 	end
 	count_fusion3=math.floor(count_fusion2/2)
 	count_fusion=count_fusion+count_fusion3
-	if ( blueS:getActive() > count_fusion ) then
-		return 1
-	else
-		return 0
-	end 
+		return count_fusion
 end
-function FusionsBlueLNumber() 
-
+function FusionsBlueLNumber()
 	local count_fusion=0
 	local count_fusion2=0
 	if has("fusions22") then
@@ -137,14 +215,9 @@ function FusionsBlueLNumber()
 	end
 	count_fusion3=math.ceil(count_fusion2/2)
 	count_fusion=count_fusion+count_fusion3
-	if ( blueL:getActive() > count_fusion ) then
-		return 1
-	else
-		return 0
-	end 
+		return count_fusion
 end
 function FusionsBlueWallNumber() 
-
 	local count_fusion2=0
 	if has("fusions25") then
 		count_fusion2=count_fusion2+1
@@ -173,62 +246,282 @@ function FusionsBlueWallNumber()
 		return FusionsBlueSNumber()
 	end 
 end
-function FusionsBlueNumber(code)
-
-	if fusionbluecombined:getActive() then
-		if function_Cached("FusionsBlueLNumber")==1 and function_Cached("FusionsBlueSNumber")==1 then
+function FusionsGreenCNumber() 
+	local count_fusion=0
+	if has("fusions34") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions35") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions36") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions37") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions38") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions39") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions3a") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions3b") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions3c") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions3d") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions3e") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions3f") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions40") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions41") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions5c") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions5f") then
+		count_fusion=count_fusion+1
+	end
+		return count_fusion
+end
+function FusionsGreenGNumber() 
+	local count_fusion=0
+	if has("fusions42") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions43") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions44") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions45") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions46") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions47") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions48") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions49") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions4a") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions4b") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions4c") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions4d") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions4e") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions5d") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions60") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions62") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions63") then
+		count_fusion=count_fusion+1
+	end
+		return count_fusion
+end
+function FusionsGreenPNumber() 
+	local count_fusion=0
+	if has("fusions4f") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions50") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions51") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions52") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions53") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions54") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions55") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions56") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions57") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions58") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions59") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions5a") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions5b") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions5e") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions61") then
+		count_fusion=count_fusion+1
+	end
+	if has("fusions64") then
+		count_fusion=count_fusion+1
+	end
+	return count_fusion
+end
+function FusionsRedNumber(code)
+	if function_data_fusion[code] ~= nil then
+		-- If a cached value exists, return it
+		return function_data_fusion[code]
+	end
+	if fusionredcombined:getActive() then
+		local count_fuzer=function_Cached("FusionsRedWNumber")+function_Cached("FusionsRedVNumber")+function_Cached("FusionsRedENumber")
+		print("")
+		print("count_fuzer:",count_fuzer)
+		print("")
+		if count_fuzer < redW:getActive() then
+				function_data_fusion[code]=1
 				return 1
 		else
+				function_data_fusion[code]=0
 				return 0
 		end
 	else
-		if function_Cached("FusionsBlueLNumber")==1 and code=="blueL" then
-				return 1
-		elseif function_Cached("FusionsBlueSNumber")==1 and code=="blueS" then
-				return 1
-		elseif function_Cached("FusionsBlueWallNumber")==1 and code=="blueWall" then
-				return 1
+		if function_Cached("FusionsRedWNumber")<redW:getActive() and code=="redW" then
+				function_data_fusion[code]=1
+			return 1
+		elseif function_Cached("FusionsRedVNumber")<redV:getActive() and code=="redV" then
+				function_data_fusion[code]=1
+			return 1
+		elseif function_Cached("FusionsRedENumber")<redE:getActive() and code=="redE" then
+				function_data_fusion[code]=1
+			return 1
 		else
-				return 0
+			function_data_fusion[code]=0
+			return 0
 		end
 	end
 end
-function FusionsRedNumber(code)
-
+function FusionsBlueNumber(code)
+	if function_data_fusion[code] ~= nil then
+		-- If a cached value exists, return it
+		return function_data_fusion[code]
+	end
+	local info_fuze=0
 	if fusionbluecombined:getActive() then
-		if function_Cached("FusionsRedWNumber")==1 and function_Cached("FusionsRedVNumber")==1 and function_Cached("FusionsRedENumber")==1 then
+		local count_fuzer=function_Cached("FusionsBlueLNumber")+function_Cached("FusionsBlueSNumber")
+		if count_fuzer < blueL:getActive() then
+				function_data_fusion[code]=1
 				return 1
 		else
+				function_data_fusion[code]=0
 				return 0
 		end
 	else
-		if function_Cached("FusionsRedWNumber")==1 and code=="redW" then
+		local count_fusion2=0
+		if has("fusions25") then
+			count_fusion2=count_fusion2+1
+		end
+		if has("fusions26") then
+			count_fusion2=count_fusion2+1
+		end
+		if has("fusions29") then
+			count_fusion2=count_fusion2+1
+		end
+		if has("fusions2a") then
+			count_fusion2=count_fusion2+1
+		end
+		if has("fusions2b") then
+			count_fusion2=count_fusion2+1
+		end
+		if has("fusions2f") then
+			count_fusion2=count_fusion2+1
+		end
+		count_fusion3=math.ceil(count_fusion2/2)
+		count_fusion4=math.floor(count_fusion2/2)
+		count_fusion=count_fusion3-count_fusion4
+		if ( count_fusion == 0 ) then
+			info_fuzer=blueL:getActive()-function_Cached("FusionsBlueLNumber")
+		else
+			info_fuzer=blueS:getActive()-function_Cached("FusionsBlueSNumber")
+		end
+		if function_Cached("FusionsBlueLNumber")<blueL:getActive() and code=="blueL" then
+				function_data_fusion[code]=1
 				return 1
-		elseif function_Cached("FusionsRedVNumber")==1 and code=="redV" then
+		elseif function_Cached("FusionsBlueSNumber")<blueS:getActive() and code=="blueS" then
+				function_data_fusion[code]=1
 				return 1
-		elseif function_Cached("FusionsRedENumber")==1 and code=="redE" then
+		elseif function_Cached("FusionsBlueWallNumber")<info_fuzer and code=="blueWall" then
+				function_data_fusion[code]=1
 				return 1
 		else
+				function_data_fusion[code]=0
 				return 0
 		end
 	end
 end
 function FusionsGreenNumber(code)
-
-	if fusionbluecombined:getActive() then
-		if function_Cached("FusionsGreenCNumber")==1 and function_Cached("FusionsGreenGNumber")==1 and function_Cached("FusionsGreenPNumber")==1 then
+	if function_data_fusion[code] ~= nil then
+		-- If a cached value exists, return it
+		return function_data_fusion[code]
+	end
+	if fusiongreencombined:getActive() then
+		local count_fuzer=function_Cached("FusionsGreenCNumber")+function_Cached("FusionsGreenGNumber")+function_Cached("FusionsGreenPNumber")
+		if count_fuzer < greenC:getActive() then
+				function_data_fusion[code]=1
 				return 1
 		else
+				function_data_fusion[code]=0
 				return 0
 		end
 	else
-		if function_Cached("FusionsGreenCNumber")==1 and code=="greenC" then
+		if function_Cached("FusionsGreenCNumber")<greenC:getActive() and code=="greenC" then
+				function_data_fusion[code]=1
 				return 1
-		elseif function_Cached("FusionsGreenGNumber")==1 and code=="greenG" then
+		elseif function_Cached("FusionsGreenGNumber")<greenG:getActive() and code=="greenG" then
+				function_data_fusion[code]=1
 				return 1
-		elseif function_Cached("FusionsGreenPNumber")==1 and code=="greenP" then
+		elseif function_Cached("FusionsGreenPNumber")<greenP:getActive() and code=="greenP" then
+				function_data_fusion[code]=1
 				return 1
 		else
+				function_data_fusion[code]=0
 				return 0
 		end
 	end

@@ -114,7 +114,6 @@ function AccessMelari()
 	end 
 end
 function AccessSwamp()
-	 
 	if ( function_Cached("SwampWindCrest")==1 or ( function_Cached("AccessWestern")==1 and ( has("boots") or has("cape") ) ) )	then
 		return 1
 	else

@@ -2,7 +2,46 @@ function tracker_on_accessibility_updating()
 	if Cache_reset then
 		has_item_data = {}
 		function_data = {}
+		function_count = 0
+		function_data_fusion={}
 	end
+end
+CaptureBadgeSections = {
+"@Cave Of Flame/Prize",
+"@Royal Crypt/Prize",
+"@DeepWoods/Prize",
+"@Fortress/Prize",
+"@Palace/Prize",
+"@Droplet/Prize",
+"@Dark Hyrule Castle Entrance/Prize",
+"@Cave Of Flame Entrance/Prize",
+"@Crypt Entrance/Prize",
+"@DeepWoods Entrance/Prize",
+"@Fortress Entrance/Prize",
+"@Palace Entrance/Prize",
+"@Droplet Entrance/Prize"
+}
+CaptureBadgeCache = {}
+function tracker_on_accessibility_updated()
+    for i,section in pairs(CaptureBadgeSections) do
+        local target = Tracker:FindObjectForCode(section)
+        -- Has the captured item for this section changed since last update
+        if target == nil then
+            print("Failed to resolve " .. section .. " please check for typos.")
+        elseif target.CapturedItem ~= CaptureBadgeCache[target]  then
+            -- Does the location that owns this section already have a badge, if so remove it
+            if CaptureBadgeCache[target.Owner] then
+                target.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                CaptureBadgeCache[target.Owner] = nil
+                CaptureBadgeCache[target] = nil
+            end
+            -- Check if a captured item exists, add as badge to the sections owner if it does
+            if target.CapturedItem then
+                CaptureBadgeCache[target.Owner] = target.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+                CaptureBadgeCache[target] = target.CapturedItem
+            end
+        end
+    end
 end
 function tracker_on_begin_loading_save_file()
 	print("--	Load Save File	--")
@@ -80,7 +119,16 @@ function function_Cached(name)
 
 	-- If the TMC_CACHE_DEBUG_FUNCTION variable is set, print a debug message
 	if TMC_CACHE_DEBUG_FUNCTION then
-		print("Cache Function: ",name,function_data[name])
+		function_count=function_count+1
+		local function_count_print=""
+		if function_count<10 then
+			function_count_print="00"..function_count
+		elseif function_count<100 then
+			function_count_print="0"..function_count
+		else
+			function_count_print=function_count
+		end
+		print("Cache Function ("..function_count_print.."): ",function_data[name],name)
 	end
 
 	-- Return the cached value or the newly computed value
