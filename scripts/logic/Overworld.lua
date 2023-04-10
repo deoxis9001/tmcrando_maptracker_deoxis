@@ -296,9 +296,7 @@ function SwampSouthShortcut()
 	end 
 end
 function RuinsFusion()
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
+	if ( Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
 		return 1
 	elseif ( Tracker:ProviderCountForCode("clouds") >= 3 and fusiongoldcombined:getActive() ) then
 		return 2
@@ -307,9 +305,7 @@ function RuinsFusion()
 	end 
 end
 function CloudFusions()
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( ( ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) ) and ( has("cape") or has("mitts") ) ) then
+	if ( ( ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) ) and ( has("cape") or has("mitts") ) ) then
 		return 1
 	elseif ( fusiongoldcombined:getActive() and ( Tracker:ProviderCountForCode("clouds") >= 6 or ( Tracker:ProviderCountForCode("clouds") >= 5 and has("fallswindcrest_yes") ) ) and ( has("cape") or has("mitts") ) ) then
 		return 2
@@ -318,9 +314,7 @@ function CloudFusions()
 	end 
 end
 function CompletedGolds()
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( has("fusiongold_complet") ) then
+	if ( has("fusiongold_complet") ) then
 		return 1
 	else
 		return 0
@@ -400,9 +394,7 @@ function CryptPuzzle()
 	end 
 end
 function FallsFusion() 
-	if ( has("openworld_on") ) then
-		return 1
-	elseif ( ( fusiongoldcombined:getActive()==false and has("falls",1 ) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4 ) ) and function_Cached("OverworldBlocks")==1 then
+	if ( ( fusiongoldcombined:getActive()==false and has("falls",1 ) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4 ) ) and function_Cached("OverworldBlocks")==1 then
 		return 1
 	elseif fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=1 and function_Cached("OverworldBlocks")==1 then
 		return 2
@@ -627,110 +619,67 @@ function FoWDarknut()
 	end 
 end
 function ToDWeb()
-	if function_data["ToDWeb"] ~= nil then
-		return function_data["ToDWeb"]
-	end
 	if ( has("openworld_on") ) then
-		function_data["ToDWeb"]=1
 		return 1
 	elseif ( has("lamp") ) then
-		function_data["ToDWeb"]=1
 		return 1
 	else
-		function_data["ToDWeb"]=0
 		return 0
 	end 
 end
 function ToDMainRoom()
-	if function_data["ToDMainRoom"] ~= nil then
-		return function_data["ToDMainRoom"]
-	end 
 	if ( function_Cached("ToDBigDoor")==1 or ( function_Cached("ToDBlueWarp")==1 and function_Cached("ToDScissorBeetles")==1 ) or ( function_Cached("ToDRedWarp")==1 and function_Cached("BombWalls")==1 and function_Cached("ToDWeb")==1 and function_Cached("ToDMadderpillars")==1 ) ) then
-		function_data["ToDMainRoom"]=1
 		return 1
 	elseif ( function_Cached("ToDBigDoor")==1 or ( function_Cached("ToDBlueWarp")==1 and ( function_Cached("ToDScissorBeetles")==1 or function_Cached("ToDScissorBeetles")==2 ) ) or ( function_Cached("ToDRedWarp")==1 and function_Cached("BombWalls")==1 and function_Cached("ToDWeb")==1 and ( function_Cached("ToDMadderpillars")==1 or function_Cached("ToDMadderpillars")==2 ) ) ) then
-		function_data["ToDMainRoom"]=2
 		return 2
 	else
-		function_data["ToDMainRoom"]=0
 		return 0
 	end 
 end
 function ToDLeftMushroomSwitch()
-	if function_data["ToDLeftMushroomSwitch"] ~= nil then
-		return function_data["ToDLeftMushroomSwitch"]
-	end 
 	if ( has("openworld_on") ) then
-		function_data["ToDLeftMushroomSwitch"]=1
 		return 1
 	elseif ( has("gust") or has("cape") ) then
-		function_data["ToDLeftMushroomSwitch"]=1
 		return 1
 	else
-		function_data["ToDLeftMushroomSwitch"]=1
 		return 0
 	end 
 end
-function ToDBasementLilySpawn() 
-	if function_data["ToDBasementLilySpawn"] ~= nil then
-		return function_data["ToDBasementLilySpawn"]
-	end 
+function ToDBasementLilySpawn()
 	if ( has("openworld_on") and has("flippers") ) then
-		function_data["ToDBasementLilySpawn"]=1
 		return 1
 	elseif ( has("flippers") and function_Cached("ToDWestDoor")==1 and has("gust") ) then
-		function_data["ToDBasementLilySpawn"]=1
 		return 1
 	elseif ( has("flippers") and function_Cached("ToDWestDoor")==2 and has("gust") ) then
-		function_data["ToDBasementLilySpawn"]=2
 		return 2
 	else
-		function_data["ToDBasementLilySpawn"]=0
 		return 0
 	end 
 end
 function ToDLeftPillars() 
-	if function_data["ToDLeftPillars"] ~= nil then
-		return function_data["ToDLeftPillars"]
-	end 
 	if ( has("openworld_on") ) then
-		function_data["ToDLeftPillars"]=1
 		return 1
 	elseif ( has("gust") ) then
-		function_data["ToDLeftPillars"]=1
 		return 1
 	else
-		function_data["ToDLeftPillars"]=0
 		return 0
 	end 
 end
 function ToDLeftReverse()
-	if function_data["ToDLeftReverse"] ~= nil then
-		return function_data["ToDLeftReverse"]
-	end 
 	if ( has("openworld_on") ) then
-		function_data["ToDLeftReverse"]=1
 		return 1
 	else
-		function_data["ToDLeftReverse"]=0
 		return 0
 	end 
 end
 function ToDLeftIceRoom()
-	if function_data["ToDLeftIceRoom"] ~= nil then
-		return function_data["ToDLeftIceRoom"]
-	end 
 	if ( has("openworld_on")and ( has("cape") or has("gust") ) ) then
-		function_data["ToDLeftIceRoom"]=1
 		return 1
 	elseif ( ( has("gust") and function_Cached("ToDBasementLilySpawn")==1 ) or has("cape") ) then
-		function_data["ToDLeftIceRoom"]=1
 		return 1
 	elseif ( has("gust") and function_Cached("ToDBasementLilySpawn")==2 ) then
-		function_data["ToDLeftIceRoom"]=2
 		return 2
 	else
-		function_data["ToDLeftIceRoom"]=0
 		return 0
 	end 
 end
@@ -743,18 +692,12 @@ function ToDLeftPath()
 		return 0
 	end 
 end
-function ToDDarkMazeReverse() 
-	if function_data["ToDDarkMazeReverse"] ~= nil then
-		return function_data["ToDDarkMazeReverse"]
-	end 
+function ToDDarkMazeReverse()
 	if ( has("openworld_on") and function_Cached("DarkRooms")==1 ) then
-		function_data["ToDDarkMazeReverse"]=1
 		return 1
 	elseif ( has("openworld_on") and function_Cached("DarkRooms")==2 ) then
-		function_data["ToDDarkMazeReverse"]=2
 		return 2
 	else
-		function_data["ToDDarkMazeReverse"]=0
 		return 0
 	end 
 end
