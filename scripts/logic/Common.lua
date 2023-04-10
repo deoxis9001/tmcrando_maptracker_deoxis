@@ -561,116 +561,75 @@ function CloudTopFallVisibility()
 end
 
 function Sword1()
-	if function_data["Sword1"] ~= nil then
-		return function_data["Sword1"]
-	end
 	if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-		function_data["Sword1"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-		function_data["Sword1"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
-		function_data["Sword1"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword2") > 0 and has("progressiveitems") then
-		function_data["Sword1"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword") > 0 then
-		function_data["Sword1"]=1
 		return 1
 	elseif has("smithsword") then
-		function_data["Sword1"]=1
 		return 1
 	else
-		function_data["Sword1"]=0
 		return 0
 	end
 end
 
 function Sword2()
-	if function_data["Sword2"] ~= nil then
-		return function_data["Sword2"]
-	end
 	if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-		function_data["Sword2"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-		function_data["Sword2"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword3") > 0 and has("progressiveitems") then
-		function_data["Sword2"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword2") > 0 then
-		function_data["Sword2"]=1
 		return 1
 	elseif has("greensword") then
-		function_data["Sword2"]=1
 		return 1
 	else
-		function_data["Sword2"]=0
 		return 0
 	end
 end
 
 function Sword3()
-	if function_data["Sword3"] ~= nil then
-		return function_data["Sword3"]
-	end
 	if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-		function_data["Sword3"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword4") > 0 and has("progressiveitems") then
-		function_data["Sword3"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword3") > 0 then
-		function_data["Sword3"]=1
 		return 1
 	elseif has("redsword") then
-		function_data["Sword3"]=1
 		return 1
 	else
-		function_data["Sword3"]=0
 		return 0
 	end
 end
 function Sword4()
-	if function_data["Sword4"] ~= nil then
-		return function_data["Sword4"]
-	end
 	if Tracker:ProviderCountForCode("sword5") > 0 and has("progressiveitems") then
-		function_data["Sword4"]=1
 		return 1
 	elseif Tracker:ProviderCountForCode("sword4") > 0 then
-		function_data["Sword4"]=1
 		return 1
 	elseif has("bluesword") then
-		function_data["Sword4"]=1
 		return 1
 	else
-		function_data["Sword4"]=0
 		return 0
 	end
 end
 
 function Sword5()
-	if function_data["Sword5"] ~= nil then
-		return function_data["Sword5"]
+	if Tracker:ProviderCountForCode("sword5") > 0 then
+		return 1
+	elseif has("foursword") then
+		return 1
+	else
+		return 0
 	end
- if Tracker:ProviderCountForCode("sword5") > 0 then
-		function_data["Sword5"]=1
- return 1
- elseif has("foursword") then
-		function_data["Sword5"]=1
- return 1
- else
-		function_data["Sword5"]=0
- return 0
- end
 end
 
 function GotSwords()
-
 	if has("sword0needed") then
 		return 1
 	elseif function_Cached("Sword1")==1 and has("sword1needed") then
@@ -802,40 +761,25 @@ function HasSpin()
 end
 
 function CanSplit2()
-	if function_data["CanSplit2"] ~= nil then
-		return function_data["CanSplit2"]
-	end
 	if ( function_Cached("Sword3")==1 and has("spinattack") ) then
-		function_data["CanSplit2"]=1
 		return 1
 	else
-		function_data["CanSplit2"]=0
 		return 0
 	end
 end
 
 function CanSplit3()
-	if function_data["CanSplit3"] ~= nil then
-		return function_data["CanSplit3"]
-	end
 	if ( function_Cached("Sword4")==1 and has("spinattack") ) then
-		function_data["CanSplit3"]=1
 		return 1
 	else
-		function_data["CanSplit3"]=0
 		return 0
 	end
 end
 
 function CanSplit4()
-	if function_data["CanSplit4"] ~= nil then
-		return function_data["CanSplit4"]
-	end
 	if ( function_Cached("Sword5")==1 and has("spinattack") ) then
-		function_data["CanSplit4"]=1
 		return 1
 	else
-		function_data["CanSplit4"]=0
 		return 0
 	end
 end
