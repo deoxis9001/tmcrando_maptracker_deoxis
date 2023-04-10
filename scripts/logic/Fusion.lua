@@ -1,9 +1,13 @@
 function Json_Castle_Dojo_Fuzer() 
+	if ( FusionsRedNumber("redE")==1 ) then
 		return 1
+	else
+		return 0
+	end 
 end
 
 function Json_Castle_MinishCrack_Fuzer() 
-	if ( BonkedTrees()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("BonkedTrees")==1 ) then
 		return 1
 	else
 		return 0
@@ -11,15 +15,17 @@ function Json_Castle_MinishCrack_Fuzer()
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer1() 
-	if ( AccessWindTribe()==1 or StrangerFusion()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and ( function_Cached("AccessWindTribe")==1 or function_Cached("StrangerFusion")==1 ) ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessWindTribe")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer2() 
-	if ( Json_Clouds_WindTribeHouse_Fuzer1()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Json_Clouds_WindTribeHouse_Fuzer1")==1 ) then
 		return 1
 	else
 		return 0
@@ -27,56 +33,70 @@ function Json_Clouds_WindTribeHouse_Fuzer2()
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer3() 
-	if ( AccessWindTribe()==1 or StrangerFusion()==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 and ( function_Cached("AccessWindTribe")==1 or function_Cached("StrangerFusion")==1 ) ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessWindTribe")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer4() 
-	if ( AccessWindTribe()==1 ) then
+	if ( FusionsRedNumber("redV")==1 and function_Cached("AccessWindTribe")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redV")==1 and function_Cached("AccessWindTribe")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer5() 
-	if ( AccessWindTribe()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessWindTribe")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessWindTribe")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer6() 
-	if ( AccessWindTribe()==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("AccessWindTribe")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("AccessWindTribe")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Clouds_WindTribeHouse_Fuzer7() 
-	if ( Json_Clouds_WindTribeHouse_Fuzer6()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessWindTribe")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessWindTribe")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Clouds_Fuzer_Fuzer1() 
-	if ( AccessClouds()==1 and AccessWindTribe()==0 ) then
+	if ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==1 and function_Cached("AccessWindTribe")==0 ) then
 		return 1
+	elseif ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==2 and function_Cached("AccessWindTribe")==0 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Clouds_Fuzer_Fuzer2() 
-	if ( AccessClouds()==1 and AccessWindTribe()==0 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==1 and function_Cached("AccessWindTribe")==0 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==2 and function_Cached("AccessWindTribe")==0 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -84,81 +104,99 @@ end
 
 
 function Json_Crenel_Mines_Fuzer1() 
-	if ( AccessMelari()==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessMelari")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessMelari")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Crenel_Mines_Fuzer2() 
-	if ( AccessMelari()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessMelari")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessMelari")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Crenel_Mines_Fuzer3() 
-	if (  CompleteCoF()==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("CompleteCoF")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("CompleteCoF")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Crenel_Mines_Fuzer4() 
-	if ( CompleteCoF()==1 ) then
+	if ( FusionsRedNumber("redV")==1 and function_Cached("CompleteCoF")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redV")==1 and function_Cached("CompleteCoF")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Crenel_Mines_Fuzer5() 
-	if ( AccessMelari()==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("AccessMelari")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("AccessMelari")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Crenel_DiggingCave_Fuzer() 
-	if ( Crenel_DigCave_HP()==1 ) then
+	if ( FusionsBlueNumber("blueWall")==1 and function_Cached("Crenel_DigCave_HP")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueWall")==1 and function_Cached("Crenel_DigCave_HP")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Crenel_Dojo_Fuzer() 
-	if ( Crenel_Dojo_HP()==1 ) then
+	if ( FusionsRedNumber("redW")==1 and function_Cached("Crenel_Dojo_HP")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redW")==1 and function_Cached("Crenel_Dojo_HP")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_CrenelBase_MinishCrack_Fuzer() 
-	if ( CrenelBase_MinishCrack_Chest()==1  ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("CrenelBase_MinishCrack_Chest")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("CrenelBase_MinishCrack_Chest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Hills_MittsCave_Fuzer() 
-	if ( AccessMinishWoods()==1 and has("mitts") ) then
+	if ( FusionsBlueNumber("blueWall")==1 and function_Cached("AccessMinishWoods")==1 and has("mitts") ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueWall")==1 and function_Cached("AccessMinishWoods")==2 and has("mitts") ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Hills_MinishHouse_Fuzer() 
-	if ( AccessEasternHills()==1 ) then
+	if ( FusionsBlueNumber("blueS")==1 and function_Cached("AccessEasternHills")==1 ) then
 		return 1
-	elseif ( AccessEasternHills()==2 ) then
+	elseif ( FusionsBlueNumber("blueS")==1 and function_Cached("AccessEasternHills")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -166,41 +204,49 @@ function Json_Hills_MinishHouse_Fuzer()
 end
 
 function Json_Hills_Farmer_Fuzer1() 
-	if ( AccessMinishWoods()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessMinishWoods")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Hills_Farmer_Fuzer2() 
-	if ( AccessMinishWoods()==1 ) then
+	if ( FusionsBlueNumber("blueWall")==1 and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueWall")==1 and function_Cached("AccessMinishWoods")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Hylia_Dojo_Fuzer() 
-	if ( Hylia_Dojo_HP()==1 ) then
+	if ( FusionsRedNumber("redV")==1 and function_Cached("Hylia_Dojo_HP")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redV")==1 and function_Cached("Hylia_Dojo_HP")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Hylia_TreasureCave_Fuzer() 
-	if ( Hylia_CapeCave_Chest()==1 ) then
+	if ( FusionsBlueNumber("blueWall")==1 and function_Cached("Hylia_CapeCave_Chest")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueWall")==1 and function_Cached("Hylia_CapeCave_Chest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Hylia_Fifi_Fuzer() 
-	if ( AccessLonLon()==1 and has("cane") ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessLonLon")==1 and has("cane") ) then
 		return 1
-	elseif ( AccessLonLon()==2 and has("cane") ) then
+	elseif ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessLonLon")==2 and has("cane") ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -208,7 +254,7 @@ function Json_Hylia_Fifi_Fuzer()
 end
 
 function Json_Hylia_Librari_Fuzer() 
-	if ( Hylia_CrackFusion_LibrariNPC()==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("Hylia_CrackFusion_LibrariNPC")==1 ) then
 		return 1
 	else
 		return 0
@@ -217,7 +263,7 @@ end
 
 
 function Json_Hylia_MinishHouseWindCrest_Fuzer() 
-	if ( has("ocarina") ) then
+	if ( FusionsRedNumber("redW")==1 and has("ocarina") ) then
 		return 1
 	else
 		return 0
@@ -226,9 +272,9 @@ end
 
 
 function Json_Hylia_DavidJr_Fuzer1() 
-	if ( AccessLonLon()==1 and has("cane") and AccessEasternHills()==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessLonLon")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
 		return 1
-	elseif ( ( AccessLonLon()==1 or AccessLonLon()==2) and has("cane") and ( AccessEasternHills()==1 or AccessEasternHills()==2 ) ) then
+	elseif ( FusionsGreenNumber("greenP")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -237,10 +283,10 @@ end
 
 
 function Json_Hylia_DavidJr_Fuzer2() 
-	if ( AccessLonLon()==1 and has("cane") and AccessEasternHills()==1 and HasMagicBoomerang()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessLonLon")==1 and has("cane") and function_Cached("AccessEasternHills")==1 and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1
-	elseif ( ( AccessLonLon()==1 or AccessLonLon()==2) and has("cane") and ( AccessEasternHills()==1 or AccessEasternHills()==2 ) and HasMagicBoomerang()==1 ) then
-		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) and function_Cached("HasMagicBoomerang")==1 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -248,8 +294,10 @@ end
 
 
 function Json_Hylia_MinishCrack_Fuzer() 
-	if ( Hylia_NorthMinishHole_Chest()==1 ) then
+	if ( FusionsBlueNumber("blueL")==1 and function_Cached("Hylia_NorthMinishHole_Chest")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueL")==1 and function_Cached("Hylia_NorthMinishHole_Chest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -257,8 +305,10 @@ end
 
 
 function Json_LonLon_GoronQuest_Fuzer1() 
-	if ( GoronCave()==1 and ( CanDestroyTrees()==1 or has("ocarina") ) ) then
+	if ( FusionsBlueNumber("blueS")==1 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or has("ocarina") ) ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueS")==1 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and ( ( function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 ) or has("ocarina") ) ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -266,8 +316,10 @@ end
 
 
 function Json_LonLon_GoronQuest_Fuzer2() 
-	if( LonLon_GoronCaveFusion_BigChest()==1 ) then
+	if( FusionsRedNumber("redW")==1 and function_Cached("LonLon_GoronCaveFusion_BigChest")==1 ) then
 		return 1
+	elseif( FusionsRedNumber("redW")==1 and function_Cached("LonLon_GoronCaveFusion_BigChest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -275,9 +327,9 @@ end
 
 
 function Json_LonLon_Ankle_Fuzer() 
-	if ( LonLon_Cave_Chest()==1 and has("cane") and AccessEasternHills()==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("LonLon_Cave_Chest")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
 		return 1
-	elseif ( LonLon_Cave_Chest()==1 and has("cane") and AccessEasternHills()==2 ) then
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("LonLon_Cave_Chest")==1 and has("cane") and function_Cached("AccessEasternHills")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -286,8 +338,10 @@ end
 
 
 function Json_MinishWoods_MittCave_Fuzer() 
-	if ( WitchDiggingCave_Chest()==1 ) then
+	if ( FusionsBlueNumber("blueWall")==1 and function_Cached("WitchDiggingCave_Chest")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueWall")==1 and function_Cached("WitchDiggingCave_Chest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -320,8 +374,10 @@ function Json_MinishWoods_MinishVillage_Fuzer1()
 	if( has("fusions1a") ) then
 		count = count + 1
 	end
-	if ( count >=7 ) then
+	if ( FusionsRedNumber("redE")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redE")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -351,8 +407,10 @@ function Json_MinishWoods_MinishVillage_Fuzer2()
 	if( has("fusions21") ) then
 		count = count + 1
 	end
-	if ( count >=7 and Json_MinishWoods_MinishVillage_Fuzer1()==1 ) then
+	if ( FusionsRedNumber("redV")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redV")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -360,8 +418,10 @@ end
 
 
 function Json_MinishWoods_MinishVillage_Fuzer3() 
-	if ( MinishVillage_HP()==1 ) then
+	if ( FusionsRedNumber("redE")==1 and function_Cached("MinishVillage_HP")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redE")==1 and function_Cached("MinishVillage_HP")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -369,8 +429,10 @@ end
 
 
 function Json_MinishWoods_Belari_Fuzer() 
-	if ( MinishWoods_BombMinish_NPC2()==1 ) then
+	if ( FusionsRedNumber("redW") and function_Cached("MinishWoods_BombMinish_NPC1")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redW")==1 and function_Cached("MinishWoods_BombMinish_NPC1")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -378,17 +440,21 @@ end
 
 
 function Json_MinishWoods_Scrub_Fuzer1() 
-	if ( Scrubs()==1 and has("fusions27") ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("Scrubs")==1 and has("fusions27") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("Scrubs")==1 and has("fusions27") and function_Cached("AccessMinishWoods")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 
-function Json_MinishWoods_Scrub_Fuzer2() 
-	if ( Json_MinishWoods_Scrub_Fuzer1()==1 ) then
+function Json_MinishWoods_Scrub_Fuzer2()
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("Scrubs")==1 and has("fusions27") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenP")==1 and function_Cached("Scrubs")==1 and has("fusions27") and function_Cached("AccessMinishWoods")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -396,8 +462,10 @@ end
 
 
 function Json_NorthField_MinishCrack_Fuzer() 
-	if ( BonkedTrees()==1 and CanDestroyTrees()==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("BonkedTrees")==1 and function_Cached("CanDestroyTrees")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenP")==1 and function_Cached("BonkedTrees")==1 and function_Cached("CanDestroyTrees")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -405,8 +473,10 @@ end
 
 
 function Json_Ruins_MinishHole_Fuzer() 
-	if ( AccessRuins()==1 ) then
+	if ( FusionsRedNumber("redE")==1 and function_Cached("AccessRuins")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redE")==1 and function_Cached("AccessRuins")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -414,9 +484,9 @@ end
 
 
 function Json_SouthHyruleField_Tingle_Fuzer1() 
-	if ( has("cane") and ( AccessEasternHills()==1 ) and HasMagicBoomerang()==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
 		return 1
-	elseif ( has("cane") and ( AccessEasternHills()==2 ) and HasMagicBoomerang()==1 ) then
+	elseif ( FusionsGreenNumber("greenP")==1 and has("cane") and function_Cached("AccessEasternHills")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -425,9 +495,9 @@ end
 
 
 function Json_SouthHyruleField_Tingle_Fuzer2() 
-	if ( has("cane") and ( AccessEasternHills()==1 ) and HasMagicBoomerang()==1 ) then
+	if ( FusionsRedNumber("redW")==1 and has("cane") and function_Cached("AccessEasternHills")==1 and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1
-	elseif ( has("cane") and ( AccessEasternHills()==2 ) and HasMagicBoomerang()==1 ) then
+	elseif ( FusionsRedNumber("redW")==1 and has("cane") and function_Cached("AccessEasternHills")==2 and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -436,12 +506,16 @@ end
 
 
 function Json_SouthHyruleField_SmithsHouse_Fuzer1() 
-	return 1
+	if ( FusionsRedNumber("redV")==1 ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 
 function Json_SouthHyruleField_SmithsHouse_Fuzer2() 
-	if ( ( has("fusionred_vanilla") and Json_SouthHyruleField_SmithsHouse_Fuzer1()==1 ) or FusionsRed()==0 ) then
+	if ( FusionsGreenNumber("greenP")==1 and ( has("fusionred_vanilla") or function_Cached("FusionsRed")==0 ) and has("fusions16")) then
 		return 1
 	else
 		return 0
@@ -450,8 +524,10 @@ end
 
 
 function Json_SouthField_MinishHouse_Fuzer() 
-	if ( CanDestroyTrees()==1 and BonkedTrees()==1 ) then
+	if ( FusionsRedNumber("redV")==1 and function_Cached("CanDestroyTrees")==1 and function_Cached("BonkedTrees")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redV")==1 and function_Cached("CanDestroyTrees")==2 and function_Cached("BonkedTrees")==1 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -459,7 +535,7 @@ end
 
 
 function Json_Swamp_BusinessScrub_Fuzer() 
-	if ( AccessSwamp()==1 and Scrubs()==1 ) then
+	if ( FusionsBlueNumber("blueL")==1 and function_Cached("AccessSwamp")==1 and function_Cached("Scrubs")==1 ) then
 		return 1
 	else
 		return 0
@@ -467,13 +543,17 @@ function Json_Swamp_BusinessScrub_Fuzer()
 end
 
 
-function Json_Town_Inn_Fuzer1() 
-	return 1
+function Json_Town_Inn_Fuzer1()
+	if ( FusionsRedNumber("redE")==1 ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 
 function Json_Town_Inn_Fuzer2() 
-	if ( has("fusions1b") ) then
+	if ( FusionsRedNumber("redE")==1 and has("fusions1b") ) then
 		return 1
 	else
 		return 0
@@ -482,7 +562,7 @@ end
 
 
 function Json_Town_Inn_Fuzer3() 
-	if ( has("fusions1b") ) then
+	if ( FusionsRedNumber("redE")==1 and has("fusions1b") ) then
 		return 1
 	else
 		return 0
@@ -491,19 +571,23 @@ end
 
 
 function Json_Town_Inn_Fuzer4() 
-	if ( has("fusions1b") ) then
+	if ( FusionsRedNumber("redW")==1 and has("fusions1b") ) then
 		return 1
 	else
 		return 0
 	end end
 
 
-function Json_Town_School_Fuzer() 
-	return 1
+function Json_Town_School_Fuzer()
+	if ( FusionsRedNumber("redE")==1 ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 function Json_Town_Library_Fuzer1() 
-	if ( Library()==1 and has("cane") and has("book3") and has("grip") ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("Library")==1 and has("cane") and has("book3") and has("grip") ) then
 		return 1
 	else
 		return 0
@@ -512,7 +596,7 @@ end
 
 
 function Json_Town_Library_Fuzer2() 
-	if ( Library()==1 ) then
+	if ( FusionsBlueNumber("blueL")==1 and function_Cached("Library")==1 ) then
 		return 1
 	else
 		return 0
@@ -520,18 +604,26 @@ function Json_Town_Library_Fuzer2()
 end
 
 
-function Json_Town_Cafe_Fuzer1() 
-	return 1
+function Json_Town_Cafe_Fuzer1()
+	if ( FusionsGreenNumber("greenC")==1 ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 
-function Json_Town_Cafe_Fuzer2() 
-	return 1 
+function Json_Town_Cafe_Fuzer2()
+	if ( FusionsBlueNumber("blueS")==1 ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 
 function Json_Town_NearPostOffice_Fuzer() 
-	if ( has("fusions1b") ) then
+	if ( FusionsRedNumber("redW")==1 and has("fusions1b") ) then
 		return 1
 	else
 		return 0
@@ -539,33 +631,47 @@ function Json_Town_NearPostOffice_Fuzer()
 end
 
 
-function Json_Town_Stranger_Fuzer() 
-	return 1
+function Json_Town_Stranger_Fuzer()
+	if ( FusionsRedNumber("redW")==1 ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 
 function Json_Town_Mayor_Fuzer() 
-	return 1
+	if ( FusionsRedNumber("redE")==1 ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 
-function Json_Town_Postman_Fuzer() 
-	return 1
+function Json_Town_Postman_Fuzer()
+	if ( FusionsBlueNumber("blueL")==1 ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 
 function Json_Trilby_TreeHouse_Fuzer() 
-	if ( AccessWestern()==1 ) then
+	if ( FusionsRedNumber("redE")==1 and function_Cached("AccessWestern")==1 ) then
 		return 1
+	elseif ( FusionsRedNumber("redE")==1 and function_Cached("AccessWestern")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Trilby_Knuckle_Fuzer() 
-	if ( Trilby_DigCave_RightChest()==1 and has("cane") and AccessEasternHills()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Trilby_DigCave_RightChest")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
 		return 1
-	elseif ( Trilby_DigCave_RightChest()==1 and has("cane") and AccessEasternHills()==2 ) then
+	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("Trilby_DigCave_RightChest")==1 or function_Cached("Trilby_DigCave_RightChest")==2 ) and has("cane") and ( function_Cached("AccessEasternHills")==2 or function_Cached("AccessEasternHills")==1 ) ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -574,8 +680,10 @@ end
 
 
 function Json_Trilby_MittsCave_Fuzer() 
-	if ( Trilby_DigCave_RightChest()==1 ) then
+	if ( FusionsBlueNumber("blueWall")==1 and function_Cached("Trilby_DigCave_RightChest")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueWall")==1 and function_Cached("Trilby_DigCave_RightChest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -583,72 +691,90 @@ end
 
 
 function Json_Trilby_MinishHouse_Fuzer() 
-	if ( Trilby_DigCave_RightChest()==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("Trilby_DigCave_RightChest")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("Trilby_DigCave_RightChest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Valley_Dampe_Fuzer1() 
-	if ( Valley_Dampe_NPC()==1 ) then
+	if ( FusionsBlueNumber("blueS")==1 and function_Cached("Valley_Dampe_NPC")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueS")==1 and function_Cached("Valley_Dampe_NPC")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Valley_Dampe_Fuzer2() 
-	if ( Json_Valley_Dampe_Fuzer1()==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("Valley_Dampe_NPC")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("Valley_Dampe_NPC")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Valley_NortheastGrave_Fuzer1() 
-	if ( Valley_GraveyardRightGraveFusion_Chest()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Valley_GraveyardRightGraveFusion_Chest")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("Valley_GraveyardRightGraveFusion_Chest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Valley_NortheastGrave_Fuzer2() 
-	if ( Json_Valley_NortheastGrave_Fuzer1()==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("Valley_GraveyardRightGraveFusion_Chest")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("Valley_GraveyardRightGraveFusion_Chest")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Valley_Spekter_Fuzer1() 
-	if ( Valley_GraveyardLeftGrave_HP()==1 ) then
+	if ( FusionsBlueNumber("blueS")==1 and function_Cached("Valley_GraveyardLeftGrave_HP")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueS")==1 and function_Cached("Valley_GraveyardLeftGrave_HP")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Valley_Spekter_Fuzer2() 
-	if ( Json_Valley_Spekter_Fuzer1()==1 ) then
+	if ( FusionsBlueNumber("blueL")==1 and function_Cached("Valley_GraveyardLeftGrave_HP")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueL")==1 and function_Cached("Valley_GraveyardLeftGrave_HP")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_WesternWoods_MinishHouse_Fuzer() 
-	if ( AccessWestern()==1 ) then
+	if ( FusionsBlueNumber("blueL")==1 and function_Cached("AccessWestern")==1 ) then
 		return 1
+	elseif ( FusionsBlueNumber("blueL")==1 and function_Cached("AccessWestern")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_MinishWoods_MinishVillage_Fuzer4() 
-	if ( MinishVillage_HP()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("MinishVillage_HP")==1 ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("MinishVillage_HP")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -656,8 +782,10 @@ end
 
 
 function Json_MinishWoods_MinishVillage_Fuzer5() 
-	if ( Json_MinishWoods_MinishVillage_Fuzer4()==1 and has("fusions4b") ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("MinishVillage_HP")==1 and has("fusions4b") ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenP")==1 and function_Cached("MinishVillage_HP")==2 and has("fusions4b") ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
@@ -665,15 +793,17 @@ end
 
 
 function Json_MinishWoods_MinishVillage_Fuzer6() 
-	if ( Json_MinishWoods_MinishVillage_Fuzer5()==1 and has("fusions57") ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("MinishVillage_HP")==1 and has("fusions57") ) then
 		return 1
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("MinishVillage_HP")==2 and has("fusions57") ) then
+		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
 	end 
 end
 
 function Json_Town_Library_Fuzer3() 
-	if ( Library()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Library")==1 ) then
 		return 1
 	else
 		return 0
@@ -682,7 +812,7 @@ end
 
 
 function Json_Town_Library_Fuzer4() 
-	if ( Json_Town_Library_Fuzer3()==1 and has("fusions4b") ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("Library")==1 and has("fusions4b") ) then
 		return 1
 	else
 		return 0
@@ -691,7 +821,7 @@ end
 
 
 function Json_Town_Library_Fuzer5() 
-	if ( Json_Town_Library_Fuzer4()==1 and has("fusions57") ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("Library")==1 and has("fusions57") ) then
 		return 1
 	else
 		return 0
@@ -699,7 +829,7 @@ function Json_Town_Library_Fuzer5()
 end
 
 function Json_Town_MinishHouse_Fuzer1() 
-	if ( Fountain()==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Fountain")==1 ) then
 		return 1
 	else
 		return 0
@@ -708,7 +838,7 @@ end
 
 
 function Json_Town_MinishHouse_Fuzer2() 
-	if ( Json_Town_MinishHouse_Fuzer1()==1 and has("fusions4b") ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("Fountain")==1 and has("fusions4b") ) then
 		return 1
 	else
 		return 0
@@ -717,7 +847,7 @@ end
 
 
 function Json_Town_MinishHouse_Fuzer3() 
-	if ( Json_Town_MinishHouse_Fuzer2()==1 and has("fusions57") ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("Fountain")==1 and has("fusions57") ) then
 		return 1
 	else
 		return 0

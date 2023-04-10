@@ -48,6 +48,16 @@
 	],
 	"sections":[
 	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessCoF}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
+	  {
 		"name":"Spiny Beetle Fight",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_SpinyBeetleFight"],
@@ -186,9 +196,20 @@
 	],
 	"sections":[
 	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessCrypt}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
+	  {
 		"name":"First Gibdos",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_Gibdos"],
+        "capture_item": true,
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png",
 	  },
@@ -196,6 +217,7 @@
 		"name":"Other Gibdos",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Crypt_OtherGibdos"],
+        "capture_item": true,
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png",
 	  },
@@ -270,6 +292,16 @@
 	  }
 	],
 	"sections":[
+	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessDeepwood}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
 	  {
 		"name":"Slug Room",
 		"item_count":1,
@@ -426,6 +458,16 @@
 	],
 	"sections":[
 	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessFortress}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
+	  {
 		"name":"Entrance Far Left",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Fortress_EntranceFarLeft"],
@@ -511,6 +553,7 @@
 		"name":"Right Side Heart Piece",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Fortress_RightSideHeartPiece"],
+        "capture_item": true,
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  },
@@ -645,6 +688,16 @@
 	],
 	"sections":[
 	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessPalace}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
+	  {
 		"name":"Firebar Grate",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Palace_FirebarGrate"],
@@ -740,6 +793,7 @@
 		"name":"Heart Piece",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Palace_HeartPiece"],
+        "capture_item":true,
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  },
@@ -828,6 +882,16 @@
 	  }
 	],
 	"sections":[
+	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessDroplets}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
 	  {
 		"name":"First Ice Block",
 		"item_count":1,
@@ -1174,6 +1238,16 @@
 	],
 	"sections":[
 	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
+	  {
 		"name":"Entrance",
 		"item_count":1,
 		"access_rules":[""],
@@ -1193,6 +1267,16 @@
 	  }
 	],
 	"sections":[
+	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessDroplets}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
 	  {
 		"name":"Entrance",
 		"item_count":1,
@@ -1215,6 +1299,16 @@
 	],
 	"sections":[
 	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessPalace}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
+	  {
 		"name":"Entrance",
 		"item_count":1,
 		"access_rules":["$AccessPalace"],
@@ -1236,6 +1330,16 @@
 	],
 	"sections":[
 	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessFortress}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
+	  {
 		"name":"Entrance",
 		"item_count":1,
 		"access_rules":["$AccessFortress"],
@@ -1255,6 +1359,16 @@
 	  }
 	],
 	"sections":[
+	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessCoF}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
 	  {
 		"name":"Entrance",
 		"item_count":1,
@@ -1276,6 +1390,16 @@
 	],
 	"sections":[
 	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["{$AccessCrypt}"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
+	  {
 		"name":"Entrance",
 		"item_count":1,
 		"access_rules":["$AccessCrypt"],
@@ -1285,7 +1409,7 @@
 	]
   },
   {
-	"name":"Deepwood Entrance",
+	"name":"Deepwoods Entrance",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -1295,6 +1419,17 @@
 	  }
 	],
 	"sections":[
+	  {
+		"name":"Prize",
+        "capture_item": true,
+		"access_rules":["$AccessDeepwood"],
+		"always_allow_chest_manipulation":true,
+		"capture_item_layout":"Element_capture",
+		"clear_as_group":false,
+		"item_count":1,
+		"chest_unopened_img":"images/items-map/Elements.png",
+		"chest_opened_img":"images/items-map/Elements.png"
+	  },
 	  {
 		"name":"Entrance",
 		"item_count":1,

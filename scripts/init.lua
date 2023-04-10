@@ -11,26 +11,41 @@ JsMap="maps/"
 ScriptLocations="scripts/locations/"
 JsLocations="locations/"
 
+has_item_data={}
+function_data = {}
+has_item_option_dev={}
+function_data_fusion={}
+-- has_item_option_dev["out_logic_no"]=false
+-- has_item_option_dev["out_logic_yes"]=true
+--Activate the cache reset
+Cache_reset=false
+function_count = 0
+
 ------------------------------------------------------------------
 -- Configuration options for scripted systems in this pack
 ------------------------------------------------------------------
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUZER_TRACKING = true
-TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = true
+VERSION_ALPHA = true
+VERSION_BETA = false
+VERSION_RANDO = "0.7.0arev3"
+------------------------------------------------------------------
+-- Configuration Debug options
+------------------------------------------------------------------
+TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_FUZER = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
-VERSION_ALPHA = true
-VERSION_BETA = true
-if TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND == true or TMC_AUTOTRACKER_DEBUG_LOCATION == true or TMC_AUTOTRACKER_DEBUG_ITEM == true then
-	TMC_AUTOTRACKER_DEBUG = true
-else
-	TMC_AUTOTRACKER_DEBUG = false
-end
+TMC_CACHE_DEBUG_FUNCTION = false
+TMC_CACHE_DEBUG_ITEM = false
+
+
+
 ------------------------------------------------------------------
 -- Logic Pack
 ------------------------------------------------------------------
+ScriptHost:LoadScript(ScriptLogic.."Function.lua")
 ScriptHost:LoadScript(ScriptLogic.."Access.lua")
 ScriptHost:LoadScript(ScriptLogic.."Fusion.lua")
 ScriptHost:LoadScript(ScriptLogic.."Common.lua")
@@ -49,6 +64,7 @@ ScriptHost:LoadScript(ScriptLogic.."check/Fortress.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/Droplet.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/Palace.lua")
 ScriptHost:LoadScript(ScriptLogic.."check/DHC.lua")
+
 ------------------------------------------------------------------
 -- Script Item for scripted systems in this pack
 ------------------------------------------------------------------
@@ -72,12 +88,12 @@ sword = SwordProgress("Progressive Sword","sword0")
 clouds = Kinstone("Kinstone Clouds","clouds","images/items/Kinstone Clouds Half.png","images/items/Kinstone Clouds Half.png",5,0)
 falls = Kinstone("Kinstone Viel Fall","falls","images/items/Kinstone Falls Half.png",nil,1,0)
 wilds = Kinstone("Kinstone Swamp","wilds","images/items/Kinstone Wilds Half.png",nil,3,0)
-blueL = Kinstone("Kingstone Blue L","blueL","images/items/KinstoneBlueL.png","images/items/KinstoneBlueL.png",9,0)
-blueS = Kinstone("Kingstone Blue S","blueS","images/items/KinstoneBlueS.png",nil,9,0)
+blueL = Kinstone("Kingstone Blue L","blueL","images/items/KinstoneBlueL.png","images/items/KinstoneBlueL.png",18,0)
+blueS = Kinstone("Kingstone Blue S","blueS","images/items/KinstoneBlueS.png",nil,24,0)
 redE = Kinstone("Kingstone Red E","redE","images/items/KinstoneRedE.png",nil,9,0)
 redV = Kinstone("Kingstone Red V","redV","images/items/KinstoneRedV.png",nil,7,0)
 redW = Kinstone("Kingstone Red W","redW","images/items/KinstoneRedW.png","images/items/KinstoneRedW.png",9,0)
-greenG = Kinstone("Kingstone Green G","greenG","images/items/KinstoneGreenG.png",nil,16,0)
+greenG = Kinstone("Kingstone Green G","greenG","images/items/KinstoneGreenG.png",nil,49,0)
 greenC = Kinstone("Kingstone Green C","greenC","images/items/KinstoneGreenC.png","images/items/KinstoneGreenC.png",17,0)
 greenP = Kinstone("Kingstone Green P","greenP","images/items/KinstoneGreenP.png",nil,16,0)
 fusiongoldcombined = KinstoneOptions("This converts the different shaped Golden Kinstones into a single Golden shape. 9 of these are shuffled into the world, the locations of the fusions are not shuffled and all ask for the same shape.", "fusiongoldcombined","images/options/fusions_settings/gold_combined_on.png","images/options/fusions_settings/gold_combined_off.png",0)
@@ -85,32 +101,44 @@ fusionredcombined = KinstoneOptions("This converts the different shaped Red Kins
 fusiongreencombined = KinstoneOptions("This converts the different shaped Green Kinstones into a single Green shape. The locations of the fusions are not shuffled and all ask for the same shape.", "fusiongreencombined","images/options/fusions_settings/green_combined_on.png","images/options/fusions_settings/green_combined_off.png",2)
 fusionbluecombined = KinstoneOptions("This converts the different shaped Blue Kinstones into a single Blue shape. The locations of the fusions are not shuffled and all ask for the same shape.", "fusionbluecombined","images/options/fusions_settings/blue_combined_on.png","images/options/fusions_settings/blue_combined_off.png",3)
 swordprogress = SwordOptions("Some item upgrades are treated as completely independent items by the game.","progressiveitems","images/options/weapons_settings/progressive_on.png","images/options/weapons_settings/progressive_off.png")
+
+
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------
-
-Tracker:AddItems(JsItems.."common.json")
-Tracker:AddItems(JsItems.."dungeon_items.json")
-Tracker:AddItems(JsItems.."keys.json")
-Tracker:AddItems(JsItems.."options.json")
-Tracker:AddItems(JsItems.."fusion.json")
-
 if(VERSION_ALPHA==true) then
-	Tracker:AddItems(JsItems.."alpha.json")
+	Tracker:AddItems(JsItems.."version/alpha.json")
 elseif(VERSION_BETA==true) then
-	Tracker:AddItems(JsItems.."beta.json")
+	Tracker:AddItems(JsItems.."version/beta.json")
 end 
+
+Tracker:AddItems(JsItems.."items/common.json")
+Tracker:AddItems(JsItems.."items/fusion.json")
+
+Tracker:AddItems(JsItems.."dungeons/items.json")
+Tracker:AddItems(JsItems.."dungeons/keys.json")
+Tracker:AddItems(JsItems.."options/settings.json")
+
+
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
-    Tracker:AddMaps(JsMap.."maps.json")
+	Tracker:AddMaps(JsMap.."maps.json")
+	ScriptHost:LoadScript(ScriptLocations.."Dungeons/CaveOfFlame.lua")
+	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Crypt.lua")
+	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Deepwood.lua")
+	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Fortress.lua")
+	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Droplet.lua")
+	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Palace.lua")
+	ScriptHost:LoadScript(ScriptLocations.."Dungeons/DHC.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Castle.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Clouds.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Crenel.lua")
 	ScriptHost:LoadScript(ScriptLocations.."CrenelBase.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Falls.lua")
 	ScriptHost:LoadScript(ScriptLocations.."FallsLower.lua")
+	ScriptHost:LoadScript(ScriptLocations.."General.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Hills.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Hylia.lua")
 	ScriptHost:LoadScript(ScriptLocations.."LonLon.lua")
@@ -123,32 +151,46 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	ScriptHost:LoadScript(ScriptLocations.."Trilby.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Valley.lua")
 	ScriptHost:LoadScript(ScriptLocations.."WesternWoods.lua")
-	ScriptHost:LoadScript(ScriptLocations.."General.lua")
 
-	ScriptHost:LoadScript(ScriptLocations.."Dungeons/CaveOfFlame.lua")
-	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Crypt.lua")
-	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Deepwood.lua")
-	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Fortress.lua")
-	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Droplet.lua")
-	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Palace.lua")
-	ScriptHost:LoadScript(ScriptLocations.."Dungeons/DHC.lua")
+	Tracker:AddLocations(JsLocations.."Castle.json")
+	Tracker:AddLocations(JsLocations.."Clouds.json")
+	Tracker:AddLocations(JsLocations.."Crenel.json")
+	Tracker:AddLocations(JsLocations.."Mines.json")
+	Tracker:AddLocations(JsLocations.."CrenelBase.json")
+	Tracker:AddLocations(JsLocations.."Falls.json")
+	Tracker:AddLocations(JsLocations.."FallsLower.json")
+	Tracker:AddLocations(JsLocations.."General.json")
+	Tracker:AddLocations(JsLocations.."Hills.json")
+	Tracker:AddLocations(JsLocations.."Hylia.json")
+	Tracker:AddLocations(JsLocations.."LonLon.json")
+	Tracker:AddLocations(JsLocations.."MinishWoods.json")
+	Tracker:AddLocations(JsLocations.."NorthField.json")
+	Tracker:AddLocations(JsLocations.."Ruins.json")
+	Tracker:AddLocations(JsLocations.."SouthHyruleField.json")
+	Tracker:AddLocations(JsLocations.."Swamp.json")
+	Tracker:AddLocations(JsLocations.."Town.json")
+	Tracker:AddLocations(JsLocations.."Trilby.json")
+	Tracker:AddLocations(JsLocations.."Valley.json")
+	Tracker:AddLocations(JsLocations.."WesternWoods.json")
+
 	Tracker:AddLocations(JsLocations.."Dungeons.json")
 	Tracker:AddLocations(JsLocations.."Maps.json")
 
 end
-	Tracker:AddLayouts(JsLayouts.."tracker.json")
+Tracker:AddLayouts(JsLayouts.."tracker.json")
 if (string.find(Tracker.ActiveVariantUID, "_h")) then
-    Tracker:AddLayouts(JsLayouts.."standard_h_broadcast.json")
+	Tracker:AddLayouts(JsLayouts.."standard_h_broadcast.json")
 else
-    Tracker:AddLayouts(JsLayouts.."standard_broadcast.json")
+	Tracker:AddLayouts(JsLayouts.."standard_broadcast.json")
 end
+
 ------------------------------------------------------------------
 -- Autotracking
 ------------------------------------------------------------------
 
 if _VERSION == "Lua 5.3" then
-  ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
+	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
 else
-  print("Your tracker version does not support autotracking")
+	print("Your tracker version does not support autotracking")
 end
 

@@ -147,8 +147,7 @@
 	  {
 		"map":"map",
 		"x":1047,
-		"y":1936,
-		"restrict_visibility_rules":["$FusionsBlue"]
+		"y":1936
 	  }
 	],
 	"sections":[

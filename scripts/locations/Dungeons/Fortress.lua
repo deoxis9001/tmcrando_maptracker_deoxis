@@ -1,9 +1,9 @@
 function Json_Dungeon_Fortress_EntranceFarLeft()
-	if Fortress_Entrance_1F_LeftChest()==1 then
+	if function_Cached("Fortress_Entrance_1F_LeftChest")==1 then
 		return 1
-	elseif Fortress_Entrance_1F_LeftChest()==2 then
+	elseif function_Cached("Fortress_Entrance_1F_LeftChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Entrance_1F_LeftChest()==3 then
+	elseif function_Cached("Fortress_Entrance_1F_LeftChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -11,11 +11,11 @@ function Json_Dungeon_Fortress_EntranceFarLeft()
 end
 
 function Json_Dungeon_Fortress_WizzrobeFight()
-	if Fortress_Entrance_1F_LeftWizrobeChest()==1 then
+	if function_Cached("Fortress_Entrance_1F_LeftWizrobeChest")==1 then
 		return 1
-	elseif Fortress_Entrance_1F_LeftWizrobeChest()==2 then
+	elseif function_Cached("Fortress_Entrance_1F_LeftWizrobeChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Entrance_1F_LeftWizrobeChest()==3 then
+	elseif function_Cached("Fortress_Entrance_1F_LeftWizrobeChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -23,11 +23,11 @@ function Json_Dungeon_Fortress_WizzrobeFight()
 end
 
 function Json_Dungeon_Fortress_EntranceLargeRupee()
-	if Deepwood_1F_SlugTorches_Chest()==1 then
+	if function_Cached("Deepwood_1F_SlugTorches_Chest")==1 then
 		return 1
-	elseif Deepwood_1F_SlugTorches_Chest()==2 then
+	elseif function_Cached("Deepwood_1F_SlugTorches_Chest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Deepwood_1F_SlugTorches_Chest()==3 then
+	elseif function_Cached("Deepwood_1F_SlugTorches_Chest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -35,11 +35,11 @@ function Json_Dungeon_Fortress_EntranceLargeRupee()
 end
 
 function Json_Dungeon_Fortress_EntranceLargeRupee()
-	if Fortress_Entrance_1F_RightItem()==1 then
+	if function_Cached("Fortress_Entrance_1F_RightItem")==1 then
 		return 1
-	elseif Fortress_Entrance_1F_RightItem()==2 then
+	elseif function_Cached("Fortress_Entrance_1F_RightItem")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Entrance_1F_RightItem()==3 then
+	elseif function_Cached("Fortress_Entrance_1F_RightItem")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -47,11 +47,11 @@ function Json_Dungeon_Fortress_EntranceLargeRupee()
 end
 
 function Json_Dungeon_Fortress_LeftSideMittsChests()
-	if Fortress_Left_2F_DigChest()==1 then
+	if function_Cached("Fortress_Left_2F_DigChest")==1 then
 		return 1
-	elseif Fortress_Left_2F_DigChest()==2 then
+	elseif function_Cached("Fortress_Left_2F_DigChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Left_2F_DigChest()==3 then
+	elseif function_Cached("Fortress_Left_2F_DigChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -59,11 +59,11 @@ function Json_Dungeon_Fortress_LeftSideMittsChests()
 end
 
 function Json_Dungeon_Fortress_LeftSideRupees()
-	if Fortress_Left_2F_Item()==1 then
+	if function_Cached("Fortress_Left_2F_Item")==1 then
 		return 1
-	elseif Fortress_Left_2F_Item()==2 then
+	elseif function_Cached("Fortress_Left_2F_Item")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Left_2F_Item()==3 then
+	elseif function_Cached("Fortress_Left_2F_Item")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -71,11 +71,11 @@ function Json_Dungeon_Fortress_LeftSideRupees()
 end
 
 function Json_Dungeon_Fortress_LeftSideRupees5()
-	if Fortress_Left_2F_Item5()==1 then
+	if function_Cached("Fortress_Left_2F_Item5")==1 then
 		return 1
-	elseif Fortress_Left_2F_Item5()==2 then
+	elseif function_Cached("Fortress_Left_2F_Item5")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Left_2F_Item5()==3 then
+	elseif function_Cached("Fortress_Left_2F_Item5")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -83,11 +83,11 @@ function Json_Dungeon_Fortress_LeftSideRupees5()
 end
 
 function Json_Dungeon_Fortress_Eyegores()
-	if Fortress_Left_3F_Eyegore_BigChest()==1 then
+	if function_Cached("Fortress_Left_3F_Eyegore_BigChest")==1 then
 		return 1
-	elseif Fortress_Left_3F_Eyegore_BigChest()==2 then
+	elseif function_Cached("Fortress_Left_3F_Eyegore_BigChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Left_3F_Eyegore_BigChest()==3 then
+	elseif function_Cached("Fortress_Left_3F_Eyegore_BigChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -95,11 +95,11 @@ function Json_Dungeon_Fortress_Eyegores()
 end
 
 function Json_Dungeon_Fortress_LeftSideKeyDrop()
-	if Fortress_Left_3F_ItemDrop()==1 then
+	if function_Cached("Fortress_Left_3F_ItemDrop")==1 then
 		return 1
-	elseif Fortress_Left_3F_ItemDrop()==2 then
+	elseif function_Cached("Fortress_Left_3F_ItemDrop")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Left_3F_ItemDrop()==3 then
+	elseif function_Cached("Fortress_Left_3F_ItemDrop")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -107,11 +107,11 @@ function Json_Dungeon_Fortress_LeftSideKeyDrop()
 end
 
 function Json_Dungeon_Fortress_RightSideTwoLeverRoom()
-	if Fortress_Right_2F_LeftChest()==1 then
+	if function_Cached("Fortress_Right_2F_LeftChest")==1 then
 		return 1
-	elseif Fortress_Right_2F_LeftChest()==2 then
+	elseif function_Cached("Fortress_Right_2F_LeftChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Right_2F_LeftChest()==3 then
+	elseif function_Cached("Fortress_Right_2F_LeftChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -119,11 +119,11 @@ function Json_Dungeon_Fortress_RightSideTwoLeverRoom()
 end
 
 function Json_Dungeon_Fortress_RightSideMittsChests()
-	if Fortress_Right_2F_DigChest()==1 then
+	if function_Cached("Fortress_Right_2F_DigChest")==1 then
 		return 1
-	elseif Fortress_Right_2F_DigChest()==2 then
+	elseif function_Cached("Fortress_Right_2F_DigChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Right_2F_DigChest()==3 then
+	elseif function_Cached("Fortress_Right_2F_DigChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -131,11 +131,11 @@ function Json_Dungeon_Fortress_RightSideMittsChests()
 end
 
 function Json_Dungeon_Fortress_RightSideKeyDrop()
-	if Fortress_Right_3F_ItemDrop()==1 then
+	if function_Cached("Fortress_Right_3F_ItemDrop")==1 then
 		return 1
-	elseif Fortress_Right_3F_ItemDrop()==2 then
+	elseif function_Cached("Fortress_Right_3F_ItemDrop")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Right_3F_ItemDrop()==3 then
+	elseif function_Cached("Fortress_Right_3F_ItemDrop")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -143,11 +143,11 @@ function Json_Dungeon_Fortress_RightSideKeyDrop()
 end
 
 function Json_Dungeon_Fortress_RightSideHeartPiece()
-	if Fortress_Entrance_1F_RightHP()==1 then
+	if function_Cached("Fortress_Entrance_1F_RightHP")==1 then
 		return 1
-	elseif Fortress_Entrance_1F_RightHP()==2 then
+	elseif function_Cached("Fortress_Entrance_1F_RightHP")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Entrance_1F_RightHP()==3 then
+	elseif function_Cached("Fortress_Entrance_1F_RightHP")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -155,11 +155,11 @@ function Json_Dungeon_Fortress_RightSideHeartPiece()
 end
 
 function Json_Dungeon_Fortress_PedestalChest()
-	if Fortress_Middle_2F_BigChest()==1 then
+	if function_Cached("Fortress_Middle_2F_BigChest")==1 then
 		return 1
-	elseif Fortress_Middle_2F_BigChest()==2 then
+	elseif function_Cached("Fortress_Middle_2F_BigChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Middle_2F_BigChest()==3 then
+	elseif function_Cached("Fortress_Middle_2F_BigChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -167,11 +167,11 @@ function Json_Dungeon_Fortress_PedestalChest()
 end
 
 function Json_Dungeon_Fortress_CenterPathSwitch()
-	if Fortress_Middle_2F_StatueChest()==1 then
+	if function_Cached("Fortress_Middle_2F_StatueChest")==1 then
 		return 1
-	elseif Fortress_Middle_2F_StatueChest()==2 then
+	elseif function_Cached("Fortress_Middle_2F_StatueChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Middle_2F_StatueChest()==3 then
+	elseif function_Cached("Fortress_Middle_2F_StatueChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -179,11 +179,11 @@ function Json_Dungeon_Fortress_CenterPathSwitch()
 end
 
 function Json_Dungeon_Fortress_BombableWallBigChest()
-	if Deepwood_1F_SlugTorches_Chest()==1 then
+	if function_Cached("Deepwood_1F_SlugTorches_Chest")==1 then
 		return 1
-	elseif Deepwood_1F_SlugTorches_Chest()==2 then
+	elseif function_Cached("Deepwood_1F_SlugTorches_Chest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Deepwood_1F_SlugTorches_Chest()==3 then
+	elseif function_Cached("Deepwood_1F_SlugTorches_Chest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -191,11 +191,11 @@ function Json_Dungeon_Fortress_BombableWallBigChest()
 end
 --ici
 function Json_Dungeon_Fortress_BombableWallBigChest()
-	if Fortress_BackLeft_BigChest()==1 then
+	if function_Cached("Fortress_BackLeft_BigChest")==1 then
 		return 1
-	elseif Fortress_BackLeft_BigChest()==2 then
+	elseif function_Cached("Fortress_BackLeft_BigChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_BackLeft_BigChest()==3 then
+	elseif function_Cached("Fortress_BackLeft_BigChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -203,11 +203,11 @@ function Json_Dungeon_Fortress_BombableWallBigChest()
 end
 
 function Json_Dungeon_Fortress_BombableWallSmallChest()
-	if Fortress_BackLeft_SmallChest()==1 then
+	if function_Cached("Fortress_BackLeft_SmallChest")==1 then
 		return 1
-	elseif Fortress_BackLeft_SmallChest()==2 then
+	elseif function_Cached("Fortress_BackLeft_SmallChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_BackLeft_SmallChest()==3 then
+	elseif function_Cached("Fortress_BackLeft_SmallChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -215,11 +215,11 @@ function Json_Dungeon_Fortress_BombableWallSmallChest()
 end
 
 function Json_Dungeon_Fortress_ClonePuzzleKeyDrop()
-	if Fortress_BackRight_Statue_ItemDrop()==1 then
+	if function_Cached("Fortress_BackRight_Statue_ItemDrop")==1 then
 		return 1
-	elseif Fortress_BackRight_Statue_ItemDrop()==2 then
+	elseif function_Cached("Fortress_BackRight_Statue_ItemDrop")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_BackRight_Statue_ItemDrop()==3 then
+	elseif function_Cached("Fortress_BackRight_Statue_ItemDrop")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -227,11 +227,11 @@ function Json_Dungeon_Fortress_ClonePuzzleKeyDrop()
 end
 
 function Json_Dungeon_Fortress_MinishDirtRoomKeyDrop()
-	if Fortress_BackRight_Minish_ItemDrop()==1 then
+	if function_Cached("Fortress_BackRight_Minish_ItemDrop")==1 then
 		return 1
-	elseif Fortress_BackRight_Minish_ItemDrop()==2 then
+	elseif function_Cached("Fortress_BackRight_Minish_ItemDrop")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_BackRight_Minish_ItemDrop()==3 then
+	elseif function_Cached("Fortress_BackRight_Minish_ItemDrop")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -239,11 +239,11 @@ function Json_Dungeon_Fortress_MinishDirtRoomKeyDrop()
 end
 
 function Json_Dungeon_Fortress_RightSideMoldormTopPot()
-	if Fortress_BackRight_DigRoom_TopPot()==1 then
+	if function_Cached("Fortress_BackRight_DigRoom_TopPot")==1 then
 		return 1
-	elseif Fortress_BackRight_DigRoom_TopPot()==2 then
+	elseif function_Cached("Fortress_BackRight_DigRoom_TopPot")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_BackRight_DigRoom_TopPot()==3 then
+	elseif function_Cached("Fortress_BackRight_DigRoom_TopPot")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -251,11 +251,11 @@ function Json_Dungeon_Fortress_RightSideMoldormTopPot()
 end
 
 function Json_Dungeon_Fortress_RightSideMoldormBottomPot()
-	if Fortress_BackRight_DigRoom_BottomPot()==1 then
+	if function_Cached("Fortress_BackRight_DigRoom_BottomPot")==1 then
 		return 1
-	elseif Fortress_BackRight_DigRoom_BottomPot()==2 then
+	elseif function_Cached("Fortress_BackRight_DigRoom_BottomPot")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_BackRight_DigRoom_BottomPot()==3 then
+	elseif function_Cached("Fortress_BackRight_DigRoom_BottomPot")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -263,11 +263,11 @@ function Json_Dungeon_Fortress_RightSideMoldormBottomPot()
 end
 
 function Json_Dungeon_Fortress_SkullRoomChest()
-	if Fortress_BackRight_BigChest()==1 then
+	if function_Cached("Fortress_BackRight_BigChest")==1 then
 		return 1
-	elseif Fortress_BackRight_BigChest()==2 then
+	elseif function_Cached("Fortress_BackRight_BigChest")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_BackRight_BigChest()==3 then
+	elseif function_Cached("Fortress_BackRight_BigChest")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -276,11 +276,11 @@ end
 
 
 function Json_Dungeon_Fortress_Mazaal()
-	if Fortress_BossItem()==1 then
+	if function_Cached("Fortress_BossItem")==1 then
 		return 1
-	elseif Fortress_BossItem()==2 then
+	elseif function_Cached("Fortress_BossItem")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_BossItem()==3 then
+	elseif function_Cached("Fortress_BossItem")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
@@ -288,11 +288,11 @@ function Json_Dungeon_Fortress_Mazaal()
 end
 
 function Json_Dungeon_Fortress_FOWReward()
-	if Fortress_Prize()==1 then
+	if function_Cached("Fortress_Prize")==1 then
 		return 1
-	elseif Fortress_Prize()==2 then
+	elseif function_Cached("Fortress_Prize")==2 then
 		return 1, AccessibilityLevel.SequenceBreak
-	elseif Fortress_Prize()==3 then
+	elseif function_Cached("Fortress_Prize")==3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0

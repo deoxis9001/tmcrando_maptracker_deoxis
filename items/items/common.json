@@ -803,13 +803,13 @@
  {
    "name": "Big Key",
    "type": "toggle",
-   "img": "images/donjons/Big Key.png",
+   "img": "images/dungeons/Big Key.png",
    "codes": "bigkey"
  },
  {
    "name": "Small Key",
    "type": "toggle",
-   "img": "images/donjons/Small Key.png",
+   "img": "images/dungeons/Small Key.png",
    "codes": "smallkey"
  },
  {

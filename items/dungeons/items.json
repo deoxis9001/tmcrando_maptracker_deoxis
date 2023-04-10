@@ -6,7 +6,7 @@
 		"allow_disabled": false,
 		"capturable": false,
 		"loop": true,
-		"img": "images/donjons/chu.png",
+		"img": "images/dungeons/chu.png",
 		"codes": "dws"
 	},
 	{
@@ -14,7 +14,7 @@
 		"type": "toggle_badged",
 		"base_item": "dws",
 		"initial_active_state":true,
-		"img": "images/donjons/overlay_elements_dws.png",
+		"img": "images/dungeons/overlay_elements_dws.png",
 		"codes": "dwsx"
 	},
 	// COF
@@ -24,7 +24,7 @@
 		"allow_disabled": false,
 		"capturable": false,
 		"loop": true,
-		"img": "images/donjons/gleerok.png",
+		"img": "images/dungeons/gleerok.png",
 		"codes": "cof"
 	},
 	{
@@ -32,7 +32,7 @@
 		"type": "toggle_badged",
 		"base_item": "cof",
 		"initial_active_state":true,
-		"img": "images/donjons/overlay_elements_cof.png",
+		"img": "images/dungeons/overlay_elements_cof.png",
 		"codes": "cofx"
 	},
 	// FOW
@@ -42,7 +42,7 @@
 		"alow_disabled": false,
 		"capturable": false,
 		"loop": true,
-		"img": "images/donjons/mazaal.png",
+		"img": "images/dungeons/mazaal.png",
 		"codes": "fow"
 	},
 	{
@@ -50,7 +50,7 @@
 		"type": "toggle_badged",
 		"base_item": "fow",
 		"initial_active_state":true,
-		"img": "images/donjons/overlay_elements_fow.png",
+		"img": "images/dungeons/overlay_elements_fow.png",
 		"codes": "fowx"
 	},
 	// TOD
@@ -60,7 +60,7 @@
 		"allow_disabled": false,
 		"capturable": false,
 		"loop": true,
-		"img": "images/donjons/octo.png",
+		"img": "images/dungeons/octo.png",
 		"codes": "tod"
 	},
 	{
@@ -68,7 +68,7 @@
 		"type": "toggle_badged",
 		"base_item": "tod",
 		"initial_active_state":true,
-		"img": "images/donjons/overlay_elements_tod.png",
+		"img": "images/dungeons/overlay_elements_tod.png",
 		"codes": "todx"
 	},
 	// RC
@@ -78,7 +78,7 @@
 		"allow_disabled": false,
 		"capturable": false,
 		"loop": true,
-		"img": "images/donjons/gustaf.png",
+		"img": "images/dungeons/gustaf.png",
 		"codes": "rc"
 	},
 	{
@@ -86,7 +86,7 @@
 		"type": "toggle_badged",
 		"base_item": "rc",
 		"initial_active_state":true,
-		"img": "images/donjons/overlay_elements.png",
+		"img": "images/dungeons/overlay_elements.png",
 		"codes": "rcx"
 	},
 	// POW
@@ -96,7 +96,7 @@
 		"allow_disabled": false,
 		"capturable": false,
 		"loop": true,
-		"img": "images/donjons/gyorg.png",
+		"img": "images/dungeons/gyorg.png",
 		"codes": "pow"
 	},
 	{
@@ -104,14 +104,14 @@
 		"type": "toggle_badged",
 		"base_item": "pow",
 		"initial_active_state":true,
-		"img": "images/donjons/overlay_elements_pow.png",
+		"img": "images/dungeons/overlay_elements_pow.png",
 		"codes": "powx"
 	},
 	// DHC
 	{
 		"name": "Dark Hyrule Castle",
 		"type": "toggle",
-		"img": "images/donjons/vaati.png",
+		"img": "images/dungeons/vaati.png",
 		"codes": "dhc"
 	},
 ]
