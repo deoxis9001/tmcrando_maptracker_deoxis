@@ -1,9 +1,64 @@
+
+function Preset()
+	local data_preset = Tracker:FindObjectForCode("preset_01")
+	if setting_preset_data_cache~=( data_preset.CurrentStage + 1 ) then
+		setting_preset_data_cache = data_preset.CurrentStage + 1
+		if setting_preset_data_cache ~= 0 then
+			for i, v in pairs(setting_preset_data[setting_preset_data_title[setting_preset_data_cache]]) do
+				local item = Tracker:FindObjectForCode(i)
+				if  setting_preset_data_other[i]==nil then
+					item.CurrentStage = v
+				elseif  setting_preset_data_other[i]==1 then
+					fusiongoldcombined:setActive(v)
+				elseif  setting_preset_data_other[i]==2 then
+					fusionredcombined:setActive(v)
+				elseif  setting_preset_data_other[i]==3 then
+					fusiongreencombined:setActive(v)
+				elseif  setting_preset_data_other[i]==4 then
+					fusionbluecombined:setActive(v)
+				elseif  setting_preset_data_other[i]==5 then
+					swordprogress:setActive(v)
+				elseif  setting_preset_data_other[i]==6 then
+					item.AcquiredCount = v
+				end
+			end
+		end
+	end
+end
+function UpdateFusion()
+	if ( has("fusionred_vanilla") or has("fusionred_complet") ) then
+		if( redflag==false or redflag==nil ) then
+			fusiongreencombined:updateMax()
+			redflag=true
+		end
+	else
+		if( redflag==true or redflag==nil ) then
+			fusiongreencombined:updateMax()
+			redflag=false
+		end
+	end 
+	if ( has("fusionblue_vanilla") or has("fusionblue_complet") ) then
+		if( blueflag==false or blueflag==nil ) then
+			fusionredcombined:updateMax()
+			fusiongreencombined:updateMax()
+			blueflag=true
+		end
+	else
+		if( blueflag==true or blueflag==nil ) then
+			fusionredcombined:updateMax()
+			fusiongreencombined:updateMax()
+			blueflag=false
+		end
+	end 
+end
 function tracker_on_accessibility_updating()
 	if Cache_reset then
 		has_item_data = {}
 		function_data = {}
 		function_count = 0
 		function_data_fusion={}
+		Preset()
+		UpdateFusion()
 	end
 end
 CaptureBadgeSections = {
@@ -23,35 +78,40 @@ CaptureBadgeSections = {
 }
 CaptureBadgeCache = {}
 function tracker_on_accessibility_updated()
-    for i,section in pairs(CaptureBadgeSections) do
-        local target = Tracker:FindObjectForCode(section)
-        -- Has the captured item for this section changed since last update
-        if target == nil then
-            print("Failed to resolve " .. section .. " please check for typos.")
-        elseif target.CapturedItem ~= CaptureBadgeCache[target]  then
-            -- Does the location that owns this section already have a badge, if so remove it
-            if CaptureBadgeCache[target.Owner] then
-                target.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
-                CaptureBadgeCache[target.Owner] = nil
-                CaptureBadgeCache[target] = nil
-            end
-            -- Check if a captured item exists, add as badge to the sections owner if it does
-            if target.CapturedItem then
-                CaptureBadgeCache[target.Owner] = target.Owner:AddBadge(target.CapturedItem.PotentialIcon)
-                CaptureBadgeCache[target] = target.CapturedItem
-            end
-        end
-    end
+	if Cache_reset then
+		for i,section in pairs(CaptureBadgeSections) do
+			local target = Tracker:FindObjectForCode(section)
+			-- Has the captured item for this section changed since last update
+			if target == nil then
+				print("Failed to resolve " .. section .. " please check for typos.")
+			elseif target.CapturedItem ~= CaptureBadgeCache[target]  then
+				-- Does the location that owns this section already have a badge, if so remove it
+				if CaptureBadgeCache[target.Owner] then
+					target.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+					CaptureBadgeCache[target.Owner] = nil
+					CaptureBadgeCache[target] = nil
+				end
+				-- Check if a captured item exists, add as badge to the sections owner if it does
+				if target.CapturedItem then
+					CaptureBadgeCache[target.Owner] = target.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+					CaptureBadgeCache[target] = target.CapturedItem
+				end
+			end
+		end
+	end
 end
 function tracker_on_begin_loading_save_file()
-	print("--	Load Save File	--")
+	print("")
+	print("--	Load Save File Started	--")
+	print("")
 	Cache_reset=false
-	print("")
-	print("	Enable Cache :			",Cache_reset)
-	print("")
-
 end
 function tracker_on_finish_loading_save_file()
+	print("")
+	print("--	Load Save File Finish	--")
+	print("")
+	local data_preset = Tracker:FindObjectForCode("preset_01")
+	setting_preset_data_cache = data_preset.CurrentStage + 1
 end
 function tracker_on_pack_ready()
 	print("")
@@ -73,6 +133,8 @@ function tracker_on_pack_ready()
 	print("")
 	print("	Tracker is ready")
 	Cache_reset=true
+	Preset()
+	UpdateFusion()
 	print("	Enable Cache :		",Cache_reset)
 	if TMC_CACHE_DEBUG_FUNCTION or TMC_CACHE_DEBUG_ITEM then
 		print("")

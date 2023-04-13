@@ -2,16 +2,8 @@
 function FusionsRed()
 
 	if ( has("fusionred_vanilla") or has("fusionred_complet") ) then
-		if( redflag==false or redflag==nil ) then
-			fusiongreencombined:updateMax()
-			redflag=true
-		end
 		return 1
 	else
-		if( redflag==true or redflag==nil ) then
-			fusiongreencombined:updateMax()
-			redflag=false
-		end
 		return 0
 	end 
 end
@@ -19,18 +11,8 @@ end
 function FusionsBlue()
 
 	if ( has("fusionblue_vanilla") or has("fusionblue_complet") ) then
-		if( blueflag==false or blueflag==nil ) then
-			fusionredcombined:updateMax()
-			fusiongreencombined:updateMax()
-			blueflag=true
-		end
 		return 1
 	else
-		if( blueflag==true or blueflag==nil ) then
-			fusionredcombined:updateMax()
-			fusiongreencombined:updateMax()
-			blueflag=false
-		end
 		return 0
 	end 
 end
@@ -412,9 +394,6 @@ function FusionsRedNumber(code)
 	end
 	if fusionredcombined:getActive() then
 		local count_fuzer=function_Cached("FusionsRedWNumber")+function_Cached("FusionsRedVNumber")+function_Cached("FusionsRedENumber")
-		print("")
-		print("count_fuzer:",count_fuzer)
-		print("")
 		if count_fuzer < redW:getActive() then
 				function_data_fusion[code]=1
 				return 1

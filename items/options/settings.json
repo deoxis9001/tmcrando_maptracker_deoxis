@@ -112,23 +112,13 @@
     "name":"The number of Elements that need to be collected to activate the Sanctuary",
     "type":"progressive",
     "loop": true,
-	"initial_stage_idx":0,
+	"initial_stage_idx":4,
     "allow_disabled":false,
     "stages":[
-	  {
-        "img":"images/options/dhc_requirements/element4.png",
-        "inherit_codes":false,
-        "codes":"element4Needed"
-      },
       {
-        "img":"images/options/dhc_requirements/element3.png",
+        "img":"images/options/dhc_requirements/element0.png",
         "inherit_codes":false,
-        "codes":"element3Needed"
-      },
-      {
-        "img":"images/options/dhc_requirements/element2.png",
-        "inherit_codes":false,
-        "codes":"element2Needed"
+        "codes":"element0Needed"
       },
       {
         "img":"images/options/dhc_requirements/element1.png",
@@ -136,9 +126,19 @@
         "codes":"element1Needed"
       },
       {
-        "img":"images/options/dhc_requirements/element0.png",
+        "img":"images/options/dhc_requirements/element2.png",
         "inherit_codes":false,
-        "codes":"element0Needed"
+        "codes":"element2Needed"
+      },
+      {
+        "img":"images/options/dhc_requirements/element3.png",
+        "inherit_codes":false,
+        "codes":"element3Needed"
+      },
+      {
+        "img":"images/options/dhc_requirements/element4.png",
+        "inherit_codes":false,
+        "codes":"element4Needed"
       },
     ]
   },
@@ -1671,6 +1671,47 @@
         "img":"images/options/world_settings/settings/big_key_shuffle.png",
         "codes": "big_key_shuffle",
         "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Preset",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/preset_01.png",
+        "codes": "preset_01"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_02.png",
+        "codes": "preset_02"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_03.png",
+        "codes": "preset_03"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_04.png",
+        "codes": "preset_04"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_05.png",
+        "codes": "preset_05"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_06.png",
+        "codes": "preset_06"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_07.png",
+        "codes": "preset_07"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_08.png",
+        "codes": "preset_08"
       }
     ]
   },

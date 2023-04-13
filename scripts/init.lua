@@ -1,3 +1,6 @@
+------------------------------------------------------------------
+-- do not touch these variables 
+------------------------------------------------------------------
 ScriptItemSpec="scripts/item_spec/"
 ScriptSettings="scripts/settings/"
 ScriptLogic="scripts/logic/"
@@ -15,6 +18,14 @@ has_item_data={}
 function_data = {}
 has_item_option_dev={}
 function_data_fusion={}
+setting_preset_data_other={}
+setting_preset_data_other["fusiongoldcombined"]=1
+setting_preset_data_other["fusionredcombined"]=2
+setting_preset_data_other["fusiongreencombined"]=3
+setting_preset_data_other["fusionbluecombined"]=4
+setting_preset_data_other["progressiveitems"]=5
+setting_preset_data_other["figurine_option"]=6
+setting_preset_data_title={"Weekly2022","Beginner","Intermediate","Advanced","Max Random","Expert","No Logic - Open World","Firerod"}
 -- has_item_option_dev["out_logic_no"]=false
 -- has_item_option_dev["out_logic_yes"]=true
 --Activate the cache reset
@@ -45,6 +56,7 @@ TMC_CACHE_DEBUG_ITEM = false
 ------------------------------------------------------------------
 -- Logic Pack
 ------------------------------------------------------------------
+ScriptHost:LoadScript("scripts/SettingsPreset.lua")
 ScriptHost:LoadScript(ScriptLogic.."Function.lua")
 ScriptHost:LoadScript(ScriptLogic.."Access.lua")
 ScriptHost:LoadScript(ScriptLogic.."Fusion.lua")
@@ -103,6 +115,7 @@ fusionbluecombined = KinstoneOptions("This converts the different shaped Blue Ki
 swordprogress = SwordOptions("Some item upgrades are treated as completely independent items by the game.","progressiveitems","images/options/weapons_settings/progressive_on.png","images/options/weapons_settings/progressive_off.png")
 
 
+
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------
@@ -119,7 +132,7 @@ Tracker:AddItems(JsItems.."dungeons/items.json")
 Tracker:AddItems(JsItems.."dungeons/keys.json")
 Tracker:AddItems(JsItems.."options/settings.json")
 
-
+Preset()
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------

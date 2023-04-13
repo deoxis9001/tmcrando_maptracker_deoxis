@@ -1,0 +1,56 @@
+__Beginner__
+cle -> keasy
+big clé -> keasy
+DHC -> ped
+Donjon -> 0
+element -> 4
+EPEE -> four sword
+cucco -> 0
+goron -> 0
+
+heart piece-> shuffle
+rupee -> no
+pot -> no
+dig -> no
+underwater -> no
+golden -> no
+peditem -> no
+
+Entrance -> vanilla
+open world -> no
+Fusion all -> closed
+
+wind crest -> no
+Warps -> no
+
+Logic -> all no
+Progressive -> yes
+
+__Intermediate__
+cle -> Own Dungeon
+big clé -> Own Dungeon
+DHC -> ped
+Donjon -> 0
+element -> 4
+EPEE -> four sword
+cucco -> 0
+goron -> 0
+
+heart piece-> shuffle
+rupee -> yes
+pot -> no
+dig -> no
+underwater -> no
+golden -> no
+peditem -> no
+
+Entrance -> vanilla
+open world -> no
+Fusion gold -> Vanilla
+Fusion other -> closed
+
+wind crest -> no
+Warps -> no
+
+Logic -> all no
+Progressive -> yes
