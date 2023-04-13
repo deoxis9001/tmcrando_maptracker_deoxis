@@ -290,8 +290,9 @@
 		"item_height":64,
 		"item_width":320,
     "rows": [
-     ["dungeonser_off","openworld_off"],
-		 ["small_key_none","big_key_none"]
+		 ["dungeonser_off","openworld_off"],
+		 ["small_key_none","big_key_none"],
+		 ["preset_01"]
     ]
    }
   },
