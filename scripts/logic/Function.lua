@@ -104,7 +104,6 @@ function tracker_on_begin_loading_save_file()
 	print("")
 	print("--	Load Save File Started	--")
 	print("")
-	Cache_reset=false
 end
 function tracker_on_finish_loading_save_file()
 	print("")
