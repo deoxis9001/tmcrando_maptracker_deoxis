@@ -115,7 +115,6 @@ fusionbluecombined = KinstoneOptions("This converts the different shaped Blue Ki
 swordprogress = SwordOptions("Some item upgrades are treated as completely independent items by the game.","progressiveitems","images/options/weapons_settings/progressive_on.png","images/options/weapons_settings/progressive_off.png")
 
 
-
 ------------------------------------------------------------------
 -- Managed Item in this pack
 ------------------------------------------------------------------
