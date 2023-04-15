@@ -292,7 +292,7 @@
     "rows": [
 		 ["dungeonser_off","openworld_off"],
 		 ["small_key_none","big_key_none"],
-		 ["preset_01"]
+		 ["preset_01","out_logic_no"]
     ]
    }
   },

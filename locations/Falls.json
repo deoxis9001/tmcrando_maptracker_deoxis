@@ -5,7 +5,8 @@
 	  {
 		"map":"map",
 		"x":1845,
-		"y":180
+		"y":180,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[
@@ -48,7 +49,7 @@
 		"map":"map",
 		"x":1875,
 		"y":625,
-		"restrict_visibility_rules":["digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,digging_on"]
 	  }
 	],
 	"sections":[
@@ -68,7 +69,7 @@
 		"map":"map",
 		"x":1885,
 		"y":245,
-		"restrict_visibility_rules":["$FusionsGreen","digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsGreen","$CloudTopFallVisibility,digging_on"]
 	  }
 	],
 	"sections":[
@@ -97,7 +98,7 @@
 		"map":"map",
 		"x":1695,
 		"y":155,
-		"restrict_visibility_rules":["$FusionsRed"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -117,7 +118,7 @@
 		"map":"map",
 		"x":1815,
 		"y":550,
-		"restrict_visibility_rules":["$FusionsRed"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsRed"]
 	  }
 	],
 	"sections":[
@@ -144,7 +145,7 @@
 		"map":"map",
 		"x":1830,
 		"y":275,
-		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsGreen,golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -183,12 +184,14 @@
 	  {
 		"map":"map",
 		"x":1695,
-		"y":450
+		"y":450,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  },
 	  {
 		"map": "map",
 		"x": 1800,
-		"y": 350
+		"y": 350,
+		"restrict_visibility_rules":["$CloudTopFallVisibility"]
 	  }
 	],
 	"sections":[

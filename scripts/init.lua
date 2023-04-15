@@ -26,7 +26,7 @@ setting_preset_data_other["fusionbluecombined"]=4
 setting_preset_data_other["progressiveitems"]=5
 setting_preset_data_other["figurine_option"]=6
 setting_preset_data_title={"Weekly2022","Beginner","Intermediate","Advanced","Max Random","Expert","No Logic - Open World","Firerod"}
--- has_item_option_dev["out_logic_no"]=false
+-- has_item_option_dev["out_logic_no"]=true
 -- has_item_option_dev["out_logic_yes"]=true
 --Activate the cache reset
 Cache_reset=false
