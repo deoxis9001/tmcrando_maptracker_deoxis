@@ -1734,7 +1734,7 @@
 		"map":"tod",
 		"x":370,
 		"y":2350,
-		"restrict_visibility_rules":["rupees_on,underwater_on"]
+		"restrict_visibility_rules":["underwater_on"]
 	  }
 	],
 	"sections":[
@@ -1754,7 +1754,7 @@
 		"map":"tod",
 		"x":600,
 		"y":1215,
-		"restrict_visibility_rules":["rupees_on,underwater_on"]
+		"restrict_visibility_rules":["underwater_on"]
 	  }
 	],
 	"sections":[

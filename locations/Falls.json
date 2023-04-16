@@ -34,7 +34,7 @@
 		},
 		{
 		  "name":"Underwater Rupees",
-		  "visibility_rules":["rupees_on,underwater_on"],
+		  "visibility_rules":["underwater_on"],
 		  "item_count":6,
 		  "access_rules":["$Json_Falls_UpperCave_UnderwaterRupees"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",

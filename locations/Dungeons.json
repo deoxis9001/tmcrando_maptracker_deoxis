@@ -954,7 +954,7 @@
 	  },
 	  {
 		"name":"Upper Water Rupees",
-		"visibility_rules":["rupees_on,underwater_on"],
+		"visibility_rules":["underwater_on"],
 		"item_count":6,
 		"access_rules":["$Json_Dungeon_Droplet_UpperWaterRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -963,7 +963,7 @@
 	  {
 		"name":"Lower Water Rupees",
 		"item_count":6,
-		"visibility_rules":["rupees_on,underwater_on"],
+		"visibility_rules":["underwater_on"],
 		"access_rules":["$Json_Dungeon_Droplet_LowerWaterRupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
