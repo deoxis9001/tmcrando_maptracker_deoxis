@@ -1,7 +1,3 @@
--- local figurinemaximage = "images/options/figurineMax.png"
--- local figurine50image = "images/options/figurine50.png"
--- local figurine10image = "images/options/figurine10.png"
-
 FigurineButton = CustomItem:extend()
 
 function FigurineButton:init(name, code, value, imagePath)
@@ -11,7 +7,6 @@ function FigurineButton:init(name, code, value, imagePath)
     self:setProperty("active", true)
 	self.currentImage = imagePath
 	self.ItemInstance.PotentialIcon = ImageReference:FromPackRelativePath(self.currentImage)
-	-- self:updateIcon()
 	self.ItemInstance.Icon = ImageReference:FromPackRelativePath(self.currentImage, self.currentOverlay)
 end
 
@@ -52,7 +47,3 @@ function FigurineButton:onRightClick()
 	end
 	item.AcquiredCount = counter
 end
-
--- function FigurineButton:updateIcon()
-	-- self.ItemInstance.Icon = ImageReference:FromPackRelativePath(self.currentImage, self.currentOverlay)
--- end

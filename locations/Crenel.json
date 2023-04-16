@@ -1,0 +1,337 @@
+[
+  {
+	"name":"Crenel - Mines",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":425,
+		"y":350,
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Melari",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_Mines_Melari"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Digging",
+		"visibility_rules":["digging_on"],
+		"item_count":8,
+		"access_rules":["$Json_Crenel_Mines_Digging"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"visibility_rules":["$FusionsGreen"],
+		"access_rules":["$Json_Crenel_Mines_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Fuser Northwest",
+		"hosted_item":"fusions4f",
+		"visibility_rules":["fusiongreen_vanilla"],
+		"access_rules":["$Json_Crenel_Mines_Fuzer1"],
+	  },
+	  {
+		"name":"Fuser Bedroom",
+		"hosted_item":"fusions43",
+		"visibility_rules":["fusiongreen_vanilla"],
+		"access_rules":["$Json_Crenel_Mines_Fuzer2"],
+	  },
+	  {
+		"name":"Fuser Kitchen",
+		"hosted_item":"fusions3b",
+		"visibility_rules":["fusiongreen_vanilla"],
+		"access_rules":["$Json_Crenel_Mines_Fuzer3"],
+	  },
+	  {
+		"name":"Fuser Melari",
+		"hosted_item":"fusions1a",
+		"visibility_rules":["fusionred_vanilla"],
+		"access_rules":["$Json_Crenel_Mines_Fuzer4"],
+	  },
+	  {
+		"name":"Fuser Mine Exit",
+		"hosted_item":"fusions38",
+		"visibility_rules":["fusiongreen_vanilla"],
+		"access_rules":["$Json_Crenel_Mines_Fuzer5"],
+	  },
+	]
+  },
+  {
+	"name":"Crenel - Great Fairy",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":225,
+		"y":500
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Gift",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_GreatFairy_Item"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Crenel - Beanstalk",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":100,
+		"y":20,
+		"restrict_visibility_rules":["$FusionsRed"]
+	  }
+	],
+	"sections":[
+		{
+		  "name":"Heart Piece",
+		  "item_count":1,
+		  "access_rules":["$Json_Crenel_Beanstalk_HeartPiece"],
+		  "chest_unopened_img":"images/items-map/Heart Piece.png",
+		  "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+		},
+		{
+		  "name":"Rupees",
+		   "visibility_rules":["rupees_on"],
+		  "item_count":8,
+		  "access_rules":["$Json_Crenel_Beanstalk_Rupees"],
+		  "chest_unopened_img":"images/items-map/chest_closed.png",
+		  "chest_opened_img":"images/items-map/chest_open.png"
+		}
+
+	]
+  },
+  {
+	"name":"Crenel - Climbing Wall Chest",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":121,
+		"y":399,
+		"restrict_visibility_rules":["$FusionsGreen"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_WallChest_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  
+  
+  {
+	"name":"Crenel - Middle Tektite Golden",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":300,
+		"y":730,
+		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_MiddleCrenelTektiteGolden_Kill"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Crenel - Rainy Minish Path Chest",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":490,
+		"y":100,
+		"restrict_visibility_rules":["$FusionsGreen"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_RainyMinishPathChest_Chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Crenel - Top Tektite Golden",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":425,
+		"y":470,
+		"restrict_visibility_rules":["$FusionsRed,golden_enemy_on"]
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Kill",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_TopTektiteGolden_Kill"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Crenel - Bridge Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":557,
+		"y":595
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_BridgeCave_chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Crenel - Business Scrub",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":583,
+		"y":470
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Scrub",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_BusinessScrub_Scrub"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Crenel - Fairy",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":110,
+		"y":600
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_Fairy_HeartPiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  }
+	]
+  },
+  {
+	"name":"Crenel - Dojo",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":600,
+		"y":350
+	  }
+	],
+	"sections":[
+		{
+		  "name":"Chests",
+		  "item_count":2,
+		  "access_rules":["$Json_Crenel_Dojo_Chests"],
+		  "chest_unopened_img":"images/items-map/chest_closed.png",
+		  "chest_opened_img":"images/items-map/chest_open.png"
+		},
+		{
+		  "name":"Heart Piece",
+		  "item_count":1,
+		  "access_rules":["$Json_Crenel_Dojo_HeartPiece"],
+		  "chest_unopened_img":"images/items-map/Heart Piece.png",
+		  "chest_opened_img":"images/items-map/Heart Piece Gray.png"
+		},
+		{
+		  "name":"Grayblade",
+		  "item_count":1,
+		  "access_rules":["$Json_Crenel_Dojo_Grayblade"],
+		  "chest_unopened_img":"images/items-map/Tiger Scroll.png",
+		  "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
+		},
+		{
+		  "name":"Fuzer Grayblade",
+		  "hosted_item":"fusions0c",
+		  "visibility_rules":["fusionred_vanilla"],
+		  "access_rules":["$Json_Crenel_Dojo_Fuzer"],
+		}
+	]
+  },
+  {
+	"name":"Crenel - Mines Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":500,
+		"y":300
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Chest",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_MinesCave_chest"],
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png"
+	  }
+	]
+  },
+  {
+	"name":"Crenel - Mitts Cave",
+	"map_locations":[
+	  {
+		"map":"map",
+		"x":35,
+		"y":200
+	  }
+	],
+	"sections":[
+	  {
+		"name":"Heart Piece",
+		"item_count":1,
+		"access_rules":["$Json_Crenel_DiggingCave_Heartpiece"],
+		"chest_unopened_img":"images/items-map/Heart Piece.png",
+		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+	  },
+	  {
+		"name":"Fuzer Mysterious Wall",
+		"hosted_item":"fusions2f",
+		"visibility_rules":["fusionblue_vanilla"],
+		"access_rules":["$Json_Crenel_DiggingCave_Fuzer"],
+	  }
+	]
+  }
+]

@@ -71,8 +71,11 @@ function ToggleItem:save()
     return saveData
 end
 
-function ToggleItem:Load(data)
+function ToggleItem:load(data)
     if data["Active"] ~= nil then
+		if data["Active"]==true then
+			swordprogress:setActive(false)
+		end
         self:setActive(data["Active"])
     end
     return true
