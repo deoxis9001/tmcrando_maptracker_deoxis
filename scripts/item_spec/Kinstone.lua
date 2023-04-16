@@ -252,6 +252,7 @@ end
 
 function Kinstone:save()
     local saveData = {}
+    saveData["Choice"] = self.choice
     saveData["CurrentStage"] = self:getActive()
     saveData["CountMax"] = self:getActiveCount()
 	saveData["Type"] = self.image
@@ -259,6 +260,29 @@ function Kinstone:save()
 end
 
 function Kinstone:load(data)
+local gold=false
+local blue=false
+local red=false
+local green=false
+    if data["Choice"] ~= nil then
+        self.choice = data["Choice"]
+		if self.choice == false then
+			if ( self.code == "clouds" or self.code == "wilds" or self.code == "falls" ) and gold==false then
+				gold=true
+				fusiongoldcombined:setActive(true)
+			elseif ( self.code == "blueL" or self.code == "blueS" ) and blue==false then
+				blue=true
+				fusionbluecombined:setActive(true)
+			elseif ( self.code == "redE" or self.code == "redV" or self.code == "redW" ) and red==false then
+				red=true
+				fusionredcombined:setActive(true)
+			elseif ( self.code == "greenG" or self.code == "greenC" or self.code == "greenP" ) and green==false then
+				green=true
+				fusiongreencombined:setActive(true)
+			end
+		end
+		
+    end
     if data["CurrentStage"] ~= nil then
         self:setActive(data["CurrentStage"])
 		
@@ -269,6 +293,7 @@ function Kinstone:load(data)
     end
     if data["Type"] ~= nil then
         self.image=data["Type"]
+        self:updateIcon()
     end
     return true
 end

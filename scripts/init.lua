@@ -26,7 +26,7 @@ setting_preset_data_other["fusionbluecombined"]=4
 setting_preset_data_other["progressiveitems"]=5
 setting_preset_data_other["figurine_option"]=6
 setting_preset_data_title={"Weekly2022","Beginner","Intermediate","Advanced","Max Random","Expert","No Logic - Open World","Firerod"}
--- has_item_option_dev["out_logic_no"]=false
+-- has_item_option_dev["out_logic_no"]=true
 -- has_item_option_dev["out_logic_yes"]=true
 --Activate the cache reset
 Cache_reset=false
@@ -113,7 +113,6 @@ fusionredcombined = KinstoneOptions("This converts the different shaped Red Kins
 fusiongreencombined = KinstoneOptions("This converts the different shaped Green Kinstones into a single Green shape. The locations of the fusions are not shuffled and all ask for the same shape.", "fusiongreencombined","images/options/fusions_settings/green_combined_on.png","images/options/fusions_settings/green_combined_off.png",2)
 fusionbluecombined = KinstoneOptions("This converts the different shaped Blue Kinstones into a single Blue shape. The locations of the fusions are not shuffled and all ask for the same shape.", "fusionbluecombined","images/options/fusions_settings/blue_combined_on.png","images/options/fusions_settings/blue_combined_off.png",3)
 swordprogress = SwordOptions("Some item upgrades are treated as completely independent items by the game.","progressiveitems","images/options/weapons_settings/progressive_on.png","images/options/weapons_settings/progressive_off.png")
-
 
 
 ------------------------------------------------------------------

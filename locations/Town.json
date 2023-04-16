@@ -25,7 +25,7 @@
 	  },
 	  {
 		"name":"Under the Waterfall",
-		"visibility_rules":["rupees_on,underwater_on"],
+		"visibility_rules":["underwater_on"],
 		"item_count":1,
 		"access_rules":["$Json_Town_FlippersCave_UndertheWaterfall"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",

@@ -1,6 +1,10 @@
 
 function Preset()
 	local data_preset = Tracker:FindObjectForCode("preset_01")
+	if no_preset then
+		setting_preset_data_cache = data_preset.CurrentStage + 1
+		return 0
+	end
 	if setting_preset_data_cache~=( data_preset.CurrentStage + 1 ) then
 		setting_preset_data_cache = data_preset.CurrentStage + 1
 		if setting_preset_data_cache ~= 0 then
@@ -101,6 +105,7 @@ function tracker_on_accessibility_updated()
 	end
 end
 function tracker_on_begin_loading_save_file()
+	no_preset=true
 	print("")
 	print("--	Load Save File Started	--")
 	print("")
@@ -109,8 +114,6 @@ function tracker_on_finish_loading_save_file()
 	print("")
 	print("--	Load Save File Finish	--")
 	print("")
-	local data_preset = Tracker:FindObjectForCode("preset_01")
-	setting_preset_data_cache = data_preset.CurrentStage + 1
 end
 function tracker_on_pack_ready()
 	print("")
@@ -132,6 +135,7 @@ function tracker_on_pack_ready()
 	print("")
 	print("	Tracker is ready")
 	Cache_reset=true
+	no_preset=false
 	Preset()
 	UpdateFusion()
 	print("	Enable Cache :		",Cache_reset)
@@ -171,7 +175,6 @@ function function_Cached(name)
 	local f=_G
 	function_data[name]=f[name]()
 
-	-- If the "out_logic_no" feature is enabled and the cached value is 2, replace it with 0
 	if has("out_logic_no") then
 		if function_data[name]==2 then
 			function_data[name]=0
