@@ -38,7 +38,7 @@ function_count = 0
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUZER_TRACKING = true
-VERSION_ALPHA = true
+VERSION_ALPHA = false
 VERSION_BETA = false
 VERSION_RANDO = "0.7.0arev3"
 ------------------------------------------------------------------
