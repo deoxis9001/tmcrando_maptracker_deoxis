@@ -66,44 +66,87 @@ function tracker_on_accessibility_updating()
 	end
 end
 CaptureBadgeSections = {
-"@Cave Of Flame/Prize",
-"@Royal Crypt/Prize",
-"@DeepWoods/Prize",
-"@Fortress/Prize",
-"@Palace/Prize",
-"@Droplet/Prize",
-"@Dark Hyrule Castle Entrance/Prize",
-"@Cave Of Flame Entrance/Prize",
-"@Crypt Entrance/Prize",
-"@DeepWoods Entrance/Prize",
-"@Fortress Entrance/Prize",
-"@Palace Entrance/Prize",
-"@Droplet Entrance/Prize"
+    "@Town - Stockwell's Shop/Wallet Spot (80 Rupees)",
+    "@Town - Stockwell's Shop/Boomerang Spot (300 Rupees)",
+    "@Town - Stockwell's Shop/Quiver Spot (600 Rupees)",
+    "@Town - Stockwell's Shop/Dog Food Bottle",
+	"@Town - Eastern Shops/Figurine House Heart Piece",
+	"@Town - Fountain/Heart Piece",
+	"@Town - School Gardens/Heart Piece",
+	"@Town - Julietta's House/Item",
+	"@Hylia - Lon Lon Ranch - North Heart Piece/Heart Piece",
+	"@Hylia - Cape Heart Piece/Heart Piece",
+	"@Hylia - Southern/Heart Piece",
+	"@Hylia - Lake Cabin/Item",
+	"@Minish Woods North - Heart Piece/Heart Piece",
+	"@Veil Falls - Heart Piece/Heart Piece",
+	"@Veil Falls South - Rupees/Rupee 1",
+	"@Veil Falls South - Rupees/Rupee 2",
+	"@Veil Falls South - Rupees/Rupee 3",
+    "@DeepWoods/Madderpillar Heart Piece",
+    "@Deepwoods - Madderpillar Heart Piece/Heart Piece",
+    "@DeepWoods/Prize",
+    "@Cave Of Flame/Bombable Wall Heart Piece",
+    "@Cave Of Flame - Bombable Wall/Heart Piece",
+    "@Cave Of Flame/Prize",
+    "@Crypt - Gibdos/First Kill",
+    "@Crypt - Gibdos/Second Kill",
+    "@Royal Crypt/First Gibdos",
+    "@Royal Crypt/Other Gibdos",
+    "@Royal Crypt/Prize",
+    "@Fortress - Right Side Heart Piece/Heart Piece",
+    "@Fortress - Minish Dirt Room Key/Drop",
+    "@Fortress/Right Side Heart Piece",
+    "@Fortress/Minish Dirt Room Key Drop",
+    "@Fortress/Prize",
+    "@Palace - Heart Piece/Heart Piece",
+    "@Palace/Heart Piece",
+    "@Palace/Prize",
+    "@Droplet/Prize",
+    "@Dark Hyrule Castle Entrance/Prize",
+    "@Cave Of Flame Entrance/Prize",
+    "@Crypt Entrance/Prize",
+    "@DeepWoods Entrance/Prize",
+    "@Fortress Entrance/Prize",
+    "@Palace Entrance/Prize",
+    "@Droplet Entrance/Prize"
 }
 CaptureBadgeCache = {}
+
 function tracker_on_accessibility_updated()
-	if Cache_reset then
-		for i,section in pairs(CaptureBadgeSections) do
-			local target = Tracker:FindObjectForCode(section)
-			-- Has the captured item for this section changed since last update
-			if target == nil then
-				print("Failed to resolve " .. section .. " please check for typos.")
-			elseif target.CapturedItem ~= CaptureBadgeCache[target]  then
-				-- Does the location that owns this section already have a badge, if so remove it
-				if CaptureBadgeCache[target.Owner] then
-					target.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
-					CaptureBadgeCache[target.Owner] = nil
-					CaptureBadgeCache[target] = nil
-				end
-				-- Check if a captured item exists, add as badge to the sections owner if it does
-				if target.CapturedItem then
-					CaptureBadgeCache[target.Owner] = target.Owner:AddBadge(target.CapturedItem.PotentialIcon)
-					CaptureBadgeCache[target] = target.CapturedItem
-				end
-			end
-		end
-	end
+    if Cache_reset then
+	local info_target={}
+        for _, section in pairs(CaptureBadgeSections) do
+            local target = Tracker:FindObjectForCode(section)
+            if not target then
+                print("Failed to resolve " .. section .. ", please check for typos.")
+            else
+                if target.CapturedItem then
+					if not info_target[target.Owner] then
+						info_target[target.Owner]=true
+						-- print(section,target.Owner,info_target[target.Owner])
+						-- Si cette section a un CapturedItem, ajouter le badge
+						if CaptureBadgeCache[target.Owner] then
+							-- Si le propriétaire de la section a déjà un badge, le retirer d'abord
+							target.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+						end
+						CaptureBadgeCache[target.Owner] = target.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+						CaptureBadgeCache[target] = target.CapturedItem
+					end
+                elseif CaptureBadgeCache[target] then
+                    -- Si cette section n'a pas de CapturedItem mais a un badge, le retirer
+                    target.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                    CaptureBadgeCache[target.Owner] = nil
+                    CaptureBadgeCache[target] = nil
+                end
+            end
+        end
+    end
 end
+
+
+
+
 function tracker_on_begin_loading_save_file()
 	no_preset=true
 	print("")
@@ -163,75 +206,34 @@ function tracker_on_pack_ready()
 	end
 	print("")
 end
--- This function is designed to cache the results of a function for future use
+
 function function_Cached(name)
-	-- Check if there is already a cached value for the requested function
-	if function_data[name] ~= nil then
-		-- If a cached value exists, return it
-		return function_data[name]
-	end
-
-	-- If a cached value does not exist, get the function from the global environment
-	local f=_G
-	function_data[name]=f[name]()
-
-	if has("out_logic_no") then
-		if function_data[name]==2 then
-			function_data[name]=0
-		end
-	end
-
-	-- If the TMC_CACHE_DEBUG_FUNCTION variable is set, print a debug message
-	if TMC_CACHE_DEBUG_FUNCTION then
-		function_count=function_count+1
-		local function_count_print=""
-		if function_count<10 then
-			function_count_print="00"..function_count
-		elseif function_count<100 then
-			function_count_print="0"..function_count
-		else
-			function_count_print=function_count
-		end
-		print("Cache Function ("..function_count_print.."): ",function_data[name],name)
-	end
-
-	-- Return the cached value or the newly computed value
-	return function_data[name]
+  local f = function_data[name]
+  if not f then
+    f = _G[name]()
+    if has("out_logic_no") then
+      f = f == 2 and 0 or f
+    end
+    function_data[name] = f
+	  if TMC_CACHE_DEBUG_FUNCTION then
+		function_count = function_count + 1
+		local function_count_print = string.format("%03d", function_count)
+		print("Cache Function ("..function_count_print.."): ", f, name)
+	  end
+  end
+  return f
 end
 
--- This function checks whether the player has a certain item or a certain amount of that item
-function has( item, amount )
-	-- Check if a cached value for the item exists
-	if has_item_data[item] ~= nil then
-		-- If a cached value exists, return it
-		return has_item_data[item]
-	end
-
-	-- Check if a developer option for the item exists
-	if has_item_option_dev[item] ~= nil then
-		-- If a developer option exists, return it
-		return has_item_option_dev[item]
-	end
-
-	-- If no cached value or developer option exists, get the item count from the tracker
-	local count = Tracker:ProviderCountForCode( item )
-	amount = tonumber( amount )
-
-	-- Check if the item count is at least 1 (or at least the specified amount, if provided)
-	if not amount then
-		has_item_data[item] = count >= 1
-		if TMC_CACHE_DEBUG_ITEM then
-			print("Cache Items: ",item,has_item_data[item])
-		end
-		return count >= 1
-	else
-		has_item_data[item] = count >= amount
-		if TMC_CACHE_DEBUG_ITEM then
-			print("Cache Items: ",item,has_item_data[item])
-		end
-		return count >= amount
-	end
+function has(item, amount)
+    if not has_item_data[item] then
+        has_item_data[item] = Tracker:ProviderCountForCode(item) >= tonumber(amount or 1)
+        if TMC_CACHE_DEBUG_ITEM then
+            print("Cache Items: ", item, has_item_data[item])
+        end
+    end
+    return has_item_data[item]
 end
+
 
 -- This function checks whether the player does not have a certain item
 function hasnot( item )

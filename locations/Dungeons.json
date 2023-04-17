@@ -389,6 +389,7 @@
 	  {
 		"name":"Madderpillar Heart Piece",
 		"item_count":1,
+        "capture_item": true,
 		"access_rules":["$Json_Dungeon_Deepwood_MadderpillarHeartPiece"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png",

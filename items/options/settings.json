@@ -1712,7 +1712,11 @@
       {
         "img":"images/options/world_settings/settings/preset_08.png",
         "codes": "preset_08"
-      }
+      },
+      //{
+      //  "img":"images/options/world_settings/settings/preset_09.png",
+      //  "codes": "preset_09"
+      //}
     ]
   },
   {
