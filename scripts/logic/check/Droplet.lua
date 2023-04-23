@@ -69,9 +69,9 @@ function Droplets_LeftPath_B2_Underwater_Pot()
 end
 
 function Droplets_LeftPath_B2_IceMadderpillar_BigChest() 
-	if function_Cached("TodDungeons")==1 and has("gust") and function_Cached("ToDMadderpillars")==1 and ( function_Cached("ToDLilypadEnd")==1 or ( function_Cached("ToDMainRoom")==1 or function_Cached("ToDBasementLilySpawn")==1 ) ) then
+	if function_Cached("TodDungeons")==1 and has("gust") and function_Cached("ToDMadderpillars")==1 and ( function_Cached("ToDLilypadEnd")==1 or ( function_Cached("ToDMainRoom")==1 and function_Cached("ToDBasementLilySpawn")==1 ) ) then
 		return 1
-	elseif ( function_Cached("TodDungeons")==1 or function_Cached("TodDungeons")==2 ) and has("gust") and ( function_Cached("ToDMadderpillars")==1 or function_Cached("ToDMadderpillars")==2 ) and ( ( function_Cached("ToDLilypadEnd")==1 or function_Cached("ToDLilypadEnd")==2 ) or ( ( function_Cached("ToDMainRoom")==1 or function_Cached("ToDMainRoom")==2 ) or ( function_Cached("ToDBasementLilySpawn")==1 or function_Cached("ToDBasementLilySpawn")==2 ) ) ) then
+	elseif ( function_Cached("TodDungeons")==1 or function_Cached("TodDungeons")==2 ) and has("gust") and ( function_Cached("ToDMadderpillars")==1 or function_Cached("ToDMadderpillars")==2 ) and ( ( function_Cached("ToDLilypadEnd")==1 or function_Cached("ToDLilypadEnd")==2 ) or ( ( function_Cached("ToDMainRoom")==1 or function_Cached("ToDMainRoom")==2 ) and ( function_Cached("ToDBasementLilySpawn")==1 or function_Cached("ToDBasementLilySpawn")==2 ) ) ) then
 		return 2
 	else
 		return 0

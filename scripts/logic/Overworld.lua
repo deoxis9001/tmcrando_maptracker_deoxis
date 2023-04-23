@@ -361,12 +361,16 @@ end
 function CryptDoor() 
 	if ( Tracker:ProviderCountForCode("rc_smallkey") >= 1 ) then
 		return 1
+	elseif ( has("small_key_none") ) then
+		return 1
 	else
 		return 0
 	end 
 end
 function CryptBlocks() 
 	if ( Tracker:ProviderCountForCode("rc_smallkey") >= 3 ) then
+		return 1
+	elseif ( has("small_key_none") ) then
 		return 1
 	else
 		return 0

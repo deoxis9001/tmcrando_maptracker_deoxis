@@ -50,7 +50,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessCoF}"],
+		"access_rules":["{}","$Json_Dungeon_CaveOfFlame_Gleerok"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -198,7 +198,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessCrypt}"],
+		"access_rules":["{}","$Json_Dungeon_Crypt_KingGustaf"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -295,7 +295,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessDeepwood}"],
+		"access_rules":["{}","$Json_Dungeon_Deepwood_GreenChu"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -461,7 +461,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessFortress}"],
+		"access_rules":["{}","$Json_Dungeon_Fortress_FOWReward"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -691,7 +691,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessPalace}"],
+		"access_rules":["{}","$Json_Dungeon_Palace_Gyorg"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -886,7 +886,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessDroplets}"],
+		"access_rules":["{}","$Json_Dungeon_Droplet_Octo"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -1271,7 +1271,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessDroplets}"],
+		"access_rules":["{}"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -1302,7 +1302,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessPalace}"],
+		"access_rules":["{}"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -1333,7 +1333,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessFortress}"],
+		"access_rules":["{}"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -1363,7 +1363,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessCoF}"],
+		"access_rules":["{}"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -1393,7 +1393,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["{$AccessCrypt}"],
+		"access_rules":["{}"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"item_count":1,
@@ -1423,7 +1423,7 @@
 	  {
 		"name":"Prize",
         "capture_item": true,
-		"access_rules":["$AccessDeepwood"],
+		"access_rules":["{}"],
 		"always_allow_chest_manipulation":true,
 		"capture_item_layout":"Element_capture",
 		"clear_as_group":false,

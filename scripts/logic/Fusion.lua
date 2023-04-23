@@ -348,35 +348,10 @@ function Json_MinishWoods_MittCave_Fuzer()
 end
 
 
-function Json_MinishWoods_MinishVillage_Fuzer1() 
-	local count=0
-	if( has("fusions13") ) then
-		count = count + 1
-	end
-	if( has("fusions14") ) then
-		count = count + 1
-	end
-	if( has("fusions15") ) then
-		count = count + 1
-	end
-	if( has("fusions16") ) then
-		count = count + 1
-	end
-	if( has("fusions17") ) then
-		count = count + 1
-	end
-	if( has("fusions18") ) then
-		count = count + 1
-	end
-	if( has("fusions19") ) then
-		count = count + 1
-	end
-	if( has("fusions1a") ) then
-		count = count + 1
-	end
-	if ( FusionsRedNumber("redE")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
+function Json_MinishWoods_MinishVillage_Fuzer1()
+	if ( FusionsRedNumber("redE")==1 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
-	elseif ( FusionsRedNumber("redE")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
+	elseif ( FusionsRedNumber("redE")==1 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -384,32 +359,10 @@ function Json_MinishWoods_MinishVillage_Fuzer1()
 end
 
 
-function Json_MinishWoods_MinishVillage_Fuzer2() 
-	local count=0
-	if( has("fusions1b") ) then
-		count = count + 1
-	end
-	if( has("fusions1c") ) then
-		count = count + 1
-	end
-	if( has("fusions1d") ) then
-		count = count + 1
-	end
-	if( has("fusions1e") ) then
-		count = count + 1
-	end
-	if( has("fusions1f") ) then
-		count = count + 1
-	end
-	if( has("fusions20") ) then
-		count = count + 1
-	end
-	if( has("fusions21") ) then
-		count = count + 1
-	end
-	if ( FusionsRedNumber("redV")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
+function Json_MinishWoods_MinishVillage_Fuzer2()
+	if ( FusionsRedNumber("redV")==1 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
-	elseif ( FusionsRedNumber("redV")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
+	elseif ( FusionsRedNumber("redV")==1 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -429,7 +382,7 @@ end
 
 
 function Json_MinishWoods_Belari_Fuzer() 
-	if ( FusionsRedNumber("redW") and function_Cached("MinishWoods_BombMinish_NPC1")==1 ) then
+	if ( FusionsRedNumber("redW")==1 and function_Cached("MinishWoods_BombMinish_NPC1")==1 ) then
 		return 1
 	elseif ( FusionsRedNumber("redW")==1 and function_Cached("MinishWoods_BombMinish_NPC1")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak

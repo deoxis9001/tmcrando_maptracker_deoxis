@@ -1647,6 +1647,11 @@
         "img":"images/options/world_settings/settings/small_key_shuffle.png",
         "codes": "small_key_shuffle",
         "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/small_key_shuffle_out.png",
+        "codes": "small_key_shuffle,small_key_out",
+        "inherit_codes":false
       }
     ]
   },

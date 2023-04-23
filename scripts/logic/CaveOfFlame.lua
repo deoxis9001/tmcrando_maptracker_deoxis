@@ -3,7 +3,7 @@ function CoF1stDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif Tracker:ProviderCountForCode("cof_smallkey") >= 1 then
+	elseif  has("small_key_out") and Tracker:ProviderCountForCode("cof_smallkey") >= 1 then
 		return 2
 	else
 		return 0
