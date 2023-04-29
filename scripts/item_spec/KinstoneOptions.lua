@@ -68,7 +68,7 @@ function KinstoneOptions:updateIcon()
 			wilds:Switch(false,3)
 		elseif self.id == 1 then
 		countredW=9
-		countredV=8
+		countredV=7
 		if (has("fusionblue_removed")) then
 			countredW=countredW-1
 		end
@@ -81,7 +81,7 @@ function KinstoneOptions:updateIcon()
 		elseif self.id == 2 then
 		countgreenG=16
 		countgreenC=17
-		countgreenP=9
+		countgreenP=16
 		if (has("fusionblue_removed")) then
 			countgreenC=countgreenC-1
 			countgreenP=countgreenP-1
@@ -133,7 +133,7 @@ function KinstoneOptions:updateMax()
 	else
 		if self.id == 1 then
 			countredW=9
-			countredV=8
+			countredV=7
 			if (has("fusionblue_removed")) then
 				countredW=countredW-1
 			end
@@ -145,7 +145,7 @@ function KinstoneOptions:updateMax()
 		elseif self.id == 2 then
 			countgreenG=16
 			countgreenC=17
-			countgreenP=9
+			countgreenP=16
 			if (has("fusionblue_removed")) then
 				countgreenC=countgreenC-1
 				countgreenP=countgreenP-1

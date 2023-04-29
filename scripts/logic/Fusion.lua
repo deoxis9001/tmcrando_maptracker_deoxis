@@ -81,11 +81,43 @@ function Json_Clouds_WindTribeHouse_Fuzer7()
 		return 0
 	end 
 end
+function Clouds_Fuzer()
+	item1=Tracker:FindObjectForCode("@Wind Tribe House/2F Gregal's Gift")
+	item2=Tracker:FindObjectForCode("@Wind Tribe House/3F Chests")
+	item3=Tracker:FindObjectForCode("@Wind Tribe House/4F Chests")
+	local count = 0
+	if item1.AvailableChestCount~=1 then
+		count = count + 1
+	end
+	if item2.AvailableChestCount~=3 then
+		count = count + 1
+	end
+	if item3.AvailableChestCount~=2 then
+		count = count + 1
+	end
+	if function_Cached("StrangerFusion")==0 then
+		item4=Tracker:FindObjectForCode("@Wind Tribe House/1F Chests")
+		item5=Tracker:FindObjectForCode("@Wind Tribe House/2F Chest")
+		item6=Tracker:FindObjectForCode("@Wind Tribe House/2F Save Gregal")
+		if item4.AvailableChestCount~=2 then
+			count = count + 1
+		end
+		if item5.AvailableChestCount~=1 then
+			count = count + 1
+		end
+		if item6.AvailableChestCount~=1 then
+			count = count + 1
+		end
+	end
+	
+	return count
+end
+function Json_Clouds_Fuzer_Fuzer1()
 
-function Json_Clouds_Fuzer_Fuzer1() 
-	if ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==1 and function_Cached("AccessWindTribe")==0 ) then
+	-- print(count)
+	if ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==1 and function_Cached("Clouds_Fuzer")==0 ) then
 		return 1
-	elseif ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==2 and function_Cached("AccessWindTribe")==0 ) then
+	elseif ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==2 and function_Cached("Clouds_Fuzer")==0 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -93,9 +125,9 @@ function Json_Clouds_Fuzer_Fuzer1()
 end
 
 function Json_Clouds_Fuzer_Fuzer2() 
-	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==1 and function_Cached("AccessWindTribe")==0 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==1 and function_Cached("Clouds_Fuzer")==0 ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==2 and function_Cached("AccessWindTribe")==0 ) then
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==2 and function_Cached("Clouds_Fuzer")==0 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
