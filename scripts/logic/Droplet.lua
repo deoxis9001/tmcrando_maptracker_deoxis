@@ -46,7 +46,7 @@ function ToDDarkDoor()
 	end 
 end
 function ToDEitherDoor() 
-	if ( Tracker:ProviderCountForCode("tod_smallkey") >= 4 ) then
+	if ( Tracker:ProviderCountForCode("tod_smallkey") >= 3 ) then
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
