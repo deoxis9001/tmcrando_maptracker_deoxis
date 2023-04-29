@@ -296,7 +296,9 @@ function SwampSouthShortcut()
 	end 
 end
 function RuinsFusion()
-	if ( Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
+	if ( has("fusiongold_complet") ) then
+		return 1
+	elseif ( Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
 		return 1
 	elseif ( Tracker:ProviderCountForCode("clouds") >= 3 and fusiongoldcombined:getActive() ) then
 		return 2
@@ -839,7 +841,7 @@ function ToDWestSwitch()
 		return 1
 	elseif ( function_Cached("BombWalls")==1 and function_Cached("ToDWeb")==1 and function_Cached("ToDMadderpillars")==1 and function_Cached("CanSplit2")==1 and ( function_Cached("ToDRedWarp")==1 or ( function_Cached("ToD2ndRupeePath")==1 and function_Cached("ToDRightIce")==1 and function_Cached("CapeExtension")==1 ) ) ) then
 		return 1
-	elseif ( function_Cached("BombWalls")==1 and function_Cached("ToDWeb")==1 and ( function_Cached("ToDMadderpillars")==1 or function_Cached("ToDMadderpillars")==2 ) and function_Cached("CanSplit2")==1 and ( function_Cached("ToDRedWarp")==1 or ( function_Cached("ToD2ndRupeePath")==1 and function_Cached("ToDRightIce")==1 and ( function_Cached("CapeExtension")==1 or function_Cached("CapeExtension")==2 ) ) ) ) then
+	elseif ( function_Cached("BombWalls")==1 and function_Cached("ToDWeb")==1 and ( function_Cached("ToDMadderpillars")==1 or function_Cached("ToDMadderpillars")==2 ) and function_Cached("CanSplit2")==1 and ( function_Cached("ToDRedWarp")==1 or ( ( function_Cached("ToD2ndRupeePath")==1 or function_Cached("ToD2ndRupeePath")==2 ) and function_Cached("ToDRightIce")==1 and ( function_Cached("CapeExtension")==1 or function_Cached("CapeExtension")==2 ) ) ) ) then
 		return 2
 	else
 		return 0
