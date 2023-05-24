@@ -291,6 +291,7 @@
 		"item_width":320,
     "rows": [
 		 ["dungeonser_off","openworld_off"],
+		 ["open_tingle_no","open_wind_tribe_no"],
 		 ["small_key_none","big_key_none"],
 		 ["preset_01","out_logic_no"]
     ]

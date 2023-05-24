@@ -25,7 +25,7 @@ setting_preset_data_other["fusiongreencombined"]=3
 setting_preset_data_other["fusionbluecombined"]=4
 setting_preset_data_other["progressiveitems"]=5
 setting_preset_data_other["figurine_option"]=6
-setting_preset_data_title={"Weekly2022","Beginner","Intermediate","Advanced","Max Random","Expert","No Logic - Open World","Firerod","Weekly2023"}
+setting_preset_data_title={"Beginner","Intermediate","Advanced","Expert","Max Random","Weekly2023","Tournament 4 Settings","No Logic Open World","Firerod","Funky Fusions","v0.1.0 Settings","Figurine Hunt","Regional Dungeon Items"}
 -- has_item_option_dev["out_logic_no"]=true
 -- has_item_option_dev["out_logic_yes"]=true
 --Activate the cache reset

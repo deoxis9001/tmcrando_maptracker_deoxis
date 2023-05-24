@@ -223,9 +223,9 @@ function FusionsBlueWallNumber()
 	count_fusion4=math.floor(count_fusion2/2)
 	count_fusion=count_fusion3-count_fusion4
 	if ( count_fusion == 0 ) then
-		return FusionsBlueLNumber()
+		return FusionsBlueLNumber()-count_fusion3
 	else
-		return FusionsBlueSNumber()
+		return FusionsBlueSNumber()-count_fusion4
 	end 
 end
 function FusionsGreenCNumber() 
@@ -456,9 +456,9 @@ function FusionsBlueNumber(code)
 		count_fusion4=math.floor(count_fusion2/2)
 		count_fusion=count_fusion3-count_fusion4
 		if ( count_fusion == 0 ) then
-			info_fuzer=blueL:getActive()-function_Cached("FusionsBlueLNumber")
+			info_fuzer=blueL:getActive()-count_fusion3
 		else
-			info_fuzer=blueS:getActive()-function_Cached("FusionsBlueSNumber")
+			info_fuzer=blueS:getActive()-count_fusion4
 		end
 		if function_Cached("FusionsBlueLNumber")<blueL:getActive() and code=="blueL" then
 				function_data_fusion[code]=1

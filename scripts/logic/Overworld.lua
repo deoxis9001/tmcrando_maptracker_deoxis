@@ -400,7 +400,9 @@ function CryptPuzzle()
 	end 
 end
 function FallsFusion() 
-	if ( ( fusiongoldcombined:getActive()==false and has("falls",1 ) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4 ) ) and function_Cached("OverworldBlocks")==1 then
+	if ( has("fusiongold_complet") and function_Cached("OverworldBlocks")==1 ) then
+		return 1
+	elseif ( ( fusiongoldcombined:getActive()==false and has("falls",1 ) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4 ) ) and function_Cached("OverworldBlocks")==1 then
 		return 1
 	elseif fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=1 and function_Cached("OverworldBlocks")==1 then
 		return 2

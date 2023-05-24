@@ -304,9 +304,9 @@ end
 
 
 function Json_Hylia_DavidJr_Fuzer1() 
-	if ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessLonLon")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessLonLon")==1 and ( has("cane") and function_Cached("AccessEasternHills")==1  or has("open_tingle_yes") ) ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenP")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) ) then
+	elseif ( FusionsGreenNumber("greenP")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and ( has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) or has("open_tingle_yes") ) ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -315,9 +315,9 @@ end
 
 
 function Json_Hylia_DavidJr_Fuzer2() 
-	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessLonLon")==1 and has("cane") and function_Cached("AccessEasternHills")==1 and function_Cached("HasMagicBoomerang")==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessLonLon")==1 and ( has("cane") and function_Cached("AccessEasternHills")==1 or has("open_tingle_yes") ) and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) and function_Cached("HasMagicBoomerang")==1 ) then
+	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and ( has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) or has("open_tingle_yes") ) and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -359,9 +359,9 @@ end
 
 
 function Json_LonLon_Ankle_Fuzer() 
-	if ( FusionsGreenNumber("greenC")==1 and function_Cached("LonLon_Cave_Chest")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("LonLon_Cave_Chest")==1 and ( has("cane") and function_Cached("AccessEasternHills")==1 or has("open_tingle_yes") ) ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("LonLon_Cave_Chest")==1 and has("cane") and function_Cached("AccessEasternHills")==2 ) then
+	elseif ( FusionsGreenNumber("greenC")==1 and ( function_Cached("LonLon_Cave_Chest")==1 or  function_Cached("LonLon_Cave_Chest")==2 ) and ( has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) or has("open_tingle_yes") ) ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -654,9 +654,9 @@ function Json_Trilby_TreeHouse_Fuzer()
 end
 
 function Json_Trilby_Knuckle_Fuzer() 
-	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Trilby_DigCave_RightChest")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Trilby_DigCave_RightChest")==1 and ( has("cane") and function_Cached("AccessEasternHills")==1  or has("open_tingle_yes") ) ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("Trilby_DigCave_RightChest")==1 or function_Cached("Trilby_DigCave_RightChest")==2 ) and has("cane") and ( function_Cached("AccessEasternHills")==2 or function_Cached("AccessEasternHills")==1 ) ) then
+	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("Trilby_DigCave_RightChest")==1 or function_Cached("Trilby_DigCave_RightChest")==2 ) and  ( has("cane") and ( function_Cached("AccessEasternHills")==2 or function_Cached("AccessEasternHills")==1 or has("open_tingle_yes") ) ) ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
