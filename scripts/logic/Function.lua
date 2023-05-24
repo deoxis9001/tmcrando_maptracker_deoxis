@@ -5,9 +5,11 @@ function Preset()
 		setting_preset_data_cache = data_preset.CurrentStage + 1
 		return 0
 	end
+	
 	if setting_preset_data_cache~=( data_preset.CurrentStage + 1 ) then
 		setting_preset_data_cache = data_preset.CurrentStage + 1
 		if setting_preset_data_cache ~= 0 then
+			print(setting_preset_data_title[setting_preset_data_cache])
 			for i, v in pairs(setting_preset_data[setting_preset_data_title[setting_preset_data_cache]]) do
 				local item = Tracker:FindObjectForCode(i)
 				if  setting_preset_data_other[i]==nil then
