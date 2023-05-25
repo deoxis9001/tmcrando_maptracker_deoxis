@@ -530,6 +530,8 @@ function CloudTopFallVisibility()
 
 	if function_Cached("FusionsGold")==1 then
 		return 1
+	elseif function_Cached("OpenWindTribe") and function_Cached("StrangerFusion")==1  then
+		return 1
 	elseif has("cloudwindcrest_yes") then
 		return 1
 	elseif has("fallswindcrest_yes") then

@@ -315,8 +315,8 @@ function CloudFusions()
 		return 0
 	end 
 end
-function CompletedGolds()
-	if ( has("fusiongold_complet") ) then
+function OpenWindTribe()
+	if ( has("open_wind_tribe_yes") ) then
 		return 1
 	else
 		return 0

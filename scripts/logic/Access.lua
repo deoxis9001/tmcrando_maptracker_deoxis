@@ -161,7 +161,7 @@ function AccessCrypt()
 end
 function AccessFalls()
 	
-	if ( ( function_Cached("OverworldBlocks")==1 and function_Cached("FallsFusion")==1 and function_Cached("DarkRooms")==1 and has("grip") ) or function_Cached("FallsWindCrest")==1 or ( has("grip") and ( function_Cached("CloudWindCrest")==1 or ( function_Cached("StrangerFusion")==1 and function_Cached("CompletedGolds")==1 ) ) ) ) then
+	if ( ( function_Cached("OverworldBlocks")==1 and function_Cached("FallsFusion")==1 and function_Cached("DarkRooms")==1 and has("grip") ) or function_Cached("FallsWindCrest")==1 or ( has("grip") and ( function_Cached("CloudWindCrest")==1 or ( function_Cached("StrangerFusion")==1 and function_Cached("OpenWindTribe")==1 ) ) ) ) then
 		return 1
 	elseif ( function_Cached("OverworldBlocks")==1 and ( function_Cached("FallsFusion")==1 or function_Cached("FallsFusion")==2 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and has("grip") ) then
 		return 2
@@ -172,7 +172,7 @@ end
 
 function AccessClouds()
 	
-	if ( function_Cached("AccessFalls")==1 and has("grip") ) or function_Cached("CloudWindCrest")==1 or ( function_Cached("StrangerFusion")==1 and function_Cached("CompletedGolds")==1 ) then
+	if ( function_Cached("AccessFalls")==1 and has("grip") ) or function_Cached("CloudWindCrest")==1 or ( function_Cached("StrangerFusion")==1 and function_Cached("OpenWindTribe")==1 ) then
 		return 1
 	elseif function_Cached("AccessFalls")==2 and has("grip") then
 		return 2
@@ -183,9 +183,9 @@ end
 
 function AccessWindTribe()
 	 
-	if ( function_Cached("StrangerFusion")==1 and ( function_Cached("CompletedGolds")==1  or has("open_wind_tribe_yes") ) ) or ( function_Cached("AccessClouds")==1 and function_Cached("CloudFusions")==1 ) or function_Cached("CloudWindCrest")==1 then
+	if ( function_Cached("StrangerFusion")==1 and function_Cached("OpenWindTribe")==1 ) or ( function_Cached("AccessClouds")==1 and function_Cached("CloudFusions")==1 ) or function_Cached("CloudWindCrest")==1 then
 		return 1
-	elseif ( function_Cached("StrangerFusion")==1 and ( function_Cached("CompletedGolds")==1  or has("open_wind_tribe_yes") ) ) or ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) and ( function_Cached("CloudFusions")==1 or function_Cached("CloudFusions")==2 ) then
+	elseif ( function_Cached("StrangerFusion")==1 and function_Cached("OpenWindTribe")==1 ) or ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) and ( function_Cached("CloudFusions")==1 or function_Cached("CloudFusions")==2 ) then
 		return 2
 	else
 		return 0
