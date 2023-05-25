@@ -225,7 +225,7 @@
 		"map":"map",
 		"x":75,
 		"y":1700,
-		"restrict_visibility_rules":["$FusionsGold"]
+		"restrict_visibility_rules":["fusiongold_vanilla"]
 	  }
 	],
 	"sections":[

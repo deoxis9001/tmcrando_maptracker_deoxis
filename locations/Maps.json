@@ -1236,8 +1236,8 @@
 		"name":"Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Palace_FirebarGrate"],
-		"chest_unopened_img":"images/items-map/chest_open.png",
-		"chest_opened_img":"images/items-map/chest_closed.png",
+		"chest_unopened_img":"images/items-map/chest_closed.png",
+		"chest_opened_img":"images/items-map/chest_open.png",
 	  }  
 	]
   },
