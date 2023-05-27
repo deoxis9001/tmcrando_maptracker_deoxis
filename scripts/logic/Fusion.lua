@@ -81,11 +81,43 @@ function Json_Clouds_WindTribeHouse_Fuzer7()
 		return 0
 	end 
 end
+function Clouds_Fuzer()
+	item1=Tracker:FindObjectForCode("@Wind Tribe House/2F Gregal's Gift")
+	item2=Tracker:FindObjectForCode("@Wind Tribe House/3F Chests")
+	item3=Tracker:FindObjectForCode("@Wind Tribe House/4F Chests")
+	local count = 0
+	if item1.AvailableChestCount~=1 then
+		count = count + 1
+	end
+	if item2.AvailableChestCount~=3 then
+		count = count + 1
+	end
+	if item3.AvailableChestCount~=2 then
+		count = count + 1
+	end
+	if function_Cached("StrangerFusion")==0 then
+		item4=Tracker:FindObjectForCode("@Wind Tribe House/1F Chests")
+		item5=Tracker:FindObjectForCode("@Wind Tribe House/2F Chest")
+		item6=Tracker:FindObjectForCode("@Wind Tribe House/2F Save Gregal")
+		if item4.AvailableChestCount~=2 then
+			count = count + 1
+		end
+		if item5.AvailableChestCount~=1 then
+			count = count + 1
+		end
+		if item6.AvailableChestCount~=1 then
+			count = count + 1
+		end
+	end
+	
+	return count
+end
+function Json_Clouds_Fuzer_Fuzer1()
 
-function Json_Clouds_Fuzer_Fuzer1() 
-	if ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==1 and function_Cached("AccessWindTribe")==0 ) then
+	-- print(count)
+	if ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==1 and function_Cached("Clouds_Fuzer")==0 ) then
 		return 1
-	elseif ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==2 and function_Cached("AccessWindTribe")==0 ) then
+	elseif ( FusionsRedNumber("redV")==1 and function_Cached("AccessClouds")==2 and function_Cached("Clouds_Fuzer")==0 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -93,9 +125,9 @@ function Json_Clouds_Fuzer_Fuzer1()
 end
 
 function Json_Clouds_Fuzer_Fuzer2() 
-	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==1 and function_Cached("AccessWindTribe")==0 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==1 and function_Cached("Clouds_Fuzer")==0 ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==2 and function_Cached("AccessWindTribe")==0 ) then
+	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessClouds")==2 and function_Cached("Clouds_Fuzer")==0 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -272,9 +304,9 @@ end
 
 
 function Json_Hylia_DavidJr_Fuzer1() 
-	if ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessLonLon")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 and function_Cached("AccessLonLon")==1 and ( has("cane") and function_Cached("AccessEasternHills")==1  or has("open_tingle_yes") ) ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenP")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) ) then
+	elseif ( FusionsGreenNumber("greenP")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and ( has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) or has("open_tingle_yes") ) ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -283,9 +315,9 @@ end
 
 
 function Json_Hylia_DavidJr_Fuzer2() 
-	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessLonLon")==1 and has("cane") and function_Cached("AccessEasternHills")==1 and function_Cached("HasMagicBoomerang")==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("AccessLonLon")==1 and ( has("cane") and function_Cached("AccessEasternHills")==1 or has("open_tingle_yes") ) and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) and function_Cached("HasMagicBoomerang")==1 ) then
+	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and ( has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) or has("open_tingle_yes") ) and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -327,9 +359,9 @@ end
 
 
 function Json_LonLon_Ankle_Fuzer() 
-	if ( FusionsGreenNumber("greenC")==1 and function_Cached("LonLon_Cave_Chest")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("LonLon_Cave_Chest")==1 and ( has("cane") and function_Cached("AccessEasternHills")==1 or has("open_tingle_yes") ) ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("LonLon_Cave_Chest")==1 and has("cane") and function_Cached("AccessEasternHills")==2 ) then
+	elseif ( FusionsGreenNumber("greenC")==1 and ( function_Cached("LonLon_Cave_Chest")==1 or  function_Cached("LonLon_Cave_Chest")==2 ) and ( has("cane") and ( function_Cached("AccessEasternHills")==1 or function_Cached("AccessEasternHills")==2 ) or has("open_tingle_yes") ) ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -348,35 +380,10 @@ function Json_MinishWoods_MittCave_Fuzer()
 end
 
 
-function Json_MinishWoods_MinishVillage_Fuzer1() 
-	local count=0
-	if( has("fusions13") ) then
-		count = count + 1
-	end
-	if( has("fusions14") ) then
-		count = count + 1
-	end
-	if( has("fusions15") ) then
-		count = count + 1
-	end
-	if( has("fusions16") ) then
-		count = count + 1
-	end
-	if( has("fusions17") ) then
-		count = count + 1
-	end
-	if( has("fusions18") ) then
-		count = count + 1
-	end
-	if( has("fusions19") ) then
-		count = count + 1
-	end
-	if( has("fusions1a") ) then
-		count = count + 1
-	end
-	if ( FusionsRedNumber("redE")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
+function Json_MinishWoods_MinishVillage_Fuzer1()
+	if ( FusionsRedNumber("redE")==1 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
-	elseif ( FusionsRedNumber("redE")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
+	elseif ( FusionsRedNumber("redE")==1 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -384,32 +391,10 @@ function Json_MinishWoods_MinishVillage_Fuzer1()
 end
 
 
-function Json_MinishWoods_MinishVillage_Fuzer2() 
-	local count=0
-	if( has("fusions1b") ) then
-		count = count + 1
-	end
-	if( has("fusions1c") ) then
-		count = count + 1
-	end
-	if( has("fusions1d") ) then
-		count = count + 1
-	end
-	if( has("fusions1e") ) then
-		count = count + 1
-	end
-	if( has("fusions1f") ) then
-		count = count + 1
-	end
-	if( has("fusions20") ) then
-		count = count + 1
-	end
-	if( has("fusions21") ) then
-		count = count + 1
-	end
-	if ( FusionsRedNumber("redV")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
+function Json_MinishWoods_MinishVillage_Fuzer2()
+	if ( FusionsRedNumber("redV")==1 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
-	elseif ( FusionsRedNumber("redV")==1 and count >=7 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
+	elseif ( FusionsRedNumber("redV")==1 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -429,7 +414,7 @@ end
 
 
 function Json_MinishWoods_Belari_Fuzer() 
-	if ( FusionsRedNumber("redW") and function_Cached("MinishWoods_BombMinish_NPC1")==1 ) then
+	if ( FusionsRedNumber("redW")==1 and function_Cached("MinishWoods_BombMinish_NPC1")==1 ) then
 		return 1
 	elseif ( FusionsRedNumber("redW")==1 and function_Cached("MinishWoods_BombMinish_NPC1")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
@@ -669,9 +654,9 @@ function Json_Trilby_TreeHouse_Fuzer()
 end
 
 function Json_Trilby_Knuckle_Fuzer() 
-	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Trilby_DigCave_RightChest")==1 and has("cane") and function_Cached("AccessEasternHills")==1 ) then
+	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Trilby_DigCave_RightChest")==1 and ( has("cane") and function_Cached("AccessEasternHills")==1  or has("open_tingle_yes") ) ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("Trilby_DigCave_RightChest")==1 or function_Cached("Trilby_DigCave_RightChest")==2 ) and has("cane") and ( function_Cached("AccessEasternHills")==2 or function_Cached("AccessEasternHills")==1 ) ) then
+	elseif ( FusionsGreenNumber("greenG")==1 and ( function_Cached("Trilby_DigCave_RightChest")==1 or function_Cached("Trilby_DigCave_RightChest")==2 ) and  ( has("cane") and ( function_Cached("AccessEasternHills")==2 or function_Cached("AccessEasternHills")==1 or has("open_tingle_yes") ) ) ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0

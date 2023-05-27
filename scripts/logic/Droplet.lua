@@ -8,7 +8,7 @@ function ToDLeftBlock()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
+	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
 		return 2
 	else
 		return 0
@@ -28,7 +28,7 @@ function ToDWestDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
+	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
 		return 2
 	else
 		return 0
@@ -39,18 +39,18 @@ function ToDDarkDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
+	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
 		return 2
 	else
 		return 0
 	end 
 end
 function ToDEitherDoor() 
-	if ( Tracker:ProviderCountForCode("tod_smallkey") >= 4 ) then
+	if ( Tracker:ProviderCountForCode("tod_smallkey") >= 3 ) then
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
+	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
 		return 2
 	else
 		return 0
@@ -61,7 +61,7 @@ function ToDChuDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
+	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("tod_smallkey") >= 1 ) then
 		return 2
 	else
 		return 0

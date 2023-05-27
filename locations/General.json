@@ -58,7 +58,7 @@
 		"access_rules":["$Json_General_FusionsSharedGreenC_Fuzer"],
 	  },
 	  {
-		"name":"Minish Woods - Entrance",
+		"name":"Minish Woods North - Cross The Pond",
 		"hosted_item":"fusions44",
 		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_General_FusionsSharedGreenG_Fuzer"],
@@ -70,14 +70,14 @@
 		"access_rules":["$Json_General_FusionsSharedGreenG_Fuzer"],
 	  },
 	  {
-		"name":"Minish Woods - Pre Minish Village - Minish Hole",
-		"hosted_item":"fusions4e",
+		"name":"Minish Woods - Entrance",
+		"hosted_item":"fusions47",
 		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_General_FusionsSharedGreenG_Fuzer"],
 	  },
 	  {
-		"name":"Minish Woods North - Cross The Pond",
-		"hosted_item":"fusions47",
+		"name":"Minish Woods - Pre Minish Village - Minish Hole",
+		"hosted_item":"fusions4e",
 		"visibility_rules":["fusiongreen_vanilla"],
 		"access_rules":["$Json_General_FusionsSharedGreenG_Fuzer"],
 	  },

@@ -199,6 +199,7 @@
 		  "name":"Fusion",
 		  "item_count":1,
 		  "access_rules":["$Json_Falls_SourceFlowCave_Fusion"],
+		  "visibility_rules":["$CloudTopFallVisibility,fusiongold_vanilla"],
 		  "chest_unopened_img": "images/items-map/Gold Kinstone (Falls).png",
 		  "chest_opened_img": "images/items-map/Gold Kinstone (Falls) Gray.png"
 		},

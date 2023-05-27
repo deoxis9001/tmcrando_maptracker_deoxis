@@ -296,7 +296,9 @@ function SwampSouthShortcut()
 	end 
 end
 function RuinsFusion()
-	if ( Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
+	if ( has("fusiongold_complet") ) then
+		return 1
+	elseif ( Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
 		return 1
 	elseif ( Tracker:ProviderCountForCode("clouds") >= 3 and fusiongoldcombined:getActive() ) then
 		return 2
@@ -305,7 +307,7 @@ function RuinsFusion()
 	end 
 end
 function CloudFusions()
-	if ( ( ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) ) and ( has("cape") or has("mitts") ) ) then
+	if ( ( ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) or  has("fusiongold_complet") ) and ( has("cape") or has("mitts") ) ) then
 		return 1
 	elseif ( fusiongoldcombined:getActive() and ( Tracker:ProviderCountForCode("clouds") >= 6 or ( Tracker:ProviderCountForCode("clouds") >= 5 and has("fallswindcrest_yes") ) ) and ( has("cape") or has("mitts") ) ) then
 		return 2
@@ -313,8 +315,8 @@ function CloudFusions()
 		return 0
 	end 
 end
-function CompletedGolds()
-	if ( has("fusiongold_complet") ) then
+function OpenWindTribe()
+	if ( has("open_wind_tribe_yes") ) then
 		return 1
 	else
 		return 0
@@ -361,12 +363,16 @@ end
 function CryptDoor() 
 	if ( Tracker:ProviderCountForCode("rc_smallkey") >= 1 ) then
 		return 1
+	elseif ( has("small_key_none") ) then
+		return 1
 	else
 		return 0
 	end 
 end
 function CryptBlocks() 
 	if ( Tracker:ProviderCountForCode("rc_smallkey") >= 3 ) then
+		return 1
+	elseif ( has("small_key_none") ) then
 		return 1
 	else
 		return 0
@@ -394,7 +400,9 @@ function CryptPuzzle()
 	end 
 end
 function FallsFusion() 
-	if ( ( fusiongoldcombined:getActive()==false and has("falls",1 ) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4 ) ) and function_Cached("OverworldBlocks")==1 then
+	if ( has("fusiongold_complet") and function_Cached("OverworldBlocks")==1 ) then
+		return 1
+	elseif ( ( fusiongoldcombined:getActive()==false and has("falls",1 ) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4 ) ) and function_Cached("OverworldBlocks")==1 then
 		return 1
 	elseif fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=1 and function_Cached("OverworldBlocks")==1 then
 		return 2
@@ -835,7 +843,7 @@ function ToDWestSwitch()
 		return 1
 	elseif ( function_Cached("BombWalls")==1 and function_Cached("ToDWeb")==1 and function_Cached("ToDMadderpillars")==1 and function_Cached("CanSplit2")==1 and ( function_Cached("ToDRedWarp")==1 or ( function_Cached("ToD2ndRupeePath")==1 and function_Cached("ToDRightIce")==1 and function_Cached("CapeExtension")==1 ) ) ) then
 		return 1
-	elseif ( function_Cached("BombWalls")==1 and function_Cached("ToDWeb")==1 and ( function_Cached("ToDMadderpillars")==1 or function_Cached("ToDMadderpillars")==2 ) and function_Cached("CanSplit2")==1 and ( function_Cached("ToDRedWarp")==1 or ( function_Cached("ToD2ndRupeePath")==1 and function_Cached("ToDRightIce")==1 and ( function_Cached("CapeExtension")==1 or function_Cached("CapeExtension")==2 ) ) ) ) then
+	elseif ( function_Cached("BombWalls")==1 and function_Cached("ToDWeb")==1 and ( function_Cached("ToDMadderpillars")==1 or function_Cached("ToDMadderpillars")==2 ) and function_Cached("CanSplit2")==1 and ( function_Cached("ToDRedWarp")==1 or ( ( function_Cached("ToD2ndRupeePath")==1 or function_Cached("ToD2ndRupeePath")==2 ) and function_Cached("ToDRightIce")==1 and ( function_Cached("CapeExtension")==1 or function_Cached("CapeExtension")==2 ) ) ) ) then
 		return 2
 	else
 		return 0

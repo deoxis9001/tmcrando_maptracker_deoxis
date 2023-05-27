@@ -5,7 +5,7 @@ function DHC1stDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("dhc_smallkey") >= 1 ) then
+	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("dhc_smallkey") >= 1 ) then
 		return 2
 	else
 		return 0
@@ -13,8 +13,6 @@ function DHC1stDoor()
 end
 function DHCBigBlock() 
 	if ( Tracker:ProviderCountForCode("dhc_smallkey") >= 5 ) then
-		return 1
-	elseif ( Tracker:ProviderCountForCode("dhc_smallkey") >= 4 ) then
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1

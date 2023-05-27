@@ -243,17 +243,17 @@
     "name":" If enabled will shuffle Heart Pieces and Heart Containers into the pool, otherwise Heart Pieces and Containers will always be found in their vanilla location. This makes any items randomized to Heart Piece locations visible prior to collecting them. ",
     "type":"progressive",
     "loop":true,
-	"initial_stage_idx":0,
+	"initial_stage_idx":1,
     "allow_disabled":false,
     "stages":[
       {
-        "img":"images/options/locations_settings/hp_shuffle.png",
-        "codes":"hp_shuffle",
+        "img":"images/options/locations_settings/hp_vanilla.png",
+        "codes":"hp_vanilla",
         "inherit_codes":false
       },
       {
-        "img":"images/options/locations_settings/hp_vanilla.png",
-        "codes":"hp_vanilla",
+        "img":"images/options/locations_settings/hp_shuffle.png",
+        "codes":"hp_shuffle",
         "inherit_codes":false
       },
     ]
@@ -1647,6 +1647,11 @@
         "img":"images/options/world_settings/settings/small_key_shuffle.png",
         "codes": "small_key_shuffle",
         "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/small_key_shuffle_out.png",
+        "codes": "small_key_shuffle,small_key_out",
+        "inherit_codes":false
       }
     ]
   },
@@ -1712,6 +1717,26 @@
       {
         "img":"images/options/world_settings/settings/preset_08.png",
         "codes": "preset_08"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_09.png",
+        "codes": "preset_09"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_10.png",
+        "codes": "preset_10"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_11.png",
+        "codes": "preset_11"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_12.png",
+        "codes": "preset_12"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_13.png",
+        "codes": "preset_13"
       }
     ]
   },
@@ -1730,6 +1755,44 @@
       {
         "img":"images/options/world_settings/settings/out_logic_yes.png",
         "codes": "out_logic_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, will spawn Tingle's brothers Knuckle, Ankle and David Jr. from the start of the game.\nIf disabled, the Tingle brothers will only spawn after talking to Tingle twice in a row.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/open_tingle_no.png",
+        "codes": "open_tingle_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/open_tingle_yes.png",
+        "codes": "open_tingle_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, Wind Tribe Tower will act like it has already been entered from Cloud Tops from the start of the game. This unlocks the upper floors, Gregal's 2nd item and the main exit to Cloud tops early.\nCertain combinations of settings may allow for a softlock when going to Cloud tops without the Tornado being completed, Homewarp will always be available in these situations.\n\nIf disabled, Wind Tribe will stay in its initial state until the player enters the building from Cloud Tops.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/open_wind_tribe_no.png",
+        "codes": "open_wind_tribe_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/open_wind_tribe_yes.png",
+        "codes": "open_wind_tribe_yes",
         "inherit_codes":false
       }
     ]
