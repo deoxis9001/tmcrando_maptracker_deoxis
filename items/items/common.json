@@ -834,7 +834,7 @@
  {
    "name": "Figurine",
    "type": "consumable",
-   "img": "images/items/Figurine.png",
+   "img": "images/items/figurine.png",
    "codes": "figurine",
    "min_quantity":0,
    "max_quantity":136,
