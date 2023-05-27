@@ -1,44 +1,46 @@
 [
-	{
-        "name": "map",
-        "img": "images/maps/overworld.png",
-        "location_size": 65
-    },
-    {
-        "name": "mines",
-        "img": "images/maps/mine.png",
-        "locations_size": 50
-    },
-    {
-        "name": "dws",
-        "img": "images/maps/dws.png",
-        "location_size": 50
-    },
-    {
-        "name": "cof",
-        "img": "images/maps/cof.png",
-        "location_size": 50
-    },
-    {
-        "name": "fow",
-        "img": "images/maps/fow.png",
-        "location_size": 50
-    },
-    {
-        "name": "tod",
-        "img": "images/maps/tod.png"
-    },
-    {
-        "name": "rc",
-        "img": "images/maps/rc.png",
-        "location_size": 50
-    },
-    {
-        "name": "pow",
-        "img": "images/maps/pow.png"
-    },
-    {
-        "name": "dhc",
-        "img": "images/maps/dhc.png"
-    }
+  {
+    "name": "map",
+    "img": "images/maps/big_map.png",
+    "location_size": 65
+  },
+  {
+    "name": "entrance",
+    "img": "images/maps/big_map.png",
+    "location_size": 50
+  },
+  {
+    "name":"mines",
+    "img": "images/maps/Mines.png",
+    "locations_size": 50
+  },
+  {
+    "name":"dws",
+    "img":"images/maps/DeepwoodShrineFix.png",
+    "location_size": 50
+  },
+  {
+    "name":"cof",
+    "img":"images/maps/CaveOfFlames.png"
+  },
+  {
+    "name":"fow",
+    "img":"images/maps/FortressOfWinds.png"
+  },
+  {
+    "name":"tod",
+    "img":"images/maps/TempleOfDroplets.png"
+  },
+  {
+    "name":"rc",
+    "img":"images/maps/Royal_Crypt(mod).gif"
+  },
+  {
+    "name":"pow",
+    "img":"images/maps/PalaceOfWinds.png"
+  },
+  {
+    "name":"dhc",
+    "img":"images/maps/DarkHyruleCastle.png"
+  }
 ]

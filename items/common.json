@@ -1,0 +1,886 @@
+[
+  // Progressive Swords (Overworld)
+  {
+    "name": "Sword",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/Smith's Sword.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/Smith's Sword.png",
+        "inherit_codes": false,
+        "codes": "sword, smith"
+      },
+      {
+        "img": "images/items/Green Sword.png",
+        "inherit_codes": false,
+        "codes": "sword,sword2,greensword,dmg"
+      },
+      {
+        "img": "images/items/Red Sword.png",
+        "inherit_codes": false,
+        "codes": "sword,sword2,sword3,redsword,dmg"
+      },
+      {
+        "img": "images/items/Blue Sword.png",
+        "inherit_codes": false,
+        "codes": "sword,sword2,sword3,sword4,bluesword,dmg"
+      },
+      {
+        "img": "images/items/Four Sword.png",
+        "inherit_codes": false,
+        "codes": "sword,sword2,sword3,sword4,sword5,foursword,dmg"
+      }
+    ]
+  },
+  //Gust Jar
+  {
+    "name": "Gust Jar",
+    "type": "toggle",
+    "img": "images/items/Gust Jar.png",
+    "codes": "gust,gustjar"
+  },
+  //Cane of Pacci
+  {
+    "name": "Cane of Pacci",
+    "type": "toggle",
+    "img": "images/items/Cane of Pacci.png",
+    "codes": "cane,paccicane,batonsauteur"
+  },
+  //Boomerang
+  {
+    "name":"Boomerang",
+    "type":"progressive",
+    "stages": [
+      {
+        "img": "images/items/Boomerang.png",
+        "codes": "boomerang"
+      },
+      {
+        "img": "images/items/Magical Boomerang.png",
+        "codes": "boomerang,magicboomerang"
+      }
+    ]
+  },
+  //Wallet
+  {
+    "name":"Wallet",
+    "type":"progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/Wallet999.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/Wallet300alt.png",
+        "codes": "wallet,wallet2"
+      },
+      {
+        "img": "images/items/Wallet500alt.png",
+        "codes": "wallet3"
+      },
+      {
+        "img": "images/items/Wallet999alt.png",
+        "codes": "wallet4"
+      }
+    ]
+  },
+  // Progressive Shields
+  {
+    "name": "Shield",
+    "type": "progressive",
+    "stages": [
+      {
+        "img": "images/items/Small Shield.png",
+        "codes": "shield"
+      },
+      {
+        "img": "images/items/Mirror Shield.png",
+        "codes": "shield,shield2,mirrorshield"
+      }
+    ]
+  },
+  //Mole Mitts
+  {
+    "name": "Mole Mitts",
+    "type": "toggle",
+    "img": "images/items/Mole Mitts.png",
+    "codes": "mitts"
+  },
+  {
+    "name": "Mole Mitts Butterfly",
+    "type": "toggle",
+    "codes": "mittsButterfly",
+    "img": "images/items/Mole Mitts B.png"
+  },
+  {
+    "name": "Mole Mitts and Butterfly",
+    "type": "composite_toggle",
+    "codes": "mittsandfly",
+    "item_left": "mitts",
+    "item_right": "mittsButterfly",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/items/Mole Mitts.png",
+        "img_mods": "@disabled"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/items/Mole Mitts.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/items/Mole Mitts B Gray.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/items/Mole Mitts B.png"
+      }
+    ]
+  },
+  //Lamp
+  {
+    "name": "Lamp",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
+    "stages":[
+      {
+        "img": "images/items/Lamp.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/Lamp (Lit).png",
+        "codes":"lamp,lantern"
+      }
+    ]
+  },
+  // Bombs
+  {
+    "name": "Bombs",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/Bomb.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/Bomb10.png",
+        "codes": "bombs,bomb,dmg"
+      },
+      {
+        "img": "images/items/Bomb30.png",
+        "codes": "bombs,bomb,dmg"
+      },
+      {
+        "img": "images/items/Bomb50.png",
+        "codes": "bombs,bomb,dmg"
+      },
+      {
+        "img": "images/items/Bomb99.png",
+        "codes": "bombs,bomb,dmg"
+      },
+    ]
+  },
+  {
+    "name": "Bombs and Remote",
+    "type": "toggle_badged",
+    "base_item": "bombs",
+    "img": "images/items/overlay_remote.png",
+    "codes": "remote,bombsremote"
+  },
+ //Kinstone Wilds
+ {
+   "name": "Gold Kinstone (Wilds)",
+   "type": "consumable",
+   "img": "images/items/Kinstone Wilds Half.png",
+   "codes": "kinstoneWilds,wilds",
+   "max_quantity": 3
+ },
+ // Boots
+ {
+   "name": "Boots",
+   "type": "toggle",
+   "img": "images/items/Pegasus Boots.png",
+   "codes": "boots"
+ },
+ // Roc's Cape
+ {
+   "name": "Roc's Cape",
+   "type": "toggle",
+   "img": "images/items/Roc's Cape.png",
+   "codes": "cape"
+ },
+ // Ocarina
+ {
+   "name": "Ocarina",
+   "type": "toggle",
+   "img": "images/items/Ocarina of Wind.png",
+   "codes": "flute,ocarina"
+ },
+ // Bow
+ {
+   "name": "Bow",
+   "type": "progressive",
+   "loop": true,
+   "stages": [
+     {
+       "img": "images/items/Bow0.png",
+       "codes": "bow,dmg"
+     },
+     {
+       "img": "images/items/Light Arrows Smaller.png",
+       "codes": "bow,lights"
+     }
+   ]
+ },
+ {
+   "name": "Bow w/ Butterfly",
+   "type": "toggle_badged",
+   "base_item": "bow",
+   "img": "images/items/overlay_butterfly.png",
+   "codes": "bowandfly"
+ },
+ //Quivers
+ {
+   "name": "Quiver",
+   "type": "progressive",
+   "allow_disabled": false,
+   "initial_stage_idx": 0,
+   "stages": [
+     {
+       "img": "images/items/Quiver.png",
+       "inherit_codes": false,
+       "img_mods": "@disabled",
+       "codes": "quiver"
+     },
+     {
+       "img": "images/items/Quiver50.png",
+       "codes": "quiver"
+     },
+     {
+       "img": "images/items/Quiver70.png",
+       "codes": "quiver"
+     },
+     {
+       "img": "images/items/Quiver99.png",
+       "codes": "quiver"
+     },
+   ]
+ },
+ // Gold Kinstone (Clouds)
+ {
+  "name": "Gold Kinstone (Clouds)",
+  "type": "consumable",
+  "img": "images/items/Kinstone Clouds Half.png",
+  "codes": "kinstoneClouds,clouds",
+  "max_quantity": 5
+ },
+ // Bottles
+ {
+   "name": "Bottles",
+   "type": "progressive",
+   "loop": true,
+   "allow_disabled": "false",
+   "initial_stage_idx": 0,
+   "stages": [
+     {
+       "img": "images/items/Empty Bottle.png",
+       "img_mods": "@disabled"
+     },
+     {
+       "img": "images/items/Empty Bottle1.png",
+       "codes": "bottle"
+     },
+     {
+       "img": "images/items/Empty Bottle2.png",
+       "codes": "bottle"
+     },
+     {
+       "img": "images/items/Empty Bottle3.png",
+       "codes": "bottle"
+     },
+     {
+       "img": "images/items/Empty Bottle4.png",
+       "codes": "bottle"
+     }
+   ]
+ },
+ {
+   "name": "Dog Food Bottle",
+   "type": "toggle_badged",
+   "base_item": "bottle",
+   "img": "images/items/overlay_dogfood.png",
+   "codes": "dogbottle"
+ },
+ // Jabber Nut
+ {
+   "name":"Jabber Nut",
+   "type":"toggle",
+   "img":"images/items/Jabber Nut.png",
+   "codes":"jabber"
+ },
+ // Mushroom
+ {
+   "name": "Mushroom",
+   "type": "toggle",
+   "img": "images/items/Mushroom.png",
+   "codes": "mushroom"
+ },
+ {
+   "name": "Jabber Shroom",
+   "type": "composite_toggle",
+   "codes": "nutandshroom",
+   "item_left":"jabber",
+   "item_right":"mushroom",
+   "images": [
+     {
+       "left": false,
+       "right": false,
+       "img": "images/items/Jabber_Shroom_Gray.png",
+     },
+     {
+       "left": true,
+       "right": false,
+       "img": "images/items/Jabber_Shroom_J.png"
+     },
+     {
+       "left": false,
+       "right": true,
+       "img": "images/items/Jabber_Shroom_S.png"
+     },
+     {
+       "left": true,
+       "right": true,
+       "img": "images/items/Jabber_Shroom.png"
+     }
+   ]
+ },
+ // Lon Lon Ranch Key
+ {
+   "name": "Lon Lon Ranch Key",
+   "type": "toggle",
+   "img": "images/items/Lon Lon Ranch Key.png",
+   "codes": "llrkey"
+ },
+ // Gold Kinstone (Falls)
+ {
+   "name": "Gold Kinstone (Falls)",
+   "type": "toggle",
+   "img": "images/items/Kinstone Falls Half.png",
+   "codes": "kinstoneFalls, falls"
+ },
+ // Grip Ring
+ {
+   "name": "Grip Ring",
+   "type": "toggle",
+   "img": "images/items/Grip Ring.png",
+   "codes": "grip"
+ },
+ // Bracelets
+ {
+   "name": "Bracelets",
+   "type": "toggle",
+   "img": "images/items/Power Bracelets.png",
+   "codes": "bracelets"
+ },
+ {
+   "name": "Grip Ring and Bracelets",
+   "type": "composite_toggle",
+   "codes": "ringandbracelets",
+   "item_left":"grip",
+   "item_right":"bracelets",
+   "images": [
+     {
+       "left": false,
+       "right": false,
+       "img": "images/items/Power_Grips_Gray.png",
+     },
+     {
+       "left": true,
+       "right": false,
+       "img": "images/items/Power_Grips_G.png"
+     },
+     {
+       "left": false,
+       "right": true,
+       "img": "images/items/Power_Grips_P.png"
+     },
+     {
+       "left": true,
+       "right": true,
+       "img": "images/items/Power_Grips.png"
+     }
+   ]
+ },
+ // Flippers
+ {
+   "name": "Flippers",
+   "type": "toggle",
+   "img": "images/items/Flippers.png",
+   "codes": "flippers"
+ },
+ {
+   "name": "Flippers and Butterfly",
+   "type": "toggle",
+   "img": "images/items/Flippers Butterfly.png",
+   "codes": "flippersButterfly"
+ },
+ {
+   "name": "Flippers",
+   "type": "composite_toggle",
+   "codes": "flippersandfly",
+   "item_left":"flippers",
+   "item_right":"flippersButterfly",
+   "images": [
+     {
+       "left": false,
+       "right": false,
+       "img": "images/items/Flippers.png",
+       "img_mods": "@disabled"
+     },
+     {
+       "left": true,
+       "right": false,
+       "img": "images/items/Flippers.png"
+     },
+     {
+       "left": false,
+       "right": true,
+       "img": "images/items/Flippers B Gray.png"
+     },
+     {
+       "left": true,
+       "right": true,
+       "img": "images/items/Flippers B.png"
+     }
+   ]
+ },
+ // Graveyard Key
+ {
+   "name": "Graveyard Key",
+   "type": "toggle",
+   "img": "images/items/Graveyard Key.png",
+   "codes": "gravekey"
+ },
+ // Carlov Medal
+ {
+   "name": "Carlov Medal",
+   "type": "toggle",
+   "img": "images/items/Carlov Medal.png",
+   "codes": "carlov"
+ },
+ {
+   "name":"Tingle Trophy",
+   "type":"toggle",
+   "img":"images/items/Tingle Trophy.png",
+   "codes":"trophy"
+ },
+ {
+   "name": "Carlov and Tingle",
+   "type":"composite_toggle",
+   "codes":"carlovtingle",
+   "item_left":"carlov",
+   "item_right":"trophy",
+   "images":[
+     {
+       "left": false,
+       "right": false,
+       "img": "images/items/carlov_tingle_gray.png",
+     },
+     {
+       "left": true,
+       "right": false,
+       "img": "images/items/carlov_tingle_c.png"
+     },
+     {
+       "left": false,
+       "right": true,
+       "img": "images/items/carlov_tingle_t.png"
+     },
+     {
+       "left": true,
+       "right": true,
+       "img": "images/items/carlov_tingle.png"
+     }
+   ]
+ },
+ // Earth Element
+ {
+   "name": "Earth Element",
+   "type": "toggle",
+   "img": "images/items/Earth Element.png",
+   "codes": "earth"
+ },
+ // Fire Element
+ {
+   "name": "Fire Element",
+   "type": "toggle",
+   "img": "images/items/Fire Element.png",
+   "codes": "fire"
+ },
+ // Water Element
+ {
+   "name": "Water Element",
+   "type": "toggle",
+   "img": "images/items/Water Element.png",
+   "codes": "water"
+ },
+ // Wind Element
+ {
+   "name": "Wind Element",
+   "type": "toggle",
+   "img": "images/items/Wind Element.png",
+   "codes": "wind"
+ },
+ // Red Three
+ {
+   "name": "Red Kinstone 3",
+   "type": "toggle",
+   "img": "images/items/Red Kinstone 3.png",
+   "codes": "red3"
+ },
+ // Spin Attack
+ {
+   "name": "Spin Attack",
+   "type": "toggle",
+   "img": "images/items/Spin Attack.png",
+   "codes": "spinattack"
+ },
+ //Some Beam
+ {
+   "name": "Sword/Peril Beam",
+   "type": "toggle",
+   "img": "images/items/beam_nospin.png",
+   "codes": "beam"
+ },
+ {
+   "name": "Beam and Spin Attack",
+   "type": "composite_toggle",
+   "codes": "spinandbeam",
+   "item_left": "spinattack",
+   "item_right": "beam",
+   "images": [
+     {
+       "left": false,
+       "right": false,
+       "img": "images/items/nobeam_nospin.png",
+     },
+     {
+       "left": true,
+       "right": false,
+       "img": "images/items/nobeam_spin.png"
+     },
+     {
+       "left": false,
+       "right": true,
+       "img": "images/items/beam_nospin.png"
+     },
+     {
+       "left": true,
+       "right": true,
+       "img": "images/items/beam_and_spin.png"
+     }
+   ]
+ },
+ // Rock Breaker
+ {
+   "name": "Rock Breaker",
+   "type": "toggle",
+   "img": "images/items/Rock Breaker.png",
+   "codes": "rockbreaker"
+ },
+ // Dash Attack
+ {
+   "name": "Dash Attack",
+   "type": "toggle",
+   "img": "images/items/Dash Attack.png",
+   "codes": "dashattack"
+ },
+ // Down Thrust
+ {
+   "name": "Down Thrust",
+   "type": "toggle",
+   "img": "images/items/Down Thrust.png",
+   "codes": "downthrust"
+ },
+ // Roll Attack
+ {
+   "name": "Roll Attack",
+   "type": "toggle",
+   "img": "images/items/Roll Attack.png",
+   "codes": "rollattack"
+ },
+ // Sword Beam
+ {
+   "name": "Sword Beam",
+   "type": "toggle",
+   "img": "images/items/Sword Beam.png",
+   "codes": "swordbeam"
+ },
+ // Peril Beam
+ {
+   "name": "Peril Beam",
+   "type": "toggle",
+   "img": "images/items/Peril Beam.png",
+   "codes": "perilbeam"
+ },
+ // Great Spin Attack
+ {
+   "name": "Great Spin Attack",
+   "type": "toggle",
+   "img": "images/items/Great Spin Attack.png",
+   "codes": "greatspin"
+ },
+ // Fast Spin Charge
+ {
+   "name": "Fast Spin Charge",
+   "type": "toggle",
+   "img": "images/items/Fast Spin.png",
+   "codes": "fastspin"
+ },
+ // Fast Split
+ {
+   "name": "Fast Split",
+   "type": "toggle",
+   "img": "images/items/Fast Split.png",
+   "codes": "fastsplit"
+ },
+ // Long Great Spin
+ {
+   "name": "Long Great Spin",
+   "type": "toggle",
+   "img": "images/items/Long Great Spin.png",
+   "codes": "longspin"
+ },
+ // Go-Mode
+ {
+   "name": "Go Mode!",
+   "capturable": false,
+   "type": "toggle",
+   "img": "images/items/gomode.png",
+   "codes": "gomode"
+ },
+ {
+   "name": "Book Quest",
+   "type": "progressive",
+   "stages": [
+     {
+       "img": "images/items/Book1.png",
+       "codes": "books,book1"
+     },
+     {
+       "img": "images/items/Book2.png",
+       "codes": "books,book2"
+     },
+     {
+       "img": "images/items/Book3.png",
+       "codes": "books,book3"
+     }
+   ]
+ },
+ {
+   "name": "Remote Bombs",
+   "type": "toggle",
+   "img": "images/items/Remote Bombs.png",
+   "codes": "remote"
+ },
+ {
+   "name": "Scrolls",
+   "type": "consumable",
+   "img": "images/items/Tiger Scroll.png",
+   "codes": "scrolls,allscrolls,sevenscrolls",
+   "max_quantity": 11
+ },
+ {
+   "name": "Crypt Keys",
+   "type": "consumable",
+   "img": "images/donjons/Small Key.png",
+   "codes": "cryptkey",
+   "max_quantity": 3
+ },
+ {
+   "name": "Hearts",
+   "type": "progressive",
+   "img": "images/items/Heart Container.png",
+   "allow_disabled": false,
+   "inherit_codes": false,
+   "stages":[
+     {
+       "img":"images/items/Heart Container3.png",
+       "codes": "hearts"
+     },
+     {
+       "img":"images/items/Heart Container4.png",
+       "codes": "hearts"
+     },
+     {
+       "img":"images/items/Heart Container5.png",
+       "codes": "hearts"
+     },
+     {
+       "img":"images/items/Heart Container6.png",
+       "codes": "hearts"
+     },
+     {
+       "img":"images/items/Heart Container7.png",
+       "codes": "hearts"
+     },
+     {
+       "img":"images/items/Heart Container8.png",
+       "codes": "hearts"
+     },
+     {
+       "img":"images/items/Heart Container9.png",
+       "codes": "hearts"
+     },
+     {
+       "img":"images/items/Heart Container10.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container11.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container12.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container13.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container14.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container15.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container16.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container17.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container18.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container19.png",
+       "codes":"10hearts,hearts",
+     },
+     {
+       "img":"images/items/Heart Container20.png",
+       "codes":"10hearts,hearts",
+     }
+   ]
+ },
+ {
+   "name": "Heart Piece",
+   "type": "toggle",
+   "img": "images/items/Heart Piece.png",
+   "codes": "heartpiece"
+ },
+ // Graveyard/LLR Key Combined
+ {
+   "name": "Keys",
+   "type": "composite_toggle",
+   "item_right": "llrkey",
+   "item_left": "gravekey",
+   "codes": "bothkeys",
+   "images": [
+     {
+       "left": false,
+       "right": false,
+       "img": "images/items/Both_Keys_Gray.png",
+     },
+     {
+       "left": true,
+       "right": false,
+       "img": "images/items/Both_Keys_G.png"
+     },
+     {
+       "left": false,
+       "right": true,
+       "img": "images/items/Both_Keys_L.png"
+     },
+     {
+       "left": true,
+       "right": true,
+       "img": "images/items/Both_Keys.png"
+     }
+   ]
+ },
+ {
+   "name": "Generic Yellow Kinstone",
+   "type": "toggle",
+   "img": "images/items/Generic Gold Kinstone.png",
+   "codes": "genericyellow"
+ },
+ {
+   "name": "Big Key",
+   "type": "toggle",
+   "img": "images/donjons/Big Key.png",
+   "codes": "bigkey"
+ },
+ {
+   "name": "Small Key",
+   "type": "toggle",
+   "img": "images/donjons/Small Key.png",
+   "codes": "smallkey"
+ },
+ {
+   "name": "Butterfly",
+   "type": "toggle",
+   "img": "images/items/Joy_Butterfly.png",
+   "codes": "butterfly"
+ },
+ {
+   "name": "Dog Food",
+   "type": "toggle",
+   "img": "images/items/overlay_dogfood.png",
+   "codes": "dogfood"
+ },
+ {
+   "name": "Remote Bombs",
+   "type": "toggle",
+   "img": "images/items/Remote Bombs.png",
+   "codes": "remotebombs"
+ },
+ // Figurine
+ {
+   "name": "Figurine",
+   "type": "consumable",
+   "img": "images/items/figurine.png",
+   "codes": "figurine",
+   "min_quantity":0,
+   "max_quantity":136
+ }
+]

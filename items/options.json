@@ -1,0 +1,253 @@
+[
+  {
+    "name": "Obscure Locations",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/Obscure_Off.png",
+        "codes":"obscure_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/Obscure_On.png",
+        "codes":"obscure_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "Unrandomized",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img": "images/options/Rando_Off.png",
+        "codes": "rando",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/Rando_On.png",
+        "codes": "rando_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name": "Fusions",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/Kinsanity_Open.png",
+        "codes": "fusions_open",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/Kinsanity_None.png",
+        "codes": "fusions_none",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"DHC",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "inherit_codes":false,
+    "stages":[
+      {
+        "img":"images/options/dhc_closed.png",
+        "codes":"dhc_closed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_open.png",
+        "codes":"dhc_open",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_peditems.png",
+        "codes":"dhc_peditems",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_fast.png",
+        "codes":"dhc_none",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"DHCtest",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "inherit_codes":false,
+    "stages":[
+      {
+        "img":"images/options/dhc_closed.png",
+        "codes":"dhc_closed_test",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_open.png",
+        "codes":"dhc_open_test",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_peditems.png",
+        "codes":"dhc_peditems_test",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_fast.png",
+        "codes":"dhc_none_test",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/figurine.png",
+        "codes":"dhc_none_test,figurine_test",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Elements Needed",
+    "type":"progressive",
+    "loop": true,
+    "allow_disabled":false,
+    "stages":[
+	  {
+        "img":"images/options/Wind Element4.png",
+        "inherit_codes":false,
+        "codes":"element4Needed"
+      },
+      {
+        "img":"images/options/Earth Element0.png",
+        "inherit_codes":false,
+        "codes":"element0Needed"
+      },
+      {
+        "img":"images/options/Earth Element1.png",
+        "inherit_codes":false,
+        "codes":"element1Needed"
+      },
+      {
+        "img":"images/options/Fire Element2.png",
+        "inherit_codes":false,
+        "codes":"element2Needed"
+      },
+      {
+        "img":"images/options/Water Element3.png",
+        "inherit_codes":false,
+        "codes":"element3Needed"
+      }
+    ]
+  },
+  {
+    "name":"Swords Needed",
+    "type":"progressive",
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img": "images/options/Smith's Sword0.png",
+        "inherit_codes": false,
+        "codes": "sword0Needed"
+      },
+      {
+        "img": "images/options/Smith's Sword.png",
+        "inherit_codes": false,
+        "codes": "sword1Needed"
+      },
+      {
+        "img": "images/options/Green Sword.png",
+        "inherit_codes": false,
+        "codes": "sword2Needed"
+      },
+      {
+        "img": "images/options/Red Sword.png",
+        "inherit_codes": false,
+        "codes": "sword3Needed"
+      },
+      {
+        "img": "images/options/Blue Sword.png",
+        "inherit_codes": false,
+        "codes": "sword4Needed"
+      },
+      {
+        "img": "images/options/Four Sword.png",
+        "inherit_codes": false,
+        "codes": "sword5Needed"
+      }
+    ]
+  },
+  {
+    "name":"Rupeemania",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/RupeeON.png",
+        "codes":"rupees_on",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/RupeeOFF.png",
+        "codes":"rupees_off",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Element Shuffle",
+    "type":"progressive",
+    "loop":true,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/Element ShufleOFF.png",
+        "codes":"element_shuffle_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/Element ShufleON.png",
+        "codes":"element_shuffle_on",
+        "inherit_codes":true
+      }
+    ],
+  },
+  {
+    "name":"Bingo",
+    "type":"progressive",
+    "loop":false,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/bingo_on.png",
+        "codes":"bingo_off",
+        "inherit_codes":false,
+		"img_mods":"grayscale"
+      },
+      {
+        "img":"images/options/bingo_on.png",
+        "codes":"bingo_on",
+        "inherit_codes":true
+      }
+    ],
+  },
+  {
+   "name": "Figurine",
+   "type": "consumable",
+   "img": "images/options/figurine.png",
+   "codes": "figurine_option",
+   "min_quantity":0,
+   "max_quantity":136,
+   "increment":10
+ }
+]
