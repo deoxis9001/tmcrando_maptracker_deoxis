@@ -741,8 +741,8 @@
         "inherit_codes":false
       },
       {
-        "img":"images/items/dungeons/dhc_dhc.png",
-        "codes":"dhc_dhc",
+        "img":"images/items/dungeons/dhc_pow.png",
+        "codes":"dhc_pow",
         "inherit_codes":false
       },
       {
