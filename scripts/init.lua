@@ -40,7 +40,7 @@ AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUZER_TRACKING = true
 VERSION_ALPHA = false
 VERSION_BETA = false
-VERSION_RANDO = "0.7.0arev3"
+VERSION_RANDO = "1.0.0"
 ------------------------------------------------------------------
 -- Configuration Debug options
 ------------------------------------------------------------------

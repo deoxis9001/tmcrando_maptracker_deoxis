@@ -1,3 +1,185 @@
+local vanilla_captures = {
+    ["@DeepWoods/Prize"] = "",
+    ["@Cave Of Flame/Prize"] = "",
+    ["@Royal Crypt/Prize"] = "",
+    ["@Fortress/Prize"] = "",
+    ["@Palace/Prize"] = "",
+    ["@Droplet/Prize"] = "",
+    ["@Dark Hyrule Castle Entrance/Prize"] = "allelement",
+    ["@Cave Of Flame Entrance/Prize"] = "allelement",
+    ["@Crypt Entrance/Prize"] = "allelement",
+    ["@DeepWoods Entrance/Prize"] = "allelement",
+    ["@Fortress Entrance/Prize"] = "allelement",
+    ["@Palace Entrance/Prize"] = "allelement",
+    ["@Droplet Entrance/Prize"] = "allelement" 
+}
+function update_vanilla_captures()
+      for location, item in pairs(vanilla_captures) do
+        local location_object = Tracker:FindObjectForCode(location)
+        local item_object = Tracker:FindObjectForCode(item)
+        if location_object then
+          if item_object then
+            location_object.CapturedItem = item_object
+          else
+            location_object.CapturedItem = nil
+          end
+        end
+      end
+end
+local link_captures = {
+  ["dws_dws"] = {
+    ["@DeepWoods/Prize"] = "@DeepWoods Entrance/Prize"
+  },
+  ["dws_cof"] = {
+    ["@DeepWoods/Prize"] = "@Cave Of Flame Entrance/Prize"
+  },
+  ["dws_fow"] = {
+    ["@DeepWoods/Prize"] = "@Fortress Entrance/Prize"
+  },
+  ["dws_tod"] = {
+    ["@DeepWoods/Prize"] = "@Droplet Entrance/Prize"
+  },
+  ["dws_crypt"] = {
+    ["@DeepWoods/Prize"] = "@Crypt Entrance/Prize"
+  },
+  ["dws_pow"] = {
+    ["@DeepWoods/Prize"] = "@Palace Entrance/Prize"
+  },
+  ["dws_dhc"] = {
+    ["@DeepWoods/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+  },
+  ["cof_dws"] = {
+    ["@Cave Of Flame/Prize"] = "@DeepWoods Entrance/Prize"
+  },
+  ["cof_cof"] = {
+    ["@Cave Of Flame/Prize"] = "@Cave Of Flame Entrance/Prize"
+  },
+  ["cof_fow"] = {
+    ["@Cave Of Flame/Prize"] = "@Fortress Entrance/Prize"
+  },
+  ["cof_tod"] = {
+    ["@Cave Of Flame/Prize"] = "@Droplet Entrance/Prize"
+  },
+  ["cof_crypt"] = {
+    ["@Cave Of Flame/Prize"] = "@Crypt Entrance/Prize"
+  },
+  ["cof_pow"] = {
+    ["@Cave Of Flame/Prize"] = "@Palace Entrance/Prize"
+  },
+  ["cof_dhc"] = {
+    ["@Cave Of Flame/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+  },
+  ["fow_dws"] = {
+    ["@Fortress/Prize"] = "@DeepWoods Entrance/Prize"
+  },
+  ["fow_cof"] = {
+    ["@Fortress/Prize"] = "@Cave Of Flame Entrance/Prize"
+  },
+  ["fow_fow"] = {
+    ["@Fortress/Prize"] = "@Fortress Entrance/Prize"
+  },
+  ["fow_tod"] = {
+    ["@Fortress/Prize"] = "@Droplet Entrance/Prize"
+  },
+  ["fow_crypt"] = {
+    ["@Fortress/Prize"] = "@Crypt Entrance/Prize"
+  },
+  ["fow_pow"] = {
+    ["@Fortress/Prize"] = "@Palace Entrance/Prize"
+  },
+  ["fow_dhc"] = {
+    ["@Fortress/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+  },
+  ["tod_dws"] = {
+    ["@Droplet/Prize"] = "@DeepWoods Entrance/Prize"
+  },
+  ["tod_cof"] = {
+    ["@Droplet/Prize"] = "@Cave Of Flame Entrance/Prize"
+  },
+  ["tod_fow"] = {
+    ["@Droplet/Prize"] = "@Fortress Entrance/Prize"
+  },
+  ["tod_tod"] = {
+    ["@Droplet/Prize"] = "@Droplet Entrance/Prize"
+  },
+  ["tod_crypt"] = {
+    ["@Droplet/Prize"] = "@Crypt Entrance/Prize"
+  },
+  ["tod_pow"] = {
+    ["@Droplet/Prize"] = "@Palace Entrance/Prize"
+  },
+  ["tod_dhc"] = {
+    ["@Droplet/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+  },
+  ["crypt_dws"] = {
+    ["@Royal Crypt/Prize"] = "@DeepWoods Entrance/Prize"
+  },
+  ["crypt_cof"] = {
+    ["@Royal Crypt/Prize"] = "@Cave Of Flame Entrance/Prize"
+  },
+  ["crypt_fow"] = {
+    ["@Royal Crypt/Prize"] = "@Fortress Entrance/Prize"
+  },
+  ["crypt_tod"] = {
+    ["@Royal Crypt/Prize"] = "@Droplet Entrance/Prize"
+  },
+  ["crypt_crypt"] = {
+    ["@Royal Crypt/Prize"] = "@Crypt Entrance/Prize"
+  },
+  ["crypt_pow"] = {
+    ["@Royal Crypt/Prize"] = "@Palace Entrance/Prize"
+  },
+  ["crypt_dhc"] = {
+    ["@Royal Crypt/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+  },
+  ["pow_dws"] = {
+    ["@Palace/Prize"] = "@DeepWoods Entrance/Prize"
+  },
+  ["pow_cof"] = {
+    ["@Palace/Prize"] = "@Cave Of Flame Entrance/Prize"
+  },
+  ["pow_fow"] = {
+    ["@Palace/Prize"] = "@Fortress Entrance/Prize"
+  },
+  ["pow_tod"] = {
+    ["@Palace/Prize"] = "@Droplet Entrance/Prize"
+  },
+  ["pow_crypt"] = {
+    ["@Palace/Prize"] = "@Crypt Entrance/Prize"
+  },
+  ["pow_pow"] = {
+    ["@Palace/Prize"] = "@Palace Entrance/Prize"
+  },
+  ["pow_dhc"] = {
+    ["@Palace/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+  }
+}
+link_captures_cache={}
+local link_captures_cached = {}
+function update_link_captures()
+  for setting, captures in pairs(link_captures) do	
+    local has_setting = has(setting)
+      for location, item in pairs(captures) do
+        local location_object = Tracker:FindObjectForCode(location)
+        local item_object = Tracker:FindObjectForCode(item)
+		if link_captures_cache[setting]~=has_setting then
+		  link_captures_cache[setting]=has_setting
+		  if has_setting then
+            if location_object then
+              if item_object then
+                location_object.CapturedItem = item_object.CapturedItem
+              elseif item_object.CapturedItem~=nil then
+                print("Item Inconnu",item)
+                location_object.CapturedItem = nil
+              end
+            else
+              print("location Inconnu",location)
+            end
+          end
+        end		  
+      end
+  end
+end
 
 function Preset()
 	local data_preset = Tracker:FindObjectForCode("preset_01")
@@ -114,8 +296,7 @@ CaptureBadgeSections = {
     "@Droplet Entrance/Prize"
 }
 CaptureBadgeCache = {}
-
-function tracker_on_accessibility_updated()
+function captureBadge()
     if Cache_reset then
 	local info_target={}
         for _, section in pairs(CaptureBadgeSections) do
@@ -145,6 +326,10 @@ function tracker_on_accessibility_updated()
         end
     end
 end
+function tracker_on_accessibility_updated()
+update_link_captures()
+captureBadge()
+end
 
 
 
@@ -161,6 +346,12 @@ function tracker_on_finish_loading_save_file()
 	print("")
 end
 function tracker_on_pack_ready()
+	if no_preset==nil then
+		no_preset=false
+	end
+	if not no_preset then
+		update_vanilla_captures()
+	end
 	print("")
 	print("--	Tracker Information	--")
 	print("")
@@ -183,6 +374,7 @@ function tracker_on_pack_ready()
 	no_preset=false
 	Preset()
 	UpdateFusion()
+	captureBadge()
 	print("	Enable Cache :		",Cache_reset)
 	if TMC_CACHE_DEBUG_FUNCTION or TMC_CACHE_DEBUG_ITEM then
 		print("")
