@@ -275,7 +275,8 @@
     "item_margin": "0,0,2,10",
     "rows": [
      ["earth","fire"],
-     ["water","wind"]		     
+     ["water","wind"],
+	 ["allelement"]	 
     ]    
    }
   },

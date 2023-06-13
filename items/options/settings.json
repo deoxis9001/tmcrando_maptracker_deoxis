@@ -1683,7 +1683,7 @@
     "name":"Preset",
     "type": "progressive",
     "loop": true,
-	"initial_stage_idx":0,
+	"initial_stage_idx":5,
     "allow_disabled": false,
     "stages": [
       {

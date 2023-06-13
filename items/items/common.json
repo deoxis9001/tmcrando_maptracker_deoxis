@@ -500,6 +500,13 @@
    "img": "images/items/Wind Element.png",
    "codes": "wind"
  },
+ // All Element
+ {
+   "name": "All Element",
+   "type": "toggle",
+   "img": "images/items/elements.png",
+   "codes": "allelement"
+ },
  // Red Three
  {
    "name": "Red Kinstone 3",
