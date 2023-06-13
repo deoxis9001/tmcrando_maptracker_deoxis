@@ -142,6 +142,17 @@ function Json_Dungeon_Droplet_IcePuzzleFrozenChest()
 	end 
 end
 
+function Json_Dungeon_Droplet_PostIcePuzzleFrozenChest()
+	if function_Cached("Droplets_LeftPath_B2_LilypadCorner_FrozenChest")==1 then
+		return 1
+	elseif function_Cached("Droplets_LeftPath_B2_LilypadCorner_FrozenChest")==2 then
+		return 1, AccessibilityLevel.SequenceBreak
+	elseif function_Cached("Droplets_LeftPath_B2_LilypadCorner_FrozenChest")==3 then
+		return 1, AccessibilityLevel.Inspect
+	else
+		return 0
+	end 
+end
 
 function Json_Dungeon_Droplet_RightPathIceWalkwayChests()
 	if function_Cached("Droplets_RightPath_B1_1stChest")==1 then
