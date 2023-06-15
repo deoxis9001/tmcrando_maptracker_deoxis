@@ -1256,12 +1256,13 @@ function FoWHP()
 	end
 end
 
-
 function ToDRightRupees()
 	if ( function_Cached("ToD2ndRupeePath")==1 ) then
 		return 1
 	elseif ( has("grabbable_hard") and has("gust") and function_Cached("ToDLilypadEnd")==1 ) then
 		return 1
+	elseif ( function_Cached("ToD2ndRupeePath")==2 ) then
+		return 2
 	elseif ( has("grabbable_hard") and has("gust") and function_Cached("ToDLilypadEnd")==2 ) then
 		return 2
 	else
