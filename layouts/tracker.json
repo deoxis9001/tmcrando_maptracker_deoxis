@@ -503,7 +503,7 @@
           "content": [
             {
               "type": "group",
-              "header": "Inventaire",
+              "header": "Inventory",
 							"header_content":{
 							  "type": "button_popup",
 							  "style": "settings",
