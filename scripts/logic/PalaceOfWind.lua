@@ -34,10 +34,10 @@ function PoW1stDoor()
 		return 0
 	end 
 end
-function PoW2ndHalf1stDoor() 
-	if ( Tracker:ProviderCountForCode("pow_smallkey") >= 4 and function_Cached("PoWNoWarps")==1 ) then
+function PoW2ndHalf1stDoor()
+	if ( Tracker:ProviderCountForCode("pow_smallkey") >= 4 and ( function_Cached("PoWNoWarps")==1 or function_Cached("PoWBlueWarp")==1 ) ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("pow_smallkey") >= 6 and function_Cached("PoWRedWarp")==1 ) then
+	elseif ( Tracker:ProviderCountForCode("pow_smallkey") >= 6 ) then
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
