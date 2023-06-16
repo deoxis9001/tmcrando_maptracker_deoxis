@@ -191,7 +191,12 @@ function Preset()
 	if setting_preset_data_cache~=( data_preset.CurrentStage + 1 ) then
 		setting_preset_data_cache = data_preset.CurrentStage + 1
 		if setting_preset_data_cache ~= 0 then
-			print(setting_preset_data_title[setting_preset_data_cache])
+			if setting_preset_version_custom==1 or setting_preset_data_title[setting_preset_data_cache]~="Custom" then
+				print(setting_preset_data_title[setting_preset_data_cache])
+			else
+				print("Please update your override of custom.lua")
+				return 0
+			end
 			for i, v in pairs(setting_preset_data[setting_preset_data_title[setting_preset_data_cache]]) do
 				local item = Tracker:FindObjectForCode(i)
 				if  setting_preset_data_other[i]==nil then
