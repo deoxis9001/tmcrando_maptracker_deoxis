@@ -1737,6 +1737,10 @@
       {
         "img":"images/options/world_settings/settings/preset_13.png",
         "codes": "preset_13"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_custom.png",
+        "codes": "preset_custom"
       }
     ]
   },

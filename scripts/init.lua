@@ -4,6 +4,7 @@
 ScriptItemSpec="scripts/item_spec/"
 ScriptSettings="scripts/settings/"
 ScriptLogic="scripts/logic/"
+ScriptPreset="scripts/preset/"
 ScriptMain="scripts/main/"
 ScriptAutotracking="scripts/autotracking/"
 
@@ -25,9 +26,9 @@ setting_preset_data_other["fusiongreencombined"]=3
 setting_preset_data_other["fusionbluecombined"]=4
 setting_preset_data_other["progressiveitems"]=5
 setting_preset_data_other["figurine_option"]=6
-setting_preset_data_title={"Beginner","Intermediate","Advanced","Expert","Max Random","Weekly2023","Tournament 4 Settings","No Logic Open World","Firerod","Funky Fusions","v0.1.0 Settings","Figurine Hunt","Regional Dungeon Items"}
--- has_item_option_dev["out_logic_no"]=true
--- has_item_option_dev["out_logic_yes"]=true
+setting_preset_data_title={}
+setting_preset_data={}
+setting_preset_data_cache=-1
 --Activate the cache reset
 Cache_reset=false
 function_count = 0
@@ -56,7 +57,7 @@ TMC_CACHE_DEBUG_ITEM = false
 ------------------------------------------------------------------
 -- Logic Pack
 ------------------------------------------------------------------
-ScriptHost:LoadScript("scripts/SettingsPreset.lua")
+ScriptHost:LoadScript(ScriptPreset.."init.lua")
 ScriptHost:LoadScript(ScriptLogic.."Function.lua")
 ScriptHost:LoadScript(ScriptLogic.."Access.lua")
 ScriptHost:LoadScript(ScriptLogic.."Fusion.lua")
