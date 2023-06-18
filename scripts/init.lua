@@ -4,6 +4,7 @@
 ScriptItemSpec="scripts/item_spec/"
 ScriptSettings="scripts/settings/"
 ScriptLogic="scripts/logic/"
+ScriptPreset="scripts/preset/"
 ScriptMain="scripts/main/"
 ScriptAutotracking="scripts/autotracking/"
 
@@ -15,6 +16,7 @@ ScriptLocations="scripts/locations/"
 JsLocations="locations/"
 
 has_item_data={}
+has_item_data_dev={}
 function_data = {}
 has_item_option_dev={}
 function_data_fusion={}
@@ -25,9 +27,39 @@ setting_preset_data_other["fusiongreencombined"]=3
 setting_preset_data_other["fusionbluecombined"]=4
 setting_preset_data_other["progressiveitems"]=5
 setting_preset_data_other["figurine_option"]=6
-setting_preset_data_title={"Beginner","Intermediate","Advanced","Expert","Max Random","Weekly2023","Tournament 4 Settings","No Logic Open World","Firerod","Funky Fusions","v0.1.0 Settings","Figurine Hunt","Regional Dungeon Items"}
--- has_item_option_dev["out_logic_no"]=true
--- has_item_option_dev["out_logic_yes"]=true
+setting_preset_data_title={}
+setting_preset_data={}
+setting_preset_data_cache=-1
+has_item_data_dev['small_key_out_on']=true
+has_item_data_dev['beam_out_on']=true
+has_item_data_dev['damage_source_out_on']=true
+has_item_data_dev['fusiongold_out_on']=true
+has_item_data_dev['fusionred_out_on']=true
+has_item_data_dev['fusionblue_out_on']=true
+has_item_data_dev['fusiongreen_out_on']=true
+
+has_item_data_dev['grabbable_out_on']=true
+has_item_data_dev['blowdust_out_on']=true
+has_item_data_dev['crenelmushroom_out_on']=true
+has_item_data_dev['lightarrowbreak_out_on']=true
+has_item_data_dev['bobombs_out_on']=true
+has_item_data_dev['likelike_out_on']=true
+has_item_data_dev['guardskip_out_on']=true
+has_item_data_dev['crenelbeam_out_on']=true
+has_item_data_dev['downstrikebeetle_out_on']=true
+has_item_data_dev['darkrooms_out_on']=true
+
+has_item_data_dev['capeextension_out_on']=true
+has_item_data_dev['lakeminish_out_on']=true
+has_item_data_dev['cabinswim_out_on']=true
+has_item_data_dev['cloudskill_out_on']=true
+has_item_data_dev['powjump_out_on']=true
+has_item_data_dev['powpotpuzzleool_out_on']=true
+has_item_data_dev['dhccanonhit_out_on']=true
+has_item_data_dev['dhcbladepuzzleshuffle_out_on']=true
+has_item_data_dev['dhcswitchhit_out_on']=true
+has_item_data_dev['fowpot_out_on']=true
+
 --Activate the cache reset
 Cache_reset=false
 function_count = 0
@@ -56,7 +88,7 @@ TMC_CACHE_DEBUG_ITEM = false
 ------------------------------------------------------------------
 -- Logic Pack
 ------------------------------------------------------------------
-ScriptHost:LoadScript("scripts/SettingsPreset.lua")
+ScriptHost:LoadScript(ScriptPreset.."init.lua")
 ScriptHost:LoadScript(ScriptLogic.."Function.lua")
 ScriptHost:LoadScript(ScriptLogic.."Access.lua")
 ScriptHost:LoadScript(ScriptLogic.."Fusion.lua")
@@ -129,7 +161,15 @@ Tracker:AddItems(JsItems.."items/fusion.json")
 
 Tracker:AddItems(JsItems.."dungeons/items.json")
 Tracker:AddItems(JsItems.."dungeons/keys.json")
-Tracker:AddItems(JsItems.."options/settings.json")
+Tracker:AddItems(JsItems.."options/dhc_requirements.json")
+Tracker:AddItems(JsItems.."options/fusions_settings.json")
+Tracker:AddItems(JsItems.."options/locations_settings.json")
+Tracker:AddItems(JsItems.."options/logic_settings.json")
+Tracker:AddItems(JsItems.."options/shuffle_donjon.json")
+Tracker:AddItems(JsItems.."options/weapons_settings.json")
+Tracker:AddItems(JsItems.."options/world_settings/settings.json")
+Tracker:AddItems(JsItems.."options/world_settings/warps_settings.json")
+Tracker:AddItems(JsItems.."options/world_settings/wind_crest_settings.json")
 
 Preset()
 ------------------------------------------------------------------

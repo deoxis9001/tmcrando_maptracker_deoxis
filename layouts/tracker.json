@@ -115,6 +115,60 @@
 		 ]
    }
   },
+  "out_logic_settings": {
+   "type": "group",
+   "header": "Logic Settings Part 1",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["grabbable_out_off","blowdust_out_off"],
+					 ["crenelmushroom_out_off","lightarrowbreak_out_off"],
+					 ["bobombs_out_off","likelike_out_off"],
+					 ["guardskip_out_off","crenelbeam_out_off"],
+					 ["downstrikebeetle_out_off","darkrooms_out_off"],
+				 ]
+			 }
+		 ]
+   }
+  },
+  "out_logic_settings2": {
+   "type": "group",
+   "header": "Logic Settings Part 2",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["capeextension_out_off","lakeminish_out_off"],
+					 ["cabinswim_out_off","cloudskill_out_off"],
+					 ["powjump_out_off","powpotpuzzleool_out_off"],
+					 ["dhccanonhit_out_off","dhcbladepuzzleshuffle_out_off"],
+					 ["dhcswitchhit_out_off","fowpot_out_off"]
+				 ]
+			 }
+		 ]
+   }
+  },
   "logic_settings": {
    "type": "group",
    "header": "Logic Settings Part 1",
@@ -247,6 +301,33 @@
 		 ]
    }
   },
+  "out_logic_settings3": {
+   "type": "group",
+   "header": "Others Settings",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["small_key_out_off","fusiongold_out_off"],
+					 ["beam_out_off","fusionred_out_off"],
+					 ["damage_source_out_off","fusionblue_out_off"],
+					 ["","fusiongreen_out_off"],
+					 ["",""]
+				]
+			 }
+		 ]
+   }
+  },
   "tracker_capture_item": {
    "type": "container",
    "content": {
@@ -298,6 +379,42 @@
     ]
    }
   },
+	"outoflogic": {
+		"type": "dock",
+		"content":[
+		 {
+			"type":"tabbed",
+			"dock":"top",
+			"style":"wrap",
+			"tabs":[
+			 {
+				"title":"Logic Settings part1",
+				"icon":"images/icon-maps/Treasure Icon.png",
+				"content":{
+				 "type":"layout",
+				 "key": "out_logic_settings"
+				}
+			 },
+			 {
+				"title":"Logic Settings part2",
+				"icon":"images/icon-maps/Treasure Icon.png",
+				"content":{
+				 "type":"layout",
+				 "key": "out_logic_settings2"
+				}
+			 },
+			 {
+				"title":"Other Settings",
+				"icon":"images/icon-maps/Cave Entrance Icon.png",
+				"content":{
+				 "type":"layout",
+				 "key": "out_logic_settings3"
+				}
+			 }
+			]
+		 }
+		]
+	},
 	"settings_tab_open_world": {
 		"type": "dock",
 		"content":[
@@ -330,6 +447,14 @@
 				 "key": "open_world_settings"
 				}
 			 },
+//			 {
+//				"title":"Out of logic Settings",
+//				"icon":"images/icon-maps/Kinstone Bag (Giant).png",
+//				"content":{
+//				 "type":"layout",
+//				 "key": "outoflogic"
+//				}
+//			 }
 			]
 		 }
 		]
@@ -417,7 +542,7 @@
 				 "type":"layout",
 				 "key": "fusion_settings"
 				}
-			 }
+			 },
 			]
 		 }
 		]

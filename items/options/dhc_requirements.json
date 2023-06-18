@@ -1,0 +1,173 @@
+[
+  {
+    "name":"Dark Hyrule Castle is the last dungeon in the game, it has the final boss Vaati.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "inherit_codes":false,
+    "stages":[
+      {
+        "img":"images/options/dhc_requirements/dhc_closed.png",
+        "codes":"dhc_closed",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_requirements/dhc_fast.png",
+        "codes":"dhc_ped",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_requirements/dhc_open.png",
+        "codes":"dhc_open",
+        "inherit_codes":false
+      },
+    ]
+  },
+ {
+    "name":"The number of dungeons that have to be beaten to activate the Sanctuary. There are 6 dungeons in the game that count:\n Deepwood Shrine\n Cave of Flames\n Fortress of Winds\n Temple of Droplets\n Royal Crypt\n Palace of Winds",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img":"images/options/dhc_requirements/dungeons0.png",
+        "codes": "dungeons,dungeons0",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/dhc_requirements/dungeons1.png",
+        "codes": "dungeons1",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/dhc_requirements/dungeons2.png",
+        "codes": "dungeons2",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/dhc_requirements/dungeons3.png",
+        "codes": "dungeons3",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/dhc_requirements/dungeons4.png",
+        "codes": "dungeons4",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/dhc_requirements/dungeons5.png",
+        "codes": "dungeons5",
+        "inherit_codes":false
+      },
+      {
+        "img": "images/options/dhc_requirements/dungeons6.png",
+        "codes": "dungeons6",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"The level of sword that needs to be collected to activate the Sanctuary",
+    "type":"progressive",
+    "loop": true,
+	"initial_stage_idx":5,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img": "images/options/dhc_requirements/sword0.png",
+        "inherit_codes": false,
+        "codes": "sword0Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword1.png",
+        "inherit_codes": false,
+        "codes": "sword1Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword2.png",
+        "inherit_codes": false,
+        "codes": "sword2Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword3.png",
+        "inherit_codes": false,
+        "codes": "sword3Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword4.png",
+        "inherit_codes": false,
+        "codes": "sword4Needed"
+      },
+      {
+        "img": "images/options/dhc_requirements/sword5.png",
+        "inherit_codes": false,
+        "codes": "sword5Needed"
+      },
+    ]
+  },
+  {
+    "name":"The number of Elements that need to be collected to activate the Sanctuary",
+    "type":"progressive",
+    "loop": true,
+	"initial_stage_idx":4,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/dhc_requirements/element0.png",
+        "inherit_codes":false,
+        "codes":"element0Needed"
+      },
+      {
+        "img":"images/options/dhc_requirements/element1.png",
+        "inherit_codes":false,
+        "codes":"element1Needed"
+      },
+      {
+        "img":"images/options/dhc_requirements/element2.png",
+        "inherit_codes":false,
+        "codes":"element2Needed"
+      },
+      {
+        "img":"images/options/dhc_requirements/element3.png",
+        "inherit_codes":false,
+        "codes":"element3Needed"
+      },
+      {
+        "img":"images/options/dhc_requirements/element4.png",
+        "inherit_codes":false,
+        "codes":"element4Needed"
+      },
+    ]
+  },
+  {
+   "name":"The total number of Figurines that get added to the item pool, the maximum amount is 136.",
+   "type": "consumable",
+   "img": "images/options/dhc_requirements/figurine.png",
+   "codes": "figurine_option",
+   "min_quantity":0,
+   "initial_quantity": 0,
+   "max_quantity":136,
+ },
+  {
+    "name":"This setting is force disabled when playing on any DHC setting other than 'Always Open'.\n If enabled will shuffle 3 items onto the pedestal found in the Sanctuary, these can be collected when the pedestal is visited with 2 elements, 3 elements and 4 elements respectively.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/dhc_requirements/ped_items_off.png",
+        "codes":"ped_items_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/dhc_requirements/ped_items_on.png",
+        "codes":"ped_items_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+
+]

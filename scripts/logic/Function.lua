@@ -191,7 +191,12 @@ function Preset()
 	if setting_preset_data_cache~=( data_preset.CurrentStage + 1 ) then
 		setting_preset_data_cache = data_preset.CurrentStage + 1
 		if setting_preset_data_cache ~= 0 then
-			print(setting_preset_data_title[setting_preset_data_cache])
+			if setting_preset_version_custom==1 or setting_preset_data_title[setting_preset_data_cache]~="Custom" then
+				print(setting_preset_data_title[setting_preset_data_cache])
+			else
+				print("Please update your override of custom.lua")
+				return 0
+			end
 			for i, v in pairs(setting_preset_data[setting_preset_data_title[setting_preset_data_cache]]) do
 				local item = Tracker:FindObjectForCode(i)
 				if  setting_preset_data_other[i]==nil then
@@ -419,12 +424,18 @@ function function_Cached(name)
 end
 
 function has(item, amount)
-    if not has_item_data[item] then
+    if has_item_data[item]==nil then
         has_item_data[item] = Tracker:ProviderCountForCode(item) >= tonumber(amount or 1)
         if TMC_CACHE_DEBUG_ITEM then
             print("Cache Items: ", item, has_item_data[item])
         end
     end
+	if has_item_data_dev[item] then
+        if TMC_CACHE_DEBUG_ITEM then
+			print("Cache dev Items: ", item, has_item_data_dev[item])
+		end
+		has_item_data[item]=has_item_data_dev[item]
+	end
     return has_item_data[item]
 end
 
