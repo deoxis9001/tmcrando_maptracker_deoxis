@@ -424,12 +424,18 @@ function function_Cached(name)
 end
 
 function has(item, amount)
-    if not has_item_data[item] then
+    if has_item_data[item]==nil then
         has_item_data[item] = Tracker:ProviderCountForCode(item) >= tonumber(amount or 1)
         if TMC_CACHE_DEBUG_ITEM then
             print("Cache Items: ", item, has_item_data[item])
         end
     end
+	if has_item_data_dev[item] then
+        if TMC_CACHE_DEBUG_ITEM then
+			print("Cache dev Items: ", item, has_item_data_dev[item])
+		end
+		has_item_data[item]=has_item_data_dev[item]
+	end
     return has_item_data[item]
 end
 

@@ -3,7 +3,7 @@ function PoWFans()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("pow_smallkey") >= 3 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("pow_smallkey") >= 3 ) then
 		return 2
 	else
 		return 0
@@ -14,7 +14,7 @@ function PoWBigChest()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("pow_smallkey") >= 4 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("pow_smallkey") >= 4 ) then
 		return 2
 	else
 		return 0
@@ -28,7 +28,7 @@ function PoW1stDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("pow_smallkey") >= 1 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("pow_smallkey") >= 1 ) then
 		return 2
 	else
 		return 0
@@ -41,7 +41,7 @@ function PoW2ndHalf1stDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("pow_smallkey") >= 4 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("pow_smallkey") >= 4 ) then
 		return 2
 	else
 		return 0
@@ -52,7 +52,7 @@ function PoWRedWarpDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("pow_smallkey") >= 3 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("pow_smallkey") >= 3 ) then
 		return 2
 	else
 		return 0
@@ -63,7 +63,7 @@ function PoWLastDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("pow_smallkey") >= 4 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("pow_smallkey") >= 4 ) then
 		return 2
 	else
 		return 0

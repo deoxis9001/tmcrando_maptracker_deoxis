@@ -14,7 +14,7 @@ function Deepwood2ndDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("dws_smallkey") >= 2 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("dws_smallkey") >= 2 ) then
 		return 2
 	else
 		return 0
@@ -25,7 +25,7 @@ function DeepwoodMadderpillarDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("dws_smallkey") >= 3 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("dws_smallkey") >= 3 ) then
 		return 2
 	else
 		return 0
@@ -36,7 +36,7 @@ function DeepwoodBasementDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out") and Tracker:ProviderCountForCode("dws_smallkey") >= 2 ) then
+	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("dws_smallkey") >= 2 ) then
 		return 2
 	else
 		return 0

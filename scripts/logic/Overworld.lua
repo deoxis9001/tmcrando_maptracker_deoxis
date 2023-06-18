@@ -957,6 +957,8 @@ function PoWSwitch()
 		return 1
 	elseif ( has("bombs") or function_Cached("HasBow")==1 or function_Cached("HasBeam")==1 or function_Cached("HasBoomerang")==1 ) then
 		return 1
+	elseif ( function_Cached("HasBeam")==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1019,6 +1021,8 @@ function DHCOutsideSwitch()
 		return 1
 	elseif ( function_Cached("HasBow")==1 or function_Cached("HasMagicBoomerang")==1 or function_Cached("HasBeam")==1 ) then
 		return 1
+	elseif ( function_Cached("HasBeam")==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1050,6 +1054,8 @@ function DHCGrateRoom()
 		return 1
 	elseif ( has("cape") and ( function_Cached("HasBow")==1 or function_Cached("HasBoomerang")==1 or function_Cached("HasBeam")==1 ) ) then
 		return 1
+	elseif ( has("cape") and ( function_Cached("HasBeam")==2 ) ) then
+		return 2
 	else
 		return 0
 	end 
