@@ -173,7 +173,6 @@ setting_preset_data["Custom"] = {}
 			-- 0 = Removed
 			-- 1 = Vanilla
 			-- 2 = Shuffle
-			-- 3 = Shuffle + Out of Logic
 		setting_preset_data["Custom"]["big_key_none"] = 0
 			-- 0 = Removed
 			-- 1 = Vanilla

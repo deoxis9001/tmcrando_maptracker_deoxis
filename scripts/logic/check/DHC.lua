@@ -124,7 +124,7 @@ function DHC_3F_NorthWest_Chest()
 end
 
 
-function DHC_3F_NorthEast_Chest() 
+function DHC_3F_NorthEast_Chest()
 	if ( function_Cached("AccessDHC")==1 and function_Cached("DHCBlackKnight")==1 and function_Cached("DHCTowerDarknuts")==1 and function_Cached("DHCLampPuzzle")==1 and function_Cached("DHCGhini")==1 ) then
 		return 1
 	elseif ( ( function_Cached("AccessDHC")==1 or function_Cached("AccessDHC")==2 ) and ( function_Cached("DHCBlackKnight")==1 or function_Cached("DHCBlackKnight")==2 ) and ( function_Cached("DHCTowerDarknuts")==1 or function_Cached("DHCTowerDarknuts")==2 ) and function_Cached("DHCLampPuzzle")==1 and ( function_Cached("DHCGhini")==1 or function_Cached("DHCGhini")==2 ) ) then

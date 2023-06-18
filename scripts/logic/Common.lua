@@ -819,9 +819,10 @@ function HasShield()
 end
 
 function HasBeam()
-
 	if ( function_Cached("HasSword")==1 and ( ( has("swordbeam") and function_Cached("HasBottle")==1 ) or has("perilbeam") ) ) then
 		return 1
+	elseif ( has("beam_out_on") and function_Cached("HasSword")==1 and has("swordbeam")  ) then
+		return 2
 	else
 		return 0
 	end
@@ -844,9 +845,9 @@ function HasDamageSource()
 		return 1
 	elseif ( has("weaponsbow_yes") and function_Cached("HasBow")==1 ) then
 		return 1
-	elseif ( has("bombs") ) then
+	elseif ( has("damage_source_out_on") and has("bombs") ) then
 		return 2
-	elseif ( function_Cached("HasBow")==1 ) then
+	elseif ( has("damage_source_out_on") and function_Cached("HasBow")==1 ) then
 		return 2
 	else
 		return 0
@@ -859,7 +860,7 @@ function HasMadderDamage()
 		return 1
 	elseif ( has("weaponsbombs_boss") and has("bombs") ) then
 		return 1
-	elseif ( has("bombs") ) then
+	elseif ( has("damage_source_out_on") and has("bombs") ) then
 		return 2
 	else
 		return 0
@@ -872,7 +873,7 @@ function HasChuDamage()
 		return 1
 	elseif ( has("weaponsbombs_boss") and has("bombs") ) then
 		return 1
-	elseif ( has("bombs") ) then
+	elseif ( has("damage_source_out_on") and has("bombs") ) then
 		return 2
 	else
 		return 0
@@ -889,11 +890,11 @@ function HasHelmasaurDamage()
 		return 1
 	elseif ( has("weaponsbow_yes") and function_Cached("HasBow")==1 ) then
 		return 1
-	elseif ( has("bombs") ) then
+	elseif ( has("damage_source_out_on") and has("bombs") ) then
 		return 2
-	elseif ( has("gust") ) then
+	elseif ( has("damage_source_out_on") and has("gust") ) then
 		return 2
-	elseif ( function_Cached("HasBow")==1 ) then
+	elseif ( has("damage_source_out_on") and function_Cached("HasBow")==1 ) then
 		return 2
 	else
 		return 0
@@ -908,9 +909,9 @@ function HasGleerokDamage()
 		return 1
 	elseif ( has("weaponsbombs_boss") and has("bombs30") ) then
 		return 1
-	elseif ( function_Cached("HasBow")==1 ) then
+	elseif ( has("damage_source_out_on") and function_Cached("HasBow")==1 ) then
 		return 2
-	elseif ( has("bombs30") ) then
+	elseif ( has("damage_source_out_on") and has("bombs30") ) then
 		return 2
 	else
 		return 0
@@ -927,11 +928,11 @@ function HasWizrobeDamage()
 		return 1
 	elseif ( has("weaponslamp_yes") and has("lamp") ) then
 		return 1
-	elseif ( function_Cached("HasBow")==1 ) then
+	elseif ( has("damage_source_out_on") and function_Cached("HasBow")==1 ) then
 		return 2
-	elseif ( has("bombs") ) then
+	elseif ( has("damage_source_out_on") and has("bombs") ) then
 		return 2
-	elseif ( has("lamp") ) then
+	elseif ( has("damage_source_out_on") and has("lamp") ) then
 		return 2
 	else
 		return 0
@@ -944,7 +945,7 @@ function HasDarknutDamage()
 		return 1
 	elseif ( has("weaponsbombs_boss") and has("bombs") ) then
 		return 1
-	elseif ( has("bombs") ) then
+	elseif ( has("damage_source_out_on") and has("bombs") ) then
 		return 2
 	else
 		return 0
@@ -959,9 +960,9 @@ function HasMazaalDamage()
 		return 1
 	elseif ( has("weaponsbombs_boss") and has("bombs30") ) then
 		return 1
-	elseif ( function_Cached("HasBow")==1 ) then
+	elseif ( has("damage_source_out_on") and function_Cached("HasBow")==1 ) then
 		return 2
-	elseif ( has("bombs30") ) then
+	elseif ( has("damage_source_out_on") and has("bombs30") ) then
 		return 2
 	else
 		return 0
@@ -974,7 +975,7 @@ function HasScissorDamage()
 		return 1
 	elseif ( has("weaponsbombs_boss") and has("bombs30") ) then
 		return 1
-	elseif ( has("bombs30") ) then
+	elseif ( has("damage_source_out_on") and has("bombs30") ) then
 		return 2
 	else
 		return 0
@@ -991,11 +992,11 @@ function HasGhiniDamage()
 		return 1
 	elseif ( has("weaponsbow_yes") and function_Cached("HasBow")==1 ) then
 		return 1
-	elseif ( has("bombs") ) then
+	elseif ( has("damage_source_out_on") and has("bombs") ) then
 		return 2
-	elseif ( has("gust") ) then
+	elseif ( has("damage_source_out_on") and has("gust") ) then
 		return 2
-	elseif ( function_Cached("HasBow")==1 ) then
+	elseif ( has("damage_source_out_on") and function_Cached("HasBow")==1 ) then
 		return 2
 	else
 		return 0
@@ -1329,7 +1330,7 @@ function GuardSkip()
 
 	if ( has("guardskip_on") and has("boots") ) then
 		return 1
-	elseif ( has("guardskip_off") and has("boots") ) then
+	elseif ( has("guardskip_out_on") and has("boots") ) then
 		return 2
 	else
 		return 0
@@ -1342,7 +1343,7 @@ function LikeLike()
 		return 1
 	elseif ( has("likelike_off") and function_Cached("HasSword")==1 ) then
 		return 1
-	elseif ( has("likelike_off") ) then
+	elseif ( has("likelike_out_on") ) then
 		return 2
 	else
 		return 0
@@ -1354,7 +1355,7 @@ function BlowDust()
 		return 1
 	elseif ( has("blowdust_off") and has("gust") ) then
 		return 1
-	elseif ( has("blowdust_off") and has("bombs") ) then
+	elseif ( has("blowdust_out_on") and has("bombs") ) then
 		return 2
 	else
 		return 0
@@ -1366,7 +1367,7 @@ function CrenelMushroom()
 		return 1
 	elseif ( has("crenelmushroom_off") and ( has("bombs") ) ) then
 		return 1
-	elseif ( has("crenelmushroom_off") and has("gust") ) then
+	elseif ( has("crenelmushroom_out_on") and has("gust") ) then
 		return 2
 	else
 		return 0
@@ -1376,7 +1377,7 @@ function LightArrowBreak()
 
 	if ( has("lightarrowbreak_on") and has("lights") ) then
 		return 1
-	elseif ( has("lightarrowbreak_off") and has("lights") ) then
+	elseif ( has("lightarrowbreak_out_on") and has("lights") ) then
 		return 2
 	else
 		return 0
@@ -1386,7 +1387,7 @@ function Bobombs()
 
 	if ( has("bobombs_on") and ( function_Cached("HasSword")==1 or has("gust") or has("bombs") ) ) then
 		return 1
-	elseif ( has("bobombs_off") and ( function_Cached("HasSword")==1 or has("gust") or has("bombs") ) ) then
+	elseif ( has("bobombs_out_on") and ( function_Cached("HasSword")==1 or has("gust") or has("bombs") ) ) then
 		return 2
 	else
 		return 0
@@ -1396,7 +1397,7 @@ function CrenelBeam()
 
 	if ( has("crenelbeam_on") and function_Cached("HasBeam")==1 ) then
 		return 1
-	elseif ( has("crenelbeam_off") and function_Cached("HasBeam")==1 ) then
+	elseif has("crenelbeam_out_on") and ( function_Cached("HasBeam")==1 or function_Cached("HasBeam")==2 ) then
 		return 2
 	else
 		return 0
@@ -1406,7 +1407,7 @@ function DownThrustBeetle()
 
 	if ( has("downstrikebeetle_on") and function_Cached("CanDownThrust")==1 ) then
 		return 1
-	elseif ( has("downstrikebeetle_off") and function_Cached("CanDownThrust")==1 ) then
+	elseif ( has("downstrikebeetle_out_on") and function_Cached("CanDownThrust")==1 ) then
 		return 2
 	else
 		return 0
@@ -1418,20 +1419,19 @@ function CapeExtension()
 		return 1
 	elseif ( has("capeextension_off") and has("flippers") ) then
 		return 1
-	elseif ( has("capeextension_off") and has("cape") ) then
+	elseif ( has("capeextension_out_on") and has("cape") ) then
 		return 2
 	else
 		return 0
 	end 
 end
 function DarkRooms()
-
-	if ( has("darkrooms_off") and has("lamp") ) then
+	if ( has("darkrooms_on") ) then
 		return 1
-	elseif ( has("darkrooms_off") ) then
+	elseif ( has("darkrooms_off") and has("lamp") ) then
+		return 1
+	elseif ( has("darkrooms_out_on") ) then
 		return 2
-	elseif ( has("darkrooms_on") ) then
-		return 1
 	else
 		return 0
 	end 
@@ -1440,7 +1440,7 @@ function LakeMinish()
 
 	if ( has("lakeminish_on") and function_Cached("Hylia_CrackFusion_LibrariNPC")==1 ) then
 		return 1
-	elseif ( has("lakeminish_off") and function_Cached("Hylia_CrackFusion_LibrariNPC")==1 ) then
+	elseif ( has("lakeminish_out_on") and function_Cached("Hylia_CrackFusion_LibrariNPC")==1 ) then
 		return 2
 	else
 		return 0
@@ -1452,7 +1452,7 @@ function CabinSwim()
 		return 1
 	elseif ( has("cabinswim_off") and has("gust") ) then
 		return 1
-	elseif ( has("cabinswim_off") and has("flippers") ) then
+	elseif ( has("cabinswim_out_on") and has("flippers") ) then
 		return 2
 	else
 		return 0
@@ -1460,13 +1460,13 @@ function CabinSwim()
 end
 function CloudsKill()
 
-	if ( has("cloudskill_off") and function_Cached("HasDamageSource")==1 ) then
+	if ( has("cloudskill_on") ) then
 		return 1
-	elseif ( has("cloudskill_on") ) then
+	elseif ( function_Cached("HasDamageSource")==1 ) then
 		return 1
-	elseif ( has("cloudskill_off") and function_Cached("HasDamageSource")==2 ) then
+	elseif ( has("cloudskill_out_on") and function_Cached("HasDamageSource")==2 ) then
 		return 2
-	elseif ( has("cloudskill_off") ) then
+	elseif ( has("cloudskill_out_on") ) then
 		return 2
 	else
 		return 0
@@ -1476,7 +1476,7 @@ function FoWPot()
 
 	if ( has("fowpot_on") and has("gust") ) then
 		return 1
-	elseif ( has("fowpot_off") and has("gust") ) then
+	elseif ( has("fowpot_out_on") and has("gust") ) then
 		return 2
 	else
 		return 0
@@ -1484,11 +1484,11 @@ function FoWPot()
 end
 function PoWJump()
 
-	if ( has("powjump_on") ) then
+	if ( has("powjump_on") and has("cape") ) then
 		return 1
-	elseif ( has("powjump_off") and has("cane") ) then
+	elseif ( has("cane") ) then
 		return 1
-	elseif ( has("powjump_off") and has("cape") ) then
+	elseif ( has("powjump_out_on") and has("cape") ) then
 		return 2
 	else
 		return 0
@@ -1498,9 +1498,9 @@ function PoWPotPuzzleOOL()
 
 	if ( has("powpotpuzzleool_on") and ( ( function_Cached("HasSword")==1 or function_Cached("HasBoomerang")==1 or has("bombs") or function_Cached("HasBow")==1 ) and ( ( function_Cached("DarkRooms")==1 and ( ( function_Cached("PoW2ndHalf1stDoor")==1 and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoWBlueWarp")==1 ) ) or ( function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 ) ) ) ) then
 		return 1
-	elseif ( ( ( function_Cached("HasSword")==1 or function_Cached("HasBoomerang")==1 or has("bombs") or function_Cached("HasBow")==1 ) and ( ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) or function_Cached("PoWBlueWarp")==1 ) ) or ( function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 ) ) ) ) then
+	elseif ( has("powpotpuzzleool_out_on") and ( ( function_Cached("HasSword")==1 or function_Cached("HasBoomerang")==1 or has("bombs") or function_Cached("HasBow")==1 ) and ( ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) or function_Cached("PoWBlueWarp")==1 ) ) or ( function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 ) ) ) ) then
 		return 2
-	elseif ( ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) ) or ( function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 )) then
+	elseif ( has("powpotpuzzleool_out_on") and ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) ) or ( function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 )) then
 		return 2
 	else
 		return 0
@@ -1510,9 +1510,9 @@ function DHCCanonHit()
 
 	if ( has("dhccanonhit_on") and has("bombs") and function_Cached("HasSword")==1 ) then
 		return 1
-	elseif ( has("dhccanonhit_off") and function_Cached("CanSplit4")==1 ) then
+	elseif ( function_Cached("CanSplit4")==1 ) then
 		return 1
-	elseif ( has("dhccanonhit_off") and has("bombs") and function_Cached("HasSword")==1 ) then
+	elseif ( has("dhccanonhit_out_on") and has("bombs") and function_Cached("HasSword")==1 ) then
 		return 2
 	else
 		return 0
@@ -1520,11 +1520,11 @@ function DHCCanonHit()
 end
 function DHCBladePuzzleShuffle()
 
-	if ( has("dhcbladepuzzleshuffle_on") and ( function_Cached("CanSplit2")==1 or function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) ) then
+	if ( has("dhcbladepuzzleshuffle_on") and ( function_Cached("CanSplit2")==1 or function_Cached("CanSplit3")==1 ) ) then
 		return 1
-	elseif ( has("dhcbladepuzzleshuffle_off") and function_Cached("CanSplit4")==1 ) then
+	elseif ( function_Cached("CanSplit4")==1 ) then
 		return 1
-	elseif ( has("dhcbladepuzzleshuffle_off") and ( function_Cached("CanSplit2")==1 or function_Cached("CanSplit3")==1 ) ) then
+	elseif (  has("dhcbladepuzzleshuffle_out_on") and has("dhcbladepuzzleshuffle_off") and ( function_Cached("CanSplit2")==1 or function_Cached("CanSplit3")==1 ) ) then
 		return 2
 	else
 		return 0
@@ -1535,9 +1535,9 @@ function DHCSwitchHit()
 
 	if ( has("dhcswitchhit_on") and function_Cached("HasSword")==1 and function_Cached("HasSpin")==1 ) then
 		return 1
-	elseif ( has("dhcswitchhit_off") and function_Cached("CanSplit4")==1 ) then
+	elseif ( function_Cached("CanSplit4")==1 ) then
 		return 1
-	elseif ( has("dhcswitchhit_off") and function_Cached("HasSword")==1 and function_Cached("HasSpin")==1 ) then
+	elseif ( has("dhcswitchhit_out_on") and  function_Cached("HasSword")==1 and function_Cached("HasSpin")==1 ) then
 		return 2
 	else
 		return 0

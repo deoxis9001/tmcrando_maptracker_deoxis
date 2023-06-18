@@ -1,0 +1,214 @@
+[
+  {
+    "name":"Opens every obstacle in the game: Every tree, block, bomb wall, boulder, non key door, vine, switch, lever, barricade, bridge.\n\n The World is open from the start. Does not affect Key Doors, Fusions, Wind Crests and Dungeon Warps.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world_settings/settings/open_world_off.png",
+        "codes":"openworld_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/open_world_on.png",
+        "codes":"openworld_on",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"The 6 Dungeons that can hold elements may have their entrances shuffled. These are always coupled entrance swaps which means when you leave a shuffled dungeon you will always go back to the place you originally came from.\n Dark Hyrule Castle is not currently shuffled.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/dungeons_er_off.png",
+        "codes": "dungeonser_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/dungeons_er_on.png",
+        "codes": "dungeonser_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
+    "name":"Small Keys",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":2,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/small_key_none.png",
+        "codes": "small_key_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/small_key_vanilla.png",
+        "codes": "small_key_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/small_key_shuffle.png",
+        "codes": "small_key_shuffle",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Big Keys",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":2,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/big_key_none.png",
+        "codes": "big_key_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/big_key_vanilla.png",
+        "codes": "big_key_vanilla",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/big_key_shuffle.png",
+        "codes": "big_key_shuffle",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"Preset",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":5,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/preset_01.png",
+        "codes": "preset_01"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_02.png",
+        "codes": "preset_02"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_03.png",
+        "codes": "preset_03"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_04.png",
+        "codes": "preset_04"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_05.png",
+        "codes": "preset_05"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_06.png",
+        "codes": "preset_06"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_07.png",
+        "codes": "preset_07"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_08.png",
+        "codes": "preset_08"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_09.png",
+        "codes": "preset_09"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_10.png",
+        "codes": "preset_10"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_11.png",
+        "codes": "preset_11"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_12.png",
+        "codes": "preset_12"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_13.png",
+        "codes": "preset_13"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_14.png",
+        "codes": "preset_14"
+      },
+      {
+        "img":"images/options/world_settings/settings/preset_custom.png",
+        "codes": "preset_custom"
+      }
+    ]
+  },
+  {
+    "name":"Out of logic",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/out_logic_no.png",
+        "codes": "out_logic_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/out_logic_yes.png",
+        "codes": "out_logic_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, will spawn Tingle's brothers Knuckle, Ankle and David Jr. from the start of the game.\nIf disabled, the Tingle brothers will only spawn after talking to Tingle twice in a row.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/open_tingle_no.png",
+        "codes": "open_tingle_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/open_tingle_yes.png",
+        "codes": "open_tingle_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
+    "name":"If enabled, Wind Tribe Tower will act like it has already been entered from Cloud Tops from the start of the game. This unlocks the upper floors, Gregal's 2nd item and the main exit to Cloud tops early.\nCertain combinations of settings may allow for a softlock when going to Cloud tops without the Tornado being completed, Homewarp will always be available in these situations.\n\nIf disabled, Wind Tribe will stay in its initial state until the player enters the building from Cloud Tops.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world_settings/settings/open_wind_tribe_no.png",
+        "codes": "open_wind_tribe_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world_settings/settings/open_wind_tribe_yes.png",
+        "codes": "open_wind_tribe_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+]
