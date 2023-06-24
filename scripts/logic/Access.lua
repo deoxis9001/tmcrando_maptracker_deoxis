@@ -232,8 +232,7 @@ function AccessFortress()
 		return 0
 	end 
 end
-function AccessDroplets()
-	
+function AccessDroplets()	
 	if ( function_Cached("AccessLonLon")==1 and function_Cached("CapeExtension")==1 ) then
 		return 1
 	elseif ( (function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and (function_Cached("CapeExtension")==1 or function_Cached("CapeExtension")==2 ) ) then
@@ -271,6 +270,66 @@ function DHCBlackKnight()
 		return 1
 	elseif ( ( function_Cached("DHCBlackKnightFight")==1 or function_Cached("DHCBlackKnightFight")==2 ) and ( function_Cached("DHCBlueWarp")==1 or ( function_Cached("DHCRedWarp")==1 and ( function_Cached("DHCChainSoldiers")==1 or function_Cached("DHCChainSoldiers")==2 ) and ( function_Cached("DHCGrateRoom")==1 or function_Cached("DHCGrateRoom")==2 ) and function_Cached("OverworldBlocks")==1 ) or ( ( function_Cached("DHC1stDoor")==1 or function_Cached("DHC1stDoor")==2 ) and function_Cached("DHC2ndCanon")==1 and function_Cached("BombWalls")==1 and ( function_Cached("DHCThrone")==1 or function_Cached("DHCThrone")==2 ) and function_Cached("CanSplit4")==1 and ( function_Cached("DHCOutsideSwitch")==1 or function_Cached("DHCOutsideSwitch")==2 ) and ( function_Cached("DHCSwitchPuzzles")==1 or function_Cached("DHCSwitchPuzzles")==2 ) and function_Cached("DHCChainSoldiers")==1 and function_Cached("DHCGrateRoom")==1 and function_Cached("OverworldBlocks")==1 ) ) ) then
 		return 2
+	else
+		return 0
+	end 
+end
+function Json_AccessDeepwood()
+	
+	if ( function_Cached("AccessDeepwood")==1 ) then
+		return 1
+	elseif ( function_Cached("AccessDeepwood")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
+	elseif ( function_Cached("AccessDeepwood")==3 ) then
+		return 1, AccessibilityLevel.Inspect
+	else
+		return 0
+	end 
+end
+function Json_AccessCoF()
+	
+	if ( function_Cached("AccessCoF")==1 ) then
+		return 1
+	elseif ( function_Cached("AccessCoF")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
+	elseif ( function_Cached("AccessCoF")==3 ) then
+		return 1, AccessibilityLevel.Inspect
+	else
+		return 0
+	end 
+end
+function Json_AccessFortress()
+	
+	if ( function_Cached("AccessFortress")==1 ) then
+		return 1
+	elseif ( function_Cached("AccessFortress")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
+	elseif ( function_Cached("AccessFortress")==3 ) then
+		return 1, AccessibilityLevel.Inspect
+	else
+		return 0
+	end 
+end
+function Json_AccessDroplets()
+	
+	if ( function_Cached("AccessDroplets")==1 ) then
+		return 1
+	elseif ( function_Cached("AccessDroplets")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
+	elseif ( function_Cached("AccessDroplets")==3 ) then
+		return 1, AccessibilityLevel.Inspect
+	else
+		return 0
+	end 
+end
+function Json_AccessPalace()
+	
+	if ( function_Cached("AccessPalace")==1 ) then
+		return 1
+	elseif ( function_Cached("AccessPalace")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
+	elseif ( function_Cached("AccessPalace")==3 ) then
+		return 1, AccessibilityLevel.Inspect
 	else
 		return 0
 	end 
