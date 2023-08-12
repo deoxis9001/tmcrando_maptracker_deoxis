@@ -14,7 +14,7 @@
 		"type": "toggle_badged",
 		"base_item": "dws",
 		"initial_active_state":true,
-		"img": "images/dungeons/overlay_elements_dws.png",
+		"img": "images/dungeons/overlay_elements.png",
 		"codes": "dwsx"
 	},
 	// COF
@@ -32,7 +32,7 @@
 		"type": "toggle_badged",
 		"base_item": "cof",
 		"initial_active_state":true,
-		"img": "images/dungeons/overlay_elements_cof.png",
+		"img": "images/dungeons/overlay_elements.png",
 		"codes": "cofx"
 	},
 	// FOW
@@ -50,7 +50,7 @@
 		"type": "toggle_badged",
 		"base_item": "fow",
 		"initial_active_state":true,
-		"img": "images/dungeons/overlay_elements_fow.png",
+		"img": "images/dungeons/overlay_elements.png",
 		"codes": "fowx"
 	},
 	// TOD
@@ -68,7 +68,7 @@
 		"type": "toggle_badged",
 		"base_item": "tod",
 		"initial_active_state":true,
-		"img": "images/dungeons/overlay_elements_tod.png",
+		"img": "images/dungeons/overlay_elements.png",
 		"codes": "todx"
 	},
 	// RC
@@ -104,7 +104,7 @@
 		"type": "toggle_badged",
 		"base_item": "pow",
 		"initial_active_state":true,
-		"img": "images/dungeons/overlay_elements_pow.png",
+		"img": "images/dungeons/overlay_elements.png",
 		"codes": "powx"
 	},
 	// DHC

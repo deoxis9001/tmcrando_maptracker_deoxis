@@ -1957,8 +1957,10 @@ function Swamp_ButterflyFusion_Item()
 end
 
 function Swamp_CenterCave_DarknutChest() 
-	if ( function_Cached("AccessSwamp")==1 and ( function_Cached("SwampDarknut")==1 or function_Cached("SwampDarknut")==2 ) ) then
+	if ( function_Cached("AccessSwamp")==1 and function_Cached("SwampDarknut")==1 ) then
 		return 1
+	elseif ( function_Cached("AccessSwamp")==1 and ( function_Cached("SwampDarknut")==1 or function_Cached("SwampDarknut")==2 ) ) then
+		return 2
 	else
 		return 0
 	end 
