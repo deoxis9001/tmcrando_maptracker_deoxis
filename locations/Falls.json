@@ -118,7 +118,7 @@
 		"map":"map",
 		"x":1815,
 		"y":550,
-		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsRed"]
+		"restrict_visibility_rules":["$FusionsRed"]
 	  }
 	],
 	"sections":[
