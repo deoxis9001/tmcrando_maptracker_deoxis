@@ -272,6 +272,9 @@ function FusionsGreenCNumber()
 	if has("fusions41") then
 		count_fusion=count_fusion+1
 	end
+	if has("fusions42") then
+		count_fusion=count_fusion+1
+	end
 	if has("fusions5c") then
 		count_fusion=count_fusion+1
 	end
@@ -282,9 +285,6 @@ function FusionsGreenCNumber()
 end
 function FusionsGreenGNumber() 
 	local count_fusion=0
-	if has("fusions42") then
-		count_fusion=count_fusion+1
-	end
 	if has("fusions43") then
 		count_fusion=count_fusion+1
 	end

@@ -33,6 +33,8 @@ function Palace_1stHalf_3F_PotPuzzle_ItemDrop()
 		return 1
 	elseif ( ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and ( function_Cached("PoWDrop")==1 or function_Cached("PoWDrop")==2 ) ) then
 		return 2
+	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and ( ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) ) or ( function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 ) ) then
+		return 3
 	else
 		return 0
 	end 

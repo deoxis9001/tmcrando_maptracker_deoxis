@@ -5,7 +5,7 @@ function DHC1stDoor()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("dhc_smallkey") >= 1 ) then
+	elseif ( has("small_key_out_on") and Tracker:ProviderCountForCode("dhc_smallkey") >= 1 ) then
 		return 2
 	else
 		return 0
@@ -16,7 +16,7 @@ function DHCBigBlock()
 		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
-	elseif ( has("small_key_out_off") and Tracker:ProviderCountForCode("dhc_smallkey") >= 4 and function_Cached("DHCRedWarp") == 1 ) then
+	elseif ( has("small_key_out_on") and Tracker:ProviderCountForCode("dhc_smallkey") >= 4 and function_Cached("DHCRedWarp") == 1 ) then
 		return 2
 	else
 		return 0
