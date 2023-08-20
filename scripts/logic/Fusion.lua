@@ -392,9 +392,9 @@ end
 
 
 function Json_MinishWoods_MinishVillage_Fuzer2()
-	if ( FusionsRedNumber("redV")==1 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
+	if ( FusionsRedNumber("redW")==1 and has("flippers") and function_Cached("AccessMinishWoods")==1 ) then
 		return 1
-	elseif ( FusionsRedNumber("redV")==1 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
+	elseif ( FusionsRedNumber("redW")==1 and has("flippers") and function_Cached("AccessMinishWoods")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0
@@ -547,7 +547,7 @@ end
 
 
 function Json_Town_Inn_Fuzer3() 
-	if ( FusionsRedNumber("redE")==1 and has("fusions1b") ) then
+	if ( FusionsRedNumber("redV")==1 and has("fusions1b") ) then
 		return 1
 	else
 		return 0
@@ -564,7 +564,7 @@ function Json_Town_Inn_Fuzer4()
 
 
 function Json_Town_School_Fuzer()
-	if ( FusionsRedNumber("redE")==1 ) then
+	if ( FusionsGreenNumber("greenP")==1 ) then
 		return 1
 	else
 		return 0
@@ -706,9 +706,9 @@ function Json_Valley_Dampe_Fuzer2()
 end
 
 function Json_Valley_NortheastGrave_Fuzer1() 
-	if ( FusionsGreenNumber("greenG")==1 and function_Cached("Valley_GraveyardRightGraveFusion_Chest")==1 ) then
+	if ( FusionsGreenNumber("greenC")==1 and function_Cached("Valley_GraveyardRightGraveFusion_Chest")==1 ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenG")==1 and function_Cached("Valley_GraveyardRightGraveFusion_Chest")==2 ) then
+	elseif ( FusionsGreenNumber("greenC")==1 and function_Cached("Valley_GraveyardRightGraveFusion_Chest")==2 ) then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0

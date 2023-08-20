@@ -621,8 +621,8 @@
   "allow_disabled":false,
   "disabled_img_mods":"",
   "capturable":"toggle",
-  "img":"images/items/KinstoneGreenGGray.png",
-  "disabled_img": "images/items/KinstoneGreenG.png",
+  "img":"images/items/KinstoneGreenCGray.png",
+  "disabled_img": "images/items/KinstoneGreenC.png",
   "loop":true,
   "codes":"fusions42"
  },

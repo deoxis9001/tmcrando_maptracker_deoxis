@@ -715,6 +715,7 @@
 	  {
 		"name":"Pot Puzzle Key",
 		"item_count":1,
+        "capture_item": true,
 		"access_rules":["$Json_Dungeon_Palace_PotPuzzleKey"],
 		"chest_unopened_img":"images/items-map/Small Key.png",
 		"chest_opened_img":"images/items-map/Small Key Done.png"
