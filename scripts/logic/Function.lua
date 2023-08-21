@@ -191,7 +191,7 @@ function Preset()
 	if setting_preset_data_cache~=( data_preset.CurrentStage + 1 ) then
 		setting_preset_data_cache = data_preset.CurrentStage + 1
 		if setting_preset_data_cache ~= 0 then
-			if setting_preset_version_custom==1 or setting_preset_data_title[setting_preset_data_cache]~="Custom" then
+			if setting_preset_version_custom==2 or setting_preset_data_title[setting_preset_data_cache]~="Custom" then
 				print(setting_preset_data_title[setting_preset_data_cache])
 			else
 				print("Please update your override of custom.lua")
