@@ -403,14 +403,14 @@
 				 "key": "out_logic_settings2"
 				}
 			 },
-			 {
-				"title":"Other Settings",
-				"icon":"images/icon-maps/Cave Entrance Icon.png",
-				"content":{
-				 "type":"layout",
-				 "key": "out_logic_settings3"
-				}
-			 }
+//			 {
+//				"title":"Other Settings",
+//				"icon":"images/icon-maps/Cave Entrance Icon.png",
+//				"content":{
+//				 "type":"layout",
+//				 "key": "out_logic_settings3"
+//				}
+//			 }
 			]
 		 }
 		]
@@ -447,14 +447,14 @@
 				 "key": "open_world_settings"
 				}
 			 },
-//			 {
-//				"title":"Out of logic Settings",
-//				"icon":"images/icon-maps/Kinstone Bag (Giant).png",
-//				"content":{
-//				 "type":"layout",
-//				 "key": "outoflogic"
-//				}
-//			 }
+			 {
+				"title":"Out of logic Settings",
+				"icon":"images/icon-maps/Kinstone Bag (Giant).png",
+				"content":{
+				 "type":"layout",
+				 "key": "outoflogic"
+				}
+			 }
 			]
 		 }
 		]
