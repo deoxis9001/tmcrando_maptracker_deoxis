@@ -307,9 +307,9 @@ function RuinsFusion()
 	end 
 end
 function CloudFusions()
-	if ( ( ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) or  has("fusiongold_complet") ) and ( has("cape") or has("mitts") ) ) then
+	if ( ( ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) or  has("fusiongold_complet") ) ) then
 		return 1
-	elseif ( fusiongoldcombined:getActive() and ( Tracker:ProviderCountForCode("clouds") >= 6 or ( Tracker:ProviderCountForCode("clouds") >= 5 and has("fallswindcrest_yes") ) ) and ( has("cape") or has("mitts") ) ) then
+	elseif ( fusiongoldcombined:getActive() and ( Tracker:ProviderCountForCode("clouds") >= 6 or ( Tracker:ProviderCountForCode("clouds") >= 5 and has("fallswindcrest_yes") ) ) ) then
 		return 2
 	else
 		return 0
