@@ -1,9 +1,9 @@
 {
-  "name": "[Beta][1.0.0] Minish Cap Randomizer Map Tracker - Help (F1)",
+  "name": "[Stable][1.0.0] Minish Cap Randomizer Map Tracker - Help (F1)",
   "game_name": "Minish Cap Randomizer",
   "platform": "gba",
-  "package_version": "1.0.0.0",
-  "package_uid": "BetaTmcrTrackerDeoxis",
+  "package_version": "1.0.0.7",
+  "package_uid": "StableTmcrTrackerDeoxis",
   "author": "Deoxis Hysteria",
   "variants": {
     "Standard": {

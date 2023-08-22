@@ -334,3 +334,15 @@ function Json_AccessPalace()
 		return 0
 	end 
 end
+function Json_AccessCrypt()
+	
+	if ( function_Cached("AccessCrypt")==1 ) then
+		return 1
+	elseif ( function_Cached("AccessCrypt")==2 ) then
+		return 1, AccessibilityLevel.SequenceBreak
+	elseif ( function_Cached("AccessCrypt")==3 ) then
+		return 1, AccessibilityLevel.Inspect
+	else
+		return 0
+	end 
+end
