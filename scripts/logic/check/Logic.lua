@@ -149,10 +149,10 @@ function Clouds_SouthEast_TopDigSpot()
 end
 
 
-function Clouds_Fusion_TopRight() 
-	if ( function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) ) then
+function Clouds_Fusion_TopRight()
+	if ( function_Cached("CloudFusions")==1 and function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) ) then
 		return 1
-	elseif ( function_Cached("AccessClouds")==2 and ( has("cape") or has("mitts") ) ) then
+	elseif ( ( function_Cached("CloudFusions")==1 or function_Cached("CloudFusions")==2 ) and ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) and ( has("cape") or has("mitts") ) ) then
 		return 2
 	else
 		return 0
@@ -160,9 +160,9 @@ function Clouds_Fusion_TopRight()
 end
 
 function Clouds_Fusion_TopLeft() 
-	if ( function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) ) then
+	if ( function_Cached("CloudFusions")==1 and function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) ) then
 		return 1
-	elseif ( function_Cached("AccessClouds")==2 and ( has("cape") or has("mitts") ) ) then
+	elseif ( ( function_Cached("CloudFusions")==1 or function_Cached("CloudFusions")==2 ) and ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) and ( has("cape") or has("mitts") ) ) then
 		return 2
 	else
 		return 0
@@ -170,9 +170,9 @@ function Clouds_Fusion_TopLeft()
 end
 
 function Clouds_Fusion_BottomRight() 
-	if ( function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) ) then
+	if ( function_Cached("CloudFusions")==1 and function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) ) then
 		return 1
-	elseif ( function_Cached("AccessClouds")==2 and ( has("cape") or has("mitts") ) ) then
+	elseif ( ( function_Cached("CloudFusions")==1 or function_Cached("CloudFusions")==2 ) and ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) and ( has("cape") or has("mitts") ) ) then
 		return 2
 	else
 		return 0
@@ -180,9 +180,9 @@ function Clouds_Fusion_BottomRight()
 end
 
 function Clouds_Fusion_BottomLeft() 
-	if ( function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) ) then
+	if ( function_Cached("CloudFusions")==1 and function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) ) then
 		return 1
-	elseif ( function_Cached("AccessClouds")==2 and ( has("cape") or has("mitts") ) ) then
+	elseif ( ( function_Cached("CloudFusions")==1 or function_Cached("CloudFusions")==2 ) and ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) and ( has("cape") or has("mitts") ) ) then
 		return 2
 	else
 		return 0
@@ -190,9 +190,9 @@ function Clouds_Fusion_BottomLeft()
 end
 
 function Clouds_Fusion_Center() 
-	if ( function_Cached("AccessClouds")==1 ) then
+	if ( function_Cached("CloudFusions")==1 and function_Cached("AccessClouds")==1 ) then
 		return 1
-	elseif ( function_Cached("AccessClouds")==2 ) then
+	elseif ( ( function_Cached("CloudFusions")==1 or function_Cached("CloudFusions")==2 ) and ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) ) then
 		return 2
 	else
 		return 0

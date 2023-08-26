@@ -204,6 +204,8 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	ScriptHost:LoadScript(ScriptLocations.."Trilby.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Valley.lua")
 	ScriptHost:LoadScript(ScriptLocations.."WesternWoods.lua")
+	ScriptHost:LoadScript(ScriptLocations.."Fusion.lua")
+
 
 	Tracker:AddLocations(JsLocations.."Castle.json")
 	Tracker:AddLocations(JsLocations.."Clouds.json")
