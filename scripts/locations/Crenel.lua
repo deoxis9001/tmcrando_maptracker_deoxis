@@ -3,8 +3,8 @@ function Json_Crenel_Mines_Melari()
     return 1
   elseif function_Cached("Crenel_Melari_NPC")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif function_Cached("Crenel_Melari_NPC")==2 then
-    return 1, AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Crenel_Melari_NPC")==3 then
+    return 1, AccessibilityLevel.Inspect
   else
     return 0
   end
@@ -27,8 +27,8 @@ function Json_Crenel_Mines_Chest()
     return 1
   elseif function_Cached("Crenel_MinesPathFusion_Chest")==2 then
     return 1, AccessibilityLevel.SequenceBreak
-  elseif function_Cached("Crenel_MinesPathFusion_Chest")==2 then
-    return 1, AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Crenel_MinesPathFusion_Chest")==3 then
+    return 1, AccessibilityLevel.Inspect
   else
     return 0
   end
