@@ -50,10 +50,10 @@
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  },
 	  {
-		"name":"Fuzer Grimblade",
+		"name":"Fuser Grimblade",
 		"hosted_item":"fusions1d",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Castle_Dojo_Fuzer"],
+		"access_rules":["$Json_Castle_Dojo_Fuser"],
 	  }
 	]
   },
@@ -88,10 +88,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Forest Minish",
+		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions4c",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Castle_MinishCrack_Fuzer"]
+		"access_rules":["$Json_Castle_MinishCrack_Fuser"]
 	  }
 	]
   },

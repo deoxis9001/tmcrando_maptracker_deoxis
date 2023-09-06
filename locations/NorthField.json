@@ -174,10 +174,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Forest Minish",
+		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions64",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_NorthField_MinishCrack_Fuzer"],
+		"access_rules":["$Json_NorthField_MinishCrack_Fuser"],
 	  }
 	]
   },

@@ -24,10 +24,10 @@
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  },
 	  {
-		"name":"Fuzer Waveblade",
+		"name":"Fuser Waveblade",
 		"hosted_item":"fusions15",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Hylia_Dojo_Fuzer"],
+		"access_rules":["$Json_Hylia_Dojo_Fuser"],
 	  }
 	]
   },
@@ -104,10 +104,10 @@
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  },
 	  {
-		"name":"Fuzer Mysterious Wall",
+		"name":"Fuser Mysterious Wall",
 		"hosted_item":"fusions2a",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Hylia_TreasureCave_Fuzer"],
+		"access_rules":["$Json_Hylia_TreasureCave_Fuser"],
 	  }
 	]
   },
@@ -236,10 +236,10 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Fuzer Dog",
+		"name":"Fuser Dog",
 		"hosted_item":"fusions51",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Hylia_Fifi_Fuzer"],
+		"access_rules":["$Json_Hylia_Fifi_Fuser"],
 	  }
 	]
   },
@@ -288,10 +288,10 @@
         "chest_opened_img":"images/items-map/Heart Container Gray.png"
 	  },
 	  {
-		"name":"Fuzer Librari",
+		"name":"Fuser Librari",
 		"hosted_item":"fusions54",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Hylia_Librari_Fuzer"],
+		"access_rules":["$Json_Hylia_Librari_Fuser"],
 	  }
 	]
   },
@@ -306,10 +306,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Forest Minish",
+		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions11",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Hylia_MinishHouseWindCrest_Fuzer"],
+		"access_rules":["$Json_Hylia_MinishHouseWindCrest_Fuser"],
 	  }
 	]
   },
@@ -324,16 +324,16 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer David Jr. 1",
+		"name":"Fuser David Jr. 1",
 		"hosted_item":"fusions5a",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Hylia_DavidJr_Fuzer1"],
+		"access_rules":["$Json_Hylia_DavidJr_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer David Jr. 2",
+		"name":"Fuser David Jr. 2",
 		"hosted_item":"fusions45",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Hylia_DavidJr_Fuzer2"],
+		"access_rules":["$Json_Hylia_DavidJr_Fuser2"],
 	  }
 	]
   },
@@ -348,10 +348,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Minish Forest",
+		"name":"Fuser Minish Forest",
 		"hosted_item":"fusions23",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Hylia_MinishCrack_Fuzer"],
+		"access_rules":["$Json_Hylia_MinishCrack_Fuser"],
 	  }
 	]
   }

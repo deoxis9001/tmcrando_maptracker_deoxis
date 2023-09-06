@@ -69,7 +69,7 @@ function_count = 0
 ------------------------------------------------------------------
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
-AUTOTRACKER_ENABLE_FUZER_TRACKING = true
+AUTOTRACKER_ENABLE_FUSER_TRACKING = true
 VERSION_ALPHA = false
 VERSION_BETA = false
 VERSION_RANDO = "1.0.0"
@@ -78,7 +78,7 @@ VERSION_RANDO = "1.0.0"
 ------------------------------------------------------------------
 TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
-TMC_AUTOTRACKER_DEBUG_FUZER = false
+TMC_AUTOTRACKER_DEBUG_Fuser = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
 TMC_CACHE_DEBUG_FUNCTION = false
 TMC_CACHE_DEBUG_ITEM = false

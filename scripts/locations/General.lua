@@ -1,4 +1,4 @@
-function Json_General_FusionsSharedRedV_Fuzer()
+function Json_General_FusionsSharedRedV_Fuser()
 	if FusionsRedNumber("redV")==1 then
 		return 1
 	elseif FusionsRedNumber("redV")==2 then
@@ -9,7 +9,7 @@ function Json_General_FusionsSharedRedV_Fuzer()
 		return 0
 	end
 end
-function Json_General_FusionsSharedBlueS_Fuzer()
+function Json_General_FusionsSharedBlueS_Fuser()
 	if FusionsBlueNumber("blueS")==1 then
 		return 1
 	elseif FusionsBlueNumber("blueS")==2 then
@@ -20,7 +20,7 @@ function Json_General_FusionsSharedBlueS_Fuzer()
 		return 0
 	end
 end
-function Json_General_FusionsSharedGreenC_Fuzer()
+function Json_General_FusionsSharedGreenC_Fuser()
 	if FusionsGreenNumber("greenC")==1 then
 		return 1
 	elseif FusionsGreenNumber("greenC")==2 then
@@ -31,7 +31,7 @@ function Json_General_FusionsSharedGreenC_Fuzer()
 		return 0
 	end
 end
-function Json_General_FusionsSharedGreenG_Fuzer()
+function Json_General_FusionsSharedGreenG_Fuser()
 	if FusionsGreenNumber("greenG")==1 then
 		return 1
 	elseif FusionsGreenNumber("greenC")==2 then
@@ -42,7 +42,7 @@ function Json_General_FusionsSharedGreenG_Fuzer()
 		return 0
 	end
 end
-function Json_General_FusionsSharedGreenP_Fuzer()
+function Json_General_FusionsSharedGreenP_Fuser()
 	if FusionsGreenNumber("greenP")==1 then
 		return 1
 	elseif FusionsGreenNumber("greenP")==2 then

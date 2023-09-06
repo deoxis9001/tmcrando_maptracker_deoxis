@@ -59,28 +59,28 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
       },
 	  {
-		"name":"Fuzer Din/Nayru/Farore 1",
+		"name":"Fuser Din/Nayru/Farore 1",
 		"hosted_item":"fusions1b",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Inn_Fuzer1"],
+		"access_rules":["$Json_Town_Inn_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer Din 2",
+		"name":"Fuser Din 2",
 		"hosted_item":"fusions20",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Inn_Fuzer2"],
+		"access_rules":["$Json_Town_Inn_Fuser2"],
 	  },
 	  {
-		"name":"Fuzer Nayru 2",
+		"name":"Fuser Nayru 2",
 		"hosted_item":"fusions19",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Inn_Fuzer3"],
+		"access_rules":["$Json_Town_Inn_Fuser3"],
 	  },
 	  {
-		"name":"Fuzer Farore 2",
+		"name":"Fuser Farore 2",
 		"hosted_item":"fusions10",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Inn_Fuzer4"],
+		"access_rules":["$Json_Town_Inn_Fuser4"],
 	  }
 	]
   },
@@ -261,10 +261,10 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Fuzer Tina",
+		"name":"Fuser Tina",
 		"hosted_item":"fusions5e",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_School_Fuzer"],
+		"access_rules":["$Json_Town_School_Fuser"],
 	  }
 	]
   },
@@ -305,33 +305,33 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Fuzer Librari",
+		"name":"Fuser Librari",
 		"hosted_item":"fusions54",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuzer1"],
+		"access_rules":["$Json_Town_Library_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer Candy",
+		"name":"Fuser Candy",
 		"hosted_item":"fusions22",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuzer2"],
+		"access_rules":["$Json_Town_Library_Fuser2"],
 	  },{
-		"name":"Fuzer Zill 1 ( above Library )",
+		"name":"Fuser Zill 1 ( above Library )",
 		"hosted_item":"fusions4b",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuzer3"],
+		"access_rules":["$Json_Town_Library_Fuser3"],
 	  },
 	  {
-		"name":"Fuzer Zill 2 ( above Library )",
+		"name":"Fuser Zill 2 ( above Library )",
 		"hosted_item":"fusions57",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuzer4"],
+		"access_rules":["$Json_Town_Library_Fuser4"],
 	  },
 	  {
-		"name":"Fuzer Zill 3 ( above Library )",
+		"name":"Fuser Zill 3 ( above Library )",
 		"hosted_item":"fusions3e",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuzer5"],
+		"access_rules":["$Json_Town_Library_Fuser5"],
 	  }
 	]
   },
@@ -353,16 +353,16 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Fuzer Mama",
+		"name":"Fuser Mama",
 		"hosted_item":"fusions34",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Cafe_Fuzer1"],
+		"access_rules":["$Json_Town_Cafe_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer Hurdy-gurdy Man 1",
+		"name":"Fuser Hurdy-gurdy Man 1",
 		"hosted_item":"fusions32",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Town_Cafe_Fuzer2"],
+		"access_rules":["$Json_Town_Cafe_Fuser2"],
 	  }
 	]
   },
@@ -706,10 +706,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Bremor",
+		"name":"Fuser Bremor",
 		"hosted_item":"fusions0b",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_NearPostOffice_Fuzer"],
+		"access_rules":["$Json_Town_NearPostOffice_Fuser"],
 	  }
 	]
   },
@@ -724,10 +724,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Stranger",
+		"name":"Fuser Stranger",
 		"hosted_item":"fusions0f",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Stranger_Fuzer"],
+		"access_rules":["$Json_Town_Stranger_Fuser"],
 	  }
 	]
   },
@@ -742,10 +742,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Hagen",
+		"name":"Fuser Hagen",
 		"hosted_item":"fusions1e",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Mayor_Fuzer"],
+		"access_rules":["$Json_Town_Mayor_Fuser"],
 	  }
 	]
   },
@@ -760,10 +760,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Postman",
+		"name":"Fuser Postman",
 		"hosted_item":"fusions2c",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Town_Postman_Fuzer"],
+		"access_rules":["$Json_Town_Postman_Fuser"],
 	  }
 	]
   },
@@ -886,22 +886,22 @@
 	],
 	"sections":[
 {
-		"name":"Fuzer 1 Town Minish",
+		"name":"Fuser Town Minish 1",
 		"hosted_item":"fusions4b",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_MinishHouse_Fuzer1"],
+		"access_rules":["$Json_Town_MinishHouse_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer 2 Town Minish",
+		"name":"Fuser Town Minish 2",
 		"hosted_item":"fusions57",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_MinishHouse_Fuzer2"],
+		"access_rules":["$Json_Town_MinishHouse_Fuser2"],
 	  },
 	  {
-		"name":"Fuzer 3 Town Minish",
+		"name":"Fuser Town Minish 3",
 		"hosted_item":"fusions3e",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_MinishHouse_Fuzer3"],
+		"access_rules":["$Json_Town_MinishHouse_Fuser3"],
 	  }
 	]
   },

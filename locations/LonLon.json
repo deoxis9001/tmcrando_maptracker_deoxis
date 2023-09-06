@@ -159,16 +159,16 @@
 		"chest_opened_img":"images/items-map/big_chest_open.png"
 	  },
 	  {
-		"name":"Fuzer Goron (Left)",
+		"name":"Fuser Goron (Left)",
 		"hosted_item":"fusions33",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_LonLon_GoronQuest_Fuzer1"],
+		"access_rules":["$Json_LonLon_GoronQuest_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer Goron (Right)",
+		"name":"Fuser Goron (Right)",
 		"hosted_item":"fusions0e",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_LonLon_GoronQuest_Fuzer2"],
+		"access_rules":["$Json_LonLon_GoronQuest_Fuser2"],
 	  }
 	]
   },
@@ -183,10 +183,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Ankle",
+		"name":"Fuser Ankle",
 		"hosted_item":"fusions40",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_LonLon_Ankle_Fuzer"],
+		"access_rules":["$Json_LonLon_Ankle_Fuser"],
 	  }
 	]
   }
