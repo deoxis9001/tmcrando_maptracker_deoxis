@@ -496,13 +496,13 @@ function FusionsRedNumber(code)
 		elseif redE:getActive() == redE:getActiveCount() and code=="redE" then
 				function_data_fusion[code]=1
 			return 1
-		elseif function_Cached("FusionsRedWNumber")<redW:getActive() and code=="redW" then
+		elseif has("fusionred_out_on") and function_Cached("FusionsRedWNumber")<redW:getActive() and code=="redW" then
 				function_data_fusion[code]=2
 			return 2
-		elseif function_Cached("FusionsRedVNumber")<redV:getActive() and code=="redV" then
+		elseif has("fusionred_out_on") and function_Cached("FusionsRedVNumber")<redV:getActive() and code=="redV" then
 				function_data_fusion[code]=2
 			return 2
-		elseif function_Cached("FusionsRedENumber")<redE:getActive() and code=="redE" then
+		elseif has("fusionred_out_on") and function_Cached("FusionsRedENumber")<redE:getActive() and code=="redE" then
 				function_data_fusion[code]=2
 			return 2
 		else
@@ -567,13 +567,13 @@ function FusionsBlueNumber(code)
 		elseif blueL:getActive()==blueL:getActiveCount() and blueS:getActive()==blueS:getActiveCount() and code=="blueWall" then
 				function_data_fusion[code]=1
 				return 1
-		elseif function_Cached("FusionsBlueLNumber")<blueL:getActive() and code=="blueL" then
+		elseif has("fusionblue_out_on") and function_Cached("FusionsBlueLNumber")<blueL:getActive() and code=="blueL" then
 				function_data_fusion[code]=2
 				return 2
-		elseif function_Cached("FusionsBlueSNumber")<blueS:getActive() and code=="blueS" then
+		elseif has("fusionblue_out_on") and function_Cached("FusionsBlueSNumber")<blueS:getActive() and code=="blueS" then
 				function_data_fusion[code]=2
 				return 2
-		elseif function_Cached("FusionsBlueWallNumber")<info_Fuser and code=="blueWall" then
+		elseif has("fusionblue_out_on") and function_Cached("FusionsBlueWallNumber")<info_Fuser and code=="blueWall" then
 				function_data_fusion[code]=2
 				return 2
 		else
@@ -613,13 +613,13 @@ function FusionsGreenNumber(code)
 		elseif greenP:getActive() == greenP:getActiveCount() and code=="greenP" then
 				function_data_fusion[code]=1
 				return 1
-		elseif function_Cached("FusionsGreenCNumber")<greenC:getActive() and code=="greenC" then
+		elseif has("fusiongreen_out_on") and function_Cached("FusionsGreenCNumber")<greenC:getActive() and code=="greenC" then
 				function_data_fusion[code]=2
 				return 2
-		elseif function_Cached("FusionsGreenGNumber")<greenG:getActive() and code=="greenG" then
+		elseif has("fusiongreen_out_on") and function_Cached("FusionsGreenGNumber")<greenG:getActive() and code=="greenG" then
 				function_data_fusion[code]=2
 				return 2
-		elseif function_Cached("FusionsGreenPNumber")<greenP:getActive() and code=="greenP" then
+		elseif has("fusiongreen_out_on") and function_Cached("FusionsGreenPNumber")<greenP:getActive() and code=="greenP" then
 				function_data_fusion[code]=2
 				return 2
 		else

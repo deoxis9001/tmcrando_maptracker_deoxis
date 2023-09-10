@@ -318,11 +318,11 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
+					 ["out_logic_no"],
 					 ["small_key_out_off","fusiongold_out_off"],
 					 ["beam_out_off","fusionred_out_off"],
 					 ["damage_source_out_off","fusionblue_out_off"],
-					 ["","fusiongreen_out_off"],
-					 ["",""]
+					 ["","fusiongreen_out_off"]
 				]
 			 }
 		 ]
@@ -375,7 +375,7 @@
 		 ["dungeonser_off","openworld_off"],
 		 ["open_tingle_no","open_wind_tribe_no"],
 		 ["small_key_none","big_key_none"],
-		 ["preset_01","out_logic_no"]
+		 ["preset_01"]
     ]
    }
   },
@@ -403,14 +403,14 @@
 				 "key": "out_logic_settings2"
 				}
 			 },
-//			 {
-//				"title":"Other Settings",
-//				"icon":"images/icon-maps/Cave Entrance Icon.png",
-//				"content":{
-//				 "type":"layout",
-//				 "key": "out_logic_settings3"
-//				}
-//			 }
+			 {
+				"title":"Other Settings",
+				"icon":"images/icon-maps/Cave Entrance Icon.png",
+				"content":{
+				 "type":"layout",
+				 "key": "out_logic_settings3"
+				}
+			 }
 			]
 		 }
 		]
