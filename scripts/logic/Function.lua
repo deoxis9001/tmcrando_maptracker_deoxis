@@ -348,7 +348,7 @@ end
 function tracker_on_finish_loading_save_file()
 	print("")
 	print("--	Load Save File Finish	--")
-	print("")
+	print("")		
 end
 function tracker_on_pack_ready()
 	if no_preset==nil then
