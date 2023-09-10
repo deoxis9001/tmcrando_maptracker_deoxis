@@ -382,6 +382,25 @@
     ]
   },
   {
+    "name":"Out of logic",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/out_logic_settings/out_logic_no.png",
+        "codes": "out_logic_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/out_logic_settings/out_logic_yes.png",
+        "codes": "out_logic_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
     "name":"small_key_out_off",
     "type": "progressive",
     "loop": true,
@@ -389,13 +408,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/out_logic_settings/logic_settings/small_key_out_off.png",
+        "img":"images/options/out_logic_settings/small_key_out_off.png",
         "codes": "small_key_out_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/out_logic_settings/logic_settings/small_key_out_off.png",
-        "codes": "small_key_out_off",
+        "img": "images/options/out_logic_settings/small_key_out_on.png",
+        "codes": "small_key_out_on",
         "inherit_codes":false
       },
     ]
@@ -408,13 +427,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/out_logic_settings/logic_settings/fusiongold_out_off.png",
+        "img":"images/options/out_logic_settings/fusiongold_out_off.png",
         "codes": "fusiongold_out_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/out_logic_settings/logic_settings/fusiongold_out_off.png",
-        "codes": "fusiongold_out_off",
+        "img": "images/options/out_logic_settings/fusiongold_out_on.png",
+        "codes": "fusiongold_out_on",
         "inherit_codes":false
       },
     ]
@@ -427,13 +446,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/out_logic_settings/logic_settings/beam_out_off.png",
+        "img":"images/options/out_logic_settings/beam_out_off.png",
         "codes": "beam_out_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/out_logic_settings/logic_settings/beam_out_off.png",
-        "codes": "beam_out_off",
+        "img": "images/options/out_logic_settings/beam_out_on.png",
+        "codes": "beam_out_on",
         "inherit_codes":false
       },
     ]
@@ -446,13 +465,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/out_logic_settings/logic_settings/fusionred_out_off.png",
+        "img":"images/options/out_logic_settings/fusionred_out_off.png",
         "codes": "fusionred_out_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/out_logic_settings/logic_settings/fusionred_out_off.png",
-        "codes": "fusionred_out_off",
+        "img": "images/options/out_logic_settings/fusionred_out_on.png",
+        "codes": "fusionred_out_on",
         "inherit_codes":false
       },
     ]
@@ -465,13 +484,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/out_logic_settings/logic_settings/damage_source_out_off.png",
+        "img":"images/options/out_logic_settings/damage_source_out_off.png",
         "codes": "damage_source_out_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/out_logic_settings/logic_settings/damage_source_out_off.png",
-        "codes": "damage_source_out_off",
+        "img": "images/options/out_logic_settings/damage_source_out_on.png",
+        "codes": "damage_source_out_on",
         "inherit_codes":false
       },
     ]
@@ -484,13 +503,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/out_logic_settings/logic_settings/fusionblue_out_off.png",
+        "img":"images/options/out_logic_settings/fusionblue_out_off.png",
         "codes": "fusionblue_out_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/out_logic_settings/logic_settings/fusionblue_out_off.png",
-        "codes": "fusionblue_out_off",
+        "img": "images/options/out_logic_settings/fusionblue_out_on.png",
+        "codes": "fusionblue_out_on",
         "inherit_codes":false
       },
     ]
@@ -503,13 +522,13 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img":"images/options/out_logic_settings/logic_settings/fusiongreen_out_off.png",
+        "img":"images/options/out_logic_settings/fusiongreen_out_off.png",
         "codes": "fusiongreen_out_off",
         "inherit_codes":false
       },
       {
-        "img": "images/options/out_logic_settings/logic_settings/fusiongreen_out_off.png",
-        "codes": "fusiongreen_out_off",
+        "img": "images/options/out_logic_settings/fusiongreen_out_on.png",
+        "codes": "fusiongreen_out_on",
         "inherit_codes":false
       },
     ]
