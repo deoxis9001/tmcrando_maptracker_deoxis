@@ -18,10 +18,10 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Fuzer Mysterious Wall",
+		"name":"Fuser Mysterious Wall",
 		"hosted_item":"fusions2b",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Hills_MittsCave_Fuzer"],
+		"access_rules":["$Json_Hills_MittsCave_Fuser"],
 	  }
 	]
   },
@@ -122,10 +122,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Forest Minish",
+		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions2e",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Hills_MinishHouse_Fuzer"],
+		"access_rules":["$Json_Hills_MinishHouse_Fuser"],
 	  }
 	]
   },
@@ -140,16 +140,16 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Meenie",
+		"name":"Fuser Meenie",
 		"hosted_item":"fusions62",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Hills_Farmer_Fuzer1"],
+		"access_rules":["$Json_Hills_Farmer_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer eenie",
+		"name":"Fuser eenie",
 		"hosted_item":"fusions29",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Hills_Farmer_Fuzer2"],
+		"access_rules":["$Json_Hills_Farmer_Fuser2"],
 	  }
 	]
   }

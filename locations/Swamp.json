@@ -147,9 +147,9 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Business Scrub",
+		"name":"Fuser Business Scrub",
 		"hosted_item":"fusions27",
-		"access_rules":["$Json_Swamp_BusinessScrub_Fuzer"],
+		"access_rules":["$Json_Swamp_BusinessScrub_Fuser"],
 	  }
 	]
   },

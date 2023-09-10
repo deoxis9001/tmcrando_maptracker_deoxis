@@ -142,7 +142,7 @@ function updateFusion(name, segment, code, address, flag)
 	local item = Tracker:FindObjectForCode(code)
 	if item then
 		local value = ReadU8(segment, address)
-		if TMC_AUTOTRACKER_DEBUG_FUZER then
+		if TMC_AUTOTRACKER_DEBUG_Fuser then
 			print(item.Name, code, flag, value)
 		end
 
@@ -2008,7 +2008,7 @@ function updateLocations(segment)
 		end
 	end
 
-	if AUTOTRACKER_ENABLE_FUZER_TRACKING then
+	if AUTOTRACKER_ENABLE_FUSER_TRACKING then
 		if has("fusionred_vanilla") then
 			if fusionredcombined:getActive() then
 				updateFusionUsedFixed(
@@ -3167,7 +3167,7 @@ function updateKeys(segment)
 	end
 end
 function UpdateWallLocation(segment)
-	if AUTOTRACKER_ENABLE_FUZER_TRACKING then
+	if AUTOTRACKER_ENABLE_FUSER_TRACKING then
 		 --eenie
 		updateWall(segment, "fusions29", 0x2002c40)
 		 --Trilby
