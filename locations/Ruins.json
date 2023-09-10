@@ -38,10 +38,10 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Fuzer Forest Minish",
+		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions17",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Ruins_MinishHole_Fuzer"],
+		"access_rules":["$Json_Ruins_MinishHole_Fuser"],
 	  }
 	]
   },

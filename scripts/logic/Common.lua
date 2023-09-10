@@ -57,6 +57,86 @@ function FusionsRedWNumber()
 	end
 		return count_fusion
 end
+function FusionsGoldCloudNumber() 
+  local TopRight = Tracker:FindObjectForCode("@Clouds - Top Right Fusion/Fusion")
+  local TopLeft = Tracker:FindObjectForCode("@Clouds - Top Left Fusion/Fusion")
+  local BottomRight = Tracker:FindObjectForCode("@Clouds - Bottom Right Fusion/Fusion")
+  local BottomLeft = Tracker:FindObjectForCode("@Clouds - Bottom Left Fusion/Fusion")
+  local Central = Tracker:FindObjectForCode("@Clouds - Central Fusion/Fusion")
+  local Swamp = Tracker:FindObjectForCode("@Castor Wilds - Fusions/Fusions")
+  local Fall = Tracker:FindObjectForCode("@Veil falls - Source of the Flow Cave/Fusion")
+  -- print("item.AcquiredCount",item.AcquiredCount)
+  local compte = 0
+  if TopRight.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if TopLeft.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if BottomRight.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if BottomLeft.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if Central.AvailableChestCount == 0 then
+	compte = 1 + compte
+  end
+  if fusiongoldcombined:getActive() then
+	  if Fall.AvailableChestCount == 0 then
+		compte = 1 + compte
+	  end
+	  if Swamp.AvailableChestCount == 0 then
+		compte = 3 + compte
+	  elseif Swamp.AvailableChestCount == 1 then
+		compte = 2 + compte
+	  elseif Swamp.AvailableChestCount == 2 then
+		compte = 1 + compte
+	  end
+  
+  end
+    return compte
+end
+function FusionsGoldSwampNumber() 
+  local TopRight = Tracker:FindObjectForCode("@Clouds - Top Right Fusion/Fusion")
+  local TopLeft = Tracker:FindObjectForCode("@Clouds - Top Left Fusion/Fusion")
+  local BottomRight = Tracker:FindObjectForCode("@Clouds - Bottom Right Fusion/Fusion")
+  local BottomLeft = Tracker:FindObjectForCode("@Clouds - Bottom Left Fusion/Fusion")
+  local Central = Tracker:FindObjectForCode("@Clouds - Central Fusion/Fusion")
+  local Swamp = Tracker:FindObjectForCode("@Castor Wilds - Fusions/Fusions")
+  local Fall = Tracker:FindObjectForCode("@Veil falls - Source of the Flow Cave/Fusion")
+  -- print("item.AcquiredCount",item.AcquiredCount)
+  local compte = 0
+  if Swamp.AvailableChestCount == 0 then
+	compte = 3 + compte
+  elseif Swamp.AvailableChestCount == 1 then
+	compte = 2 + compte
+  elseif Swamp.AvailableChestCount == 2 then
+	compte = 1 + compte
+  end
+  if fusiongoldcombined:getActive() then
+	  if TopRight.AvailableChestCount == 0 then
+		compte = 1 + compte
+	  end
+	  if TopLeft.AvailableChestCount == 0 then
+		compte = 1 + compte
+	  end
+	  if BottomRight.AvailableChestCount == 0 then
+		compte = 1 + compte
+	  end
+	  if BottomLeft.AvailableChestCount == 0 then
+		compte = 1 + compte
+	  end
+	  if Central.AvailableChestCount == 0 then
+		compte = 1 + compte
+	  end
+	  if Fall.AvailableChestCount == 0 then
+		compte = 1 + compte
+	  end
+  
+  end
+    return compte
+end
 function FusionsRedVNumber() 
 
 	local count_fusion=0
@@ -392,9 +472,14 @@ function FusionsRedNumber(code)
 		-- If a cached value exists, return it
 		return function_data_fusion[code]
 	end
+	if has("fusionred_removed") or has("fusionred_complet") then
+		function_data_fusion[code]=1
+		return 1
+	end
+	
 	if fusionredcombined:getActive() then
-		local count_fuzer=function_Cached("FusionsRedWNumber")+function_Cached("FusionsRedVNumber")+function_Cached("FusionsRedENumber")
-		if count_fuzer < redW:getActive() then
+		local count_Fuser=function_Cached("FusionsRedWNumber")+function_Cached("FusionsRedVNumber")+function_Cached("FusionsRedENumber")
+		if count_Fuser < redW:getActive() then
 				function_data_fusion[code]=1
 				return 1
 		else
@@ -402,15 +487,24 @@ function FusionsRedNumber(code)
 				return 0
 		end
 	else
-		if function_Cached("FusionsRedWNumber")<redW:getActive() and code=="redW" then
+		if redW:getActive() == redW:getActiveCount() and code=="redW" then
 				function_data_fusion[code]=1
 			return 1
+		elseif redV:getActive() == redV:getActiveCount() and code=="redV" then
+				function_data_fusion[code]=1
+			return 1
+		elseif redE:getActive() == redE:getActiveCount() and code=="redE" then
+				function_data_fusion[code]=1
+			return 1
+		elseif function_Cached("FusionsRedWNumber")<redW:getActive() and code=="redW" then
+				function_data_fusion[code]=2
+			return 2
 		elseif function_Cached("FusionsRedVNumber")<redV:getActive() and code=="redV" then
-				function_data_fusion[code]=1
-			return 1
+				function_data_fusion[code]=2
+			return 2
 		elseif function_Cached("FusionsRedENumber")<redE:getActive() and code=="redE" then
-				function_data_fusion[code]=1
-			return 1
+				function_data_fusion[code]=2
+			return 2
 		else
 			function_data_fusion[code]=0
 			return 0
@@ -422,10 +516,14 @@ function FusionsBlueNumber(code)
 		-- If a cached value exists, return it
 		return function_data_fusion[code]
 	end
+	if has("fusionblue_removed") or has("fusionblue_complet") then
+		function_data_fusion[code]=1
+		return 1
+	end
 	local info_fuze=0
 	if fusionbluecombined:getActive() then
-		local count_fuzer=function_Cached("FusionsBlueLNumber")+function_Cached("FusionsBlueSNumber")
-		if count_fuzer < blueL:getActive() then
+		local count_Fuser=function_Cached("FusionsBlueLNumber")+function_Cached("FusionsBlueSNumber")
+		if count_Fuser < blueL:getActive() then
 				function_data_fusion[code]=1
 				return 1
 		else
@@ -456,19 +554,28 @@ function FusionsBlueNumber(code)
 		count_fusion4=math.floor(count_fusion2/2)
 		count_fusion=count_fusion3-count_fusion4
 		if ( count_fusion == 0 ) then
-			info_fuzer=blueL:getActive()-count_fusion3
+			info_Fuser=blueL:getActive()-count_fusion3
 		else
-			info_fuzer=blueS:getActive()-count_fusion4
+			info_Fuser=blueS:getActive()-count_fusion4
 		end
-		if function_Cached("FusionsBlueLNumber")<blueL:getActive() and code=="blueL" then
+		if blueL:getActive()==blueL:getActiveCount() and code=="blueL" then
 				function_data_fusion[code]=1
 				return 1
+		elseif blueS:getActive()==blueS:getActiveCount() and code=="blueS" then
+				function_data_fusion[code]=1
+				return 1
+		elseif blueL:getActive()==blueL:getActiveCount() and blueS:getActive()==blueS:getActiveCount() and code=="blueWall" then
+				function_data_fusion[code]=1
+				return 1
+		elseif function_Cached("FusionsBlueLNumber")<blueL:getActive() and code=="blueL" then
+				function_data_fusion[code]=2
+				return 2
 		elseif function_Cached("FusionsBlueSNumber")<blueS:getActive() and code=="blueS" then
-				function_data_fusion[code]=1
-				return 1
-		elseif function_Cached("FusionsBlueWallNumber")<info_fuzer and code=="blueWall" then
-				function_data_fusion[code]=1
-				return 1
+				function_data_fusion[code]=2
+				return 2
+		elseif function_Cached("FusionsBlueWallNumber")<info_Fuser and code=="blueWall" then
+				function_data_fusion[code]=2
+				return 2
 		else
 				function_data_fusion[code]=0
 				return 0
@@ -480,33 +587,47 @@ function FusionsGreenNumber(code)
 		-- If a cached value exists, return it
 		return function_data_fusion[code]
 	end
+	if has("fusiongreen_removed") or has("fusiongreen_complet") then
+		function_data_fusion[code]=1
+		return 1
+	end
 	if fusiongreencombined:getActive() then
-		local count_fuzer=function_Cached("FusionsGreenCNumber")+function_Cached("FusionsGreenGNumber")+function_Cached("FusionsGreenPNumber")
-		if count_fuzer < greenC:getActive() then
+		local count_Fuser=function_Cached("FusionsGreenCNumber")+function_Cached("FusionsGreenGNumber")+function_Cached("FusionsGreenPNumber")
+		if count_Fuser == greenC:getActiveCount() then
 				function_data_fusion[code]=1
 				return 1
+		elseif count_Fuser < greenC:getActive() then
+				function_data_fusion[code]=2
+				return 2
 		else
 				function_data_fusion[code]=0
 				return 0
 		end
 	else
-		if function_Cached("FusionsGreenCNumber")<greenC:getActive() and code=="greenC" then
+		if greenC:getActive() == greenC:getActiveCount() and code=="greenC" then
 				function_data_fusion[code]=1
 				return 1
+		elseif greenG:getActive() == greenG:getActiveCount() and code=="greenG" then
+				function_data_fusion[code]=1
+				return 1
+		elseif greenP:getActive() == greenP:getActiveCount() and code=="greenP" then
+				function_data_fusion[code]=1
+				return 1
+		elseif function_Cached("FusionsGreenCNumber")<greenC:getActive() and code=="greenC" then
+				function_data_fusion[code]=2
+				return 2
 		elseif function_Cached("FusionsGreenGNumber")<greenG:getActive() and code=="greenG" then
-				function_data_fusion[code]=1
-				return 1
+				function_data_fusion[code]=2
+				return 2
 		elseif function_Cached("FusionsGreenPNumber")<greenP:getActive() and code=="greenP" then
-				function_data_fusion[code]=1
-				return 1
+				function_data_fusion[code]=2
+				return 2
 		else
 				function_data_fusion[code]=0
 				return 0
 		end
 	end
 end
-
-
 
 function FusionsGold()
 

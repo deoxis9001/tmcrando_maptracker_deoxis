@@ -1,6 +1,6 @@
 [
   {
-	"name":"Clouds - Fuzer",
+	"name":"Clouds - Fuser",
 	"map_locations":[
 	  {
 		"map":"map",
@@ -10,16 +10,16 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Gale",
+		"name":"Fuser Gale",
 		"hosted_item":"fusions13",
 		"visibility_rules":["$CloudTopFallVisibility,fusionred_vanilla"],
-		"access_rules":["$Json_Clouds_Fuzer_Fuzer1"],
+		"access_rules":["$Json_Clouds_Fuser_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer Hailey",
+		"name":"Fuser Hailey",
 		"hosted_item":"fusions4a",
 		"visibility_rules":["$CloudTopFallVisibility,fusiongreen_vanilla"],
-		"access_rules":["$Json_Clouds_Fuzer_Fuzer2"],
+		"access_rules":["$Json_Clouds_Fuser_Fuser2"],
 	  },
 	]
   },
@@ -374,46 +374,46 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"Fuzer Flurris 1",
+		"name":"Fuser Flurris 1",
 		"hosted_item":"fusions49",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer1"],
+		"access_rules":["$Json_Clouds_WindTribeHouse_Fuser1"],
 	  },
 	  {
-		"name":"Fuzer Flurris 2",
+		"name":"Fuser Flurris 2",
 		"hosted_item":"fusions48",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer2"],
+		"access_rules":["$Json_Clouds_WindTribeHouse_Fuser2"],
 	  },
 	  {
-		"name":"Fuzer Caprice",
+		"name":"Fuser Caprice",
 		"hosted_item":"fusions61",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer3"],
+		"access_rules":["$Json_Clouds_WindTribeHouse_Fuser3"],
 	  },
 	  {
-		"name":"Fuzer Gale",
+		"name":"Fuser Gale",
 		"hosted_item":"fusions13",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer4"],
+		"access_rules":["$Json_Clouds_WindTribeHouse_Fuser4"],
 	  },
 	  {
-		"name":"Fuzer Hailey",
+		"name":"Fuser Hailey",
 		"hosted_item":"fusions4a",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer5"],
+		"access_rules":["$Json_Clouds_WindTribeHouse_Fuser5"],
 	  },
 	  {
-		"name":"Fuzer Siroc 1",
+		"name":"Fuser Siroc 1",
 		"hosted_item":"fusions5c",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer6"],
+		"access_rules":["$Json_Clouds_WindTribeHouse_Fuser6"],
 	  },
 	  {
-		"name":"Fuzer Siroc 2",
+		"name":"Fuser Siroc 2",
 		"hosted_item":"fusions5d",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Clouds_WindTribeHouse_Fuzer7"],
+		"access_rules":["$Json_Clouds_WindTribeHouse_Fuser7"],
 	  }
 	]
   },

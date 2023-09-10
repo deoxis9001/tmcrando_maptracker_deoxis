@@ -38,10 +38,10 @@
 	],
 	"sections":[
 	  {
-		"name":"Fuzer Forest Minish",
+		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions24",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_WesternWoods_MinishHouse_Fuzer"],
+		"access_rules":["$Json_WesternWoods_MinishHouse_Fuser"],
 	  }
 	]
   },

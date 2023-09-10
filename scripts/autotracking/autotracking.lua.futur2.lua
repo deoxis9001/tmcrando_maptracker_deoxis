@@ -32,11 +32,11 @@ print("Active Auto-Tracker Configuration")
 print("")
 print("Enable Item Tracking:           ", AUTOTRACKER_ENABLE_ITEM_TRACKING)
 print("Enable Location Tracking:         ", AUTOTRACKER_ENABLE_LOCATION_TRACKING)
-print("Enable Fusions Tracking:          ", AUTOTRACKER_ENABLE_FUZER_TRACKING)
+print("Enable Fusions Tracking:          ", AUTOTRACKER_ENABLE_FUSER_TRACKING)
 if TMC_AUTOTRACKER_DEBUG then
  print("Enable Debug Logging :          ", TMC_AUTOTRACKER_DEBUG)
  print("Enable Debug Logging items:       ", TMC_AUTOTRACKER_DEBUG_ITEM)
- print("Enable Debug Logging Fusions:      ", TMC_AUTOTRACKER_DEBUG_FUZER)
+ print("Enable Debug Logging Fusions:      ", TMC_AUTOTRACKER_DEBUG_Fuser)
  print("Enable Debug Logging localisation:    ", TMC_AUTOTRACKER_DEBUG_LOCATION)
  print("Enable Debug Logging error:       ", TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND)
 end
@@ -118,7 +118,7 @@ function updateFusion(segment, code, address, flag)
   local item = Tracker:FindObjectForCode(code)
   if item then
     local value = ReadU8(segment, address)
-    if TMC_AUTOTRACKER_DEBUG_FUZER then
+    if TMC_AUTOTRACKER_DEBUG_Fuser then
       print(item.Name, code, flag, value)
     end
 		if mystery_seed then
@@ -2113,7 +2113,7 @@ function updateLocations(segment)
 	
  end
 
- if AUTOTRACKER_ENABLE_FUZER_TRACKING then
+ if AUTOTRACKER_ENABLE_FUSER_TRACKING then
 		updateFusion(segment, "fusions0a", 0x2002c82, 0x04)
 		updateFusion(segment, "fusions0b", 0x2002c82, 0x08)
 		updateFusion(segment, "fusions0c", 0x2002c82, 0x10)
@@ -2833,7 +2833,7 @@ function updateKeys(segment)
  end
 end
 function UpdateWallLocation(segment)
- if AUTOTRACKER_ENABLE_FUZER_TRACKING then
+ if AUTOTRACKER_ENABLE_FUSER_TRACKING then
 		updateWall(segment, "fusions29",0x2002c40)--eenie
 		updateWall(segment, "fusions25",0x2002c67)--Trilby
 		updateWall(segment, "fusions2b",0x2002c68)--Hills

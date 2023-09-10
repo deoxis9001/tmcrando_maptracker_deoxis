@@ -55,10 +55,10 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	 },
 	 {
-		"name":"Fuzer Mysterious Wall",
+		"name":"Fuser Mysterious Wall",
 		"hosted_item":"fusions26",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_MinishWoods_MittCave_Fuzer"],
+		"access_rules":["$Json_MinishWoods_MittCave_Fuser"],
 	 }
 	]
  },
@@ -114,40 +114,40 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	 },
 	 {
-		"name":"Fuzer Forest Minish (Lake) 2",
+		"name":"Fuser Forest Minish (Lake) 2",
 		"hosted_item":"fusions1f",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_MinishWoods_MinishVillage_Fuzer1"],
+		"access_rules":["$Json_MinishWoods_MinishVillage_Fuser1"],
 	 },
 	 {
-		"name":"Fuzer Forest Minish (Lake) 3",
+		"name":"Fuser Forest Minish (Lake) 3",
 		"hosted_item":"fusions12",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_MinishWoods_MinishVillage_Fuzer2"],
+		"access_rules":["$Json_MinishWoods_MinishVillage_Fuser2"],
 	 },
 	 {
 		"name":"Gentari (Elder)",
 		"hosted_item":"fusions1c",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_MinishWoods_MinishVillage_Fuzer3"],
+		"access_rules":["$Json_MinishWoods_MinishVillage_Fuser3"],
 	 },
 	 {
-		"name":"Fuzer Forest Minish 1 ( Vase House )",
+		"name":"Fuser Forest Minish 1 ( Vase House )",
 		"hosted_item":"fusions4b",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_MinishWoods_MinishVillage_Fuzer4"],
+		"access_rules":["$Json_MinishWoods_MinishVillage_Fuser4"],
 	 },
 	 {
-		"name":"Fuzer Forest Minish 2 ( Vase House )",
+		"name":"Fuser Forest Minish 2 ( Vase House )",
 		"hosted_item":"fusions57",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_MinishWoods_MinishVillage_Fuzer5"],
+		"access_rules":["$Json_MinishWoods_MinishVillage_Fuser5"],
 	 },
 	 {
-		"name":"Fuzer Forest Minish 3 ( Vase House )",
+		"name":"Fuser Forest Minish 3 ( Vase House )",
 		"hosted_item":"fusions3e",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_MinishWoods_MinishVillage_Fuzer6"],
+		"access_rules":["$Json_MinishWoods_MinishVillage_Fuser6"],
 	 }
 	]
  },
@@ -236,10 +236,10 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	 },
 	 {
-		"name":"Fuzer Belari",
+		"name":"Fuser Belari",
 		"hosted_item":"fusions0a",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_MinishWoods_Belari_Fuzer"],
+		"access_rules":["$Json_MinishWoods_Belari_Fuser"],
 	 },
 	]
  },
@@ -414,16 +414,16 @@
 	],
 	"sections":[
 	 {
-		"name":"Fuzer Scrub 1",
+		"name":"Fuser Scrub 1",
 		"hosted_item":"fusions3d",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_MinishWoods_Scrub_Fuzer1"],
+		"access_rules":["$Json_MinishWoods_Scrub_Fuser1"],
 	 },
 	 {
-		"name":"Fuzer Scrub 2",
+		"name":"Fuser Scrub 2",
 		"hosted_item":"fusions5b",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_MinishWoods_Scrub_Fuzer2"],
+		"access_rules":["$Json_MinishWoods_Scrub_Fuser2"],
 	 },
 	]
  }
