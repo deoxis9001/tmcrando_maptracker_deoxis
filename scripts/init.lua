@@ -30,35 +30,7 @@ setting_preset_data_other["figurine_option"]=6
 setting_preset_data_title={}
 setting_preset_data={}
 setting_preset_data_cache=-1
--- has_item_data_dev['small_key_out_on']=true
--- has_item_data_dev['beam_out_on']=true
--- has_item_data_dev['damage_source_out_on']=true
--- has_item_data_dev['fusiongold_out_on']=true
--- has_item_data_dev['fusionred_out_on']=true
--- has_item_data_dev['fusionblue_out_on']=true
--- has_item_data_dev['fusiongreen_out_on']=true
 
--- has_item_data_dev['grabbable_out_on']=true
--- has_item_data_dev['blowdust_out_on']=true
--- has_item_data_dev['crenelmushroom_out_on']=true
--- has_item_data_dev['lightarrowbreak_out_on']=true
--- has_item_data_dev['bobombs_out_on']=true
--- has_item_data_dev['likelike_out_on']=true
--- has_item_data_dev['guardskip_out_on']=true
--- has_item_data_dev['crenelbeam_out_on']=true
--- has_item_data_dev['downstrikebeetle_out_on']=true
--- has_item_data_dev['darkrooms_out_on']=true
-
--- has_item_data_dev['capeextension_out_on']=true
--- has_item_data_dev['lakeminish_out_on']=true
--- has_item_data_dev['cabinswim_out_on']=true
--- has_item_data_dev['cloudskill_out_on']=true
--- has_item_data_dev['powjump_out_on']=true
--- has_item_data_dev['powpotpuzzleool_out_on']=true
--- has_item_data_dev['dhccanonhit_out_on']=true
--- has_item_data_dev['dhcbladepuzzleshuffle_out_on']=true
--- has_item_data_dev['dhcswitchhit_out_on']=true
--- has_item_data_dev['fowpot_out_on']=true
 
 --Activate the cache reset
 Cache_reset=false
