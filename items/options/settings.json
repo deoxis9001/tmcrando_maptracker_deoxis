@@ -1745,25 +1745,6 @@
     ]
   },
   {
-    "name":"Out of logic",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/world_settings/settings/out_logic_no.png",
-        "codes": "out_logic_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world_settings/settings/out_logic_yes.png",
-        "codes": "out_logic_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
     "name":"If enabled, will spawn Tingle's brothers Knuckle, Ankle and David Jr. from the start of the game.\nIf disabled, the Tingle brothers will only spawn after talking to Tingle twice in a row.",
     "type": "progressive",
     "loop": true,

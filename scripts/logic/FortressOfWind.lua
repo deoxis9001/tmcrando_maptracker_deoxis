@@ -25,8 +25,6 @@ end
 function FoWMiddleDoor() 
 	if ( Tracker:ProviderCountForCode("fow_smallkey") >= 3 ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("fow_smallkey") >= 2  and ( function_Cached("CanSplit2")==1 or function_Cached("CanSplit3")==1)) then
-		return 1
 	elseif ( has("small_key_none") ) then
 		return 1
 	elseif ( has("small_key_out_on") and Tracker:ProviderCountForCode("fow_smallkey") >= 2 ) then
@@ -39,8 +37,6 @@ function FoWLastDoor()
 	if ( Tracker:ProviderCountForCode("fow_smallkey") >= 4 ) then
 		return 1
 	elseif ( has("small_key_none") ) then
-		return 1
-	elseif ( Tracker:ProviderCountForCode("fow_smallkey") >= 3 and ( function_Cached("CanSplit2")==1 or function_Cached("CanSplit3")==1)) then
 		return 1
 	elseif ( has("small_key_out_on") and Tracker:ProviderCountForCode("fow_smallkey") >= 3 ) then
 		return 2

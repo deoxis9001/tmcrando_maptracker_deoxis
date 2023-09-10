@@ -211,10 +211,9 @@ function AccessCoF()
 	end 
 end
 function CoFBasementAccess()
-	
 	if ( function_Cached("CoFRedWarp")==1 or ( ( function_Cached("CoFBlueWarp")==1 or ( ( function_Cached("BombWalls")==1 or function_Cached("Bobombs")==1 ) and function_Cached("CoFSpikeBeetle")==1 and function_Cached("CoF1stDoor")==1 and function_Cached("HasSword")==1 ) ) and function_Cached("CoF2ndDoor")==1 and has("cane") and function_Cached("HasSword")==1 ) ) then
 		return 1
-	elseif ( function_Cached("CoFRedWarp")==1 or ( ( function_Cached("CoFBlueWarp")==1 or ( ( function_Cached("BombWalls")==1 or function_Cached("Bobombs")==1 or function_Cached("Bobombs")==2 ) and ( function_Cached("CoFSpikeBeetle")==1 or function_Cached("CoFSpikeBeetle")==2 ) and ( function_Cached("CoF1stDoor")==1 or function_Cached("CoF1stDoor")==2 ) and function_Cached("HasSword")==1 ) ) and function_Cached("CoF2ndDoor")==1 and has("cane") and function_Cached("HasSword")==1 ) ) then
+	elseif ( function_Cached("CoFRedWarp")==1 or ( ( function_Cached("CoFBlueWarp")==1 or ( ( function_Cached("BombWalls")==1 or function_Cached("Bobombs")==1 or function_Cached("Bobombs")==2 ) and ( function_Cached("CoFSpikeBeetle")==1 or function_Cached("CoFSpikeBeetle")==2 ) and ( function_Cached("CoF1stDoor")==1 or function_Cached("CoF1stDoor")==2 ) and function_Cached("HasSword")==1 ) ) and ( function_Cached("CoF2ndDoor")==1 or  function_Cached("CoF2ndDoor")==2 ) and has("cane") and function_Cached("HasSword")==1 ) ) then
 		return 2
 	else
 		return 0

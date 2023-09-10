@@ -300,11 +300,11 @@ function RuinsFusion()
 		return 1
 	elseif (Tracker:ProviderCountForCode("wilds") >= 3 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) then
 		return 1
-	elseif ( Tracker:ProviderCountForCode("clouds") >= 3 and fusiongoldcombined:getActive() ) then
+	elseif ( has("fusiongold_out_on") and Tracker:ProviderCountForCode("clouds") >= 3 and fusiongoldcombined:getActive() ) then
 		return 2
-	elseif ( function_Cached("FusionsGoldSwampNumber")<Tracker:ProviderCountForCode("wilds") ) then
+	elseif ( has("fusiongold_out_on") and function_Cached("FusionsGoldSwampNumber")<Tracker:ProviderCountForCode("wilds") ) then
 		return 2
-	elseif ( function_Cached("FusionsGoldSwampNumber")<Tracker:ProviderCountForCode("clouds") ) then
+	elseif ( has("fusiongold_out_on") and fusiongoldcombined:getActive() and function_Cached("FusionsGoldSwampNumber")<Tracker:ProviderCountForCode("clouds") ) then
 		return 2
 	else
 		return 0
@@ -313,9 +313,9 @@ end
 function CloudFusions()
 	if ( ( ( Tracker:ProviderCountForCode("clouds") >= 5 and fusiongoldcombined:getActive()==false ) or ( Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive() ) or  has("fusiongold_complet") ) ) then
 		return 1
-	elseif ( fusiongoldcombined:getActive() and function_Cached("FusionsGoldCloudNumber")<Tracker:ProviderCountForCode("clouds") and ( Tracker:ProviderCountForCode("clouds") >= 6 or ( Tracker:ProviderCountForCode("clouds") >= 5 and has("fallswindcrest_yes") ) ) ) then
+	elseif ( has("fusiongold_out_on") and fusiongoldcombined:getActive() and function_Cached("FusionsGoldCloudNumber")<Tracker:ProviderCountForCode("clouds") and ( Tracker:ProviderCountForCode("clouds") >= 6 or ( Tracker:ProviderCountForCode("clouds") >= 5 and has("fallswindcrest_yes") ) ) ) then
 		return 2
-	elseif ( function_Cached("FusionsGoldCloudNumber")<Tracker:ProviderCountForCode("clouds") ) then
+	elseif ( has("fusiongold_out_on") and function_Cached("FusionsGoldCloudNumber")<Tracker:ProviderCountForCode("clouds") ) then
 		return 2
 	else
 		return 0
@@ -410,7 +410,7 @@ function FallsFusion()
 		return 1
 	elseif ( ( fusiongoldcombined:getActive()==false and has("falls",1 ) ) or ( fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=4 ) ) and function_Cached("OverworldBlocks")==1 then
 		return 1
-	elseif fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=1 and function_Cached("OverworldBlocks")==1 then
+	elseif has("fusiongold_out_on") and fusiongoldcombined:getActive() and Tracker:ProviderCountForCode("clouds")>=1 and function_Cached("OverworldBlocks")==1 then
 		return 2
 	else
 		return 0
