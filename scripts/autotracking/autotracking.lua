@@ -2868,9 +2868,9 @@ function updateLocations(segment)
 		updateDecreaseCount(
 			segment,
 			"@Fortress/Left Side Rupees",
-			{{0x2002d06, 0x20}, {0x2002d06, 0x40}, {0x2002d06, 0x80}, {0x2002d07, 0x01}, {0x2002d07, 0x02}, {0x2002d07, 0x04}}
+			{{0x2002d06, 0x20}, {0x2002d06, 0x40}, {0x2002d06, 0x80}, {0x2002d07, 0x01}, {0x2002d07, 0x04}, {0x2002d07, 0x08}}
 		)
-		updateDecreaseCount(segment, "@Fortress/Left Side Rupees Grabbable", {{0x2002d07, 0x08}})
+		updateDecreaseCount(segment, "@Fortress/Left Side Rupees Grabbable", {{0x2002d07, 0x02}})
 		updateSectionFlag(segment, "@Fortress/Eyegores", 0x2002d6f, 0x10)
 		updateSectionFlag(segment, "@Fortress/Left Side Key Drop", 0x2002d73, 0x80)
 		updateDecreaseCount(segment, "@Fortress/Right Side Two Lever Room", {{0x2002d73, 0x20}, {0x2002d73, 0x40}})
@@ -2899,8 +2899,8 @@ function updateLocations(segment)
 			"@Fortress - Left Side Left Rupees/Rupees",
 			{{0x2002d06, 0x20}, {0x2002d06, 0x40}, {0x2002d06, 0x80}, {0x2002d07, 0x01}}
 		)
-		updateDecreaseCount(segment, "@Fortress - Left Side Right Rupees/Rupees", {{0x2002d07, 0x02}, {0x2002d07, 0x04}})
-		updateDecreaseCount(segment, "@Fortress - Left Side Right Rupees/Rupees Grabbable", {{0x2002d07, 0x08}})
+		updateDecreaseCount(segment, "@Fortress - Left Side Right Rupees/Rupees", {{0x2002d07, 0x04}, {0x2002d07, 0x08}})
+		updateDecreaseCount(segment, "@Fortress - Left Side Right Rupees/Rupees Grabbable", {{0x2002d07, 0x02}})
 		updateSectionFlag(segment, "@Fortress - Left Side 3rd Floor Mitts/Chest", 0x2002d07, 0x20)
 		updateSectionFlag(segment, "@Fortress - Eyegores/Kill", 0x2002d6f, 0x10)
 		updateSectionFlag(segment, "@Fortress - Left Side Key/Drop", 0x2002d73, 0x80)
