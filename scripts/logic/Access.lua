@@ -191,14 +191,6 @@ function AccessCloudsWindTribe()
 end
 
 function AccessWindTribe()
-	print("--")
-	print("StrangerFusion",function_Cached("StrangerFusion"))
-	print("OpenWindTribe",function_Cached("OpenWindTribe"))
-	print("AccessCloudsWindTribe",function_Cached("AccessCloudsWindTribe"))
-	print("CloudFusions",function_Cached("CloudFusions"))
-	print("CloudWindCrest",function_Cached("CloudWindCrest"))
-	print("--")
-	print("--")
 	if ( function_Cached("StrangerFusion")==1 and function_Cached("OpenWindTribe")==1 ) or ( function_Cached("AccessCloudsWindTribe")==1 and function_Cached("CloudFusions")==1 ) or function_Cached("CloudWindCrest")==1 then
 		return 1
 	elseif ( function_Cached("StrangerFusion")==1 and function_Cached("OpenWindTribe")==1 ) or ( function_Cached("AccessCloudsWindTribe")==1 or function_Cached("AccessCloudsWindTribe")==2 ) and ( function_Cached("CloudFusions")==1 ) then
