@@ -5,7 +5,6 @@ ScriptItemSpec="scripts/item_spec/"
 ScriptSettings="scripts/settings/"
 ScriptLogic="scripts/logic/"
 ScriptPreset="scripts/preset/"
-ScriptMain="scripts/main/"
 ScriptAutotracking="scripts/autotracking/"
 
 JsLayouts="layouts/"
