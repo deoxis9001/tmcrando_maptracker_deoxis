@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="Intermediate"
 numero_preset=numero_preset+1
 setting_preset_data["Intermediate"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["Intermediate"]["cloudwindcrest_no"] = 0
 setting_preset_data["Intermediate"]["swampwindcrest_no"] = 0
 setting_preset_data["Intermediate"]["shfwindcrest_no"] = 1
 setting_preset_data["Intermediate"]["minishwindcrest_no"] = 1
-setting_preset_data["Intermediate"]["grabbable_none"] = 0
+setting_preset_data["Intermediate"]["grabbable_none"] = 1
 setting_preset_data["Intermediate"]["weaponsbombs_no"] = 0
 setting_preset_data["Intermediate"]["weaponsbow_no"] = 0
 setting_preset_data["Intermediate"]["weaponsgust_no"] = 0

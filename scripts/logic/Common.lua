@@ -1130,6 +1130,8 @@ function ShopBack()
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
+	elseif ( has("grabbable_allow") and has("gust") ) then
+		return 2
 	else
 		return 0
 	end
@@ -1140,6 +1142,8 @@ function SchoolHP()
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("cane") and has("gust") ) then
 		return 1
+	elseif ( has("grabbable_allow") and has("cane") and has("gust") ) then
+		return 2
 	elseif ( has("cane") ) then
 		return 3
 	else
@@ -1152,6 +1156,8 @@ function MusicHouseHP()
 		return 1
 	elseif( ( has("grabbable_easy") or has("grabbable_hard") ) and ( function_Cached("HasBoomerang")==1 or has("gust") ) ) then
 		return 1
+	elseif( has("grabbable_allow") and ( function_Cached("HasBoomerang")==1 or has("gust") ) ) then
+		return 2
 	else
 		return 3
 	end
@@ -1164,7 +1170,9 @@ function FountainHP()
 		return 1
 	elseif ( has("grabbable_hard") and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( has("gust") or ( function_Cached("HasBoomerang")==1 and ( function_Cached("LightArrowBreak")==2 or has("cane") ) ) ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard")or has("grabbable_allow") ) and ( has("gust") or ( function_Cached("HasBoomerang")==1 and ( function_Cached("LightArrowBreak")==1 or function_Cached("LightArrowBreak")==2 or has("cane") ) ) ) ) then
+		return 2
+	elseif ( has("grabbable_allow") and function_Cached("HasMagicBoomerang")==1 ) then
 		return 2
 	else
 		return 0
@@ -1182,15 +1190,15 @@ function LowerFallsItems()
 		return 1
 	elseif ( has("grabbable_hard") and function_Cached("AccessFalls")==1 and has("grip") and ( function_Cached("HasMagicBoomerang")==1 or has ("gust") ) ) then
 		return 1
-	elseif ( function_Cached("AccessMinishWoods")==2 and has("cane") and ( has("flippers") or has("cape") ) ) then
+	elseif ( ( function_Cached("AccessMinishWoods")==1 or function_Cached("AccessMinishWoods")==2) and has("cane") and ( has("flippers") or has("cape") ) ) then
 		return 2
-	elseif ( has("grabbable_easy") and function_Cached("OverworldBlocks")==1 and ( function_Cached("FallsFusion")==1 or function_Cached("FallsFusion")==2 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 )and has ("gust") ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_allow") ) and function_Cached("OverworldBlocks")==1 and ( function_Cached("FallsFusion")==1 or function_Cached("FallsFusion")==2 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 )and has ("gust") ) then
 		return 2
-	elseif ( has("grabbable_easy") and function_Cached("AccessFalls")==2 and has("grip") and has ("gust") ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_allow") ) and ( function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==2) and has("grip") and has ("gust") ) then
 		return 2
-	elseif ( has("grabbable_hard") and function_Cached("OverworldBlocks")==1 and ( function_Cached("FallsFusion")==1 or function_Cached("FallsFusion")==2 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 )and ( function_Cached("HasMagicBoomerang")==1 or has ("gust") ) ) then
+	elseif ( ( has("grabbable_hard") or has("grabbable_allow") ) and function_Cached("OverworldBlocks")==1 and ( function_Cached("FallsFusion")==1 or function_Cached("FallsFusion")==2 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 )and ( function_Cached("HasMagicBoomerang")==1 or has ("gust") ) ) then
 		return 2
-	elseif ( has("grabbable_hard") and function_Cached("AccessFalls")==1 and has("grip") and ( function_Cached("HasMagicBoomerang")==1 or has ("gust") ) ) then
+	elseif ( ( has("grabbable_hard") or has("grabbable_allow") ) and (function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==2) and has("grip") and ( function_Cached("HasMagicBoomerang")==1 or has ("gust") ) ) then
 		return 2
 	else
 		return 0
@@ -1202,6 +1210,8 @@ function LakeIslandHP()
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1
+	elseif ( has("grabbable_allow") and function_Cached("HasMagicBoomerang")==1 ) then
+		return 2
 	else
 		return 0
 	end
@@ -1221,9 +1231,9 @@ function LakeSouthHP()
 		return 2
 	elseif ( function_Cached("AccessSouthLake")==2 and ( has("cape") or has("flippers") ) ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and function_Cached("AccessLonLon")==2 and function_Cached("LakeShortcut")==1 and function_Cached("HasMagicBoomerang")==1 ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") or has("grabbable_allow") ) and ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2) and function_Cached("LakeShortcut")==1 and function_Cached("HasMagicBoomerang")==1 ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and function_Cached("AccessSouthLake")==2 and ( has("gust") or function_Cached("HasMagicBoomerang")==1 ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") or has("grabbable_allow") ) and (function_Cached("AccessSouthLake")==1 or function_Cached("AccessSouthLake")==2) and ( has("gust") or function_Cached("HasMagicBoomerang")==1 ) ) then
 		return 2
 	elseif ( ( function_Cached("AccessSouthLake")==1 or function_Cached("AccessSouthLake")==2 ) ) then
 		return 3
@@ -1242,7 +1252,9 @@ function MinishNorthHP()
 		return 1
 	elseif ( function_Cached("AccessNorthMinish")==2 ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and function_Cached("AccessMinishWoods")==2 and ( has("gust") or function_Cached("HasMagicBoomerang")==1 ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard")  or has("grabbable_allow") ) and (function_Cached("AccessMinishWoods")==1 or function_Cached("AccessMinishWoods")==2) and ( has("gust") or function_Cached("HasMagicBoomerang")==1 ) ) then
+		return 2
+	elseif ( has("grabbable_allow") and function_Cached("HasBoomerang")==1 ) then
 		return 2
 	elseif( function_Cached("AccessMinishWoods")==1 or function_Cached("AccessMinishWoods")==2 ) then
 		return 3
@@ -1259,7 +1271,7 @@ function MinishSouthHP()
 		return 1
 	elseif ( function_Cached("AccessMinishWoods")==2 ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and function_Cached("AccessBelari")==2 and has("gust") ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") or has("grabbable_allow") ) and ( function_Cached("AccessBelari")==1 or function_Cached("AccessBelari")==2 ) and has("gust") ) then
 		return 2
 	else
 		return 0
@@ -1274,6 +1286,10 @@ function CrenelWaterCaveHP()
 		return 1
 	elseif ( has("grabbable_hard") and function_Cached("HasBoomerang")==1 ) then
 		return 1
+	elseif ( ( has("grabbable_allow") ) and has("gust") or function_Cached("HasMagicBoomerang")==1 ) then
+		return 2
+	elseif ( has("grabbable_allow") and function_Cached("HasBoomerang")==1 ) then
+		return 2
 	else
 		return 0
 	end
@@ -1287,6 +1303,10 @@ function LeftGraveHP()
 		return 1
 	elseif ( has("grabbable_hard") and function_Cached("HasBoomerang")==1 ) then
 		return 1
+	elseif ( ( has("grabbable_allow") or has("grabbable_hard") ) and has("gust") ) then
+		return 2
+	elseif ( has("grabbable_allow") and function_Cached("HasBoomerang")==1 ) then
+		return 2
 	else
 		return 0
 	end
@@ -1306,7 +1326,9 @@ function FallsHP()
 		return 2
 	elseif ( ( function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==2 ) and has("grip") and ( has("flippers") or ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( function_Cached("CapeExtension")==1 or function_Cached("CapeExtension")==2 ) ) ) ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==2 ) and has("grip") and ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( has("gust") or function_Cached("HasMagicBoomerang")==1 ) ) ) then
+	elseif ( ( has("grabbable_allow") ) and function_Cached("OverworldBlocks")==1 and ( has("gust") or function_Cached("HasMagicBoomerang")==1 ) ) then
+		return 2
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") or has("grabbable_allow") ) and ( function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==2 ) and has("grip") and ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( has("gust") or function_Cached("HasMagicBoomerang")==1 ) ) ) then
 		return 2
 	elseif ( function_Cached("OverworldBlocks")==1 ) then
 		return 3
@@ -1323,7 +1345,7 @@ function DeepwoodMadderHP()
 		return 1
 	elseif ( ( function_Cached("DeepwoodPreMadderpillar")==1 or function_Cached("DeepwoodPreMadderpillar")==2 ) and ( function_Cached("DeepwoodMadderpillarDoor")==1 or function_Cached("DeepwoodMadderpillarDoor")==2 ) and function_Cached("DeepwoodWeb")==1 ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( ( ( function_Cached("DeepwoodPreMadderpillar")==1 or function_Cached("DeepwoodPreMadderpillar")==2 ) and ( function_Cached("DeepwoodMadderpillarDoor")==1 or function_Cached("DeepwoodMadderpillarDoor")==2 ) and function_Cached("DeepwoodWeb")==1 ) or has("gust") and ( function_Cached("Deepwood1stDoor")==1 or ( function_Cached("DeepwoodPreMadderpillar")==1 or function_Cached("DeepwoodPreMadderpillar")==2 ) ) ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") or has("grabbable_allow") ) and ( ( ( function_Cached("DeepwoodPreMadderpillar")==1 or function_Cached("DeepwoodPreMadderpillar")==2 ) and ( function_Cached("DeepwoodMadderpillarDoor")==1 or function_Cached("DeepwoodMadderpillarDoor")==2 ) and function_Cached("DeepwoodWeb")==1 ) or has("gust") and ( function_Cached("Deepwood1stDoor")==1 or ( function_Cached("DeepwoodPreMadderpillar")==1 or function_Cached("DeepwoodPreMadderpillar")==2 ) ) ) ) then
 		return 2
 	else
 		return 0
@@ -1338,6 +1360,8 @@ function CoFRupees()
 		return 1
 	elseif ( ( function_Cached("BombWalls")==1 or function_Cached("Bobombs")==1 or function_Cached("Bobombs")==2 ) and ( function_Cached("CoFSpikeBeetle")==1 or function_Cached("CoFSpikeBeetle")==2 ) ) then
 		return 2
+	elseif ( has("grabbable_allow") and has("gust") ) then
+		return 2
 	else
 		return 0
 	end
@@ -1351,6 +1375,8 @@ function FoWLeftRupee()
 		return 1
 	elseif ( function_Cached("FoWEyeSwitch")==1 and function_Cached("FoWStalfosFight")==2 ) then
 		return 2
+	elseif ( ( has("grabbable_allow") ) and has("gust") ) then
+		return 2
 	else
 		return 0
 	end
@@ -1362,6 +1388,8 @@ function FoWEntranceRupee()
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
+	elseif ( ( has("grabbable_allow") ) and has("gust") ) then
+		return 2
 	else
 		return 0
 	end
@@ -1373,6 +1401,8 @@ function FoWHP()
 		return 1
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and has("gust") ) then
 		return 1
+	elseif ( ( has("grabbable_allow") ) and has("gust") ) then
+		return 2
 	else
 		return 0
 	end
@@ -1385,7 +1415,7 @@ function ToDRightRupees()
 		return 1
 	elseif ( function_Cached("ToD2ndRupeePath")==2 ) then
 		return 2
-	elseif ( has("grabbable_hard") and has("gust") and function_Cached("ToDLilypadEnd")==2 ) then
+	elseif ( ( has("grabbable_hard") or has("grabbable_allow") ) and has("gust") and ( function_Cached("ToDLilypadEnd")==1 or function_Cached("ToDLilypadEnd")==2 ) ) then
 		return 2
 	else
 		return 0
@@ -1399,6 +1429,8 @@ function PoWRupees()
 	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and function_Cached("HasMagicBoomerang")==1 ) then
 		return 1
 	elseif ( function_Cached("PoWJump")==2 ) then
+		return 2
+	elseif ( ( has("grabbable_allow") ) and function_Cached("HasMagicBoomerang")==1 ) then
 		return 2
 	else
 		return 0
@@ -1419,11 +1451,13 @@ function PoWDrop()
 		return 1
 	elseif ( has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and has("cane") and ( function_Cached("PoWPotPuzzle")==1 or function_Cached("PoWPotPuzzle")==2 ) ) then
 		return 2
-	elseif ( has("grabbable_easy") and ( ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) or function_Cached("PoWBlueWarp")==1 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( function_Cached("HasBoomerang")==1 and ( function_Cached("LightArrowBreak")==1 or function_Cached("LightArrowBreak")==2 or has("cane") ) ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_allow") ) and ( ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) or function_Cached("PoWBlueWarp")==1 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( function_Cached("HasBoomerang")==1 and ( function_Cached("LightArrowBreak")==1 or function_Cached("LightArrowBreak")==2 or has("cane") ) ) ) then
 		return 2
-	elseif ( has("grabbable_easy") and function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 and ( has("gust") or ( function_Cached("HasBoomerang")==1 and ( function_Cached("LightArrowBreak")==2 or has("cane") ) ) ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_allow") ) and function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 and ( has("gust") or ( function_Cached("HasBoomerang")==1 and ( function_Cached("LightArrowBreak")==1 or function_Cached("LightArrowBreak")==2 or has("cane") ) ) ) ) then
 		return 2
-	elseif ( has("grabbable_hard") and ( ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) or function_Cached("PoWBlueWarp")==1 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and function_Cached("HasBoomerang")==1 ) then
+	elseif ( ( has("grabbable_hard") or has("grabbable_allow") ) and ( ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) or function_Cached("PoWBlueWarp")==1 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and function_Cached("HasBoomerang")==1 ) then
+		return 2
+	elseif ( ( has("grabbable_hard") or has("grabbable_allow") ) and function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 and ( has("gust") or function_Cached("HasBoomerang")==1 ) ) then
 		return 2
 	else
 		return 0
@@ -1440,7 +1474,7 @@ function PoWHP()
 		return 1
 	elseif ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( ( ( function_Cached("PoW2ndHalf1stDoor")==1 or function_Cached("PoW2ndHalf1stDoor")==2 ) and has("cape") ) or function_Cached("PoWShortcuts")==1 ) and ( function_Cached("PoWHandRoom")==1 or function_Cached("PoWHandRoom")==2 ) and ( ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) or function_Cached("PoWBlueWarp")==1 ) ) then
 		return 2
-	elseif ( ( has("grabbable_easy") or has("grabbable_hard") ) and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoW1stDoor")==1 or function_Cached("PoW1stDoor")==2 ) and ( has("gust") or function_Cached("HasBoomerang")==1 ) ) then
+	elseif ( ( has("grabbable_easy") or has("grabbable_hard") or has("grabbable_allow") ) and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoW1stDoor")==1 or function_Cached("PoW1stDoor")==2 ) and ( has("gust") or function_Cached("HasBoomerang")==1 ) ) then
 		return 2
 	else
 		return 0

@@ -2,7 +2,7 @@
 -- Generated 16.06.23 by deoxis9001 
 setting_preset_data_title[numero_preset]="Custom"
 numero_preset=numero_preset+1
-setting_preset_version_custom=2
+setting_preset_version_custom=3
 setting_preset_data["Custom"] = {}
 -- DHC Requirements
 	setting_preset_data["Custom"]["ped_items_off"] = 0
@@ -40,8 +40,9 @@ setting_preset_data["Custom"] = {}
 	-- Part 1
 		setting_preset_data["Custom"]["grabbable_none"] = 0
 			-- 0 = No
-			-- 1 = Easy
-			-- 2 = Hard
+			-- 1 = Allow
+			-- 2 = Require
+			-- 3 = Require Hard
 		setting_preset_data["Custom"]["blowdust_off"] = 0
 			-- 0 = No
 			-- 1 = Yes
@@ -268,9 +269,6 @@ setting_preset_data["Custom"] = {}
 		-- 0 = None
 		-- 1 = Vanilla
 		-- 2 = Completed
-setting_preset_data["Custom"]["grabbable_out_off"] = 0
-		-- 0 = No out logic
-		-- 1 = out logic
 setting_preset_data["Custom"]["blowdust_out_off"] = 0
 		-- 0 = No out logic
 		-- 1 = out logic

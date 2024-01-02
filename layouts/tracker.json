@@ -12,322 +12,6 @@
 			["redW","redV","redE","blueL","blueS","greenC","greenG","greenP","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack"],
 		]
   },
-  "windcrest_settings": {
-   "type": "group",
-   "header": "Wind Crest Settings",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["crenelwindcrest_no","swampwindcrest_no"],
-					 ["fallswindcrest_no","shfwindcrest_no"],
-					 ["cloudwindcrest_no","minishwindcrest_no"]
-				 ]
-			 }
-		 ]
-   }
-  },
-  "warp_settings": {
-   "type": "group",
-   "header": "Warp Settings",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["dws_warps_none","tod_warps_none"],
-					 ["cof_warps_none","pow_warps_none"],
-					 ["fow_warps_none","dhc_warps_none"]
-				 ]
-			 }
-		 ]
-   }
-  },
-  "dungeon_shuffle": {
-   "type": "group",
-   "header": "Dungeons shuffle",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["dws_none","tod_none"],
-					 ["cof_none","crypt_none"],
-					 ["fow_none","pow_none"],
-					 ["dhc_none"]
-				 ]
-			 }
-		 ]
-   }
-  },
-  "dhc_requirement": {
-   "type": "group",
-   "header": "Dark Hyrule Castle Requirements",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["ped_items_off"],
-					 ["dhc_closed","figurine_option"],
-					 ["element4Needed","figurine10"],
-					 ["sword5Needed","figurine50"],
-					 ["dungeons","figurinemax"]
-				 ]
-			 }
-		 ]
-   }
-  },
-  "out_logic_settings": {
-   "type": "group",
-   "header": "Logic Settings Part 1",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["grabbable_out_off","blowdust_out_off"],
-					 ["crenelmushroom_out_off","lightarrowbreak_out_off"],
-					 ["bobombs_out_off","likelike_out_off"],
-					 ["guardskip_out_off","crenelbeam_out_off"],
-					 ["downstrikebeetle_out_off","darkrooms_out_off"],
-				 ]
-			 }
-		 ]
-   }
-  },
-  "out_logic_settings2": {
-   "type": "group",
-   "header": "Logic Settings Part 2",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["capeextension_out_off","lakeminish_out_off"],
-					 ["cabinswim_out_off","cloudskill_out_off"],
-					 ["powjump_out_off","powpotpuzzleool_out_off"],
-					 ["dhccanonhit_out_off","dhcbladepuzzleshuffle_out_off"],
-					 ["dhcswitchhit_out_off","fowpot_out_off"]
-				 ]
-			 }
-		 ]
-   }
-  },
-  "logic_settings": {
-   "type": "group",
-   "header": "Logic Settings Part 1",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["grabbable_none","blowdust_off"],
-					 ["crenelmushroom_off","lightarrowbreak_off"],
-					 ["bobombs_off","likelike_off"],
-					 ["guardskip_off","crenelbeam_off"],
-					 ["downstrikebeetle_off","darkrooms_off"],
-				 ]
-			 }
-		 ]
-   }
-  },
-  "logic_settings2": {
-   "type": "group",
-   "header": "Logic Settings Part 2",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["capeextension_off","lakeminish_off"],
-					 ["cabinswim_off","cloudskill_off"],
-					 ["powjump_off","powpotpuzzleool_off"],
-					 ["dhccanonhit_off","dhcbladepuzzleshuffle_off"],
-					 ["dhcswitchhit_off","fowpot_off"]
-				 ]
-			 }
-		 ]
-   }
-  },
-  "weapons_settings": {
-   "type": "group",
-   "header": "Weapons Settings",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["progressiveitems"],
-					 ["weaponsbombs_no","weaponsbow_no"],
-					 ["weaponsgust_no","weaponslamp_no"],
-				 ]
-			 }
-		 ]
-   }
-  },
-  "locations_settings": {
-   "type": "group",
-   "header": "World Settings",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["hp_shuffle","specialpot_off",],
-					 ["digging_off","underwater_off"],
-					 ["rupees_off","golden_enemy_off"],
-					 ["cucco_none",""],
-					 ["goron_none","goron_eu"],
-				 ]
-			 }
-		 ]
-   }
-  },
-  "fusion_settings": {
-   "type": "group",
-   "header": "Fusion Settings",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["fusiongoldcombined","fusiongold_removed"],
-					 ["fusionredcombined","fusionred_removed"],
-					 ["fusionbluecombined","fusionblue_removed"],
-					 ["fusiongreencombined","fusiongreen_removed"]
-				]
-			 }
-		 ]
-   }
-  },
-  "out_logic_settings3": {
-   "type": "group",
-   "header": "Others Settings",
-   "content": {
-		"type": "scroll",
-		"max_height":"448",
-		"h_alignment": "center",
-		"v_alignment": "top",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width":320,
-				"item_height":64,
-				"rows": [
-					 ["out_logic_no"],
-					 ["small_key_out_off","fusiongold_out_off"],
-					 ["beam_out_off","fusionred_out_off"],
-					 ["damage_source_out_off","fusionblue_out_off"],
-					 ["","fusiongreen_out_off"]
-				]
-			 }
-		 ]
-   }
-  },
   "tracker_capture_item": {
    "type": "container",
    "content": {
@@ -360,26 +44,484 @@
 	 ["allelement"]	 
     ]    
    }
-  },
-  "open_world_settings": {
+  },  
+  "dungeon_shuffle": {
    "type": "group",
-   "header": "Settings",
+   "header": "Dungeons shuffle",
    "content": {
-    "type": "itemgrid",
-    "h_alignment": "center",
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
 		"v_alignment": "top",
-    "item_margin": "0,0",
-		"item_height":64,
-		"item_width":320,
-    "rows": [
-		 ["dungeonser_off","openworld_off"],
-		 ["open_tingle_no","open_wind_tribe_no"],
-		 ["small_key_none","big_key_none"],
-		 ["preset_01"]
-    ]
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["dws_none","tod_none"],
+					 ["cof_none","crypt_none"],
+					 ["fow_none","pow_none"],
+					 ["dhc_none"]
+				 ]
+			 }
+		 ]
    }
   },
-	"outoflogic": {
+  "main_dungeons_settings": {
+   "type": "group",
+   "header": "Dungeons Settings",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["small_key_none","big_key_none"],
+				]
+			 }
+		 ]
+   }
+  },
+  "main_requirements": {
+   "type": "group",
+   "header": "Requirements",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["dhc_closed",""],
+					 ["dungeons","sword5Needed"],
+					 ["element4Needed",""],
+					 ["figurine_option","figurine10"],
+					 ["figurine50","figurinemax"],
+				 ]
+			 }
+		 ]
+   }
+  },
+  "main_shuffle": {
+   "type": "group",
+   "header": "shuffle",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["","cucco_none",""],
+					 ["goron_none","",""],
+					 ["hp_shuffle","rupees_off","specialpot_off"],
+					 ["digging_off","underwater_off","golden_enemy_off"],
+					 ["ped_items_off","",""],
+				 ]
+			 }
+		 ]
+   }
+  },
+  "world_global": {
+   "type": "group",
+   "header": "Global",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["openworld_off","dungeonser_off"]
+				 ]
+			 }
+		 ]
+   }
+  },
+  "world_fusions": {
+   "type": "group",
+   "header": "Fusions",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["fusiongoldcombined","fusiongold_removed"],
+					 ["fusionredcombined","fusionred_removed"],
+					 ["fusionbluecombined","fusionblue_removed"],
+					 ["fusiongreencombined","fusiongreen_removed"]
+				]
+			 }
+		 ]
+   }
+  },
+  "world_speed_up": {
+   "type": "group",
+   "header": "Speed up",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["open_wind_tribe_no","open_tingle_no"]
+				]
+			 }
+		 ]
+   }
+  },
+  "world_wind_crests": {
+   "type": "group",
+   "header": "Wind Crest",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["crenelwindcrest_no","swampwindcrest_no","cloudwindcrest_no"],
+					 ["","fallswindcrest_no","shfwindcrest_no"],
+					 ["minishwindcrest_no","",""]
+				 ]
+			 }
+		 ]
+   }
+  },
+   "world_dungeon_warps": {
+   "type": "group",
+   "header": "Dungeon Warps",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["dws_warps_none","cof_warps_none"],
+					 ["fow_warps_none","tod_warps_none"],
+					 ["pow_warps_none","dhc_warps_none"]
+				 ]
+			 }
+		 ]
+   }
+  },
+   "logic_logic_rules": {
+   "type": "group",
+   "header": "Logic Rules",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["grabbable_none"]
+				 ]
+			 }
+		 ]
+   }
+  },
+  "logic_weapons": {
+   "type": "group",
+   "header": "Weapons Settings",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["weaponsbombs_no","weaponsbow_no"],
+					 ["weaponsgust_no","weaponslamp_no"],
+				 ]
+			 }
+		 ]
+   }
+  },
+  "logic_require_trick1": {
+   "type": "group",
+   "header": "Require Trick",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["blowdust_off","crenelmushroom_off"],
+					 ["lightarrowbreak_off","bobombs_off"],
+					 ["likelike_off","guardskip_off"],
+					 ["crenelbeam_off","downstrikebeetle_off"],
+					 ["darkrooms_off","capeextension_off"],
+				 ]
+			 }
+		 ]
+   }
+  },
+  "logic_require_trick2": {
+   "type": "group",
+   "header": "Require Trick",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["lakeminish_off","cabinswim_off"],
+					 ["cloudskill_off","powjump_off"],
+					 ["powpotpuzzleool_off","dhccanonhit_off"],
+					 ["dhcbladepuzzleshuffle_off","dhcswitchhit_off"],
+					 ["fowpot_off",""]
+				 ]
+			 }
+		 ]
+   }
+  },
+  "item_pool_progressive": {
+   "type": "group",
+   "header": "Progressive",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["progressiveitems"],
+				 ]
+			 }
+		 ]
+   }
+  },
+  "gameplay_extra": {
+   "type": "group",
+   "header": "Extra",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["goron_eu"],
+				 ]
+			 }
+		 ]
+   }
+  },
+  "tracker_out_of_logic_require_trick1": {
+   "type": "group",
+   "header": "Out of logic (Require Trick) 1/2",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["blowdust_out_off","crenelmushroom_out_off"],
+					 ["lightarrowbreak_out_off","bobombs_out_off"],
+					 ["likelike_out_off","guardskip_out_off"],
+					 ["crenelbeam_out_off","downstrikebeetle_out_off"],
+					 ["darkrooms_out_off","capeextension_out_off"],
+				 ]
+			 }
+		 ]
+   }
+  },
+  "tracker_out_of_logic_require_trick2": {
+   "type": "group",
+   "header": "Out of logic (Require Trick) 2/2",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["lakeminish_out_off","cabinswim_out_off"],
+					 ["cloudskill_out_off","powjump_out_off"],
+					 ["powpotpuzzleool_out_off","dhccanonhit_out_off"],
+					 ["dhcbladepuzzleshuffle_out_off","dhcswitchhit_out_off"],
+					 ["fowpot_out_off",""]
+				 ]
+			 }
+		 ]
+   }
+  },
+   "tracker_out_of_logic_other": {
+   "type": "group",
+   "header": "Out of logic (Others)",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["out_logic_no"],
+					 ["small_key_out_off","fusiongold_out_off"],
+					 ["beam_out_off","fusionred_out_off"],
+					 ["damage_source_out_off","fusionblue_out_off"],
+					 ["","fusiongreen_out_off"]
+				]
+			 }
+		 ]
+   }
+  },
+   "tracker_settings_tracking_other": {
+   "type": "group",
+   "header": "Settings Tracking Other",
+   "content": {
+		"type": "scroll",
+		"max_height":"448",
+		"h_alignment": "center",
+		"v_alignment": "top",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width":320,
+				"item_height":64,
+				"rows": [
+					 ["preset_01"]
+				]
+			 }
+		 ]
+   }
+  },
+  	"settings_tab_tracker": {
 		"type": "dock",
 		"content":[
 		 {
@@ -388,34 +530,42 @@
 			"style":"wrap",
 			"tabs":[
 			 {
-				"title":"Logic Settings part1",
-				"icon":"images/icon-maps/Treasure Icon.png",
+				"title":"Settings Tracking Other",
+				"icon":"images/icon-maps/Library Book - A History of Masks.png",
 				"content":{
 				 "type":"layout",
-				 "key": "out_logic_settings"
+				 "key": "tracker_settings_tracking_other"
 				}
 			 },
 			 {
-				"title":"Logic Settings part2",
-				"icon":"images/icon-maps/Treasure Icon.png",
+				"title":"Out of logic (Require Trick) 1/2",
+				"icon":"images/icon-maps/Library Book - A Hyrulean Bestiary.png",
 				"content":{
 				 "type":"layout",
-				 "key": "out_logic_settings2"
+				 "key": "tracker_out_of_logic_require_trick1"
 				}
 			 },
 			 {
-				"title":"Other Settings",
-				"icon":"images/icon-maps/Cave Entrance Icon.png",
+				"title":"Out of logic (Require Trick) 2/2",
+				"icon":"images/icon-maps/Library Book - A Hyrulean Bestiary.png",
 				"content":{
 				 "type":"layout",
-				 "key": "out_logic_settings3"
+				 "key": "tracker_out_of_logic_require_trick2"
 				}
-			 }
+			 },
+			 {
+				"title":"Out of logic (Other)",
+				"icon":"images/icon-maps/Library Book - Legend of the Picori.png",
+				"content":{
+				 "type":"layout",
+				 "key": "tracker_out_of_logic_other"
+				}
+			 },
 			]
 		 }
 		]
 	},
-	"settings_tab_open_world": {
+	"settings_tab_logic": {
 		"type": "dock",
 		"content":[
 		 {
@@ -424,42 +574,94 @@
 			"style":"wrap",
 			"tabs":[
 			 {
-				"title":"Wind Crest Settings",
-				"icon":"images/icon-maps/Wind Tablet.png",
+				"title":"Logic Rules",
+				"icon":"images/icon-maps/Gust Jar.png",
 				"content":{
-				 "type":"layout",
-				 "key": "windcrest_settings"
+					"type":"layout",
+					"key": "logic_logic_rules"
 				}
 			 },
 			 {
-				"title":"Warps Dungeons Settings",
-				"icon":"images/icon-maps/Blue_Warp.png",
+				"title":"Weapons",
+				"icon":"images/icon-maps/weapons.png",
 				"content":{
-				 "type":"layout",
-				 "key": "warp_settings"
+					"type":"layout",
+					"key": "logic_weapons"
 				}
 			 },
 			 {
-				"title":"Settings",
+				"title":"Require Trick 1/2",
+				"icon":"images/icon-maps/Link Icon.png",
+				"content":{
+					"type":"layout",
+					"key": "logic_require_trick1"
+				}
+			 },
+			 {
+				"title":"Require Trick 2/2",
+				"icon":"images/icon-maps/Link Icon.png",
+				"content":{
+					"type":"layout",
+					"key": "logic_require_trick2"
+				}
+			 },
+          ]
+		}
+	  ]
+	},
+	"settings_tab_world": {
+		"type": "dock",
+		"content":[
+		 {
+			"type":"tabbed",
+			"dock":"top",
+			"style":"wrap",
+			"tabs":[
+			 {
+				"title":"Global",
 				"icon":"images/icon-maps/Entrance Icon.png",
 				"content":{
-				 "type":"layout",
-				 "key": "open_world_settings"
+					"type":"layout",
+					"key": "world_global"
 				}
 			 },
 			 {
-				"title":"Out of logic Settings",
+				"title":"Fusions",
 				"icon":"images/icon-maps/Kinstone Bag (Giant).png",
 				"content":{
-				 "type":"layout",
-				 "key": "outoflogic"
+					"type":"layout",
+					"key": "world_fusions"
 				}
-			 }
+			 },
+			 {
+				"title":"Speed up",
+				"icon":"images/icon-maps/Ocarina of Wind.png",
+				"content":{
+					"type":"layout",
+					"key": "world_speed_up"
+				}
+			 },
+			 {
+				"title":"Wind Crests",
+				"icon":"images/icon-maps/Wind Tablet.png",
+				"content":{
+					"type":"layout",
+					"key": "world_wind_crests"
+				}
+			 },
+			 {
+				"title":"Dungeon Warps",
+				"icon":"images/icon-maps/Blue_Warp.png",
+				"content":{
+					"type":"layout",
+					"key": "world_dungeon_warps"
+				}
+			 },
 			]
 		 }
 		]
 	},
-	"settings_tab_logic_settings": {
+	"settings_tab_main": {
 		"type": "dock",
 		"content":[
 		 {
@@ -468,47 +670,55 @@
 			"style":"wrap",
 			"tabs":[
 			 {
-				"title":"Part 1",
-				"icon":"images/icon-maps/Treasure Icon.png",
+				"title":"Dungeons Settings",
+				"icon":"images/icon-maps/Big Key.png",
 				"content":{
-				 "type":"layout",
-				 "key": "logic_settings"
+					"type":"layout",
+					"key": "main_dungeons_settings"
 				}
 			 },
 			 {
-				"title":"Part 2",
-				"icon":"images/icon-maps/Treasure Icon.png",
-				"content":{
-				 "type":"layout",
-				 "key": "logic_settings2"
-				}
-			 },
-			]
-		 }
-		]
-	},
-	"settings": {
-		"type": "dock",
-		"content":[
-		 {
-			"type":"tabbed",
-			"dock":"top",
-			"style":"wrap",
-			"tabs":[
-			 {
-				"title":"Dark Hyrule Castle Requirements",
+				"title":"Requirements",
 				"icon":"images/icon-maps/Light Force.png",
 				"content":{
 					"type":"layout",
-					"key": "dhc_requirement"
+					"key": "main_requirements"
 				}
 			 },
 			 {
-				"title":"Logic Settings",
-				"icon":"images/icon-maps/Treasure Icon.png",
+				"title":"Shuffle",
+				"icon":"images/icon-maps/Monster Icon.png",
 				"content":{
-				 "type":"layout",
-				 "key": "settings_tab_logic_settings"
+					"type":"layout",
+					"key": "main_shuffle"
+				}
+			 },
+			]
+		 }
+		]
+	},
+	"settings_tab_settings": {
+		"type": "dock",
+		"content":[
+		 {
+			"type":"tabbed",
+			"dock":"top",
+			"style":"wrap",
+			"tabs":[
+			 {
+				"title":"Tracker",
+				"icon":"images/icon-maps/Mysterious Shell.png",
+				"content":{
+					"type":"layout",
+					"key": "settings_tab_tracker"
+				}
+			 },
+			 {
+				"title":"Main Settings",
+				"icon":"images/icon-maps/Elements.png",
+				"content":{
+					"type":"layout",
+					"key": "settings_tab_main"
 				}
 			 },
 			 {
@@ -516,31 +726,31 @@
 				"icon":"images/icon-maps/Cave Entrance Icon.png",
 				"content":{
 				 "type":"layout",
-				 "key": "settings_tab_open_world"
+				 "key": "settings_tab_world"
 				}
 			 },
 			 {
-				"title":"Locations Settings",
-				"icon":"images/icon-maps/Sign.png",
+				"title":"Logic Settings",
+				"icon":"images/icon-maps/Treasure Icon.png",
 				"content":{
 				 "type":"layout",
-				 "key": "locations_settings"
+				 "key": "settings_tab_logic"
 				}
 			 },
 			 {
-				"title":"Weapons Settings",
-				"icon":"images/icon-maps/Four Sword.png",
+				"title":"Item Pool",
+				"icon":"images/icon-maps/Fire Rod.png",
 				"content":{
-				 "type":"layout",
-				 "key": "weapons_settings"
+					"type":"layout",
+					"key": "item_pool_progressive"
 				}
 			 },
 			 {
-				"title":"Fusions Settings",
-				"icon":"images/icon-maps/Kinstone Bag (Giant).png",
+				"title":"Gameplay",
+				"icon":"images/icon-maps/Person Icon.png",
 				"content":{
-				 "type":"layout",
-				 "key": "fusion_settings"
+					"type":"layout",
+					"key": "gameplay_extra"
 				}
 			 },
 			]
@@ -557,7 +767,7 @@
 			"tabs":[
 				 {
 					"title":"Deepwood Shrine",
-					"icon":"images/icon-maps/Gust Jar.png",
+					"icon":"images/icon-maps/chu.png",
 					"content":{
 					 "type":"map",
 					 "maps":["dws"]
@@ -565,7 +775,7 @@
 				 },
 				 {
 					"title":"Cave of Flames",
-					"icon":"images/icon-maps/Cane of Pacci.png",
+					"icon":"images/icon-maps/gleerok.png",
 					"content":{
 					 "type":"map",
 					 "maps":["cof"]
@@ -573,7 +783,7 @@
 				 },
 				 {
 					"title":"Fortress of Winds",
-					"icon":"images/icon-maps/Mole Mitts.png",
+					"icon":"images/icon-maps/mazaal.png",
 					"content":{
 					 "type":"map",
 					 "maps":["fow"]
@@ -581,7 +791,7 @@
 				 },
 				 {
 					"title":"Temple of Droplets",
-					"icon":"images/icon-maps/Lamp (Lit).png",
+					"icon":"images/icon-maps/octo.png",
 					"content":{
 					 "type":"map",
 					 "maps":["tod"]
@@ -589,7 +799,7 @@
 				 },
 				 {
 					"title":"Royal Crypt",
-					"icon":"images/icon-maps/Gold Kinstone (Falls).png",
+					"icon":"images/icon-maps/gustaf.png",
 					"content":{
 					 "type":"map",
 					 "maps":["rc"]
@@ -597,7 +807,7 @@
 				 },
 				 {
 					"title":"Palace of Winds",
-					"icon":"images/icon-maps/Roc's Cape.png",
+					"icon":"images/icon-maps/gyorg.png",
 					"content":{
 					 "type":"map",
 					 "maps":["pow"]
@@ -665,7 +875,7 @@
             "tabs":[
              {
               "title":"Overworld",
-              "icon":"images/icon-maps/Map.png",
+              "icon":"images/icon-maps/Compass.png",
               "content":{
                "type":"map",
                "maps":["map"]
@@ -692,9 +902,9 @@
               "icon":"images/icon-maps/Key Block.png",
               "content":{
 								"type":"layout",
-								"key": "settings"
+								"key": "settings_tab_settings"
               }
-             },
+             }
             ]
            }
           ]

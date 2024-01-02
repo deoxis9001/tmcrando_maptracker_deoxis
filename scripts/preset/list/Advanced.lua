@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="Advanced"
 numero_preset=numero_preset+1
 setting_preset_data["Advanced"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["Advanced"]["cloudwindcrest_no"] = 0
 setting_preset_data["Advanced"]["swampwindcrest_no"] = 1
 setting_preset_data["Advanced"]["shfwindcrest_no"] = 1
 setting_preset_data["Advanced"]["minishwindcrest_no"] = 1
-setting_preset_data["Advanced"]["grabbable_none"] = 1
+setting_preset_data["Advanced"]["grabbable_none"] = 2
 setting_preset_data["Advanced"]["weaponsbombs_no"] = 1
 setting_preset_data["Advanced"]["weaponsbow_no"] = 1
 setting_preset_data["Advanced"]["weaponsgust_no"] = 1

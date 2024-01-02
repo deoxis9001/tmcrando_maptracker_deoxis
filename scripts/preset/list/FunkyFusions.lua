@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="FunkyFusions"
 numero_preset=numero_preset+1
 setting_preset_data["FunkyFusions"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["FunkyFusions"]["cloudwindcrest_no"] = 0
 setting_preset_data["FunkyFusions"]["swampwindcrest_no"] = 1
 setting_preset_data["FunkyFusions"]["shfwindcrest_no"] = 1
 setting_preset_data["FunkyFusions"]["minishwindcrest_no"] = 1
-setting_preset_data["FunkyFusions"]["grabbable_none"] = 0
+setting_preset_data["FunkyFusions"]["grabbable_none"] = 1
 setting_preset_data["FunkyFusions"]["weaponsbombs_no"] = 0
 setting_preset_data["FunkyFusions"]["weaponsbow_no"] = 0
 setting_preset_data["FunkyFusions"]["weaponsgust_no"] = 0
