@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="Expert"
 numero_preset=numero_preset+1
 setting_preset_data["Expert"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["Expert"]["cloudwindcrest_no"] = 0
 setting_preset_data["Expert"]["swampwindcrest_no"] = 0
 setting_preset_data["Expert"]["shfwindcrest_no"] = 0
 setting_preset_data["Expert"]["minishwindcrest_no"] = 0
-setting_preset_data["Expert"]["grabbable_none"] = 2
+setting_preset_data["Expert"]["grabbable_none"] = 3
 setting_preset_data["Expert"]["weaponsbombs_no"] = 2
 setting_preset_data["Expert"]["weaponsbow_no"] = 2
 setting_preset_data["Expert"]["weaponsgust_no"] = 1

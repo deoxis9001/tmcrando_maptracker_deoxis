@@ -21,7 +21,7 @@ end
 function Palace_1stHalf_2F_Item() 
 	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1) and function_Cached("PoWRupees")==1 then
 		return 1
-	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1) and function_Cached("PoWRupees")==1 then
+	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1) and ( function_Cached("PoWRupees")==1 or function_Cached("PoWRupees")==2 ) then
 		return 2
 	else
 		return 0

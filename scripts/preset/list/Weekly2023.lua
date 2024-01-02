@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="Weekly2023"
 numero_preset=numero_preset+1
 setting_preset_data["Weekly2023"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["Weekly2023"]["cloudwindcrest_no"] = 0
 setting_preset_data["Weekly2023"]["swampwindcrest_no"] = 1
 setting_preset_data["Weekly2023"]["shfwindcrest_no"] = 1
 setting_preset_data["Weekly2023"]["minishwindcrest_no"] = 1
-setting_preset_data["Weekly2023"]["grabbable_none"] = 0
+setting_preset_data["Weekly2023"]["grabbable_none"] = 1
 setting_preset_data["Weekly2023"]["weaponsbombs_no"] = 0
 setting_preset_data["Weekly2023"]["weaponsbow_no"] = 0
 setting_preset_data["Weekly2023"]["weaponsgust_no"] = 0

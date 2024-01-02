@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="Firerod"
 numero_preset=numero_preset+1
 setting_preset_data["Firerod"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["Firerod"]["cloudwindcrest_no"] = 0
 setting_preset_data["Firerod"]["swampwindcrest_no"] = 0
 setting_preset_data["Firerod"]["shfwindcrest_no"] = 0
 setting_preset_data["Firerod"]["minishwindcrest_no"] = 0
-setting_preset_data["Firerod"]["grabbable_none"] = 0
+setting_preset_data["Firerod"]["grabbable_none"] = 1
 setting_preset_data["Firerod"]["weaponsbombs_no"] = 0
 setting_preset_data["Firerod"]["weaponsbow_no"] = 0
 setting_preset_data["Firerod"]["weaponsgust_no"] = 0

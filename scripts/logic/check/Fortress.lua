@@ -23,7 +23,7 @@ end
 function Fortress_Entrance_1F_RightItem() 
 	if ( function_Cached("FowDungeons")==1 and function_Cached("FoWEntranceRupee")==1) then
 		return 1
-	elseif ( ( function_Cached("FowDungeons")==1 or function_Cached("FowDungeons")==2 ) and function_Cached("FoWEntranceRupee")==1) then
+	elseif ( ( function_Cached("FowDungeons")==1 or function_Cached("FowDungeons")==2 ) and ( function_Cached("FoWEntranceRupee")==1 or function_Cached("FoWEntranceRupee")==2) ) then
 		return 2
 	else
 		return 0
@@ -175,7 +175,7 @@ end
 function Fortress_Entrance_1F_RightHP() 
 	if ( function_Cached("FowDungeons")==1 and function_Cached("FoWHP")==1) then
 		return 1
-	elseif ( ( function_Cached("FowDungeons")==1 or function_Cached("FowDungeons")==2 ) and function_Cached("FoWHP")==1) then
+	elseif ( ( function_Cached("FowDungeons")==1 or function_Cached("FowDungeons")==2 ) and ( function_Cached("FoWHP")==1 or function_Cached("FoWHP")==2 ) ) then
 		return 2
 	elseif ( ( function_Cached("FowDungeons")==1 or function_Cached("FowDungeons")==2 ) ) then
 		return 3

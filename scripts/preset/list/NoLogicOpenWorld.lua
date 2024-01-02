@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="NoLogicOpenWorld"
 numero_preset=numero_preset+1
 setting_preset_data["NoLogicOpenWorld"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["NoLogicOpenWorld"]["cloudwindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["swampwindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["shfwindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["minishwindcrest_no"] = 1
-setting_preset_data["NoLogicOpenWorld"]["grabbable_none"] = 0
+setting_preset_data["NoLogicOpenWorld"]["grabbable_none"] = 1
 setting_preset_data["NoLogicOpenWorld"]["weaponsbombs_no"] = 0
 setting_preset_data["NoLogicOpenWorld"]["weaponsbow_no"] = 0
 setting_preset_data["NoLogicOpenWorld"]["weaponsgust_no"] = 0

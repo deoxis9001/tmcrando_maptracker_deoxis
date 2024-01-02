@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="MaxRandom"
 numero_preset=numero_preset+1
 setting_preset_data["MaxRandom"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["MaxRandom"]["cloudwindcrest_no"] = 1
 setting_preset_data["MaxRandom"]["swampwindcrest_no"] = 1
 setting_preset_data["MaxRandom"]["shfwindcrest_no"] = 1
 setting_preset_data["MaxRandom"]["minishwindcrest_no"] = 1
-setting_preset_data["MaxRandom"]["grabbable_none"] = 0
+setting_preset_data["MaxRandom"]["grabbable_none"] = 1
 setting_preset_data["MaxRandom"]["weaponsbombs_no"] = 1
 setting_preset_data["MaxRandom"]["weaponsbow_no"] = 1
 setting_preset_data["MaxRandom"]["weaponsgust_no"] = 1
