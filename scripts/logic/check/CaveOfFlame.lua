@@ -12,7 +12,7 @@ end
 function CoF_1F_Item() 
 	if ( function_Cached("CofDungeons")==1 and function_Cached("CoFRupees")==1 ) then
 		return 1
-	elseif ( function_Cached("CofDungeons")==2 and function_Cached("CoFRupees")==1 ) then
+	elseif ( ( function_Cached("CofDungeons")==1 or function_Cached("CofDungeons")==2 ) and ( function_Cached("CoFRupees")==1 or function_Cached("CoFRupees")==2 ) ) then
 		return 2
 	else
 		return 0

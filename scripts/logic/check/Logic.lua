@@ -439,7 +439,7 @@ function CrenelBase_WaterCave_HP()
 		return 1
 	elseif function_Cached("CrenelWindCrest")==1 and ( function_Cached("UpperBean")==1 or ( has("grip") and ( function_Cached("BombWalls")==1 or has("cape") ) ) ) and function_Cached("BombWalls")==1 and function_Cached("CrenelWaterCaveHP")==1 then
 		return 1
-	elseif ( function_Cached("AccessTrilby")==2 and function_Cached("LowerBean")==1 and function_Cached("BombWalls")==1 and function_Cached("CrenelWaterCaveHP")==1 ) then
+	elseif ( ( function_Cached("AccessTrilby")==1 or function_Cached("AccessTrilby")==2 ) and function_Cached("LowerBean")==1 and function_Cached("BombWalls")==1 and ( function_Cached("CrenelWaterCaveHP")==1 or function_Cached("CrenelWaterCaveHP")==2) ) then
 		return 2
 	else
 		return 0
@@ -724,7 +724,7 @@ end
 function Hylia_SmallIsland_HP() 
 	if ( function_Cached("AccessLonLon")==1 and function_Cached("LakeIslandHP")==1 ) then
 		return 1
-	elseif ( function_Cached("AccessLonLon")==2 and function_Cached("LakeIslandHP")==1 ) then
+	elseif ( ( function_Cached("AccessLonLon")==1 or function_Cached("AccessLonLon")==2 ) and ( function_Cached("LakeIslandHP")==1 or function_Cached("LakeIslandHP")==2) ) then
 		return 2
 	elseif ( function_Cached("AccessLonLon")==1 ) then
 		return 3
@@ -1272,6 +1272,8 @@ end
 function Town_Shop_BehindCounterItem() 
 	if ( function_Cached("ShopBack")==1 ) then
 		return 1
+	elseif ( function_Cached("ShopBack")==2 ) then
+		return 2
 	else
 		return 0
 	end 
@@ -1447,6 +1449,8 @@ end
 function Town_School_Path_HP() 
 	if ( function_Cached("SchoolHP")==1 ) then
 		return 1
+	elseif ( function_Cached("SchoolHP")==2 ) then
+		return 2
 	elseif ( function_Cached("SchoolHP")==3 ) then
 		return 3
 	else
@@ -1533,6 +1537,8 @@ end
 function Town_MusicHouse_HP() 
 	if ( function_Cached("MusicHouseHP")==1 ) then
 		return 1
+	elseif ( function_Cached("MusicHouseHP")==2 ) then
+		return 2
 	elseif ( function_Cached("MusicHouseHP")==3 ) then
 		return 3
 	else
@@ -2253,7 +2259,7 @@ end
 function Valley_GraveyardLeftGrave_HP() 
 	if ( function_Cached("AccessValley")==1 and function_Cached("DarkRooms")==1 and function_Cached("Graveyard")==1 and function_Cached("LeftGraveHP")==1 ) then
 		return 1
-	elseif ( ( function_Cached("AccessValley")==1 or function_Cached("AccessValley")==2 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and function_Cached("Graveyard")==1 and function_Cached("LeftGraveHP")==1 ) then
+	elseif ( ( function_Cached("AccessValley")==1 or function_Cached("AccessValley")==2 ) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and function_Cached("Graveyard")==1 and ( function_Cached("LeftGraveHP")==1 or function_Cached("LeftGraveHP")==2 ) ) then
 		return 2
 	else
 		return 0

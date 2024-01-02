@@ -1,5 +1,5 @@
 
--- Generated 17.06.23 by deoxis9001 
+-- Generated 02.01.24 by deoxis9001 
 setting_preset_data_title[numero_preset]="Beginner"
 numero_preset=numero_preset+1
 setting_preset_data["Beginner"] = {}
@@ -32,7 +32,7 @@ setting_preset_data["Beginner"]["cloudwindcrest_no"] = 0
 setting_preset_data["Beginner"]["swampwindcrest_no"] = 0
 setting_preset_data["Beginner"]["shfwindcrest_no"] = 0
 setting_preset_data["Beginner"]["minishwindcrest_no"] = 0
-setting_preset_data["Beginner"]["grabbable_none"] = 0
+setting_preset_data["Beginner"]["grabbable_none"] = 1
 setting_preset_data["Beginner"]["weaponsbombs_no"] = 0
 setting_preset_data["Beginner"]["weaponsbow_no"] = 0
 setting_preset_data["Beginner"]["weaponsgust_no"] = 0
