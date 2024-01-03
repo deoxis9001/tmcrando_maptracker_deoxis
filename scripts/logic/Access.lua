@@ -180,10 +180,9 @@ function AccessClouds()
 end
 
 function AccessCloudsWindTribe()
-	
-	if ( function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts")  or has("fusiongold_removed") ) ) then
+	if ( function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts")  or has("fusiongold_complet") ) ) then
 		return 1
-	elseif ( function_Cached("AccessClouds")==2 and ( has("cape") or has("mitts") or has("fusiongold_removed") ) ) then
+	elseif ( function_Cached("AccessClouds")==2 and ( has("cape") or has("mitts") or has("fusiongold_complet") ) ) then
 		return 2
 	else
 		return 0
