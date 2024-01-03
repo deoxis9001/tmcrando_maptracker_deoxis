@@ -621,8 +621,8 @@
 		"name":"Skull Room Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Fortress_SkullRoomChest"],
-		"chest_unopened_img":"images/items-map/Big_chest_closed.png",
-		"chest_opened_img":"images/items-map/Big_chest_open.png"
+		"chest_unopened_img":"images/items-map/big_chest_closed.png",
+		"chest_opened_img":"images/items-map/big_chest_open.png"
 	  },
 	  {
 		"name":"Mazaal",
