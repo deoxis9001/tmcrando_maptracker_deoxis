@@ -479,9 +479,12 @@ function FusionsRedNumber(code)
 	
 	if fusionredcombined:getActive() then
 		local count_Fuser=function_Cached("FusionsRedWNumber")+function_Cached("FusionsRedVNumber")+function_Cached("FusionsRedENumber")
-		if count_Fuser < redW:getActive() then
+		if redW:getActive() == redW:getActiveCount() then
 				function_data_fusion[code]=1
 				return 1
+		elseif count_Fuser < redW:getActive() then
+				function_data_fusion[code]=1
+				return 2
 		else
 				function_data_fusion[code]=0
 				return 0
@@ -523,9 +526,12 @@ function FusionsBlueNumber(code)
 	local info_fuze=0
 	if fusionbluecombined:getActive() then
 		local count_Fuser=function_Cached("FusionsBlueLNumber")+function_Cached("FusionsBlueSNumber")
-		if count_Fuser < blueL:getActive() then
+		if blueL:getActive()==blueL:getActiveCount() then
 				function_data_fusion[code]=1
 				return 1
+		elseif count_Fuser < blueL:getActive() then
+				function_data_fusion[code]=1
+				return 2
 		else
 				function_data_fusion[code]=0
 				return 0
@@ -593,7 +599,7 @@ function FusionsGreenNumber(code)
 	end
 	if fusiongreencombined:getActive() then
 		local count_Fuser=function_Cached("FusionsGreenCNumber")+function_Cached("FusionsGreenGNumber")+function_Cached("FusionsGreenPNumber")
-		if count_Fuser == greenC:getActiveCount() then
+		if greenC:getActive() == greenC:getActiveCount() then
 				function_data_fusion[code]=1
 				return 1
 		elseif count_Fuser < greenC:getActive() then
@@ -959,7 +965,6 @@ end
 
 
 function HasDamageSource()
-
 	if ( function_Cached("HasSword")==1 ) then
 		return 1
 	elseif ( has("weaponsbombs_yes") and has("bombs") ) then
@@ -1619,7 +1624,7 @@ function CloudsKill()
 		return 1
 	elseif ( function_Cached("HasDamageSource")==1 ) then
 		return 1
-	elseif ( has("cloudskill_out_on") and function_Cached("HasDamageSource")==2 ) then
+	elseif ( function_Cached("HasDamageSource")==2 ) then
 		return 2
 	elseif ( has("cloudskill_out_on") ) then
 		return 2

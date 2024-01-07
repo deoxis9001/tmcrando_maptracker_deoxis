@@ -503,7 +503,7 @@
     "name":"Bombs can damage nearly every enemy, Bombs are never considered for Simon Simulations, and Golden Enemies.",
     "type": "progressive",
     "loop": true,
-	"initial_stage_idx":1,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -527,7 +527,7 @@
     "name":"Bow can damage most enemies, many enemies are very resiliant to damage. Chu Bosses and Darknuts are Immune.",
     "type": "progressive",
     "loop": true,
-	"initial_stage_idx":1,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -551,7 +551,7 @@
     "name":"Gust Jar can suck up various enemies like Ghini(Ghosts) and Beetles (The things that grab onto link). It can also grab objects and fire them like projectiles to kill enemies, some enemies or parts of enemies can be used as projectiles such as Helmasaurs and Stalfos.",
     "type": "progressive",
     "loop": true,
-	"initial_stage_idx":1,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -570,7 +570,7 @@
     "name":"The lit Lantern can instantly kill wizrobes by walking through them.",
     "type": "progressive",
     "loop": true,
-	"initial_stage_idx":1,
+	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1424,92 +1424,6 @@
         "codes": "grabbable_hard",
         "inherit_codes":false
       }
-    ]
-  },
-  {
-    "name":"Bombs can damage nearly every enemy, Bombs are never considered for Simon Simulations, and Golden Enemies.",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic/weapons/bombs_no.png",
-        "codes": "weaponsbombs_no",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic/weapons/bombs_yes.png",
-        "codes": "weaponsbombs_yes",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic/weapons/bombs_boss.png",
-        "codes": "weaponsbombs_yes,weaponsbombs_boss",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Bow can damage most enemies, many enemies are very resiliant to damage. Chu Bosses and Darknuts are Immune.",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic/weapons/bow_no.png",
-        "codes": "weaponsbow_no",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic/weapons/bow_yes.png",
-        "codes": "weaponsbow_yes",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic/weapons/bow_boss.png",
-        "codes": "weaponsbow_boss",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"Gust Jar can suck up various enemies like Ghini(Ghosts) and Beetles (The things that grab onto link). It can also grab objects and fire them like projectiles to kill enemies, some enemies or parts of enemies can be used as projectiles such as Helmasaurs and Stalfos.",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic/weapons/gust_no.png",
-        "codes": "weaponsgust_no",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic/weapons/gust_yes.png",
-        "codes": "weaponsgust_yes",
-        "inherit_codes":false
-      },
-    ]
-  },
-  {
-    "name":"The lit Lantern can instantly kill wizrobes by walking through them.",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img":"images/options/logic/weapons/lamp_no.png",
-        "codes": "weaponslamp_no",
-        "inherit_codes":false
-      },
-      {
-        "img": "images/options/logic/weapons/lamp_yes.png",
-        "codes": "weaponslamp_yes",
-        "inherit_codes":false
-      },
     ]
   },
   {
