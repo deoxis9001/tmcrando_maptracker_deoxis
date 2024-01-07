@@ -18,7 +18,7 @@ function Clouds_NorthEast_DigSpot()
 	end 
 end
 
-function Clouds_North_Kill() 
+function Clouds_North_Kill()
 	if ( function_Cached("AccessClouds")==1 and ( has("cape") or has("mitts") ) and function_Cached("CloudsKill")==1 ) then 
 		return 1
 	elseif ( ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) and ( has("cape") or has("mitts") ) and ( function_Cached("CloudsKill")==1 or function_Cached("CloudsKill")==2 ) ) then 
@@ -1152,7 +1152,7 @@ end
 function Ruins_CrackFusion_Chest()
 	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions41") ) ) and function_Cached("AccessRuins")==1 and function_Cached("RuinsArmos")==1 and function_Cached("RuinsTektites")==1 ) then
 		return 1
-	elseif ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions41") ) ) and ( function_Cached("AccessRuins")==1 or function_Cached("AccessRuins")==2 )  and function_Cached("RuinsArmos")==1 and ( function_Cached("RuinsTektites")==1 or function_Cached("RuinsTektites")==2 ) ) then
+	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions41") ) ) and ( function_Cached("AccessRuins")==1 or function_Cached("AccessRuins")==2 )  and function_Cached("RuinsArmos")==1 and ( function_Cached("RuinsTektites")==1 or function_Cached("RuinsTektites")==2 ) ) then
 		return 2
 	else
 		return 0

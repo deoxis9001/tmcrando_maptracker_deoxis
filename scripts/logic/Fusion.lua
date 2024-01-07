@@ -21,7 +21,7 @@ end
 function Clouds_WindTribeHouse_Fuser1() 
 	if ( FusionsGreenNumber("greenG")==1 and ( function_Cached("AccessWindTribe")==1 or function_Cached("StrangerFusion")==1 ) ) then
 		return 1
-	elseif ( ( FusionsGreenNumber("greenG")==1 or FusionsGreenNumber("greenG")==2 )  and ( function_Cached("AccessWindTribe")==1 or function_Cached("AccessWindTribe")==2 ) ) then
+	elseif ( ( FusionsGreenNumber("greenG")==1 or FusionsGreenNumber("greenG")==2 )  and ( function_Cached("AccessWindTribe")==1 or function_Cached("AccessWindTribe")==2 or function_Cached("StrangerFusion")==1 ) ) then
 		return 2
 	else
 		return 0
@@ -41,7 +41,7 @@ end
 function Clouds_WindTribeHouse_Fuser3() 
 	if ( FusionsGreenNumber("greenP")==1 and ( function_Cached("AccessWindTribe")==1 or function_Cached("StrangerFusion")==1 ) ) then
 		return 1
-	elseif ( ( FusionsGreenNumber("greenP")==1 or FusionsGreenNumber("greenP")==2 )  and ( function_Cached("AccessWindTribe")==1 or function_Cached("AccessWindTribe")==2 ) ) then
+	elseif ( ( FusionsGreenNumber("greenP")==1 or FusionsGreenNumber("greenP")==2 )  and ( function_Cached("AccessWindTribe")==1 or function_Cached("AccessWindTribe")==2 or function_Cached("StrangerFusion")==1 ) ) then
 		return 2
 	else
 		return 0
@@ -512,9 +512,9 @@ end
 
 
 function SouthHyruleField_SmithsHouse_Fuser2() 
-	if ( FusionsGreenNumber("greenP")==1 and ( has("fusionred_vanilla") or function_Cached("FusionsRed")==0 ) and has("fusions16")) then
+	if ( FusionsGreenNumber("greenP")==1 and ( ( has("fusionred_vanilla") and has("fusions16") ) or has("fusionred_complet") or has("fusionred_removed") ) ) then
 		return 1
-	elseif ( FusionsGreenNumber("greenP")==2 and ( has("fusionred_vanilla") or function_Cached("FusionsRed")==0 ) and has("fusions16")) then
+	elseif ( FusionsGreenNumber("greenP")==2 and ( ( has("fusionred_vanilla") and has("fusions16") ) or has("fusionred_complet") or has("fusionred_removed") ) ) then
 		return 2
 	else
 		return 0
