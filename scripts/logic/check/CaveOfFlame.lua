@@ -68,7 +68,7 @@ end
 function CoF_B1_SpikeyChus_BigChest() 
 	if ( ( function_Cached("CofDungeons")==1 and ( ( function_Cached("CoFBlueWarp")==1 and (has("cane") or function_Cached("CoFChuFightBackDoor")==1 ) and function_Cached("CoFChuFight")==1) or ( ( function_Cached("BombWalls")==1 or function_Cached("Bobombs")==1 ) and function_Cached("CoFSpikeBeetle")==1 and function_Cached("CoF1stDoor")==1 and function_Cached("HasSword")==1 )))) then
 		return 1
-	elseif ( ( ( function_Cached("CofDungeons")==1 or function_Cached("CofDungeons")==2 ) and ( ( function_Cached("CoFBlueWarp")==1 and (has("cane") or function_Cached("CoFChuFightBackDoor")==1 ) and ( function_Cached("CoFChuFight")==1 or function_Cached("CoFChuFight")==2 ) ) or ( ( function_Cached("BombWalls")==1 or function_Cached("Bobombs")==1or function_Cached("Bobombs")==2 ) and ( function_Cached("CoFSpikeBeetle")==1 or function_Cached("CoFSpikeBeetle")==2 ) and ( function_Cached("CoF1stDoor")==1 or function_Cached("CoF1stDoor")==2 ) and function_Cached("HasSword")==1 )))) then
+	elseif ( ( ( function_Cached("CofDungeons")==1 or function_Cached("CofDungeons")==2 ) and ( ( function_Cached("CoFBlueWarp")==1 and (has("cane") or function_Cached("CoFChuFightBackDoor")==1 ) and ( function_Cached("CoFChuFight")==1 or function_Cached("CoFChuFight")==2 ) ) or ( ( function_Cached("BombWalls")==1 or function_Cached("Bobombs")==1 or function_Cached("Bobombs")==2 ) and ( function_Cached("CoFSpikeBeetle")==1 or function_Cached("CoFSpikeBeetle")==2 ) and ( function_Cached("CoF1stDoor")==1 or function_Cached("CoF1stDoor")==2 ) and function_Cached("HasSword")==1 )))) then
 		return 2
 	else
 		return 0
