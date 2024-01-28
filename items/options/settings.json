@@ -2322,5 +2322,12 @@
       },
     ]
   },
+  {
+	  "name": "Autotracking",
+	  "type": "toggle",
+	  "img": "images/options/tracker/tracking/tracking_item.png",
+	  "inherit_codes": false,
+	  "codes": "tracking_item"
+  },
 
 ]
