@@ -180,7 +180,22 @@ function update_link_captures()
       end
   end
 end
-
+function Version_custom(Version1,Version2,Version3,Version4)
+-- print(Version1,"=",setting_preset_version_customV2[0])
+-- print(Version2,"=",setting_preset_version_customV2[1])
+-- print(Version3,"=",setting_preset_version_customV2[2])
+-- print(Version4,"=",setting_preset_version_customV2[3])
+	if Version1==setting_preset_version_customV2[0] then
+		if Version2==setting_preset_version_customV2[1] then
+			if Version3==setting_preset_version_customV2[2] then
+				if Version4==setting_preset_version_customV2[3] then
+					return true
+				end	
+			end	
+		end
+	end
+	return false
+end
 function Preset()
 	local data_preset = Tracker:FindObjectForCode("preset_01")
 	if no_preset then
@@ -190,28 +205,32 @@ function Preset()
 	if setting_preset_data_cache~=( data_preset.CurrentStage + 1 ) then
 		setting_preset_data_cache = data_preset.CurrentStage + 1
 		if setting_preset_data_cache ~= 0 then
-			if setting_preset_version_custom==3 or setting_preset_data_title[setting_preset_data_cache]~="Custom" then
-				print(setting_preset_data_title[setting_preset_data_cache])
+			if Version_custom(0,0,0,3) or setting_preset_data_title[setting_preset_data_cache]~="Custom" then
+				-- print(setting_preset_data_title[setting_preset_data_cache])
 			else
 				print("Please update your override of custom.lua")
 				return 0
 			end
 			for i, v in pairs(setting_preset_data[setting_preset_data_title[setting_preset_data_cache]]) do
 				local item = Tracker:FindObjectForCode(i)
-				if  setting_preset_data_other[i]==nil then
-					item.CurrentStage = v
-				elseif  setting_preset_data_other[i]==1 then
-					fusiongoldcombined:setActive(v)
-				elseif  setting_preset_data_other[i]==2 then
-					fusionredcombined:setActive(v)
-				elseif  setting_preset_data_other[i]==3 then
-					fusiongreencombined:setActive(v)
-				elseif  setting_preset_data_other[i]==4 then
-					fusionbluecombined:setActive(v)
-				elseif  setting_preset_data_other[i]==5 then
-					swordprogress:setActive(v)
-				elseif  setting_preset_data_other[i]==6 then
-					item.AcquiredCount = v
+				if item then
+					if  setting_preset_data_other[i]==nil then
+						item.CurrentStage = v
+					elseif  setting_preset_data_other[i]==1 then
+						fusiongoldcombined:setActive(v)
+					elseif  setting_preset_data_other[i]==2 then
+						fusionredcombined:setActive(v)
+					elseif  setting_preset_data_other[i]==3 then
+						fusiongreencombined:setActive(v)
+					elseif  setting_preset_data_other[i]==4 then
+						fusionbluecombined:setActive(v)
+					elseif  setting_preset_data_other[i]==5 then
+						swordprogress:setActive(v)
+					elseif  setting_preset_data_other[i]==6 then
+						item.AcquiredCount = v
+					end
+				else
+					print("error",i)
 				end
 			end
 		end
