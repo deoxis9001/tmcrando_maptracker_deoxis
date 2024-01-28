@@ -44,6 +44,20 @@
 	 ["allelement"]	 
     ]    
    }
+  }, 
+  "tracker_tracking": {
+   "type": "container",
+   "content": {
+    "type": "itemgrid",
+    "h_alignment": "center",
+		"v_alignment": "top",
+    "item_margin": "0,0,2,10",
+	"item_width":500,
+	"item_height":6000,
+    "rows": [
+     ["tracking_item"], 
+    ]    
+   }
   },  
   "dungeon_shuffle": {
    "type": "group",
@@ -110,6 +124,7 @@
 				"item_margin": "0,0",
 				"item_width":320,
 				"item_height":64,
+				"badge_font_size":38,
 				"rows": [
 					 ["dhc_closed",""],
 					 ["dungeons","sword5Needed"],
@@ -531,7 +546,7 @@
 			"tabs":[
 			 {
 				"title":"Settings Tracking Other",
-				"icon":"images/icon-maps/Library Book - A History of Masks.png",
+				"icon":"images/icon-maps/Swordsman Newsletter 4.png",
 				"content":{
 				 "type":"layout",
 				 "key": "tracker_settings_tracking_other"
@@ -539,7 +554,7 @@
 			 },
 			 {
 				"title":"Out of logic (Require Trick) 1/2",
-				"icon":"images/icon-maps/Library Book - A Hyrulean Bestiary.png",
+				"icon":"images/icon-maps/Swordsman Newsletter 5.png",
 				"content":{
 				 "type":"layout",
 				 "key": "tracker_out_of_logic_require_trick1"
@@ -547,20 +562,28 @@
 			 },
 			 {
 				"title":"Out of logic (Require Trick) 2/2",
-				"icon":"images/icon-maps/Library Book - A Hyrulean Bestiary.png",
+				"icon":"images/icon-maps/Swordsman Newsletter 6.png",
 				"content":{
 				 "type":"layout",
 				 "key": "tracker_out_of_logic_require_trick2"
 				}
 			 },
 			 {
-				"title":"Out of logic (Other)",
-				"icon":"images/icon-maps/Library Book - Legend of the Picori.png",
+				"title":"Out of logic (Others)",
+				"icon":"images/icon-maps/Swordsman Newsletter 7.png",
 				"content":{
 				 "type":"layout",
 				 "key": "tracker_out_of_logic_other"
 				}
 			 },
+/*			 {
+				"title":"Tracking",
+				"icon":"images/icon-maps/Swordsman Newsletter 8.png",
+				"content":{
+				 "type":"layout",
+				 "key": "tracker_tracking"
+				}
+			 },*/
 			]
 		 }
 		]
