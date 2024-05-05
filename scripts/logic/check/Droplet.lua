@@ -79,9 +79,9 @@ function Droplets_LeftPath_B2_IceMadderpillar_BigChest()
 end
 
 function Droplets_LeftPath_B2_IcePlain_FrozenChest() 
-	if function_Cached("TodDungeons")==1 and has("lamp") and ( ( function_Cached("ToDMainRoom")==1 and has("flippers") and function_Cached("ToDWestDoor")==1 and function_Cached("ToDLeftPillars")==1 ) or ( function_Cached("ToDLilypadEnd")==1 and ( has("gust") or has("flippers") or ("cape") ) ) ) then
+	if function_Cached("TodDungeons")==1 and has("lamp") and ( ( function_Cached("ToDMainRoom")==1 and has("flippers") and function_Cached("ToDWestDoor")==1 and function_Cached("ToDLeftPillars")==1 ) or ( function_Cached("ToDLilypadEnd")==1 and ( has("gust") or has("flippers") or has("cape") ) ) ) then
 		return 1
-	elseif ( function_Cached("TodDungeons")==1 or function_Cached("TodDungeons")==2 ) and has("lamp") and ( ( ( function_Cached("ToDMainRoom")==1 or function_Cached("ToDMainRoom")==2 ) and has("flippers") and ( function_Cached("ToDWestDoor")==1 or function_Cached("ToDWestDoor")==2 ) and function_Cached("ToDLeftPillars")==1 ) or ( ( function_Cached("ToDLilypadEnd")==1 or function_Cached("ToDLilypadEnd")==2 ) and ( has("gust") or has("flippers") or ("cape") ) ) ) then
+	elseif ( function_Cached("TodDungeons")==1 or function_Cached("TodDungeons")==2 ) and has("lamp") and ( ( ( function_Cached("ToDMainRoom")==1 or function_Cached("ToDMainRoom")==2 ) and has("flippers") and ( function_Cached("ToDWestDoor")==1 or function_Cached("ToDWestDoor")==2 ) and function_Cached("ToDLeftPillars")==1 ) or ( ( function_Cached("ToDLilypadEnd")==1 or function_Cached("ToDLilypadEnd")==2 ) and ( has("gust") or has("flippers") or has("cape") ) ) ) then
 		return 2
 	else
 		return 0
@@ -89,9 +89,9 @@ function Droplets_LeftPath_B2_IcePlain_FrozenChest()
 end
 
 function Droplets_LeftPath_B2_IcePlain_Chest() 
-	if function_Cached("TodDungeons")==1 and ( ( function_Cached("ToDMainRoom")==1 and has("flippers") and function_Cached("ToDWestDoor")==1 and function_Cached("ToDLeftMushroomSwitch")==1 and function_Cached("ToDLeftPillars")==1 ) or ( function_Cached("ToDLilypadEnd")==1 and ( has("gust") or has("flippers") or ("cape") ) ) ) then
+	if function_Cached("TodDungeons")==1 and ( ( function_Cached("ToDMainRoom")==1 and has("flippers") and function_Cached("ToDWestDoor")==1 and function_Cached("ToDLeftMushroomSwitch")==1 and function_Cached("ToDLeftPillars")==1 ) or ( function_Cached("ToDLilypadEnd")==1 and ( has("gust") or has("flippers") or has("cape") ) ) ) then
 		return 1
-	elseif ( function_Cached("TodDungeons")==1 or function_Cached("TodDungeons")==2 ) and ( ( ( function_Cached("ToDMainRoom")==1 or function_Cached("ToDMainRoom")==2 ) and has("flippers") and ( function_Cached("ToDWestDoor")==1 or function_Cached("ToDWestDoor")==2 ) and function_Cached("ToDLeftMushroomSwitch")==1 and function_Cached("ToDLeftPillars")==1 ) or ( ( function_Cached("ToDLilypadEnd")==1 or function_Cached("ToDLilypadEnd")==2 ) and ( has("gust") or has("flippers") or ("cape") ) ) ) then
+	elseif ( function_Cached("TodDungeons")==1 or function_Cached("TodDungeons")==2 ) and ( ( ( function_Cached("ToDMainRoom")==1 or function_Cached("ToDMainRoom")==2 ) and has("flippers") and ( function_Cached("ToDWestDoor")==1 or function_Cached("ToDWestDoor")==2 ) and function_Cached("ToDLeftMushroomSwitch")==1 and function_Cached("ToDLeftPillars")==1 ) or ( ( function_Cached("ToDLilypadEnd")==1 or function_Cached("ToDLilypadEnd")==2 ) and ( has("gust") or has("flippers") or has("cape") ) ) ) then
 		return 2
 	else
 		return 0
