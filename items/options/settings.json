@@ -437,6 +437,10 @@
         "codes": "preset_14"
       },
       {
+        "img":"images/options/tracker/tracking_other/preset_15.png",
+        "codes": "preset_15"
+      },
+      {
         "img":"images/options/tracker/tracking_other/preset_custom.png",
         "codes": "preset_custom"
       }
