@@ -10,7 +10,7 @@ end
 
 function AccessLonLon()
 	
-	if ( has("ocarina") or ( function_Cached("CanDestroyTrees")==1 and ( has("llrkey") or has("cape") or function_Cached("LonLonNorthShortcut")==1 or ( has("flippers") and has("mitts") ) ) ) ) then
+	if ( function_Cached("LakeWindCrest")==1 or ( function_Cached("CanDestroyTrees")==1 and ( has("llrkey") or has("cape") or function_Cached("LonLonNorthShortcut")==1 or ( has("flippers") and has("mitts") ) ) ) ) then
 		return 1
 	elseif ( (function_Cached("CanDestroyTrees")==2 and ( has("llrkey") or has("cape") or function_Cached("LonLonNorthShortcut")==1 or ( has("flippers") and has("mitts") ) ) ) ) then
 		return 2
@@ -42,7 +42,7 @@ function AccessTreasureCave()
 end
 
 function AccessMinishWoods()
-	if ( function_Cached("CanDestroyTrees")==1 or has("ocarina") ) then
+	if ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 ) then
 		return 1
 	elseif ( function_Cached("CanDestroyTrees")==2 ) then
 		return 2

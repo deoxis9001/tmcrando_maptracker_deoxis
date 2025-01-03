@@ -1,5 +1,4 @@
 [
-  //Alpha
  {
    "name": "Alpha",
    "type": "progressive",
@@ -14,7 +13,7 @@
      {
        "img":"images/items/Alpha.png",
        "codes": "beta,alpha"
-     },
+     }
    ]
- },
+ }
 ]

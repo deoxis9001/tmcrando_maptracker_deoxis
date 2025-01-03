@@ -1,12 +1,10 @@
 [
-  // DWS Big Key
   {
     "name": "Deepwood Shrine Big Key",
     "type": "toggle",
     "img": "images/dungeons/Big Key.png",
     "codes": "dws_bigkey"
   },
-  // DWS Small Keys
   {
     "name": "Deepwood Shrine Small Key",
     "type": "consumable",
@@ -27,42 +25,40 @@
     "codes": "dws_Compass"
   },
   {
-   "name": "MapCompass",
-   "type": "composite_toggle",
-   "item_right": "dws_Compass",
-   "item_left": "dws_Map",
-   "codes": "dws_cm",
-   "images": [
-     {
-       "left": false,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_gray.png",
-     },
-     {
-       "left": false,
-       "right": true,
-       "img": "images/dungeons/Compass_Map_C.png"
-     },
-     {
-       "left": true,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_M.png"
-     },
-     {
-       "left": true,
-       "right": true,
-       "img": "images/dungeons/Compass_Map.png"
-     }
-   ]
- },
-  // CoF Big Key
+    "name": "MapCompass",
+    "type": "composite_toggle",
+    "item_right": "dws_Compass",
+    "item_left": "dws_Map",
+    "codes": "dws_cm",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_gray.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/dungeons/Compass_Map_C.png"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_M.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/dungeons/Compass_Map.png"
+      }
+    ]
+  },
   {
     "name": "Cave of Flames Big Key",
     "type": "toggle",
     "img": "images/dungeons/Big Key.png",
     "codes": "cof_bigkey"
   },
-  // CoF Small Keys
   {
     "name": "Cave of Flames Small Key",
     "type": "consumable",
@@ -83,42 +79,40 @@
     "codes": "cof_Compass"
   },
   {
-   "name": "MapCompass",
-   "type": "composite_toggle",
-   "item_right": "cof_Compass",
-   "item_left": "cof_Map",
-   "codes": "cof_cm",
-   "images": [
-     {
-       "left": false,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_gray.png",
-     },
-     {
-       "left": false,
-       "right": true,
-       "img": "images/dungeons/Compass_Map_C.png"
-     },
-     {
-       "left": true,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_M.png"
-     },
-     {
-       "left": true,
-       "right": true,
-       "img": "images/dungeons/Compass_Map.png"
-     }
-   ]
- },
-  // FoW Big Key
+    "name": "MapCompass",
+    "type": "composite_toggle",
+    "item_right": "cof_Compass",
+    "item_left": "cof_Map",
+    "codes": "cof_cm",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_gray.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/dungeons/Compass_Map_C.png"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_M.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/dungeons/Compass_Map.png"
+      }
+    ]
+  },
   {
     "name": "Fortress of Winds Big Key",
     "type": "toggle",
     "img": "images/dungeons/Big Key.png",
     "codes": "fow_bigkey"
   },
-  // FoW Small Keys
   {
     "name": "Fortress of Winds Small Key",
     "type": "consumable",
@@ -139,42 +133,40 @@
     "codes": "fow_Compass"
   },
   {
-   "name": "MapCompass",
-   "type": "composite_toggle",
-   "item_right": "fow_Compass",
-   "item_left": "fow_Map",
-   "codes": "fow_cm",
-   "images": [
-     {
-       "left": false,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_gray.png",
-     },
-     {
-       "left": false,
-       "right": true,
-       "img": "images/dungeons/Compass_Map_C.png"
-     },
-     {
-       "left": true,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_M.png"
-     },
-     {
-       "left": true,
-       "right": true,
-       "img": "images/dungeons/Compass_Map.png"
-     }
-   ]
- },
-  // ToD Big Key
+    "name": "MapCompass",
+    "type": "composite_toggle",
+    "item_right": "fow_Compass",
+    "item_left": "fow_Map",
+    "codes": "fow_cm",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_gray.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/dungeons/Compass_Map_C.png"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_M.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/dungeons/Compass_Map.png"
+      }
+    ]
+  },
   {
     "name": "Temple of Droplets Big Key",
     "type": "toggle",
     "img": "images/dungeons/Big Key.png",
     "codes": "tod_bigkey"
   },
-  // ToD Small Keys
   {
     "name": "Temple of Droplets Small Key",
     "type": "consumable",
@@ -195,42 +187,40 @@
     "codes": "tod_Compass"
   },
   {
-   "name": "MapCompass",
-   "type": "composite_toggle",
-   "item_right": "tod_Compass",
-   "item_left": "tod_Map",
-   "codes": "tod_cm",
-   "images": [
-     {
-       "left": false,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_gray.png",
-     },
-     {
-       "left": false,
-       "right": true,
-       "img": "images/dungeons/Compass_Map_C.png"
-     },
-     {
-       "left": true,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_M.png"
-     },
-     {
-       "left": true,
-       "right": true,
-       "img": "images/dungeons/Compass_Map.png"
-     }
-   ]
- },
-  // PoW Big Key
+    "name": "MapCompass",
+    "type": "composite_toggle",
+    "item_right": "tod_Compass",
+    "item_left": "tod_Map",
+    "codes": "tod_cm",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_gray.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/dungeons/Compass_Map_C.png"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_M.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/dungeons/Compass_Map.png"
+      }
+    ]
+  },
   {
     "name": "Palace of Winds Big Key",
     "type": "toggle",
     "img": "images/dungeons/Big Key.png",
     "codes": "pow_bigkey"
   },
-  // PoW Small Keys
   {
     "name": "Palace of Winds Small Key",
     "type": "consumable",
@@ -251,42 +241,40 @@
     "codes": "pow_Compass"
   },
   {
-   "name": "MapCompass",
-   "type": "composite_toggle",
-   "item_right": "pow_Compass",
-   "item_left": "pow_Map",
-   "codes": "pow_cm",
-   "images": [
-     {
-       "left": false,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_gray.png",
-     },
-     {
-       "left": false,
-       "right": true,
-       "img": "images/dungeons/Compass_Map_C.png"
-     },
-     {
-       "left": true,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_M.png"
-     },
-     {
-       "left": true,
-       "right": true,
-       "img": "images/dungeons/Compass_Map.png"
-     }
-   ]
- },
-  // DHC Big Key
+    "name": "MapCompass",
+    "type": "composite_toggle",
+    "item_right": "pow_Compass",
+    "item_left": "pow_Map",
+    "codes": "pow_cm",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_gray.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/dungeons/Compass_Map_C.png"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_M.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/dungeons/Compass_Map.png"
+      }
+    ]
+  },
   {
     "name": "Dark Hyrule Castle Big Key",
     "type": "toggle",
     "img": "images/dungeons/Big Key.png",
     "codes": "dhc_bigkey"
   },
-  // DHC Small Keys
   {
     "name": "Dark Hyrule Castle Small Key",
     "type": "consumable",
@@ -307,40 +295,39 @@
     "codes": "dhc_Compass"
   },
   {
-   "name": "MapCompass",
-   "type": "composite_toggle",
-   "item_right": "dhc_Compass",
-   "item_left": "dhc_Map",
-   "codes": "dhc_cm",
-   "images": [
-     {
-       "left": false,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_gray.png",
-     },
-     {
-       "left": false,
-       "right": true,
-       "img": "images/dungeons/Compass_Map_C.png"
-     },
-     {
-       "left": true,
-       "right": false,
-       "img": "images/dungeons/Compass_Map_M.png"
-     },
-     {
-       "left": true,
-       "right": true,
-       "img": "images/dungeons/Compass_Map.png"
-     }
-   ]
- },
-  // Royal Crypt Keys
+    "name": "MapCompass",
+    "type": "composite_toggle",
+    "item_right": "dhc_Compass",
+    "item_left": "dhc_Map",
+    "codes": "dhc_cm",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_gray.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/dungeons/Compass_Map_C.png"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/dungeons/Compass_Map_M.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/dungeons/Compass_Map.png"
+      }
+    ]
+  },
   {
     "name": "Royal Crypt Small Key",
     "type": "consumable",
     "img": "images/dungeons/Small Key.png",
     "codes": "rc_smallkey",
     "max_quantity": 3
-  },
+  }
 ]

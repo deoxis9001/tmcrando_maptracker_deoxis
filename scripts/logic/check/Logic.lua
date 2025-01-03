@@ -615,6 +615,15 @@ function Falls_TopCave_Chest()
 		return 0
 	end 
 end
+function Falls_Biggoron() 
+	if ( function_Cached("AccessFalls")==1 and function_Cached("HasBiggoronShield")==1 and ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0e") ) )) then
+		return 1
+	elseif ( ( function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==2 ) and function_Cached("HasBiggoronShield")==1 and ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0e") ) )) then
+			return 2
+	else
+		return 0
+	end 
+end
 function FallsLower_LonLonFusion_Chest() 
 	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions60") ) ) and function_Cached("AccessMinishWoods")==1 and has("cane") ) then
 		return 1
@@ -818,7 +827,7 @@ function Hylia_Dojo_NPC()
 end
 
 function Hylia_CrackFusion_LibrariNPC() 
-	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions12") ) ) and has("ocarina") and ( has("flippers") or has("cape") ) ) then
+	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions12") ) ) and function_Cached("LakeWindCrest")==1 and ( has("flippers") or has("cape") ) ) then
 		return 1
 	else
 		return 0
@@ -1264,6 +1273,13 @@ function Town_Shop_300Item()
 end
 function Town_Shop_600Item() 
 	if ( has("wallet3") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Town_Shop_Extra600Item() 
+	if ( has("shopbag_extra_on") and has("wallet3") ) then
 		return 1
 	else
 		return 0
@@ -1804,9 +1820,9 @@ function Hills_FarmDigCave_Item()
 end
 
 function LonLon_RanchPot() 
-	if ( function_Cached("CanDestroyTrees")==1 or has("ocarina") ) then
+	if ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 ) then
 		return 1
-	elseif ( function_Cached("CanDestroyTrees")==2 or has("ocarina") ) then
+	elseif ( function_Cached("CanDestroyTrees")==2 or function_Cached("LakeWindCrest")==1 ) then
 		return 2
 	else
 		return 0
@@ -1885,7 +1901,7 @@ end
 
 function LonLon_GoronCaveFusion_SmallChest() 
 	if has("fusionblue_vanilla") then
-		GoronNumber=0;
+		GoronNumber=0
 		if ( has("fusions25") ) then
 			GoronNumber = GoronNumber + 1
 		end
@@ -1909,9 +1925,9 @@ function LonLon_GoronCaveFusion_SmallChest()
 	else
 		GoronNumber = 0
 	end
-	if ( GoronNumber >=4 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or has("ocarina") ) ) then
+	if ( GoronNumber >=4 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 ) ) then
 		return 1
-	elseif ( GoronNumber >=4 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and (  function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 or has("ocarina") ) ) then
+	elseif ( GoronNumber >=4 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and (  function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 or function_Cached("LakeWindCrest")==1 ) ) then
 		return 2
 	else
 		return 0
@@ -1920,7 +1936,7 @@ end
 
 function LonLon_GoronCaveFusion_BigChest() 
 	if has("fusionblue_vanilla") then
-		local GoronNumber=0;
+		local GoronNumber=0
 		if ( has("fusions25") ) then
 			GoronNumber = GoronNumber + 1
 		end
@@ -1945,9 +1961,9 @@ function LonLon_GoronCaveFusion_BigChest()
 		GoronNumber = 0
 	end
 
-	if ( GoronNumber>=6 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or has("ocarina") ) ) then
+	if ( GoronNumber>=6 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 ) ) then
 		return 1
-	elseif ( GoronNumber >=6 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and (  function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 or has("ocarina") ) ) then
+	elseif ( GoronNumber >=6 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and (  function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 or function_Cached("LakeWindCrest")==1 ) ) then
 		return 2
 	else
 		return 0

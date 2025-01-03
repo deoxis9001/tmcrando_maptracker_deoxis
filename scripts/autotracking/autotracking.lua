@@ -2683,10 +2683,11 @@ function updateLocations(segment)
 			{{0x2002d26, 0x40}, {0x2002d26, 0x80}, {0x2002d27, 0x01}, {0x2002d27, 0x02}, {0x2002d27, 0x04}, {0x2002d27, 0x08}}
 		)
 		updateSectionFlag(segment, "@Veil Falls - Upper Waterfall/Heart Piece", 0x2002d27, 0x10)
+		updateSectionFlag(segment, "@Veil Falls - Biggoron/Mirror Shield", 0x2002cd1, 0x10)
 
 		--VEIL FALLS SOUTH
 		updateSectionFlag(segment, "@Veil Falls South - Heart Piece/Heart Piece", 0x2002cd1, 0x02)
-		updateSectionFlag(segment, "@Veil Falls South - Mitts Cave/Left Chest", 0x2002d05, 0x08) --à verifier
+		updateSectionFlag(segment, "@Veil Falls South - Mitts Cave/Left Chest", 0x2002d05, 0x08)
 		updateSectionFlag(segment, "@Veil Falls South - Mitts Cave/Right Chest", 0x2002d05, 0x10)
 		 --à verifier
 		updateSectionFlag(segment, "@Veil Falls South - Rupees/Rupee 1", 0x2002cd0, 0x04)
@@ -3131,6 +3132,7 @@ function updateKeys(segment)
 		updateSectionFlag(segment, "@Town - Stockwell's Shop/Wallet Spot (80 Rupees)", 0x2002ea7, 0x01)
 		updateSectionFlag(segment, "@Town - Stockwell's Shop/Boomerang Spot (300 Rupees)", 0x2002ea7, 0x02)
 		updateSectionFlag(segment, "@Town - Stockwell's Shop/Quiver Spot (600 Rupees)", 0x2002ea7, 0x04)
+		updateSectionFlag(segment, "@Town - Stockwell's Shop/Bombag Spot (600 Rupees)", 0x2002ea8, 0x04)
 		-- Minishwoods
 		updateSectionFlag(segment, "@Minish Woods North - Syrup's Hut/Item (60 Rupees)", 0x2002ea4, 0x04)
 		updateSectionFlag(segment, "@Minish Woods - Belari/Gift 1st Item", 0x2002ea5, 0x01)

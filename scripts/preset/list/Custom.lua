@@ -1,5 +1,5 @@
 
--- Generated 16.06.23 by deoxis9001 
+-- Generated 03.01.24 by deoxis9001 
 
 -- Tracker
 
@@ -9,7 +9,7 @@ setting_preset_version_customV2={}
 setting_preset_version_customV2[0]=0
 setting_preset_version_customV2[1]=0
 setting_preset_version_customV2[2]=0
-setting_preset_version_customV2[3]=3
+setting_preset_version_customV2[3]=4
 setting_preset_data["Custom"] = {}
 	
 	--  Out of logic (Require Trick 1/2)
@@ -155,6 +155,10 @@ setting_preset_data["Custom"] = {}
 			-- 3 = 3 Sets
 			-- 4 = 4 Sets
 			-- 5 = 5 Sets
+		setting_preset_data["Custom"]["biggoron_none"] = 0
+		-- 0 = None
+		-- 1 = Shield
+		-- 2 = Mirror Shield			
 		setting_preset_data["Custom"]["hp_shuffle"] = 0
 			-- 0 = Shuffle
 			-- 1 = Vanilla
@@ -171,6 +175,9 @@ setting_preset_data["Custom"] = {}
 			-- 0 = No
 			-- 1 = Yes
 		setting_preset_data["Custom"]["golden_enemy_off"] = 0
+			-- 0 = No
+			-- 1 = Yes
+		setting_preset_data["Custom"]["shopbag_extra_off"] = 0
 			-- 0 = No
 			-- 1 = Yes
 		setting_preset_data["Custom"]["ped_items_off"] = 0
@@ -227,6 +234,9 @@ setting_preset_data["Custom"] = {}
 		setting_preset_data["Custom"]["open_wind_tribe_no"] = 0
 			-- 0 = No
 			-- 1 = Yes
+		setting_preset_data["Custom"]["open_library_no"] = 0
+		-- 0 = No
+		-- 1 = Yes
 			
 	-- Wind Crests
 	
@@ -239,7 +249,10 @@ setting_preset_data["Custom"] = {}
 		setting_preset_data["Custom"]["cloudwindcrest_no"] = 0
 			-- 0 = No
 			-- 1 = Yes
-		setting_preset_data["Custom"]["fallswindcrest_no"] = 0
+		setting_preset_data["Custom"]["lakewindcrest_no"] = 1
+			-- 0 = No
+			-- 1 = Yes
+		setting_preset_data["Custom"]["minishwindcrest_no"] = 0
 			-- 0 = No
 			-- 1 = Yes
 		setting_preset_data["Custom"]["shfwindcrest_no"] = 0
@@ -248,6 +261,7 @@ setting_preset_data["Custom"] = {}
 		setting_preset_data["Custom"]["minishwindcrest_no"] = 0
 			-- 0 = No
 			-- 1 = Yes
+
 	-- Dungeons Warps
 		setting_preset_data["Custom"]["dws_warps_none"] = 0
 			-- 0 = No

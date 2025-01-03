@@ -90,7 +90,7 @@
 	  {
 		"map":"map",
 		"x":1975,
-		"y":1025,
+		"y":1025
 	  }
 	],
 	"sections":[
@@ -162,13 +162,13 @@
 		"name":"Fuser Goron (Left)",
 		"hosted_item":"fusions33",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_LonLon_GoronQuest_Fuser1"],
+		"access_rules":["$Json_LonLon_GoronQuest_Fuser1"]
 	  },
 	  {
 		"name":"Fuser Goron (Right)",
 		"hosted_item":"fusions0e",
 		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_LonLon_GoronQuest_Fuser2"],
+		"access_rules":["$Json_LonLon_GoronQuest_Fuser2"]
 	  }
 	]
   },
@@ -178,7 +178,7 @@
 	  {
 		"map":"map",
 		"x":1800,
-		"y":980,
+		"y":980
 	  }
 	],
 	"sections":[
@@ -186,7 +186,7 @@
 		"name":"Fuser Ankle",
 		"hosted_item":"fusions40",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_LonLon_Ankle_Fuser"],
+		"access_rules":["$Json_LonLon_Ankle_Fuser"]
 	  }
 	]
   }

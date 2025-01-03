@@ -9,7 +9,7 @@
 			["shield","mittsandfly","lamp","bombsremote","dogbottle","figurine","water","dws_bigkey","cof_bigkey","fow_bigkey","tod_bigkey","","pow_bigkey","dhc_bigkey"],
 			["boots","cape","ocarina","bowandfly","quiver","gomode","wind","dws_cm","cof_cm","fow_cm","tod_cm","beta","pow_cm","dhc_cm"],
 			["flippersandfly","ringandbracelets","carlovtingle","nutandshroom","bothkeys","clouds","wilds","falls","spinattack","fastspin","fastsplit","greatspin","longspin","sevenscrolls"],
-			["redW","redV","redE","blueL","blueS","greenC","greenG","greenP","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack"],
+			["redW","redV","redE","blueL","blueS","greenC","greenG","greenP","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack"]
 		]
   },
   "tracker_capture_item": {
@@ -55,7 +55,7 @@
 	"item_width":500,
 	"item_height":6000,
     "rows": [
-     ["tracking_item"], 
+     ["tracking_item"]
     ]    
    }
   },  
@@ -102,7 +102,7 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					 ["small_key_none","big_key_none"],
+					 ["small_key_none","big_key_none"]
 				]
 			 }
 		 ]
@@ -130,7 +130,7 @@
 					 ["dungeons","sword5Needed"],
 					 ["element4Needed",""],
 					 ["figurine_option","figurine10"],
-					 ["figurine50","figurinemax"],
+					 ["figurine50","figurinemax"]
 				 ]
 			 }
 		 ]
@@ -154,10 +154,10 @@
 				"item_height":64,
 				"rows": [
 					 ["","cucco_none",""],
-					 ["goron_none","",""],
+					 ["goron_none","biggoron_none",""],
 					 ["hp_shuffle","rupees_off","specialpot_off"],
 					 ["digging_off","underwater_off","golden_enemy_off"],
-					 ["ped_items_off","",""],
+					 ["shopbag_extra_off","ped_items_off",""]
 				 ]
 			 }
 		 ]
@@ -229,7 +229,7 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					 ["open_wind_tribe_no","open_tingle_no"]
+					 ["open_wind_tribe_no","open_tingle_no","open_library_no"]
 				]
 			 }
 		 ]
@@ -253,8 +253,8 @@
 				"item_height":64,
 				"rows": [
 					 ["crenelwindcrest_no","swampwindcrest_no","cloudwindcrest_no"],
-					 ["","fallswindcrest_no","shfwindcrest_no"],
-					 ["minishwindcrest_no","",""]
+					 ["","lakewindcrest_no","fallswindcrest_no"],
+					 ["shfwindcrest_no","minishwindcrest_no",""]
 				 ]
 			 }
 		 ]
@@ -326,7 +326,7 @@
 				"item_height":64,
 				"rows": [
 					 ["weaponsbombs_no","weaponsbow_no"],
-					 ["weaponsgust_no","weaponslamp_no"],
+					 ["weaponsgust_no","weaponslamp_no"]
 				 ]
 			 }
 		 ]
@@ -353,7 +353,7 @@
 					 ["lightarrowbreak_off","bobombs_off"],
 					 ["likelike_off","guardskip_off"],
 					 ["crenelbeam_off","downstrikebeetle_off"],
-					 ["darkrooms_off","capeextension_off"],
+					 ["darkrooms_off","capeextension_off"]
 				 ]
 			 }
 		 ]
@@ -403,7 +403,7 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					 ["progressiveitems"],
+					 ["progressiveitems"]
 				 ]
 			 }
 		 ]
@@ -426,7 +426,7 @@
 				"item_width":320,
 				"item_height":64,
 				"rows": [
-					 ["goron_eu"],
+					 ["goron_eu"]
 				 ]
 			 }
 		 ]
@@ -453,7 +453,7 @@
 					 ["lightarrowbreak_out_off","bobombs_out_off"],
 					 ["likelike_out_off","guardskip_out_off"],
 					 ["crenelbeam_out_off","downstrikebeetle_out_off"],
-					 ["darkrooms_out_off","capeextension_out_off"],
+					 ["darkrooms_out_off","capeextension_out_off"]
 				 ]
 			 }
 		 ]
@@ -627,7 +627,7 @@
 					"type":"layout",
 					"key": "logic_require_trick2"
 				}
-			 },
+			 }
           ]
 		}
 	  ]
@@ -679,7 +679,7 @@
 					"type":"layout",
 					"key": "world_dungeon_warps"
 				}
-			 },
+			 }
 			]
 		 }
 		]
@@ -715,7 +715,7 @@
 					"type":"layout",
 					"key": "main_shuffle"
 				}
-			 },
+			 }
 			]
 		 }
 		]
@@ -775,7 +775,7 @@
 					"type":"layout",
 					"key": "gameplay_extra"
 				}
-			 },
+			 }
 			]
 		 }
 		]
@@ -843,7 +843,7 @@
 					 "type":"map",
 					 "maps":["dhc"]
 					}
-				 },
+				 }
 			]
 		 }
 		]
@@ -934,5 +934,5 @@
         }
       ]
     }
-  },
+  }
  }

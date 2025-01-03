@@ -1,908 +1,921 @@
 [
   {
-	"name":"Town - Flippers Cave",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1125,
-		"y":1050
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Scissor Beetles",
-		"item_count":1,
-		"access_rules":["$Json_Town_FlippersCave_ScissorBeetles"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Frozen Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_FlippersCave_FrozenChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Under the Waterfall",
-		"visibility_rules":["underwater_on"],
-		"item_count":1,
-		"access_rules":["$Json_Town_FlippersCave_UndertheWaterfall"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png",
-	  }
-	]
-  },
-  {
-	"name":"Town - Inn",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1610,
-		"y":1275,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Back Door - Heart Piece",
-		"item_count":1,
-		"access_rules":["$Json_Town_Inn_BackDoorHeartPiece"],
-		"chest_unopened_img":"images/items-map/Heart Piece.png",
-		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
+    "name": "Town - Flippers Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1125,
+        "y": 1050
+      }
+    ],
+    "sections": [
+      {
+        "name": "Scissor Beetles",
+        "item_count": 1,
+        "visibility_rules": ["$LibraryWorld"],
+        "access_rules": ["$Json_Town_FlippersCave_ScissorBeetles"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
       },
-	  {
-		"name":"Right Pot",
-		"visibility_rules":["specialpot_on"],
-		"item_count":1,
-		"access_rules":["$Json_Town_Inn_RightPot"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
+      {
+        "name": "Frozen Chest",
+        "item_count": 1,
+        "visibility_rules": ["$LibraryWorld"],
+        "access_rules": ["$Json_Town_FlippersCave_FrozenChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
       },
-	  {
-		"name":"Fuser Din/Nayru/Farore 1",
-		"hosted_item":"fusions1b",
-		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Inn_Fuser1"],
-	  },
-	  {
-		"name":"Fuser Din 2",
-		"hosted_item":"fusions20",
-		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Inn_Fuser2"],
-	  },
-	  {
-		"name":"Fuser Nayru 2",
-		"hosted_item":"fusions19",
-		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Inn_Fuser3"],
-	  },
-	  {
-		"name":"Fuser Farore 2",
-		"hosted_item":"fusions10",
-		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Inn_Fuser4"],
-	  }
-	]
+      {
+        "name": "Under the Waterfall",
+        "visibility_rules": ["$LibraryWorld,underwater_on"],
+        "item_count": 1,
+        "access_rules": ["$Json_Town_FlippersCave_UndertheWaterfall"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Digging Cave",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1465,
-		"y":1275,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Chests",
-		"item_count":3,	
-		"access_rules":["$Json_Town_DiggingCave_Chests"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Basement Left - Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_DiggingCave_BasementLeftChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	]
+    "name": "Town - Inn",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1610,
+        "y": 1275
+      }
+    ],
+    "sections": [
+      {
+        "name": "Back Door - Heart Piece",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_Inn_BackDoorHeartPiece"],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      },
+      {
+        "name": "Right Pot",
+        "visibility_rules": ["specialpot_on"],
+        "item_count": 1,
+        "access_rules": ["$Json_Town_Inn_RightPot"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Fuser Din/Nayru/Farore 1",
+        "hosted_item": "fusions1b",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["$Json_Town_Inn_Fuser1"]
+      },
+      {
+        "name": "Fuser Din 2",
+        "hosted_item": "fusions20",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["$Json_Town_Inn_Fuser2"]
+      },
+      {
+        "name": "Fuser Nayru 2",
+        "hosted_item": "fusions19",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["$Json_Town_Inn_Fuser3"]
+      },
+      {
+        "name": "Fuser Farore 2",
+        "hosted_item": "fusions10",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["$Json_Town_Inn_Fuser4"]
+      }
+    ]
   },
   {
-	"name":"Town - Swiftblade's Dojo",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1194,
-		"y":1575,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Spin Attack",
-		"item_count":1,
-		"access_rules":["$Json_Town_SwiftbladeDojo_SpinAttack"],
-        "chest_unopened_img":"images/items-map/Tiger Scroll.png",
-        "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
-	  },
-	  {
-		"name":"Rock Breaker",
-		"item_count":1,
-		"access_rules":["$Json_Town_SwiftbladeDojo_RockBreaker"],
-        "chest_unopened_img":"images/items-map/Tiger Scroll.png",
-        "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
-	  },
-	  {
-		"name":"Dash Attack",
-		"item_count":1,
-		"access_rules":["$Json_Town_SwiftbladeDojo_DashAttack"],
-        "chest_unopened_img":"images/items-map/Tiger Scroll.png",
-        "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
-	  },
-	  {
-		"name":"Down Thrust",
-		"item_count":1,
-		"access_rules":["$Json_Town_SwiftbladeDojo_DownThrust"],
-        "chest_unopened_img":"images/items-map/Tiger Scroll.png",
-        "chest_opened_img":"images/items-map/Tiger Scroll Done.png"
-	  },
-	]
+    "name": "Town - Digging Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1465,
+        "y": 1275
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chests",
+        "item_count": 3,
+        "access_rules": ["$Json_Town_DiggingCave_Chests"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Basement Left - Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_DiggingCave_BasementLeftChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Stockwell's Shop",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1378,
-		"y":1482,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Wallet Spot (80 Rupees)",
-		"access_rules":["$Json_Town_StockwellShop_Wallet"],
-		"item_count":1,
-        "capture_item":true,
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Boomerang Spot (300 Rupees)",
-		"access_rules":["$Json_Town_StockwellShop_Boomerang"],
-		"item_count":1,
-        "capture_item":true,
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Quiver Spot (600 Rupees)",
-		"item_count":1,
-        "capture_item":true,
-		"access_rules":["$Json_Town_StockwellShop_QuiverSpot"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Attic Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_StockwellShop_AtticChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Dog Food Bottle",
-		"item_count":1,
-        "capture_item":true,
-		"access_rules":["$Json_Town_StockwellShop_DogFoodBottle"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	]
+    "name": "Town - Swiftblade's Dojo",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1194,
+        "y": 1575
+      }
+    ],
+    "sections": [
+      {
+        "name": "Spin Attack",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_SwiftbladeDojo_SpinAttack"],
+        "chest_unopened_img": "images/items-map/Tiger Scroll.png",
+        "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
+      },
+      {
+        "name": "Rock Breaker",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_SwiftbladeDojo_RockBreaker"],
+        "chest_unopened_img": "images/items-map/Tiger Scroll.png",
+        "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
+      },
+      {
+        "name": "Dash Attack",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_SwiftbladeDojo_DashAttack"],
+        "chest_unopened_img": "images/items-map/Tiger Scroll.png",
+        "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
+      },
+      {
+        "name": "Down Thrust",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_SwiftbladeDojo_DownThrust"],
+        "chest_unopened_img": "images/items-map/Tiger Scroll.png",
+        "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
+      }
+    ]
   },
   {
-	"name":"Town - School Gardens",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1600,
-		"y":1067
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Garden Chests",
-		"item_count":3,
-		"access_rules":["$Json_Town_SchoolGardens_GardenChests"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Heart Piece",
-		"item_count":1,
-        "capture_item":true,
-		"access_rules":["$Json_Town_SchoolGardens_HeartPiece"],
-		"chest_unopened_img":"images/items-map/Heart Piece.png",
-		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
-	  },
-	  {
-		"name":"Minish Path Chest",
-		"visibility_rules":["$FusionsGreen"],
-		"item_count":1,
-		"access_rules":["$Json_Town_SchoolGardens_MinishPathChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
-  },
-  {
-	"name":"Town - School",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1500,
-		"y":1050,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Roof Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_School_RoofChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Pull the Statue",
-		"item_count":1,
-		"access_rules":["$Json_Town_School_PulltheStatue"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Fuser Tina",
-		"hosted_item":"fusions5e",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_School_Fuser"],
-	  }
-	]
-  },
-  {
-	"name":"Town - Mayor's House Basement",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1535,
-		"y":1220,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_MayorHouseBasement_Chest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
-  },
-  {
-	"name":"Town - Library",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1215,
-		"y":1045,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Yellow Minish - Gift",
-		"item_count":1,
-		"access_rules":["$Json_Town_Library_YellowMinishGift"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Fuser Librari",
-		"hosted_item":"fusions54",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuser1"],
-	  },
-	  {
-		"name":"Fuser Candy",
-		"hosted_item":"fusions22",
-		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuser2"],
-	  },{
-		"name":"Fuser Zill 1 ( above Library )",
-		"hosted_item":"fusions4b",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuser3"],
-	  },
-	  {
-		"name":"Fuser Zill 2 ( above Library )",
-		"hosted_item":"fusions57",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuser4"],
-	  },
-	  {
-		"name":"Fuser Zill 3 ( above Library )",
-		"hosted_item":"fusions3e",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Library_Fuser5"],
-	  }
-	]
-  },
-  {
-	"name":"Town - Cafe",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1240,
-		"y":1490,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Lady Next to Cafe - Gift",
-		"item_count":1,
-		"access_rules":["$Json_Town_Cafe_Gift"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Fuser Mama",
-		"hosted_item":"fusions34",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_Cafe_Fuser1"],
-	  },
-	  {
-		"name":"Fuser Hurdy-gurdy Man 1",
-		"hosted_item":"fusions32",
-		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Town_Cafe_Fuser2"],
-	  }
-	]
-  },
-  {
-	"name":"Town - Julietta's House",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1540,
-		"y":1500,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Item",
-		"item_count":1,
-        "capture_item":true,
-		"access_rules":["$Json_Town_JuliettaHouse_Item"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
-  },
-  {
-	"name":"Town - Hyrule Well",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1500,
-		"y":1425,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Bottom Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_HyruleWell_BottomChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Center Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_HyruleWell_CenterChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
-  },
-  {
-	"name":"Town - Hearth Ledge",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1550,
-		"y":1350,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_HearthLedge_Chest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
-  },
-  {
-	"name":"Town - Fountain",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1225,
-		"y":1250,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Mulldozers",
-		"item_count":1,
-		"access_rules":["$Json_Town_Fountain_Mulldozers"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_Fountain_Chest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Heart Piece",
-		"item_count":1,
+    "name": "Town - Stockwell's Shop",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1378,
+        "y": 1482
+      }
+    ],
+    "sections": [
+      {
+        "name": "Wallet Spot (80 Rupees)",
+        "access_rules": ["$Json_Town_StockwellShop_Wallet"],
+        "item_count": 1,
         "capture_item": true,
-		"access_rules":["$Json_Town_Fountain_HeartPiece"],
-        "chest_unopened_img":"images/items-map/Heart Piece.png",
-        "chest_opened_img":"images/items-map/Heart Piece Gray.png"
-	  }
-	]
-  },
-  
-  {
-	"name":"Town - Eastern Shops",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1225,
-		"y":1350,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Rem",
-		"item_count":1,
-		"access_rules":["$Json_Town_EasternShops_Rem"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Simon's Simulations",
-		"item_count":1,
-		"access_rules":["$Json_Town_EasternShops_SimonSimulations"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Figurine House",
-		"item_count":3,
-		"access_rules":["$Json_Town_EasternShops_FigurineHouse"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Figurine House Heart Piece",
-		"item_count":1,
- 		"access_rules":["$Json_Town_EasternShops_FigurineHouseHeartPiece"],
-       "capture_item":true,
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Boomerang Spot (300 Rupees)",
+        "access_rules": ["$Json_Town_StockwellShop_Boomerang"],
+        "item_count": 1,
+        "capture_item": true,
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Quiver Spot (600 Rupees)",
+        "item_count": 1,
+        "capture_item": true,
+        "access_rules": ["$Json_Town_StockwellShop_QuiverSpot"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Bombag Spot (600 Rupees)",
+        "item_count": 1,
+        "capture_item": true,
+        "visibility_rules": ["shopbag_extra_on"],
+        "access_rules": ["$Json_Town_StockwellShop_BombagSpot"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Attic Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_StockwellShop_AtticChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Dog Food Bottle",
+        "item_count": 1,
+        "capture_item": true,
+        "access_rules": ["$Json_Town_StockwellShop_DogFoodBottle"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Dr. Left's House",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1030,
-		"y":1355,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Item",
-		"item_count":1,	
-		"access_rules":["$Json_Town_DrLeftHouse_DrLeftHouse"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
+    "name": "Town - School Gardens",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1600,
+        "y": 1067
+      }
+    ],
+    "sections": [
+      {
+        "name": "Garden Chests",
+        "item_count": 3,
+        "access_rules": ["$Json_Town_SchoolGardens_GardenChests"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Heart Piece",
+        "item_count": 1,
+        "capture_item": true,
+        "access_rules": ["$Json_Town_SchoolGardens_HeartPiece"],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      },
+      {
+        "name": "Minish Path Chest",
+        "visibility_rules": ["$FusionsGreen"],
+        "item_count": 1,
+        "access_rules": ["$Json_Town_SchoolGardens_MinishPathChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Carlov",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1050,
-		"y":1580,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Gift",
-		"item_count":1,
-		"access_rules":["$Json_Town_Carlov_Gift"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
+    "name": "Town - School",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1500,
+        "y": 1050
+      }
+    ],
+    "sections": [
+      {
+        "name": "Roof Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_School_RoofChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Pull the Statue",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_School_PulltheStatue"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Fuser Tina",
+        "hosted_item": "fusions5e",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_School_Fuser"]
+      }
+    ]
   },
   {
-	"name":"Town - Bell",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1325,
-		"y":1200,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Heart Piece",
-		"item_count":1,
-		"access_rules":["$Json_Town_Bell_HeartPiece"],
-		"chest_unopened_img":"images/items-map/Heart Piece.png",
-		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
-	  }
-	]
+    "name": "Town - Mayor's House Basement",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1535,
+        "y": 1220
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_MayorHouseBasement_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Bakery Attic",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1425,
-		"y":1345,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Chest",
-		"item_count":1,
-		"access_rules":["$Json_Town_BakeryAttic_Chest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
+    "name": "Town - Library",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1215,
+        "y": 1045
+      }
+    ],
+    "sections": [
+      {
+        "name": "Yellow Minish - Gift",
+        "item_count": 1,
+        "visibility_rules": ["$LibraryWorld"],
+        "access_rules": ["$Json_Town_Library_YellowMinishGift"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Fuser Librari",
+        "hosted_item": "fusions54",
+        "visibility_rules": ["$LibraryWorld,fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_Library_Fuser1"]
+      },
+      {
+        "name": "Fuser Candy",
+        "hosted_item": "fusions22",
+        "visibility_rules": ["$LibraryWorld,fusionblue_vanilla"],
+        "access_rules": ["$Json_Town_Library_Fuser2"]
+      },
+      {
+        "name": "Fuser Zill 1 ( above Library )",
+        "hosted_item": "fusions4b",
+        "visibility_rules": ["$LibraryWorld,fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_Library_Fuser3"]
+      },
+      {
+        "name": "Fuser Zill 2 ( above Library )",
+        "hosted_item": "fusions57",
+        "visibility_rules": ["$LibraryWorld,fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_Library_Fuser4"]
+      },
+      {
+        "name": "Fuser Zill 3 ( above Library )",
+        "hosted_item": "$LibraryWorld,fusions3e",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_Library_Fuser5"]
+      }
+    ]
   },
   {
-	"name":"Town - Anju",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1550,
-		"y":1600,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Round 1 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_10"],
-		"access_rules":["$Json_Town_Anju_Gift1"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 2 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_9"],
-		"access_rules":["$Json_Town_Anju_Gift2"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 3 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_8"],
-		"access_rules":["$Json_Town_Anju_Gift3"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 4 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_7"],
-		"access_rules":["$Json_Town_Anju_Gift4"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 5 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_6"],
-		"access_rules":["$Json_Town_Anju_Gift5"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 6 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_5"],
-		"access_rules":["$Json_Town_Anju_Gift6"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 7 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_4"],
-		"access_rules":["$Json_Town_Anju_Gift7"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 8 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_3"],
-		"access_rules":["$Json_Town_Anju_Gift8"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 9 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_2"],
-		"access_rules":["$Json_Town_Anju_Gift9"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Round 10 Gift",
-		"item_count":1,
-		"visibility_rules":["cucco_1"],
-		"access_rules":["$Json_Town_Anju_Gift10"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
+    "name": "Town - Cafe",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1240,
+        "y": 1490
+      }
+    ],
+    "sections": [
+      {
+        "name": "Lady Next to Cafe - Gift",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_Cafe_Gift"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Fuser Mama",
+        "hosted_item": "fusions34",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_Cafe_Fuser1"]
+      },
+      {
+        "name": "Fuser Hurdy-gurdy Man 1",
+        "hosted_item": "fusions32",
+        "visibility_rules": ["fusionblue_vanilla"],
+        "access_rules": ["$Json_Town_Cafe_Fuser2"]
+      }
+    ]
   },
   {
-	"name":"Town - Waterfall",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1150,
-		"y":1271,
-		"restrict_visibility_rules":["$FusionsGreen"]
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Waterfall",
-	"access_rules":["$Json_Town_TownWaterfall_Waterfall"],
-		"item_count":1,
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
-	  }
-	]
+    "name": "Town - Julietta's House",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1540,
+        "y": 1500
+      }
+    ],
+    "sections": [
+      {
+        "name": "Item",
+        "item_count": 1,
+        "capture_item": true,
+        "access_rules": ["$Json_Town_JuliettaHouse_Item"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Near Post Office",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1030,
-		"y":1050
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Fuser Bremor",
-		"hosted_item":"fusions0b",
-		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_NearPostOffice_Fuser"],
-	  }
-	]
+    "name": "Town - Hyrule Well",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1500,
+        "y": 1425
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bottom Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_HyruleWell_BottomChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Center Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_HyruleWell_CenterChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Stranger",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1100,
-		"y":1221,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Fuser Stranger",
-		"hosted_item":"fusions0f",
-		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Stranger_Fuser"],
-	  }
-	]
+    "name": "Town - Hearth Ledge",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1550,
+        "y": 1350
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_HearthLedge_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Mayor",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1465,
-		"y":1210,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Fuser Hagen",
-		"hosted_item":"fusions1e",
-		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Town_Mayor_Fuser"],
-	  }
-	]
+    "name": "Town - Fountain",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1225,
+        "y": 1250
+      }
+    ],
+    "sections": [
+      {
+        "name": "Mulldozers",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_Fountain_Mulldozers"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_Fountain_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Heart Piece",
+        "item_count": 1,
+        "capture_item": true,
+        "access_rules": ["$Json_Town_Fountain_HeartPiece"],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+
+  {
+    "name": "Town - Eastern Shops",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1225,
+        "y": 1350
+      }
+    ],
+    "sections": [
+      {
+        "name": "Rem",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_EasternShops_Rem"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Simon's Simulations",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_EasternShops_SimonSimulations"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Figurine House",
+        "item_count": 3,
+        "access_rules": ["$Json_Town_EasternShops_FigurineHouse"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Figurine House Heart Piece",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_EasternShops_FigurineHouseHeartPiece"],
+        "capture_item": true,
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Postman",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1325,
-		"y":1275,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Fuser Postman",
-		"hosted_item":"fusions2c",
-		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Town_Postman_Fuser"],
-	  }
-	]
+    "name": "Town - Dr. Left's House",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1030,
+        "y": 1355
+      }
+    ],
+    "sections": [
+      {
+        "name": "Item",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_DrLeftHouse_DrLeftHouse"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Goron Shop",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1350,
-		"y":1350,
-	  }
-	],
-	"sections":[
-	  {
-		"name":"Set 1 - Item Left",
-		"item_count":1,
-		"visibility_rules":["goron_eu,goron_1"],
-		"access_rules":["$Json_Town_GoronShop_Set1_Item2"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 1 - Item Center and Right",
-		"item_count":2,
-		"visibility_rules":["goron_eu,goron_1"],
-		"access_rules":["$Json_Town_GoronShop_Set1_Item1"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 1 - Item Left and Center",
-		"item_count":2,
-		"visibility_rules":["goron_jp,goron_1"],
-		"access_rules":["$Json_Town_GoronShop_Set1_Item2"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 1 - Item Right",
-		"item_count":1,
-		"visibility_rules":["goron_jp,goron_1"],
-		"access_rules":["$Json_Town_GoronShop_Set1_Item1"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 2 - Items",
-		"item_count":3,
-		"visibility_rules":["goron_2"],
-		"access_rules":["$Json_Town_GoronShop_Set2_Items"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 3 - Item Left",
-		"item_count":1,
-		"visibility_rules":["goron_eu,goron_3"],
-		"access_rules":["$Json_Town_GoronShop_Set3_Item1"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 3 - Items Other",
-		"item_count":2,
-		"visibility_rules":["goron_eu,goron_3"],
-		"access_rules":["$Json_Town_GoronShop_Set3_Items"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 3 - Items",
-		"item_count":3,
-		"visibility_rules":["goron_jp,goron_3"],
-		"access_rules":["$Json_Town_GoronShop_Set3_Items"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 4 - Items",
-		"item_count":3,
-		"visibility_rules":["goron_4"],
-		"access_rules":["$Json_Town_GoronShop_Set4_Items"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 5 - Item Left",
-		"item_count":1,
-		"visibility_rules":["goron_eu,goron_5"],
-		"access_rules":["$Json_Town_GoronShop_Set5_Item1"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 5 - Items Other",
-		"item_count":2,
-		"visibility_rules":["goron_eu,goron_5"],
-		"access_rules":["$Json_Town_GoronShop_Set5_Items"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	  {
-		"name":"Set 5 - Items",
-		"item_count":3,
-		"visibility_rules":["goron_jp,goron_5"],
-		"access_rules":["$Json_Town_GoronShop_Set5_Items"],
-        "chest_unopened_img":"images/items-map/chest_closed.png",
-        "chest_opened_img":"images/items-map/chest_open.png"
-	  },
-	]
+    "name": "Town - Carlov",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1050,
+        "y": 1580
+      }
+    ],
+    "sections": [
+      {
+        "name": "Gift",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_Carlov_Gift"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
   },
   {
-	"name":"Town - Minish House",
-	"map_locations":[
-	  {
-		"map":"map",
-		"x":1030,
-		"y":1305,
-	  }
-	],
-	"sections":[
-{
-		"name":"Fuser Town Minish 1",
-		"hosted_item":"fusions4b",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_MinishHouse_Fuser1"],
-	  },
-	  {
-		"name":"Fuser Town Minish 2",
-		"hosted_item":"fusions57",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_MinishHouse_Fuser2"],
-	  },
-	  {
-		"name":"Fuser Town Minish 3",
-		"hosted_item":"fusions3e",
-		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Town_MinishHouse_Fuser3"],
-	  }
-	]
+    "name": "Town - Bell",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1325,
+        "y": 1200
+      }
+    ],
+    "sections": [
+      {
+        "name": "Heart Piece",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_Bell_HeartPiece"],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
   },
+  {
+    "name": "Town - Bakery Attic",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1425,
+        "y": 1345
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["$Json_Town_BakeryAttic_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Town - Anju",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1550,
+        "y": 1600
+      }
+    ],
+    "sections": [
+      {
+        "name": "Round 1 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_10"],
+        "access_rules": ["$Json_Town_Anju_Gift1"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 2 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_9"],
+        "access_rules": ["$Json_Town_Anju_Gift2"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 3 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_8"],
+        "access_rules": ["$Json_Town_Anju_Gift3"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 4 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_7"],
+        "access_rules": ["$Json_Town_Anju_Gift4"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 5 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_6"],
+        "access_rules": ["$Json_Town_Anju_Gift5"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 6 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_5"],
+        "access_rules": ["$Json_Town_Anju_Gift6"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 7 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_4"],
+        "access_rules": ["$Json_Town_Anju_Gift7"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 8 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_3"],
+        "access_rules": ["$Json_Town_Anju_Gift8"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 9 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_2"],
+        "access_rules": ["$Json_Town_Anju_Gift9"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Round 10 Gift",
+        "item_count": 1,
+        "visibility_rules": ["cucco_1"],
+        "access_rules": ["$Json_Town_Anju_Gift10"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Town - Waterfall",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1150,
+        "y": 1271,
+        "restrict_visibility_rules": ["$FusionsGreen"]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Waterfall",
+        "access_rules": ["$Json_Town_TownWaterfall_Waterfall"],
+        "item_count": 1,
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Town - Near Post Office",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1030,
+        "y": 1050
+      }
+    ],
+    "sections": [
+      {
+        "name": "Fuser Bremor",
+        "hosted_item": "fusions0b",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["$Json_Town_NearPostOffice_Fuser"]
+      }
+    ]
+  },
+  {
+    "name": "Town - Stranger",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1100,
+        "y": 1221
+      }
+    ],
+    "sections": [
+      {
+        "name": "Fuser Stranger",
+        "hosted_item": "fusions0f",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["$Json_Town_Stranger_Fuser"]
+      }
+    ]
+  },
+  {
+    "name": "Town - Mayor",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1465,
+        "y": 1210
+      }
+    ],
+    "sections": [
+      {
+        "name": "Fuser Hagen",
+        "hosted_item": "fusions1e",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["$Json_Town_Mayor_Fuser"]
+      }
+    ]
+  },
+  {
+    "name": "Town - Postman",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1325,
+        "y": 1275
+      }
+    ],
+    "sections": [
+      {
+        "name": "Fuser Postman",
+        "hosted_item": "fusions2c",
+        "visibility_rules": ["fusionblue_vanilla"],
+        "access_rules": ["$Json_Town_Postman_Fuser"]
+      }
+    ]
+  },
+  {
+    "name": "Town - Goron Shop",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1350,
+        "y": 1350
+      }
+    ],
+    "sections": [
+      {
+        "name": "Set 1 - Item Left",
+        "item_count": 1,
+        "visibility_rules": ["goron_eu,goron_1"],
+        "access_rules": ["$Json_Town_GoronShop_Set1_Item2"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 1 - Item Center and Right",
+        "item_count": 2,
+        "visibility_rules": ["goron_eu,goron_1"],
+        "access_rules": ["$Json_Town_GoronShop_Set1_Item1"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 1 - Item Left and Center",
+        "item_count": 2,
+        "visibility_rules": ["goron_jp,goron_1"],
+        "access_rules": ["$Json_Town_GoronShop_Set1_Item2"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 1 - Item Right",
+        "item_count": 1,
+        "visibility_rules": ["goron_jp,goron_1"],
+        "access_rules": ["$Json_Town_GoronShop_Set1_Item1"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 2 - Items",
+        "item_count": 3,
+        "visibility_rules": ["goron_2"],
+        "access_rules": ["$Json_Town_GoronShop_Set2_Items"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 3 - Item Left",
+        "item_count": 1,
+        "visibility_rules": ["goron_eu,goron_3"],
+        "access_rules": ["$Json_Town_GoronShop_Set3_Item1"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 3 - Items Other",
+        "item_count": 2,
+        "visibility_rules": ["goron_eu,goron_3"],
+        "access_rules": ["$Json_Town_GoronShop_Set3_Items"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 3 - Items",
+        "item_count": 3,
+        "visibility_rules": ["goron_jp,goron_3"],
+        "access_rules": ["$Json_Town_GoronShop_Set3_Items"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 4 - Items",
+        "item_count": 3,
+        "visibility_rules": ["goron_4"],
+        "access_rules": ["$Json_Town_GoronShop_Set4_Items"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 5 - Item Left",
+        "item_count": 1,
+        "visibility_rules": ["goron_eu,goron_5"],
+        "access_rules": ["$Json_Town_GoronShop_Set5_Item1"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 5 - Items Other",
+        "item_count": 2,
+        "visibility_rules": ["goron_eu,goron_5"],
+        "access_rules": ["$Json_Town_GoronShop_Set5_Items"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Set 5 - Items",
+        "item_count": 3,
+        "visibility_rules": ["goron_jp,goron_5"],
+        "access_rules": ["$Json_Town_GoronShop_Set5_Items"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Town - Minish House",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1030,
+        "y": 1305
+      }
+    ],
+    "sections": [
+      {
+        "name": "Fuser Town Minish 1",
+        "hosted_item": "fusions4b",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_MinishHouse_Fuser1"]
+      },
+      {
+        "name": "Fuser Town Minish 2",
+        "hosted_item": "fusions57",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_MinishHouse_Fuser2"]
+      },
+      {
+        "name": "Fuser Town Minish 3",
+        "hosted_item": "fusions3e",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["$Json_Town_MinishHouse_Fuser3"]
+      }
+    ]
+  }
 ]

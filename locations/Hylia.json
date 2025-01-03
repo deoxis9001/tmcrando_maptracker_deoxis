@@ -284,13 +284,14 @@
 		"name":"Gift",
 		"item_count":1,
 		"access_rules":["$Json_Hylia_Librari_Item"],
+		"visibility_rules":["lakewindcrest_yes"],
         "chest_unopened_img":"images/items-map/Heart Container.png",
         "chest_opened_img":"images/items-map/Heart Container Gray.png"
 	  },
 	  {
 		"name":"Fuser Librari",
 		"hosted_item":"fusions54",
-		"visibility_rules":["fusiongreen_vanilla"],
+		"visibility_rules":["lakewindcrest_yes,fusiongreen_vanilla"],
 		"access_rules":["$Json_Hylia_Librari_Fuser"],
 	  }
 	]
@@ -308,8 +309,8 @@
 	  {
 		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions11",
-		"visibility_rules":["fusionred_vanilla"],
-		"access_rules":["$Json_Hylia_MinishHouseWindCrest_Fuser"],
+		"visibility_rules":["lakewindcrest_yes,fusionred_vanilla"],
+		"access_rules":["$Json_Hylia_MinishHouseWindCrest_Fuser"]
 	  }
 	]
   },

@@ -79,7 +79,7 @@
 		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions63",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_CrenelBase_MinishCrack_Fuser"],
+		"access_rules":["$Json_CrenelBase_MinishCrack_Fuser"]
 	  }
 	]
   },

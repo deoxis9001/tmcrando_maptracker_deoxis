@@ -7,19 +7,19 @@ function NoCloudtop()
   local Central = Tracker:FindObjectForCode("@Central Fusion/Central Fusion")
   local compte = 0
   if TopRight.AvailableChestCount == 0 then
-	compte = 1 + compte
+    compte = 1 + compte
   end
   if TopLeft.AvailableChestCount == 0 then
-	compte = 1 + compte
+    compte = 1 + compte
   end
   if BottomRight.AvailableChestCount == 0 then
-	compte = 1 + compte
+    compte = 1 + compte
   end
   if BottomLeft.AvailableChestCount == 0 then
-	compte = 1 + compte
+    compte = 1 + compte
   end
   if Central.AvailableChestCount == 0 then
-	compte = 1 + compte
+    compte = 1 + compte
   end
   if item.AcquiredCount <= compte then
     return 0

@@ -33,7 +33,7 @@
 		  "access_rules":["$Json_FallsLower_Rupees_Rupee"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
-		},
+		}
 	]
   },
   {
@@ -42,7 +42,7 @@
 	  {
 		"map":"map",
 		"x":1970,
-		"y":525,
+		"y":525
 	  }
 	],
 	"sections":[
@@ -59,7 +59,7 @@
 		"access_rules":["$Json_FallsLower_MittsCave_Chest"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
-	  },
+	  }
 	]
   },
   {
@@ -68,7 +68,7 @@
 	  {
 		"map":"map",
 		"x":1910,
-		"y":750,
+		"y":750
 	  }
 	],
 	"sections":[

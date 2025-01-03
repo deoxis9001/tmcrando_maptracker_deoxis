@@ -1,29 +1,22 @@
 SwordOptions = CustomItem:extend()
-
 function SwordOptions:init(name, code, imagePathActive, imagePathDesactive)
-    self:createItem(name)
-    self.code = code
-    self:setProperty("active", true)
-    self.activeImage = ImageReference:FromPackRelativePath(imagePathActive)
-    self.disabledImage = ImageReference:FromPackRelativePath(imagePathDesactive)
-    self.noImage = nil
-    self.ItemInstance.PotentialIcon = self.activeImage
-	-- sword.ItemInstance.PotentialIcon = sword.activeImage
-	-- self.ItemInstance.Icon = self.activeImage
-
-    self:updateIcon()    
+	self:createItem(name)
+	self.code = code
+	self:setProperty("active", true)
+	self.activeImage = ImageReference:FromPackRelativePath(imagePathActive)
+	self.disabledImage = ImageReference:FromPackRelativePath(imagePathDesactive)
+	self.noImage = nil
+	self.ItemInstance.PotentialIcon = self.activeImage
+	self:updateIcon()
 end
-
 function SwordOptions:setActive(active)
-    self:setProperty("active", active)
+	self:setProperty("active", active)
 end
-
 function SwordOptions:getActive()
-    return self:getProperty("active")
+	return self:getProperty("active")
 end
-
 function SwordOptions:updateIcon()
-    if self:getActive() then
+	if self:getActive() then
 		local countNumberSword = 0
 		if foursword.InfoActive == true then
 			countNumberSword = 5
@@ -38,26 +31,25 @@ function SwordOptions:updateIcon()
 		else
 			countNumberSword = 0
 		end
-        self.ItemInstance.Icon = self.activeImage
-        smithsword.ItemInstance.Icon = smithsword.noImage
-        greensword.ItemInstance.Icon = greensword.noImage
-        redsword.ItemInstance.Icon = redsword.noImage
-        bluesword.ItemInstance.Icon = bluesword.noImage
-        foursword.ItemInstance.Icon = foursword.noImage
-        sword.ItemInstance.Icon = sword.info
+		self.ItemInstance.Icon = self.activeImage
+		smithsword.ItemInstance.Icon = smithsword.noImage
+		greensword.ItemInstance.Icon = greensword.noImage
+		redsword.ItemInstance.Icon = redsword.noImage
+		bluesword.ItemInstance.Icon = bluesword.noImage
+		foursword.ItemInstance.Icon = foursword.noImage
+		sword.ItemInstance.Icon = sword.info
 		sword:setActive(countNumberSword)
 		smithsword:setProperty("Active", false)
 		greensword:setProperty("Active", false)
 		redsword:setProperty("Active", false)
 		bluesword:setProperty("Active", false)
 		foursword:setProperty("Active", false)
-    else
+	else
 		local ActiveFour = false
 		local ActiveBlue = false
 		local ActiveRed = false
 		local ActiveGreen = false
 		local ActiveSmith = false
-		-- print("InfoStage:",sword.InfoStage)
 		if sword.InfoStage >= 5 then
 			smithsword.ItemInstance.Icon = smithsword.activeImage
 			greensword.ItemInstance.Icon = greensword.activeImage
@@ -125,68 +117,60 @@ function SwordOptions:updateIcon()
 			ActiveGreen = false
 			ActiveSmith = false
 		end
-        self.ItemInstance.Icon = self.disabledImage
-        sword.ItemInstance.Icon = sword.noImage
+		self.ItemInstance.Icon = self.disabledImage
+		sword.ItemInstance.Icon = sword.noImage
 		sword:setActive(0)
-		sword.code=sword.code0
+		sword.code = sword.code0
 		smithsword:setProperty("Active", ActiveSmith)
 		greensword:setProperty("Active", ActiveGreen)
 		redsword:setProperty("Active", ActiveRed)
 		bluesword:setProperty("Active", ActiveBlue)
 		foursword:setProperty("Active", ActiveFour)
-    end
+	end
 end
-
 function SwordOptions:onLeftClick()
-	if (self:getActive()) then
+	if self:getActive() then
 		self:setActive(false)
 	else
 		self:setActive(true)
 	end
 end
-
 function SwordOptions:onRightClick()
-	if (self:getActive()) then
+	if self:getActive() then
 		self:setActive(false)
 	else
 		self:setActive(true)
 	end
 end
-
 function SwordOptions:canProvideCode(code)
-    if code == self.code then
-        return true
-    else
-        return false
-    end
+	if code == self.code then
+		return true
+	else
+		return false
+	end
 end
-
 function SwordOptions:providesCode(code)
-    if code == self.code and self:getActive() then
-        return 1
-    end
-    return 0
+	if code == self.code and self:getActive() then
+		return 1
+	end
+	return 0
 end
-
 function SwordOptions:advanceToCode(code)
-    if code == nil or code == self.code then
-        self:setActive(true)
-    end
+	if code == nil or code == self.code then
+		self:setActive(true)
+	end
 end
-
 function SwordOptions:save()
-    local saveData = {}
-    saveData["active"] = self:getActive()
-    return saveData
+	local saveData = {}
+	saveData.active = self:getActive()
+	return saveData
 end
-
 function SwordOptions:load(data)
-    if data["active"] ~= nil then
-        self:setActive(data["active"])
-    end
-    return true
+	if data.active ~= nil then
+		self:setActive(data.active)
+	end
+	return true
 end
-
 function SwordOptions:propertyChanged(key, value)
-    self:updateIcon()
+	self:updateIcon()
 end

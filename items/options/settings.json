@@ -57,6 +57,25 @@
     ]
   },
   {
+    "name":"If enabled, will activate the wind crest at Lake Hylia from the start of the game.\nNote: If disabled, some locations are removed from the game, including the Library if not open from the start through the corresponding setting.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":1,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/world/wind_crests/lake_no.png",
+        "codes":"lakewindcrest_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world/wind_crests/lake_yes.png",
+        "codes":"lakewindcrest_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
     "name":"If enabled, will activate the wind crest in Swamp from the start of the game.",
     "type":"progressive",
     "loop":true,
@@ -307,7 +326,7 @@
     ]
   },
   {
-    "name":"The 6 Dungeons that can hold elements may have their entrances shuffled. These are always coupled entrance swaps which means when you leave a shuffled dungeon you will always go back to the place you originally came from.\n Dark Hyrule Castle is not currently shuffled.",
+    "name":"The 6 Dungeons that can hold elements as well as Dark Hyrule Castle may have their entrances shuffled. These are always coupled entrance swaps which means when you leave a shuffled dungeon you will always go back to the place you originally came from.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -437,10 +456,6 @@
         "codes": "preset_14"
       },
       {
-        "img":"images/options/tracker/tracking_other/preset_15.png",
-        "codes": "preset_15"
-      },
-      {
         "img":"images/options/tracker/tracking_other/preset_custom.png",
         "codes": "preset_custom"
       }
@@ -466,6 +481,25 @@
     ]
   },
   {
+    "name":"If enabled, Wind Tribe Tower will act like it has already been entered from Cloud Tops from the start of the game. This unlocks the upper floors, Gregal's 2nd item and the main exit to Cloud tops early.\nCertain combinations of settings may allow for a softlock when going to Cloud tops without the Tornado being completed, Homewarp will always be available in these situations.\n\nIf disabled, Wind Tribe will stay in its initial state until the player enters the building from Cloud Tops.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/world/speed_up/open_wind_tribe_no.png",
+        "codes": "open_wind_tribe_no",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/world/speed_up/open_wind_tribe_yes.png",
+        "codes": "open_wind_tribe_yes",
+        "inherit_codes":false
+      }
+    ]
+  },
+  {
     "name":"If enabled, will spawn Tingle's brothers Knuckle, Ankle and David Jr. from the start of the game.\nIf disabled, the Tingle brothers will only spawn after talking to Tingle twice in a row.",
     "type": "progressive",
     "loop": true,
@@ -485,20 +519,20 @@
     ]
   },
   {
-    "name":"If enabled, Wind Tribe Tower will act like it has already been entered from Cloud Tops from the start of the game. This unlocks the upper floors, Gregal's 2nd item and the main exit to Cloud tops early.\nCertain combinations of settings may allow for a softlock when going to Cloud tops without the Tornado being completed, Homewarp will always be available in these situations.\n\nIf disabled, Wind Tribe will stay in its initial state until the player enters the building from Cloud Tops.",
+    "name":"If enabled, the Library will be open from the start of the game.\nIf disabled, the Library will open when you find the Ocarina, but only if the Lake Hylia wind crest is enabled.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/options/world/speed_up/open_wind_tribe_no.png",
-        "codes": "open_wind_tribe_no",
+        "img": "images/options/world/speed_up/open_library_no.png",
+        "codes": "open_library_no",
         "inherit_codes":false
       },
       {
-        "img":"images/options/world/speed_up/open_wind_tribe_yes.png",
-        "codes": "open_wind_tribe_yes",
+        "img":"images/options/world/speed_up/open_library_yes.png",
+        "codes": "open_library_yes",
         "inherit_codes":false
       }
     ]
@@ -1139,7 +1173,7 @@
     ]
   },
   {
-    "name":"How many sets of Goron Merchant items are included in the random item pool.\nEach set consists of 3 items, and all 3 must be bought to advance to the next set.\nThere are 5 sets in total.\nThe remaining sets will be filled with junk items.",
+    "name":"How many sets of Goron Merchant items are included in the random item pool.\nEach set consists of 3 items, and all 3 must be bought to advance to the next set.\nThere are 5 sets in total.\nThe remaining sets are either Kinstones (not in logic) like in vanilla, or removed from the game if Kinstone Drops are Disabled.\nIf Blue Fusions are Removed, these locations are not accessible.",
     "type": "progressive",
     "loop": true,
 	"initial_stage_idx":0,
@@ -1170,6 +1204,28 @@
         "img":"images/options/main/shuffle/goron_5.png",
         "codes": "goron_5",
       },
+    ]
+  },
+  {
+    "name":"If enabled will shuffle the item received by Biggoron. To get it, you have to talk to it while in possession of a Shield.\nIf Red Fusions are Removed, or Blue Fusions are Removed and Red Fusions not Open, this location is not accessible.\n'none': Biggoron does not give an item.\n'Shield': Biggoron gives an item if you show it any Shield. If you only have a regular Shield, Biggoron will eat it, but you can buy a replacement in the shop in town.\n'Mirror': Biggoron gives an item only if you show it a Mirror Shield.",
+    "type": "progressive",
+    "loop": true,
+	"initial_stage_idx":1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/main/shuffle/biggoron_none.png",
+        "codes": "biggoron_none",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/main/shuffle/biggoron_shield.png",
+        "codes": "biggoron_shield",
+      },
+      {
+        "img":"images/options/main/shuffle/biggoron_mirror.png",
+        "codes": "biggoron_mirror",
+      }
     ]
   },
   {
@@ -1211,7 +1267,7 @@
     ]
   },
   {
-    "name":"If enabled will shuffle items found is special pots around the world that contain one off collectables. This setting does not affect the LonLonRanch Key Item which will always shuffled, however if this setting is off then the pot in the ranch will always contain junk.",
+    "name":"If enabled will shuffle items found is special pots around the world that contain one off collectables. This setting does not affect the LonLonRanch Key Item which will always be shuffled, however if this setting is off then the pot in the ranch will always contain junk.",
     "type":"progressive",
     "loop":true,
 	"initial_stage_idx":1,
@@ -1282,6 +1338,25 @@
       {
         "img":"images/options/main/shuffle/golden_enemy_on.png",
         "codes":"golden_enemy_on",
+        "inherit_codes":false
+      }
+    ],
+  },
+  {
+    "name":"If enabled will add a location to the shop in town with a randomized item that costs 600 Rupees.\nThis location is meant to represent the Bomb Bag location that can be purchased in the JP/US versions.",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":0,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/main/shuffle/shopbag_extra_off.png",
+        "codes":"shopbag_extra_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/main/shuffle/shopbag_extra_on.png",
+        "codes":"shopbag_extra_on",
         "inherit_codes":false
       }
     ],

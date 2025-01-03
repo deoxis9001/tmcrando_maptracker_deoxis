@@ -1,5 +1,4 @@
 [
-  //beta
  {
    "name": "beta",
    "type": "progressive",
@@ -14,7 +13,7 @@
      {
        "img":"images/items/Beta.png",
        "codes": "beta"
-     },
+     }
    ]
- },
+ }
 ]

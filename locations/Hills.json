@@ -5,7 +5,7 @@
 	  {
 		"map":"map",
 		"x":1700,
-		"y":1560,
+		"y":1560
 	  }
 	],
 	"sections":[
@@ -21,7 +21,7 @@
 		"name":"Fuser Mysterious Wall",
 		"hosted_item":"fusions2b",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Hills_MittsCave_Fuser"],
+		"access_rules":["$Json_Hills_MittsCave_Fuser"]
 	  }
 	]
   },
@@ -31,7 +31,7 @@
 	  {
 		"map":"map",
 		"x":1775,
-		"y":1900,
+		"y":1900
 	  }
 	],
 	"sections":[
@@ -117,7 +117,7 @@
 	  {
 		"map":"map",
 		"x":1705,
-		"y":2000,
+		"y":2000
 	  }
 	],
 	"sections":[
@@ -125,7 +125,7 @@
 		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions2e",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Hills_MinishHouse_Fuser"],
+		"access_rules":["$Json_Hills_MinishHouse_Fuser"]
 	  }
 	]
   },
@@ -143,13 +143,13 @@
 		"name":"Fuser Meenie",
 		"hosted_item":"fusions62",
 		"visibility_rules":["fusiongreen_vanilla"],
-		"access_rules":["$Json_Hills_Farmer_Fuser1"],
+		"access_rules":["$Json_Hills_Farmer_Fuser1"]
 	  },
 	  {
 		"name":"Fuser eenie",
 		"hosted_item":"fusions29",
 		"visibility_rules":["fusionblue_vanilla"],
-		"access_rules":["$Json_Hills_Farmer_Fuser2"],
+		"access_rules":["$Json_Hills_Farmer_Fuser2"]
 	  }
 	]
   }

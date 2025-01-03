@@ -1,4 +1,3 @@
-
 ScriptHost:LoadScript("scripts/logic/common.lua")
 ScriptHost:LoadScript("scripts/logic/CanDamage.lua")
 ScriptHost:LoadScript("scripts/logic/CanSplit.lua")
