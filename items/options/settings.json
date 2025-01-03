@@ -1221,10 +1221,12 @@
       {
         "img":"images/options/main/shuffle/biggoron_shield.png",
         "codes": "biggoron_shield",
+        "inherit_codes":false
       },
       {
         "img":"images/options/main/shuffle/biggoron_mirror.png",
         "codes": "biggoron_mirror",
+        "inherit_codes":false
       }
     ]
   },
