@@ -3,6 +3,9 @@
 ------------------------------------------------------------------
 ScriptItemSpec="scripts/item_spec/"
 ScriptSettings="scripts/settings/"
+ScriptLogicCommon="scripts/logic/common/"
+ScriptLogicDungeons="scripts/logic/dungeons/"
+ScriptLogicOverworld="scripts/logic/overworld/"
 ScriptLogic="scripts/logic/"
 ScriptPreset="scripts/preset/"
 ScriptAutotracking="scripts/autotracking/"
@@ -10,9 +13,13 @@ ScriptAutotracking="scripts/autotracking/"
 JsLayouts="layouts/"
 JsItems="items/"
 JsMap="maps/"
-
-ScriptLocations="scripts/locations/"
-JsLocations="locations/"
+if PopVersion then
+	ScriptLocations="scripts/locationspop/"
+	JsLocations="locationspop/"
+else
+	ScriptLocations="scripts/locations/"
+	JsLocations="locations/"
+end
 
 has_item_data={}
 has_item_data_dev={}
@@ -60,25 +67,55 @@ TMC_CACHE_DEBUG_ITEM = false
 -- Logic Pack
 ------------------------------------------------------------------
 ScriptHost:LoadScript(ScriptPreset.."init.lua")
-ScriptHost:LoadScript(ScriptLogic.."Function.lua")
-ScriptHost:LoadScript(ScriptLogic.."Access.lua")
-ScriptHost:LoadScript(ScriptLogic.."Fusion.lua")
-ScriptHost:LoadScript(ScriptLogic.."Common.lua")
-ScriptHost:LoadScript(ScriptLogic.."CaveOfFlame.lua")
-ScriptHost:LoadScript(ScriptLogic.."DarkHyruleCastle.lua")
-ScriptHost:LoadScript(ScriptLogic.."Deepwood.lua")
-ScriptHost:LoadScript(ScriptLogic.."Droplet.lua")
-ScriptHost:LoadScript(ScriptLogic.."FortressOfWind.lua")
-ScriptHost:LoadScript(ScriptLogic.."PalaceOfWind.lua")
-ScriptHost:LoadScript(ScriptLogic.."Overworld.lua")
-ScriptHost:LoadScript(ScriptLogic.."check/Logic.lua")
-ScriptHost:LoadScript(ScriptLogic.."check/CaveOfFlame.lua")
-ScriptHost:LoadScript(ScriptLogic.."check/Crypt.lua")
-ScriptHost:LoadScript(ScriptLogic.."check/Deepwood.lua")
-ScriptHost:LoadScript(ScriptLogic.."check/Fortress.lua")
-ScriptHost:LoadScript(ScriptLogic.."check/Droplet.lua")
-ScriptHost:LoadScript(ScriptLogic.."check/Palace.lua")
-ScriptHost:LoadScript(ScriptLogic.."check/DHC.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Function.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Access.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Beam.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."CanDamage.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."CanSplit.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."CaveOfFlame.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Common.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."DarkHyruleCastle.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Deepwood.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Droplet.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Elements.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."FortressOfWind.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Function.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Fusion.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."NoCloudtop.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Overworld.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Openworld.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."PalaceOfWind.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Settings.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Sword.lua")
+
+ScriptHost:LoadScript(ScriptLogicDungeons.."CaveOfFlame.lua")
+ScriptHost:LoadScript(ScriptLogicDungeons.."Crypt.lua")
+ScriptHost:LoadScript(ScriptLogicDungeons.."Deepwood.lua")
+ScriptHost:LoadScript(ScriptLogicDungeons.."DHC.lua")
+ScriptHost:LoadScript(ScriptLogicDungeons.."Droplet.lua")
+ScriptHost:LoadScript(ScriptLogicDungeons.."Fortress.lua")
+ScriptHost:LoadScript(ScriptLogicDungeons.."Palace.lua")
+
+ScriptHost:LoadScript(ScriptLogicOverworld.."Castle.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Clouds.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Crenel.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."CrenelBase.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Falls.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."FallsLower.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Hills.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Hylia.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."LonLon.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."MinishWoods.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."NorthField.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Ruins.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."SouthField.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Swamp.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Town.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Trilby.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."Valley.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."WesternWoods.lua")
+ScriptHost:LoadScript(ScriptLogicOverworld.."WindTribe.lua")
+
 
 ------------------------------------------------------------------
 -- Script Item for scripted systems in this pack
@@ -139,7 +176,11 @@ Preset()
 -- Managed Item in this pack
 ------------------------------------------------------------------
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
-	Tracker:AddMaps(JsMap.."maps.json")
+	if PopVersion then
+		Tracker:AddMaps(JsMap.."mapspop.json")
+	else
+		Tracker:AddMaps(JsMap.."maps.json")
+	end
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/CaveOfFlame.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Crypt.lua")
 	ScriptHost:LoadScript(ScriptLocations.."Dungeons/Deepwood.lua")
@@ -194,7 +235,11 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	Tracker:AddLocations(JsLocations.."Maps.json")
 
 end
-Tracker:AddLayouts(JsLayouts.."tracker.json")
+if PopVersion then
+	Tracker:AddLayouts(JsLayouts.."trackerPOP.json")
+else
+	Tracker:AddLayouts(JsLayouts.."tracker.json")
+end
 if (string.find(Tracker.ActiveVariantUID, "_h")) then
 	Tracker:AddLayouts(JsLayouts.."standard_h_broadcast.json")
 else
@@ -204,10 +249,16 @@ end
 ------------------------------------------------------------------
 -- Autotracking
 ------------------------------------------------------------------
-
-if _VERSION == "Lua 5.3" then
-	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
+if  PopVersion then
+	ScriptHost:LoadScript(ScriptAutotracking.."autotrackingPOP.lua")
 else
-	print("Your tracker version does not support autotracking")
+	if _VERSION == "Lua 5.3" and not PopVersion then
+		ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
+	else
+		print("Your tracker version does not support autotracking")
+	end
 end
-
+if PopVersion then
+	ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
+	tracker_on_pack_ready() 
+end

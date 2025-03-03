@@ -7,7 +7,7 @@
   {
     "name": "mines",
     "img": "images/maps/mine.png",
-    "locations_size": 50
+    "location_size": 50
   },
   {
     "name": "dws",

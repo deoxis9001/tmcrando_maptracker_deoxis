@@ -462,25 +462,6 @@
     ]
   },
   {
-    "name":"Out of logic",
-    "type": "progressive",
-    "loop": true,
-	"initial_stage_idx":1,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/options/world/settings/out_logic_no.png",
-        "codes": "out_logic_no",
-        "inherit_codes":false
-      },
-      {
-        "img":"images/options/world/settings/out_logic_yes.png",
-        "codes": "out_logic_yes",
-        "inherit_codes":false
-      }
-    ]
-  },
-  {
     "name":"If enabled, Wind Tribe Tower will act like it has already been entered from Cloud Tops from the start of the game. This unlocks the upper floors, Gregal's 2nd item and the main exit to Cloud tops early.\nCertain combinations of settings may allow for a softlock when going to Cloud tops without the Tornado being completed, Homewarp will always be available in these situations.\n\nIf disabled, Wind Tribe will stay in its initial state until the player enters the building from Cloud Tops.",
     "type": "progressive",
     "loop": true,

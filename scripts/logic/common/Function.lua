@@ -262,6 +262,7 @@ function UpdateFusion()
     end
   end
 end
+
 function tracker_on_accessibility_updating()
   if Cache_reset then
     has_item_data = {}
