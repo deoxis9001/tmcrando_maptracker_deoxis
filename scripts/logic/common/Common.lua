@@ -614,6 +614,7 @@ function FusionsGreenNumber(code)
 		return 1
 	end
 	if fusiongreencombined:getActive() then
+		r
 		local count_Fuser =
 			function_Cached("FusionsGreenCNumber") + function_Cached("FusionsGreenGNumber") +
 			function_Cached("FusionsGreenPNumber")

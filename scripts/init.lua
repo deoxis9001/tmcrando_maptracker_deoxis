@@ -1,25 +1,26 @@
 ------------------------------------------------------------------
 -- do not touch these variables 
 ------------------------------------------------------------------
-ScriptItemSpec="scripts/item_spec/"
 ScriptSettings="scripts/settings/"
 ScriptLogicCommon="scripts/logic/common/"
 ScriptLogicDungeons="scripts/logic/dungeons/"
 ScriptLogicOverworld="scripts/logic/overworld/"
 ScriptLogic="scripts/logic/"
 ScriptPreset="scripts/preset/"
-ScriptAutotracking="scripts/autotracking/"
-
+print(Tracker.ActiveVariantUID)
 JsLayouts="layouts/"
 JsItems="items/"
 JsMap="maps/"
 if PopVersion then
-	ScriptLocations="scripts/locationspop/"
-	JsLocations="locationspop/"
+	TrackerSoftwareType="pop/"
 else
-	ScriptLocations="scripts/locations/"
-	JsLocations="locations/"
+	TrackerSoftwareType="emo/"
+
 end
+	ScriptItemSpec=TrackerSoftwareType.."scripts/item_spec/"
+	ScriptLocations=TrackerSoftwareType.."scripts/locations/"
+	JsLocations=TrackerSoftwareType.."json/locations/"
+	ScriptAutotracking=TrackerSoftwareType.."scripts/autotracking/"
 
 has_item_data={}
 has_item_data_dev={}
@@ -41,7 +42,7 @@ setting_preset_data_cache=-1
 --Activate the cache reset
 Cache_reset=false
 function_count = 0
-
+cache_number=0  
 ------------------------------------------------------------------
 -- Configuration options for scripted systems in this pack
 ------------------------------------------------------------------
@@ -249,16 +250,12 @@ end
 ------------------------------------------------------------------
 -- Autotracking
 ------------------------------------------------------------------
-if  PopVersion then
-	ScriptHost:LoadScript(ScriptAutotracking.."autotrackingPOP.lua")
+if _VERSION == "Lua 5.3" or PopVersion then
+	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
 else
-	if _VERSION == "Lua 5.3" and not PopVersion then
-		ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
-	else
-		print("Your tracker version does not support autotracking")
-	end
+	print("Your tracker version does not support autotracking")
 end
 if PopVersion then
-	ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
+	--ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
 	tracker_on_pack_ready() 
 end

@@ -1,0 +1,430 @@
+[
+  {
+    "name": "Minish Woods North - Syrup's Hut",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2435,
+        "y": 1470
+      }
+    ],
+    "sections": [
+      {
+        "name": "Item (60 Rupees)",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_SyrupsHut_Item"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Shrine Heart Piece",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2250,
+        "y": 1900
+      }
+    ],
+    "sections": [
+      {
+        "name": "Heart Piece",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_ShrineHeartPiece_HeartPiece"],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods North - Mitts Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2300,
+        "y": 1600
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_MittCave_Digging"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Fuser Mysterious Wall",
+        "hosted_item": "fusions26",
+        "visibility_rules": ["fusionblue_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_MittCave_Fuser"]
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Great Fairy",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2050,
+        "y": 1470
+      }
+    ],
+    "sections": [
+      {
+        "name": "Gift",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_GreatFairy_Gift"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Minish Village",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2297,
+        "y": 2000
+      }
+    ],
+    "sections": [
+      {
+        "name": "Barrel",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_Barrel"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Heart Piece",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_HeartPiece"],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      },
+      {
+        "name": "Chest",
+        "visibility_rules": ["$FusionsGreen"],
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Fuser Forest Minish (Lake) 2",
+        "hosted_item": "fusions1f",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser1"]
+      },
+      {
+        "name": "Fuser Forest Minish (Lake) 3",
+        "hosted_item": "fusions12",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser2"]
+      },
+      {
+        "name": "Gentari (Elder)",
+        "hosted_item": "fusions1c",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser3"]
+      },
+      {
+        "name": "Fuser Forest Minish 1 ( Vase House )",
+        "hosted_item": "fusions4b",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser4"]
+      },
+      {
+        "name": "Fuser Forest Minish 2 ( Vase House )",
+        "hosted_item": "fusions57",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser5"]
+      },
+      {
+        "name": "Fuser Forest Minish 3 ( Vase House )",
+        "hosted_item": "fusions3e",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser6"]
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Minish Flippers Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2050,
+        "y": 1800
+      }
+    ],
+    "sections": [
+      {
+        "name": "Left Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_MinishFlippersCave_LeftChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Left Heart Piece",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_MinishFlippersCave_LeftHeartPiece"],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      },
+      {
+        "name": "Middle Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_MinishFlippersCave_MiddleChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Right Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_MinishFlippersCave_RightChest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Like Like Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2375,
+        "y": 1650
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chests",
+        "item_count": 2,
+        "access_rules": ["^$Json_MinishWoods_LikeLikeCave_Chests"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Belari",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2175,
+        "y": 1950
+      }
+    ],
+    "sections": [
+      {
+        "name": "Gift 1st Item",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_Belari_Gift1stItem"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Gift 2nd Item",
+        "visibility_rules": ["$FusionsRed"],
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_Belari_Gift2ndItem"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Fuser Belari",
+        "hosted_item": "fusions0a",
+        "visibility_rules": ["fusionred_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_Belari_Fuser"]
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Pre Minish Village - Minish Hole",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2336,
+        "y": 2081,
+        "restrict_visibility_rules": ["$FusionsGreen"]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_PreMinishVillage_MinishHole_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Pre Stump Chest",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2580,
+        "y": 1826,
+        "restrict_visibility_rules": ["$FusionsGreen"]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_PreStumpChest_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Pre Shrine Chest",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2421,
+        "y": 1921,
+        "restrict_visibility_rules": ["$FusionsGreen"]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_PreShrineChest_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Post Minish Village",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2038,
+        "y": 1879,
+        "restrict_visibility_rules": ["$FusionsGreen"]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_PostMinishVillage_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods North - Octo Golden",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2200,
+        "y": 1550,
+        "restrict_visibility_rules": ["$FusionsGreen,golden_enemy_on"]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Kill",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_GoldenOcto_Kill"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Entrance",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2112,
+        "y": 1677,
+        "restrict_visibility_rules": ["$FusionsGreen"]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_Entrance_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods North - Cross the Pond",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2049,
+        "y": 1571,
+        "restrict_visibility_rules": ["$FusionsGreen"]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": ["^$Json_MinishWoods_CrossthePond_Chest"],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods North - Heart Piece",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2100,
+        "y": 1620
+      }
+    ],
+    "sections": [
+      {
+        "name": "Heart Piece",
+        "item_count": 1,
+        "capture_item": true,
+        "access_rules": ["^$Json_MinishWoods_NorthernHeartPiece_HeartPiece"],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Business Scrub",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2330,
+        "y": 1710
+      }
+    ],
+    "sections": [
+      {
+        "name": "Fuser Scrub 1",
+        "hosted_item": "fusions3d",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_Scrub_Fuser1"]
+      },
+      {
+        "name": "Fuser Scrub 2",
+        "hosted_item": "fusions5b",
+        "visibility_rules": ["fusiongreen_vanilla"],
+        "access_rules": ["^$Json_MinishWoods_Scrub_Fuser2"]
+      }
+    ]
+  }
+]
