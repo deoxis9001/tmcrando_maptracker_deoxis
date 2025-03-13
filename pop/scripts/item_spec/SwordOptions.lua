@@ -38,6 +38,7 @@ function SwordOptions:updateIcon()
 		bluesword.ItemInstance.Icon = bluesword.noImage
 		foursword.ItemInstance.Icon = foursword.noImage
 		sword.ItemInstance.Icon = sword.info
+		sword.swordStop = false
 		sword:setActive(countNumberSword)
 		smithsword:setProperty("Active", false)
 		greensword:setProperty("Active", false)
@@ -118,7 +119,6 @@ function SwordOptions:updateIcon()
 			ActiveSmith = false
 		end
 		self.ItemInstance.Icon = self.disabledImage
-		sword.ItemInstance.Icon = sword.noImage
 		sword:setActive(0)
 		sword.code = sword.code0
 		smithsword:setProperty("Active", ActiveSmith)
@@ -126,6 +126,8 @@ function SwordOptions:updateIcon()
 		redsword:setProperty("Active", ActiveRed)
 		bluesword:setProperty("Active", ActiveBlue)
 		foursword:setProperty("Active", ActiveFour)
+		sword.swordStop = true
+		sword.ItemInstance.Icon = sword.noImage
 	end
 end
 function SwordOptions:onLeftClick()

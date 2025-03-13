@@ -6,6 +6,7 @@ function Kinstone:init(name, code, imagePathActive1, imagePathActive2, numbermax
 	self.image = 0
 	self.choice = true
 	self.InfoStage = 0
+	self.textnone = 0
 	self:setProperty("CurrentStage", 0)
 	self:setProperty("count_max", numbermax1)
 	self.countactive = numbermax1
@@ -73,12 +74,12 @@ function Kinstone:updateIconTexte(id)
 		self.ItemInstance:SetOverlay(tostring(id))
 end
 function Kinstone:updateIcon()
-	if self:getActive() ==0 then
-		if self.poptracker == false then
-			self:updateIconTexte(self:getActive())
-		end
-	else
+	if self:getActive() == 0 and self.textnone > 0 then
+		self:updateIconTexte(" ")
+		self.textnone=0
+	elseif self:getActive() > self.textnone or self:getActive() < self.textnone then
 		self:updateIconTexte(self:getActive())
+		self.textnone=self:getActive()
 	end
 	self.code = self.codebase..tostring(self:getActive())
 	if self:getActiveCount() == self:getActive() then

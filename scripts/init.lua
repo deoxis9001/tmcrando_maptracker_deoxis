@@ -256,6 +256,6 @@ else
 	print("Your tracker version does not support autotracking")
 end
 if PopVersion then
-	--ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
+	ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
 	tracker_on_pack_ready() 
 end

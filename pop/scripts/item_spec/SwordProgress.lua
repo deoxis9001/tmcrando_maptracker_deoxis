@@ -3,6 +3,7 @@ function SwordProgress:init(name, code)
 	self:createItem(name)
 	self.code = code
 	self.InfoStage = 0
+	self.swordStop = false
 	self:setProperty("CurrentStage", 0)
 	self:setProperty("active", true)
 	self.noImage = nil
@@ -23,7 +24,7 @@ function SwordProgress:init(name, code)
 	self:updateIcon()
 end
 function SwordProgress:setActive(active)
-	if self.ItemInstance.Icon == self.noImage then
+	if self.swordStop then
 	else
 		self:setProperty("CurrentStage", active)
 		self.InfoStage = active
@@ -82,12 +83,18 @@ function SwordProgress:updateIcon()
 	end
 end
 function SwordProgress:onLeftClick()
+	if self.swordStop then
+		return
+	end
 	if self:getActive() < 5 then
 		count = self:getActive() + 1
 		self:setActive(count)
 	end
 end
 function SwordProgress:onRightClick()
+	if self.swordStop then
+		return
+	end
 	if self:getActive() > 0 then
 		count = self:getActive() - 1
 		self:setActive(count)
