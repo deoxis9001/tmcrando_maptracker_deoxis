@@ -59,7 +59,7 @@
       {
         "name": "Buried Treasure",
         "item_count": 2,
-        "access_rules": ["$Json_WesternWoods_South$has|digging_BuriedTreasure"],
+        "access_rules": ["$Json_WesternWoods_SouthDigging_BuriedTreasure"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -79,7 +79,7 @@
       {
         "name": "Buried Treasure",
         "item_count": 6,
-        "access_rules": ["$Json_WesternWoods_North$has|digging_BuriedTreasure"],
+        "access_rules": ["$Json_WesternWoods_SouthDigging_BuriedTreasure"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
