@@ -226,14 +226,14 @@
 		"map":"map",
 		"x":1875,
 		"y":50,
-		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsRed,$has|big$has|goron_mirror","$CloudTopFallVisibility,$FusionsRed,$has|big$has|goron_shield"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsRed,$has|biggoron_mirror","$CloudTopFallVisibility,$FusionsRed,$has|biggoron_shield"]
 	  }
 	],
 	"sections":[
 	  {
 		"name":"Mirror Shield",
 		"item_count":1,
-		"access_rules":["$Json_Falls_$has|big$has|goron_MirrorShield"],
+		"access_rules":["$Json_Falls_Biggoron_MirrorShield"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

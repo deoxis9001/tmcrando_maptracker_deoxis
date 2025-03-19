@@ -793,7 +793,7 @@
       {
         "name": "Set 1 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["$has|$has|goron_eu,$has|$has|goron_1"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_1"],
         "access_rules": ["$Json_Town_GoronShop_Set1_Item2"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -801,7 +801,7 @@
       {
         "name": "Set 1 - Item Center and Right",
         "item_count": 2,
-        "visibility_rules": ["$has|$has|goron_eu,$has|$has|goron_1"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_1"],
         "access_rules": ["$Json_Town_GoronShop_Set1_Item1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -809,7 +809,7 @@
       {
         "name": "Set 1 - Item Left and Center",
         "item_count": 2,
-        "visibility_rules": ["$has|$has|goron_jp,$has|$has|goron_1"],
+        "visibility_rules": ["$has|goron_jp,$has|goron_1"],
         "access_rules": ["$Json_Town_GoronShop_Set1_Item2"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -817,7 +817,7 @@
       {
         "name": "Set 1 - Item Right",
         "item_count": 1,
-        "visibility_rules": ["$has|$has|goron_jp,$has|$has|goron_1"],
+        "visibility_rules": ["$has|goron_jp,$has|goron_1"],
         "access_rules": ["$Json_Town_GoronShop_Set1_Item1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -825,7 +825,7 @@
       {
         "name": "Set 2 - Items",
         "item_count": 3,
-        "visibility_rules": ["$has|$has|goron_2"],
+        "visibility_rules": ["$has|goron_2"],
         "access_rules": ["$Json_Town_GoronShop_Set2_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -833,7 +833,7 @@
       {
         "name": "Set 3 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["$has|$has|goron_eu,$has|$has|goron_3"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_3"],
         "access_rules": ["$Json_Town_GoronShop_Set3_Item1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -841,7 +841,7 @@
       {
         "name": "Set 3 - Items Other",
         "item_count": 2,
-        "visibility_rules": ["$has|$has|goron_eu,$has|$has|goron_3"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_3"],
         "access_rules": ["$Json_Town_GoronShop_Set3_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -849,7 +849,7 @@
       {
         "name": "Set 3 - Items",
         "item_count": 3,
-        "visibility_rules": ["$has|$has|goron_jp,$has|$has|goron_3"],
+        "visibility_rules": ["$has|goron_jp,$has|goron_3"],
         "access_rules": ["$Json_Town_GoronShop_Set3_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -857,7 +857,7 @@
       {
         "name": "Set 4 - Items",
         "item_count": 3,
-        "visibility_rules": ["$has|$has|goron_4"],
+        "visibility_rules": ["$has|goron_4"],
         "access_rules": ["$Json_Town_GoronShop_Set4_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -865,7 +865,7 @@
       {
         "name": "Set 5 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["$has|$has|goron_eu,$has|$has|goron_5"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_5"],
         "access_rules": ["$Json_Town_GoronShop_Set5_Item1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -873,7 +873,7 @@
       {
         "name": "Set 5 - Items Other",
         "item_count": 2,
-        "visibility_rules": ["$has|$has|goron_eu,$has|$has|goron_5"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_5"],
         "access_rules": ["$Json_Town_GoronShop_Set5_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -881,7 +881,7 @@
       {
         "name": "Set 5 - Items",
         "item_count": 3,
-        "visibility_rules": ["$has|$has|goron_jp,$has|$has|goron_5"],
+        "visibility_rules": ["$has|goron_jp,$has|goron_5"],
         "access_rules": ["$Json_Town_GoronShop_Set5_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
