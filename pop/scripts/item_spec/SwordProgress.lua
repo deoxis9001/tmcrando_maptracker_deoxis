@@ -20,15 +20,16 @@ function SwordProgress:init(name, code)
 	self.activeImage4 = ImageReference:FromPackRelativePath("images/items/Four Sword.png")
 	self.disabledImage = ImageReference:FromImageReference(self.activeImage, "@disabled")
 	self.info = self.disabledImage
-	self.ItemInstance.Icon = self.disabledImage
+	self.ItemInstance.Icon = self.activeImage
 	self:updateIcon()
 end
 function SwordProgress:setActive(active)
+
 	if self.swordStop then
 	else
 		self:setProperty("CurrentStage", active)
 		self.InfoStage = active
-		self:updateIcon()
+		--self:updateIcon()
 		self.info = self.ItemInstance.Icon
 	end
 end
@@ -38,46 +39,34 @@ end
 function SwordProgress:updateIcon()
 	if self.ItemInstance.Icon == self.noImage then
 		if self:getActive() == 0 then
-			self.code = self.code0
 			self.info = self.ItemInstance.Icon
 		elseif self:getActive() == 1 then
-			self.code = self.code1
 			self.info = self.ItemInstance.Icon
 		elseif self:getActive() == 2 then
-			self.code = self.code2
 			self.info = self.ItemInstance.Icon
 		elseif self:getActive() == 3 then
-			self.code = self.code3
 			self.info = self.ItemInstance.Icon
 		elseif self:getActive() == 4 then
-			self.code = self.code4
 			self.info = self.ItemInstance.Icon
 		else
-			self.code = self.code5
 			self.info = self.ItemInstance.Icon
 		end
 	elseif self:getActive() == 0 then
-		self.code = self.code0
 		self.ItemInstance.Icon = self.disabledImage
 		self.info = self.ItemInstance.Icon
 	elseif self:getActive() == 1 then
-		self.code = self.code1
 		self.ItemInstance.Icon = self.activeImage
 		self.info = self.ItemInstance.Icon
 	elseif self:getActive() == 2 then
-		self.code = self.code2
 		self.ItemInstance.Icon = self.activeImage1
 		self.info = self.ItemInstance.Icon
 	elseif self:getActive() == 3 then
-		self.code = self.code3
 		self.ItemInstance.Icon = self.activeImage2
 		self.info = self.ItemInstance.Icon
 	elseif self:getActive() == 4 then
-		self.code = self.code4
 		self.ItemInstance.Icon = self.activeImage3
 		self.info = self.ItemInstance.Icon
 	else
-		self.code = self.code5
 		self.ItemInstance.Icon = self.activeImage4
 		self.info = self.ItemInstance.Icon
 	end
@@ -101,14 +90,43 @@ function SwordProgress:onRightClick()
 	end
 end
 function SwordProgress:canProvideCode(code)
-	if code == self.code then
+	if self.code1 == code and self:getActive()==1 then
 		return true
-	else
-		return false
 	end
+	if self.code2 == code and self:getActive()==2 then
+		return true
+	end
+	if self.code3 == code and self:getActive()==3 then
+		return true
+	end
+	if self.code4 == code and self:getActive()==4 then
+		return true
+	end
+	if self.code5 == code and self:getActive()==5 then
+		return true
+	end
+	if self.code == code then
+		return true
+	end
+	return false
 end
 function SwordProgress:providesCode(code)
-	if code == self.code and self:getActive() then
+	if self.code1 == code and self:getActive()==1 then
+		return 1
+	end
+	if self.code2 == code and self:getActive()==2 then
+		return 1
+	end
+	if self.code3 == code and self:getActive()==3 then
+		return 1
+	end
+	if self.code4 == code and self:getActive()==4 then
+		return 1
+	end
+	if self.code5 == code and self:getActive()==5 then
+		return 1
+	end
+	if self.code == code then
 		return 1
 	end
 	return 0

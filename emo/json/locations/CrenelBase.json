@@ -78,7 +78,7 @@
 	  {
 		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions63",
-		"visibility_rules":["fusiongreen_vanilla"],
+		"visibility_rules":["$has|fusiongreen_vanilla"],
 		"access_rules":["$Json_CrenelBase_MinishCrack_Fuser"]
 	  }
 	]
@@ -116,7 +116,7 @@
 		"map":"map",
 		"x":525,
 		"y":1035,
-		"restrict_visibility_rules":["rupees_on"]
+		"restrict_visibility_rules":["$has|rupees_on"]
 	  }
 	],
 	"sections":[
@@ -136,7 +136,7 @@
 		"map":"map",
 		"x":441,
 		"y":825,
-		"restrict_visibility_rules":["rupees_on"]
+		"restrict_visibility_rules":["$has|rupees_on"]
 	  }
 	],
 	"sections":[

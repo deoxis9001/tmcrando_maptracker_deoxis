@@ -27,7 +27,7 @@
       },
       {
         "name": "Under the Waterfall",
-        "visibility_rules": ["$LibraryWorld,underwater_on"],
+        "visibility_rules": ["$LibraryWorld,$has|underwater_on"],
         "item_count": 1,
         "access_rules": ["^$Json_Town_FlippersCave_UndertheWaterfall"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
@@ -54,7 +54,7 @@
       },
       {
         "name": "Right Pot",
-        "visibility_rules": ["specialpot_on"],
+        "visibility_rules": ["$has|specialpot_on"],
         "item_count": 1,
         "access_rules": ["^$Json_Town_Inn_RightPot"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
@@ -63,25 +63,25 @@
       {
         "name": "Fuser Din/Nayru/Farore 1",
         "hosted_item": "fusions1b",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_Town_Inn_Fuser1"]
       },
       {
         "name": "Fuser Din 2",
         "hosted_item": "fusions20",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_Town_Inn_Fuser2"]
       },
       {
         "name": "Fuser Nayru 2",
         "hosted_item": "fusions19",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_Town_Inn_Fuser3"]
       },
       {
         "name": "Fuser Farore 2",
         "hosted_item": "fusions10",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_Town_Inn_Fuser4"]
       }
     ]
@@ -190,7 +190,7 @@
         "name": "Bombag Spot (600 Rupees)",
         "item_count": 1,
         "capture_item": true,
-        "visibility_rules": ["shopbag_extra_on"],
+        "visibility_rules": ["$has|shopbag_extra_on"],
         "access_rules": ["^$Json_Town_StockwellShop_BombagSpot"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -274,7 +274,7 @@
       {
         "name": "Fuser Tina",
         "hosted_item": "fusions5e",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_School_Fuser"]
       }
     ]
@@ -319,31 +319,31 @@
       {
         "name": "Fuser Librari",
         "hosted_item": "fusions54",
-        "visibility_rules": ["$LibraryWorld,fusiongreen_vanilla"],
+        "visibility_rules": ["$LibraryWorld,$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_Library_Fuser1"]
       },
       {
         "name": "Fuser Candy",
         "hosted_item": "fusions22",
-        "visibility_rules": ["$LibraryWorld,fusionblue_vanilla"],
+        "visibility_rules": ["$LibraryWorld,$has|fusionblue_vanilla"],
         "access_rules": ["^$Json_Town_Library_Fuser2"]
       },
       {
         "name": "Fuser Zill 1 ( above Library )",
         "hosted_item": "fusions4b",
-        "visibility_rules": ["$LibraryWorld,fusiongreen_vanilla"],
+        "visibility_rules": ["$LibraryWorld,$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_Library_Fuser3"]
       },
       {
         "name": "Fuser Zill 2 ( above Library )",
         "hosted_item": "fusions57",
-        "visibility_rules": ["$LibraryWorld,fusiongreen_vanilla"],
+        "visibility_rules": ["$LibraryWorld,$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_Library_Fuser4"]
       },
       {
         "name": "Fuser Zill 3 ( above Library )",
         "hosted_item": "$LibraryWorld,fusions3e",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_Library_Fuser5"]
       }
     ]
@@ -368,13 +368,13 @@
       {
         "name": "Fuser Mama",
         "hosted_item": "fusions34",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_Cafe_Fuser1"]
       },
       {
         "name": "Fuser Hurdy-gurdy Man 1",
         "hosted_item": "fusions32",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["^$Json_Town_Cafe_Fuser2"]
       }
     ]
@@ -609,7 +609,7 @@
       {
         "name": "Round 1 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_10"],
+        "visibility_rules": ["$has|cucco_10"],
         "access_rules": ["^$Json_Town_Anju_Gift1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -617,7 +617,7 @@
       {
         "name": "Round 2 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_9"],
+        "visibility_rules": ["$has|cucco_9"],
         "access_rules": ["^$Json_Town_Anju_Gift2"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -625,7 +625,7 @@
       {
         "name": "Round 3 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_8"],
+        "visibility_rules": ["$has|cucco_8"],
         "access_rules": ["^$Json_Town_Anju_Gift3"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -633,7 +633,7 @@
       {
         "name": "Round 4 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_7"],
+        "visibility_rules": ["$has|cucco_7"],
         "access_rules": ["^$Json_Town_Anju_Gift4"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -641,7 +641,7 @@
       {
         "name": "Round 5 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_6"],
+        "visibility_rules": ["$has|cucco_6"],
         "access_rules": ["^$Json_Town_Anju_Gift5"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -649,7 +649,7 @@
       {
         "name": "Round 6 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_5"],
+        "visibility_rules": ["$has|cucco_5"],
         "access_rules": ["^$Json_Town_Anju_Gift6"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -657,7 +657,7 @@
       {
         "name": "Round 7 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_4"],
+        "visibility_rules": ["$has|cucco_4"],
         "access_rules": ["^$Json_Town_Anju_Gift7"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -665,7 +665,7 @@
       {
         "name": "Round 8 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_3"],
+        "visibility_rules": ["$has|cucco_3"],
         "access_rules": ["^$Json_Town_Anju_Gift8"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -673,7 +673,7 @@
       {
         "name": "Round 9 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_2"],
+        "visibility_rules": ["$has|cucco_2"],
         "access_rules": ["^$Json_Town_Anju_Gift9"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -681,7 +681,7 @@
       {
         "name": "Round 10 Gift",
         "item_count": 1,
-        "visibility_rules": ["cucco_1"],
+        "visibility_rules": ["$has|cucco_1"],
         "access_rules": ["^$Json_Town_Anju_Gift10"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -721,7 +721,7 @@
       {
         "name": "Fuser Bremor",
         "hosted_item": "fusions0b",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_Town_NearPostOffice_Fuser"]
       }
     ]
@@ -739,7 +739,7 @@
       {
         "name": "Fuser Stranger",
         "hosted_item": "fusions0f",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_Town_Stranger_Fuser"]
       }
     ]
@@ -757,7 +757,7 @@
       {
         "name": "Fuser Hagen",
         "hosted_item": "fusions1e",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_Town_Mayor_Fuser"]
       }
     ]
@@ -775,7 +775,7 @@
       {
         "name": "Fuser Postman",
         "hosted_item": "fusions2c",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["^$Json_Town_Postman_Fuser"]
       }
     ]
@@ -793,7 +793,7 @@
       {
         "name": "Set 1 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["goron_eu,goron_1"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_1"],
         "access_rules": ["^$Json_Town_GoronShop_Set1_Item2"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -801,7 +801,7 @@
       {
         "name": "Set 1 - Item Center and Right",
         "item_count": 2,
-        "visibility_rules": ["goron_eu,goron_1"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_1"],
         "access_rules": ["^$Json_Town_GoronShop_Set1_Item1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -809,7 +809,7 @@
       {
         "name": "Set 1 - Item Left and Center",
         "item_count": 2,
-        "visibility_rules": ["goron_jp,goron_1"],
+        "visibility_rules": ["$has|goron_jp,$has|goron_1"],
         "access_rules": ["^$Json_Town_GoronShop_Set1_Item2"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -817,7 +817,7 @@
       {
         "name": "Set 1 - Item Right",
         "item_count": 1,
-        "visibility_rules": ["goron_jp,goron_1"],
+        "visibility_rules": ["$has|goron_jp,$has|goron_1"],
         "access_rules": ["^$Json_Town_GoronShop_Set1_Item1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -825,7 +825,7 @@
       {
         "name": "Set 2 - Items",
         "item_count": 3,
-        "visibility_rules": ["goron_2"],
+        "visibility_rules": ["$has|goron_2"],
         "access_rules": ["^$Json_Town_GoronShop_Set2_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -833,7 +833,7 @@
       {
         "name": "Set 3 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["goron_eu,goron_3"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_3"],
         "access_rules": ["^$Json_Town_GoronShop_Set3_Item1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -841,7 +841,7 @@
       {
         "name": "Set 3 - Items Other",
         "item_count": 2,
-        "visibility_rules": ["goron_eu,goron_3"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_3"],
         "access_rules": ["^$Json_Town_GoronShop_Set3_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -849,7 +849,7 @@
       {
         "name": "Set 3 - Items",
         "item_count": 3,
-        "visibility_rules": ["goron_jp,goron_3"],
+        "visibility_rules": ["$has|goron_jp,$has|goron_3"],
         "access_rules": ["^$Json_Town_GoronShop_Set3_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -857,7 +857,7 @@
       {
         "name": "Set 4 - Items",
         "item_count": 3,
-        "visibility_rules": ["goron_4"],
+        "visibility_rules": ["$has|goron_4"],
         "access_rules": ["^$Json_Town_GoronShop_Set4_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -865,7 +865,7 @@
       {
         "name": "Set 5 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["goron_eu,goron_5"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_5"],
         "access_rules": ["^$Json_Town_GoronShop_Set5_Item1"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -873,7 +873,7 @@
       {
         "name": "Set 5 - Items Other",
         "item_count": 2,
-        "visibility_rules": ["goron_eu,goron_5"],
+        "visibility_rules": ["$has|goron_eu,$has|goron_5"],
         "access_rules": ["^$Json_Town_GoronShop_Set5_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -881,7 +881,7 @@
       {
         "name": "Set 5 - Items",
         "item_count": 3,
-        "visibility_rules": ["goron_jp,goron_5"],
+        "visibility_rules": ["$has|goron_jp,$has|goron_5"],
         "access_rules": ["^$Json_Town_GoronShop_Set5_Items"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -901,19 +901,19 @@
       {
         "name": "Fuser Town Minish 1",
         "hosted_item": "fusions4b",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_MinishHouse_Fuser1"]
       },
       {
         "name": "Fuser Town Minish 2",
         "hosted_item": "fusions57",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_MinishHouse_Fuser2"]
       },
       {
         "name": "Fuser Town Minish 3",
         "hosted_item": "fusions3e",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_MinishHouse_Fuser3"]
       }
     ]

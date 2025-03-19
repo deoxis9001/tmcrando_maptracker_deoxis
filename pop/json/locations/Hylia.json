@@ -26,7 +26,7 @@
 	  {
 		"name":"Fuser Waveblade",
 		"hosted_item":"fusions15",
-		"visibility_rules":["fusionred_vanilla"],
+		"visibility_rules":["$has|fusionred_vanilla"],
 		"access_rules": ["^$Json_Hylia_Dojo_Fuser"]
 	  }
 	]
@@ -45,7 +45,7 @@
 		"name":"Diving",
 		"item_count":1,
 		"access_rules": ["^$Json_Hylia_PondHeartPiece_Chest"],
-		"visibility_rules":["underwater_on","hp_vanilla"],
+		"visibility_rules":["$has|underwater_on","$has|hp_vanilla"],
 		"chest_unopened_img":"images/items-map/Heart Piece.png",
 		"chest_opened_img":"images/items-map/Heart Piece Gray.png"
 	  }
@@ -106,7 +106,7 @@
 	  {
 		"name":"Fuser Mysterious Wall",
 		"hosted_item":"fusions2a",
-		"visibility_rules":["fusionblue_vanilla"],
+		"visibility_rules":["$has|fusionblue_vanilla"],
 		"access_rules": ["^$Json_Hylia_TreasureCave_Fuser"]
 	  }
 	]
@@ -238,7 +238,7 @@
 	  {
 		"name":"Fuser Dog",
 		"hosted_item":"fusions51",
-		"visibility_rules":["fusiongreen_vanilla"],
+		"visibility_rules":["$has|fusiongreen_vanilla"],
 		"access_rules": ["^$Json_Hylia_Fifi_Fuser"]
 	  }
 	]
@@ -291,7 +291,7 @@
 	  {
 		"name":"Fuser Librari",
 		"hosted_item":"fusions54",
-		"visibility_rules":["lakewindcrest_yes,fusiongreen_vanilla"],
+		"visibility_rules":["lakewindcrest_yes,$has|fusiongreen_vanilla"],
 		"access_rules": ["^$Json_Hylia_Librari_Fuser"]
 	  }
 	]
@@ -309,7 +309,7 @@
 	  {
 		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions11",
-		"visibility_rules":["lakewindcrest_yes,fusionred_vanilla"],
+		"visibility_rules":["lakewindcrest_yes,$has|fusionred_vanilla"],
 		"access_rules": ["^$Json_Hylia_MinishHouseWindCrest_Fuser"]
 	  }
 	]
@@ -327,13 +327,13 @@
 	  {
 		"name":"Fuser David Jr. 1",
 		"hosted_item":"fusions5a",
-		"visibility_rules":["fusiongreen_vanilla"],
+		"visibility_rules":["$has|fusiongreen_vanilla"],
 		"access_rules": ["^$Json_Hylia_DavidJr_Fuser1"]
 	  },
 	  {
 		"name":"Fuser David Jr. 2",
 		"hosted_item":"fusions45",
-		"visibility_rules":["fusiongreen_vanilla"],
+		"visibility_rules":["$has|fusiongreen_vanilla"],
 		"access_rules": ["^$Json_Hylia_DavidJr_Fuser2"]
 	  }
 	]
@@ -351,7 +351,7 @@
 	  {
 		"name":"Fuser Minish Forest",
 		"hosted_item":"fusions23",
-		"visibility_rules":["fusionblue_vanilla"],
+		"visibility_rules":["$has|fusionblue_vanilla"],
 		"access_rules": ["^$Json_Hylia_MinishCrack_Fuser"]
 	  }
 	]

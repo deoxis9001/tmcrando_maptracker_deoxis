@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":1905,
 		"y":543,
-		"restrict_visibility_rules":["rupees_on"]
+		"restrict_visibility_rules":["$has|rupees_on"]
 	  }
 	],
 	"sections":[

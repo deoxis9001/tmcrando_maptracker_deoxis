@@ -1,0 +1,590 @@
+{
+	"shared_item_grid": {
+		"type": "itemgrid",
+		"h_alignment": "center",
+		"item_margin": "1,1",
+		"rows": [
+			[
+				"sword0",
+				"gust",
+				"cane",
+				"boomerang",
+				"10hearts",
+				"wallet",
+				"earth",
+				"dwsx",
+				"cofx",
+				"fowx",
+				"todx",
+				"rcx",
+				"powx",
+				"dhc"
+			],
+			[
+				"shield",
+				"mittsandfly",
+				"lamp",
+				"bombsremote",
+				"dogbottle",
+				"books",
+				"fire",
+				"dws_smallkey",
+				"cof_smallkey",
+				"fow_smallkey",
+				"tod_smallkey",
+				"rc_smallkey",
+				"pow_smallkey",
+				"dhc_smallkey"
+			],
+			[
+				"boots",
+				"cape",
+				"ocarina",
+				"bowandfly",
+				"quiver",
+				"clouds",
+				"water",
+				"dws_bigkey",
+				"cof_bigkey",
+				"fow_bigkey",
+				"tod_bigkey",
+				"",
+				"pow_bigkey",
+				"dhc_bigkey"
+			],
+			[
+				"flippersandfly",
+				"ringandbracelets",
+				"carlovtingle",
+				"nutandshroom",
+				"bothkeys",
+				"wilds",
+				"wind",
+				"dws_cm",
+				"cof_cm",
+				"fow_cm",
+				"tod_cm",
+				"beta",
+				"pow_cm",
+				"dhc_cm"
+			],
+			[
+				"spinattack",
+				"fastspin",
+				"fastsplit",
+				"greatspin",
+				"longspin",
+				"falls",
+				"figurine",
+				"perilbeam",
+				"swordbeam",
+				"rockbreaker",
+				"dashattack",
+				"downthrust",
+				"rollattack",
+				"sevenscrolls"
+			]
+		]
+	},
+	"tracker_capture_item": {
+		"type": "container",
+		"content": {
+			"type": "itemgrid",
+			"h_alignment": "center",
+			"v_alignment": "top",
+			"item_margin": "0,0,2,10",
+			"rows": [
+				[
+					"swordcapture",
+					"gust",
+					"cane",
+					"boomerang",
+					"wallet",
+					"genericred"
+				],
+				[
+					"shield",
+					"mitts",
+					"lamp",
+					"bombs",
+					"remotebombs",
+					"genericblue"
+				],
+				[
+					"boots",
+					"cape",
+					"ocarina",
+					"bow",
+					"quiver",
+					"genericgreen"
+				],
+				[
+					"dogfood",
+					"grip",
+					"carlov",
+					"jabber",
+					"llrkey",
+					"genericyellow"
+				],
+				[
+					"bottle",
+					"bracelets",
+					"trophy",
+					"mushroom",
+					"gravekey",
+					"bigkey"
+				],
+				[
+					"10hearts",
+					"heartpiece",
+					"sevenscrolls",
+					"flippers",
+					"butterfly",
+					"smallkey"
+				],
+				[
+					"earth",
+					"fire",
+					"water",
+					"wind",
+					"books",
+					"figurine"
+				]
+			]
+		}
+	},
+	"Element_capture": {
+		"type": "container",
+		"content": {
+			"type": "itemgrid",
+			"h_alignment": "center",
+			"v_alignment": "top",
+			"item_margin": "0,0,2,10",
+			"rows": [
+				[
+					"earth",
+					"fire"
+				],
+				[
+					"water",
+					"wind"
+				],
+				[
+					"allelement"
+				]
+			]
+		}
+	},
+	"tracker_tracking": {
+		"type": "container",
+		"content": {
+			"type": "itemgrid",
+			"h_alignment": "center",
+			"v_alignment": "top",
+			"item_margin": "0,0,2,10",
+			"item_width": 500,
+			"item_height": 6000,
+			"rows": [
+				[
+					"tracking_item"
+				]
+			]
+		}
+	},
+	"main_requirements": {
+		"type": "group",
+		"header": "Requirements",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"badge_font_size": 38,
+				"rows": [
+					[
+						"dhc_closed",
+						""
+					],
+					[
+						"dungeons",
+						"sword5Needed"
+					],
+					[
+						"element4Needed",
+						""
+					],
+					 ["figurine_option","figurine10"],
+					 ["figurine50","figurinemax"]
+				]
+			}
+		]
+	},
+	"main_shuffle": {
+		"type": "group",
+		"header": "shuffle",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"rupees_off",
+						"obscure_off",
+						""
+					]
+				]
+			}
+		]
+	},
+	"tracker_out_of_logic_require_trick1": {
+		"type": "group",
+		"header": "Out of logic (Require Trick) 1/2",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"blowdust_out_off",
+						"crenelmushroom_out_off"
+					],
+					[
+						"lightarrowbreak_out_off",
+						"bobombs_out_off"
+					],
+					[
+						"likelike_out_off",
+						"guardskip_out_off"
+					],
+					[
+						"crenelbeam_out_off",
+						"downstrikebeetle_out_off"
+					],
+					[
+						"darkrooms_out_off",
+						"capeextension_out_off"
+					]
+				]
+			}
+		]
+	},
+	"tracker_out_of_logic_require_trick2": {
+		"type": "group",
+		"header": "Out of logic (Require Trick) 2/2",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"lakeminish_out_off",
+						"cabinswim_out_off"
+					],
+					[
+						"cloudskill_out_off",
+						"powjump_out_off"
+					],
+					[
+						"powpotpuzzleool_out_off",
+						"dhccanonhit_out_off"
+					],
+					[
+						"dhcbladepuzzleshuffle_out_off",
+						"dhcswitchhit_out_off"
+					],
+					[
+						"fowpot_out_off",
+						""
+					]
+				]
+			}
+		]
+	},
+	"tracker_out_of_logic_other": {
+		"type": "group",
+		"header": "Out of logic (Others)",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"out_logic_no"
+					],
+					[
+						"small_key_out_off",
+						"fusiongold_out_off"
+					],
+					[
+						"beam_out_off",
+						"fusionred_out_off"
+					],
+					[
+						"damage_source_out_off",
+						"fusionblue_out_off"
+					],
+					[
+						"",
+						"fusiongreen_out_off"
+					]
+				]
+			}
+		]
+	},
+	"settings_tab_tracker": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"dock": "top",
+				"style": "wrap",
+				"tabs": [
+					{
+						"title": "Out of logic (Require Trick) 1/2",
+						"icon": "images/icon-maps/Swordsman Newsletter 5.png",
+						"content": {
+							"type": "layout",
+							"key": "tracker_out_of_logic_require_trick1"
+						}
+					},
+					{
+						"title": "Out of logic (Require Trick) 2/2",
+						"icon": "images/icon-maps/Swordsman Newsletter 6.png",
+						"content": {
+							"type": "layout",
+							"key": "tracker_out_of_logic_require_trick2"
+						}
+					},
+					{
+						"title": "Out of logic (Others)",
+						"icon": "images/icon-maps/Swordsman Newsletter 7.png",
+						"content": {
+							"type": "layout",
+							"key": "tracker_out_of_logic_other"
+						}
+					}
+				]
+			}
+		]
+	},
+	"settings_tab_main": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"dock": "top",
+				"style": "wrap",
+				"tabs": [
+					{
+						"title": "Requirements",
+						"icon": "images/icon-maps/Light Force.png",
+						"content": {
+							"type": "layout",
+							"key": "main_requirements"
+						}
+					},
+					{
+						"title": "Shuffle",
+						"icon": "images/icon-maps/Monster Icon.png",
+						"content": {
+							"type": "layout",
+							"key": "main_shuffle"
+						}
+					}
+				]
+			}
+		]
+	},
+	"settings_tab_settings": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"dock": "top",
+				"style": "wrap",
+				"tabs": [
+					{
+						"title": "Tracker",
+						"icon": "images/icon-maps/Mysterious Shell.png",
+						"content": {
+							"type": "layout",
+							"key": "settings_tab_tracker"
+						}
+					},
+					{
+						"title": "Main Settings",
+						"icon": "images/icon-maps/Elements.png",
+						"content": {
+							"type": "layout",
+							"key": "settings_tab_main"
+						}
+					}
+				]
+			}
+		]
+	},
+	"maps": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Deepwood Shrine",
+						"icon": "images/icon-maps/chu.png",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws"
+							]
+						}
+					},
+					{
+						"title": "Cave of Flames",
+						"icon": "images/icon-maps/gleerok.png",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof"
+							]
+						}
+					},
+					{
+						"title": "Fortress of Winds",
+						"icon": "images/icon-maps/mazaal.png",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow"
+							]
+						}
+					},
+					{
+						"title": "Temple of Droplets",
+						"icon": "images/icon-maps/octo.png",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod"
+							]
+						}
+					},
+					{
+						"title": "Royal Crypt",
+						"icon": "images/icon-maps/gustaf.png",
+						"content": {
+							"type": "map",
+							"maps": [
+								"rc"
+							]
+						}
+					},
+					{
+						"title": "Palace of Winds",
+						"icon": "images/icon-maps/gyorg.png",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow"
+							]
+						}
+					},
+					{
+						"title": "Dark Hyrule Castle",
+						"icon": "images/icon-maps/vaati.png",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc"
+							]
+						}
+					}
+				]
+			}
+		]
+	},
+	"tracker_default": {
+		"type": "container",
+		"background": "#877373",
+		"content": {
+			"type": "dock",
+			"dropshadow": true,
+			"content": [
+				{
+					"type": "dock",
+					"content": [
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Overworld",
+									"icon": "images/icon-maps/Compass.png",
+									"content": {
+										"type": "map",
+										"maps": [
+											"map"
+										]
+									}
+								},
+								{
+									"title": "Melari's Mines",
+									"icon": "images/icon-maps/Melari.png",
+									"content": {
+										"type": "map",
+										"maps": [
+											"mines"
+										]
+									}
+								},
+								{
+									"title": "Maps Dungeons",
+									"icon": "images/icon-maps/Map.png",
+									"content": {
+										"type": "layout",
+										"key": "maps"
+									}
+								},
+								{
+									"title": "Settings",
+									"icon": "images/icon-maps/Key Block.png",
+									"content": {
+										"type": "layout",
+										"key": "settings_tab_settings"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "group",
+					"header": "Inventory",
+					"dock": "bottom",
+					"content": {
+						"type": "layout",
+						"key": "shared_item_grid"
+					}
+				}
+			]
+		}
+	}
+}

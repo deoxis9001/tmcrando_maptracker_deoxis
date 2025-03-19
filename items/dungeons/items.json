@@ -1,6 +1,6 @@
 [
   {
-    "name": "Deepwood Shrine",
+    "name": "Green Chu Deepwood Shrine",
     "type": "toggle",
     "allow_disabled": false,
     "capturable": false,
@@ -17,7 +17,7 @@
     "codes": "dwsx"
   },
   {
-    "name": "Cave of Flames",
+    "name": "Glerook Cave of Flames",
     "type": "toggle",
     "allow_disabled": false,
     "capturable": false,
@@ -34,7 +34,7 @@
     "codes": "cofx"
   },
   {
-    "name": "Fortress of Winds",
+    "name": "Mazaal Fortress of Winds",
     "type": "toggle",
     "alow_disabled": false,
     "capturable": false,
@@ -51,7 +51,7 @@
     "codes": "fowx"
   },
   {
-    "name": "Temple of Droplets",
+    "name": "Octo Temple of Droplets",
     "type": "toggle",
     "allow_disabled": false,
     "capturable": false,
@@ -68,7 +68,7 @@
     "codes": "todx"
   },
   {
-    "name": "Royal Crypt",
+    "name": "King Royal Crypt",
     "type": "toggle",
     "allow_disabled": false,
     "capturable": false,
@@ -85,7 +85,7 @@
     "codes": "rcx"
   },
   {
-    "name": "Palace of Winds",
+    "name": "Gyorg Palace of Winds",
     "type": "toggle",
     "allow_disabled": false,
     "capturable": false,
@@ -102,7 +102,7 @@
     "codes": "powx"
   },
   {
-    "name": "Dark Hyrule Castle",
+    "name": "Vaati Dark Hyrule Castle",
     "type": "toggle",
     "img": "images/dungeons/vaati.png",
     "codes": "dhc"

@@ -19,7 +19,7 @@
       },
       {
         "name": "Rupees",
-        "visibility_rules": ["rupees_on"],
+        "visibility_rules": ["$has|rupees_on"],
         "item_count": 16,
         "access_rules": ["$Json_WesternWoods_Beanstalk_Rupees"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
@@ -40,7 +40,7 @@
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions24",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["$Json_WesternWoods_MinishHouse_Fuser"]
       }
     ]
@@ -52,14 +52,14 @@
         "map": "map",
         "x": 945,
         "y": 1780,
-        "restrict_visibility_rules": ["$FusionsGreen,digging_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|digging_on"]
       }
     ],
     "sections": [
       {
         "name": "Buried Treasure",
         "item_count": 2,
-        "access_rules": ["$Json_WesternWoods_SouthDigging_BuriedTreasure"],
+        "access_rules": ["$Json_WesternWoods_South$has|digging_BuriedTreasure"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -72,14 +72,14 @@
         "map": "map",
         "x": 800,
         "y": 1475,
-        "restrict_visibility_rules": ["$FusionsGreen,digging_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|digging_on"]
       }
     ],
     "sections": [
       {
         "name": "Buried Treasure",
         "item_count": 6,
-        "access_rules": ["$Json_WesternWoods_NorthDigging_BuriedTreasure"],
+        "access_rules": ["$Json_WesternWoods_North$has|digging_BuriedTreasure"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -161,7 +161,7 @@
         "map": "map",
         "x": 900,
         "y": 1912,
-        "restrict_visibility_rules": ["$FusionsGreen,golden_enemy_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|golden_enemy_on"]
       }
     ],
     "sections": [

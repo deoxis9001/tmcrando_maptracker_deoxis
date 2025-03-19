@@ -28,14 +28,14 @@
 				"x": 2005,
 				"y": 1005,
 				"restrict_visibility_rules": [
-					"rupees_on"
+					"$has|rupees_on"
 				]
 			}
 		],
 		"sections": [
 			{
 				"name": "Rupees",
-				"item_count": 1,
+				"item_count": 5,
 				"access_rules": [
 					"$Json_Dungeon_CaveOfFlame_Rupees"
 				],
@@ -778,7 +778,7 @@
 				"x": 1111,
 				"y": 1114,
 				"restrict_visibility_rules": [
-					"rupees_on"
+					"$has|rupees_on"
 				]
 			}
 		],
@@ -844,7 +844,7 @@
 				"x": 1688,
 				"y": 992,
 				"restrict_visibility_rules": [
-					"rupees_on"
+					"$has|rupees_on"
 				]
 			}
 		],
@@ -868,7 +868,7 @@
 				"x": 1920,
 				"y": 993,
 				"restrict_visibility_rules": [
-					"rupees_on"
+					"$has|rupees_on"
 				]
 			}
 		],
@@ -1218,7 +1218,7 @@
 				"x": 2480,
 				"y": 930,
 				"restrict_visibility_rules": [
-					"specialpot_on"
+					"$has|specialpot_on"
 				]
 			}
 		],
@@ -1242,7 +1242,7 @@
 				"x": 2365,
 				"y": 1080,
 				"restrict_visibility_rules": [
-					"specialpot_on"
+					"$has|specialpot_on"
 				]
 			}
 		],
@@ -1372,7 +1372,7 @@
 				"x": 1930,
 				"y": 383,
 				"restrict_visibility_rules": [
-					"rupees_on"
+					"$has|rupees_on"
 				]
 			}
 		],
@@ -1784,8 +1784,8 @@
 					"$Json_Dungeon_Droplet_UnderwaterPot"
 				],
 				"visibility_rules": [
-					"underwater_on",
-					"small_key_vanilla"
+					"$has|underwater_on",
+					"$has|small_key_vanilla"
 				],
 				"chest_unopened_img": "images/items-map/Small Key.png",
 				"chest_opened_img": "images/items-map/Small Key Done.png"
@@ -1821,7 +1821,7 @@
 				"x": 690,
 				"y": 2815,
 				"restrict_visibility_rules": [
-					"rupees_on"
+					"$has|rupees_on"
 				]
 			}
 		],
@@ -1845,7 +1845,7 @@
 				"x": 1450,
 				"y": 517,
 				"restrict_visibility_rules": [
-					"rupees_on"
+					"$has|rupees_on"
 				]
 			}
 		],
@@ -1878,7 +1878,7 @@
 				"x": 370,
 				"y": 2350,
 				"restrict_visibility_rules": [
-					"underwater_on"
+					"$has|underwater_on"
 				]
 			}
 		],
@@ -1902,7 +1902,7 @@
 				"x": 600,
 				"y": 1215,
 				"restrict_visibility_rules": [
-					"underwater_on"
+					"$has|underwater_on"
 				]
 			}
 		],
@@ -2031,7 +2031,7 @@
 				"x": 1780,
 				"y": 2780,
 				"restrict_visibility_rules": [
-					"specialpot_on"
+					"$has|specialpot_on"
 				]
 			}
 		],
@@ -2223,8 +2223,8 @@
 				"x": 2265,
 				"y": 870,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2248,8 +2248,8 @@
 				"x": 3090,
 				"y": 1800,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2273,8 +2273,8 @@
 				"x": 3295,
 				"y": 110,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2298,8 +2298,8 @@
 				"x": 2230,
 				"y": 70,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2323,8 +2323,8 @@
 				"x": 220,
 				"y": 130,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2348,8 +2348,8 @@
 				"x": 220,
 				"y": 1490,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2373,8 +2373,8 @@
 				"x": 1315,
 				"y": 1490,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2398,8 +2398,8 @@
 				"x": 1305,
 				"y": 135,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2423,8 +2423,8 @@
 				"x": 765,
 				"y": 225,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2448,8 +2448,8 @@
 				"x": 1630,
 				"y": 300,
 				"restrict_visibility_rules": [
-					"dhc_open",
-					"dhc_closed"
+					"$has|dhc_open",
+					"$has|dhc_closed"
 				]
 			}
 		],
@@ -2473,7 +2473,7 @@
 				"x": 3090,
 				"y": 1480,
 				"restrict_visibility_rules": [
-					"ped_items_on,dhc_open"
+					"$has|ped_items_on,$has|dhc_open"
 				]
 			}
 		],
@@ -2515,7 +2515,7 @@
 				"x": 3090,
 				"y": 1480,
 				"restrict_visibility_rules": [
-					"dhc_ped"
+					"$has|dhc_ped"
 				]
 			}
 		],

@@ -52,7 +52,7 @@
       {
         "name": "Fuser Grimblade",
         "hosted_item": "fusions1d",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["$Json_Castle_Dojo_Fuser"]
       }
     ]
@@ -64,7 +64,7 @@
         "map": "map",
         "x": 1610,
         "y": 300,
-        "restrict_visibility_rules": ["$FusionsGreen,golden_enemy_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|golden_enemy_on"]
       }
     ],
     "sections": [
@@ -90,7 +90,7 @@
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions4c",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Castle_MinishCrack_Fuser"]
       }
     ]

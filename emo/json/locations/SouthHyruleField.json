@@ -19,13 +19,13 @@
       {
         "name": "Fuser Tingle 1",
         "hosted_item": "fusions59",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_SouthHyruleField_Tingle_Fuser1"]
       },
       {
         "name": "Fuser Tingle 2",
         "hosted_item": "fusions0d",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["$Json_SouthHyruleField_Tingle_Fuser2"]
       }
     ]
@@ -51,13 +51,13 @@
       {
         "name": "Fuser Smith 1",
         "hosted_item": "fusions16",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["$Json_SouthHyruleField_SmithsHouse_Fuser1"]
       },
       {
         "name": "Fuser Smith 2",
         "hosted_item": "fusions52",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_SouthHyruleField_SmithsHouse_Fuser2"]
       }
     ]
@@ -90,7 +90,7 @@
         "map": "map",
         "x": 1047,
         "y": 1836,
-        "restrict_visibility_rules": ["$FusionsGreen,rupees_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|rupees_on"]
       }
     ],
     "sections": [
@@ -156,7 +156,7 @@
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions14",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["$Json_SouthField_MinishHouse_Fuser"]
       }
     ]

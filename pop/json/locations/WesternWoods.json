@@ -40,7 +40,7 @@
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions24",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["^$Json_WesternWoods_MinishHouse_Fuser"]
       }
     ]
@@ -52,7 +52,7 @@
         "map": "map",
         "x": 945,
         "y": 1780,
-        "restrict_visibility_rules": ["$FusionsGreen,digging_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|digging_on"]
       }
     ],
     "sections": [
@@ -72,7 +72,7 @@
         "map": "map",
         "x": 800,
         "y": 1475,
-        "restrict_visibility_rules": ["$FusionsGreen,digging_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|digging_on"]
       }
     ],
     "sections": [
@@ -161,7 +161,7 @@
         "map": "map",
         "x": 900,
         "y": 1912,
-        "restrict_visibility_rules": ["$FusionsGreen,golden_enemy_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|golden_enemy_on"]
       }
     ],
     "sections": [

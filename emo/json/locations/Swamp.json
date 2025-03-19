@@ -6,7 +6,7 @@
         "map": "map",
         "x": 660,
         "y": 1560,
-        "restrict_visibility_rules": ["underwater_on"]
+        "restrict_visibility_rules": ["$has|underwater_on"]
       }
     ],
     "sections": [
@@ -108,7 +108,7 @@
     ],
     "sections": [
       {
-        "name": "Heart piece",
+        "name": "Heart Piece",
         "item_count": 1,
         "access_rules": ["$Json_Swamp_NortheastLakeCave_HeartPiece"],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
@@ -142,7 +142,7 @@
         "map": "map",
         "x": 350,
         "y": 1165,
-        "restrict_visibility_rules": ["fusionblue_vanilla"]
+        "restrict_visibility_rules": ["$has|fusionblue_vanilla"]
       }
     ],
     "sections": [
@@ -225,7 +225,7 @@
         "map": "map",
         "x": 75,
         "y": 1700,
-        "restrict_visibility_rules": ["fusiongold_vanilla"]
+        "restrict_visibility_rules": ["$has|fusiongold_vanilla"]
       }
     ],
     "sections": [
@@ -332,7 +332,7 @@
         "map": "map",
         "x": 400,
         "y": 1240,
-        "restrict_visibility_rules": ["$FusionsGreen,golden_enemy_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|golden_enemy_on"]
       }
     ],
     "sections": [

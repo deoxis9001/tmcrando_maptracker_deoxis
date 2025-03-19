@@ -84,13 +84,13 @@
       {
         "name": "Fuser Dampe 1",
         "hosted_item": "fusions30",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["$Json_Valley_Dampe_Fuser1"]
       },
       {
         "name": "Fuser Dampe 2",
         "hosted_item": "fusions41",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Valley_Dampe_Fuser2"]
       }
     ]
@@ -125,13 +125,13 @@
       {
         "name": "Fuser Gina 1",
         "hosted_item": "fusions42",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Valley_NortheastGrave_Fuser1"]
       },
       {
         "name": "Fuser Gina 2",
         "hosted_item": "fusions3a",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Valley_NortheastGrave_Fuser2"]
       }
     ]
@@ -169,13 +169,13 @@
       {
         "name": "Fuser Spekter 1",
         "hosted_item": "fusions31",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["$Json_Valley_Spekter_Fuser1"]
       },
       {
         "name": "Fuser Spekter 2",
         "hosted_item": "fusions28",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["$Json_Valley_Spekter_Fuser2"]
       }
     ]

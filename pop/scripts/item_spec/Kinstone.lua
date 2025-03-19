@@ -74,6 +74,9 @@ function Kinstone:updateIconTexte(id)
 		self.ItemInstance:SetOverlay(tostring(id))
 end
 function Kinstone:updateIcon()
+	if self:getActive() == self.textnone then
+		return
+	end
 	if self:getActive() == 0 and self.textnone > 0 then
 		self:updateIconTexte(" ")
 		self.textnone=0
@@ -82,7 +85,7 @@ function Kinstone:updateIcon()
 		self.textnone=self:getActive()
 	end
 	self.code = self.codebase..tostring(self:getActive())
-	if self:getActiveCount() == self:getActive() then
+	if self:getActiveCount() >= self:getActive() then
 		self.ItemInstance.BadgeTextColor = "#0f0"
 	else
 		self.ItemInstance.BadgeTextColor = "#fff"

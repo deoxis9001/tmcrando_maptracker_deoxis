@@ -6,7 +6,7 @@
         "map": "map",
         "x": 705,
         "y": 1250,
-        "restrict_visibility_rules": ["$FusionsGreen,rupees_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|rupees_on"]
       }
     ],
     "sections": [
@@ -27,8 +27,8 @@
         "x": 720,
         "y": 1395,
         "restrict_visibility_rules": [
-          "fusionred_vanilla",
-          "fusiongreen_vanilla"
+          "$has|fusionred_vanilla",
+          "$has|fusiongreen_vanilla"
         ]
       }
     ],
@@ -36,7 +36,7 @@
       {
         "name": "Fuser Percy",
         "hosted_item": "fusions21",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["$Json_Trilby_TreeHouse_Fuser"]
       }
     ]
@@ -54,7 +54,7 @@
       {
         "name": "Fuser Knuckle",
         "hosted_item": "fusions4d",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Trilby_Knuckle_Fuser"]
       }
     ]
@@ -79,7 +79,7 @@
       {
         "name": "Fuser Mysterious Wall",
         "hosted_item": "fusions25",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["$Json_Trilby_MittsCave_Fuser"]
       }
     ]
@@ -189,14 +189,14 @@
         "map": "map",
         "x": 700,
         "y": 825,
-        "restrict_visibility_rules": ["fusiongreen_vanilla"]
+        "restrict_visibility_rules": ["$has|fusiongreen_vanilla"]
       }
     ],
     "sections": [
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions3f",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Trilby_MinishHouse_Fuser"]
       }
     ]

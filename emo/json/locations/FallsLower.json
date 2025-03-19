@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":1905,
 		"y":543,
-		"restrict_visibility_rules":["rupees_on"]
+		"restrict_visibility_rules":["$has|rupees_on"]
 	  }
 	],
 	"sections":[
@@ -14,7 +14,7 @@
 		  "name":"Rupee 1",
 		  "item_count":1,
 		  "capture_item": true,
-		  "access_rules":["$Json_FallsLower_Rupees_Rupee"],
+		  "access_rules":["$Json_FallsLower_$has|rupees_Rupee"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
@@ -22,7 +22,7 @@
 		  "name":"Rupee 2",
 		  "item_count":1,
 		  "capture_item":true,
-		  "access_rules":["$Json_FallsLower_Rupees_Rupee"],
+		  "access_rules":["$Json_FallsLower_$has|rupees_Rupee"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		},
@@ -30,7 +30,7 @@
 		  "name":"Rupee 3",
 		  "item_count":1,
 		  "capture_item":true,
-		  "access_rules":["$Json_FallsLower_Rupees_Rupee"],
+		  "access_rules":["$Json_FallsLower_$has|rupees_Rupee"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
 		  "chest_opened_img":"images/items-map/chest_open.png"
 		}

@@ -355,7 +355,9 @@ function captureBadge()
   end
 end
 function tracker_on_accessibility_updated()
+  if not PopVersion then
   update_link_captures()
+  end
   captureBadge()
 end
 
@@ -374,8 +376,10 @@ function tracker_on_pack_ready()
   if no_preset == nil then
     no_preset = false
   end
-  if not no_preset then
-    update_vanilla_captures()
+  if not PopVersion then
+    if not no_preset then
+      update_vanilla_captures()
+    end
   end
   print("")
   print("--	Tracker Information	--")
@@ -399,7 +403,9 @@ function tracker_on_pack_ready()
   no_preset = false
   Preset()
   UpdateFusion()
-  captureBadge()
+  if not PopVersion then
+    captureBadge()
+  end
   print("	Enable Cache :		", Cache_reset)
   if TMC_CACHE_DEBUG_FUNCTION or TMC_CACHE_DEBUG_ITEM then
     print("")
@@ -443,18 +449,60 @@ function function_Cached(name)
   return f
 end
 
+function exists(table,indices)
+  test=table
+  for i = 1,#indices
+  do
+      index=indices[i]
+      if test[index]~=nil
+      then
+          test=test[index]
+      else
+          return false
+      end
+  end
+  return true
+end
+
 function has(item, amount)
+  if (string.find(Tracker.ActiveVariantUID, "AP")) then
+    if hassetting("obscure_on") then
+      has_item_data_dev["specialpot_on"] = true
+      has_item_data_dev["specialpot_off"] = false
+      has_item_data_dev["digging_on"] = true
+      has_item_data_dev["specialpot_off"] = false
+      has_item_data_dev["underwater_on"] = true
+      has_item_data_dev["specialpot_off"] = false
+    else
+      has_item_data_dev["specialpot_on"] = false
+      has_item_data_dev["specialpot_off"] = true
+      has_item_data_dev["digging_on"] = false
+      has_item_data_dev["specialpot_off"] = true
+      has_item_data_dev["underwater_on"] = false
+      has_item_data_dev["specialpot_off"] = true
+    end
+  end
+  if has_item_data_dev[item]~=nil then
+    if TMC_CACHE_DEBUG_ITEM then
+      print("Cache dev Items: ", item, has_item_data_dev[item])
+    end
+    has_item_data[item] = has_item_data_dev[item]
+  end
   if has_item_data[item] == nil then
     has_item_data[item] = Tracker:ProviderCountForCode(item) >= tonumber(amount or 1)
     if TMC_CACHE_DEBUG_ITEM then
       print("Cache Items: ", item, has_item_data[item])
     end
   end
-  if has_item_data_dev[item] then
+  return has_item_data[item]
+end
+
+function hassetting(item, amount)
+  if has_item_data[item] == nil then
+    has_item_data[item] = Tracker:ProviderCountForCode(item) >= tonumber(amount or 1)
     if TMC_CACHE_DEBUG_ITEM then
-      print("Cache dev Items: ", item, has_item_data_dev[item])
+      print("Cache Items: ", item, has_item_data[item])
     end
-    has_item_data[item] = has_item_data_dev[item]
   end
   return has_item_data[item]
 end

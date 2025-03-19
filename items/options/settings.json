@@ -1250,6 +1250,25 @@
     ]
   },
   {
+    "name":"Obscure Check",
+    "type":"progressive",
+    "loop":true,
+	"initial_stage_idx":1,
+    "allow_disabled":false,
+    "stages":[
+      {
+        "img":"images/options/main/shuffle/obscure_off.png",
+        "codes":"obscure_off",
+        "inherit_codes":false
+      },
+      {
+        "img":"images/options/main/shuffle/obscure_on.png",
+        "codes":"obscure_on",
+        "inherit_codes":false
+      },
+    ]
+  },
+  {
     "name":"If enabled will shuffle items found is special pots around the world that contain one off collectables. This setting does not affect the LonLonRanch Key Item which will always be shuffled, however if this setting is off then the pot in the ranch will always contain junk.",
     "type":"progressive",
     "loop":true,

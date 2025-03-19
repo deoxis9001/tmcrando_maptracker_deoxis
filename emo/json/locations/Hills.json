@@ -12,7 +12,7 @@
 	  {
 		"name":"Rupee",
 		"item_count":1,
-		"visibility_rules":["rupees_on"],
+		"visibility_rules":["$has|rupees_on"],
 		"access_rules":["$Json_Hills_MittsCave_Rupee"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -20,7 +20,7 @@
 	  {
 		"name":"Fuser Mysterious Wall",
 		"hosted_item":"fusions2b",
-		"visibility_rules":["fusionblue_vanilla"],
+		"visibility_rules":["$has|fusionblue_vanilla"],
 		"access_rules":["$Json_Hills_MittsCave_Fuser"]
 	  }
 	]
@@ -51,7 +51,7 @@
 		"map":"map",
 		"x":1725,
 		"y":1725,
-		"restrict_visibility_rules":["$FusionsGreen,golden_enemy_on"]
+		"restrict_visibility_rules":["$FusionsGreen,$has|golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -124,7 +124,7 @@
 	  {
 		"name":"Fuser Forest Minish",
 		"hosted_item":"fusions2e",
-		"visibility_rules":["fusionblue_vanilla"],
+		"visibility_rules":["$has|fusionblue_vanilla"],
 		"access_rules":["$Json_Hills_MinishHouse_Fuser"]
 	  }
 	]
@@ -142,13 +142,13 @@
 	  {
 		"name":"Fuser Meenie",
 		"hosted_item":"fusions62",
-		"visibility_rules":["fusiongreen_vanilla"],
+		"visibility_rules":["$has|fusiongreen_vanilla"],
 		"access_rules":["$Json_Hills_Farmer_Fuser1"]
 	  },
 	  {
 		"name":"Fuser eenie",
 		"hosted_item":"fusions29",
-		"visibility_rules":["fusionblue_vanilla"],
+		"visibility_rules":["$has|fusionblue_vanilla"],
 		"access_rules":["$Json_Hills_Farmer_Fuser2"]
 	  }
 	]

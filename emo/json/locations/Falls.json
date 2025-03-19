@@ -26,7 +26,7 @@
 		},
 		{
 		  "name":"Downstairs Rupees",
-		  "visibility_rules":["rupees_on"],
+		  "visibility_rules":["$has|rupees_on"],
 		  "item_count":9,
 		  "access_rules":["$Json_Falls_UpperCave_DownstairsRupees"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
@@ -34,7 +34,7 @@
 		},
 		{
 		  "name":"Underwater Rupees",
-		  "visibility_rules":["underwater_on"],
+		  "visibility_rules":["$has|underwater_on"],
 		  "item_count":6,
 		  "access_rules":["$Json_Falls_UpperCave_UnderwaterRupees"],
 		  "chest_unopened_img":"images/items-map/chest_closed.png",
@@ -49,7 +49,7 @@
 		"map":"map",
 		"x":1875,
 		"y":625,
-		"restrict_visibility_rules":["$CloudTopFallVisibility,digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$has|digging_on"]
 	  }
 	],
 	"sections":[
@@ -69,13 +69,13 @@
 		"map":"map",
 		"x":1885,
 		"y":245,
-		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsGreen","$CloudTopFallVisibility,digging_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsGreen","$CloudTopFallVisibility,$has|digging_on"]
 	  }
 	],
 	"sections":[
 	  {
 		"name":"Digging",
-		"visibility_rules":["digging_on"],
+		"visibility_rules":["$has|digging_on"],
 		"item_count":1,
 		"access_rules":["$Json_Falls_UpperRocks_Digging"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
@@ -145,7 +145,7 @@
 		"map":"map",
 		"x":1830,
 		"y":275,
-		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsGreen,golden_enemy_on"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsGreen,$has|golden_enemy_on"]
 	  }
 	],
 	"sections":[
@@ -199,7 +199,7 @@
 		  "name":"Fusion",
 		  "item_count":1,
 		  "access_rules":["$Json_Falls_SourceFlowCave_Fusion"],
-		  "visibility_rules":["$CloudTopFallVisibility,fusiongold_vanilla"],
+		  "visibility_rules":["$CloudTopFallVisibility,$has|fusiongold_vanilla"],
 		  "chest_unopened_img": "images/items-map/Gold Kinstone (Falls).png",
 		  "chest_opened_img": "images/items-map/Gold Kinstone (Falls) Gray.png"
 		},
@@ -226,14 +226,14 @@
 		"map":"map",
 		"x":1875,
 		"y":50,
-		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsRed,biggoron_mirror","$CloudTopFallVisibility,$FusionsRed,biggoron_shield"]
+		"restrict_visibility_rules":["$CloudTopFallVisibility,$FusionsRed,$has|big$has|goron_mirror","$CloudTopFallVisibility,$FusionsRed,$has|big$has|goron_shield"]
 	  }
 	],
 	"sections":[
 	  {
 		"name":"Mirror Shield",
 		"item_count":1,
-		"access_rules":["$Json_Falls_Biggoron_MirrorShield"],
+		"access_rules":["$Json_Falls_$has|big$has|goron_MirrorShield"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  }

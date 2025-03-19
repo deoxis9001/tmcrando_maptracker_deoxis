@@ -6,7 +6,7 @@
 		"map":"map",
 		"x":1865,
 		"y":980,
-        "restrict_visibility_rules":["digging_on"]
+        "restrict_visibility_rules":["$has|digging_on"]
 	  }
 	],
 	"sections":[
@@ -32,7 +32,7 @@
 	  {
 		"name":"Pot",
 		"item_count":1,
-		"visibility_rules":["specialpot_on"],
+		"visibility_rules":["$has|specialpot_on"],
 		"access_rules":["$Json_LonLon_MalonPot_Pot"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
@@ -138,7 +138,7 @@
 		"map":"map",
 		"x":1750,
 		"y":1365,
-        "restrict_visibility_rules":["$FusionsBlue","fusionred_vanilla"]
+        "restrict_visibility_rules":["$FusionsBlue","$has|fusionred_vanilla"]
 	  }
 	],
 	"sections":[
@@ -161,13 +161,13 @@
 	  {
 		"name":"Fuser Goron (Left)",
 		"hosted_item":"fusions33",
-		"visibility_rules":["fusionblue_vanilla"],
+		"visibility_rules":["$has|fusionblue_vanilla"],
 		"access_rules":["$Json_LonLon_GoronQuest_Fuser1"]
 	  },
 	  {
 		"name":"Fuser Goron (Right)",
 		"hosted_item":"fusions0e",
-		"visibility_rules":["fusionred_vanilla"],
+		"visibility_rules":["$has|fusionred_vanilla"],
 		"access_rules":["$Json_LonLon_GoronQuest_Fuser2"]
 	  }
 	]
@@ -185,7 +185,7 @@
 	  {
 		"name":"Fuser Ankle",
 		"hosted_item":"fusions40",
-		"visibility_rules":["fusiongreen_vanilla"],
+		"visibility_rules":["$has|fusiongreen_vanilla"],
 		"access_rules":["$Json_LonLon_Ankle_Fuser"]
 	  }
 	]

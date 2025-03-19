@@ -57,7 +57,7 @@
       {
         "name": "Fuser Mysterious Wall",
         "hosted_item": "fusions26",
-        "visibility_rules": ["fusionblue_vanilla"],
+        "visibility_rules": ["$has|fusionblue_vanilla"],
         "access_rules": ["^$Json_MinishWoods_MittCave_Fuser"]
       }
     ]
@@ -116,37 +116,37 @@
       {
         "name": "Fuser Forest Minish (Lake) 2",
         "hosted_item": "fusions1f",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser1"]
       },
       {
         "name": "Fuser Forest Minish (Lake) 3",
         "hosted_item": "fusions12",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser2"]
       },
       {
         "name": "Gentari (Elder)",
         "hosted_item": "fusions1c",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser3"]
       },
       {
         "name": "Fuser Forest Minish 1 ( Vase House )",
         "hosted_item": "fusions4b",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser4"]
       },
       {
         "name": "Fuser Forest Minish 2 ( Vase House )",
         "hosted_item": "fusions57",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser5"]
       },
       {
         "name": "Fuser Forest Minish 3 ( Vase House )",
         "hosted_item": "fusions3e",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_MinishWoods_MinishVillage_Fuser6"]
       }
     ]
@@ -238,7 +238,7 @@
       {
         "name": "Fuser Belari",
         "hosted_item": "fusions0a",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["^$Json_MinishWoods_Belari_Fuser"]
       }
     ]
@@ -330,7 +330,7 @@
         "map": "map",
         "x": 2200,
         "y": 1550,
-        "restrict_visibility_rules": ["$FusionsGreen,golden_enemy_on"]
+        "restrict_visibility_rules": ["$FusionsGreen,$has|golden_enemy_on"]
       }
     ],
     "sections": [
@@ -416,13 +416,13 @@
       {
         "name": "Fuser Scrub 1",
         "hosted_item": "fusions3d",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_MinishWoods_Scrub_Fuser1"]
       },
       {
         "name": "Fuser Scrub 2",
         "hosted_item": "fusions5b",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_MinishWoods_Scrub_Fuser2"]
       }
     ]

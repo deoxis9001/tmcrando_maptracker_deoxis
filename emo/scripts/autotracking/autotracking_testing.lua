@@ -2684,7 +2684,7 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Castor Wilds - Water Minish Hole/Chest", 0x2002d2c, 0x20)
 
 		--WIND RUINS
-		updateDecreaseCount(segment, "@Wind Ruins - Armos Kill/Chest", {{0x2002cc2, 0x08}, {0x2002cc2, 0x10}})
+		updateDecreaseCount(segment, "@Wind Ruins - Armos Kill/Chests", {{0x2002cc2, 0x08}, {0x2002cc2, 0x10}})
 		updateSectionFlag(segment, "@Wind Ruins - Pre FOW/Chest", 0x2002cd2, 0x10)
 		updateSectionFlag(segment, "@Wind Ruins - 4 Pillars/Chest", 0x2002cd4, 0x04)
 		updateSectionFlag(segment, "@Wind Ruins - Minish Hole/Chest", 0x2002cde, 0x04)

@@ -12,13 +12,13 @@
       {
         "name": "Fuser Gale",
         "hosted_item": "fusions13",
-        "visibility_rules": ["$CloudTopFallVisibility,fusionred_vanilla"],
+        "visibility_rules": ["$CloudTopFallVisibility,$has|fusionred_vanilla"],
         "access_rules": ["$Json_Clouds_Fuser_Fuser1"]
       },
       {
         "name": "Fuser Hailey",
         "hosted_item": "fusions4a",
-        "visibility_rules": ["$CloudTopFallVisibility,fusiongreen_vanilla"],
+        "visibility_rules": ["$CloudTopFallVisibility,$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Clouds_Fuser_Fuser2"]
       }
     ]
@@ -31,7 +31,7 @@
         "x": 3150,
         "y": 1110,
         "restrict_visibility_rules": [
-          "$CloudTopFallVisibility,fusiongold_vanilla"
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
         ]
       }
     ],
@@ -52,7 +52,7 @@
         "map": "map",
         "x": 2670,
         "y": 730,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,digging_on"]
+        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
       }
     ],
     "sections": [
@@ -72,7 +72,7 @@
         "map": "map",
         "x": 3300,
         "y": 175,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,digging_on"]
+        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
       }
     ],
     "sections": [
@@ -106,7 +106,7 @@
       {
         "name": "Digging",
         "item_count": 1,
-        "visibility_rules": ["digging_on"],
+        "visibility_rules": ["$has|digging_on"],
         "access_rules": ["$Json_Clouds_TopLeftNorthChests_Digging"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -120,7 +120,7 @@
         "map": "map",
         "x": 3300,
         "y": 730,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,digging_on"]
+        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
       }
     ],
     "sections": [
@@ -140,7 +140,7 @@
         "map": "map",
         "x": 3300,
         "y": 600,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,digging_on"]
+        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
       }
     ],
     "sections": [
@@ -160,7 +160,7 @@
         "map": "map",
         "x": 3150,
         "y": 730,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,digging_on"]
+        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
       }
     ],
     "sections": [
@@ -180,7 +180,7 @@
         "map": "map",
         "x": 2920,
         "y": 550,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,digging_on"]
+        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
       }
     ],
     "sections": [
@@ -261,7 +261,7 @@
         "x": 2700,
         "y": 830,
         "restrict_visibility_rules": [
-          "$CloudTopFallVisibility,fusiongold_vanilla"
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
         ]
       }
     ],
@@ -303,7 +303,7 @@
         "x": 3275,
         "y": 850,
         "restrict_visibility_rules": [
-          "$CloudTopFallVisibility,fusiongold_vanilla"
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
         ]
       }
     ],
@@ -382,43 +382,43 @@
       {
         "name": "Fuser Flurris 1",
         "hosted_item": "fusions49",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser1"]
       },
       {
         "name": "Fuser Flurris 2",
         "hosted_item": "fusions48",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser2"]
       },
       {
         "name": "Fuser Caprice",
         "hosted_item": "fusions61",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser3"]
       },
       {
         "name": "Fuser Gale",
         "hosted_item": "fusions13",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser4"]
       },
       {
         "name": "Fuser Hailey",
         "hosted_item": "fusions4a",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser5"]
       },
       {
         "name": "Fuser Siroc 1",
         "hosted_item": "fusions5c",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser6"]
       },
       {
         "name": "Fuser Siroc 2",
         "hosted_item": "fusions5d",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser7"]
       }
     ]
@@ -451,7 +451,7 @@
         "x": 2855,
         "y": 1270,
         "restrict_visibility_rules": [
-          "$CloudTopFallVisibility,fusiongold_vanilla"
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
         ]
       }
     ],
@@ -473,7 +473,7 @@
         "x": 3275,
         "y": 1270,
         "restrict_visibility_rules": [
-          "$CloudTopFallVisibility,fusiongold_vanilla"
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
         ]
       }
     ],

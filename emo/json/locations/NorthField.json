@@ -6,7 +6,7 @@
         "map": "map",
         "x": 1250,
         "y": 800,
-        "restrict_visibility_rules": ["digging_on"]
+        "restrict_visibility_rules": ["$has|digging_on"]
       }
     ],
     "sections": [
@@ -176,7 +176,7 @@
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions64",
-        "visibility_rules": ["fusiongreen_vanilla"],
+        "visibility_rules": ["$has|fusiongreen_vanilla"],
         "access_rules": ["$Json_NorthField_MinishCrack_Fuser"]
       }
     ]

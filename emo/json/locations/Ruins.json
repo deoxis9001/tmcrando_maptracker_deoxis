@@ -40,7 +40,7 @@
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions17",
-        "visibility_rules": ["fusionred_vanilla"],
+        "visibility_rules": ["$has|fusionred_vanilla"],
         "access_rules": ["$Json_Ruins_MinishHole_Fuser"]
       }
     ]
@@ -77,7 +77,7 @@
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Chests",
         "item_count": 2,
         "access_rules": ["$Json_Ruins_ArmosKill_Chest"],
         "chest_unopened_img": "images/items-map/chest_closed.png",
@@ -133,7 +133,7 @@
         "x": 500,
         "y": 2060,
         "restrict_visibility_rules": [
-          "$FusionsGold,$FusionsGreenLibrary,golden_enemy_on"
+          "$FusionsGold,$FusionsGreenLibrary,$has|golden_enemy_on"
         ]
       }
     ],
