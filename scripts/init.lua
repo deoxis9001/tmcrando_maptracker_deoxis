@@ -261,8 +261,8 @@ has_item_data_dev["shfwindcrest_yes"] = false
 has_item_data_dev["minishwindcrest_no"] = true
 has_item_data_dev["minishwindcrest_yes"] = false
 
-has_item_data_dev["dws_warps_none"] = false
-has_item_data_dev["dws_warps_blue"] = true
+has_item_data_dev["dws_warps_none"] = true
+has_item_data_dev["dws_warps_blue"] = false
 has_item_data_dev["dws_warps_red"] = false
 
 has_item_data_dev["cof_warps_none"] = true
