@@ -77,7 +77,10 @@ function Kinstone:updateIcon()
 	if self:getActive() == self.textnone then
 		return
 	end
-	if self:getActive() == 0 and self.textnone > 0 then
+	if self:getActiveCount()==1 and self:getActive()==1 and self.textnone == 0 then
+		self:updateIconTexte(" ")
+		self.textnone=self:getActive()
+	elseif self:getActive() == 0 and self.textnone > 0 then
 		self:updateIconTexte(" ")
 		self.textnone=0
 	elseif self:getActive() > self.textnone or self:getActive() < self.textnone then
@@ -85,7 +88,8 @@ function Kinstone:updateIcon()
 		self.textnone=self:getActive()
 	end
 	self.code = self.codebase..tostring(self:getActive())
-	if self:getActiveCount() >= self:getActive() then
+
+	if self:getActiveCount() <= self:getActive() then
 		self.ItemInstance.BadgeTextColor = "#0f0"
 	else
 		self.ItemInstance.BadgeTextColor = "#fff"

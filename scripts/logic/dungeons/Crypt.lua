@@ -34,7 +34,7 @@ function Crypt_LeftItem()
 	elseif
 		((function_Cached("CryptDungeons") == 1 or function_Cached("CryptDungeons") == 2) and
 			function_Cached("CryptDoor") == 1 and
-			function_Cached("CanSplit3") == 1)
+			( function_Cached("CanSplit3") == 1 or function_Cached("CanSplit2") == 1))
 	 then
 		return 2
 	else
@@ -48,7 +48,7 @@ function Crypt_RightItem()
 	elseif
 		((function_Cached("CryptDungeons") == 1 or function_Cached("CryptDungeons") == 2) and
 			function_Cached("CryptDoor") == 1 and
-			function_Cached("CanSplit3") == 1)
+			( function_Cached("CanSplit3") == 1 or function_Cached("CanSplit2") == 1 ))
 	 then
 		return 2
 	else
