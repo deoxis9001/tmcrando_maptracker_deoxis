@@ -7,11 +7,11 @@ ScriptLogicDungeons="scripts/logic/dungeons/"
 ScriptLogicOverworld="scripts/logic/overworld/"
 ScriptLogic="scripts/logic/"
 ScriptPreset="scripts/preset/"
-print(Tracker.ActiveVariantUID)
 JsLayouts="layouts/"
 JsItems="items/"
 JsMap="maps/"
 if PopVersion then
+	Tracker.BulkUpdate = true	
 	TrackerSoftwareType="pop/"
 else
 	TrackerSoftwareType="emo/"
@@ -61,8 +61,10 @@ TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_Fuser = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
+TMC_AUTOTRACKER_DEBUG_ITEM_NOFOUND = true
 TMC_AUTOTRACKER_DEBUG_EVENT = false
 TMC_AUTOTRACKER_DEBUG_SLOT = false
+TMC_AUTOTRACKER_DEBUG_RESET = false
 TMC_CACHE_DEBUG_FUNCTION = false
 TMC_CACHE_DEBUG_ITEM = false
 
@@ -425,8 +427,8 @@ has_item_data_dev["cucco_8"] = false
 has_item_data_dev["cucco_9"] = false
 has_item_data_dev["cucco_10"] = false
 
-has_item_data_dev["goron_none"] = false
-has_item_data_dev["goron_1"] = true
+has_item_data_dev["goron_none"] = true
+has_item_data_dev["goron_1"] = false
 has_item_data_dev["goron_2"] = false
 has_item_data_dev["goron_3"] = false
 has_item_data_dev["goron_4"] = false
@@ -572,4 +574,5 @@ end
 if PopVersion then
 	ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
 	tracker_on_pack_ready() 
+	Tracker.BulkUpdate = false
 end
