@@ -1,8 +1,7 @@
 ScriptHost:LoadScript(ScriptAutotracking.."item_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."location_mapping.lua")
---ScriptHost:LoadScript(ScriptAutotracking.."ap_slot.lua")
---ScriptHost:LoadScript(ScriptAutotracking.."flag_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."room_mapping.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."events_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -422,14 +421,18 @@ function onClear(slot_data)
 	apply_slot_data(slot_data)
 	LOCAL_ITEMS = {}
 	GLOBAL_ITEMS = {}
-	
+	ITEMS_ID ={}
     PLAYER_ID = Archipelago.PlayerNumber or -1
 	TEAM_NUMBER = Archipelago.TeamNumber or 0
     if PLAYER_ID > -1 then
---        updateEvents(0, true)
---        EVENT_ID = "tmc_events_"..TEAM_NUMBER.."_"..PLAYER_ID
---        Archipelago:SetNotify({EVENT_ID})
---        Archipelago:Get({EVENT_ID})
+		for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
+			if event_name[1]~=nil then
+				ITEMS_ID[event_name[1]] = "tmc_"..event_name[1].."_"..TEAM_NUMBER.."_"..PLAYER_ID
+				updateEvents(event_name[2],0, true)
+				Archipelago:SetNotify({ITEMS_ID[event_name[1]]})
+				Archipelago:Get({ITEMS_ID[event_name[1]]})
+			end
+		end
         updateMap(0, true)
         ROOM_ID = "tmc_room_"..TEAM_NUMBER.."_"..PLAYER_ID
         Archipelago:SetNotify({ROOM_ID})
@@ -581,44 +584,53 @@ end
 
 function onNotify(k, v, old_value)
 	if v ~= old_value then
-		if k == EVENT_ID then
-		    --updateEvents(v, false)
-        elseif k == ROOM_ID then
+		if k == ROOM_ID then
             updateMap(v, false)
         elseif k == CLIENTSTATUS then
             updateStatus(_, v)
+		else
+			for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
+				if 	ITEMS_ID[event_name[1]] == k then
+					updateEvents(event_name[2], v, false)
+				end
+			end
 		end
 	end
 end
 
 function onNotifyLaunch(k, v)
-	if k == EVENT_ID then
-		--updateEvents(v, false)
-    elseif k == ROOM_ID then
+	if k == ROOM_ID then
         updateMap(v, false)
     elseif k == CLIENTSTATUS then
         updateStatus(_, v)
+	else
+		for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
+			if 	ITEMS_ID[event_name[1]] == k then
+				updateEvents(event_name[2], v, false)
+			end
+		end
 	end
 end
 
-function updateEvents(value, reset)
-    if value ~= nil then
-      if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
-		print(string.format("----- event -----"))
+function updateEvents(key, value, reset)
+    if value ~= nil and key ~= nil then
+      if AP_AUTOTRACKER_ENABLE_DEBUG_SCROLL or 1 == 1 then
+		print(string.format("----- EVENT -----"))
+		print(string.format("[EVENT][INFO] key - %s", v))
 		print(string.format("[EVENT][INFO] Value - %s", v))
-		print(string.format("----- event -----"))
+		print(string.format("----- EVENT -----"))
       end
-      for _, event in pairs(EVENT_FLAG_MAPPING) do
-        local bitmask = 2 ^ event.bit
-        if reset or (value & bitmask ~= event.status) then
-          event.status = value & bitmask
-          for _, code in pairs(event.codes) do
-            if code.setting == nil or has(code.setting) then
-                Tracker:FindObjectForCode(code.code).Active = value & bitmask ~= 0
-            end
-          end
-        end
-      end
+	  if key:sub(1, 1) == "@" then
+		  local obj = Tracker:FindObjectForCode(key)
+		  if obj then
+			  obj.AvailableChestCount = obj.AvailableChestCount -1
+		  end
+	  else
+		local obj = Tracker:FindObjectForCode(key)
+		if obj then
+			obj.Active = value
+		end
+	  end
     end
 end
 
@@ -637,49 +649,50 @@ function updateStatus(_, v)
 end
 
 function updateMap(v, reset)
-	local hex = string.format('%02x',v)
+	if v ~= nil then
+		local hex = string.format('%02x',v)
 
-	local hex2 = string.sub(hex,string.len(hex)-1,string.len(hex))
-	local tab={}
-	local tabs={}
-	local tabs2={}
-	local tabs3={}
-	
-	if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
-		print(string.format("----- MAP -----"))
-		print(string.format("[MAP][INFO] Value - %s", v))
-		print(string.format("[MAP][INFO] reset - %s", reset))
-		print(string.format("[MAP][INFO] hex - %s", hex))
-		print(string.format("[MAP][INFO] hex2 - %s", hex2))
-		print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[hex2] - %s", ROOM_FLAG_MAPPING[hex2]))
-		print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING_SPEC[hex] - %s", ROOM_FLAG_MAPPING_SPEC[hex]))
-		print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[00] - %s",ROOM_FLAG_MAPPING["00"]))
-		print(string.format("----- MAP -----"))
-	end
-    --if has("op_auto_tab_on") then
-	if ROOM_FLAG_MAPPING[hex2] then
-       local tabs = ROOM_FLAG_MAPPING[hex2][0]
-       if tabs then
-            for _, tab in ipairs(tabs) do
-                Tracker:UiHint("ActivateTab", tab)
-            end
-       end
-	elseif ROOM_FLAG_MAPPING_SPEC[hex] then
-       local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
-       if tabs2 then
-            for _, tab in ipairs(tabs2) do
-                Tracker:UiHint("ActivateTab", tab)
-            end
-       end
-	else
-		local tabs3 = ROOM_FLAG_MAPPING["00"][0]
-		if tabs3 then
-			 for _, tab in ipairs(tabs3) do
-				 Tracker:UiHint("ActivateTab", tab)
-			 end
+		local hex2 = string.sub(hex,string.len(hex)-1,string.len(hex))
+		local tab={}
+		local tabs={}
+		local tabs2={}
+		local tabs3={}
+		
+		if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+			print(string.format("----- MAP -----"))
+			print(string.format("[MAP][INFO] Value - %s", v))
+			print(string.format("[MAP][INFO] reset - %s", reset))
+			print(string.format("[MAP][INFO] hex - %s", hex))
+			print(string.format("[MAP][INFO] hex2 - %s", hex2))
+			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[hex2] - %s", ROOM_FLAG_MAPPING[hex2]))
+			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING_SPEC[hex] - %s", ROOM_FLAG_MAPPING_SPEC[hex]))
+			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[00] - %s",ROOM_FLAG_MAPPING["00"]))
+			print(string.format("----- MAP -----"))
+		end
+		--if has("op_auto_tab_on") then
+		if ROOM_FLAG_MAPPING[hex2] then
+		local tabs = ROOM_FLAG_MAPPING[hex2][0]
+		if tabs then
+				for _, tab in ipairs(tabs) do
+					Tracker:UiHint("ActivateTab", tab)
+				end
+		end
+		elseif ROOM_FLAG_MAPPING_SPEC[hex] then
+		local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
+		if tabs2 then
+				for _, tab in ipairs(tabs2) do
+					Tracker:UiHint("ActivateTab", tab)
+				end
+		end
+		else
+			local tabs3 = ROOM_FLAG_MAPPING["00"][0]
+			if tabs3 then
+				for _, tab in ipairs(tabs3) do
+					Tracker:UiHint("ActivateTab", tab)
+				end
+			end
 		end
 	end
-	
     --end
 end
 
