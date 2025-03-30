@@ -47,12 +47,12 @@ ITEM_MAPPING = {
 	[17920] = {{ "flippers","toggle"}},
 
 
-	[18432] = {{ "spinattack","spin" },{ "sevenscrolls","consumable" }},
+	--[18432] = {{ "spinattack","spin" },{ "sevenscrolls","consumable" }}, -- event
 	[18688] = {{ "rollattack","toggle" },{ "sevenscrolls","consumable" }},
 	[18944] = {{ "dashattack","toggle" },{ "sevenscrolls","consumable" }},
 	[19200] = {{ "rockbreaker","toggle" },{ "sevenscrolls","consumable" }},
 	[19456] = {{ "swordbeam","toggle" },{ "sevenscrolls","consumable" }},
-	[19712] = {{ "greatspin","spin" },{ "sevenscrolls","consumable" }},
+	--[19712] = {{ "greatspin","spin" },{ "sevenscrolls","consumable" }}, -- event
 	[19968] = {{ "downthrust","toggle" },{ "sevenscrolls","consumable" }},
 	[20224] = {{ "perilbeam","toggle" },{ "sevenscrolls","consumable" }},
 
@@ -100,9 +100,9 @@ ITEM_MAPPING = {
 	[28928] = {{ "mittsButterfly","toggle"}},
 
 	[29184] = {{ "flippersButterfly","toggle"}},
-	[29696] = {{ "fastsplit","spin" },{ "sevenscrolls","consumable" }},
-	[29440] = {{ "fastspin","spin" },{ "sevenscrolls","consumable" }},
-	[29952] = {{ "longspin","spin" },{ "sevenscrolls","consumable" }},
+	--[29696] = {{ "fastsplit","spin" },{ "sevenscrolls","consumable" }}, -- event
+	--[29440] = {{ "fastspin","spin" },{ "sevenscrolls","consumable" }}, -- event
+	--[29952] = {{ "longspin","spin" },{ "sevenscrolls","consumable" }}, -- event
 
 
 

@@ -130,9 +130,9 @@ function GotScrolls()
 end
 function AccessRuins()
 	 
-	if ( function_Cached("RuinsFusion")==1 and function_Cached("AccessSwamp")==1 and ( has("cape") or ( has("boots") and ( has("flippers") or function_Cached("HasBow")==1 or function_Cached("SwampShortcut")==1 or function_Cached("SwampWindCrest")==1 ) ) ) ) then
+	if ( function_Cached("AcceesRuinsFusion")==1 and function_Cached("AccessSwamp")==1 and ( has("cape") or ( has("boots") and ( has("flippers") or function_Cached("HasBow")==1 or function_Cached("SwampShortcut")==1 or function_Cached("SwampWindCrest")==1 ) ) ) ) then
 		return 1
-	elseif ( (function_Cached("RuinsFusion")==1 or function_Cached("RuinsFusion")==2) and function_Cached("AccessSwamp")==1 and ( has("cape") or ( has("boots") and ( has("flippers") or function_Cached("HasBow")==1 or function_Cached("SwampShortcut")==1 or function_Cached("SwampWindCrest")==1 ) ) ) ) then
+	elseif ( (function_Cached("AcceesRuinsFusion")==1 or function_Cached("AcceesRuinsFusion")==2) and function_Cached("AccessSwamp")==1 and ( has("cape") or ( has("boots") and ( has("flippers") or function_Cached("HasBow")==1 or function_Cached("SwampShortcut")==1 or function_Cached("SwampWindCrest")==1 ) ) ) ) then
 		return 2
 	else
 		return 0

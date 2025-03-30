@@ -11,7 +11,7 @@ JsLayouts="layouts/"
 JsItems="items/"
 JsMap="maps/"
 if PopVersion then
-	Tracker.BulkUpdate = true	
+	Tracker.BulkUpdate = true
 	TrackerSoftwareType="pop/"
 else
 	TrackerSoftwareType="emo/"
@@ -61,7 +61,7 @@ TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_Fuser = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
-TMC_AUTOTRACKER_DEBUG_ITEM_NOFOUND = true
+TMC_AUTOTRACKER_DEBUG_ITEM_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_EVENT = false
 TMC_AUTOTRACKER_DEBUG_SLOT = false
 TMC_AUTOTRACKER_DEBUG_RESET = false
@@ -387,34 +387,34 @@ has_item_data_dev["dhc_crypt"] = false
 has_item_data_dev["dhc_pow"] = false
 has_item_data_dev["dhc_dhc"] = true
 
+--
+has_item_data_dev["dhc_closed"] = true
+has_item_data_dev["dhc_ped"] = false
+has_item_data_dev["dhc_open"] = false
 
--- has_item_data_dev["dhc_closed"] = true
--- has_item_data_dev["dhc_ped"] = false
--- has_item_data_dev["dhc_open"] = false
+has_item_data_dev["dungeons"] = true
+has_item_data_dev["dungeons0"] = has_item_data_dev["dungeons"]
+has_item_data_dev["dungeons1"] = false
+has_item_data_dev["dungeons2"] = false
+has_item_data_dev["dungeons3"] = false
+has_item_data_dev["dungeons4"] = false
+has_item_data_dev["dungeons5"] = false
+has_item_data_dev["dungeons6"] = false
 
--- has_item_data_dev["dungeons"] = true
--- has_item_data_dev["dungeons0"] = has_item_data_dev["dungeons"]
--- has_item_data_dev["dungeons1"] = false
--- has_item_data_dev["dungeons2"] = false
--- has_item_data_dev["dungeons3"] = false
--- has_item_data_dev["dungeons4"] = false
--- has_item_data_dev["dungeons5"] = false
--- has_item_data_dev["dungeons6"] = false
+has_item_data_dev["sword0Needed"] = false
+has_item_data_dev["sword1Needed"] = false
+has_item_data_dev["sword3Needed"] = false
+has_item_data_dev["sword4Needed"] = false
+has_item_data_dev["sword5Needed"] = true
 
--- has_item_data_dev["sword0Needed"] = false
--- has_item_data_dev["sword1Needed"] = false
--- has_item_data_dev["sword3Needed"] = false
--- has_item_data_dev["sword4Needed"] = false
--- has_item_data_dev["sword5Needed"] = true
+has_item_data_dev["element0Needed"] = false
+has_item_data_dev["element1Needed"] = false
+has_item_data_dev["element2Needed"] = false
+has_item_data_dev["element3Needed"] = false
+has_item_data_dev["element4Needed"] = true
 
--- has_item_data_dev["element0Needed"] = false
--- has_item_data_dev["element1Needed"] = false
--- has_item_data_dev["element2Needed"] = false
--- has_item_data_dev["element3Needed"] = false
--- has_item_data_dev["element4Needed"] = true
-
--- has_item_data_dev["figurine_option"] = 0
-
+has_item_data_dev["figurine_option"] = 0
+--
 has_item_data_dev["cucco_none"] = false
 has_item_data_dev["cucco_1"] = true
 has_item_data_dev["cucco_2"] = false
@@ -463,8 +463,8 @@ has_item_data_dev["ped_items_off"] = true
 has_item_data_dev["ped_items_on"] = false
 
 has_item_data_dev["fusiongold_removed"] = false
-has_item_data_dev["fusiongold_vanilla"] = false
-has_item_data_dev["fusiongold_complet"] = true
+has_item_data_dev["fusiongold_vanilla"] = true
+has_item_data_dev["fusiongold_complet"] = false
 
 has_item_data_dev["fusionred_removed"] = false
 has_item_data_dev["fusionred_vanilla"] = false
@@ -483,8 +483,8 @@ has_item_data_dev["grabbable_allow"] = false
 has_item_data_dev["grabbable_easy"] = false
 has_item_data_dev["grabbable_hard"] = false
 
-has_item_data_dev["blowdust_off"] = true
-has_item_data_dev["blowdust_on"] = false
+has_item_data_dev["blowdust_off"] = false
+has_item_data_dev["blowdust_on"] = true
 
 has_item_data_dev["crenelmushroom_off"] = true
 has_item_data_dev["crenelmushroom_on"] = false

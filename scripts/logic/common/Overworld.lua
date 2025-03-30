@@ -10,10 +10,20 @@ function RuinsFusion()
 		return 2
 	elseif (has("fusiongold_out_on") and function_Cached("FusionsGoldSwampNumber") < Tracker:ProviderCountForCode("wilds")) then
 		return 2
-	elseif
-		(has("fusiongold_out_on") and fusiongoldcombined:getActive() and
-			function_Cached("FusionsGoldSwampNumber") < Tracker:ProviderCountForCode("clouds"))
-	 then
+	elseif (has("fusiongold_out_on") and fusiongoldcombined:getActive() and function_Cached("FusionsGoldSwampNumber") < Tracker:ProviderCountForCode("clouds")) then
+		return 2
+	else
+		return 0
+	end
+end
+function AcceesRuinsFusion()
+	if (has("fusiongold_complet")) then
+		return 1
+	elseif (Tracker:ProviderCountForCode("clouds") >= 9 and fusiongoldcombined:getActive())	 then
+		return 1
+	elseif (Tracker:ProviderCountForCode("wilds") >= 3 and not fusiongoldcombined:getActive()) then
+		return 1
+	elseif (has("fusiongold_out_on") and Tracker:ProviderCountForCode("clouds") >= 3 and fusiongoldcombined:getActive() and function_Cached("FusionsGoldSwampNumber") < Tracker:ProviderCountForCode("clouds")) then
 		return 2
 	else
 		return 0

@@ -123,11 +123,11 @@ function FusionsGoldSwampNumber()
 	-- print("item.AcquiredCount",item.AcquiredCount)
 	local compte = 0
 	if Swamp.AvailableChestCount == 0 then
-		compte = 3 + compte
+		compte = 3
 	elseif Swamp.AvailableChestCount == 1 then
-		compte = 2 + compte
+		compte = 2
 	elseif Swamp.AvailableChestCount == 2 then
-		compte = 1 + compte
+		compte = 1
 	end
 	if fusiongoldcombined:getActive() then
 		if TopRight.AvailableChestCount == 0 then
@@ -1358,7 +1358,7 @@ function MinishNorthHP()
 			(has("gust") or function_Cached("HasMagicBoomerang") == 1))
 	 then
 		return 2
-	elseif (has("grabbable_allow") and function_Cached("HasBoomerang") == 1) then
+	elseif (function_Cached("AccessMinishWoods") == 1 or function_Cached("AccessMinishWoods") == 2) and (has("grabbable_allow") and function_Cached("HasBoomerang") == 1) then
 		return 2
 	elseif (function_Cached("AccessMinishWoods") == 1 or function_Cached("AccessMinishWoods") == 2) then
 		return 3

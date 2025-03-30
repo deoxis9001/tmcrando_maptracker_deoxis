@@ -191,37 +191,6 @@
 			]
 		}
 	},
-	"main_requirements": {
-		"type": "group",
-		"header": "Requirements",
-		"content": [
-			{
-				"type": "itemgrid",
-				"h_alignment": "center",
-				"v_alignment": "top",
-				"item_margin": "0,0",
-				"item_width": 320,
-				"item_height": 64,
-				"badge_font_size": 38,
-				"rows": [
-					[
-						"dhc_closed",
-						""
-					],
-					[
-						"dungeons",
-						"sword5Needed"
-					],
-					[
-						"element4Needed",
-						""
-					],
-					 ["figurine_option","figurine10"],
-					 ["figurine50","figurinemax"]
-				]
-			}
-		]
-	},
 	"main_shuffle": {
 		"type": "group",
 		"header": "shuffle",
@@ -394,14 +363,6 @@
 				"dock": "top",
 				"style": "wrap",
 				"tabs": [
-					{
-						"title": "Requirements",
-						"icon": "images/icon-maps/Light Force.png",
-						"content": {
-							"type": "layout",
-							"key": "main_requirements"
-						}
-					},
 					{
 						"title": "Shuffle",
 						"icon": "images/icon-maps/Monster Icon.png",

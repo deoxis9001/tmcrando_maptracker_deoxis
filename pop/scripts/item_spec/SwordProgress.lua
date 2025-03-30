@@ -27,10 +27,12 @@ function SwordProgress:setActive(active)
 
 	if self.swordStop then
 	else
-		self:setProperty("CurrentStage", active)
-		self.InfoStage = active
-		--self:updateIcon()
-		self.info = self.ItemInstance.Icon
+		if self:getActive(active)<=5 or self:getActive(active)>=0 then
+			self:setProperty("CurrentStage", active)
+			self.InfoStage = active
+			--self:updateIcon()
+			self.info = self.ItemInstance.Icon
+		end
 	end
 end
 function SwordProgress:getActive()
