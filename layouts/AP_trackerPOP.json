@@ -203,12 +203,9 @@
 				"item_width": 320,
 				"item_height": 64,
 				"rows": [
-					[
-						"dhc_closed",
-						"rupees_off",
-						"obscure_off",
-						""
-					]
+					["dhc_closed"],
+					["rupees_off"],
+					["obscure_off"]
 				]
 			}
 		]
