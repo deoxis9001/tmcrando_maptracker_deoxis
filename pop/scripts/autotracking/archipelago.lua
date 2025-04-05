@@ -591,21 +591,38 @@ end
 
 function onNotify(k, v, old_value)
 	if v ~= old_value then
+		if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+			print(string.format("----- EVENT -----"))
+			print(string.format("[EVENT][INFO] k - %s", k))
+			print(string.format("[EVENT][INFO] v - %s", v))
+		end
 		if k == ROOM_ID then
-            updateMap(v, false)
-        elseif k == CLIENTSTATUS then
-            updateStatus(_, v)
+			updateMap(v, false)
+		elseif k == CLIENTSTATUS then
+			updateStatus(_, v)
 		else
 			for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
 				if 	ITEMS_ID[event_name[1]] == k then
+					if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+						print(string.format("[EVENT][INFO] ITEMS_ID[event_name[1]] - %s", ITEMS_ID[event_name[1]]))
+						print(string.format("[EVENT][INFO] event_name[2] - %s", event_name[2]))
+					end
 					updateEvents(event_name[2], v, false)
 				end
 			end
+		end
+		if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+			print(string.format("----- EVENT -----"))
 		end
 	end
 end
 
 function onNotifyLaunch(k, v)
+	if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+		print(string.format("----- EVENT -----"))
+		print(string.format("[EVENT][INFO] k - %s", k))
+		print(string.format("[EVENT][INFO] v - %s", v))
+	end
 	if k == ROOM_ID then
         updateMap(v, false)
     elseif k == CLIENTSTATUS then
@@ -613,32 +630,47 @@ function onNotifyLaunch(k, v)
 	else
 		for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
 			if 	ITEMS_ID[event_name[1]] == k then
+				if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+					print(string.format("[EVENT][INFO] ITEMS_ID[event_name[1]] - %s", ITEMS_ID[event_name[1]]))
+					print(string.format("[EVENT][INFO] event_name[2] - %s", event_name[2]))
+				end
 				updateEvents(event_name[2], v, false)
 			end
 		end
 	end
+	if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+		print(string.format("----- EVENT -----"))
+	end
 end
 
 function updateEvents(key, value, reset)
-    if value ~= nil and key ~= nil then
-      if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
-		print(string.format("----- EVENT -----"))
-		print(string.format("[EVENT][INFO] key - %s", v))
-		print(string.format("[EVENT][INFO] Value - %s", v))
-		print(string.format("----- EVENT -----"))
-      end
-	  if key:sub(1, 1) == "@" then
-		  local obj = Tracker:FindObjectForCode(key)
-		  if obj then
-			  obj.AvailableChestCount = obj.AvailableChestCount -1
-		  end
-	  else
-		local obj = Tracker:FindObjectForCode(key)
-		if obj then
-			obj.Active = value
+    if value ~= nil then
+		if key ~= nil then
+			if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+				print(string.format("----- EVENT function-----"))
+				print(string.format("[EVENT][INFO] key - %s", key))
+				print(string.format("[EVENT][INFO] Value - %s", value))
+			end
+			if key:sub(1, 1) == "@" then
+				local obj = Tracker:FindObjectForCode(key)
+				if reset then
+					obj.AvailableChestCount = obj.ChestCount
+					print(string.format("[EVENT][INFO] %s.AvailableChestCount - %s", key, obj.AvailableChestCount))
+				elseif obj then
+					obj.AvailableChestCount = obj.AvailableChestCount - value
+					print(string.format("[EVENT][INFO] %s.AvailableChestCount - %s", key, obj.AvailableChestCount))
+				end
+			else
+				local obj = Tracker:FindObjectForCode(key)
+				if obj then
+					obj.Active = value
+				end
+			end
+			if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+				print(string.format("----- EVENT function -----"))
+			end
 		end
-	  end
-    end
+	end
 end
 
 function updateStatus(_, v)
