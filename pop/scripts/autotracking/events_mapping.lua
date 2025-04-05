@@ -14,5 +14,5 @@ EVENTS_FLAG_MAPPING = {
 {"fuse_06","@Castor Wilds - Fusions/Fusions"},
 {"fuse_07","@Castor Wilds - Fusions/Fusions"},
 {"fuse_08","@Castor Wilds - Fusions/Fusions"},
-{"fuse_09","@veil Falls - Source of the Flow Cave/Fusion"}
+{"fuse_09","@Veil Falls - Source of the Flow Cave/Fusion"}
 }

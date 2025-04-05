@@ -204,6 +204,7 @@
 				"item_height": 64,
 				"rows": [
 					[
+						"dhc_closed",
 						"rupees_off",
 						"obscure_off",
 						""
