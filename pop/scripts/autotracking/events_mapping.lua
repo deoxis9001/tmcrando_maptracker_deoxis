@@ -2,8 +2,8 @@
 
 EVENTS_FLAG_MAPPING = {
 {"scroll_spin","spinattack"},
-{"scroll_fast_spin","fastsplit"},
-{"scroll_fast_split","fastspin"},
+{"scroll_fast_spin","fastspin"},
+{"scroll_fast_split","fastsplit"},
 {"scroll_great_spin","greatspin"},
 {"scroll_long_spin","longspin"},
 {"fuse_01","@Clouds - Top Right Fusion/Fusion"},

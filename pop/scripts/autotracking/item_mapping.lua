@@ -93,7 +93,7 @@ ITEM_MAPPING = {
 	[25088] = {{ "hearts","custom",4 }},
 	[25344] = {{ "hearts","custom" }},
 	[25600] = {{ "wallet","progressive"}},
-	[25856] = {{ "bombs","toggle"}},--bombs bag
+	[25856] = {{ "bombs","progressive"}},--bombs bag
 	
 	[26112] = {{ "quiver","progressive" }},
 	[28672] = {{ "bowandfly","toggle"}},
