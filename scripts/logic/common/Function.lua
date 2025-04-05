@@ -482,6 +482,19 @@ function has(item, amount)
       has_item_data_dev["specialpot_off"] = true
     end
   end
+  if has_item_data_dev["spec"]~= nil then
+    if has_item_data_dev["spec"][item] ~= nil then
+      if has_item_data_dev["spec"][item]["desactive"] ~= nil then
+        if has_item_data_dev["spec"][item]["name"] ~= nil then
+          if has_item_data_dev["spec"][item]["def"] ~= nil then
+            if hassetting(item) then
+              Tracker:FindObjectForCode(has_item_data_dev["spec"][item]["name"]).CurrentStage = has_item_data_dev["spec"][item]["def"]
+            end
+          end
+        end
+      end
+    end
+  end
   if has_item_data_dev[item]~=nil then
     if TMC_CACHE_DEBUG_ITEM then
       print("Cache dev Items: ", item, has_item_data_dev[item])

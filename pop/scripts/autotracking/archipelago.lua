@@ -345,8 +345,10 @@ function apply_slot_data(slot_data)
 	end
 	local RUPEESPOT = slot_data["RupeeSpot"]
 	local OBSCURESPOT = slot_data["ObscureSpot"]
+	local GOALVAATI = slot_data["GoalVaati"]
 	local obj_rupees = Tracker:FindObjectForCode("rupees_off")
 	local obj_obscure = Tracker:FindObjectForCode("obscure_on")
+	local dhc_closed = Tracker:FindObjectForCode("dhc_closed")
 	if RUPEESPOT == 1 then
 		obj_rupees.CurrentStage = 1
 	else
@@ -356,6 +358,11 @@ function apply_slot_data(slot_data)
 		obj_obscure.CurrentStage = 1
 	else
 		obj_obscure.CurrentStage = 0
+	end
+	if GOALVAATI == 1 then
+		dhc_closed.CurrentStage = 0
+	else
+		dhc_closed.CurrentStage = 1
 	end
 	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT and AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
@@ -614,7 +621,7 @@ end
 
 function updateEvents(key, value, reset)
     if value ~= nil and key ~= nil then
-      if AP_AUTOTRACKER_ENABLE_DEBUG_SCROLL or 1 == 1 then
+      if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
 		print(string.format("----- EVENT -----"))
 		print(string.format("[EVENT][INFO] key - %s", v))
 		print(string.format("[EVENT][INFO] Value - %s", v))
@@ -650,7 +657,7 @@ end
 
 function updateMap(v, reset)
 	if v ~= nil then
-		local hex = string.format('%02x',v)
+		local hex = string.format('%04x',v)
 
 		local hex2 = string.sub(hex,string.len(hex)-1,string.len(hex))
 		local tab={}
@@ -670,20 +677,20 @@ function updateMap(v, reset)
 			print(string.format("----- MAP -----"))
 		end
 		--if has("op_auto_tab_on") then
-		if ROOM_FLAG_MAPPING[hex2] then
-		local tabs = ROOM_FLAG_MAPPING[hex2][0]
-		if tabs then
-				for _, tab in ipairs(tabs) do
-					Tracker:UiHint("ActivateTab", tab)
-				end
-		end
-		elseif ROOM_FLAG_MAPPING_SPEC[hex] then
-		local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
-		if tabs2 then
-				for _, tab in ipairs(tabs2) do
-					Tracker:UiHint("ActivateTab", tab)
-				end
-		end
+		if ROOM_FLAG_MAPPING_SPEC[hex] then
+			local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
+			if tabs2 then
+					for _, tab in ipairs(tabs2) do
+						Tracker:UiHint("ActivateTab", tab)
+					end
+			end
+		elseif ROOM_FLAG_MAPPING[hex2] then
+			local tabs = ROOM_FLAG_MAPPING[hex2][0]
+			if tabs then
+					for _, tab in ipairs(tabs) do
+						Tracker:UiHint("ActivateTab", tab)
+					end
+			end
 		else
 			local tabs3 = ROOM_FLAG_MAPPING["00"][0]
 			if tabs3 then

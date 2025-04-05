@@ -239,9 +239,9 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 
 	Tracker:AddLocations(JsLocations.."Dungeons.json")
 	Tracker:AddLocations(JsLocations.."Maps.json")
-
 end
 if (string.find(Tracker.ActiveVariantUID, "AP")) then
+	has_item_data_dev["spec"] = {}
 	has_item_data_dev["crenelwindcrest_no"] = true
 has_item_data_dev["crenelwindcrest_yes"] = false
 
@@ -251,8 +251,8 @@ has_item_data_dev["fallswindcrest_yes"] = false
 has_item_data_dev["cloudwindcrest_no"] = true
 has_item_data_dev["cloudwindcrest_yes"] = false
 
-has_item_data_dev["lakewindcrest_no"] = true
-has_item_data_dev["lakewindcrest_yes"] = false
+has_item_data_dev["lakewindcrest_no"] = false
+has_item_data_dev["lakewindcrest_yes"] = true
 
 has_item_data_dev["swampwindcrest_no"] = true
 has_item_data_dev["swampwindcrest_yes"] = false
@@ -387,10 +387,17 @@ has_item_data_dev["dhc_crypt"] = false
 has_item_data_dev["dhc_pow"] = false
 has_item_data_dev["dhc_dhc"] = true
 
+
 --
-has_item_data_dev["dhc_closed"] = true
-has_item_data_dev["dhc_ped"] = false
+--has_item_data_dev["dhc_closed"] = true
+--has_item_data_dev["dhc_ped"] = false
+--has_item_data_dev["dhc_open"]["def"] = 0
+
 has_item_data_dev["dhc_open"] = false
+has_item_data_dev["spec"]["dhc_open"] = {}
+has_item_data_dev["spec"]["dhc_open"]["desactive"] = true
+has_item_data_dev["spec"]["dhc_open"]["name"] = "dhc_closed"
+has_item_data_dev["spec"]["dhc_open"]["def"] = 0
 
 has_item_data_dev["dungeons"] = true
 has_item_data_dev["dungeons0"] = has_item_data_dev["dungeons"]

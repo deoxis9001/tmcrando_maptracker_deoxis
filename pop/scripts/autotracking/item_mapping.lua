@@ -5,7 +5,7 @@ ITEM_MAPPING = {
 	[768] = {{ "sword0","custom" },{ "redsword","custom" }},
 	[1024] = {{ "sword0","custom" },{ "bluesword","custom" }},
 	[1536] = {{ "sword0","custom" },{ "foursword","custom" }},
-	[1792] = {{ "bombs","custom"}}, --bombs
+	[1792] = {{ "bombs","toggle"}}, --bombs
 	[2048] = {{ "remote","toggle"}},--remote bombs -> à passé en bombs custom dans les prochaines version.
 	[2304] = {{ "bow","progressive"}},
 	[2560] = {{ "bow","progressive"}},
@@ -93,7 +93,7 @@ ITEM_MAPPING = {
 	[25088] = {{ "hearts","custom",4 }},
 	[25344] = {{ "hearts","custom" }},
 	[25600] = {{ "wallet","progressive"}},
-	[25856] = {{ "bombs","custom",3}},--bombs bag
+	[25856] = {{ "bombs","toggle"}},--bombs bag
 	
 	[26112] = {{ "quiver","progressive" }},
 	[28672] = {{ "bowandfly","toggle"}},
