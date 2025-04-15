@@ -2036,7 +2036,7 @@
         "img": "images/options/tracker/require_trick/downstrikebeetle_out_on.png",
         "codes": "downstrikebeetle_out_on",
         "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -2074,7 +2074,7 @@
         "img": "images/options/tracker/require_trick/capeextension_out_on.png",
         "codes": "capeextension_out_on",
         "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -2112,7 +2112,7 @@
         "img": "images/options/tracker/require_trick/cabinswim_out_on.png",
         "codes": "cabinswim_out_on",
         "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -2150,7 +2150,7 @@
         "img": "images/options/tracker/require_trick/powjump_out_on.png",
         "codes": "powjump_out_on",
         "inherit_codes": false
-      },
+      }
     ]
   },
   {

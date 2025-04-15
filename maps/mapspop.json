@@ -41,7 +41,7 @@
   {
     "name": "cof_1F",
     "img": "images/maps/dungeons/cof/1F.png",
-    "location_size": 30,
+    "location_size": 25,
     "location_border_thickness": 5
   },
   {
@@ -59,8 +59,8 @@
   {
     "name": "cof_B3",
     "img": "images/maps/dungeons/cof/B3.png",
-    "location_size": 25,
-    "location_border_thickness": 5
+    "location_size": 20,
+    "location_border_thickness": 3
   },
   {
     "name": "fow",
@@ -70,19 +70,19 @@
   {
     "name": "fow_1F",
     "img": "images/maps/dungeons/fow/1F.png",
-    "location_size": 50,
+    "location_size": 30,
     "location_border_thickness": 5
   },
   {
     "name": "fow_2F",
     "img": "images/maps/dungeons/fow/2F.png",
-    "location_size": 50,
+    "location_size": 30,
     "location_border_thickness": 5
   },
   {
     "name": "fow_3F",
     "img": "images/maps/dungeons/fow/3F.png",
-    "location_size": 50,
+    "location_size": 30,
     "location_border_thickness": 5
   },
   {
@@ -171,7 +171,7 @@
   {
     "name": "dhc_4F",
     "img": "images/maps/dungeons/dhc/4F.png",
-    "location_size": 50,
+    "location_size": 25,
     "location_border_thickness": 5
   },
   {
