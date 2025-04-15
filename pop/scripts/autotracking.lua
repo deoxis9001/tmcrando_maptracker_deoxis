@@ -8,6 +8,11 @@ AP_AUTOTRACKER_ENABLE_DEBUG_ITEM_NOFOUND=TMC_AUTOTRACKER_DEBUG_ITEM_NOFOUND
 AP_AUTOTRACKER_ENABLE_DEBUG_EVENT= TMC_AUTOTRACKER_DEBUG_EVENT
 AP_AUTOTRACKER_ENABLE_DEBUG_RESET = TMC_AUTOTRACKER_DEBUG_RESET
 AP_AUTOTRACKER_ENABLE_DEBUG_LOGGING=AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_LOCATION_NOFOUND or AP_AUTOTRACKER_ENABLE_DEBUG_LOCATION or AP_AUTOTRACKER_ENABLE_DEBUG_ITEM or AP_AUTOTRACKER_ENABLE_DEBUG_EVENT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET or AP_AUTOTRACKER_ENABLE_DEBUG_ITEM_NOFOUND
+
+-- loads the AP autotracking code
+ScriptHost:LoadScript(ScriptAutotracking.."archipelago.lua")
+ScriptHost:LoadScript(ScriptLuaConnector.."autotracking.lua")
+
 -------------------------------------------------------
 print("")
 print("Active Auto-Tracker Configuration")
@@ -28,7 +33,3 @@ end
 
 print("---------------------------------------------------------------------")
 print("")
-
--- loads the AP autotracking code
-ScriptHost:LoadScript(ScriptAutotracking.."archipelago.lua")
-ScriptHost:LoadScript(ScriptLuaConnector.."autotracking.lua")

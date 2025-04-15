@@ -3,6 +3,7 @@ SLOTS_DATA_MAPPING = {
     ["goal_swords"]     =   {"sword0Needed","INT",{0,5}},
     ["goal_elements"]   =   {"element0Needed","INT",{0,4}},
     ["goal_figurines"]   =   {"figurine_option","INT",{0,136}},
+    ["goal_vaati"]  = {"dhc_closed","OPT",{1,0}},
     ["dungeon_small_keys"]   =   {"small_key_none","OPT",{0,1,2,2,2,2,2}},
     ["dungeon_big_keys"]   =   {"big_key_none","OPT",{0,1,2,2,2,2,2}},
    -- ["dungeon_maps"]   =   {"","OPT",{0,1,2,2,2,2,2}},
@@ -16,7 +17,7 @@ SLOTS_DATA_MAPPING = {
     ["cucco_rounds"]   =   {"cucco_none","INT",{0,10}},
     ["goron_sets"]     =   {"goron_none","INT",{0,5}},
     ["shuffle_heart_pieces"]   =   {"hp_vanilla","OPT",{0,1}},
-    ["shuffle_rupees"]   =   {"rupees_off","OPT",{0,1}},
+    ["shuffle_rupees"]   =    {"rupees_off","OPT",{0,1}},
     ["shuffle_pots"]   =   {"specialpot_off","OPT",{0,1}},
     ["shuffle_digging"]   =   {"digging_off","OPT",{0,1}},
     ["shuffle_underwater"]   =   {"underwater_off","OPT",{0,1}},
@@ -59,8 +60,4 @@ SLOTS_DATA_MAPPING = {
     ["trick_dhc_cannons_no_four_sword"]   =   {"dhccanonhit_off","OPT",{0,1}},
     ["trick_dhc_pads_no_four_sword"]   =   {"dhcbladepuzzleshuffle_off","OPT",{0,1}},
     ["trick_dhc_switches_no_four_sword"]   =   {"dhcswitchhit_off","OPT",{0,1}},
-    --old compatibility
-    ["RupeeSpot"]={"rupees_off","OPT",{0,1}},
-    ["ObscureSpot"]={"obscure_on","OPT",{0,1}},
-    ["GoalVaati"]={"dhc_closed","OPT",{0,1}},
 }
