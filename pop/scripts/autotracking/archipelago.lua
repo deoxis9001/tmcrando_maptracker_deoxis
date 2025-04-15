@@ -382,38 +382,42 @@ function apply_slot_data(slot_data)
 							obj.CurrentStage = 0
 						end
 					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "KIN" then
+						slots_data_entry = slots_data_entry + 1
 						if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][1]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][2]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][2]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][%s]: %s", slots_data_key, slots_data_entry, SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]))
 							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][4]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][4]))
 						end
-						slots_data_entry = slots_data_entry + 1
 						local obj_combined = Tracker:FindObjectForCode(SLOTS_DATA_MAPPING[slots_data_key][4])
 						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]==3 then
 							obj.CurrentStage = 1
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongoldcombined" then
-								fusiongoldcombined:setActive(1)
+								--fusiongoldcombined:setActive(1)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionredcombined" then
-								fusionredcombined:setActive(1)
+								--fusionredcombined:setActive(1)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongreencombined" then
-								fusiongreencombined:setActive(1)
+								--fusiongreencombined:setActive(1)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionbluecombined" then
-								fusionbluecombined:setActive(1)
+								--fusionbluecombined:setActive(1)
 							end
 						else
 							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongoldcombined" then
-								fusiongoldcombined:setActive(0)
+								--fusiongoldcombined:setActive(1)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionredcombined" then
-								fusionredcombined:setActive(0)
+								--fusionredcombined:setActive(1)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongreencombined" then
-								fusiongreencombined:setActive(0)
+								--fusiongreencombined:setActive(1)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionbluecombined" then
-								fusionbluecombined:setActive(0)
+								--fusionbluecombined:setActive(1)
 							end
 						end
 					end

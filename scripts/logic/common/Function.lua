@@ -465,23 +465,6 @@ function exists(table,indices)
 end
 
 function has(item, amount)
-  if (string.find(Tracker.ActiveVariantUID, "AP")) then
-    if hassetting("obscure_on") then
-      has_item_data_dev["specialpot_on"] = true
-      has_item_data_dev["specialpot_off"] = false
-      has_item_data_dev["digging_on"] = true
-      has_item_data_dev["specialpot_off"] = false
-      has_item_data_dev["underwater_on"] = true
-      has_item_data_dev["specialpot_off"] = false
-    else
-      has_item_data_dev["specialpot_on"] = false
-      has_item_data_dev["specialpot_off"] = true
-      has_item_data_dev["digging_on"] = false
-      has_item_data_dev["specialpot_off"] = true
-      has_item_data_dev["underwater_on"] = false
-      has_item_data_dev["specialpot_off"] = true
-    end
-  end
   if has_item_data_dev["spec"]~= nil then
     if has_item_data_dev["spec"][item] ~= nil then
       if has_item_data_dev["spec"][item]["desactive"] ~= nil then
