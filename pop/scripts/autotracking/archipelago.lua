@@ -2,6 +2,7 @@ ScriptHost:LoadScript(ScriptAutotracking.."item_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."location_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."room_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."events_mapping.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."slots_data_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -337,34 +338,93 @@ end
 -- apply everything needed from slot_data, called from onClear
 function apply_slot_data(slot_data)
 	-- put any code here that slot_data should affect (toggling setting items for example)
-
-	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT and AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
-		print(string.format("[SLOT DATA][INFO] RupeeSpot: %s", slot_data["RupeeSpot"]))
-		print(string.format("[SLOT DATA][INFO], ObscureSpot: %s", slot_data["ObscureSpot"]))
 	end
-	local RUPEESPOT = slot_data["RupeeSpot"]
-	local OBSCURESPOT = slot_data["ObscureSpot"]
-	local GOALVAATI = slot_data["GoalVaati"]
-	local obj_rupees = Tracker:FindObjectForCode("rupees_off")
-	local obj_obscure = Tracker:FindObjectForCode("obscure_on")
-	local dhc_closed = Tracker:FindObjectForCode("dhc_closed")
-	if RUPEESPOT == 1 then
-		obj_rupees.CurrentStage = 1
-	else
-		obj_rupees.CurrentStage = 0
+	for slots_data_key, slots_data_entry in pairs(slot_data) do
+		if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+			print(string.format(" /---  ---  ---\\ "))
+			print(string.format("[SLOT DATA][INFO] slots_data_key: %s", slots_data_key))
+			print(string.format("[SLOT DATA][INFO] slots_data_entry: %s", slots_data_entry))
+		end
+		if SLOTS_DATA_MAPPING[slots_data_key]~=nil then
+			if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+				print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key]))
+				print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][1]))
+				print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][2]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][2]))
+				print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3]))
+			end
+			if SLOTS_DATA_MAPPING[slots_data_key][1] then
+				local obj = Tracker:FindObjectForCode(SLOTS_DATA_MAPPING[slots_data_key][1])
+
+				if obj then
+					if SLOTS_DATA_MAPPING[slots_data_key][2] == "INT" then
+						if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3][1]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][2]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3][2]))
+						end
+						if slots_data_entry>=SLOTS_DATA_MAPPING[slots_data_key][3][1] and slots_data_entry<=SLOTS_DATA_MAPPING[slots_data_key][3][2] then
+							obj.CurrentStage = slots_data_entry
+						elseif slots_data_entry > SLOTS_DATA_MAPPING[slots_data_key][3][2] then
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][2]
+						elseif slots_data_entry < SLOTS_DATA_MAPPING[slots_data_key][3][1] then
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][1]
+						end
+					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "OPT" then
+						slots_data_entry = slots_data_entry + 1
+						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry] then
+							if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+								print(string.format("[SLOT DATA][INFO] slots_data_entry + 1: %s", slots_data_entry))
+								print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][%s]: %s", slots_data_key, slots_data_entry, SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]))
+							end
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]
+						else
+							obj.CurrentStage = 0
+						end
+					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "KIN" then
+						if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][4]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][4]))
+						end
+						slots_data_entry = slots_data_entry + 1
+						local obj_combined = Tracker:FindObjectForCode(SLOTS_DATA_MAPPING[slots_data_key][4])
+						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]==3 then
+							obj.CurrentStage = 1
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongoldcombined" then
+								fusiongoldcombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionredcombined" then
+								fusionredcombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongreencombined" then
+								fusiongreencombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionbluecombined" then
+								fusionbluecombined:setActive(1)
+							end
+						else
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongoldcombined" then
+								fusiongoldcombined:setActive(0)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionredcombined" then
+								fusionredcombined:setActive(0)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongreencombined" then
+								fusiongreencombined:setActive(0)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionbluecombined" then
+								fusionbluecombined:setActive(0)
+							end
+						end
+					end
+				end
+			end
+		end
+		if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+			print(string.format(" \\---  ---  ---/ "))
+		end
 	end
-	if OBSCURESPOT == 1 then
-		obj_obscure.CurrentStage = 1
-	else
-		obj_obscure.CurrentStage = 0
-	end
-	if GOALVAATI == 1 then
-		dhc_closed.CurrentStage = 0
-	else
-		dhc_closed.CurrentStage = 1
-	end
-	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT and AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
 	end
 end
@@ -683,15 +743,17 @@ function updateStatus(_, v)
     if v == 30 then
         Tracker:FindObjectForCode("dhc").Active = 1
         Tracker:FindObjectForCode("@DHC/Vaati").AvailableChestCount = 0
+        Tracker:FindObjectForCode("@DHC/Win").AvailableChestCount = 0
+        Tracker:FindObjectForCode("@Dark Hyrule Castle - Pull the Pedestal/Win").AvailableChestCount = 0
         Tracker:FindObjectForCode("@Dark Hyrule Castle - Vaati/Kill").AvailableChestCount = 0
     end
 end
 
 function updateMap(v, reset)
 	if v ~= nil then
-		local hex = string.format('%04x',v)
+		local hex = string.upper(string.format('%04x',v))
 
-		local hex2 = string.sub(hex,string.len(hex)-1,string.len(hex))
+		local hex2 = string.upper(string.sub(hex,string.len(hex)-1,string.len(hex)))
 		local tab={}
 		local tabs={}
 		local tabs2={}

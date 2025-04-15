@@ -401,6 +401,349 @@
 			}
 		]
 	},
+	"dws_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws_1F"
+							]
+						}
+					},
+					{
+						"title": "B1",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws_B1"
+							]
+						}
+					},
+					{
+						"title": "B2",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws_B2"
+							]
+						}
+					}
+
+				]
+			}
+		]
+	},
+	"cof_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof_1F"
+							]
+						}
+					},
+					{
+						"title": "B1",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof_B1"
+							]
+						}
+					},
+					{
+						"title": "B2",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof_B2"
+							]
+						}
+					},
+					{
+						"title": "B3",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof_B3"
+							]
+						}
+					}
+
+				]
+			}
+		]
+	},
+	"fow_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow_1F"
+							]
+						}
+					},
+					{
+						"title": "2F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow_2F"
+							]
+						}
+					},
+					{
+						"title": "3F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow_3F"
+							]
+						}
+					}
+				]
+			}
+		]
+	},
+	"tod_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod"
+							]
+						}
+					},
+					{
+						"title": "B1",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod_B1"
+							]
+						}
+					},
+					{
+						"title": "B2",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod_B2"
+							]
+						}
+					},
+					{
+						"title": "B3",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod_B3"
+							]
+						}
+					}
+
+				]
+			}
+		]
+	},
+	"pow_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_1F"
+							]
+						}
+					},
+					{
+						"title": "2F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_2F"
+							]
+						}
+					},
+					{
+						"title": "3F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_3F"
+							]
+						}
+					},
+					{
+						"title": "4F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_4F"
+							]
+						}
+					},
+					{
+						"title": "5F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_5F"
+							]
+						}
+					}
+				]
+			}
+		]
+	},
+	"dhc_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc"
+							]
+						}
+					},
+					{
+						"title": "Sanctuary",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_sanc"
+							]
+						}
+					},
+					{
+						"title": "B2",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_B2"
+							]
+						}
+					},
+					{
+						"title": "B1",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_B1"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_1F"
+							]
+						}
+					},
+					{
+						"title": "2F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_2F"
+							]
+						}
+					},
+					{
+						"title": "3F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_3F"
+							]
+						}
+					},
+					{
+						"title": "4F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_4F"
+							]
+						}
+					}
+
+				]
+			}
+		]
+	},
 	"maps": {
 		"type": "dock",
 		"content": [
@@ -411,40 +754,32 @@
 						"title": "Deepwood Shrine",
 						"icon": "images/icon-maps/chu.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"dws"
-							]
+							"type": "layout",
+							"key": "dws_map"
 						}
 					},
 					{
 						"title": "Cave of Flames",
 						"icon": "images/icon-maps/gleerok.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"cof"
-							]
+							"type": "layout",
+							"key": "cof_map"
 						}
 					},
 					{
 						"title": "Fortress of Winds",
 						"icon": "images/icon-maps/mazaal.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"fow"
-							]
+							"type": "layout",
+							"key": "fow_map"
 						}
 					},
 					{
 						"title": "Temple of Droplets",
 						"icon": "images/icon-maps/octo.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"tod"
-							]
+							"type": "layout",
+							"key":"tod_map"
 						}
 					},
 					{
@@ -461,20 +796,16 @@
 						"title": "Palace of Winds",
 						"icon": "images/icon-maps/gyorg.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"pow"
-							]
+							"type": "layout",
+							"key": "pow_map"
 						}
 					},
 					{
 						"title": "Dark Hyrule Castle",
 						"icon": "images/icon-maps/vaati.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"dhc"
-							]
+							"type": "layout",
+							"key": "dhc_map"
 						}
 					}
 				]

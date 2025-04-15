@@ -62,7 +62,7 @@ TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_Fuser = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
 TMC_AUTOTRACKER_DEBUG_ITEM_NOFOUND = false
-TMC_AUTOTRACKER_DEBUG_EVENT = false
+TMC_AUTOTRACKER_DEBUG_EVENT = true
 TMC_AUTOTRACKER_DEBUG_SLOT = false
 TMC_AUTOTRACKER_DEBUG_RESET = false
 TMC_CACHE_DEBUG_FUNCTION = false
@@ -77,8 +77,6 @@ ScriptHost:LoadScript(ScriptPreset.."init.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Function.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Access.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Beam.lua")
-ScriptHost:LoadScript(ScriptLogicCommon.."CanDamage.lua")
-ScriptHost:LoadScript(ScriptLogicCommon.."CanSplit.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."CaveOfFlame.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Common.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."DarkHyruleCastle.lua")
@@ -86,9 +84,7 @@ ScriptHost:LoadScript(ScriptLogicCommon.."Deepwood.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Droplet.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Elements.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."FortressOfWind.lua")
-ScriptHost:LoadScript(ScriptLogicCommon.."Function.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Fusion.lua")
-ScriptHost:LoadScript(ScriptLogicCommon.."NoCloudtop.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Overworld.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Openworld.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."PalaceOfWind.lua")

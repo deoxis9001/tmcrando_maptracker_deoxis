@@ -16,9 +16,51 @@
     "location_size": 50
   },
   {
+    "name": "dws_1F",
+    "img": "images/maps/dungeons/dws/1F.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "dws_B1",
+    "img": "images/maps/dungeons/dws/B1.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "dws_B2",
+    "img": "images/maps/dungeons/dws/B2.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
     "name": "cof",
     "img": "images/maps/cof.png",
     "location_size": 50
+  },
+  {
+    "name": "cof_1F",
+    "img": "images/maps/dungeons/cof/1F.png",
+    "location_size": 30,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "cof_B1",
+    "img": "images/maps/dungeons/cof/B1.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "cof_B2",
+    "img": "images/maps/dungeons/cof/B2.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "cof_B3",
+    "img": "images/maps/dungeons/cof/B3.png",
+    "location_size": 25,
+    "location_border_thickness": 5
   },
   {
     "name": "fow",
@@ -26,8 +68,44 @@
     "location_size": 50
   },
   {
+    "name": "fow_1F",
+    "img": "images/maps/dungeons/fow/1F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "fow_2F",
+    "img": "images/maps/dungeons/fow/2F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "fow_3F",
+    "img": "images/maps/dungeons/fow/3F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
     "name": "tod",
     "img": "images/maps/tod.png"
+  },
+  {
+    "name": "tod_B1",
+    "img": "images/maps/dungeons/tod/B1.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "tod_B2",
+    "img": "images/maps/dungeons/tod/B2.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "tod_B3",
+    "img": "images/maps/dungeons/tod/B3.png",
+    "location_size": 15,
+    "location_border_thickness": 2
   },
   {
     "name": "rc",
@@ -39,7 +117,79 @@
     "img": "images/maps/pow.png"
   },
   {
+    "name": "pow_1F",
+    "img": "images/maps/dungeons/pow/1F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "pow_2F",
+    "img": "images/maps/dungeons/pow/2F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "pow_3F",
+    "img": "images/maps/dungeons/pow/3F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "pow_4F",
+    "img": "images/maps/dungeons/pow/4F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "pow_5F",
+    "img": "images/maps/dungeons/pow/5F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
     "name": "dhc",
     "img": "images/maps/dhc.png"
+  },
+  {
+    "name": "dhc_1F",
+    "img": "images/maps/dungeons/dhc/1F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "dhc_2F",
+    "img": "images/maps/dungeons/dhc/2F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "dhc_3F",
+    "img": "images/maps/dungeons/dhc/3F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "dhc_4F",
+    "img": "images/maps/dungeons/dhc/4F.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "dhc_B1",
+    "img": "images/maps/dungeons/dhc/B1.png",
+    "location_size": 50,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "dhc_B2",
+    "img": "images/maps/dungeons/dhc/B2.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "dhc_sanc",
+    "img": "images/maps/dungeons/dhc/Sanc.png",
+    "location_size": 25,
+    "location_border_thickness": 2
   }
 ]
