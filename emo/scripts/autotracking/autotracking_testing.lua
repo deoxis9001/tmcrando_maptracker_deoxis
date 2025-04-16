@@ -1,20 +1,73 @@
+ScriptHost:LoadScript(ScriptAutotracking.."room_id_fonction.lua")
+
 items_codes_autotracking={}
+items_codes_autotracking_cache={}
+
+items_codes_autotracking_cache["POT"]={}
+items_codes_autotracking_cache["POT"]["LOC_ACTIVE"]={}
+
+items_codes_autotracking_cache["UNDERWATER"]={}
+items_codes_autotracking_cache["UNDERWATER"]["LOC_ACTIVE"]={}
+
+items_codes_autotracking_cache["DIG"]={}
+items_codes_autotracking_cache["DIG"]["LOC_ACTIVE"]={}
+
+items_codes_autotracking_cache["DWS_ENTER"]={}
+items_codes_autotracking_cache["DWS_ENTER"]["COUNT"]={}
+items_codes_autotracking_cache["DWS_ENTER"]["ACTIVE"]={}
+items_codes_autotracking_cache["DWS_ENTER"]["SETTING"]={}
+
+items_codes_autotracking_cache["COF_ENTER"]={}
+items_codes_autotracking_cache["COF_ENTER"]["COUNT"]={}
+items_codes_autotracking_cache["COF_ENTER"]["ACTIVE"]={}
+items_codes_autotracking_cache["COF_ENTER"]["SETTING"]={}
+
+items_codes_autotracking_cache["FOW_ENTER"]={}
+items_codes_autotracking_cache["FOW_ENTER"]["COUNT"]={}
+items_codes_autotracking_cache["FOW_ENTER"]["ACTIVE"]={}
+items_codes_autotracking_cache["FOW_WARPS"]={}
+items_codes_autotracking_cache["FOW_WARPS"]["SETTING"]={}
+
+items_codes_autotracking_cache["TOD_ENTER"]={}
+items_codes_autotracking_cache["TOD_ENTER"]["COUNT"]={}
+items_codes_autotracking_cache["TOD_ENTER"]["ACTIVE"]={}
+items_codes_autotracking_cache["TOD_ENTER"]["SETTING"]={}
+
+items_codes_autotracking_cache["POW_ENTER"]={}
+items_codes_autotracking_cache["POW_ENTER"]["COUNT"]={}
+items_codes_autotracking_cache["POW_ENTER"]["ACTIVE"]={}
+items_codes_autotracking_cache["POW_ENTER"]["SETTING"]={}
+
+items_codes_autotracking_cache["DHC_ENTER"]={}
+items_codes_autotracking_cache["DHC_ENTER"]["COUNT"]={}
+items_codes_autotracking_cache["DHC_ENTER"]["ACTIVE"]={}
+items_codes_autotracking_cache["DHC_WARPS"]={}
+items_codes_autotracking_cache["DHC_WARPS"]["SETTING"]={}
+
+items_codes_autotracking_cache["RC_ENTER"]={}
+items_codes_autotracking_cache["RC_ENTER"]["COUNT"]={}
+items_codes_autotracking_cache["RC_ENTER"]["ACTIVE"]={}
+items_codes_autotracking_cache["RC_ENTER"]["SETTING"]={}
+
+code_type_cache={}
 
 function autotracker_started()
 	print("Started Tracking")
 	AREA = 0
 	ROOM = 0
 	SEED_START = 0
-	DWS_ENTER = 0
-	COF_ENTER = 0
-	FOW_ENTER = 0
-	TOD_ENTER = 0
-	POW_ENTER = 0
-	RC_ENTER = 0
-	DHC_ENTER = 0
-	POT_SPOT = 0
-	DIG_SPOT = 0
-	UNDERWATER_SPOT = 0
+	code_type_cache["DWS_ENTER"] = 0
+	code_type_cache["COF_ENTER"] = 0
+	code_type_cache["FOW_ENTER"] = 0
+	code_type_cache["FOW_WARPS"] = 0
+	code_type_cache["TOD_ENTER"] = 0
+	code_type_cache["POW_ENTER"] = 0
+	code_type_cache["RC_ENTER"] = 0
+	code_type_cache["DHC_ENTER"] = 0
+	code_type_cache["POT_SPOT"] = 0
+	code_type_cache["DIG_SPOT"] = 0
+	code_type_cache["UNDERWATER_SPOT"] = 0
+	code_type_cache["OCARINA"] = 0
 	DWS_KEY_COUNT = 0
 	DWS_KEY_USED = 0
 	COF_KEY_COUNT = 0
@@ -88,6 +141,7 @@ function ReadU8(segment, address)
 	end
 	return U8_READ_CACHE
 end
+
 
 function isInGame()
 	return AutoTracker:ReadU8(0x2002b32) > 0x00
@@ -187,12 +241,89 @@ function updateToggleFlag(segment, code, address, flag)
 
 		if flagTest ~= 0 then
 			item.Active = true
-		else
-			item.Active = false
+		--else
+			--item.Active = false
 		end
 	end
 end
 
+
+function updateToggleFlagSpec(segment, type, code, address, flag)
+	local item = Tracker:FindObjectForCode(code)
+	if item then
+		local value = ReadU8(segment, address)
+		if TMC_AUTOTRACKER_DEBUG_ITEM then
+			print(item.Name, code, flag)
+		end
+
+		local flagTest = value & flag
+
+		if flagTest ~= 0 then
+			if code_type_cache[type] == 1 then
+				item.Active = true
+				items_codes_autotracking_cache[type]["ACTIVE"][code]=true
+			else
+				items_codes_autotracking_cache[type]["ACTIVE"][code]=true
+			end
+		--else
+--			item.Active = false
+		end
+	end
+end
+function updateToggleFlagSettings(segment, type, code, address, flag)
+	local item = Tracker:FindObjectForCode(code)
+	if item then
+		local value = ReadU8(segment, address)
+		if TMC_AUTOTRACKER_DEBUG_ITEM then
+			print(item.Name, code, flag)
+		end
+
+		local flagTest = value & flag
+
+		if flagTest ~= 0 then
+			if items_codes_autotracking_cache[type]==nil then
+				items_codes_autotracking_cache[type]={}
+			end
+			if items_codes_autotracking_cache[type]["SETTING"]==nil then
+				items_codes_autotracking_cache[type]["SETTING"]={}
+			end
+			if code_type_cache[type] == 1 then
+				item.CurrentStage = 1
+				items_codes_autotracking_cache[type]["SETTING"][code] = 1
+			else
+				items_codes_autotracking_cache[type]["SETTING"][code]= 1
+			end
+		--else
+--			item.Active = false
+		end
+	end
+end
+
+
+function updateToggleFlagCheck(segment, type, code, address, flag)
+	local item = Tracker:FindObjectForCode(code)
+	if item then
+		local value = ReadU8(segment, address)
+		if TMC_AUTOTRACKER_DEBUG_ITEM then
+			print(item.Name, code, flag)
+		end
+
+		local flagTest = value & flag
+
+		if flagTest ~= 0 then
+			code_type_cache[type] = 1 
+			item.Active = true
+			if items_codes_autotracking_cache[type]==nil then
+				items_codes_autotracking_cache[type]={}
+			end
+			if items_codes_autotracking_cache[type]["ACTIVE"]==nil then
+				items_codes_autotracking_cache[type]["ACTIVE"]={}
+			end
+			items_codes_autotracking_cache[type]["ACTIVE"][code]=true
+			UPDATE(type)
+		end
+	end
+end
 
 function smithswordCheck(segment, code, address, flag)
 	if smithsword then
@@ -312,36 +443,39 @@ function updateSectionFlagSpecialCheck(segment, special, locationRef, address, f
 		end
 
 		local value = ReadU8(segment, address)
-
 		if TMC_AUTOTRACKER_DEBUG_LOCATION then
 			print(locationRef, value)
 		end
 
 		if (value & flag) ~= 0 then
-			location.AvailableChestCount = 0
-			if special=="pot" then
-				if POT_SPOT==1 then
+			if special=="POT" then
+				if code_type_cache["POT_SPOT"] ==1 then
 					location.AvailableChestCount = 0
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
 				else
-					location.AvailableChestCount = 1
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
 				end
-			elseif special=="underwater" then
-				if UNDERWATER_SPOT==1 then
+			elseif special=="UNDERWATER" then
+				if code_type_cache["UNDERWATER_SPOT"] ==1 then
 					location.AvailableChestCount = 0
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
 				else
-					location.AvailableChestCount = 1
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
 				end
-			elseif special=="dig" then
-				if DIG_SPOT==1 then
+			elseif special=="DIG" then
+				if code_type_cache["DIG_SPOT"] ==1 then
 					location.AvailableChestCount = 0
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
 				else
-					location.AvailableChestCount = 1
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
 				end
 			else
 				location.AvailableChestCount = 0
+				items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
 			end
 		else
 			location.AvailableChestCount = 1
+			items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 1
 		end
 	elseif TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND then
 		print("Location not found", locationRef)
@@ -368,29 +502,35 @@ function updateDecreaseCountSpecialCheck(segment, special, locationRef, chestDat
 			end
 		end
 		if cleared>0 then
-			if special=="pot" then
-				if POT_SPOT==1 then
-					location.AvailableChestCount = 0
+			if special=="POT" then
+				if code_type_cache["POT_SPOT"] ==1 then
+					location.AvailableChestCount = (#chestData - cleared)
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
 				else
-					location.AvailableChestCount = 1
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
 				end
-			elseif special=="underwater" then
-				if UNDERWATER_SPOT==1 then
-					location.AvailableChestCount = 0
+			elseif special=="UNDERWATER" then
+				if code_type_cache["UNDERWATER_SPOT"] ==1 then
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
+					location.AvailableChestCount = (#chestData - cleared)
 				else
-					location.AvailableChestCount = 1
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
 				end
-			elseif special=="dig" then
-				if DIG_SPOT==1 then
-					location.AvailableChestCount = 0
+			elseif special=="DIG" then
+				if code_type_cache["DIG_SPOT"] ==1 then
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
+					location.AvailableChestCount = (#chestData - cleared)
 				else
-					location.AvailableChestCount = 1
+					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
 				end
 			else
-				location.AvailableChestCount = 0
+				items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
+				location.AvailableChestCount = (#chestData - cleared)
 			end
+		else
+			items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
+			location.AvailableChestCount = (#chestData - cleared)
 		end
-		location.AvailableChestCount = (#chestData - cleared)
 	elseif TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND then
 		print("Location not found", locationRef)
 	end
@@ -409,21 +549,6 @@ function updateToggleFlagDungeons(segment, dungeons, code, address, flag)
 
 		if flagTest ~= 0 then
 			item.Active = true
-			if dungeons=="dws" then
-				DWS_ENTER=1
-			elseif dungeons=="cof" then
-				COF_ENTER=1
-			elseif dungeons=="fow" then
-				FOW_ENTER=1
-			elseif dungeons=="tod" then
-				TOD_ENTER=1
-			elseif dungeons=="pow" then
-				POW_ENTER=1
-			elseif dungeons=="rc" then
-				RC_ENTER=1
-			elseif dungeons=="dhc" then
-				DHC_ENTER=1
-			end
 		else
 			item.Active = false
 		end
@@ -445,21 +570,6 @@ function updateSectionFlagDungeons(segment, dungeons, locationRef, address, flag
 
 		if (value & flag) ~= 0 then
 			location.AvailableChestCount = 0
-			if dungeons=="dws" then
-				DWS_ENTER=1
-			elseif dungeons=="cof" then
-				COF_ENTER=1
-			elseif dungeons=="fow" then
-				FOW_ENTER=1
-			elseif dungeons=="tod" then
-				TOD_ENTER=1
-			elseif dungeons=="pow" then
-				POW_ENTER=1
-			elseif dungeons=="rc" then
-				RC_ENTER=1
-			elseif dungeons=="dhc" then
-				DHC_ENTER=1
-			end
 		else
 			location.AvailableChestCount = 1
 		end
@@ -485,23 +595,6 @@ function updateDecreaseCountDungeons(segment, dungeons, locationRef, chestData)
 
 			if flagTest ~= 0 then
 				cleared = cleared + 1
-			end
-		end
-		if cleared>0 then
-			if dungeons=="dws" then
-				DWS_ENTER=1
-			elseif dungeons=="cof" then
-				COF_ENTER=1
-			elseif dungeons=="fow" then
-				FOW_ENTER=1
-			elseif dungeons=="tod" then
-				TOD_ENTER=1
-			elseif dungeons=="pow" then
-				POW_ENTER=1
-			elseif dungeons=="rc" then
-				RC_ENTER=1
-			elseif dungeons=="dhc" then
-				DHC_ENTER=1
 			end
 		end
 		location.AvailableChestCount = (#chestData - cleared)
@@ -1621,42 +1714,132 @@ function updateHearts(segment, address)
 		item.CurrentStage = ReadU8(segment, address) / 8 - 3
 	end
 end
+function updateWarps(segment, type)
+	local counter_warps = 0
+	if type == "DWS_ENTER" then
+		if testFlag(segment, 0x2002EBD, 0x01) then
+			counter_warps = counter_warps + 1
+		end
+		if  testFlag(segment, 0x2002EBD, 0x02) then
+			counter_warps = counter_warps + 2
+		end
+		if code_type_cache["DWS_ENTER"] == 1 then
+			local item = Tracker:FindObjectForCode("dws_warps_none")
+			item.CurrentStage = counter_warps
+		end
+		items_codes_autotracking_cache[type]["SETTING"]["dws_warps_none"] = counter_warps
+	elseif type == "COF_ENTER" then
+		if testFlag(segment, 0x2002EBE, 0x01) then
+			counter_warps = counter_warps + 1
+		end
+		if  testFlag(segment, 0x2002EBE, 0x02) then
+			counter_warps = counter_warps + 2
+		end
+		if code_type_cache["COF_ENTER"] == 1 then
+			local item = Tracker:FindObjectForCode("cof_warps_none")
+			item.CurrentStage = counter_warps
+		end
+		items_codes_autotracking_cache[type]["SETTING"]["cof_warps_none"] = counter_warps
+	elseif type == "FOW_WARPS" then
+		if testFlag(segment, 0x2002EBF, 0x01) then
+			counter_warps = counter_warps + 1
+		end
+		if testFlag(segment, 0x2002EBF, 0x02) then
+			counter_warps = counter_warps + 2
+		end
+		if FOW_WARPS == 1 then
+			local item = Tracker:FindObjectForCode("fow_warps_none")
+			item.CurrentStage = counter_warps
+		end
+		items_codes_autotracking_cache["FOW_WARPS"]["SETTING"]["fow_warps_none"] = counter_warps
+	elseif type == "TOD_ENTER" then
+		if testFlag(segment, 0x2002EC0, 0x01) then
+			counter_warps = counter_warps + 1
+		end
+		if  testFlag(segment, 0x2002EC0, 0x02) then
+			counter_warps = counter_warps + 2
+		end
+		if code_type_cache["TOD_ENTER"] == 1 then
+			local item = Tracker:FindObjectForCode("tod_warps_none")
+			item.CurrentStage = counter_warps
+		end
+		items_codes_autotracking_cache[type]["SETTING"]["tod_warps_none"] = counter_warps
+	elseif type == "POW_ENTER" then
+		if testFlag(segment, 0x2002EC1, 0x01) then
+			counter_warps = counter_warps + 1
+		end
+		if  testFlag(segment, 0x2002EC1, 0x02) then
+			counter_warps = counter_warps + 2
+		end
+		if code_type_cache["POW_ENTER"] == 1 then
+			local item = Tracker:FindObjectForCode("pow_warps_none")
+			item.CurrentStage = counter_warps
+		end
+		items_codes_autotracking_cache[type]["SETTING"]["pow_warps_none"] = counter_warps
+	elseif type == "DHC_ENTER" then
+		if testFlag(segment, 0x2002EC2, 0x01) then
+			counter_warps = counter_warps + 1
+		end
+		if  testFlag(segment, 0x2002EC2, 0x02) then
+			counter_warps = counter_warps + 2
+		end
+		if code_type_cache["DHC_WARPS"] == 1 then
+			local item = Tracker:FindObjectForCode("dhc_warps_none")
+			item.CurrentStage = counter_warps
+		end
+		items_codes_autotracking_cache[type]["SETTING"]["dhc_warps_none"] = counter_warps
+	end
+end
 function updateBigKeys(segment, code)
 	if code == "dws_bigkey" then
-		if testFlag(segment, 0x2002D45, 0x02) then
+		if testFlag(segment, 0x2002D45, 0x02) and code_type_cache["DWS_ENTER"] == 1 then
 			updateToggleFlag(segment, "dws_bigkey", 0x2002D45, 0x02)
+		elseif testFlag(segment, 0x2002D45, 0x02) then
+			updateToggleFlagSpec(segment, "DWS_ENTER", "dws_bigkey", 0x2002D45, 0x02)
 		else
 			updateToggleFlag(segment, "dws_bigkey", 0x2002ead, 0x04)
 		end
 	elseif code == "cof_bigkey" then
-		if testFlag(segment, 0x2002D5A, 0x40) then
-			updateToggleFlag(segment, "cof_bigkey", 0x2002D5A, 0x40)
+		if testFlag(segment, 0x2002D5A, 0x40) and code_type_cache["COF_ENTER"] == 1  then
+			updateToggleFlag(segment,"cof_bigkey", 0x2002D5A, 0x40)
+		elseif testFlag(segment, 0x2002D5A, 0x40) then
+			updateToggleFlagSpec(segment, "COF_ENTER", "cof_bigkey", 0x2002D5A, 0x40)
 		else
 			updateToggleFlag(segment, "cof_bigkey", 0x2002eae, 0x04)
 		end
 	elseif code == "fow_bigkey" then
-		if testFlag(segment, 0x2002D70, 0x40) then
+		if testFlag(segment, 0x2002D70, 0x40) and code_type_cache["FOW_ENTER"] == 1 then
 			updateToggleFlag(segment, "fow_bigkey", 0x2002D70, 0x40)
+		elseif testFlag(segment, 0x2002D70, 0x40) then
+			updateToggleFlagSpec(segment, "FOW_ENTER", "fow_bigkey", 0x2002D70, 0x40)
 		else
 			updateToggleFlag(segment, "fow_bigkey", 0x2002eaf, 0x04)
 		end
 	elseif code == "tod_bigkey" then
-		if testFlag(segment, 0x2002D89, 0x10) then
+		if testFlag(segment, 0x2002D89, 0x10)  and code_type_cache["TOD_ENTER"] == 1 then
 			updateToggleFlag(segment, "tod_bigkey", 0x2002D89, 0x10)
+		elseif testFlag(segment, 0x2002D89, 0x10)  then
+			updateToggleFlagSpec(segment, "TOD_ENTER", "tod_bigkey", 0x2002D89, 0x10)
 		else
 			updateToggleFlag(segment, "tod_bigkey", 0x2002eb0, 0x04)
 		end
 	elseif code == "pow_bigkey" then
-		if testFlag(segment, 0x2002DA2, 0x40) then
+		if testFlag(segment, 0x2002DA2, 0x40)  and code_type_cache["POW_ENTER"] == 1 then
 			updateToggleFlag(segment, "pow_bigkey", 0x2002DA2, 0x40)
-		elseif testFlag(segment, 0x2002DA4, 0x04) then
+		elseif testFlag(segment, 0x2002DA4, 0x04)  and code_type_cache["POW_ENTER"] == 1 then
 			updateToggleFlag(segment, "pow_bigkey", 0x2002DA4, 0x04)
+		elseif testFlag(segment, 0x2002DA2, 0x40) then
+			updateToggleFlagSpec(segment, "POW_ENTER", "pow_bigkey", 0x2002DA2, 0x40)
+		elseif testFlag(segment, 0x2002DA4, 0x04)  then
+			updateToggleFlagSpec(segment, "POW_ENTER", "pow_bigkey", 0x2002DA4, 0x04)
 		else
 			updateToggleFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
 		end
 	elseif code == "dhc_bigkey" then
-		if testFlag(segment, 0x2002DBE, 0x20) then
+		if testFlag(segment, 0x2002DBE, 0x20)  and code_type_cache["DHC_ENTER"] == 1 then
 			updateToggleFlag(segment, "dhc_bigkey", 0x2002DBE, 0x20)
+		elseif testFlag(segment, 0x2002DBE, 0x20) then
+			updateToggleFlagSpec(segment, "DHC_ENTER", "dhc_bigkey", 0x2002DBE, 0x20)
 		else
 			updateToggleFlag(segment, "dhc_bigkey", 0x2002eb2, 0x04)
 		end
@@ -1680,7 +1863,10 @@ function updateSmallKeys(segment, code, address)
 			DWS_KEY_USED = DWS_KEY_USED + 1
 		end
 		DWS_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
+		items_codes_autotracking_cache["DWS_ENTER"]["COUNT"][code] = DWS_KEY_COUNT + DWS_KEY_USED
+		if DWS_KEY_COUNT > 0 or code_type_cache["DWS_ENTER"]==1 then
+			item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
+		end
 	elseif code == "cof_smallkey" then
 		COF_KEY_USED = 0
 		if testFlag(segment, 0x2002d56, 0x10) then
@@ -1690,7 +1876,10 @@ function updateSmallKeys(segment, code, address)
 			COF_KEY_USED = COF_KEY_USED + 1
 		end
 		COF_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
+		items_codes_autotracking_cache["COF_ENTER"]["COUNT"][code] = COF_KEY_COUNT + COF_KEY_USED
+		if COF_KEY_COUNT > 0 or code_type_cache["COF_ENTER"]==1 then
+			item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
+		end
 	elseif code == "fow_smallkey" then
 		FOW_KEY_USED = 0
 		if testFlag(segment, 0x2002d6f, 0x20) then
@@ -1706,7 +1895,10 @@ function updateSmallKeys(segment, code, address)
 			FOW_KEY_USED = FOW_KEY_USED + 1
 		end
 		FOW_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
+		items_codes_autotracking_cache["FOW_ENTER"]["COUNT"][code] = FOW_KEY_COUNT + FOW_KEY_USED
+		if FOW_KEY_COUNT > 0 or code_type_cache["FOW_ENTER"]==1 then
+			item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
+		end
 	elseif code == "tod_smallkey" then
 		TOD_KEY_USED = 0
 		if testFlag(segment, 0x2002d89, 0x04) then
@@ -1722,7 +1914,10 @@ function updateSmallKeys(segment, code, address)
 			TOD_KEY_USED = TOD_KEY_USED + 1
 		end
 		TOD_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
+		items_codes_autotracking_cache["TOD_ENTER"]["COUNT"][code] = TOD_KEY_COUNT + TOD_KEY_USED
+		if TOD_KEY_COUNT > 0 or code_type_cache["TOD_ENTER"]==1 then
+			item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
+		end
 	elseif code == "pow_smallkey" then
 		POW_KEY_USED = 0
 		if testFlag(segment, 0x2002da3, 0x10) then
@@ -1744,7 +1939,10 @@ function updateSmallKeys(segment, code, address)
 			POW_KEY_USED = POW_KEY_USED + 1
 		end
 		POW_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
+		items_codes_autotracking_cache["POW_ENTER"]["COUNT"][code] = POW_KEY_COUNT + POW_KEY_USED
+		if POW_KEY_COUNT > 0 or code_type_cache["POW_ENTER"]==1 then
+			item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
+		end
 	elseif code == "dhc_smallkey" then
 		DHC_KEY_USED = 0
 		if testFlag(segment, 0x2002dbb, 0x20) then
@@ -1763,7 +1961,10 @@ function updateSmallKeys(segment, code, address)
 			DHC_KEY_USED = DHC_KEY_USED + 1
 		end
 		DHC_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
+		items_codes_autotracking_cache["DHC_ENTER"]["COUNT"][code] = DHC_KEY_USED + DHC_KEY_COUNT
+		if DHC_KEY_COUNT > 0 or code_type_cache["DHC_ENTER"]==1 then
+			item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
+		end
 	elseif code == "rc_smallkey" then
 		RC_KEY_USED = 0
 		if testFlag(segment, 0x2002d00, 0x80) then
@@ -1776,7 +1977,10 @@ function updateSmallKeys(segment, code, address)
 			RC_KEY_USED = RC_KEY_USED + 1
 		end
 		RC_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED
+		items_codes_autotracking_cache["RC_ENTER"]["COUNT"][code] = RC_KEY_COUNT + RC_KEY_USED
+		if RC_KEY_COUNT > 0 or code_type_cache["RC_ENTER"]==1 then
+			item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED
+		end
 	else
 		item.AcquiredCount = 0
 	end
@@ -2090,7 +2294,7 @@ function updateItemsFromMemorySegment(segment)
 		updateToggleFlag(segment, "mitts", 0x2002b36, 0x40)
 		updateToggleFlag(segment, "cape", 0x2002b37, 0x01)
 		updateToggleFlag(segment, "boots", 0x2002b37, 0x04)
-		updateToggleFlag(segment, "ocarina", 0x2002b37, 0x40)
+		updateToggleFlagCheck(segment, "OCARINA", "ocarina", 0x2002b37, 0x40)
 		updateToggleFlag(segment, "trophy", 0x2002b41, 0x04)
 		updateToggleFlag(segment, "carlov", 0x2002b41, 0x10)
 		updateToggleFlag(segment, "grip", 0x2002b43, 0x01)
@@ -2188,19 +2392,19 @@ function updateLocations(segment)
 	InvalidateReadCaches()
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
-		updateToggleFlagDungeons(segment, "dws", "dws", 0x2002c9c, 0x04)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Prize", 0x2002c9c, 0x04)
-		updateToggleFlagDungeons(segment, "cof", "cof", 0x2002c9c, 0x08)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Prize", 0x2002c9c, 0x08)
-		updateToggleFlagDungeons(segment, "fow", "fow", 0x2002c9c, 0x10)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Prize", 0x2002c9c, 0x10)
-		updateToggleFlagDungeons(segment, "tod", "tod", 0x2002c9c, 0x20)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Prize", 0x2002c9c, 0x20)
-		updateToggleFlagDungeons(segment, "pow", "pow", 0x2002c9c, 0x40)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Prize", 0x2002c9c, 0x40)
-		updateToggleFlagDungeons(segment, "rc", "rc", 0x2002d02, 0x04)
-		updateSectionFlagDungeons(segment, "rc", "@Royal Crypt/Prize", 0x2002d02, 0x04)
-		updateToggleFlagDungeons(segment, "dhc", "dhc", 0x2002ca6, 0x20)
+		updateToggleFlagDungeons(segment, "DWS_ENTER", "dws", 0x2002c9c, 0x04)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Prize", 0x2002c9c, 0x04)
+		updateToggleFlagDungeons(segment, "COF_ENTER", "cof", 0x2002c9c, 0x08)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Prize", 0x2002c9c, 0x08)
+		updateToggleFlagDungeons(segment, "FOW_ENTER", "fow", 0x2002c9c, 0x10)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Prize", 0x2002c9c, 0x10)
+		updateToggleFlagDungeons(segment, "TOD_ENTER", "tod", 0x2002c9c, 0x20)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Prize", 0x2002c9c, 0x20)
+		updateToggleFlagDungeons(segment, "POW_ENTER", "pow", 0x2002c9c, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Prize", 0x2002c9c, 0x40)
+		updateToggleFlagDungeons(segment, "RC_ENTER", "rc", 0x2002d02, 0x04)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Royal Crypt/Prize", 0x2002d02, 0x04)
+		updateToggleFlagDungeons(segment, "DHC_ENTER", "dhc", 0x2002ca6, 0x20)
 		if has("fusiongold_vanilla") then
 			if fusiongoldcombined:getActive() then
 				updateCloudsUsedFixed(
@@ -2608,7 +2812,7 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Crenel - Mines/Chest", 0x2002d11, 0x08)
 		updateDecreaseCountSpecialCheck(
 			segment,
-			"dig",
+			"DIG",
 			"@Crenel - Mines/Digging",
 			{
 				{0x2002cf3, 0x02},
@@ -2645,14 +2849,14 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Crenel - Mines Cave/Chest", 0x2002d23, 0x20)
 
 		-- MAP MINES
-		updateSectionFlagSpecialCheck(segment, "dig", "@Crenel - Mines - Digging Spot 8/Digging", 0x2002cf4, 0x01)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Crenel - Mines - Digging Spot 1/Digging", 0x2002cf3, 0x02)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Crenel - Mines - Digging Spot 7/Digging", 0x2002cf3, 0x80)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Crenel - Mines - Digging Spot 6/Digging", 0x2002cf3, 0x40)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Crenel - Mines - Digging Spot 5/Digging", 0x2002cf3, 0x20)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Crenel - Mines - Digging Spot 4/Digging", 0x2002cf3, 0x10)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Crenel - Mines - Digging Spot 2/Digging", 0x2002cf3, 0x04)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Crenel - Mines - Digging Spot 3/Digging", 0x2002cf3, 0x08)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 8/Digging", 0x2002cf4, 0x01)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 1/Digging", 0x2002cf3, 0x02)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 7/Digging", 0x2002cf3, 0x80)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 6/Digging", 0x2002cf3, 0x40)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 5/Digging", 0x2002cf3, 0x20)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 4/Digging", 0x2002cf3, 0x10)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 2/Digging", 0x2002cf3, 0x04)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 3/Digging", 0x2002cf3, 0x08)
 
 		--CRENEL BASE
 		updateSectionFlag(segment, "@Crenel Base - Vine Rupee/Rupee", 0x2002cc5, 0x02)
@@ -2666,9 +2870,9 @@ function updateLocations(segment)
 
 		--CASTOR WILDS
 		updateSectionFlag(segment, "@Castor Wilds - Platform Chest/Chest", 0x2002cbd, 0x10)
-		updateSectionFlagSpecialCheck(segment, "underwater", "@Castor Wilds - Diving Spots/Diving Top", 0x2002cc0, 0x04)
-		updateSectionFlagSpecialCheck(segment, "underwater", "@Castor Wilds - Diving Spots/Diving Middle", 0x2002cc0, 0x08)
-		updateSectionFlagSpecialCheck(segment, "underwater",  "@Castor Wilds - Diving Spots/Diving Bottom", 0x2002cc0, 0x10)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Castor Wilds - Diving Spots/Diving Top", 0x2002cc0, 0x04)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Castor Wilds - Diving Spots/Diving Middle", 0x2002cc0, 0x08)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER",  "@Castor Wilds - Diving Spots/Diving Bottom", 0x2002cc0, 0x10)
 		updateSectionFlag(segment, "@Castor Wilds - Mulldozers/Big Chest", 0x2002cde, 0x01)
 		updateSectionFlag(segment, "@Castor Wilds - Northern Minish Crack/Chest", 0x2002cde, 0x08)
 		updateSectionFlag(segment, "@Castor Wilds - Western Minish Crack/Chest", 0x2002cde, 0x10)
@@ -2703,18 +2907,18 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Royal Valley - Great Fairy/Gift", 0x2002cef, 0x40)
 		updateSectionFlag(segment, "@Pre Royal Valley - Chest/Chest", 0x2002cd3, 0x20)
 		--Crypt
-		updateSectionFlagDungeons(segment, "rc", "@Royal Crypt/King Gustaf", 0x2002d02, 0x04)
-		updateSectionFlagDungeons(segment, "rc", "@Royal Crypt/Left Path", 0x2002d12, 0x40)
-		updateSectionFlagDungeons(segment, "rc", "@Royal Crypt/Right Path", 0x2002d12, 0x80)
-		updateSectionFlagDungeons(segment, "rc", "@Royal Crypt/First Gibdos", 0x2002d14, 0x10)
-		updateSectionFlagDungeons(segment, "rc", "@Royal Crypt/Other Gibdos", 0x2002d14, 0x20)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Royal Crypt/King Gustaf", 0x2002d02, 0x04)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Royal Crypt/Left Path", 0x2002d12, 0x40)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Royal Crypt/Right Path", 0x2002d12, 0x80)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Royal Crypt/First Gibdos", 0x2002d14, 0x10)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Royal Crypt/Other Gibdos", 0x2002d14, 0x20)
 
 		--Crypt map
-		updateSectionFlagDungeons(segment, "rc", "@Crypt - King Gustaf/Gift", 0x2002d02, 0x04)
-		updateSectionFlagDungeons(segment, "rc", "@Crypt - Left Path/Chest", 0x2002d12, 0x40)
-		updateSectionFlagDungeons(segment, "rc", "@Crypt - Right Path/Chest", 0x2002d12, 0x80)
-		updateSectionFlagDungeons(segment, "rc", "@Crypt - Gibdos/First Kill", 0x2002d14, 0x10)
-		updateSectionFlagDungeons(segment, "rc", "@Crypt - Gibdos/Second Kill", 0x2002d14, 0x20)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Crypt - King Gustaf/Gift", 0x2002d02, 0x04)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Crypt - Left Path/Chest", 0x2002d12, 0x40)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Crypt - Right Path/Chest", 0x2002d12, 0x80)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Crypt - Gibdos/First Kill", 0x2002d14, 0x10)
+		updateSectionFlagDungeons(segment, "RC_ENTER", "@Crypt - Gibdos/Second Kill", 0x2002d14, 0x20)
 		--TRILBY
 		updateSectionFlag(segment, "@Trilby Highlands - Business Scrub/Item", 0x2002ca7, 0x04)
 		updateSectionFlag(segment, "@Trilby Highlands - Northern Chest/Chest", 0x2002cd2, 0x40)
@@ -2810,7 +3014,7 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Town - School/Pull the Statue", 0x2002cfc, 0x40)
 		updateSectionFlag(segment, "@Town - Bell/Heart Piece", 0x2002cd5, 0x20)
 		updateSectionFlag(segment, "@Town - Cafe/Lady Next to Cafe - Gift", 0x2002cd6, 0x40)
-		updateSectionFlagSpecialCheck(segment, "pot", "@Town - Inn/Right Pot", 0x2002ce0, 0x80)
+		updateSectionFlagSpecialCheck(segment, "POT", "@Town - Inn/Right Pot", 0x2002ce0, 0x80)
 		updateSectionFlag(segment, "@Town - Inn/Back Door - Heart Piece", 0x2002cf3, 0x01)
 		updateSectionFlag(segment, "@Town - Stockwell's Shop/Dog Food Bottle", 0x2002ce6, 0x08)
 		updateSectionFlag(segment, "@Town - Library/Yellow Minish - Gift", 0x2002ceb, 0x01)
@@ -2915,7 +3119,7 @@ function updateLocations(segment)
 
 		--LON LON RANCH
 		updateSectionFlag(segment, "@Lon Lon Ranch - Digging Spot/Digging (Above Tree)", 0x2002ccb, 0x20)
-		updateSectionFlagSpecialCheck(segment, "pot", "@Lon Lon Ranch - Malon's Pot/Pot", 0x2002ce5, 0x20)
+		updateSectionFlagSpecialCheck(segment, "POT", "@Lon Lon Ranch - Malon's Pot/Pot", 0x2002ce5, 0x20)
 		updateSectionFlag(segment, "@Lon Lon Ranch - Minish Crack/Chest", 0x2002cf2, 0x04)
 		updateSectionFlag(segment, "@Lon Lon Ranch - Bonk the Tree/Chest", 0x2002d11, 0x02)
 		updateSectionFlag(segment, "@Lon Lon Ranch - Bonk the Tree/Heart Piece", 0x2002d13, 0x04)
@@ -2935,7 +3139,7 @@ function updateLocations(segment)
 		--LAKE HYLIA
 		updateSectionFlag(segment, "@Hylia - Lon Lon Ranch - North Heart Piece/Heart Piece", 0x2002ccb, 0x10)
 		updateSectionFlag(segment, "@Hylia - Cape Heart Piece/Heart Piece", 0x2002cbd, 0x01)
-		updateSectionFlagSpecialCheck(segment, "underwater", "@Hylia - Pond Heart Piece/Diving", 0x2002cbd, 0x02)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Hylia - Pond Heart Piece/Diving", 0x2002cbd, 0x02)
 		updateSectionFlag(segment, "@Hylia - Southern/Heart Piece", 0x2002cbd, 0x04)
 		updateSectionFlag(segment, "@Hylia - Librari/Gift", 0x2002cf2, 0x08)
 		updateSectionFlag(segment, "@Hylia - Middle Island Cave/Chest", 0x2002d02, 0x40)
@@ -2981,19 +3185,19 @@ function updateLocations(segment)
 		--CLOUD TOPS
 		updateSectionFlag(segment, "@Clouds - Top Left South Chest/Chest", 0x2002cd7, 0x20)
 		updateDecreaseCount(segment, "@Clouds - Top Left North Chests/Chests", {{0x2002cd7, 0x40}, {0x2002cd7, 0x80}})
-		updateSectionFlagSpecialCheck(segment,"dig", "@Clouds - Top Left North Chests/Digging", 0x2002cd8, 0x04)
+		updateSectionFlagSpecialCheck(segment,"DIG", "@Clouds - Top Left North Chests/Digging", 0x2002cd8, 0x04)
 		updateSectionFlag(segment, "@Clouds - Kill Piranhas (North)/Kill", 0x2002cda, 0x02)
 		updateSectionFlag(segment, "@Clouds - Kill Piranhas (South)/Kill", 0x2002cda, 0x08)
 		updateSectionFlag(segment, "@Clouds - Bottom Left Chest/Chest", 0x2002cd8, 0x01)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Clouds - Southeast South Digging Spot/Digging", 0x2002cd9, 0x01)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Clouds - Southeast North Digging Spot/Digging", 0x2002cd8, 0x20)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Clouds - South Digging Spot/Digging", 0x2002cd8, 0x80)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Southeast South Digging Spot/Digging", 0x2002cd9, 0x01)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Southeast North Digging Spot/Digging", 0x2002cd8, 0x20)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - South Digging Spot/Digging", 0x2002cd8, 0x80)
 		updateSectionFlag(segment, "@Clouds - Center Right/Chest", 0x2002cd8, 0x02)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Clouds - Center Digging Spot/Digging", 0x2002cd8, 0x10)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Center Digging Spot/Digging", 0x2002cd8, 0x10)
 		updateSectionFlag(segment, "@Clouds - Center Left/Chest", 0x2002cd7, 0x10)
 		updateSectionFlag(segment, "@Clouds - Right Chest/Chest", 0x2002cd7, 0x08)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Clouds - Top Right Digging Spot/Digging", 0x2002cd8, 0x08)
-		updateSectionFlagSpecialCheck(segment, "dig", "@Clouds - Bottom Left Digging Spot/Digging", 0x2002cd8, 0x40)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Top Right Digging Spot/Digging", 0x2002cd8, 0x08)
+		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Bottom Left Digging Spot/Digging", 0x2002cd8, 0x40)
 
 		--Wind Tribe
 		updateDecreaseCount(segment, "@Wind Tribe House/1F Chests", {{0x2002cdc, 0x20}, {0x2002cdc, 0x40}})
@@ -3004,292 +3208,292 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Wind Tribe House/2F Gregal's Gift", 0x2002ce8, 0x40)
 
 		--DWS
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Slug Room", 0x2002d43, 0x20)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Upstairs Chest", 0x2002d45, 0x04)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Barrel Room Northwest", 0x2002d41, 0x08)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/West Side Big Chest", 0x2002d41, 0x02)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Two Statue Room", 0x2002d40, 0x80)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Mulldozer Key", 0x2002d42, 0x01)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Two Lamp Chest", 0x2002d40, 0x10)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Basement Switch Big Chest", 0x2002d44, 0x04)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Basement Switch Chest", 0x2002d44, 0x02)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Blue Warp Heart Piece", 0x2002d45, 0x80)
-		updateDecreaseCountDungeons(segment, "dws", "@DeepWoods/Puffstool Room", {{0x2002d40, 0x04}, {0x2002d40, 0x08}})
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Madderpillar Chest", 0x2002d3f, 0x08)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Madderpillar Heart Piece", 0x2002d46, 0x04)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Basement Big Chest", 0x2002d43, 0x80)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Green Chu", 0x2002d44, 0x80)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Slug Room", 0x2002d43, 0x20)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Upstairs Chest", 0x2002d45, 0x04)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Barrel Room Northwest", 0x2002d41, 0x08)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/West Side Big Chest", 0x2002d41, 0x02)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Two Statue Room", 0x2002d40, 0x80)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Mulldozer Key", 0x2002d42, 0x01)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Two Lamp Chest", 0x2002d40, 0x10)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Basement Switch Big Chest", 0x2002d44, 0x04)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Basement Switch Chest", 0x2002d44, 0x02)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Blue Warp Heart Piece", 0x2002d45, 0x80)
+		updateDecreaseCountDungeons(segment, "DWS_ENTER", "@DeepWoods/Puffstool Room", {{0x2002d40, 0x04}, {0x2002d40, 0x08}})
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Madderpillar Chest", 0x2002d3f, 0x08)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Madderpillar Heart Piece", 0x2002d46, 0x04)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Basement Big Chest", 0x2002d43, 0x80)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@DeepWoods/Green Chu", 0x2002d44, 0x80)
 
 		-- MAP DWS
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Slug Room/Chest", 0x2002d43, 0x20)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Upstairs Room/Chest", 0x2002d45, 0x04)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Barrel Room Northwest/Chest", 0x2002d41, 0x08)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - West Side/Big Chest", 0x2002d41, 0x02)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Two Statue Room/Chest", 0x2002d40, 0x80)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Mulldozer Key/Kill", 0x2002d42, 0x01)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Two Lamp/Chest", 0x2002d40, 0x10)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Basement Switch Room Big Chest/Big Chest", 0x2002d44, 0x04)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Basement Switch Room Chest/Chest", 0x2002d44, 0x02)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Blue Warp/Heart Piece", 0x2002d45, 0x80)
-		updateDecreaseCountDungeons(segment, "dws", "@Deepwoods - Puffstool Room/Chest", {{0x2002d40, 0x04}, {0x2002d40, 0x08}})
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Madderpillar Fight/Kill", 0x2002d3f, 0x08)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Madderpillar Heart Piece/Heart Piece", 0x2002d46, 0x04)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Basement Big Chest/Big Chest", 0x2002d43, 0x80)
-		updateSectionFlagDungeons(segment, "dws", "@Deepwoods - Green Chu/Heart", 0x2002d44, 0x80)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Slug Room/Chest", 0x2002d43, 0x20)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Upstairs Room/Chest", 0x2002d45, 0x04)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Barrel Room Northwest/Chest", 0x2002d41, 0x08)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - West Side/Big Chest", 0x2002d41, 0x02)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Two Statue Room/Chest", 0x2002d40, 0x80)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Mulldozer Key/Kill", 0x2002d42, 0x01)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Two Lamp/Chest", 0x2002d40, 0x10)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Basement Switch Room Big Chest/Big Chest", 0x2002d44, 0x04)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Basement Switch Room Chest/Chest", 0x2002d44, 0x02)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Blue Warp/Heart Piece", 0x2002d45, 0x80)
+		updateDecreaseCountDungeons(segment, "DWS_ENTER", "@Deepwoods - Puffstool Room/Chest", {{0x2002d40, 0x04}, {0x2002d40, 0x08}})
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Madderpillar Fight/Kill", 0x2002d3f, 0x08)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Madderpillar Heart Piece/Heart Piece", 0x2002d46, 0x04)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Basement Big Chest/Big Chest", 0x2002d43, 0x80)
+		updateSectionFlagDungeons(segment, "DWS_ENTER", "@Deepwoods - Green Chu/Heart", 0x2002d44, 0x80)
 
 		-- COF
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Spiny Beetle Fight", 0x2002d5a, 0x04)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Spiny Beetle Fight", 0x2002d5a, 0x04)
 		updateDecreaseCountDungeons(
-			segment, "cof",
+			segment, "COF_ENTER",
 			"@Cave Of Flame/Rupees",
 			{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
 		)
-		updateDecreaseCountDungeons(segment, "cof", "@Cave Of Flame/Big Chest Room", {{0x2002d59, 0x02}, {0x2002d59, 0x04}})
-		updateDecreaseCountDungeons(segment, "cof", "@Cave Of Flame/First Rollobite Room", {{0x2002d58, 0x40}, {0x2002d58, 0x80}})
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Bombable Wall Heart Piece", 0x2002d5b, 0x10)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Spiny Chu Fight", 0x2002d57, 0x02)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Spiny Chu Pillar Chest", 0x2002d57, 0x01)
-		updateDecreaseCountDungeons(segment, "cof", "@Cave Of Flame/Pre Lava Basement Room", {{0x2002d59, 0x10}, {0x2002d59, 0x20}})
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Blade Chest", 0x2002d5a, 0x01)
-		updateDecreaseCountDungeons(segment, "cof", "@Cave Of Flame/Lava Basement (Left,Right)", {{0x2002d5a, 0x80}, {0x2002d5b, 0x01}})
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Lava Basement Big Chest", 0x2002d5b, 0x02)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Gleerok", 0x2002d5b, 0x04)
+		updateDecreaseCountDungeons(segment, "COF_ENTER", "@Cave Of Flame/Big Chest Room", {{0x2002d59, 0x02}, {0x2002d59, 0x04}})
+		updateDecreaseCountDungeons(segment, "COF_ENTER", "@Cave Of Flame/First Rollobite Room", {{0x2002d58, 0x40}, {0x2002d58, 0x80}})
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Bombable Wall Heart Piece", 0x2002d5b, 0x10)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Spiny Chu Fight", 0x2002d57, 0x02)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Spiny Chu Pillar Chest", 0x2002d57, 0x01)
+		updateDecreaseCountDungeons(segment, "COF_ENTER", "@Cave Of Flame/Pre Lava Basement Room", {{0x2002d59, 0x10}, {0x2002d59, 0x20}})
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Blade Chest", 0x2002d5a, 0x01)
+		updateDecreaseCountDungeons(segment, "COF_ENTER", "@Cave Of Flame/Lava Basement (Left,Right)", {{0x2002d5a, 0x80}, {0x2002d5b, 0x01}})
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Lava Basement Big Chest", 0x2002d5b, 0x02)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Gleerok", 0x2002d5b, 0x04)
 
 		-- MAP COF
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Spiny Beetle Fight/Kill", 0x2002d5a, 0x04)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Spiny Beetle Fight/Kill", 0x2002d5a, 0x04)
 		updateDecreaseCountDungeons(
-			segment, "cof",
+			segment, "COF_ENTER",
 			"@Cave Of Flame - Rupees/Rupees",
 			{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
 		)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Big Chest Room Big Chest/Big Chest", 0x2002d59, 0x04)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Big Chest Room Chest/Chest", 0x2002d59, 0x02)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - First Rollobite Room Pillar/Chest", 0x2002d58, 0x40)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - First Rollobite Room/Chest", 0x2002d58, 0x80)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Bombable Wall/Heart Piece", 0x2002d5b, 0x10)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Spiny Chu Fight/Kill", 0x2002d57, 0x02)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Spiny Chu Pillar Chest/Chest", 0x2002d57, 0x01)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Pre Lava Basement Room Block Chest/Chest", 0x2002d59, 0x10)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Pre Lava Basement Room Ledge/Chest", 0x2002d59, 0x20)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Blade Chest/Chest", 0x2002d5a, 0x01)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Lava Basement Left/Chest", 0x2002d5a, 0x80)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Lava Basement Right/Chest", 0x2002d5b, 0x01)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Lava Basement Big Chest/Big Chest", 0x2002d5b, 0x02)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame - Gleerok/Heart", 0x2002d5b, 0x04)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Big Chest Room Big Chest/Big Chest", 0x2002d59, 0x04)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Big Chest Room Chest/Chest", 0x2002d59, 0x02)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - First Rollobite Room Pillar/Chest", 0x2002d58, 0x40)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - First Rollobite Room/Chest", 0x2002d58, 0x80)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Bombable Wall/Heart Piece", 0x2002d5b, 0x10)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Spiny Chu Fight/Kill", 0x2002d57, 0x02)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Spiny Chu Pillar Chest/Chest", 0x2002d57, 0x01)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Pre Lava Basement Room Block Chest/Chest", 0x2002d59, 0x10)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Pre Lava Basement Room Ledge/Chest", 0x2002d59, 0x20)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Blade Chest/Chest", 0x2002d5a, 0x01)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Lava Basement Left/Chest", 0x2002d5a, 0x80)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Lava Basement Right/Chest", 0x2002d5b, 0x01)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Lava Basement Big Chest/Big Chest", 0x2002d5b, 0x02)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame - Gleerok/Heart", 0x2002d5b, 0x04)
 
 		--FOW
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Entrance Far Left", 0x2002d05, 0x80)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Wizzrobe Fight", 0x2002d74, 0x08)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Entrance Large Rupee", 0x2002d05, 0x40)
-		updateDecreaseCountDungeons(segment, "fow", "@Fortress/Left Side Mitts Chests", {{0x2002d06, 0x01}, {0x2002d07, 0x20}})
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Entrance Far Left", 0x2002d05, 0x80)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Wizzrobe Fight", 0x2002d74, 0x08)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Entrance Large Rupee", 0x2002d05, 0x40)
+		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress/Left Side Mitts Chests", {{0x2002d06, 0x01}, {0x2002d07, 0x20}})
 		updateDecreaseCountDungeons(
-			segment, "fow",
+			segment, "FOW_ENTER",
 			"@Fortress/Left Side Rupees",
 			{{0x2002d06, 0x20}, {0x2002d06, 0x40}, {0x2002d06, 0x80}, {0x2002d07, 0x01}, {0x2002d07, 0x04}, {0x2002d07, 0x08}}
 		)
-		updateDecreaseCountDungeons(segment, "fow", "@Fortress/Left Side Rupees Grabbable", {{0x2002d07, 0x02}})
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Eyegores", 0x2002d6f, 0x10)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Left Side Key Drop", 0x2002d73, 0x80)
-		updateDecreaseCountDungeons(segment, "fow", "@Fortress/Right Side Two Lever Room", {{0x2002d73, 0x20}, {0x2002d73, 0x40}})
-		updateDecreaseCountDungeons(segment, "fow", "@Fortress/Right Side Mitts Chests", {{0x2002d06, 0x04}, {0x2002d07, 0x40}})
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Right Side Key Drop", 0x2002d74, 0x02)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Right Side Heart Piece", 0x2002d74, 0x80)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Pedestal Chest", 0x2002d73, 0x02)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Center Path Switch", 0x2002d06, 0x02)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Bombable Wall Big Chest", 0x2002d08, 0x01)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Bombable Wall Small Chest", 0x2002d08, 0x02)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Clone Puzzle Key Drop", 0x2002d71, 0x40)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Minish Dirt Room Key Drop", 0x2002d08, 0x10)
-		updateSectionFlagSpecialCheck(segment, "pot", "@Fortress/Right Side Moldorm Top Pot", 0x2002d06, 0x08)
-		updateSectionFlagSpecialCheck(segment, "pot", "@Fortress/Right Side Moldorm Bottom Pot", 0x2002d06, 0x10)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Skull Room Chest", 0x2002d73, 0x04)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Mazaal", 0x2002d72, 0x04)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/FOW Reward", 0x2002d74, 0x20)
+		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress/Left Side Rupees Grabbable", {{0x2002d07, 0x02}})
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Eyegores", 0x2002d6f, 0x10)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Left Side Key Drop", 0x2002d73, 0x80)
+		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress/Right Side Two Lever Room", {{0x2002d73, 0x20}, {0x2002d73, 0x40}})
+		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress/Right Side Mitts Chests", {{0x2002d06, 0x04}, {0x2002d07, 0x40}})
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Right Side Key Drop", 0x2002d74, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Right Side Heart Piece", 0x2002d74, 0x80)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Pedestal Chest", 0x2002d73, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Center Path Switch", 0x2002d06, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Bombable Wall Big Chest", 0x2002d08, 0x01)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Bombable Wall Small Chest", 0x2002d08, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Clone Puzzle Key Drop", 0x2002d71, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Minish Dirt Room Key Drop", 0x2002d08, 0x10)
+		updateSectionFlagSpecialCheck(segment, "POT", "@Fortress/Right Side Moldorm Top Pot", 0x2002d06, 0x08)
+		updateSectionFlagSpecialCheck(segment, "POT", "@Fortress/Right Side Moldorm Bottom Pot", 0x2002d06, 0x10)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Skull Room Chest", 0x2002d73, 0x04)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Mazaal", 0x2002d72, 0x04)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/FOW Reward", 0x2002d74, 0x20)
 
 		-- MAP FOW
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Far Left Entrance Room/Chest", 0x2002d05, 0x80)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Entrance Rupee/Rupee", 0x2002d05, 0x40)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Wizzrobe Fight/Kill", 0x2002d74, 0x08)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Left Side 2nd Floor Mitts/Chest", 0x2002d06, 0x01)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Far Left Entrance Room/Chest", 0x2002d05, 0x80)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Entrance Rupee/Rupee", 0x2002d05, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Wizzrobe Fight/Kill", 0x2002d74, 0x08)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left Side 2nd Floor Mitts/Chest", 0x2002d06, 0x01)
 		updateDecreaseCountDungeons(
-			segment, "fow",
+			segment, "FOW_ENTER",
 			"@Fortress - Left Side Left Rupees/Rupees",
 			{{0x2002d06, 0x20}, {0x2002d06, 0x40}, {0x2002d06, 0x80}, {0x2002d07, 0x01}}
 		)
-		updateDecreaseCountDungeons(segment, "fow", "@Fortress - Left Side Right Rupees/Rupees", {{0x2002d07, 0x04}, {0x2002d07, 0x08}})
-		updateDecreaseCountDungeons(segment, "fow", "@Fortress - Left Side Right Rupees/Rupees Grabbable", {{0x2002d07, 0x02}})
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Left Side 3rd Floor Mitts/Chest", 0x2002d07, 0x20)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Eyegores/Kill", 0x2002d6f, 0x10)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Left Side Key/Drop", 0x2002d73, 0x80)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Two Lever Room Left/Chest", 0x2002d73, 0x20)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Two Lever Room Right/Chest", 0x2002d73, 0x40)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Right Side 2nd Floor Mitts/Chest", 0x2002d06, 0x04)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Right Side 3rd Floor Mitts/Chest", 0x2002d07, 0x40)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Right Side Key/Drop", 0x2002d74, 0x02)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Right Side Heart Piece/Heart Piece", 0x2002d74, 0x80)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Pedestal/Big Chest", 0x2002d73, 0x02)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Center Path Switch/Drop", 0x2002d06, 0x02)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Bombable Wall Big Chest/Big Chest", 0x2002d08, 0x01)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Bombable Wall Chest/Chest", 0x2002d08, 0x02)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Clone Puzzle Key/Drop", 0x2002d71, 0x40)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Minish Dirt Room Key/Drop", 0x2002d08, 0x10)
-		updateSectionFlagSpecialCheck(segment, "pot", "@Fortress - Right Side Top Moldorm Pot/Drop", 0x2002d06, 0x08)
-		updateSectionFlagSpecialCheck(segment, "pot", "@Fortress - Right Side Left Moldorm Pot/Drop", 0x2002d06, 0x10)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Skull Room/Big Chest", 0x2002d73, 0x04)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress - Mazaal/Heart", 0x2002d72, 0x04)
+		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress - Left Side Right Rupees/Rupees", {{0x2002d07, 0x04}, {0x2002d07, 0x08}})
+		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress - Left Side Right Rupees/Rupees Grabbable", {{0x2002d07, 0x02}})
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left Side 3rd Floor Mitts/Chest", 0x2002d07, 0x20)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Eyegores/Kill", 0x2002d6f, 0x10)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left Side Key/Drop", 0x2002d73, 0x80)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Two Lever Room Left/Chest", 0x2002d73, 0x20)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Two Lever Room Right/Chest", 0x2002d73, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right Side 2nd Floor Mitts/Chest", 0x2002d06, 0x04)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right Side 3rd Floor Mitts/Chest", 0x2002d07, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right Side Key/Drop", 0x2002d74, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right Side Heart Piece/Heart Piece", 0x2002d74, 0x80)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Pedestal/Big Chest", 0x2002d73, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Center Path Switch/Drop", 0x2002d06, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Bombable Wall Big Chest/Big Chest", 0x2002d08, 0x01)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Bombable Wall Chest/Chest", 0x2002d08, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Clone Puzzle Key/Drop", 0x2002d71, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Minish Dirt Room Key/Drop", 0x2002d08, 0x10)
+		updateSectionFlagSpecialCheck(segment, "POT", "@Fortress - Right Side Top Moldorm Pot/Drop", 0x2002d06, 0x08)
+		updateSectionFlagSpecialCheck(segment, "POT", "@Fortress - Right Side Left Moldorm Pot/Drop", 0x2002d06, 0x10)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Skull Room/Big Chest", 0x2002d73, 0x04)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Mazaal/Heart", 0x2002d72, 0x04)
 		--TOD
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/First Ice Block", 0x2002d8e, 0x04)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Locked Ice Block", 0x2002d8d, 0x80)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Post Madderpillar Chest", 0x2002d92, 0x80)
-		updateSectionFlagSpecialCheck(segment, "underwater", "@Droplet/Underwater Pot", 0x2002d93, 0x04)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Overhang Chest", 0x2002d8b, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/First Ice Block", 0x2002d8e, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Locked Ice Block", 0x2002d8d, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Post Madderpillar Chest", 0x2002d92, 0x80)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Droplet/Underwater Pot", 0x2002d93, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Overhang Chest", 0x2002d8b, 0x80)
 		updateDecreaseCountDungeons(
-			segment, "tod",
+			segment, "TOD_ENTER",
 			"@Droplet/Left Path Rupees",
 			{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}
 		)
-		updateDecreaseCountDungeons(segment, "tod", "@Droplet/Right Path Rupees", {{0x2002d95, 0x10}, {0x2002d95, 0x20}, {0x2002d95, 0x40}})
-		updateDecreaseCountDungeons(segment, "tod", "@Droplet/Right Path Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
+		updateDecreaseCountDungeons(segment, "TOD_ENTER", "@Droplet/Right Path Rupees", {{0x2002d95, 0x10}, {0x2002d95, 0x20}, {0x2002d95, 0x40}})
+		updateDecreaseCountDungeons(segment, "TOD_ENTER", "@Droplet/Right Path Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
 		updateDecreaseCountDungeons(
-			segment, "tod",
+			segment, "TOD_ENTER",
 			"@Droplet/Upper Water Rupees",
 			{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}
 		)
 		updateDecreaseCountDungeons(
-			segment, "tod",
+			segment, "TOD_ENTER",
 			"@Droplet/Lower Water Rupees",
 			{{0x2002d95, 0x80}, {0x2002d96, 0x01}, {0x2002d96, 0x02}, {0x2002d96, 0x04}, {0x2002d96, 0x08}, {0x2002d96, 0x10}}
 		)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Ice Puzzle Free Chest", 0x2002d8f, 0x08)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Ice Puzzle Frozen Chest", 0x2002d8f, 0x04)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Post Ice Puzzle Frozen Chest", 0x2002d93, 0x40)
-		updateDecreaseCountDungeons(segment, "tod", "@Droplet/Right Path Ice Walkway Chests", {{0x2002d8b, 0x01}, {0x2002d8b, 0x04}})
-		updateSectionFlagSpecialCheck(segment, "pot", "@Droplet/Right Path Ice Walkway Pot", 0x2002d8b, 0x02)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Basement Frozen Chest", 0x2002d8d, 0x10)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Blue Chu", 0x2002d8c, 0x80)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Post Blue Chu Frozen Chest", 0x2002d92, 0x40)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Dark Maze Bottom/Chest", 0x2002d8f, 0x80)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Dark Maze Top Right", 0x2002d8f, 0x20)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Dark Maze Top Left", 0x2002d8f, 0x40)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Dark Maze Bomb Wall", 0x2002d91, 0x80)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Octo", 0x2002d8c, 0x01)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Ice Puzzle Free Chest", 0x2002d8f, 0x08)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Ice Puzzle Frozen Chest", 0x2002d8f, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Post Ice Puzzle Frozen Chest", 0x2002d93, 0x40)
+		updateDecreaseCountDungeons(segment, "TOD_ENTER", "@Droplet/Right Path Ice Walkway Chests", {{0x2002d8b, 0x01}, {0x2002d8b, 0x04}})
+		updateSectionFlagSpecialCheck(segment, "POT", "@Droplet/Right Path Ice Walkway Pot", 0x2002d8b, 0x02)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Basement Frozen Chest", 0x2002d8d, 0x10)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Blue Chu", 0x2002d8c, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Post Blue Chu Frozen Chest", 0x2002d92, 0x40)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Dark Maze Bottom/Chest", 0x2002d8f, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Dark Maze Top Right", 0x2002d8f, 0x20)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Dark Maze Top Left", 0x2002d8f, 0x40)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Dark Maze Bomb Wall", 0x2002d91, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Octo", 0x2002d8c, 0x01)
 
 		-- MAP TOD
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - First Ice Block/Ice Block", 0x2002d8e, 0x04)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Key Locked Ice Block/Ice Block", 0x2002d8d, 0x80)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Post Madderpillar/Chest", 0x2002d92, 0x80)
-		updateSectionFlagSpecialCheck(segment, "underwater", "@Droplet - Underwater Pot/Drop", 0x2002d93, 0x04)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Overhang/Chest", 0x2002d8b, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - First Ice Block/Ice Block", 0x2002d8e, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Key Locked Ice Block/Ice Block", 0x2002d8d, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Madderpillar/Chest", 0x2002d92, 0x80)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Droplet - Underwater Pot/Drop", 0x2002d93, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Overhang/Chest", 0x2002d8b, 0x80)
 		updateDecreaseCountDungeons(
-			segment, "tod",
+			segment, "TOD_ENTER",
 			"@Droplet - Left Path/Rupees",
 			{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}
 		)
 		updateDecreaseCountDungeons(
-			segment, "tod",
+			segment, "TOD_ENTER",
 			"@Droplet - Right Path/Rupees",
 			{{0x2002d95, 0x10}, {0x2002d95, 0x20}, {0x2002d95, 0x40}}
 		)
-		updateDecreaseCountDungeons(segment, "tod", "@Droplet - Right Path/Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
+		updateDecreaseCountDungeons(segment, "TOD_ENTER", "@Droplet - Right Path/Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
 		updateDecreaseCountDungeons(
-			segment, "tod",
+			segment, "TOD_ENTER",
 			"@Droplet - Upper Underwater/Rupees",
 			{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}
 		)
 		updateDecreaseCountDungeons(
-			segment, "tod",
+			segment, "TOD_ENTER",
 			"@Droplet - Lower Underwater/Rupees",
 			{{0x2002d95, 0x80}, {0x2002d96, 0x01}, {0x2002d96, 0x02}, {0x2002d96, 0x04}, {0x2002d96, 0x08}, {0x2002d96, 0x10}}
 		)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Ice Puzzle/Chest", 0x2002d8f, 0x08)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Ice Puzzle Frozen/Chest", 0x2002d8f, 0x04)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Post Ice Puzzle/Chest", 0x2002d93, 0x40)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Right Path Ice Walkway First/Chest", 0x2002d8b, 0x01)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Right Path Ice Walkway Second/Chest", 0x2002d8b, 0x04)
-		updateSectionFlagSpecialCheck(segment, "pot", "@Droplet - Right Path Ice Walkway Pot/Drop", 0x2002d8b, 0x02)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Basement Frozen/Chest", 0x2002d8d, 0x10)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Blue Chu/Kill", 0x2002d8c, 0x80)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Post Blue Chu Frozen/Chest", 0x2002d92, 0x40)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Dark Maze Bottom/Chest", 0x2002d8f, 0x80)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Dark Maze Bombable Wall/Chest", 0x2002d91, 0x80)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Dark Maze Top Right/Chest", 0x2002d8f, 0x20)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Dark Maze Top Left/Chest", 0x2002d8f, 0x40)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet - Octo/Heart", 0x2002d8c, 0x01)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Ice Puzzle/Chest", 0x2002d8f, 0x08)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Ice Puzzle Frozen/Chest", 0x2002d8f, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Ice Puzzle/Chest", 0x2002d93, 0x40)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path Ice Walkway First/Chest", 0x2002d8b, 0x01)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path Ice Walkway Second/Chest", 0x2002d8b, 0x04)
+		updateSectionFlagSpecialCheck(segment, "POT", "@Droplet - Right Path Ice Walkway Pot/Drop", 0x2002d8b, 0x02)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Basement Frozen/Chest", 0x2002d8d, 0x10)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Blue Chu/Kill", 0x2002d8c, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Blue Chu Frozen/Chest", 0x2002d92, 0x40)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Dark Maze Bottom/Chest", 0x2002d8f, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Dark Maze Bombable Wall/Chest", 0x2002d91, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Dark Maze Top Right/Chest", 0x2002d8f, 0x20)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Dark Maze Top Left/Chest", 0x2002d8f, 0x40)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Octo/Heart", 0x2002d8c, 0x01)
 		--POW
 
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Firebar Grate", 0x2002daa, 0x40)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Wizzrobe Platform Fight", 0x2002daa, 0x10)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Pot Puzzle Key", 0x2002da7, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Firebar Grate", 0x2002daa, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Wizzrobe Platform Fight", 0x2002daa, 0x10)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Pot Puzzle Key", 0x2002da7, 0x02)
 		updateDecreaseCountDungeons(
-			segment, "pow",
+			segment, "POW_ENTER",
 			"@Palace/Rupees",
 			{{0x2002da7, 0x04}, {0x2002da7, 0x08}, {0x2002da7, 0x10}, {0x2002da7, 0x20}, {0x2002da7, 0x40}}
 		)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Moblin Archer Chest", 0x2002da4, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Flail Soldiers", 0x2002da4, 0x02)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Spark Chest", 0x2002da3, 0x40)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Pre Big Key Door Big Chest", 0x2002da2, 0x10)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Roller Chest", 0x2002da9, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Dark Room Big", 0x2002dab, 0x02)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Dark Room Small", 0x2002dab, 0x04)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Fire Wizzrobe Fight", 0x2002da6, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Twin Wizzrobe Fight", 0x2002da9, 0x40)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Heart Piece", 0x2002dac, 0x01)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Switch Chest", 0x2002da5, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Bombarossa Maze", 0x2002da2, 0x20)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Block Maze Room", 0x2002da5, 0x02)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Block Maze Detour", 0x2002da2, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Gyorg", 0x2002dab, 0x20)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Moblin Archer Chest", 0x2002da4, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Flail Soldiers", 0x2002da4, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Spark Chest", 0x2002da3, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Pre Big Key Door Big Chest", 0x2002da2, 0x10)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Roller Chest", 0x2002da9, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Dark Room Big", 0x2002dab, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Dark Room Small", 0x2002dab, 0x04)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Fire Wizzrobe Fight", 0x2002da6, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Twin Wizzrobe Fight", 0x2002da9, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Heart Piece", 0x2002dac, 0x01)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Switch Chest", 0x2002da5, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Bombarossa Maze", 0x2002da2, 0x20)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Block Maze Room", 0x2002da5, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Block Maze Detour", 0x2002da2, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Gyorg", 0x2002dab, 0x20)
 
 		-- MAP POW
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Firebar Grate/Chest", 0x2002daa, 0x40)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Wizzrobe Platform Fight/Kill", 0x2002daa, 0x10)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Pot Puzzle Key/Drop", 0x2002da7, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Firebar Grate/Chest", 0x2002daa, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Wizzrobe Platform Fight/Kill", 0x2002daa, 0x10)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Pot Puzzle Key/Drop", 0x2002da7, 0x02)
 		updateDecreaseCountDungeons(
-			segment, "pow",
+			segment, "POW_ENTER",
 			"@Palace - Rupees/Rupees",
 			{{0x2002da7, 0x04}, {0x2002da7, 0x08}, {0x2002da7, 0x10}, {0x2002da7, 0x20}, {0x2002da7, 0x40}}
 		)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Moblin Archer Chest/Chest", 0x2002da4, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Flail Soldiers/Drop", 0x2002da4, 0x02)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Spark/Chest", 0x2002da3, 0x40)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Pre Big Key Door/Big Chest", 0x2002da2, 0x10)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Roller/Chest", 0x2002da9, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Dark Room Big Chest/Big Chest", 0x2002dab, 0x02)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Dark Room Chest/Chest", 0x2002dab, 0x04)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Firerobe Fight/Kill", 0x2002da6, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Twin Wizzrobe Fight/Kill", 0x2002da9, 0x40)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Heart Piece/Heart Piece", 0x2002dac, 0x01)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Switch/Chest", 0x2002da5, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Bombarossa Maze/Chest", 0x2002da2, 0x20)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Block Maze Room/Chest", 0x2002da5, 0x02)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Block Maze Room Detour/Chest", 0x2002da2, 0x80)
-		updateSectionFlagDungeons(segment, "pow", "@Palace - Gyorg/Heart", 0x2002dab, 0x20)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Moblin Archer Chest/Chest", 0x2002da4, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Flail Soldiers/Drop", 0x2002da4, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Spark/Chest", 0x2002da3, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Pre Big Key Door/Big Chest", 0x2002da2, 0x10)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Roller/Chest", 0x2002da9, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Dark Room Big Chest/Big Chest", 0x2002dab, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Dark Room Chest/Chest", 0x2002dab, 0x04)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Firerobe Fight/Kill", 0x2002da6, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Twin Wizzrobe Fight/Kill", 0x2002da9, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Heart Piece/Heart Piece", 0x2002dac, 0x01)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Switch/Chest", 0x2002da5, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Bombarossa Maze/Chest", 0x2002da2, 0x20)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Block Maze Room/Chest", 0x2002da5, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Block Maze Room Detour/Chest", 0x2002da2, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Gyorg/Heart", 0x2002dab, 0x20)
 		--DHC
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Win", 0x2002ca6, 0x20)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Blade Chest", 0x2002dc0, 0x20)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Platform Chest", 0x2002dc1, 0x08)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Stone King", 0x2002dc2, 0x02)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Post Throne Big Chest", 0x2002dbf, 0x80)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Northeast Tower", 0x2002dbb, 0x80)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Southeast Tower", 0x2002dbc, 0x02)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Southwest Tower", 0x2002dbc, 0x01)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Northwest Tower", 0x2002dbb, 0x40)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Big Block Chest", 0x2002dbc, 0x08)
-		updateSectionFlagDungeons(segment, "dhc", "@DHC/Vaati", 0x2002ca6, 0x20)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Win", 0x2002ca6, 0x20)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Blade Chest", 0x2002dc0, 0x20)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Platform Chest", 0x2002dc1, 0x08)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Stone King", 0x2002dc2, 0x02)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Post Throne Big Chest", 0x2002dbf, 0x80)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Northeast Tower", 0x2002dbb, 0x80)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Southeast Tower", 0x2002dbc, 0x02)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Southwest Tower", 0x2002dbc, 0x01)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Northwest Tower", 0x2002dbb, 0x40)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Big Block Chest", 0x2002dbc, 0x08)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Vaati", 0x2002ca6, 0x20)
 
 		-- MAP DHC
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Pull the Pedestal/Win", 0x2002ca6, 0x20)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Blade/Chest", 0x2002dc0, 0x20)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Platform/Big Chest", 0x2002dc1, 0x08)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Stone King/Gift", 0x2002dc2, 0x02)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Post Throne/Big Chest", 0x2002dbf, 0x80)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Northeast Tower/Chest", 0x2002dbb, 0x80)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Southeast Tower/Chest", 0x2002dbc, 0x02)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Southwest Tower/Chest", 0x2002dbc, 0x01)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Northwest Tower/Chest", 0x2002dbb, 0x40)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Big Block/Big Chest", 0x2002dbc, 0x08)
-		updateSectionFlagDungeons(segment, "dhc", "@Dark Hyrule Castle - Vaati/Kill", 0x2002ca6, 0x20)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Pull the Pedestal/Win", 0x2002ca6, 0x20)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Blade/Chest", 0x2002dc0, 0x20)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Platform/Big Chest", 0x2002dc1, 0x08)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Stone King/Gift", 0x2002dc2, 0x02)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Post Throne/Big Chest", 0x2002dbf, 0x80)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Northeast Tower/Chest", 0x2002dbb, 0x80)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Southeast Tower/Chest", 0x2002dbc, 0x02)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Southwest Tower/Chest", 0x2002dbc, 0x01)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Northwest Tower/Chest", 0x2002dbb, 0x40)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Big Block/Big Chest", 0x2002dbc, 0x08)
+		updateSectionFlagDungeons(segment, "DHC_ENTER", "@Dark Hyrule Castle - Vaati/Kill", 0x2002ca6, 0x20)
 		SEED_START=1
 	end
 end
@@ -3302,45 +3506,37 @@ function updateKeys(segment)
 	InvalidateReadCaches()
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
-		if DWS_ENTER==1 then
-			updateBigKeys(segment, "dws_bigkey")
-			updateToggleFlag(segment, "dws_map", 0x2002ead, 0x01)
-			updateToggleFlag(segment, "dws_compass", 0x2002ead, 0x02)
-			updateSmallKeys(segment, "dws_smallkey", 0x2002e9d)
-		end
-		if COF_ENTER==1 then
-			updateBigKeys(segment, "cof_bigkey")
-			updateToggleFlag(segment, "cof_map", 0x2002eae, 0x01)
-			updateToggleFlag(segment, "cof_compass", 0x2002eae, 0x02)
-			updateSmallKeys(segment, "cof_smallkey", 0x2002e9e)
-		end
-		if FOW_ENTER==1 then
-			updateBigKeys(segment, "fow_bigkey")
-			updateToggleFlag(segment, "fow_map", 0x2002eaf, 0x01)
-			updateToggleFlag(segment, "fow_compass", 0x2002eaf, 0x02)
-			updateSmallKeys(segment, "fow_smallkey", 0x2002e9f)
-		end
-		if TOD_ENTER==1 then
-			updateBigKeys(segment, "tod_bigkey")
-			updateToggleFlag(segment, "tod_compass", 0x2002eb0, 0x02)
-			updateToggleFlag(segment, "tod_map", 0x2002eb0, 0x01)
-			updateSmallKeys(segment, "tod_smallkey", 0x2002ea0)
-		end
-		if POW_ENTER==1 then
-			updateBigKeys(segment, "pow_bigkey")
-			updateToggleFlag(segment, "pow_map", 0x2002eb1, 0x01)
-			updateToggleFlag(segment, "pow_compass", 0x2002eb1, 0x02)
-			updateSmallKeys(segment, "pow_smallkey", 0x2002ea1)
-		end
-		if DHC_ENTER==1 then
-			updateBigKeys(segment, "dhc_bigkey")
-			updateToggleFlag(segment, "dhc_map", 0x2002eb2, 0x01)
-			updateToggleFlag(segment, "dhc_compass", 0x2002eb2, 0x02)
-			updateSmallKeys(segment, "dhc_smallkey", 0x2002ea2)
-		end
-		if RC_ENTER==1 then
-			updateSmallKeys(segment, "rc_smallkey", 0x2002ea3)
-		end
+		updateBigKeys(segment, "dws_bigkey")
+		updateToggleFlagSpec(segment, "DWS_ENTER", "dws_map", 0x2002ead, 0x01)
+		updateToggleFlagSpec(segment, "DWS_ENTER", "dws_compass", 0x2002ead, 0x02)
+		updateWarps(segment, "DWS_ENTER")
+		updateSmallKeys(segment, "dws_smallkey", 0x2002e9d)
+		updateBigKeys(segment, "cof_bigkey")
+		updateToggleFlagSpec(segment, "COF_ENTER", "cof_map", 0x2002eae, 0x01)
+		updateToggleFlagSpec(segment, "COF_ENTER", "cof_compass", 0x2002eae, 0x02)
+		updateWarps(segment, "COF_ENTER")
+		updateSmallKeys(segment, "cof_smallkey", 0x2002e9e)
+		updateBigKeys(segment, "fow_bigkey")
+		updateToggleFlagSpec(segment, "FOW_ENTER", "fow_map", 0x2002eaf, 0x01)
+		updateToggleFlagSpec(segment, "FOW_ENTER", "fow_compass", 0x2002eaf, 0x02)
+		updateWarps(segment, "FOW_WARPS")
+		updateSmallKeys(segment, "fow_smallkey", 0x2002e9f)
+		updateBigKeys(segment, "tod_bigkey")
+		updateToggleFlagSpec(segment, "TOD_ENTER", "tod_map", 0x2002eb0, 0x01)
+		updateToggleFlagSpec(segment, "TOD_ENTER", "tod_compass", 0x2002eb0, 0x02)
+		updateWarps(segment, "TOD_ENTER")
+		updateSmallKeys(segment, "tod_smallkey", 0x2002ea0)
+		updateBigKeys(segment, "pow_bigkey")
+		updateToggleFlagSpec(segment, "POW_ENTER", "pow_map", 0x2002eb1, 0x01)
+		updateToggleFlagSpec(segment, "POW_ENTER", "pow_compass", 0x2002eb1, 0x02)
+		updateWarps(segment, "POW_ENTER")
+		updateSmallKeys(segment, "pow_smallkey", 0x2002ea1)
+		updateBigKeys(segment, "dhc_bigkey")
+		updateToggleFlagSpec(segment, "DHC_ENTER", "dhc_map", 0x2002eb2, 0x01)
+		updateToggleFlagSpec(segment, "DHC_ENTER", "dhc_compass", 0x2002eb2, 0x02)
+		updateWarps(segment, "DHC_WARPS")
+		updateSmallKeys(segment, "dhc_smallkey", 0x2002ea2)
+		updateSmallKeys(segment, "rc_smallkey", 0x2002ea3)
 	end
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		-- Town
@@ -3390,6 +3586,16 @@ function updateKeys(segment)
 		updateSectionFlag(segment, "@Dark Hyrule Castle - Pedestal Items/Four Elements", 0x2002ea8, 0x02)
 	end
 end
+function crest(segment)
+	updateToggleFlagSettings(segment, "OCARINA", "crenelwindcrest_no", 0x2002a83, 0x01)
+	updateToggleFlagSettings(segment, "OCARINA", "fallswindcrest_no", 0x2002a83, 0x02)
+	updateToggleFlagSettings(segment, "OCARINA", "cloudwindcrest_no", 0x2002a83, 0x04)
+--	updateToggleFlagSettings(segment, "OCARINA", "townwindcrest_no", 0x2002a83, 0x08) - no used
+	updateToggleFlagSettings(segment, "OCARINA", "lakewindcrest_no", 0x2002a83, 0x10)
+	updateToggleFlagSettings(segment, "OCARINA", "swampwindcrest_no", 0x2002a83, 0x20)
+	updateToggleFlagSettings(segment, "OCARINA", "shfwindcrest_no", 0x2002a83, 0x30)
+	updateToggleFlagSettings(segment, "OCARINA", "minishwindcrest_no", 0x2002a83, 0x40)
+end
 function UpdateWallLocation(segment)
 	if AUTOTRACKER_ENABLE_FUSER_TRACKING then
 		 --eenie
@@ -3409,6 +3615,44 @@ function UpdateWallLocation(segment)
 		end
 	end
 end
+
+function UPDATE(code)
+	--items_codes_autotracking_cache
+	print(string.format("[MAP][INFO] code - %s", code))
+	if items_codes_autotracking_cache[code]["COUNT"] then
+		for k, v in pairs(items_codes_autotracking_cache[code]["COUNT"]) do
+			
+			print(string.format("[MAP][INFO] k - %s", k))
+			print(string.format("[MAP][INFO] v - %s", v))
+			local item = Tracker:FindObjectForCode(k)
+			item.AcquiredCount = v
+		end
+	end
+	if items_codes_autotracking_cache[code]["ACTIVE"] then
+		for k, v in pairs(items_codes_autotracking_cache[code]["ACTIVE"]) do
+			print(string.format("[MAP][INFO] k - %s", k))
+			print(string.format("[MAP][INFO] v - %s", v))
+			local item = Tracker:FindObjectForCode(k)
+			item.Active = v
+		end
+	end
+	if items_codes_autotracking_cache[code]["SETTING"] then
+		for k, v in pairs(items_codes_autotracking_cache[code]["SETTING"]) do
+			print(string.format("[MAP][INFO] k - %s", k))
+			print(string.format("[MAP][INFO] v - %s", v))
+			local item = Tracker:FindObjectForCode(k)
+			item.CurrentStage = v
+		end
+	end
+	if items_codes_autotracking_cache[code]["LOC_ACTIVE"] then
+		for k, v in pairs(items_codes_autotracking_cache[code]["LOC_ACTIVE"]) do
+			print(string.format("[MAP][INFO] k - %s", k))
+			print(string.format("[MAP][INFO] v - %s", v))
+			local location = Tracker:FindObjectForCode(k)
+			location.AvailableChestCount = location.AvailableChestCount - v
+		end
+	end
+end
 function area(segment)
 	if not isInGame() then
 		return false
@@ -3416,19 +3660,77 @@ function area(segment)
 	InvalidateReadCaches()
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
-		AREA=ReadU8(segment, 0x030010AC)
-		ROOM=ReadU8(segment, 0x030010AD)
-		if ( AREA==33 and ( ROOM==9 or ROOM==8 ) ) or ( AREA==96 ) or ( AREA==88 or AREA==24 ) or ( AREA==40 and ( ROOM==2 or ROOM==3 ) ) then
-			POT_SPOT=1
+		if ReadU8(segment, 0x03000BF4) then
+			local hex1 = ReadU8(segment, 0x03000BF4)
+			local hex1 = string.upper(string.format('%02x',hex1))
+			local hex2 = ReadU8(segment, 0x03000BF5)
+			local hex2 = string.upper(string.format('%02x',hex2))
+			print(string.format("[MAP][INFO] hex2 - %s", hex2))
+			local hex = hex2..hex1
+			print(string.format("[MAP][INFO] hex - %s", hex))
+			--local hex = string.upper(string.format('%04x',hex))
+			--local hex = string.upper(string.format('%04s',hex))
+			print(string.format("[MAP][INFO] hex - %s", hex))
+			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING_SPEC[%s][1] - %s", hex,ROOM_FLAG_MAPPING_SPEC[hex][1]))
+			for _, flag_room in pairs(ROOM_FLAG_MAPPING_SPEC[hex][1]) do
+				print(string.format("[MAP][INFO] flag_room - %s", flag_room))
+				if ( flag_room == "POT_SPOT" ) then
+					code_type_cache["POT_SPOT"]  = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "UNDERWATER_SPOT" ) then
+					local item = Tracker:FindObjectForCode("flippers")
+					if item.Active then					
+						code_type_cache["UNDERWATER_SPOT"]  = 1
+						UPDATE(flag_room)
+					end
+				elseif ( flag_room == "DIG_SPOT" ) then
+					local item = Tracker:FindObjectForCode("mitts")
+					if item.Active then
+						code_type_cache["DIG_SPOT"]  = 1
+						UPDATE(flag_room)
+					end
+				elseif ( flag_room == "DWS_ENTER" ) then
+					code_type_cache["DWS_ENTER"] = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "COF_ENTER" ) then
+					code_type_cache["COF_ENTER"] = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "FOW_ENTER" ) then
+					code_type_cache["FOW_ENTER"] = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "FOW_WARPS" ) then
+					code_type_cache["FOW_WARPS"] = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "TOD_ENTER" ) then
+					code_type_cache["TOD_ENTER"] = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "POW_ENTER" ) then
+					code_type_cache["POW_ENTER"] = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "RC_ENTER" ) then
+					code_type_cache["RC_ENTER"] = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "DHC_WARPS" ) then
+					code_type_cache["DHC_WARPS"] = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "DHC_ENTER" ) then
+					code_type_cache["DHC_ENTER"] = 1
+					UPDATE(flag_room)
+				end
+			end
 		end
-		if ( AREA==96 ) or (AREA==11) or (AREA==4) then
-			UNDERWATER_SPOT=1
-		end
-		if ( AREA==8 and ( ROOM==1 or ROOM==2 ) ) then
-			DIG_SPOT=1
-		end
-		-- print("AREA:",AREA)
-		-- print("ROOM:",ROOM)
+		print(string.format("[MAP][INFO] code_type_cache[\"POT_SPOT\"]  - %s", code_type_cache["POT_SPOT"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"UNDERWATER_SPOT\"]  - %s", code_type_cache["UNDERWATER_SPOT"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"DIG_SPOT\"]  - %s", code_type_cache["DIG_SPOT"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"DWS_ENTER\"] - %s", code_type_cache["DWS_ENTER"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"COF_ENTER\"] - %s", code_type_cache["COF_ENTER"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"FOW_ENTER\"] - %s", code_type_cache["FOW_ENTER"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"FOW_WARPS\"] - %s", code_type_cache["FOW_WARPS"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"TOD_ENTER\"] - %s", code_type_cache["TOD_ENTER"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"POW_ENTER\"] - %s", code_type_cache["POW_ENTER"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"RC_ENTER\"] - %s", code_type_cache["RC_ENTER"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"DHC_ENTER\"] - %s", code_type_cache["DHC_ENTER"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"OCARINA\"] - %s", code_type_cache["OCARINA"]))
 	end
 end
 ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)
@@ -3438,4 +3740,6 @@ ScriptHost:AddMemoryWatch("TMC Item Upgrades", 0x2002ae4, 0x0c, updateGearFromMe
 ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey)
 ScriptHost:AddMemoryWatch("TMC Keys", 0x2002d00, 0x200, updateKeys)
 ScriptHost:AddMemoryWatch("TMC figurine", 0x2002af0, 0x01, figurine)
-ScriptHost:AddMemoryWatch("area", 0x030010AC, 0x05, area)
+ScriptHost:AddMemoryWatch("TMC CREST", 0x2002a83, 0x01, crest)
+ScriptHost:AddMemoryWatch("area", 0x03000BF4, 0x02, area,1)
+--10CF

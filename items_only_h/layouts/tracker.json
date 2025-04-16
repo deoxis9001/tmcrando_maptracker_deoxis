@@ -21,8 +21,6 @@
     },
     "tracker_default": {
         "type": "container",
-        //"width": 270,
-        //"height": 250,
         "background": "#212121",
         "content": {
             "dropshadow": true,
