@@ -6,7 +6,7 @@
         "rows": [
 			["","smithsword","greensword","redsword","bluesword","foursword","",""],
 			["sword0","gust","cane","boomerang","grip","bracelets","jabber","redW"],
-			["shield","mittsandfly","lamp","bombsremote","trophy","carlov","mushroom	","redV"],
+			["shield","mittsandfly","lamp","bombsremote","trophy","carlov","mushroom","redV"],
 			["boots","cape","ocarina","bowandfly","quiver","gravekey","figurine","redE"],
 			["10hearts","flippersandfly","dogbottle","books","wallet","llrkey","wilds","greenC"],
 			["spinattack","fastspin","fastsplit","greatspin","longspin","sevenscrolls","clouds","greenG"],
@@ -28,7 +28,6 @@
     "tracker_default": {
         "type": "container",
         "width": 270,
-        //"height": 250,
         "background": "#212121",
         "content": {
             "dropshadow": true,
