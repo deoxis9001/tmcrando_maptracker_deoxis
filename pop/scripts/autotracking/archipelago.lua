@@ -1,8 +1,8 @@
 ScriptHost:LoadScript(ScriptAutotracking.."item_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."location_mapping.lua")
---ScriptHost:LoadScript(ScriptAutotracking.."ap_slot.lua")
---ScriptHost:LoadScript(ScriptAutotracking.."flag_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."room_mapping.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."events_mapping.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."slots_data_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -338,27 +338,97 @@ end
 -- apply everything needed from slot_data, called from onClear
 function apply_slot_data(slot_data)
 	-- put any code here that slot_data should affect (toggling setting items for example)
-
-	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT and AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
-		print(string.format("[SLOT DATA][INFO] RupeeSpot: %s", slot_data["RupeeSpot"]))
-		print(string.format("[SLOT DATA][INFO], ObscureSpot: %s", slot_data["ObscureSpot"]))
 	end
-	local RUPEESPOT = slot_data["RupeeSpot"]
-	local OBSCURESPOT = slot_data["ObscureSpot"]
-	local obj_rupees = Tracker:FindObjectForCode("rupees_off")
-	local obj_obscure = Tracker:FindObjectForCode("obscure_on")
-	if RUPEESPOT == 1 then
-		obj_rupees.CurrentStage = 1
-	else
-		obj_rupees.CurrentStage = 0
+	for slots_data_key, slots_data_entry in pairs(slot_data) do
+		if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+			print(string.format(" /---  ---  ---\\ "))
+			print(string.format("[SLOT DATA][INFO] slots_data_key: %s", slots_data_key))
+			print(string.format("[SLOT DATA][INFO] slots_data_entry: %s", slots_data_entry))
+		end
+		if SLOTS_DATA_MAPPING[slots_data_key]~=nil then
+			if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+				print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key]))
+				print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][1]))
+				print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][2]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][2]))
+				print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3]))
+			end
+			if SLOTS_DATA_MAPPING[slots_data_key][1] then
+				local obj = Tracker:FindObjectForCode(SLOTS_DATA_MAPPING[slots_data_key][1])
+
+				if obj then
+					if SLOTS_DATA_MAPPING[slots_data_key][2] == "INT" then
+						if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3][1]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][2]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3][2]))
+						end
+						if slots_data_entry>=SLOTS_DATA_MAPPING[slots_data_key][3][1] and slots_data_entry<=SLOTS_DATA_MAPPING[slots_data_key][3][2] then
+							obj.CurrentStage = slots_data_entry
+						elseif slots_data_entry > SLOTS_DATA_MAPPING[slots_data_key][3][2] then
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][2]
+						elseif slots_data_entry < SLOTS_DATA_MAPPING[slots_data_key][3][1] then
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][1]
+						end
+					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "OPT" then
+						slots_data_entry = slots_data_entry + 1
+						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry] then
+							if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+								print(string.format("[SLOT DATA][INFO] slots_data_entry + 1: %s", slots_data_entry))
+								print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][%s]: %s", slots_data_key, slots_data_entry, SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]))
+							end
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]
+						else
+							obj.CurrentStage = 0
+						end
+					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "KIN" then
+						slots_data_entry = slots_data_entry + 1
+						if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][1]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][2]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][2]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][%s]: %s", slots_data_key, slots_data_entry, SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][4]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][4]))
+						end
+						local obj_combined = Tracker:FindObjectForCode(SLOTS_DATA_MAPPING[slots_data_key][4])
+						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]==3 then
+							obj.CurrentStage = 1
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongoldcombined" then
+								--fusiongoldcombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionredcombined" then
+								--fusionredcombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongreencombined" then
+								--fusiongreencombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionbluecombined" then
+								--fusionbluecombined:setActive(1)
+							end
+						else
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongoldcombined" then
+								--fusiongoldcombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionredcombined" then
+								--fusionredcombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongreencombined" then
+								--fusiongreencombined:setActive(1)
+							end
+							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionbluecombined" then
+								--fusionbluecombined:setActive(1)
+							end
+						end
+					end
+				end
+			end
+		end
+		if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+			print(string.format(" \\---  ---  ---/ "))
+		end
 	end
-	if OBSCURESPOT == 1 then
-		obj_obscure.CurrentStage = 1
-	else
-		obj_obscure.CurrentStage = 0
-	end
-	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT and AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
 	end
 end
@@ -422,14 +492,18 @@ function onClear(slot_data)
 	apply_slot_data(slot_data)
 	LOCAL_ITEMS = {}
 	GLOBAL_ITEMS = {}
-	
+	ITEMS_ID ={}
     PLAYER_ID = Archipelago.PlayerNumber or -1
 	TEAM_NUMBER = Archipelago.TeamNumber or 0
     if PLAYER_ID > -1 then
---        updateEvents(0, true)
---        EVENT_ID = "tmc_events_"..TEAM_NUMBER.."_"..PLAYER_ID
---        Archipelago:SetNotify({EVENT_ID})
---        Archipelago:Get({EVENT_ID})
+		for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
+			if event_name[1]~=nil then
+				ITEMS_ID[event_name[1]] = "tmc_"..event_name[1].."_"..TEAM_NUMBER.."_"..PLAYER_ID
+				updateEvents(event_name[2],0, true)
+				Archipelago:SetNotify({ITEMS_ID[event_name[1]]})
+				Archipelago:Get({ITEMS_ID[event_name[1]]})
+			end
+		end
         updateMap(0, true)
         ROOM_ID = "tmc_room_"..TEAM_NUMBER.."_"..PLAYER_ID
         Archipelago:SetNotify({ROOM_ID})
@@ -581,45 +655,86 @@ end
 
 function onNotify(k, v, old_value)
 	if v ~= old_value then
-		if k == EVENT_ID then
-		    --updateEvents(v, false)
-        elseif k == ROOM_ID then
-            updateMap(v, false)
-        elseif k == CLIENTSTATUS then
-            updateStatus(_, v)
+		if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+			print(string.format("----- EVENT -----"))
+			print(string.format("[EVENT][INFO] k - %s", k))
+			print(string.format("[EVENT][INFO] v - %s", v))
+		end
+		if k == ROOM_ID then
+			updateMap(v, false)
+		elseif k == CLIENTSTATUS then
+			updateStatus(_, v)
+		else
+			for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
+				if 	ITEMS_ID[event_name[1]] == k then
+					if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+						print(string.format("[EVENT][INFO] ITEMS_ID[event_name[1]] - %s", ITEMS_ID[event_name[1]]))
+						print(string.format("[EVENT][INFO] event_name[2] - %s", event_name[2]))
+					end
+					updateEvents(event_name[2], v, false)
+				end
+			end
+		end
+		if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+			print(string.format("----- EVENT -----"))
 		end
 	end
 end
 
 function onNotifyLaunch(k, v)
-	if k == EVENT_ID then
-		--updateEvents(v, false)
-    elseif k == ROOM_ID then
+	if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+		print(string.format("----- EVENT -----"))
+		print(string.format("[EVENT][INFO] k - %s", k))
+		print(string.format("[EVENT][INFO] v - %s", v))
+	end
+	if k == ROOM_ID then
         updateMap(v, false)
     elseif k == CLIENTSTATUS then
         updateStatus(_, v)
+	else
+		for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
+			if 	ITEMS_ID[event_name[1]] == k then
+				if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+					print(string.format("[EVENT][INFO] ITEMS_ID[event_name[1]] - %s", ITEMS_ID[event_name[1]]))
+					print(string.format("[EVENT][INFO] event_name[2] - %s", event_name[2]))
+				end
+				updateEvents(event_name[2], v, false)
+			end
+		end
+	end
+	if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+		print(string.format("----- EVENT -----"))
 	end
 end
 
-function updateEvents(value, reset)
+function updateEvents(key, value, reset)
     if value ~= nil then
-      if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
-		print(string.format("----- event -----"))
-		print(string.format("[EVENT][INFO] Value - %s", v))
-		print(string.format("----- event -----"))
-      end
-      for _, event in pairs(EVENT_FLAG_MAPPING) do
-        local bitmask = 2 ^ event.bit
-        if reset or (value & bitmask ~= event.status) then
-          event.status = value & bitmask
-          for _, code in pairs(event.codes) do
-            if code.setting == nil or has(code.setting) then
-                Tracker:FindObjectForCode(code.code).Active = value & bitmask ~= 0
-            end
-          end
-        end
-      end
-    end
+		if key ~= nil then
+			if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+				print(string.format("----- EVENT function-----"))
+				print(string.format("[EVENT][INFO] key - %s", key))
+				print(string.format("[EVENT][INFO] Value - %s", value))
+			end
+			if key:sub(1, 1) == "@" then
+				local obj = Tracker:FindObjectForCode(key)
+				if reset then
+					obj.AvailableChestCount = obj.ChestCount
+					print(string.format("[EVENT][INFO] %s.AvailableChestCount - %s", key, obj.AvailableChestCount))
+				elseif obj then
+					obj.AvailableChestCount = obj.AvailableChestCount - value
+					print(string.format("[EVENT][INFO] %s.AvailableChestCount - %s", key, obj.AvailableChestCount))
+				end
+			else
+				local obj = Tracker:FindObjectForCode(key)
+				if obj then
+					obj.Active = value
+				end
+			end
+			if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+				print(string.format("----- EVENT function -----"))
+			end
+		end
+	end
 end
 
 function updateStatus(_, v)
@@ -632,54 +747,57 @@ function updateStatus(_, v)
     if v == 30 then
         Tracker:FindObjectForCode("dhc").Active = 1
         Tracker:FindObjectForCode("@DHC/Vaati").AvailableChestCount = 0
+        Tracker:FindObjectForCode("@DHC/Win").AvailableChestCount = 0
+        Tracker:FindObjectForCode("@Dark Hyrule Castle - Pull the Pedestal/Win").AvailableChestCount = 0
         Tracker:FindObjectForCode("@Dark Hyrule Castle - Vaati/Kill").AvailableChestCount = 0
     end
 end
 
 function updateMap(v, reset)
-	local hex = string.format('%02x',v)
+	if v ~= nil then
+		local hex = string.upper(string.format('%04x',v))
 
-	local hex2 = string.sub(hex,string.len(hex)-1,string.len(hex))
-	local tab={}
-	local tabs={}
-	local tabs2={}
-	local tabs3={}
-	
-	if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
-		print(string.format("----- MAP -----"))
-		print(string.format("[MAP][INFO] Value - %s", v))
-		print(string.format("[MAP][INFO] reset - %s", reset))
-		print(string.format("[MAP][INFO] hex - %s", hex))
-		print(string.format("[MAP][INFO] hex2 - %s", hex2))
-		print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[hex2] - %s", ROOM_FLAG_MAPPING[hex2]))
-		print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING_SPEC[hex] - %s", ROOM_FLAG_MAPPING_SPEC[hex]))
-		print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[00] - %s",ROOM_FLAG_MAPPING["00"]))
-		print(string.format("----- MAP -----"))
-	end
-    --if has("op_auto_tab_on") then
-	if ROOM_FLAG_MAPPING[hex2] then
-       local tabs = ROOM_FLAG_MAPPING[hex2][0]
-       if tabs then
-            for _, tab in ipairs(tabs) do
-                Tracker:UiHint("ActivateTab", tab)
-            end
-       end
-	elseif ROOM_FLAG_MAPPING_SPEC[hex] then
-       local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
-       if tabs2 then
-            for _, tab in ipairs(tabs2) do
-                Tracker:UiHint("ActivateTab", tab)
-            end
-       end
-	else
-		local tabs3 = ROOM_FLAG_MAPPING["00"][0]
-		if tabs3 then
-			 for _, tab in ipairs(tabs3) do
-				 Tracker:UiHint("ActivateTab", tab)
-			 end
+		local hex2 = string.upper(string.sub(hex,string.len(hex)-1,string.len(hex)))
+		local tab={}
+		local tabs={}
+		local tabs2={}
+		local tabs3={}
+		
+		if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+			print(string.format("----- MAP -----"))
+			print(string.format("[MAP][INFO] Value - %s", v))
+			print(string.format("[MAP][INFO] reset - %s", reset))
+			print(string.format("[MAP][INFO] hex - %s", hex))
+			print(string.format("[MAP][INFO] hex2 - %s", hex2))
+			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[hex2] - %s", ROOM_FLAG_MAPPING[hex2]))
+			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING_SPEC[hex] - %s", ROOM_FLAG_MAPPING_SPEC[hex]))
+			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[00] - %s",ROOM_FLAG_MAPPING["00"]))
+			print(string.format("----- MAP -----"))
+		end
+		--if has("op_auto_tab_on") then
+		if ROOM_FLAG_MAPPING_SPEC[hex] then
+			local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
+			if tabs2 then
+					for _, tab in ipairs(tabs2) do
+						Tracker:UiHint("ActivateTab", tab)
+					end
+			end
+		elseif ROOM_FLAG_MAPPING[hex2] then
+			local tabs = ROOM_FLAG_MAPPING[hex2][0]
+			if tabs then
+					for _, tab in ipairs(tabs) do
+						Tracker:UiHint("ActivateTab", tab)
+					end
+			end
+		else
+			local tabs3 = ROOM_FLAG_MAPPING["00"][0]
+			if tabs3 then
+				for _, tab in ipairs(tabs3) do
+					Tracker:UiHint("ActivateTab", tab)
+				end
+			end
 		end
 	end
-	
     --end
 end
 

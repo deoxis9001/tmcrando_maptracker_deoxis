@@ -191,6 +191,26 @@
 			]
 		}
 	},
+	"main_dungeons_settings": {
+		"type": "group",
+		"header": "Dungeons Settings",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"small_key_none",
+						"big_key_none"
+					]
+				]
+			}
+		]
+	},
 	"main_requirements": {
 		"type": "group",
 		"header": "Requirements",
@@ -216,8 +236,14 @@
 						"element4Needed",
 						""
 					],
-					 ["figurine_option","figurine10"],
-					 ["figurine50","figurinemax"]
+					[
+						"figurine_option",
+						"figurine10"
+					],
+					[
+						"figurine50",
+						"figurinemax"
+					]
 				]
 			}
 		]
@@ -235,9 +261,273 @@
 				"item_height": 64,
 				"rows": [
 					[
-						"rupees_off",
-						"obscure_off",
+						"cucco_none",
 						""
+					],
+					[
+						"goron_none",
+						""
+					],
+					[
+						"hp_shuffle",
+						"rupees_off"
+					],
+					[
+						"digging_off",
+						"specialpot_off"
+					],
+					[
+						"underwater_off",
+						""
+					],
+					[
+						"shopbag_extra_off",
+						"ped_items_off"
+					]
+				]
+			}
+		]
+	},
+	"world_global": {
+		"type": "group",
+		"header": "Global",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"openworld_off"
+					]
+				]
+			}
+		]
+	},
+	"world_fusions": {
+		"type": "group",
+		"header": "Fusions",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"fusiongoldcombined",
+						"fusiongold_removed"
+					],
+					[
+						"fusionredcombined",
+						"fusionred_removed"
+					],
+					[
+						"fusionbluecombined",
+						"fusionblue_removed"
+					],
+					[
+						"fusiongreencombined",
+						"fusiongreen_removed"
+					]
+				]
+			}
+		]
+	},
+	"world_wind_crests": {
+		"type": "group",
+		"header": "Wind Crest",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"crenelwindcrest_no",
+						"swampwindcrest_no"
+					],
+					[
+						"cloudwindcrest_no",
+						"lakewindcrest_no"
+					],
+					[
+						"fallswindcrest_no",
+						"shfwindcrest_no"
+					],
+					[
+						"minishwindcrest_no",
+						""
+					]
+				]
+			}
+		]
+	},
+	"world_dungeon_warps": {
+		"type": "group",
+		"header": "Dungeon Warps",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"dws_warps_none",
+						"cof_warps_none"
+					],
+					[
+						"fow_warps_none",
+						"tod_warps_none"
+					],
+					[
+						"pow_warps_none",
+						"dhc_warps_none"
+					]
+				]
+			}
+		]
+	},
+	"logic_logic_rules": {
+		"type": "group",
+		"header": "Logic Rules",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"grabbable_none"
+					]
+				]
+			}
+		]
+	},
+	"logic_weapons": {
+		"type": "group",
+		"header": "Weapons Settings",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"weaponsbombs_no",
+						"weaponsbow_no"
+					],
+					[
+						"weaponsgust_no",
+						"weaponslamp_no"
+					]
+				]
+			}
+		]
+	},
+	"logic_require_trick1": {
+		"type": "group",
+		"header": "Require Trick",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"blowdust_off",
+						"crenelmushroom_off"
+					],
+					[
+						"lightarrowbreak_off",
+						"bobombs_off"
+					],
+					[
+						"likelike_off",
+						"guardskip_off"
+					],
+					[
+						"crenelbeam_off",
+						"downstrikebeetle_off"
+					],
+					[
+						"darkrooms_off",
+						"capeextension_off"
+					]
+				]
+			}
+		]
+	},
+	"logic_require_trick2": {
+		"type": "group",
+		"header": "Require Trick",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"lakeminish_off",
+						"cabinswim_off"
+					],
+					[
+						"cloudskill_off",
+						"powjump_off"
+					],
+					[
+						"powpotpuzzleool_off",
+						"dhccanonhit_off"
+					],
+					[
+						"dhcbladepuzzleshuffle_off",
+						"dhcswitchhit_off"
+					],
+					[
+						"fowpot_off",
+						""
+					]
+				]
+			}
+		]
+	},
+	"item_pool_progressive": {
+		"type": "group",
+		"header": "Progressive",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"v_alignment": "top",
+				"item_margin": "0,0",
+				"item_width": 320,
+				"item_height": 64,
+				"rows": [
+					[
+						"progressiveitems"
 					]
 				]
 			}
@@ -386,6 +676,95 @@
 			}
 		]
 	},
+	"settings_tab_logic": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"dock": "top",
+				"style": "wrap",
+				"tabs": [
+					{
+						"title": "Logic Rules",
+						"icon": "images/icon-maps/Gust Jar.png",
+						"content": {
+							"type": "layout",
+							"key": "logic_logic_rules"
+						}
+					},
+					{
+						"title": "Weapons",
+						"icon": "images/icon-maps/weapons.png",
+						"content": {
+							"type": "layout",
+							"key": "logic_weapons"
+						}
+					},
+					{
+						"title": "Require Trick 1/2",
+						"icon": "images/icon-maps/Link Icon.png",
+						"content": {
+							"type": "layout",
+							"key": "logic_require_trick1"
+						}
+					},
+					{
+						"title": "Require Trick 2/2",
+						"icon": "images/icon-maps/Link Icon.png",
+						"content": {
+							"type": "layout",
+							"key": "logic_require_trick2"
+						}
+					}
+				]
+			}
+		]
+	},
+	"settings_tab_world": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"dock": "top",
+				"style": "wrap",
+				"tabs": [
+					{
+						"title": "Global",
+						"icon": "images/icon-maps/Entrance Icon.png",
+						"content": {
+							"type": "layout",
+							"key": "world_global"
+						}
+					},
+					{
+						"title": "Fusions",
+						"icon": "images/icon-maps/Kinstone Bag (Giant).png",
+						"content": {
+							"type": "layout",
+							"key": "world_fusions"
+						}
+					},
+					{
+						"title": "Wind Crests",
+						"icon": "images/icon-maps/Wind Tablet.png",
+						"content": {
+							"type": "layout",
+							"key": "world_wind_crests"
+						}
+					},
+					{
+						"title": "Dungeon Warps",
+						"icon": "images/icon-maps/Blue_Warp.png",
+						"content": {
+							"type": "layout",
+							"key": "world_dungeon_warps"
+						}
+					}
+				]
+			}
+		]
+	},
+
 	"settings_tab_main": {
 		"type": "dock",
 		"content": [
@@ -394,6 +773,14 @@
 				"dock": "top",
 				"style": "wrap",
 				"tabs": [
+					{
+						"title": "Dungeons Settings",
+						"icon": "images/icon-maps/Big Key.png",
+						"content": {
+							"type": "layout",
+							"key": "main_dungeons_settings"
+						}
+					},
 					{
 						"title": "Requirements",
 						"icon": "images/icon-maps/Light Force.png",
@@ -437,7 +824,374 @@
 							"type": "layout",
 							"key": "settings_tab_main"
 						}
+					},
+					{
+						"title": "World Settings",
+						"icon": "images/icon-maps/Cave Entrance Icon.png",
+						"content": {
+							"type": "layout",
+							"key": "settings_tab_world"
+						}
+					},
+					{
+						"title": "Logic Settings",
+						"icon": "images/icon-maps/Treasure Icon.png",
+						"content": {
+							"type": "layout",
+							"key": "settings_tab_logic"
+						}
+					},
+					{
+						"title": "Item Pool",
+						"icon": "images/icon-maps/Fire Rod.png",
+						"content": {
+							"type": "layout",
+							"key": "item_pool_progressive"
+						}
 					}
+				]
+			}
+		]
+	},
+	"dws_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws_1F"
+							]
+						}
+					},
+					{
+						"title": "B1",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws_B1"
+							]
+						}
+					},
+					{
+						"title": "B2",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dws_B2"
+							]
+						}
+					}
+
+				]
+			}
+		]
+	},
+	"cof_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof_1F"
+							]
+						}
+					},
+					{
+						"title": "B1",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof_B1"
+							]
+						}
+					},
+					{
+						"title": "B2",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof_B2"
+							]
+						}
+					},
+					{
+						"title": "B3",
+						"content": {
+							"type": "map",
+							"maps": [
+								"cof_B3"
+							]
+						}
+					}
+
+				]
+			}
+		]
+	},
+	"fow_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow_1F"
+							]
+						}
+					},
+					{
+						"title": "2F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow_2F"
+							]
+						}
+					},
+					{
+						"title": "3F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"fow_3F"
+							]
+						}
+					}
+				]
+			}
+		]
+	},
+	"tod_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod"
+							]
+						}
+					},
+					{
+						"title": "B1",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod_B1"
+							]
+						}
+					},
+					{
+						"title": "B2",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod_B2"
+							]
+						}
+					},
+					{
+						"title": "B3",
+						"content": {
+							"type": "map",
+							"maps": [
+								"tod_B3"
+							]
+						}
+					}
+
+				]
+			}
+		]
+	},
+	"pow_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_1F"
+							]
+						}
+					},
+					{
+						"title": "2F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_2F"
+							]
+						}
+					},
+					{
+						"title": "3F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_3F"
+							]
+						}
+					},
+					{
+						"title": "4F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_4F"
+							]
+						}
+					},
+					{
+						"title": "5F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"pow_5F"
+							]
+						}
+					}
+				]
+			}
+		]
+	},
+	"dhc_map": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Dungeon",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc"
+							]
+						}
+					},
+					{
+						"title": "Sanctuary",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_sanc"
+							]
+						}
+					},
+					{
+						"title": "B2",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_B2"
+							]
+						}
+					},
+					{
+						"title": "B1",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_B1"
+							]
+						}
+					},
+					{
+						"title": "1F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_1F"
+							]
+						}
+					},
+					{
+						"title": "2F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_2F"
+							]
+						}
+					},
+					{
+						"title": "3F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_3F"
+							]
+						}
+					},
+					{
+						"title": "4F",
+						"content": {
+							"type": "map",
+							"maps": [
+								"dhc_4F"
+							]
+						}
+					}
+
 				]
 			}
 		]
@@ -452,40 +1206,32 @@
 						"title": "Deepwood Shrine",
 						"icon": "images/icon-maps/chu.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"dws"
-							]
+							"type": "layout",
+							"key": "dws_map"
 						}
 					},
 					{
 						"title": "Cave of Flames",
 						"icon": "images/icon-maps/gleerok.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"cof"
-							]
+							"type": "layout",
+							"key": "cof_map"
 						}
 					},
 					{
 						"title": "Fortress of Winds",
 						"icon": "images/icon-maps/mazaal.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"fow"
-							]
+							"type": "layout",
+							"key": "fow_map"
 						}
 					},
 					{
 						"title": "Temple of Droplets",
 						"icon": "images/icon-maps/octo.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"tod"
-							]
+							"type": "layout",
+							"key":"tod_map"
 						}
 					},
 					{
@@ -502,20 +1248,16 @@
 						"title": "Palace of Winds",
 						"icon": "images/icon-maps/gyorg.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"pow"
-							]
+							"type": "layout",
+							"key": "pow_map"
 						}
 					},
 					{
 						"title": "Dark Hyrule Castle",
 						"icon": "images/icon-maps/vaati.png",
 						"content": {
-							"type": "map",
-							"maps": [
-								"dhc"
-							]
+							"type": "layout",
+							"key": "dhc_map"
 						}
 					}
 				]

@@ -5,8 +5,8 @@ ITEM_MAPPING = {
 	[768] = {{ "sword0","custom" },{ "redsword","custom" }},
 	[1024] = {{ "sword0","custom" },{ "bluesword","custom" }},
 	[1536] = {{ "sword0","custom" },{ "foursword","custom" }},
-	[1792] = {{ "bombs","custom"}}, --bombs
-	[2048] = {{ "remote","toggle"}},--remote bombs -> à passé en bombs custom dans les prochaines version.
+	[1792] = {{ "bombs","toggle"}}, --bombs
+	[2048] = {{ "remote","toggle"}},--remote bombs.
 	[2304] = {{ "bow","progressive"}},
 	[2560] = {{ "bow","progressive"}},
 	[2816] = {{ "boomerang","progressive" }},
@@ -47,12 +47,14 @@ ITEM_MAPPING = {
 	[17920] = {{ "flippers","toggle"}},
 
 
-	[18432] = {{ "spinattack","spin" },{ "sevenscrolls","consumable" }},
+	--[18432] = {{ "spinattack","spin" },{ "sevenscrolls","consumable" }}, -- event
+	[18432] = {{ "sevenscrolls","consumable" }},
 	[18688] = {{ "rollattack","toggle" },{ "sevenscrolls","consumable" }},
 	[18944] = {{ "dashattack","toggle" },{ "sevenscrolls","consumable" }},
 	[19200] = {{ "rockbreaker","toggle" },{ "sevenscrolls","consumable" }},
 	[19456] = {{ "swordbeam","toggle" },{ "sevenscrolls","consumable" }},
-	[19712] = {{ "greatspin","spin" },{ "sevenscrolls","consumable" }},
+	--[19712] = {{ "greatspin","spin" },{ "sevenscrolls","consumable" }}, -- event
+	[19712] = {{ "sevenscrolls","consumable" }},
 	[19968] = {{ "downthrust","toggle" },{ "sevenscrolls","consumable" }},
 	[20224] = {{ "perilbeam","toggle" },{ "sevenscrolls","consumable" }},
 
@@ -93,16 +95,19 @@ ITEM_MAPPING = {
 	[25088] = {{ "hearts","custom",4 }},
 	[25344] = {{ "hearts","custom" }},
 	[25600] = {{ "wallet","progressive"}},
-	[25856] = {{ "bombs","custom",3}},--bombs bag
+	[25856] = {{ "bombs","progressive"}},--bombs bag
 	
 	[26112] = {{ "quiver","progressive" }},
 	[28672] = {{ "bowandfly","toggle"}},
 	[28928] = {{ "mittsButterfly","toggle"}},
 
 	[29184] = {{ "flippersButterfly","toggle"}},
-	[29696] = {{ "fastsplit","spin" },{ "sevenscrolls","consumable" }},
-	[29440] = {{ "fastspin","spin" },{ "sevenscrolls","consumable" }},
-	[29952] = {{ "longspin","spin" },{ "sevenscrolls","consumable" }},
+	[29696] = {{ "sevenscrolls","consumable" }},
+	[29440] = {{ "sevenscrolls","consumable" }},
+	[29952] = {{ "sevenscrolls","consumable" }},
+	--[29696] = {{ "fastsplit","spin" },{ "sevenscrolls","consumable" }}, -- event
+	--[29440] = {{ "fastspin","spin" },{ "sevenscrolls","consumable" }}, -- event
+	--[29952] = {{ "longspin","spin" },{ "sevenscrolls","consumable" }}, -- event
 
 
 

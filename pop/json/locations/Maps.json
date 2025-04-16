@@ -6,6 +6,11 @@
 				"map": "cof",
 				"x": 2259,
 				"y": 1005
+			},
+			{
+				"map": "cof_1F",
+				"x": 392,
+				"y": 92
 			}
 		],
 		"sections": [
@@ -30,6 +35,14 @@
 				"restrict_visibility_rules": [
 					"$has|rupees_on"
 				]
+			},
+			{
+				"map": "cof_1F",
+				"x": 136,
+				"y": 75,
+				"restrict_visibility_rules": [
+					"$has|rupees_on"
+				]
 			}
 		],
 		"sections": [
@@ -51,6 +64,11 @@
 				"map": "cof",
 				"x": 890,
 				"y": 1090
+			},
+			{
+				"map": "cof_B1",
+				"x": 885,
+				"y": 805
 			}
 		],
 		"sections": [
@@ -72,6 +90,11 @@
 				"map": "cof",
 				"x": 690,
 				"y": 1290
+			},
+			{
+				"map": "cof_B1",
+				"x": 695,
+				"y": 995
 			}
 		],
 		"sections": [
@@ -93,6 +116,11 @@
 				"map": "cof",
 				"x": 370,
 				"y": 1390
+			},
+			{
+				"map": "cof_B1",
+				"x": 368,
+				"y": 995
 			}
 		],
 		"sections": [
@@ -114,6 +142,11 @@
 				"map": "cof",
 				"x": 370,
 				"y": 1120
+			},
+			{
+				"map": "cof_B1",
+				"x": 368,
+				"y": 825
 			}
 		],
 		"sections": [
@@ -135,6 +168,11 @@
 				"map": "cof",
 				"x": 840,
 				"y": 850
+			},
+			{
+				"map": "cof_B1",
+				"x": 842,
+				"y": 554
 			}
 		],
 		"sections": [
@@ -156,6 +194,11 @@
 				"map": "cof",
 				"x": 730,
 				"y": 410
+			},
+			{
+				"map": "cof_B1",
+				"x": 730,
+				"y": 115
 			}
 		],
 		"sections": [
@@ -177,6 +220,11 @@
 				"map": "cof",
 				"x": 860,
 				"y": 340
+			},
+			{
+				"map": "cof_B1",
+				"x": 860,
+				"y": 68
 			}
 		],
 		"sections": [
@@ -198,6 +246,11 @@
 				"map": "cof",
 				"x": 1220,
 				"y": 270
+			},
+			{
+				"map": "cof_B2",
+				"x": 450,
+				"y": 265
 			}
 		],
 		"sections": [
@@ -219,6 +272,11 @@
 				"map": "cof",
 				"x": 1270,
 				"y": 340
+			},
+			{
+				"map": "cof_B2",
+				"x": 475,
+				"y": 345
 			}
 		],
 		"sections": [
@@ -239,6 +297,11 @@
 			{
 				"map": "cof",
 				"x": 2370,
+				"y": 120
+			},
+			{
+				"map": "cof_B2",
+				"x": 1600,
 				"y": 120
 			}
 		],
@@ -261,6 +324,11 @@
 				"map": "cof",
 				"x": 1520,
 				"y": 665
+			},
+			{
+				"map": "cof_B2",
+				"x": 750,
+				"y": 665
 			}
 		],
 		"sections": [
@@ -281,6 +349,11 @@
 			{
 				"map": "cof",
 				"x": 2050,
+				"y": 665
+			},
+			{
+				"map": "cof_B2",
+				"x": 1295,
 				"y": 665
 			}
 		],
@@ -303,6 +376,11 @@
 				"map": "cof",
 				"x": 1665,
 				"y": 400
+			},
+			{
+				"map": "cof_B2",
+				"x": 895,
+				"y": 400
 			}
 		],
 		"sections": [
@@ -324,6 +402,11 @@
 				"map": "cof",
 				"x": 1380,
 				"y": 1200
+			},
+			{
+				"map": "cof_B3",
+				"x": 165,
+				"y": 55
 			}
 		],
 		"sections": [
@@ -341,6 +424,11 @@
 	{
 		"name": "Crypt - Gibdos",
 		"map_locations": [
+			{
+				"map": "rc",
+				"x": 295,
+				"y": 805
+			},
 			{
 				"map": "rc",
 				"x": 295,
@@ -377,6 +465,11 @@
 				"map": "rc",
 				"x": 143,
 				"y": 85
+			},
+			{
+				"map": "rc",
+				"x": 143,
+				"y": 85
 			}
 		],
 		"sections": [
@@ -394,6 +487,11 @@
 	{
 		"name": "Crypt - Right Path",
 		"map_locations": [
+			{
+				"map": "rc",
+				"x": 447,
+				"y": 85
+			},
 			{
 				"map": "rc",
 				"x": 447,
@@ -419,6 +517,11 @@
 				"map": "rc",
 				"x": 895,
 				"y": 75
+			},
+			{
+				"map": "rc",
+				"x": 895,
+				"y": 75
 			}
 		],
 		"sections": [
@@ -439,6 +542,11 @@
 			{
 				"map": "dws",
 				"x": 786,
+				"y": 1054
+			},
+			{
+				"map": "dws_B1",
+				"x": 779,
 				"y": 1054
 			}
 		],
@@ -461,6 +569,11 @@
 				"map": "dws",
 				"x": 152,
 				"y": 1137
+			},
+			{
+				"map": "dws_1F",
+				"x": 70,
+				"y": 400
 			}
 		],
 		"sections": [
@@ -481,6 +594,11 @@
 			{
 				"map": "dws",
 				"x": 622,
+				"y": 299
+			},
+			{
+				"map": "dws_B1",
+				"x": 615,
 				"y": 299
 			}
 		],
@@ -503,6 +621,11 @@
 				"map": "dws",
 				"x": 410,
 				"y": 280
+			},
+			{
+				"map": "dws_B1",
+				"x": 403,
+				"y": 280
 			}
 		],
 		"sections": [
@@ -523,6 +646,11 @@
 			{
 				"map": "dws",
 				"x": 145,
+				"y": 570
+			},
+			{
+				"map": "dws_B1",
+				"x": 138,
 				"y": 570
 			}
 		],
@@ -545,6 +673,11 @@
 				"map": "dws",
 				"x": 1425,
 				"y": 330
+			},
+			{
+				"map": "dws_B1",
+				"x": 1418,
+				"y": 330
 			}
 		],
 		"sections": [
@@ -565,6 +698,11 @@
 			{
 				"map": "dws",
 				"x": 1040,
+				"y": 140
+			},
+			{
+				"map": "dws_B1",
+				"x": 1033,
 				"y": 140
 			}
 		],
@@ -587,6 +725,11 @@
 				"map": "dws",
 				"x": 1635,
 				"y": 730
+			},
+			{
+				"map": "dws_B2",
+				"x": 656,
+				"y": 45
 			}
 		],
 		"sections": [
@@ -608,6 +751,11 @@
 				"map": "dws",
 				"x": 1450,
 				"y": 795
+			},
+			{
+				"map": "dws_B2",
+				"x": 471,
+				"y": 115
 			}
 		],
 		"sections": [
@@ -628,6 +776,11 @@
 			{
 				"map": "dws",
 				"x": 785,
+				"y": 60
+			},
+			{
+				"map": "dws_B1",
+				"x": 778,
 				"y": 60
 			}
 		],
@@ -650,6 +803,11 @@
 				"map": "dws",
 				"x": 665,
 				"y": 60
+			},
+			{
+				"map": "dws_B1",
+				"x": 658,
+				"y": 60
 			}
 		],
 		"sections": [
@@ -671,6 +829,11 @@
 				"map": "dws",
 				"x": 420,
 				"y": 115
+			},
+			{
+				"map": "dws_B1",
+				"x": 413,
+				"y": 115
 			}
 		],
 		"sections": [
@@ -691,6 +854,11 @@
 			{
 				"map": "dws",
 				"x": 480,
+				"y": 320
+			},
+			{
+				"map": "dws_B1",
+				"x": 473,
 				"y": 320
 			}
 		],
@@ -714,6 +882,11 @@
 				"map": "dws",
 				"x": 1155,
 				"y": 775
+			},
+			{
+				"map": "dws_B2",
+				"x": 176,
+				"y": 95
 			}
 		],
 		"sections": [
@@ -735,6 +908,11 @@
 				"map": "dws",
 				"x": 245,
 				"y": 820
+			},
+			{
+				"map": "dws_1F",
+				"x": 166,
+				"y": 83
 			}
 		],
 		"sections": [
@@ -756,6 +934,11 @@
 				"map": "fow",
 				"x": 250,
 				"y": 1115
+			},
+			{
+				"map": "fow_1F",
+				"x": 170,
+				"y": 245
 			}
 		],
 		"sections": [
@@ -780,6 +963,14 @@
 				"restrict_visibility_rules": [
 					"$has|rupees_on"
 				]
+			},
+			{
+				"map": "fow_1F",
+				"x": 1031,
+				"y": 244,
+				"restrict_visibility_rules": [
+					"$has|rupees_on"
+				]
 			}
 		],
 		"sections": [
@@ -801,6 +992,11 @@
 				"map": "fow",
 				"x": 200,
 				"y": 970
+			},
+			{
+				"map": "fow_1F",
+				"x": 120,
+				"y": 100
 			}
 		],
 		"sections": [
@@ -821,6 +1017,11 @@
 			{
 				"map": "fow",
 				"x": 1805,
+				"y": 870
+			},
+			{
+				"map": "fow_2F",
+				"x": 410,
 				"y": 870
 			}
 		],
@@ -846,6 +1047,14 @@
 				"restrict_visibility_rules": [
 					"$has|rupees_on"
 				]
+			},
+			{
+				"map": "fow_2F",
+				"x": 293,
+				"y": 992,
+				"restrict_visibility_rules": [
+					"$has|rupees_on"
+				]
 			}
 		],
 		"sections": [
@@ -866,6 +1075,14 @@
 			{
 				"map": "fow",
 				"x": 1920,
+				"y": 993,
+				"restrict_visibility_rules": [
+					"$has|rupees_on"
+				]
+			},
+			{
+				"map": "fow_2F",
+				"x": 525,
 				"y": 993,
 				"restrict_visibility_rules": [
 					"$has|rupees_on"
@@ -900,6 +1117,11 @@
 				"map": "fow",
 				"x": 295,
 				"y": 725
+			},
+			{
+				"map": "fow_3F",
+				"x": 295,
+				"y": 725
 			}
 		],
 		"sections": [
@@ -919,6 +1141,11 @@
 		"map_locations": [
 			{
 				"map": "fow",
+				"x": 125,
+				"y": 305
+			},
+			{
+				"map": "fow_3F",
 				"x": 125,
 				"y": 305
 			}
@@ -942,6 +1169,11 @@
 				"map": "fow",
 				"x": 485,
 				"y": 460
+			},
+			{
+				"map": "fow_3F",
+				"x": 485,
+				"y": 460
 			}
 		],
 		"sections": [
@@ -962,6 +1194,11 @@
 			{
 				"map": "fow",
 				"x": 2415,
+				"y": 675
+			},
+			{
+				"map": "fow_2F",
+				"x": 1020,
 				"y": 675
 			}
 		],
@@ -984,6 +1221,11 @@
 				"map": "fow",
 				"x": 2285,
 				"y": 675
+			},
+			{
+				"map": "fow_2F",
+				"x": 890,
+				"y": 675
 			}
 		],
 		"sections": [
@@ -1005,6 +1247,11 @@
 				"map": "fow",
 				"x": 2190,
 				"y": 1060
+			},
+			{
+				"map": "fow_2F",
+				"x": 795,
+				"y": 1060
 			}
 		],
 		"sections": [
@@ -1024,6 +1271,11 @@
 		"map_locations": [
 			{
 				"map": "fow",
+				"x": 795,
+				"y": 710
+			},
+			{
+				"map": "fow_3F",
 				"x": 795,
 				"y": 710
 			}
@@ -1047,6 +1299,11 @@
 				"map": "fow",
 				"x": 900,
 				"y": 460
+			},
+			{
+				"map": "fow_3F",
+				"x": 900,
+				"y": 460
 			}
 		],
 		"sections": [
@@ -1068,6 +1325,11 @@
 				"map": "fow",
 				"x": 1110,
 				"y": 935
+			},
+			{
+				"map": "fow_1F",
+				"x": 1030,
+				"y": 65
 			}
 		],
 		"sections": [
@@ -1090,6 +1352,11 @@
 				"map": "fow",
 				"x": 2075,
 				"y": 610
+			},
+			{
+				"map": "fow_2F",
+				"x": 680,
+				"y": 610
 			}
 		],
 		"sections": [
@@ -1110,6 +1377,11 @@
 			{
 				"map": "fow",
 				"x": 2030,
+				"y": 995
+			},
+			{
+				"map": "fow_2F",
+				"x": 635,
 				"y": 995
 			}
 		],
@@ -1132,6 +1404,11 @@
 				"map": "fow",
 				"x": 1765,
 				"y": 260
+			},
+			{
+				"map": "fow_2F",
+				"x": 370,
+				"y": 260
 			}
 		],
 		"sections": [
@@ -1152,6 +1429,11 @@
 			{
 				"map": "fow",
 				"x": 1900,
+				"y": 260
+			},
+			{
+				"map": "fow_2F",
+				"x": 505,
 				"y": 260
 			}
 		],
@@ -1174,6 +1456,11 @@
 				"map": "fow",
 				"x": 2665,
 				"y": 230
+			},
+			{
+				"map": "fow_2F",
+				"x": 1270,
+				"y": 230
 			}
 		],
 		"sections": [
@@ -1194,6 +1481,11 @@
 			{
 				"map": "fow",
 				"x": 2430,
+				"y": 280
+			},
+			{
+				"map": "fow_2F",
+				"x": 1035,
 				"y": 280
 			}
 		],
@@ -1216,6 +1508,14 @@
 			{
 				"map": "fow",
 				"x": 2480,
+				"y": 930,
+				"restrict_visibility_rules": [
+					"$has|specialpot_on"
+				]
+			},
+			{
+				"map": "fow_2F",
+				"x": 1085,
 				"y": 930,
 				"restrict_visibility_rules": [
 					"$has|specialpot_on"
@@ -1244,6 +1544,14 @@
 				"restrict_visibility_rules": [
 					"$has|specialpot_on"
 				]
+			},
+			{
+				"map": "fow_2F",
+				"x": 970,
+				"y": 1080,
+				"restrict_visibility_rules": [
+					"$has|specialpot_on"
+				]
 			}
 		],
 		"sections": [
@@ -1264,6 +1572,11 @@
 			{
 				"map": "fow",
 				"x": 2680,
+				"y": 480
+			},
+			{
+				"map": "fow_2F",
+				"x": 1285,
 				"y": 480
 			}
 		],
@@ -1286,6 +1599,11 @@
 				"map": "fow",
 				"x": 660,
 				"y": 55
+			},
+			{
+				"map": "fow_3F",
+				"x": 680,
+				"y": 55
 			}
 		],
 		"sections": [
@@ -1305,6 +1623,11 @@
 		"map_locations": [
 			{
 				"map": "pow",
+				"x": 630,
+				"y": 90
+			},
+			{
+				"map": "pow_1F",
 				"x": 630,
 				"y": 90
 			}
@@ -1328,6 +1651,11 @@
 				"map": "pow",
 				"x": 120,
 				"y": 215
+			},
+			{
+				"map": "pow_1F",
+				"x": 120,
+				"y": 215
 			}
 		],
 		"sections": [
@@ -1348,6 +1676,11 @@
 			{
 				"map": "pow",
 				"x": 3720,
+				"y": 535
+			},
+			{
+				"map": "pow_3F",
+				"x": 920,
 				"y": 535
 			}
 		],
@@ -1374,6 +1707,14 @@
 				"restrict_visibility_rules": [
 					"$has|rupees_on"
 				]
+			},
+			{
+				"map": "pow_2F",
+				"x": 440,
+				"y": 383,
+				"restrict_visibility_rules": [
+					"$has|rupees_on"
+				]
 			}
 		],
 		"sections": [
@@ -1395,6 +1736,11 @@
 				"map": "pow",
 				"x": 585,
 				"y": 1645
+			},
+			{
+				"map": "pow_4F",
+				"x": 585,
+				"y": 260
 			}
 		],
 		"sections": [
@@ -1416,6 +1762,11 @@
 				"map": "pow",
 				"x": 2385,
 				"y": 2125
+			},
+			{
+				"map": "pow_5F",
+				"x": 840,
+				"y": 735
 			}
 		],
 		"sections": [
@@ -1437,6 +1788,11 @@
 				"map": "pow",
 				"x": 2110,
 				"y": 2075
+			},
+			{
+				"map": "pow_5F",
+				"x": 570,
+				"y": 685
 			}
 		],
 		"sections": [
@@ -1458,6 +1814,11 @@
 				"map": "pow",
 				"x": 2140,
 				"y": 1865
+			},
+			{
+				"map": "pow_5F",
+				"x": 600,
+				"y": 480
 			}
 		],
 		"sections": [
@@ -1479,6 +1840,11 @@
 				"map": "pow",
 				"x": 1595,
 				"y": 825
+			},
+			{
+				"map": "pow_2F",
+				"x": 105,
+				"y": 825
 			}
 		],
 		"sections": [
@@ -1498,6 +1864,11 @@
 		"map_locations": [
 			{
 				"map": "pow",
+				"x": 775,
+				"y": 627
+			},
+			{
+				"map": "pow_1F",
 				"x": 775,
 				"y": 627
 			}
@@ -1521,6 +1892,11 @@
 				"map": "pow",
 				"x": 600,
 				"y": 520
+			},
+			{
+				"map": "pow_1F",
+				"x": 600,
+				"y": 520
 			}
 		],
 		"sections": [
@@ -1541,6 +1917,11 @@
 			{
 				"map": "pow",
 				"x": 2090,
+				"y": 695
+			},
+			{
+				"map": "pow_2F",
+				"x": 600,
 				"y": 695
 			}
 		],
@@ -1563,6 +1944,11 @@
 				"map": "pow",
 				"x": 3400,
 				"y": 355
+			},
+			{
+				"map": "pow_3F",
+				"x": 600,
+				"y": 355
 			}
 		],
 		"sections": [
@@ -1584,6 +1970,11 @@
 				"map": "pow",
 				"x": 425,
 				"y": 1660
+			},
+			{
+				"map": "pow_4F",
+				"x": 425,
+				"y": 275
 			}
 		],
 		"sections": [
@@ -1606,6 +1997,11 @@
 				"map": "pow",
 				"x": 710,
 				"y": 1915
+			},
+			{
+				"map": "pow_4F",
+				"x": 710,
+				"y": 530
 			}
 		],
 		"sections": [
@@ -1627,6 +2023,11 @@
 				"map": "pow",
 				"x": 2625,
 				"y": 1820
+			},
+			{
+				"map": "pow_5F",
+				"x": 1080,
+				"y": 430
 			}
 		],
 		"sections": [
@@ -1648,6 +2049,11 @@
 				"map": "pow",
 				"x": 950,
 				"y": 1660
+			},
+			{
+				"map": "pow_4F",
+				"x": 950,
+				"y": 275
 			}
 		],
 		"sections": [
@@ -1669,6 +2075,11 @@
 				"map": "pow",
 				"x": 3340,
 				"y": 1870
+			},
+			{
+				"map": "pow_5F",
+				"x": 1800,
+				"y": 480
 			}
 		],
 		"sections": [
@@ -1690,6 +2101,11 @@
 				"map": "pow",
 				"x": 3010,
 				"y": 1580
+			},
+			{
+				"map": "pow_5F",
+				"x": 1470,
+				"y": 190
 			}
 		],
 		"sections": [
@@ -1711,6 +2127,11 @@
 				"map": "tod",
 				"x": 1225,
 				"y": 110
+			},
+			{
+				"map": "tod_B2",
+				"x": 1225,
+				"y": 80
 			}
 		],
 		"sections": [
@@ -1732,6 +2153,11 @@
 				"map": "tod",
 				"x": 905,
 				"y": 140
+			},
+			{
+				"map": "tod_B2",
+				"x": 905,
+				"y": 110
 			}
 		],
 		"sections": [
@@ -1753,6 +2179,11 @@
 				"map": "tod",
 				"x": 1505,
 				"y": 1215
+			},
+			{
+				"map": "tod_B2",
+				"x": 1505,
+				"y": 1185
 			}
 		],
 		"sections": [
@@ -1774,6 +2205,11 @@
 				"map": "tod",
 				"x": 910,
 				"y": 1420
+			},
+			{
+				"map": "tod_B2",
+				"x": 910,
+				"y": 1390
 			}
 		],
 		"sections": [
@@ -1799,6 +2235,11 @@
 				"map": "tod",
 				"x": 740,
 				"y": 2925
+			},
+			{
+				"map": "tod_B1",
+				"x": 472,
+				"y": 1270
 			}
 		],
 		"sections": [
@@ -1823,6 +2264,14 @@
 				"restrict_visibility_rules": [
 					"$has|rupees_on"
 				]
+			},
+			{
+				"map": "tod_B1",
+				"x": 422,
+				"y": 1160,
+				"restrict_visibility_rules": [
+					"$has|rupees_on"
+				]
 			}
 		],
 		"sections": [
@@ -1844,6 +2293,14 @@
 				"map": "tod",
 				"x": 1450,
 				"y": 517,
+				"restrict_visibility_rules": [
+					"$has|rupees_on"
+				]
+			},
+			{
+				"map": "tod_B2",
+				"x": 1450,
+				"y": 487,
 				"restrict_visibility_rules": [
 					"$has|rupees_on"
 				]
@@ -1880,6 +2337,14 @@
 				"restrict_visibility_rules": [
 					"$has|underwater_on"
 				]
+			},
+			{
+				"map": "tod_B1",
+				"x": 102,
+				"y": 695,
+				"restrict_visibility_rules": [
+					"$has|underwater_on"
+				]
 			}
 		],
 		"sections": [
@@ -1904,6 +2369,14 @@
 				"restrict_visibility_rules": [
 					"$has|underwater_on"
 				]
+			},
+			{
+				"map": "tod_B2",
+				"x": 600,
+				"y": 1185,
+				"restrict_visibility_rules": [
+					"$has|underwater_on"
+				]
 			}
 		],
 		"sections": [
@@ -1925,6 +2398,11 @@
 				"map": "tod",
 				"x": 1000,
 				"y": 830
+			},
+			{
+				"map": "tod_B2",
+				"x": 1000,
+				"y": 800
 			}
 		],
 		"sections": [
@@ -1946,6 +2424,11 @@
 				"map": "tod",
 				"x": 1110,
 				"y": 975
+			},
+			{
+				"map": "tod_B2",
+				"x": 1110,
+				"y": 945
 			}
 		],
 		"sections": [
@@ -1967,6 +2450,11 @@
 				"map": "tod",
 				"x": 695,
 				"y": 1025
+			},
+			{
+				"map": "tod_B2",
+				"x": 695,
+				"y": 995
 			}
 		],
 		"sections": [
@@ -1988,6 +2476,11 @@
 				"map": "tod",
 				"x": 1475,
 				"y": 2365
+			},
+			{
+				"map": "tod_B1",
+				"x": 1207,
+				"y": 710
 			}
 		],
 		"sections": [
@@ -2009,6 +2502,11 @@
 				"map": "tod",
 				"x": 1680,
 				"y": 2545
+			},
+			{
+				"map": "tod_B1",
+				"x": 1412,
+				"y": 890
 			}
 		],
 		"sections": [
@@ -2033,6 +2531,14 @@
 				"restrict_visibility_rules": [
 					"$has|specialpot_on"
 				]
+			},
+			{
+				"map": "tod_B1",
+				"x": 1512,
+				"y": 1125,
+				"restrict_visibility_rules": [
+					"$has|specialpot_on"
+				]
 			}
 		],
 		"sections": [
@@ -2054,6 +2560,11 @@
 				"map": "tod",
 				"x": 1440,
 				"y": 3010
+			},
+			{
+				"map": "tod_B1",
+				"x": 1172,
+				"y": 1355
 			}
 		],
 		"sections": [
@@ -2075,6 +2586,11 @@
 				"map": "tod",
 				"x": 1720,
 				"y": 1440
+			},
+			{
+				"map": "tod_B3",
+				"x": 120,
+				"y": 105
 			}
 		],
 		"sections": [
@@ -2096,6 +2612,11 @@
 				"map": "tod",
 				"x": 1385,
 				"y": 1235
+			},
+			{
+				"map": "tod_B2",
+				"x": 1385,
+				"y": 1205
 			}
 		],
 		"sections": [
@@ -2117,6 +2638,11 @@
 				"map": "tod",
 				"x": 1895,
 				"y": 1120
+			},
+			{
+				"map": "tod_B2",
+				"x": 1895,
+				"y": 1090
 			}
 		],
 		"sections": [
@@ -2138,6 +2664,11 @@
 				"map": "tod",
 				"x": 1850,
 				"y": 800
+			},
+			{
+				"map": "tod_B2",
+				"x": 1850,
+				"y": 770
 			}
 		],
 		"sections": [
@@ -2159,6 +2690,11 @@
 				"map": "tod",
 				"x": 1990,
 				"y": 720
+			},
+			{
+				"map": "tod_B2",
+				"x": 1990,
+				"y": 690
 			}
 		],
 		"sections": [
@@ -2180,6 +2716,11 @@
 				"map": "tod",
 				"x": 1670,
 				"y": 975
+			},
+			{
+				"map": "tod_B2",
+				"x": 1670,
+				"y": 945
 			}
 		],
 		"sections": [
@@ -2201,6 +2742,11 @@
 				"map": "tod",
 				"x": 1040,
 				"y": 2875
+			},
+			{
+				"map": "tod_B1",
+				"x": 775,
+				"y": 1225
 			}
 		],
 		"sections": [
@@ -2222,6 +2768,15 @@
 				"map": "dhc",
 				"x": 2265,
 				"y": 870,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_1F",
+				"x": 933,
+				"y": 835,
 				"restrict_visibility_rules": [
 					"$has|dhc_open",
 					"$has|dhc_closed"
@@ -2251,6 +2806,15 @@
 					"$has|dhc_open",
 					"$has|dhc_closed"
 				]
+			},
+			{
+				"map": "dhc_B1",
+				"x": 406,
+				"y": 1305,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
 			}
 		],
 		"sections": [
@@ -2272,6 +2836,15 @@
 				"map": "dhc",
 				"x": 3295,
 				"y": 110,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_B2",
+				"x": 555,
+				"y": 75,
 				"restrict_visibility_rules": [
 					"$has|dhc_open",
 					"$has|dhc_closed"
@@ -2301,6 +2874,15 @@
 					"$has|dhc_open",
 					"$has|dhc_closed"
 				]
+			},
+			{
+				"map": "dhc_1F",
+				"x": 898,
+				"y": 35,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
 			}
 		],
 		"sections": [
@@ -2326,6 +2908,24 @@
 					"$has|dhc_open",
 					"$has|dhc_closed"
 				]
+			},
+			{
+				"map": "dhc_3F",
+				"x": 140,
+				"y": 145,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_2F",
+				"x": 100,
+				"y": 92,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
 			}
 		],
 		"sections": [
@@ -2336,7 +2936,7 @@
 					"^$Json_Dungeon_DHC_NorthwestTower"
 				],
 				"chest_unopened_img": "images/items-map/Small Key.png",
-				"chest_opened_img": "images/items-map/Small Key Gray.png"
+				"chest_opened_img": "images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2351,6 +2951,24 @@
 					"$has|dhc_open",
 					"$has|dhc_closed"
 				]
+			},
+			{
+				"map": "dhc_3F",
+				"x": 140,
+				"y": 1505,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_2F",
+				"x": 100,
+				"y": 1452,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
 			}
 		],
 		"sections": [
@@ -2361,7 +2979,7 @@
 					"^$Json_Dungeon_DHC_SouthwestTower"
 				],
 				"chest_unopened_img": "images/items-map/Small Key.png",
-				"chest_opened_img": "images/items-map/Small Key Gray.png"
+				"chest_opened_img": "images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2376,6 +2994,24 @@
 					"$has|dhc_open",
 					"$has|dhc_closed"
 				]
+			},
+			{
+				"map": "dhc_3F",
+				"x": 1225,
+				"y": 1505,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_2F",
+				"x": 1185,
+				"y": 1452,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
 			}
 		],
 		"sections": [
@@ -2386,7 +3022,7 @@
 					"^$Json_Dungeon_DHC_SoutheastTower"
 				],
 				"chest_unopened_img": "images/items-map/Small Key.png",
-				"chest_opened_img": "images/items-map/Small Key Gray.png"
+				"chest_opened_img": "images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2401,6 +3037,24 @@
 					"$has|dhc_open",
 					"$has|dhc_closed"
 				]
+			},
+			{
+				"map": "dhc_3F",
+				"x": 1225,
+				"y": 145,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_2F",
+				"x": 1185,
+				"y": 92,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
 			}
 		],
 		"sections": [
@@ -2411,7 +3065,7 @@
 					"^$Json_Dungeon_DHC_NortheastTower"
 				],
 				"chest_unopened_img": "images/items-map/Small Key.png",
-				"chest_opened_img": "images/items-map/Small Key Gray.png"
+				"chest_opened_img": "images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2422,6 +3076,15 @@
 				"map": "dhc",
 				"x": 765,
 				"y": 225,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_2F",
+				"x": 678,
+				"y": 25,
 				"restrict_visibility_rules": [
 					"$has|dhc_open",
 					"$has|dhc_closed"
@@ -2451,6 +3114,42 @@
 					"$has|dhc_open",
 					"$has|dhc_closed"
 				]
+			},
+			{
+				"map": "dhc_4F",
+				"x": 120,
+				"y": 280,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_3F",
+				"x": 677,
+				"y": 45,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_2F",
+				"x": 678,
+				"y": 660,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
+			},
+			{
+				"map": "dhc_sanc",
+				"x": 136,
+				"y": 220,
+				"restrict_visibility_rules": [
+					"$has|dhc_open",
+					"$has|dhc_closed"
+				]
 			}
 		],
 		"sections": [
@@ -2472,6 +3171,22 @@
 				"map": "dhc",
 				"x": 3090,
 				"y": 1480,
+				"restrict_visibility_rules": [
+					"$has|ped_items_on,dhc_open"
+				]
+			},
+			{
+				"map": "dhc_sanc",
+				"x": 136,
+				"y": 50,
+				"restrict_visibility_rules": [
+					"$has|ped_items_on,dhc_open"
+				]
+			},
+			{
+				"map": "dhc_B1",
+				"x": 406,
+				"y": 975,
 				"restrict_visibility_rules": [
 					"$has|ped_items_on,dhc_open"
 				]
@@ -2514,6 +3229,22 @@
 				"map": "dhc",
 				"x": 3090,
 				"y": 1480,
+				"restrict_visibility_rules": [
+					"$has|dhc_ped"
+				]
+			},
+			{
+				"map": "dhc_sanc",
+				"x": 136,
+				"y": 50,
+				"restrict_visibility_rules": [
+					"$has|dhc_ped"
+				]
+			},
+			{
+				"map": "dhc_B1",
+				"x": 406,
+				"y": 975,
 				"restrict_visibility_rules": [
 					"$has|dhc_ped"
 				]
