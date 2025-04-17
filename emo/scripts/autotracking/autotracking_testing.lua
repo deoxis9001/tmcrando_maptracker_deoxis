@@ -446,24 +446,16 @@ function updateSectionFlagSpecialCheck(segment, special, locationRef, address, f
 		if TMC_AUTOTRACKER_DEBUG_LOCATION then
 			print(locationRef, value)
 		end
+		if items_codes_autotracking_cache[special]==nil then
+			items_codes_autotracking_cache[special]={}
+		end
+		if items_codes_autotracking_cache[special]["LOC_ACTIVE"]==nil then
+			items_codes_autotracking_cache[special]["LOC_ACTIVE"]={}
+		end
 
 		if (value & flag) ~= 0 then
-			if special=="POT" then
-				if code_type_cache["POT_SPOT"] ==1 then
-					location.AvailableChestCount = 0
-					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
-				else
-					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
-				end
-			elseif special=="UNDERWATER" then
-				if code_type_cache["UNDERWATER_SPOT"] ==1 then
-					location.AvailableChestCount = 0
-					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
-				else
-					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
-				end
-			elseif special=="DIG" then
-				if code_type_cache["DIG_SPOT"] ==1 then
+			if special~="" then
+				if code_type_cache[special] ==1 then
 					location.AvailableChestCount = 0
 					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 0
 				else
@@ -475,7 +467,9 @@ function updateSectionFlagSpecialCheck(segment, special, locationRef, address, f
 			end
 		else
 			location.AvailableChestCount = 1
-			items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 1
+			if special~="" then
+				items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = 1
+			end
 		end
 	elseif TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND then
 		print("Location not found", locationRef)
@@ -501,25 +495,17 @@ function updateDecreaseCountSpecialCheck(segment, special, locationRef, chestDat
 				cleared = cleared + 1
 			end
 		end
+		if items_codes_autotracking_cache[special]==nil then
+			items_codes_autotracking_cache[special]={}
+		end
+		if items_codes_autotracking_cache[special]["LOC_ACTIVE"]==nil then
+			items_codes_autotracking_cache[special]["LOC_ACTIVE"]={}
+		end
 		if cleared>0 then
-			if special=="POT" then
-				if code_type_cache["POT_SPOT"] ==1 then
+			if special~="" then
+				if code_type_cache[special] ==1 then
 					location.AvailableChestCount = (#chestData - cleared)
 					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
-				else
-					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
-				end
-			elseif special=="UNDERWATER" then
-				if code_type_cache["UNDERWATER_SPOT"] ==1 then
-					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
-					location.AvailableChestCount = (#chestData - cleared)
-				else
-					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
-				end
-			elseif special=="DIG" then
-				if code_type_cache["DIG_SPOT"] ==1 then
-					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
-					location.AvailableChestCount = (#chestData - cleared)
 				else
 					items_codes_autotracking_cache[special]["LOC_ACTIVE"][locationRef] = (#chestData - cleared)
 				end
@@ -1863,9 +1849,12 @@ function updateSmallKeys(segment, code, address)
 			DWS_KEY_USED = DWS_KEY_USED + 1
 		end
 		DWS_KEY_COUNT = ReadU8(segment, address)
-		items_codes_autotracking_cache["DWS_ENTER"]["COUNT"][code] = DWS_KEY_COUNT + DWS_KEY_USED
-		if DWS_KEY_COUNT > 0 or code_type_cache["DWS_ENTER"]==1 then
+		if DWS_KEY_COUNT > 0 and code_type_cache["DWS_ENTER"]==1 then
 			item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
+			items_codes_autotracking_cache["DWS_ENTER"]["COUNT"][code] = DWS_KEY_COUNT + DWS_KEY_USED
+		elseif DWS_KEY_COUNT > 0 then
+			item.AcquiredCount = DWS_KEY_COUNT
+			items_codes_autotracking_cache["DWS_ENTER"]["COUNT"][code] = DWS_KEY_COUNT
 		end
 	elseif code == "cof_smallkey" then
 		COF_KEY_USED = 0
@@ -1876,9 +1865,12 @@ function updateSmallKeys(segment, code, address)
 			COF_KEY_USED = COF_KEY_USED + 1
 		end
 		COF_KEY_COUNT = ReadU8(segment, address)
-		items_codes_autotracking_cache["COF_ENTER"]["COUNT"][code] = COF_KEY_COUNT + COF_KEY_USED
-		if COF_KEY_COUNT > 0 or code_type_cache["COF_ENTER"]==1 then
+		if COF_KEY_COUNT > 0 and code_type_cache["COF_ENTER"]==1 then
 			item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
+			items_codes_autotracking_cache["COF_ENTER"]["COUNT"][code] = COF_KEY_COUNT + COF_KEY_USED
+		elseif COF_KEY_COUNT > 0 then
+			item.AcquiredCount = COF_KEY_COUNT
+			items_codes_autotracking_cache["COF_ENTER"]["COUNT"][code] = COF_KEY_COUNT
 		end
 	elseif code == "fow_smallkey" then
 		FOW_KEY_USED = 0
@@ -1895,9 +1887,12 @@ function updateSmallKeys(segment, code, address)
 			FOW_KEY_USED = FOW_KEY_USED + 1
 		end
 		FOW_KEY_COUNT = ReadU8(segment, address)
-		items_codes_autotracking_cache["FOW_ENTER"]["COUNT"][code] = FOW_KEY_COUNT + FOW_KEY_USED
-		if FOW_KEY_COUNT > 0 or code_type_cache["FOW_ENTER"]==1 then
+		if FOW_KEY_COUNT > 0 and code_type_cache["FOW_ENTER"]==1 then
 			item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
+			items_codes_autotracking_cache["FOW_ENTER"]["COUNT"][code] = FOW_KEY_COUNT + FOW_KEY_USED
+		elseif FOW_KEY_COUNT > 0 then
+			item.AcquiredCount = FOW_KEY_COUNT
+			items_codes_autotracking_cache["FOW_ENTER"]["COUNT"][code] = FOW_KEY_COUNT
 		end
 	elseif code == "tod_smallkey" then
 		TOD_KEY_USED = 0
@@ -1914,9 +1909,12 @@ function updateSmallKeys(segment, code, address)
 			TOD_KEY_USED = TOD_KEY_USED + 1
 		end
 		TOD_KEY_COUNT = ReadU8(segment, address)
-		items_codes_autotracking_cache["TOD_ENTER"]["COUNT"][code] = TOD_KEY_COUNT + TOD_KEY_USED
-		if TOD_KEY_COUNT > 0 or code_type_cache["TOD_ENTER"]==1 then
+		if TOD_KEY_COUNT > 0 and code_type_cache["TOD_ENTER"]==1 then
 			item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
+			items_codes_autotracking_cache["TOD_ENTER"]["COUNT"][code] = TOD_KEY_COUNT + TOD_KEY_USED
+		elseif TOD_KEY_COUNT > 0 then
+			item.AcquiredCount = TOD_KEY_COUNT
+			items_codes_autotracking_cache["TOD_ENTER"]["COUNT"][code] = TOD_KEY_COUNT
 		end
 	elseif code == "pow_smallkey" then
 		POW_KEY_USED = 0
@@ -1940,8 +1938,10 @@ function updateSmallKeys(segment, code, address)
 		end
 		POW_KEY_COUNT = ReadU8(segment, address)
 		items_codes_autotracking_cache["POW_ENTER"]["COUNT"][code] = POW_KEY_COUNT + POW_KEY_USED
-		if POW_KEY_COUNT > 0 or code_type_cache["POW_ENTER"]==1 then
+		if POW_KEY_COUNT > 0 and code_type_cache["POW_ENTER"]==1 then
 			item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
+		elseif POW_KEY_COUNT > 0 then
+			item.AcquiredCount = POW_KEY_COUNT
 		end
 	elseif code == "dhc_smallkey" then
 		DHC_KEY_USED = 0
@@ -1962,8 +1962,10 @@ function updateSmallKeys(segment, code, address)
 		end
 		DHC_KEY_COUNT = ReadU8(segment, address)
 		items_codes_autotracking_cache["DHC_ENTER"]["COUNT"][code] = DHC_KEY_USED + DHC_KEY_COUNT
-		if DHC_KEY_COUNT > 0 or code_type_cache["DHC_ENTER"]==1 then
+		if DHC_KEY_COUNT > 0 and code_type_cache["DHC_ENTER"]==1 then
 			item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
+		elseif DHC_KEY_COUNT > 0 then
+			item.AcquiredCount = DHC_KEY_COUNT
 		end
 	elseif code == "rc_smallkey" then
 		RC_KEY_USED = 0
@@ -1978,8 +1980,10 @@ function updateSmallKeys(segment, code, address)
 		end
 		RC_KEY_COUNT = ReadU8(segment, address)
 		items_codes_autotracking_cache["RC_ENTER"]["COUNT"][code] = RC_KEY_COUNT + RC_KEY_USED
-		if RC_KEY_COUNT > 0 or code_type_cache["RC_ENTER"]==1 then
+		if RC_KEY_COUNT > 0 and code_type_cache["RC_ENTER"]==1 then
 			item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED
+		elseif RC_KEY_COUNT > 0 then
+			item.AcquiredCount = RC_KEY_COUNT
 		end
 	else
 		item.AcquiredCount = 0
@@ -2812,7 +2816,7 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Crenel - Mines/Chest", 0x2002d11, 0x08)
 		updateDecreaseCountSpecialCheck(
 			segment,
-			"DIG",
+			"DIG_SPOT",
 			"@Crenel - Mines/Digging",
 			{
 				{0x2002cf3, 0x02},
@@ -2849,14 +2853,14 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Crenel - Mines Cave/Chest", 0x2002d23, 0x20)
 
 		-- MAP MINES
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 8/Digging", 0x2002cf4, 0x01)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 1/Digging", 0x2002cf3, 0x02)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 7/Digging", 0x2002cf3, 0x80)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 6/Digging", 0x2002cf3, 0x40)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 5/Digging", 0x2002cf3, 0x20)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 4/Digging", 0x2002cf3, 0x10)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 2/Digging", 0x2002cf3, 0x04)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Crenel - Mines - Digging Spot 3/Digging", 0x2002cf3, 0x08)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Crenel - Mines - Digging Spot 8/Digging", 0x2002cf4, 0x01)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Crenel - Mines - Digging Spot 1/Digging", 0x2002cf3, 0x02)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Crenel - Mines - Digging Spot 7/Digging", 0x2002cf3, 0x80)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Crenel - Mines - Digging Spot 6/Digging", 0x2002cf3, 0x40)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Crenel - Mines - Digging Spot 5/Digging", 0x2002cf3, 0x20)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Crenel - Mines - Digging Spot 4/Digging", 0x2002cf3, 0x10)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Crenel - Mines - Digging Spot 2/Digging", 0x2002cf3, 0x04)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Crenel - Mines - Digging Spot 3/Digging", 0x2002cf3, 0x08)
 
 		--CRENEL BASE
 		updateSectionFlag(segment, "@Crenel Base - Vine Rupee/Rupee", 0x2002cc5, 0x02)
@@ -2870,9 +2874,9 @@ function updateLocations(segment)
 
 		--CASTOR WILDS
 		updateSectionFlag(segment, "@Castor Wilds - Platform Chest/Chest", 0x2002cbd, 0x10)
-		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Castor Wilds - Diving Spots/Diving Top", 0x2002cc0, 0x04)
-		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Castor Wilds - Diving Spots/Diving Middle", 0x2002cc0, 0x08)
-		updateSectionFlagSpecialCheck(segment, "UNDERWATER",  "@Castor Wilds - Diving Spots/Diving Bottom", 0x2002cc0, 0x10)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER_SPOT", "@Castor Wilds - Diving Spots/Diving Top", 0x2002cc0, 0x04)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER_SPOT", "@Castor Wilds - Diving Spots/Diving Middle", 0x2002cc0, 0x08)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER_SPOT",  "@Castor Wilds - Diving Spots/Diving Bottom", 0x2002cc0, 0x10)
 		updateSectionFlag(segment, "@Castor Wilds - Mulldozers/Big Chest", 0x2002cde, 0x01)
 		updateSectionFlag(segment, "@Castor Wilds - Northern Minish Crack/Chest", 0x2002cde, 0x08)
 		updateSectionFlag(segment, "@Castor Wilds - Western Minish Crack/Chest", 0x2002cde, 0x10)
@@ -3014,7 +3018,7 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Town - School/Pull the Statue", 0x2002cfc, 0x40)
 		updateSectionFlag(segment, "@Town - Bell/Heart Piece", 0x2002cd5, 0x20)
 		updateSectionFlag(segment, "@Town - Cafe/Lady Next to Cafe - Gift", 0x2002cd6, 0x40)
-		updateSectionFlagSpecialCheck(segment, "POT", "@Town - Inn/Right Pot", 0x2002ce0, 0x80)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Town - Inn/Right Pot", 0x2002ce0, 0x80)
 		updateSectionFlag(segment, "@Town - Inn/Back Door - Heart Piece", 0x2002cf3, 0x01)
 		updateSectionFlag(segment, "@Town - Stockwell's Shop/Dog Food Bottle", 0x2002ce6, 0x08)
 		updateSectionFlag(segment, "@Town - Library/Yellow Minish - Gift", 0x2002ceb, 0x01)
@@ -3119,7 +3123,7 @@ function updateLocations(segment)
 
 		--LON LON RANCH
 		updateSectionFlag(segment, "@Lon Lon Ranch - Digging Spot/Digging (Above Tree)", 0x2002ccb, 0x20)
-		updateSectionFlagSpecialCheck(segment, "POT", "@Lon Lon Ranch - Malon's Pot/Pot", 0x2002ce5, 0x20)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Lon Lon Ranch - Malon's Pot/Pot", 0x2002ce5, 0x20)
 		updateSectionFlag(segment, "@Lon Lon Ranch - Minish Crack/Chest", 0x2002cf2, 0x04)
 		updateSectionFlag(segment, "@Lon Lon Ranch - Bonk the Tree/Chest", 0x2002d11, 0x02)
 		updateSectionFlag(segment, "@Lon Lon Ranch - Bonk the Tree/Heart Piece", 0x2002d13, 0x04)
@@ -3139,7 +3143,7 @@ function updateLocations(segment)
 		--LAKE HYLIA
 		updateSectionFlag(segment, "@Hylia - Lon Lon Ranch - North Heart Piece/Heart Piece", 0x2002ccb, 0x10)
 		updateSectionFlag(segment, "@Hylia - Cape Heart Piece/Heart Piece", 0x2002cbd, 0x01)
-		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Hylia - Pond Heart Piece/Diving", 0x2002cbd, 0x02)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER_SPOT", "@Hylia - Pond Heart Piece/Diving", 0x2002cbd, 0x02)
 		updateSectionFlag(segment, "@Hylia - Southern/Heart Piece", 0x2002cbd, 0x04)
 		updateSectionFlag(segment, "@Hylia - Librari/Gift", 0x2002cf2, 0x08)
 		updateSectionFlag(segment, "@Hylia - Middle Island Cave/Chest", 0x2002d02, 0x40)
@@ -3185,19 +3189,19 @@ function updateLocations(segment)
 		--CLOUD TOPS
 		updateSectionFlag(segment, "@Clouds - Top Left South Chest/Chest", 0x2002cd7, 0x20)
 		updateDecreaseCount(segment, "@Clouds - Top Left North Chests/Chests", {{0x2002cd7, 0x40}, {0x2002cd7, 0x80}})
-		updateSectionFlagSpecialCheck(segment,"DIG", "@Clouds - Top Left North Chests/Digging", 0x2002cd8, 0x04)
+		updateSectionFlagSpecialCheck(segment,"DIG_SPOT", "@Clouds - Top Left North Chests/Digging", 0x2002cd8, 0x04)
 		updateSectionFlag(segment, "@Clouds - Kill Piranhas (North)/Kill", 0x2002cda, 0x02)
 		updateSectionFlag(segment, "@Clouds - Kill Piranhas (South)/Kill", 0x2002cda, 0x08)
 		updateSectionFlag(segment, "@Clouds - Bottom Left Chest/Chest", 0x2002cd8, 0x01)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Southeast South Digging Spot/Digging", 0x2002cd9, 0x01)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Southeast North Digging Spot/Digging", 0x2002cd8, 0x20)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - South Digging Spot/Digging", 0x2002cd8, 0x80)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Clouds - Southeast South Digging Spot/Digging", 0x2002cd9, 0x01)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Clouds - Southeast North Digging Spot/Digging", 0x2002cd8, 0x20)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Clouds - South Digging Spot/Digging", 0x2002cd8, 0x80)
 		updateSectionFlag(segment, "@Clouds - Center Right/Chest", 0x2002cd8, 0x02)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Center Digging Spot/Digging", 0x2002cd8, 0x10)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Clouds - Center Digging Spot/Digging", 0x2002cd8, 0x10)
 		updateSectionFlag(segment, "@Clouds - Center Left/Chest", 0x2002cd7, 0x10)
 		updateSectionFlag(segment, "@Clouds - Right Chest/Chest", 0x2002cd7, 0x08)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Top Right Digging Spot/Digging", 0x2002cd8, 0x08)
-		updateSectionFlagSpecialCheck(segment, "DIG", "@Clouds - Bottom Left Digging Spot/Digging", 0x2002cd8, 0x40)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Clouds - Top Right Digging Spot/Digging", 0x2002cd8, 0x08)
+		updateSectionFlagSpecialCheck(segment, "DIG_SPOT", "@Clouds - Bottom Left Digging Spot/Digging", 0x2002cd8, 0x40)
 
 		--Wind Tribe
 		updateDecreaseCount(segment, "@Wind Tribe House/1F Chests", {{0x2002cdc, 0x20}, {0x2002cdc, 0x40}})
@@ -3304,8 +3308,8 @@ function updateLocations(segment)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Bombable Wall Small Chest", 0x2002d08, 0x02)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Clone Puzzle Key Drop", 0x2002d71, 0x40)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Minish Dirt Room Key Drop", 0x2002d08, 0x10)
-		updateSectionFlagSpecialCheck(segment, "POT", "@Fortress/Right Side Moldorm Top Pot", 0x2002d06, 0x08)
-		updateSectionFlagSpecialCheck(segment, "POT", "@Fortress/Right Side Moldorm Bottom Pot", 0x2002d06, 0x10)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Fortress/Right Side Moldorm Top Pot", 0x2002d06, 0x08)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Fortress/Right Side Moldorm Bottom Pot", 0x2002d06, 0x10)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Skull Room Chest", 0x2002d73, 0x04)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/Mazaal", 0x2002d72, 0x04)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/FOW Reward", 0x2002d74, 0x20)
@@ -3337,15 +3341,15 @@ function updateLocations(segment)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Bombable Wall Chest/Chest", 0x2002d08, 0x02)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Clone Puzzle Key/Drop", 0x2002d71, 0x40)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Minish Dirt Room Key/Drop", 0x2002d08, 0x10)
-		updateSectionFlagSpecialCheck(segment, "POT", "@Fortress - Right Side Top Moldorm Pot/Drop", 0x2002d06, 0x08)
-		updateSectionFlagSpecialCheck(segment, "POT", "@Fortress - Right Side Left Moldorm Pot/Drop", 0x2002d06, 0x10)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Fortress - Right Side Top Moldorm Pot/Drop", 0x2002d06, 0x08)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Fortress - Right Side Left Moldorm Pot/Drop", 0x2002d06, 0x10)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Skull Room/Big Chest", 0x2002d73, 0x04)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Mazaal/Heart", 0x2002d72, 0x04)
 		--TOD
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/First Ice Block", 0x2002d8e, 0x04)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Locked Ice Block", 0x2002d8d, 0x80)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Post Madderpillar Chest", 0x2002d92, 0x80)
-		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Droplet/Underwater Pot", 0x2002d93, 0x04)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER_SPOT", "@Droplet/Underwater Pot", 0x2002d93, 0x04)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Overhang Chest", 0x2002d8b, 0x80)
 		updateDecreaseCountDungeons(
 			segment, "TOD_ENTER",
@@ -3368,7 +3372,7 @@ function updateLocations(segment)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Ice Puzzle Frozen Chest", 0x2002d8f, 0x04)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Post Ice Puzzle Frozen Chest", 0x2002d93, 0x40)
 		updateDecreaseCountDungeons(segment, "TOD_ENTER", "@Droplet/Right Path Ice Walkway Chests", {{0x2002d8b, 0x01}, {0x2002d8b, 0x04}})
-		updateSectionFlagSpecialCheck(segment, "POT", "@Droplet/Right Path Ice Walkway Pot", 0x2002d8b, 0x02)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Droplet/Right Path Ice Walkway Pot", 0x2002d8b, 0x02)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Basement Frozen Chest", 0x2002d8d, 0x10)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Blue Chu", 0x2002d8c, 0x80)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Post Blue Chu Frozen Chest", 0x2002d92, 0x40)
@@ -3382,7 +3386,7 @@ function updateLocations(segment)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - First Ice Block/Ice Block", 0x2002d8e, 0x04)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Key Locked Ice Block/Ice Block", 0x2002d8d, 0x80)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Madderpillar/Chest", 0x2002d92, 0x80)
-		updateSectionFlagSpecialCheck(segment, "UNDERWATER", "@Droplet - Underwater Pot/Drop", 0x2002d93, 0x04)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER_SPOT", "@Droplet - Underwater Pot/Drop", 0x2002d93, 0x04)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Overhang/Chest", 0x2002d8b, 0x80)
 		updateDecreaseCountDungeons(
 			segment, "TOD_ENTER",
@@ -3410,7 +3414,7 @@ function updateLocations(segment)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Ice Puzzle/Chest", 0x2002d93, 0x40)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path Ice Walkway First/Chest", 0x2002d8b, 0x01)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path Ice Walkway Second/Chest", 0x2002d8b, 0x04)
-		updateSectionFlagSpecialCheck(segment, "POT", "@Droplet - Right Path Ice Walkway Pot/Drop", 0x2002d8b, 0x02)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Droplet - Right Path Ice Walkway Pot/Drop", 0x2002d8b, 0x02)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Basement Frozen/Chest", 0x2002d8d, 0x10)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Blue Chu/Kill", 0x2002d8c, 0x80)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Blue Chu Frozen/Chest", 0x2002d92, 0x40)
@@ -3587,6 +3591,10 @@ function updateKeys(segment)
 	end
 end
 function crest(segment)
+	if not isInGame() then
+		return false
+	end
+	InvalidateReadCaches()
 	updateToggleFlagSettings(segment, "OCARINA", "crenelwindcrest_no", 0x2002a83, 0x01)
 	updateToggleFlagSettings(segment, "OCARINA", "fallswindcrest_no", 0x2002a83, 0x02)
 	updateToggleFlagSettings(segment, "OCARINA", "cloudwindcrest_no", 0x2002a83, 0x04)
@@ -3619,37 +3627,39 @@ end
 function UPDATE(code)
 	--items_codes_autotracking_cache
 	print(string.format("[MAP][INFO] code - %s", code))
-	if items_codes_autotracking_cache[code]["COUNT"] then
-		for k, v in pairs(items_codes_autotracking_cache[code]["COUNT"]) do
-			
-			print(string.format("[MAP][INFO] k - %s", k))
-			print(string.format("[MAP][INFO] v - %s", v))
-			local item = Tracker:FindObjectForCode(k)
-			item.AcquiredCount = v
+	if items_codes_autotracking_cache[code] then
+		if items_codes_autotracking_cache[code]["COUNT"] then
+			for k, v in pairs(items_codes_autotracking_cache[code]["COUNT"]) do
+				
+				print(string.format("[MAP][INFO] k - %s", k))
+				print(string.format("[MAP][INFO] v - %s", v))
+				local item = Tracker:FindObjectForCode(k)
+				item.AcquiredCount = v
+			end
 		end
-	end
-	if items_codes_autotracking_cache[code]["ACTIVE"] then
-		for k, v in pairs(items_codes_autotracking_cache[code]["ACTIVE"]) do
-			print(string.format("[MAP][INFO] k - %s", k))
-			print(string.format("[MAP][INFO] v - %s", v))
-			local item = Tracker:FindObjectForCode(k)
-			item.Active = v
+		if items_codes_autotracking_cache[code]["ACTIVE"] then
+			for k, v in pairs(items_codes_autotracking_cache[code]["ACTIVE"]) do
+				print(string.format("[MAP][INFO] k - %s", k))
+				print(string.format("[MAP][INFO] v - %s", v))
+				local item = Tracker:FindObjectForCode(k)
+				item.Active = v
+			end
 		end
-	end
-	if items_codes_autotracking_cache[code]["SETTING"] then
-		for k, v in pairs(items_codes_autotracking_cache[code]["SETTING"]) do
-			print(string.format("[MAP][INFO] k - %s", k))
-			print(string.format("[MAP][INFO] v - %s", v))
-			local item = Tracker:FindObjectForCode(k)
-			item.CurrentStage = v
+		if items_codes_autotracking_cache[code]["SETTING"] then
+			for k, v in pairs(items_codes_autotracking_cache[code]["SETTING"]) do
+				print(string.format("[MAP][INFO] k - %s", k))
+				print(string.format("[MAP][INFO] v - %s", v))
+				local item = Tracker:FindObjectForCode(k)
+				item.CurrentStage = v
+			end
 		end
-	end
-	if items_codes_autotracking_cache[code]["LOC_ACTIVE"] then
-		for k, v in pairs(items_codes_autotracking_cache[code]["LOC_ACTIVE"]) do
-			print(string.format("[MAP][INFO] k - %s", k))
-			print(string.format("[MAP][INFO] v - %s", v))
-			local location = Tracker:FindObjectForCode(k)
-			location.AvailableChestCount = location.AvailableChestCount - v
+		if items_codes_autotracking_cache[code]["LOC_ACTIVE"] then
+			for k, v in pairs(items_codes_autotracking_cache[code]["LOC_ACTIVE"]) do
+				print(string.format("[MAP][INFO] k - %s", k))
+				print(string.format("[MAP][INFO] v - %s", v))
+				local location = Tracker:FindObjectForCode(k)
+				location.AvailableChestCount = v
+			end
 		end
 	end
 end
@@ -3667,6 +3677,7 @@ function area(segment)
 			local hex2 = string.upper(string.format('%02x',hex2))
 			print(string.format("[MAP][INFO] hex2 - %s", hex2))
 			local hex = hex2..hex1
+			AUTOTRACKING_dungeons=hex
 			print(string.format("[MAP][INFO] hex - %s", hex))
 			--local hex = string.upper(string.format('%04x',hex))
 			--local hex = string.upper(string.format('%04s',hex))
@@ -3691,34 +3702,116 @@ function area(segment)
 					end
 				elseif ( flag_room == "DWS_ENTER" ) then
 					code_type_cache["DWS_ENTER"] = 1
+					AUTOTRACKING_dungeons="dws_none"
 					UPDATE(flag_room)
 				elseif ( flag_room == "COF_ENTER" ) then
 					code_type_cache["COF_ENTER"] = 1
+					AUTOTRACKING_dungeons="cof_none"
 					UPDATE(flag_room)
 				elseif ( flag_room == "FOW_ENTER" ) then
 					code_type_cache["FOW_ENTER"] = 1
+					AUTOTRACKING_dungeons="fow_none"
 					UPDATE(flag_room)
 				elseif ( flag_room == "FOW_WARPS" ) then
 					code_type_cache["FOW_WARPS"] = 1
 					UPDATE(flag_room)
 				elseif ( flag_room == "TOD_ENTER" ) then
 					code_type_cache["TOD_ENTER"] = 1
+					AUTOTRACKING_dungeons="tod_none"
 					UPDATE(flag_room)
 				elseif ( flag_room == "POW_ENTER" ) then
 					code_type_cache["POW_ENTER"] = 1
+					AUTOTRACKING_dungeons="pow_none"
 					UPDATE(flag_room)
 				elseif ( flag_room == "RC_ENTER" ) then
 					code_type_cache["RC_ENTER"] = 1
+					AUTOTRACKING_dungeons="crypt_none"
 					UPDATE(flag_room)
 				elseif ( flag_room == "DHC_WARPS" ) then
 					code_type_cache["DHC_WARPS"] = 1
 					UPDATE(flag_room)
 				elseif ( flag_room == "DHC_ENTER" ) then
 					code_type_cache["DHC_ENTER"] = 1
+					AUTOTRACKING_dungeons="dhc_none"
 					UPDATE(flag_room)
+				elseif ( flag_room == "DHC_ENTRANCE" ) then
+					AUTOTRACKING_dungeons="dhc_none"
+				end
+				if code_type_cache["ENTRANCE_IN_DWS"] == 1 and AUTOTRACKING_dungeons~=hex then
+					local item = Tracker:FindObjectForCode(AUTOTRACKING_dungeons)
+					item.CurrentStage = 1
+				elseif AUTOTRACKING_dungeons~=AUTOTRACKING_dungeons_last then
+					code_type_cache["ENTRANCE_IN_DWS"] = 0
+				end
+				if code_type_cache["ENTRANCE_IN_COF"] == 1 and AUTOTRACKING_dungeons~=hex then
+					local item = Tracker:FindObjectForCode(AUTOTRACKING_dungeons)
+					item.CurrentStage = 2
+				elseif AUTOTRACKING_dungeons~=AUTOTRACKING_dungeons_last then
+					code_type_cache["ENTRANCE_IN_COF"] = 0
+				end
+				if code_type_cache["ENTRANCE_IN_FOW"] == 1 and AUTOTRACKING_dungeons~=hex then
+					local item = Tracker:FindObjectForCode(AUTOTRACKING_dungeons)
+					item.CurrentStage = 3
+				elseif AUTOTRACKING_dungeons~=AUTOTRACKING_dungeons_last then
+					code_type_cache["ENTRANCE_IN_FOW"] = 0
+				end
+				if code_type_cache["ENTRANCE_IN_RC"] == 1 and AUTOTRACKING_dungeons~=hex then
+					local item = Tracker:FindObjectForCode(AUTOTRACKING_dungeons)
+					item.CurrentStage = 5
+				elseif AUTOTRACKING_dungeons~=AUTOTRACKING_dungeons_last then
+					code_type_cache["ENTRANCE_IN_RC"] = 0
+				end
+				if code_type_cache["ENTRANCE_IN_TOD"] == 1 and AUTOTRACKING_dungeons~=hex then
+					local item = Tracker:FindObjectForCode(AUTOTRACKING_dungeons)
+					item.CurrentStage = 4
+				elseif AUTOTRACKING_dungeons~=AUTOTRACKING_dungeons_last then
+					code_type_cache["ENTRANCE_IN_TOD"] = 0
+				end
+				if code_type_cache["ENTRANCE_IN_POW"] == 1 and AUTOTRACKING_dungeons~=hex then
+					local item = Tracker:FindObjectForCode(AUTOTRACKING_dungeons)
+					item.CurrentStage = 6
+				elseif AUTOTRACKING_dungeons~=AUTOTRACKING_dungeons_last then
+					code_type_cache["ENTRANCE_IN_POW"] = 0
+				end
+				if code_type_cache["ENTRANCE_IN_DHC"] == 1 and AUTOTRACKING_dungeons~=hex then
+					local item = Tracker:FindObjectForCode(AUTOTRACKING_dungeons)
+					item.CurrentStage = 7
+				elseif AUTOTRACKING_dungeons~=AUTOTRACKING_dungeons_last then
+					code_type_cache["ENTRANCE_IN_DHC"] = 0
+				end
+				if flag_room == "ENTRANCE_IN_DWS" then
+					code_type_cache["ENTRANCE_IN_DWS"] = 1
+				end
+				if flag_room == "ENTRANCE_IN_COF" then
+					code_type_cache["ENTRANCE_IN_COF"] = 1
+				end
+				if flag_room == "ENTRANCE_IN_FOW" then
+					code_type_cache["ENTRANCE_IN_FOW"] = 1
+				end
+				if flag_room == "ENTRANCE_IN_RC" then
+					code_type_cache["ENTRANCE_IN_RC"] = 1
+				end
+				if flag_room == "ENTRANCE_IN_TOD" then
+					code_type_cache["ENTRANCE_IN_TOD"] = 1
+				end
+				if flag_room == "ENTRANCE_IN_POW" then
+					code_type_cache["ENTRANCE_IN_POW"] = 1
+				end
+				if flag_room == "ENTRANCE_IN_DHC" then
+					code_type_cache["ENTRANCE_IN_DHC"] = 1
 				end
 			end
 		end
+		AUTOTRACKING_dungeons_last=hex
+		print(string.format("[MAP][INFO] AUTOTRACKING_dungeons  - %s", AUTOTRACKING_dungeons))
+		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DWS\"]  - %s", code_type_cache["ENTRANCE_IN_DWS"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_COF\"]  - %s", code_type_cache["ENTRANCE_IN_COF"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_FOW\"]  - %s", code_type_cache["ENTRANCE_IN_FOW"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_RC\"]  - %s", code_type_cache["ENTRANCE_IN_RC"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_TOD\"]  - %s", code_type_cache["ENTRANCE_IN_TOD"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_POW\"]  - %s", code_type_cache["ENTRANCE_IN_POW"] ))
+		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DHC\"]  - %s", code_type_cache["ENTRANCE_IN_DHC"] ))
+
 		print(string.format("[MAP][INFO] code_type_cache[\"POT_SPOT\"]  - %s", code_type_cache["POT_SPOT"] ))
 		print(string.format("[MAP][INFO] code_type_cache[\"UNDERWATER_SPOT\"]  - %s", code_type_cache["UNDERWATER_SPOT"] ))
 		print(string.format("[MAP][INFO] code_type_cache[\"DIG_SPOT\"]  - %s", code_type_cache["DIG_SPOT"] ))
