@@ -248,8 +248,7 @@ end
 function Percy()
 	if (has("openworld_on")) then
 		return 1
-	--elseif ((has("fusionred_complet") or (has("fusionred_vanilla") and has("fusions21"))) and has("lamp")) then
-	elseif (has("lamp")) then
+	elseif ( ( ( has("fusionred_vanilla") and has("fusions21") ) or has("fusionred_complet") ) and has("lamp") ) then
 		return 1
 	else
 		return 0
