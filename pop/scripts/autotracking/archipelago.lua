@@ -356,8 +356,8 @@ function apply_slot_data(slot_data)
 			end
 			if SLOTS_DATA_MAPPING[slots_data_key][1] then
 				local obj = Tracker:FindObjectForCode(SLOTS_DATA_MAPPING[slots_data_key][1])
-
-				if obj then
+				local setting = Tracker:FindObjectForCode("auto_setting_no")
+				if obj and setting and setting.CurrentStage == 1 then
 					if SLOTS_DATA_MAPPING[slots_data_key][2] == "INT" then
 						if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3][1]))
@@ -372,6 +372,21 @@ function apply_slot_data(slot_data)
 						end
 					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "OPT" then
 						slots_data_entry = slots_data_entry + 1
+						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry] then
+							if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+								print(string.format("[SLOT DATA][INFO] slots_data_entry + 1: %s", slots_data_entry))
+								print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][%s]: %s", slots_data_key, slots_data_entry, SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]))
+							end
+							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]
+						else
+							obj.CurrentStage = 0
+						end
+					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "BOOL" then
+						if slots_data_entry==true then
+							slots_data_entry=2
+						else
+							slots_data_entry=1
+						end 
 						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry] then
 							if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 								print(string.format("[SLOT DATA][INFO] slots_data_entry + 1: %s", slots_data_entry))
@@ -755,6 +770,10 @@ end
 
 function updateMap(v, reset)
 	if v ~= nil then
+		local tab_auto = Tracker:FindObjectForCode("auto_tab_no")
+		if tab_auto and tab_auto.CurrentStage == 0 then
+			return
+		end
 		local hex = string.upper(string.format('%04x',v))
 
 		local hex2 = string.upper(string.sub(hex,string.len(hex)-1,string.len(hex)))
@@ -774,31 +793,83 @@ function updateMap(v, reset)
 			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING[00] - %s",ROOM_FLAG_MAPPING["00"]))
 			print(string.format("----- MAP -----"))
 		end
-		--if has("op_auto_tab_on") then
 		if ROOM_FLAG_MAPPING_SPEC[hex] then
 			local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
+			local number_tab = 0
 			if tabs2 then
-					for _, tab in ipairs(tabs2) do
+				for _, tab in ipairs(tabs2) do
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							print(string.format("----- TAB -----"))
+							print(string.format("[TAB][INFO] tab - %s", tab))
+							print(string.format("[TAB][INFO] number_tab - %s", number_tab))
+							print(string.format("----- TAB -----"))
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							print(string.format("----- TAB -----"))
+							print(string.format("[TAB][INFO] tab - Dungeon", tab))
+							print(string.format("[TAB][INFO] number_tab - %s", number_tab))
+							print(string.format("----- TAB -----"))
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
 						Tracker:UiHint("ActivateTab", tab)
 					end
+				end
 			end
 		elseif ROOM_FLAG_MAPPING[hex2] then
 			local tabs = ROOM_FLAG_MAPPING[hex2][0]
+			local number_tab = 0
 			if tabs then
-					for _, tab in ipairs(tabs) do
+				for _, tab in ipairs(tabs) do
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							print(string.format("----- TAB -----"))
+							print(string.format("[TAB][INFO] tab - %s", tab))
+							print(string.format("[TAB][INFO] number_tab - %s", number_tab))
+							print(string.format("----- TAB -----"))
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							print(string.format("----- TAB -----"))
+							print(string.format("[TAB][INFO] tab - Dungeon", tab))
+							print(string.format("[TAB][INFO] number_tab - %s", number_tab))
+							print(string.format("----- TAB -----"))
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
 						Tracker:UiHint("ActivateTab", tab)
 					end
+				end
 			end
 		else
 			local tabs3 = ROOM_FLAG_MAPPING["00"][0]
+			local number_tab = 0
 			if tabs3 then
 				for _, tab in ipairs(tabs3) do
-					Tracker:UiHint("ActivateTab", tab)
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							print(string.format("----- TAB -----"))
+							print(string.format("[TAB][INFO] tab - %s", tab))
+							print(string.format("[TAB][INFO] number_tab - %s", number_tab))
+							print(string.format("----- TAB -----"))
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							print(string.format("----- TAB -----"))
+							print(string.format("[TAB][INFO] tab - Dungeon", tab))
+							print(string.format("[TAB][INFO] number_tab - %s", number_tab))
+							print(string.format("----- TAB -----"))
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
+						Tracker:UiHint("ActivateTab", tab)
+					end
 				end
 			end
 		end
 	end
-    --end
 end
 
 

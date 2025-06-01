@@ -239,96 +239,96 @@ end
 if (string.find(Tracker.ActiveVariantUID, "AP")) then
 	has_item_data_dev["spec"] = {}
 
-has_item_data_dev["dungeonser_off"] = true
-has_item_data_dev["dungeonser_on"] = false
+-- has_item_data_dev["dungeonser_off"] = true
+-- has_item_data_dev["dungeonser_on"] = false
 
-has_item_data_dev["open_wind_tribe_no"] = true
-has_item_data_dev["open_wind_tribe_yes"] = false
+-- has_item_data_dev["open_wind_tribe_no"] = true
+-- has_item_data_dev["open_wind_tribe_yes"] = false
 
-has_item_data_dev["open_tingle_no"] = true
-has_item_data_dev["open_tingle_yes"] = false
+-- has_item_data_dev["open_tingle_no"] = true
+-- has_item_data_dev["open_tingle_yes"] = false
 
-has_item_data_dev["open_library_no"] = true
-has_item_data_dev["open_library_yes"] = false
+-- has_item_data_dev["open_library_no"] = true
+-- has_item_data_dev["open_library_yes"] = false
 
-has_item_data_dev["dws_none"] = false
-has_item_data_dev["dws_dws"] = true
-has_item_data_dev["dws_cof"] = false
-has_item_data_dev["dws_fow"] = false
-has_item_data_dev["dws_tod"] = false
-has_item_data_dev["dws_crypt"] = false
-has_item_data_dev["dws_pow"] = false
-has_item_data_dev["dws_dhc"] = false
+-- has_item_data_dev["dws_none"] = false
+-- has_item_data_dev["dws_dws"] = true
+-- has_item_data_dev["dws_cof"] = false
+-- has_item_data_dev["dws_fow"] = false
+-- has_item_data_dev["dws_tod"] = false
+-- has_item_data_dev["dws_crypt"] = false
+-- has_item_data_dev["dws_pow"] = false
+-- has_item_data_dev["dws_dhc"] = false
 
-has_item_data_dev["cof_none"] = false
-has_item_data_dev["cof_dws"] = false
-has_item_data_dev["cof_cof"] = true
-has_item_data_dev["cof_fow"] = false
-has_item_data_dev["cof_tod"] = false
-has_item_data_dev["cof_crypt"] = false
-has_item_data_dev["cof_pow"] = false
-has_item_data_dev["cof_dhc"] = false
+-- has_item_data_dev["cof_none"] = false
+-- has_item_data_dev["cof_dws"] = false
+-- has_item_data_dev["cof_cof"] = true
+-- has_item_data_dev["cof_fow"] = false
+-- has_item_data_dev["cof_tod"] = false
+-- has_item_data_dev["cof_crypt"] = false
+-- has_item_data_dev["cof_pow"] = false
+-- has_item_data_dev["cof_dhc"] = false
 
-has_item_data_dev["fow_none"] = false
-has_item_data_dev["fow_dws"] = false
-has_item_data_dev["fow_cof"] = false
-has_item_data_dev["fow_fow"] = true
-has_item_data_dev["fow_tod"] = false
-has_item_data_dev["fow_crypt"] = false
-has_item_data_dev["fow_pow"] = false
-has_item_data_dev["fow_dhc"] = false
+-- has_item_data_dev["fow_none"] = false
+-- has_item_data_dev["fow_dws"] = false
+-- has_item_data_dev["fow_cof"] = false
+-- has_item_data_dev["fow_fow"] = true
+-- has_item_data_dev["fow_tod"] = false
+-- has_item_data_dev["fow_crypt"] = false
+-- has_item_data_dev["fow_pow"] = false
+-- has_item_data_dev["fow_dhc"] = false
 
-has_item_data_dev["tod_none"] = false
-has_item_data_dev["tod_dws"] = false
-has_item_data_dev["tod_cof"] = false
-has_item_data_dev["tod_fow"] = false
-has_item_data_dev["tod_tod"] = true
-has_item_data_dev["tod_crypt"] = false
-has_item_data_dev["tod_pow"] = false
-has_item_data_dev["tod_dhc"] = false
+-- has_item_data_dev["tod_none"] = false
+-- has_item_data_dev["tod_dws"] = false
+-- has_item_data_dev["tod_cof"] = false
+-- has_item_data_dev["tod_fow"] = false
+-- has_item_data_dev["tod_tod"] = true
+-- has_item_data_dev["tod_crypt"] = false
+-- has_item_data_dev["tod_pow"] = false
+-- has_item_data_dev["tod_dhc"] = false
 
-has_item_data_dev["crypt_none"] = false
-has_item_data_dev["crypt_dws"] = false
-has_item_data_dev["crypt_cof"] = false
-has_item_data_dev["crypt_fow"] = false
-has_item_data_dev["crypt_tod"] = false
-has_item_data_dev["crypt_crypt"] = true
-has_item_data_dev["crypt_pow"] = false
-has_item_data_dev["crypt_dhc"] = false
+-- has_item_data_dev["crypt_none"] = false
+-- has_item_data_dev["crypt_dws"] = false
+-- has_item_data_dev["crypt_cof"] = false
+-- has_item_data_dev["crypt_fow"] = false
+-- has_item_data_dev["crypt_tod"] = false
+-- has_item_data_dev["crypt_crypt"] = true
+-- has_item_data_dev["crypt_pow"] = false
+-- has_item_data_dev["crypt_dhc"] = false
 
-has_item_data_dev["pow_none"] = false
-has_item_data_dev["pow_dws"] = false
-has_item_data_dev["pow_cof"] = false
-has_item_data_dev["pow_fow"] = false
-has_item_data_dev["pow_tod"] = false
-has_item_data_dev["pow_crypt"] = false
-has_item_data_dev["pow_pow"] = true
-has_item_data_dev["pow_dhc"] = false
+-- has_item_data_dev["pow_none"] = false
+-- has_item_data_dev["pow_dws"] = false
+-- has_item_data_dev["pow_cof"] = false
+-- has_item_data_dev["pow_fow"] = false
+-- has_item_data_dev["pow_tod"] = false
+-- has_item_data_dev["pow_crypt"] = false
+-- has_item_data_dev["pow_pow"] = true
+-- has_item_data_dev["pow_dhc"] = false
 
-has_item_data_dev["dhc_none"] = false
-has_item_data_dev["dhc_dws"] = false
-has_item_data_dev["dhc_cof"] = false
-has_item_data_dev["dhc_fow"] = false
-has_item_data_dev["dhc_tod"] = false
-has_item_data_dev["dhc_crypt"] = false
-has_item_data_dev["dhc_pow"] = false
-has_item_data_dev["dhc_dhc"] = true
+-- has_item_data_dev["dhc_none"] = false
+-- has_item_data_dev["dhc_dws"] = false
+-- has_item_data_dev["dhc_cof"] = false
+-- has_item_data_dev["dhc_fow"] = false
+-- has_item_data_dev["dhc_tod"] = false
+-- has_item_data_dev["dhc_crypt"] = false
+-- has_item_data_dev["dhc_pow"] = false
+-- has_item_data_dev["dhc_dhc"] = true
 
-has_item_data_dev["dhc_open"] = false
-has_item_data_dev["spec"]["dhc_open"] = {}
-has_item_data_dev["spec"]["dhc_open"]["desactive"] = true
-has_item_data_dev["spec"]["dhc_open"]["name"] = "dhc_closed"
-has_item_data_dev["spec"]["dhc_open"]["def"] = 0
+-- has_item_data_dev["dhc_open"] = false
+-- has_item_data_dev["spec"]["dhc_open"] = {}
+-- has_item_data_dev["spec"]["dhc_open"]["desactive"] = true
+-- has_item_data_dev["spec"]["dhc_open"]["name"] = "dhc_closed"
+-- has_item_data_dev["spec"]["dhc_open"]["def"] = 0
 
-has_item_data_dev["biggoron_none"] = true
-has_item_data_dev["biggoron_shield"] = false
-has_item_data_dev["biggoron_mirror"] = false
+-- has_item_data_dev["biggoron_none"] = true
+-- has_item_data_dev["biggoron_shield"] = false
+-- has_item_data_dev["biggoron_mirror"] = false
 
-has_item_data_dev["golden_enemy_off"] = true
-has_item_data_dev["golden_enemy_on"] = false
+-- has_item_data_dev["golden_enemy_off"] = true
+-- has_item_data_dev["golden_enemy_on"] = false
 
-has_item_data_dev["goron_eu"] = true
-has_item_data_dev["goron_jp"] = false
+-- has_item_data_dev["goron_eu"] = true
+-- has_item_data_dev["goron_jp"] = false
 
 	if PopVersion then
 		Tracker:AddLayouts(JsLayouts.."AP_trackerPOP.json")
