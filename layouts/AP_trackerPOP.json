@@ -369,8 +369,11 @@
 				"rows": [
 					[
 						"open_wind_tribe_no",
-						"open_tingle_no",
-						"open_library_no"
+						"open_tingle_no"
+					],
+					[
+						"open_library_no",
+						""
 					]
 				]
 			}
