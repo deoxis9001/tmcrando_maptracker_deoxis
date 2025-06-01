@@ -2249,6 +2249,49 @@
     ]
   },
   {
+    "name": "auto settings",
+    "type": "progressive",
+    "loop": true,
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/tracker/settings/auto_setting_no.png",
+        "codes": "auto_setting_no",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/tracker/settings/auto_setting_yes.png",
+        "codes": "auto_setting_yes",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "auto tab",
+    "type": "progressive",
+    "loop": true,
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/tracker/settings/auto_tab_no.png",
+        "codes": "auto_tab_no",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/tracker/settings/auto_tab_yes.png",
+        "codes": "auto_tab_yes",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/tracker/settings/auto_tab_dungeon.png",
+        "codes": "auto_tab_dungeon",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
     "name": "Out of logic\nactivates out of logic on tracker, yellow square",
     "type": "progressive",
     "loop": true,
