@@ -239,7 +239,6 @@ end
 if (string.find(Tracker.ActiveVariantUID, "AP")) then
 	has_item_data_dev["spec"] = {}
 
-has_item_data_dev["fow_cof"] = false
 -- has_item_data_dev["dungeonser_off"] = true
 -- has_item_data_dev["dungeonser_on"] = false
 
