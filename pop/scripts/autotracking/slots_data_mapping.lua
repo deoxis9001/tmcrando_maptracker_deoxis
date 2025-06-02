@@ -22,6 +22,7 @@ SLOTS_DATA_MAPPING = {
     ["shuffle_digging"]   =   {"digging_off","OPT",{0,1}},
     ["shuffle_underwater"]   =   {"underwater_off","OPT",{0,1}},
     ["shuffle_pedestal"]   =   {"ped_items_off","OPT",{0,1}},
+    ["shuffle_gold_enemies"] = {"golden_enemy_off","OPT",{0,1}},
     ["kinstones_gold"]   =   {"fusiongold_removed","KIN",{0,1,3,2},"fusiongoldcombined"},
     ["kinstones_red"]   =   {"fusionred_removed","KIN",{0,1,3,2},"fusionredcombined"},
     ["kinstones_blue"]   =   {"fusionblue_removed","KIN",{0,1,3,2},"fusionbluecombined"},
