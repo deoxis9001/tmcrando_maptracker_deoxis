@@ -341,6 +341,8 @@ function apply_slot_data(slot_data)
 	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
 	end
+	local obj = Tracker:FindObjectForCode("dungeonser_off")
+	obj.CurrentStage = 0
 	for slots_data_key, slots_data_entry in pairs(slot_data) do
 		if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 			print(string.format(" /---  ---  ---\\ "))

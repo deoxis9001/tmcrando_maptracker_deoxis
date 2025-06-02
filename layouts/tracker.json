@@ -575,15 +575,7 @@
 				 "type":"layout",
 				 "key": "tracker_out_of_logic_other"
 				}
-			 },
-/*			 {
-				"title":"Tracking",
-				"icon":"images/icon-maps/Swordsman Newsletter 8.png",
-				"content":{
-				 "type":"layout",
-				 "key": "tracker_tracking"
-				}
-			 },*/
+			 }
 			]
 		 }
 		]
