@@ -68,6 +68,8 @@ function autotracker_started()
 	code_type_cache["DIG_SPOT"] = 0
 	code_type_cache["UNDERWATER_SPOT"] = 0
 	code_type_cache["OCARINA"] = 0
+	code_type_cache["SWORD"] = 0
+	code_type_cache["SWORD_COUNT"] = 0
 	DWS_KEY_COUNT = 0
 	DWS_KEY_USED = 0
 	COF_KEY_COUNT = 0
@@ -125,6 +127,7 @@ function autotracker_started()
 	fusion_count_wall["greenC"] = 0
 	fusion_count_wall["greenP"] = 0
 	KEY_STOLEN = false
+	swordprogress:setActive(true)
 end
 
 U8_READ_CACHE = 0
@@ -336,6 +339,8 @@ function smithswordCheck(segment, code, address, flag)
 
 		if flagTest ~= 0 then
 			smithsword:setActive(true)
+			code_type_cache["SWORD_COUNT"]=code_type_cache["SWORD_COUNT"]+1
+			code_type_cache["SWORD"]=1
 		else
 			smithsword:setActive(false)
 		end
@@ -353,6 +358,8 @@ function greenswordCheck(segment, code, address, flag)
 
 		if flagTest ~= 0 then
 			greensword:setActive(true)
+			code_type_cache["SWORD_COUNT"]=code_type_cache["SWORD_COUNT"]+1
+			code_type_cache["SWORD"]=2
 		else
 			greensword:setActive(false)
 		end
@@ -370,6 +377,8 @@ function redswordCheck(segment, code, address, flag)
 
 		if flagTest ~= 0 then
 			redsword:setActive(true)
+			code_type_cache["SWORD_COUNT"]=code_type_cache["SWORD_COUNT"]+1
+			code_type_cache["SWORD"]=3
 		else
 			redsword:setActive(false)
 		end
@@ -387,6 +396,8 @@ function blueswordCheck(segment, code, address, flag)
 
 		if flagTest ~= 0 then
 			bluesword:setActive(true)
+			code_type_cache["SWORD_COUNT"]=code_type_cache["SWORD_COUNT"]+1
+			code_type_cache["SWORD"]=4
 		else
 			bluesword:setActive(false)
 		end
@@ -404,6 +415,8 @@ function fourswordCheck(segment, code, address, flag)
 
 		if flagTest ~= 0 then
 			foursword:setActive(true)
+			code_type_cache["SWORD_COUNT"]=code_type_cache["SWORD_COUNT"]+1
+			code_type_cache["SWORD"]=5
 		else
 			foursword:setActive(false)
 		end
@@ -2284,7 +2297,24 @@ function UpdateGoronShop(segment)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Items Other", 2)
 	end
 end
-
+function swordCheckFlag(segment)
+		code_type_cache["SWORD_COUNT"]=0
+		smithswordCheck(segment, "smithsword", 0x2002b32, 0x04)
+		greenswordCheck(segment, "greensword", 0x2002b32, 0x10)
+		redswordCheck(segment, "redsword", 0x2002b32, 0x40)
+		blueswordCheck(segment, "bluesword", 0x2002b33, 0x01)
+		fourswordCheck(segment, "foursword", 0x2002b33, 0x10)
+		if code_type_cache["SWORD"]>code_type_cache["SWORD_COUNT"] then
+			swordprogress:setActive(false)
+		end
+		code_type_cache["SWORD_COUNT"]=0
+		smithswordCheck(segment, "smithsword", 0x2002b32, 0x04)
+		greenswordCheck(segment, "greensword", 0x2002b32, 0x10)
+		redswordCheck(segment, "redsword", 0x2002b32, 0x40)
+		blueswordCheck(segment, "bluesword", 0x2002b33, 0x01)
+		fourswordCheck(segment, "foursword", 0x2002b33, 0x10)
+		
+end
 function updateItemsFromMemorySegment(segment)
 	if not isInGame() then
 		return false
@@ -2292,6 +2322,7 @@ function updateItemsFromMemorySegment(segment)
 	InvalidateReadCaches()
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
+		swordCheckFlag(segment)
 		updateToggleFlag(segment, "remote", 0x2002b34, 0x01)
 		updateToggleFlag(segment, "gust", 0x2002b36, 0x04)
 		updateToggleFlag(segment, "cane", 0x2002b36, 0x10)
@@ -2323,11 +2354,6 @@ function updateItemsFromMemorySegment(segment)
 		updateToggleFlag(segment, "fire", 0x2002b42, 0x04)
 		updateToggleFlag(segment, "water", 0x2002b42, 0x10)
 		updateToggleFlag(segment, "wind", 0x2002b42, 0x40)
-		smithswordCheck(segment, "smithsword", 0x2002b32, 0x04)
-		greenswordCheck(segment, "greensword", 0x2002b32, 0x10)
-		redswordCheck(segment, "redsword", 0x2002b32, 0x40)
-		blueswordCheck(segment, "bluesword", 0x2002b33, 0x01)
-		fourswordCheck(segment, "foursword", 0x2002b33, 0x10)
 
 		updateLLRKey(segment, "llrkey", 0x2002b3f, 0x40)
 		updateDogFood(segment, "dogbottle", 0x2002b3f, 0x10)
@@ -3700,6 +3726,16 @@ function area(segment)
 						code_type_cache["DIG_SPOT"]  = 1
 						UPDATE(flag_room)
 					end
+				elseif ( flag_room == "TRIBE_EARLY" ) then
+					code_type_cache["TRIBE_EARLY"] = 1
+					local item = Tracker:FindObjectForCode("open_wind_tribe_no")
+					item.CurrentStage = 1
+					UPDATE(flag_room)
+				elseif ( flag_room == "LIBRARY" ) then
+					code_type_cache["LIBRARY"] = 1
+					local item = Tracker:FindObjectForCode("open_library_no")
+					item.CurrentStage = 1
+					UPDATE(flag_room)
 				elseif ( flag_room == "DWS_ENTER" ) then
 					code_type_cache["DWS_ENTER"] = 1
 					AUTOTRACKING_dungeons="dws_none"
@@ -3823,6 +3859,9 @@ function area(segment)
 		print(string.format("[MAP][INFO] code_type_cache[\"POW_ENTER\"] - %s", code_type_cache["POW_ENTER"]))
 		print(string.format("[MAP][INFO] code_type_cache[\"RC_ENTER\"] - %s", code_type_cache["RC_ENTER"]))
 		print(string.format("[MAP][INFO] code_type_cache[\"DHC_ENTER\"] - %s", code_type_cache["DHC_ENTER"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"TRIBE_EARLY\"] - %s", code_type_cache["TRIBE_EARLY"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"SWORD\"] - %s", code_type_cache["SWORD"]))
+		print(string.format("[MAP][INFO] code_type_cache[\"SWORD_COUNT\"] - %s", code_type_cache["SWORD_COUNT"]))
 		print(string.format("[MAP][INFO] code_type_cache[\"OCARINA\"] - %s", code_type_cache["OCARINA"]))
 	end
 end
