@@ -61,4 +61,5 @@ SLOTS_DATA_MAPPING = {
     ["trick_dhc_cannons_no_four_sword"]   =   {"dhccanonhit_off","OPT",{0,1}},
     ["trick_dhc_pads_no_four_sword"]   =   {"dhcbladepuzzleshuffle_off","OPT",{0,1}},
     ["trick_dhc_switches_no_four_sword"]   =   {"dhcswitchhit_off","OPT",{0,1}},
+    ["entrance_rando"] = {"dungeonser_off","OPT",{0,1}},
 }
