@@ -62,4 +62,9 @@ SLOTS_DATA_MAPPING = {
     ["trick_dhc_pads_no_four_sword"]   =   {"dhcbladepuzzleshuffle_off","OPT",{0,1}},
     ["trick_dhc_switches_no_four_sword"]   =   {"dhcswitchhit_off","OPT",{0,1}},
     ["entrance_rando"] = {"dungeonser_off","OPT",{0,1}},
+    ["goron_jp_prices"] = {"dungeonser_off","OPT",{0,1}},
+    ["shuffle_biggoron"] = {"dungeonser_off","OPT",{0,1}},
+    ["open_wind_tribe"] = {"open_wind_tribe_no","OPT",{0,1}},
+    ["open_tingle_brothers"] = {"open_tingle_no","OPT",{0,1}},
+    ["open_library"] = {"biggoron_none","OPT",{0,1}},
 }
