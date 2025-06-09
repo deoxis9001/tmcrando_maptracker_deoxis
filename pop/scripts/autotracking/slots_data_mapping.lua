@@ -67,4 +67,18 @@ SLOTS_DATA_MAPPING = {
     ["open_wind_tribe"] = {"open_wind_tribe_no","OPT",{0,1}},
     ["open_tingle_brothers"] = {"open_tingle_no","OPT",{0,1}},
     ["open_library"] = {"biggoron_none","OPT",{0,1}},
+    ["prize_dws"] = {"dwsx","PRIZE"},
+    ["prize_cof"] = {"cofx","PRIZE"},
+    ["prize_fow"] = {"fowx","PRIZE"},
+    ["prize_tod"] = {"todx","PRIZE"},
+    ["prize_rc"] = {"rcx","PRIZE"},
+    ["prize_pow"] = {"powx","PRIZE"},
+}
+SLOTS_DATA_RESET_MAPPING = {
+    ["prize_dws"] = {"dwsx"},
+    ["prize_cof"] = {"cofx"},
+    ["prize_fow"] = {"fowx"},
+    ["prize_tod"] = {"todx"},
+    ["prize_rc"] = {"rcx"},
+    ["prize_pow"] = {"powx"},
 }
