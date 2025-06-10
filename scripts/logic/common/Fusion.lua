@@ -577,14 +577,14 @@ end
 function MinishWoods_Scrub_Fuser1()
 	if
 		(FusionsGreenNumber("greenC") == 1 and function_Cached("AccessMinishWoods") == 1 and function_Cached("Scrubs") == 1 and
-			has("fusions27"))
+			( has("fusions27") or has("fusionblue_complet") ))
 	 then
 		return 1
 	elseif
 		((FusionsGreenNumber("greenC") == 1 or FusionsGreenNumber("greenC") == 2) and
 			(function_Cached("AccessMinishWoods") == 1 or function_Cached("AccessMinishWoods") == 2) and
 			function_Cached("Scrubs") == 1 and
-			has("fusions27"))
+			( has("fusions27") or has("fusionblue_complet") ))
 	 then
 		return 2
 	else
@@ -595,7 +595,7 @@ end
 function MinishWoods_Scrub_Fuser2()
 	if
 		(FusionsGreenNumber("greenP") == 1 and function_Cached("AccessMinishWoods") == 1 and function_Cached("Scrubs") == 1 and
-			has("fusions27") and
+			( has("fusions27") or has("fusionblue_complet") ) and
 			function_Cached("MinishWoods_Scrub_Fuser1") == 1)
 	 then
 		return 1
@@ -603,7 +603,7 @@ function MinishWoods_Scrub_Fuser2()
 		((FusionsGreenNumber("greenP") == 1 or FusionsGreenNumber("greenP") == 2) and
 			(function_Cached("AccessMinishWoods") == 1 or function_Cached("AccessMinishWoods") == 2) and
 			function_Cached("Scrubs") == 1 and
-			has("fusions27") and
+			( has("fusions27") or has("fusionblue_complet") ) and
 			(function_Cached("MinishWoods_Scrub_Fuser1") == 1 or function_Cached("MinishWoods_Scrub_Fuser1") == 2))
 	 then
 		return 2
