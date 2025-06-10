@@ -342,8 +342,8 @@
       },
       {
         "name": "Fuser Zill 3 ( above Library )",
-        "hosted_item": "$LibraryWorld,fusions3e",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
+        "hosted_item": "fusions3e",
+        "visibility_rules": ["$LibraryWorld,$has|fusiongreen_vanilla"],
         "access_rules": ["^$Json_Town_Library_Fuser5"]
       }
     ]
