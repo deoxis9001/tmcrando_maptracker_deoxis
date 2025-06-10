@@ -165,60 +165,32 @@ function incrementItem(item_code, item_type, multiplier)
 				print(string.format("[ITEM][INCREMENT] %s.multiplier : %s", item_code,multiplier))
 			end
 		elseif item_type == "spin" then
-			if item_code == "spinattack" then
-				if spin_setting_count==0 then
+			if spin_setting_count==0 then
 					Tracker:FindObjectForCode("spinattack").Active=true
 					spin_setting_count=1
-				elseif  spin_setting_count == 2 then
-					if Tracker:FindObjectForCode("greatspin").Active then
-						Tracker:FindObjectForCode("longspin").Active = true
-					else
-						Tracker:FindObjectForCode("greatspin").Active = true
-					end
-				elseif  spin_setting_count == 3 then
-					Tracker:FindObjectForCode("fastspin").Active  = true
-				elseif  spin_setting_count == 4 then
-					Tracker:FindObjectForCode("fastsplit").Active  = true
-				end
-			end
-			if item_code == "greatspin" then
-				if spin_setting_count~=0 then
-					if Tracker:FindObjectForCode("greatspin").Active then
-						Tracker:FindObjectForCode("longspin").Active = true
-					else
-						Tracker:FindObjectForCode("greatspin").Active =true
-					end
-				else
-					Tracker:FindObjectForCode("spinattack").Active = true
-					spin_setting_count=2
-				end
-			end
-			if item_code == "longspin" then
-				if spin_setting_count~=0 then
-					if Tracker:FindObjectForCode("greatspin").Active then
-						Tracker:FindObjectForCode("longspin").Active = true
-					else
-						Tracker:FindObjectForCode("greatspin").Active =true
-					end
-				else
-					Tracker:FindObjectForCode("spinattack").Active=true
-					spin_setting_count=2
-				end
-			end
-			if item_code == "fastspin" then
-				if spin_setting_count~=0 then
+			else
+				if item_code == "fastspin" and Tracker:FindObjectForCode("fastspin").Active == false then
 					Tracker:FindObjectForCode("fastspin").Active = true
-				else
-					Tracker:FindObjectForCode("spinattack").Active=true
-					spin_setting_count=3
-				end
-			end
-			if item_code == "fastsplit" then
-				if spin_setting_count~=0 then
+				elseif item_code == "fastsplit" and Tracker:FindObjectForCode("fastsplit").Active == false then
 					Tracker:FindObjectForCode("fastsplit").Active = true
+				elseif item_code == "greatspin" and Tracker:FindObjectForCode("greatspin").Active == false then
+					Tracker:FindObjectForCode("greatspin").Active = true
+				elseif item_code == "longspin" and Tracker:FindObjectForCode("longspin").Active == false then
+					if Tracker:FindObjectForCode("greatspin").Active == false then
+						Tracker:FindObjectForCode("greatspin").Active = true
+					else
+						Tracker:FindObjectForCode("fastspin").Active = true
+					end
 				else
-					Tracker:FindObjectForCode("spinattack").Active = true
-					spin_setting_count=4
+					if Tracker:FindObjectForCode("fastspin").Active == false then
+						Tracker:FindObjectForCode("fastspin").Active = true
+					elseif Tracker:FindObjectForCode("fastsplit").Active == false then
+						Tracker:FindObjectForCode("fastsplit").Active = true
+					elseif Tracker:FindObjectForCode("greatspin").Active == false then
+						Tracker:FindObjectForCode("greatspin").Active = true
+					elseif Tracker:FindObjectForCode("longspin").Active == false then
+						Tracker:FindObjectForCode("longspin").Active = true
+					end
 				end
 			end
 			if AP_AUTOTRACKER_ENABLE_DEBUG_ITEM then
@@ -341,8 +313,6 @@ function apply_slot_data(slot_data)
 	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
 	end
-	local obj = Tracker:FindObjectForCode("dungeonser_off")
-	obj.CurrentStage = 0
 	for slots_data_key, slots_data_entry in pairs(slot_data) do
 		if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 			print(string.format(" /---  ---  ---\\ "))
@@ -382,6 +352,16 @@ function apply_slot_data(slot_data)
 							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]
 						else
 							obj.CurrentStage = 0
+						end
+					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "PRIZE" then
+						slots_data_entry = slots_data_entry + 1
+						if slots_data_entry > 0 then
+							if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+								print(string.format("[SLOT DATA][INFO] slots_data_entry + 1: %s", slots_data_entry))
+							end
+							obj.Active = true
+						else
+							obj.Active = false
 						end
 					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "BOOL" then
 						if slots_data_entry==true then
@@ -459,6 +439,11 @@ function onClear(slot_data)
 	end
 	CUR_INDEX = -1
 	-- reset locations
+	for _, slot_data_reset_entry in pairs(SLOTS_DATA_RESET_MAPPING) do
+		print(string.format("[RESET][LOCATION][INFO] location_code: %s", slot_data_reset_entry[1]))
+		local obj = Tracker:FindObjectForCode(slot_data_reset_entry[1])
+		obj.Active = false
+	end
 	for _, mapping_entry in pairs(LOCATION_MAPPING) do
 		for _, location_table in ipairs(mapping_entry) do
 			if location_table then
@@ -736,10 +721,14 @@ function updateEvents(key, value, reset)
 				local obj = Tracker:FindObjectForCode(key)
 				if reset then
 					obj.AvailableChestCount = obj.ChestCount
-					print(string.format("[EVENT][INFO] %s.AvailableChestCount - %s", key, obj.AvailableChestCount))
+					if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+						print(string.format("[EVENT][INFO] %s.AvailableChestCount - %s", key, obj.AvailableChestCount))
+					end
 				elseif obj then
 					obj.AvailableChestCount = obj.AvailableChestCount - value
-					print(string.format("[EVENT][INFO] %s.AvailableChestCount - %s", key, obj.AvailableChestCount))
+					if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+						print(string.format("[EVENT][INFO] %s.AvailableChestCount - %s", key, obj.AvailableChestCount))
+					end
 				end
 			else
 				local obj = Tracker:FindObjectForCode(key)
