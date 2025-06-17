@@ -6,43 +6,50 @@
 	  {
 		"map":"map",
 		"x":2337,
-		"y":1035,
+		"y":1050,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|cof_tod,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2303,
 		"y":250,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$CloudTopFallVisibility,$has|cof_pow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":592,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$FusionsGold,$has|cof_fow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":323,
 		"y":200,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dungeonser_off","$has|cof_cof,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":827,
 		"y":150,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|cof_crypt,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2282,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|cof_dws,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":1326,
 		"y":130,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|cof_dhc,$has|dungeonser_on"]
 	  }
 	],
@@ -144,43 +151,50 @@
 	  {
 		"map":"map",
 		"x":2337,
-		"y":1035,
+		"y":1050,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|crypt_tod,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2303,
 		"y":250,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$CloudTopFallVisibility,$has|crypt_pow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":592,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$FusionsGold,$has|crypt_fow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":323,
 		"y":200,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|crypt_cof,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":827,
 		"y":150,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dungeonser_off","$has|crypt_crypt,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2282,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|crypt_dws,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":1326,
 		"y":130,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|crypt_dhc,$has|dungeonser_on"]
 	  }
 	],
@@ -231,43 +245,50 @@
 	  {
 		"map":"map",
 		"x":2337,
-		"y":1035,
+		"y":1050,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dws_tod,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2303,
 		"y":250,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$CloudTopFallVisibility,$has|dws_pow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":592,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$FusionsGold,$has|dws_fow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":323,
 		"y":200,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dws_cof,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":827,
 		"y":150,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dws_crypt,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2282,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dungeonser_off","$has|dws_dws,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":1326,
 		"y":130,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dws_dhc,$has|dungeonser_on"]
 	  }
 	],
@@ -387,43 +408,50 @@
 	  {
 		"map":"map",
 		"x":2337,
-		"y":1035,
+		"y":1050,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|fow_tod,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2303,
 		"y":250,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$CloudTopFallVisibility,$has|fow_pow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":592,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$FusionsGold,$has|dungeonser_off","$FusionsGold,$has|fow_fow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":323,
 		"y":200,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|fow_cof,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":827,
 		"y":150,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|fow_crypt,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2282,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|fow_dws,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":1326,
 		"y":130,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|fow_dhc,$has|dungeonser_on"]
 	  }
 	],
@@ -607,43 +635,50 @@
 	  {
 		"map":"map",
 		"x":2337,
-		"y":1035,
+		"y":2050,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|pow_tod,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2303,
 		"y":250,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$CloudTopFallVisibility,$has|dungeonser_off","$CloudTopFallVisibility,$has|pow_pow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":592,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$FusionsGold,$has|pow_fow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":323,
 		"y":200,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|pow_cof,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":827,
 		"y":150,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|pow_crypt,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2282,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|pow_dws,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":1326,
 		"y":130,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|pow_dhc,$has|dungeonser_on"]
 	  }
 	],
@@ -793,43 +828,50 @@
 	  {
 		"map":"map",
 		"x":2337,
-		"y":1035,
+		"y":1050,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dungeonser_off","$has|tod_tod,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2303,
 		"y":250,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$CloudTopFallVisibility,$has|tod_pow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":592,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$FusionsGold,$has|tod_fow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":323,
 		"y":200,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|tod_cof,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":827,
 		"y":150,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|tod_crypt,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2282,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|tod_dws,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":1326,
 		"y":130,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|tod_dhc,$has|dungeonser_on"]
 	  }
 	],
@@ -1013,43 +1055,50 @@
 	  {
 		"map":"map",
 		"x":2337,
-		"y":1035,
+		"y":1050,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dhc_tod,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2303,
 		"y":250,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dhc_pow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":592,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$FusionsGold,$has|dhc_fow,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":323,
 		"y":200,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dhc_cof,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":827,
 		"y":150,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dhc_crypt,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":2282,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dhc_dws,$has|dungeonser_on"]
 	  },
 	  {
 		"map":"map",
 		"x":1326,
 		"y":130,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$has|dungeonser_off","$has|dhc_dhc,$has|dungeonser_on"]
 	  }
 	],
@@ -1175,6 +1224,7 @@
 		"map":"map",
 		"x":1326,
 		"y":130,
+        "shape": "trapezoid",
 		"force_invisibility_rules":["$has|dungeonser_off","$has|dws_dhc","$has|cof_dhc","$has|fow_dhc","$has|tod_dhc","$has|crypt_dhc","$has|pow_dhc","$has|dhc_dhc"]
 	  }
 	],
@@ -1194,7 +1244,8 @@
 	  {
 		"map":"map",
 		"x":2337,
-		"y":1035,
+		"y":1050,
+        "shape": "trapezoid",
 		"force_invisibility_rules":["$has|dungeonser_off","$has|dws_tod","$has|cof_tod","$has|fow_tod","$has|tod_tod","$has|crypt_tod","$has|pow_tod","$has|dhc_tod"]
 	  }
 	],
@@ -1215,6 +1266,7 @@
 		"map":"map",
 		"x":2303,
 		"y":250,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$CloudTopFallVisibility"],
 		"force_invisibility_rules":["$has|dungeonser_off","$has|dws_pow","$has|cof_pow","$has|fow_pow","$has|tod_pow","$has|crypt_pow","$has|pow_pow","$has|dhc_pow"]
 	  }
@@ -1236,6 +1288,7 @@
 		"map":"map",
 		"x":592,
 		"y":1800,
+        "shape": "trapezoid",
 		"restrict_visibility_rules":["$FusionsGold"],
 		"force_invisibility_rules":["$has|dungeonser_off","$has|dws_fow","$has|cof_fow","$has|fow_fow","$has|tod_fow","$has|crypt_fow","$has|pow_fow","$has|dhc_fow"]
 	  }
@@ -1257,6 +1310,7 @@
 		"map":"map",
 		"x":323,
 		"y":200,
+        "shape": "trapezoid",
 		"force_invisibility_rules":["$has|dungeonser_off","$has|dws_cof","$has|cof_cof","$has|fow_cof","$has|tod_cof","$has|crypt_cof","$has|pow_cof","$has|dhc_cof"]
 	  }
 	],
@@ -1277,6 +1331,7 @@
 		"map":"map",
 		"x":827,
 		"y":150,
+        "shape": "trapezoid",
 		"force_invisibility_rules":["$has|dungeonser_off","$has|dws_crypt","$has|cof_crypt","$has|fow_crypt","$has|tod_crypt","$has|crypt_crypt","$has|pow_crypt","$has|dhc_crypt"]
 	  }
 	],
@@ -1297,6 +1352,7 @@
 		"map":"map",
 		"x":2282,
 		"y":1800,
+        "shape": "trapezoid",
 		"force_invisibility_rules":["$has|dungeonser_off","$has|dws_dws","$has|cof_dws","$has|fow_dws","$has|tod_dws","$has|crypt_dws","$has|pow_dws","$has|dhc_dws"]
 	  }
 	],
