@@ -142,7 +142,9 @@
         "map": "map",
         "x": 350,
         "y": 1165,
-        "restrict_visibility_rules": ["$has|fusionblue_vanilla"]
+        "restrict_visibility_rules": ["$has|fusionblue_vanilla"],
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
@@ -225,7 +227,9 @@
         "map": "map",
         "x": 75,
         "y": 1700,
-        "restrict_visibility_rules": ["$has|fusiongold_vanilla"]
+        "restrict_visibility_rules": ["$has|fusiongold_vanilla"],
+        "shape": "diamond",
+        "size": 70
       }
     ],
     "sections": [

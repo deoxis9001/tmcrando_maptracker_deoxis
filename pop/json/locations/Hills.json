@@ -117,7 +117,9 @@
 	  {
 		"map":"map",
 		"x":1705,
-		"y":2000
+		"y":2000,
+        "shape": "diamond",
+		"size": 70
 	  }
 	],
 	"sections":[
@@ -135,7 +137,9 @@
 	  {
 		"map":"map",
 		"x":1795,
-		"y":1570
+		"y":1570,
+        "shape": "diamond",
+		"size": 70
       }
 	],
 	"sections":[

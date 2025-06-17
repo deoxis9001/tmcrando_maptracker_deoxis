@@ -5,7 +5,9 @@
 	  {
 		"map":"map",
 		"x":2680,
-		"y":1700
+		"y":1700,
+        "shape": "diamond",
+		"size": 70
 	  }
 	],
 	"sections":[

@@ -714,7 +714,9 @@
       {
         "map": "map",
         "x": 1030,
-        "y": 1050
+        "y": 1050,
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
@@ -732,7 +734,9 @@
       {
         "map": "map",
         "x": 1100,
-        "y": 1221
+        "y": 1221,
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
@@ -750,7 +754,9 @@
       {
         "map": "map",
         "x": 1465,
-        "y": 1210
+        "y": 1210,
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
@@ -768,7 +774,9 @@
       {
         "map": "map",
         "x": 1325,
-        "y": 1275
+        "y": 1275,
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
@@ -894,7 +902,9 @@
       {
         "map": "map",
         "x": 1030,
-        "y": 1305
+        "y": 1295,
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
