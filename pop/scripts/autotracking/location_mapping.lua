@@ -374,7 +374,7 @@ LOCATION_MAPPING = {
     [6029354] = {{"@Veil Falls - Upper Cave/Underwater Rupees"}},
     [6029355] = {{"@Veil Falls - Upper Cave/Bomb Wall Chest"}},
     [6029356] = {{"@Veil Falls - Upper Cave/Freestanding Chest"}},
-    [6029357] = {{"@Veil Falls - Top of Falls/Biggoron"}}
+    [6029357] = {{"@Veil Falls - Top of Falls/Biggoron"}},
 
     [6029358] = {{"@Clouds - Right Chest/Chest"}},
     [6029359] = {{"@Clouds - Top Right Digging Spot/Digging"}},
