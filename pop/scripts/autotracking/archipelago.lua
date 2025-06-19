@@ -439,11 +439,11 @@ function onClear(slot_data)
 	end
 	CUR_INDEX = -1
 	-- reset locations
-	for _, slot_data_reset_entry in pairs(SLOTS_DATA_RESET_MAPPING) do
-		print(string.format("[RESET][LOCATION][INFO] location_code: %s", slot_data_reset_entry[1]))
-		local obj = Tracker:FindObjectForCode(slot_data_reset_entry[1])
-		obj.Active = false
-	end
+	-- for _, slot_data_reset_entry in pairs(SLOTS_DATA_RESET_MAPPING) do
+		-- print(string.format("[RESET][LOCATION][INFO] location_code: %s", slot_data_reset_entry[1]))
+		-- local obj = Tracker:FindObjectForCode(slot_data_reset_entry[1])
+		-- obj.Active = false
+	-- end
 	for _, mapping_entry in pairs(LOCATION_MAPPING) do
 		for _, location_table in ipairs(mapping_entry) do
 			if location_table then

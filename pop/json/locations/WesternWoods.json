@@ -33,7 +33,9 @@
       {
         "map": "map",
         "x": 800,
-        "y": 2005
+        "y": 2005,
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [

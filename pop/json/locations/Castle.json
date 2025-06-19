@@ -83,7 +83,9 @@
       {
         "map": "map",
         "x": 1610,
-        "y": 160
+        "y": 160,
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
