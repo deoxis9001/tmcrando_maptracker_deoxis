@@ -878,14 +878,14 @@
 					[
 						"cof_none",
 						"crypt_none"
+						
 					],
 					[
 						"fow_none",
 						"pow_none"
 					],
 					[
-						"dhc_none",
-						""
+						"dhc_none"
 					]
 				]
 			}
