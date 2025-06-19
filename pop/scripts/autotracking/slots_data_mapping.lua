@@ -92,11 +92,11 @@ SLOTS_DATA_MAPPING = {
     ["prize_rc"] = {"rcx","PRIZE"},
     ["prize_pow"] = {"powx","PRIZE"},
 }
-SLOTS_DATA_RESET_MAPPING = {
-    ["prize_dws"] = {"dwsx"},
-    ["prize_cof"] = {"cofx"},
-    ["prize_fow"] = {"fowx"},
-    ["prize_tod"] = {"todx"},
-    ["prize_rc"] = {"rcx"},
-    ["prize_pow"] = {"powx"},
-}
+-- SLOTS_DATA_RESET_MAPPING = {
+    -- ["prize_dws"] = {"dwsx"},
+    -- ["prize_cof"] = {"cofx"},
+    -- ["prize_fow"] = {"fowx"},
+    -- ["prize_tod"] = {"todx"},
+    -- ["prize_rc"] = {"rcx"},
+    -- ["prize_pow"] = {"powx"},
+-- }
