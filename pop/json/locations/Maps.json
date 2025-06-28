@@ -156,8 +156,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -260,8 +260,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_CaveOfFlame_PreLavaBasementRoom"
 				],
-				"chest_unopened_img": "images/items-map/Heart Piece.png",
-				"chest_opened_img": "images/items-map/Heart Piece Gray.png"
+				"chest_unopened_img": "images/items-map/chest_closed.png",
+				"chest_opened_img": "images/items-map/chest_open.png"
 			}
 		]
 	},
@@ -557,8 +557,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Deepwood_SlugRoom"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -661,8 +661,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Deepwood_TwoStatueRoom"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -765,8 +765,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Deepwood_BasementSwitchChest"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -1497,8 +1497,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Fortress_MinishDirtRoomKeyDrop"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -1802,8 +1802,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Palace_SparkChest"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -1854,8 +1854,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Palace_RollerChest"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -1906,8 +1906,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Palace_DarkRoomSmall"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2037,8 +2037,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Palace_BombarossaMaze"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2141,8 +2141,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Droplet_FirstIceBlock"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2600,8 +2600,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Droplet_BasementFrozenChest"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2730,8 +2730,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_Droplet_DarkMazeBombWall"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2858,8 +2858,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_DHC_StoneKing"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img":"images/items-map/Small Key.png",
+				"chest_opened_img":"images/items-map/Small Key Done.png"
 			}
 		]
 	},
@@ -2892,8 +2892,8 @@
 				"access_rules": [
 					"^$Json_Dungeon_DHC_PostThroneBigChest"
 				],
-				"chest_unopened_img": "images/items-map/chest_closed.png",
-				"chest_opened_img": "images/items-map/chest_open.png"
+				"chest_unopened_img": "images/items-map/big_chest_closed.png",
+				"chest_opened_img": "images/items-map/big_chest_open.png"
 			}
 		]
 	},

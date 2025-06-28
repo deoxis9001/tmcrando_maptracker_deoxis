@@ -80,11 +80,18 @@
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
-		"name":"First Rollobite Room",
-		"item_count":2,
+		"name":"First Rollobite Room Chest",
+		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"First Rollobite Room Pillar",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Bombable Wall Heart Piece",
@@ -106,8 +113,8 @@
 		"name":"Spiny Chu Pillar Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_CaveOfFlame_SpinyChuPillarChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Pre Lava Basement Room",
@@ -334,8 +341,8 @@
 		"name":"Two Statue Room",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_TwoStatueRoom"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Mulldozer Key",
@@ -362,8 +369,8 @@
 		"name":"Basement Switch Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Deepwood_BasementSwitchChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Blue Warp Heart Piece",
@@ -713,20 +720,20 @@
 		"chest_opened_img":"images/items-map/big_chest_open.png"
 	  },
 	  {
-		"name":"Pot Puzzle Key",
-		"item_count":1,
-        "capture_item": true,
-		"access_rules":["$Json_Dungeon_Palace_PotPuzzleKey"],
-		"chest_unopened_img":"images/items-map/Small Key.png",
-		"chest_opened_img":"images/items-map/Small Key Done.png"
-	  },
-	  {
 		"name":"Rupees",
 		"item_count":5,
 		"visibility_rules":["$has|rupees_on"],
 		"access_rules":["$Json_Dungeon_Palace_Rupees"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
+	  },
+	  {
+		"name":"Pot Puzzle Key",
+		"item_count":1,
+        "capture_item": true,
+		"access_rules":["$Json_Dungeon_Palace_PotPuzzleKey"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Moblin Archer Chest",
@@ -746,8 +753,8 @@
 		"name":"Spark Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Palace_SparkChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Pre Big Key Door Big Chest",
@@ -755,13 +762,6 @@
 		"access_rules":["$Json_Dungeon_Palace_PreBigKeyDoorBigChest"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
 		"chest_opened_img":"images/items-map/big_chest_open.png"
-	  },
-	  {
-		"name":"Roller Chest",
-		"item_count":1,
-		"access_rules":["$Json_Dungeon_Palace_RollerChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Dark Room Big",
@@ -774,6 +774,20 @@
 		"name":"Dark Room Small",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Palace_DarkRoomSmall"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
+	  },
+	  {
+		"name":"Roller Chest",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_RollerChest"],
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
+	  },
+	  {
+		"name":"Twin Wizzrobe Fight",
+		"item_count":1,
+		"access_rules":["$Json_Dungeon_Palace_TwinWizzrobeFight"],
 		"chest_unopened_img":"images/items-map/chest_closed.png",
 		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
@@ -783,13 +797,6 @@
 		"access_rules":["$Json_Dungeon_Palace_FireWizzrobeFight"],
 		"chest_unopened_img":"images/items-map/big_chest_closed.png",
 		"chest_opened_img":"images/items-map/big_chest_open.png"
-	  },
-	  {
-		"name":"Twin Wizzrobe Fight",
-		"item_count":1,
-		"access_rules":["$Json_Dungeon_Palace_TwinWizzrobeFight"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
 	  },
 	  {
 		"name":"Heart Piece",
@@ -810,8 +817,8 @@
 		"name":"Bombarossa Maze",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Palace_BombarossaMaze"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Block Maze Room",
@@ -898,8 +905,8 @@
 		"name":"First Ice Block",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_FirstIceBlock"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Locked Ice Block",
@@ -1010,8 +1017,8 @@
 		"name":"Basement Frozen Chest",
 		"item_count":1,
 		"access_rules":["$Json_Dungeon_Droplet_BasementFrozenChest"],
-		"chest_unopened_img":"images/items-map/chest_closed.png",
-		"chest_opened_img":"images/items-map/chest_open.png"
+		"chest_unopened_img":"images/items-map/Small Key.png",
+		"chest_opened_img":"images/items-map/Small Key Done.png"
 	  },
 	  {
 		"name":"Blue Chu",
