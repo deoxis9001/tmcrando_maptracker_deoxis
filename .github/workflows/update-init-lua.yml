@@ -3,9 +3,9 @@ name: Update scripts/init.lua based on branch
 on:
   push:
     branches:
-      - stable
-      - beta
-      - alpha
+      - Stable
+      - Beta
+      - Alpha
 
 jobs:
   update-init-lua:
@@ -26,19 +26,19 @@ jobs:
 
           echo "Updating for branch: $BRANCH"
 
-          if [[ "$BRANCH" == "stable" ]]; then
+          if [[ "$BRANCH" == "Stable" ]]; then
             echo "Applying stable rules..."
             # Set all TMC_AUTOTRACKER_* = false
             sed -i 's/^\(TMC_AUTOTRACKER_[A-Z_]*\) = true/\1 = false/' "$FILE"
             sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
             sed -i 's/^VERSION_BETA = true/VERSION_BETA = false/' "$FILE"
 
-          elif [[ "$BRANCH" == "beta" ]]; then
+          elif [[ "$BRANCH" == "Beta" ]]; then
             echo "Applying beta rules..."
             sed -i 's/^VERSION_BETA = false/VERSION_BETA = true/' "$FILE"
             sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
 
-          elif [[ "$BRANCH" == "alpha" ]]; then
+          elif [[ "$BRANCH" == "Alpha" ]]; then
             echo "Applying alpha rules..."
             sed -i 's/^VERSION_ALPHA = false/VERSION_ALPHA = true/' "$FILE"
             sed -i 's/^VERSION_BETA = true/VERSION_BETA = false/' "$FILE"
