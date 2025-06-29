@@ -51,7 +51,7 @@ cache_number=0
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUSER_TRACKING = true
-VERSION_ALPHA = false
+VERSION_ALPHA = true
 VERSION_BETA = false
 VERSION_RANDO = "1.0.0RC2"
 ------------------------------------------------------------------
