@@ -1,37 +1,29 @@
 {
-  "name": "[BETA][1.0.0] Minish Cap Randomizer Map Tracker - Help (F1)",
+  "name": "[Stable][1.0.0] Minish Cap Randomizer Map Tracker - Help (F1)",
   "game_name": "Minish Cap Randomizer",
   "platform": "gba",
-  "package_version": "1.0.0.5",
-  "versions_url": "https://en-minish-cap.deoxis9001.ovh/dev/beta-version.json",
-  "homepage": "https://en-minish-cap.deoxis9001.ovh/",
-  "package_uid": "BetaTmcrTrackerDeoxis",
+  "package_version": "1.0.0.42",
+  "versions_url":"https://en-minish-cap.deoxis9001.ovh/dev/version.json",
+  "homepage":"https://en-minish-cap.deoxis9001.ovh/",
+  "package_uid": "StableTmcrTrackerDeoxis",
   "author": "Deoxis Hysteria",
   "min_poptracker_version": "0.31.0",
   "variants": {
     "Standard": {
       "display_name": "[Standard] Map Tracker - Broadcast (F2) Vertical",
-      "flags": [
-        "luaconnector"
-      ]
+      "flags": ["luaconnector"]
     },
     "Standard_h": {
       "display_name": "[Standard] Map Tracker - Broadcast (F2) Horizontal",
-      "flags": [
-        "luaconnector"
-      ]
+      "flags": ["luaconnector"]
     },
     "AP": {
       "display_name": "[AP] Map Tracker - Broadcast (F2) Vertical",
-      "flags": [
-        "ap"
-      ]
+      "flags": ["ap"]
     },
     "AP_h": {
       "display_name": "[AP] Map Tracker - Broadcast (F2) Horizontal",
-      "flags": [
-        "ap"
-      ]
+      "flags": ["ap"]
     },
     "items_only": {
       "display_name": "Standard Items Tracker - Vertical"
