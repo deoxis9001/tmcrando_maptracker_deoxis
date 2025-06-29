@@ -1,0 +1,58 @@
+name: Update scripts/init.lua based on branch
+
+on:
+  push:
+    branches:
+      - stable
+      - beta
+      - alpha
+
+jobs:
+  update-init-lua:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get current branch
+        id: branch
+        run: echo "name=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
+
+      - name: Update init.lua
+        run: |
+          FILE="scripts/init.lua"
+          BRANCH="${{ steps.branch.outputs.name }}"
+
+          echo "Updating for branch: $BRANCH"
+
+          if [[ "$BRANCH" == "stable" ]]; then
+            echo "Applying stable rules..."
+            # Set all TMC_AUTOTRACKER_* = false
+            sed -i 's/^\(TMC_AUTOTRACKER_[A-Z_]*\) = true/\1 = false/' "$FILE"
+            sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
+            sed -i 's/^VERSION_BETA = true/VERSION_BETA = false/' "$FILE"
+
+          elif [[ "$BRANCH" == "beta" ]]; then
+            echo "Applying beta rules..."
+            sed -i 's/^VERSION_BETA = false/VERSION_BETA = true/' "$FILE"
+            sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
+
+          elif [[ "$BRANCH" == "alpha" ]]; then
+            echo "Applying alpha rules..."
+            sed -i 's/^VERSION_ALPHA = false/VERSION_ALPHA = true/' "$FILE"
+            sed -i 's/^VERSION_BETA = true/VERSION_BETA = false/' "$FILE"
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add scripts/init.lua
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update init.lua for ${{ steps.branch.outputs.name }} branch"
+            git push
+          fi
