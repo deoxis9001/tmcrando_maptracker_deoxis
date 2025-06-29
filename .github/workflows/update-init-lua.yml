@@ -3,9 +3,20 @@ name: Update scripts/init.lua based on branch
 on:
   push:
     branches:
-      - stable
-      - beta
-      - alpha
+      - Stable
+      - Beta
+      - Alpha
+
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: 'Select the branch to update'
+        required: true
+        type: choice
+        options:
+          - Stable
+          - Beta
+          - Alpha
 
 jobs:
   update-init-lua:
@@ -14,34 +25,44 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.target_branch || github.ref_name }}
 
-      - name: Get current branch
-        id: branch
-        run: echo "name=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
+      - name: Get branch name
+        id: get_branch
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "branch_name=${{ github.event.inputs.target_branch }}" >> $GITHUB_OUTPUT
+          else
+            echo "branch_name=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Update init.lua
+      - name: Update init.lua based on branch
         run: |
           FILE="scripts/init.lua"
-          BRANCH="${{ steps.branch.outputs.name }}"
+          BRANCH="${{ steps.get_branch.outputs.branch_name }}"
 
-          echo "Updating for branch: $BRANCH"
+          echo "Working on branch: $BRANCH"
 
-          if [[ "$BRANCH" == "stable" ]]; then
-            echo "Applying stable rules..."
-            # Set all TMC_AUTOTRACKER_* = false
-            sed -i 's/^\(TMC_AUTOTRACKER_[A-Z_]*\) = true/\1 = false/' "$FILE"
+          if [[ "$BRANCH" == "Stable" ]]; then
+            echo "Applying Stable rules..."
+            sed -i 's/^\(TMC_AUTOTRACKER_[A-Za-z_]*\) = true/\1 = false/' "$FILE"
             sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
             sed -i 's/^VERSION_BETA = true/VERSION_BETA = false/' "$FILE"
 
-          elif [[ "$BRANCH" == "beta" ]]; then
-            echo "Applying beta rules..."
+          elif [[ "$BRANCH" == "Beta" ]]; then
+            echo "Applying Beta rules..."
             sed -i 's/^VERSION_BETA = false/VERSION_BETA = true/' "$FILE"
             sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
 
-          elif [[ "$BRANCH" == "alpha" ]]; then
-            echo "Applying alpha rules..."
+          elif [[ "$BRANCH" == "Alpha" ]]; then
+            echo "Applying Alpha rules..."
             sed -i 's/^VERSION_ALPHA = false/VERSION_ALPHA = true/' "$FILE"
             sed -i 's/^VERSION_BETA = true/VERSION_BETA = false/' "$FILE"
+
+          else
+            echo "Branch $BRANCH not handled."
+            exit 1
           fi
 
       - name: Commit and push changes
@@ -51,8 +72,8 @@ jobs:
           git add scripts/init.lua
 
           if git diff --cached --quiet; then
-            echo "No changes to commit"
+            echo "No changes to commit."
           else
-            git commit -m "Update init.lua for ${{ steps.branch.outputs.name }} branch"
-            git push
+            git commit -m "Auto-update init.lua for branch ${{ steps.get_branch.outputs.branch_name }}"
+            git push origin ${{ steps.get_branch.outputs.branch_name }}
           fi
