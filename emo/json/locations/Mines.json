@@ -1,4 +1,25 @@
 [
+	{
+		"name": "Crenel - Mines - Melari",
+		"map_locations": [
+			{
+				"map": "mines",
+				"x": 1430,
+				"y": 970
+			}
+		],
+		"sections": [
+			{
+				"name": "Gift",
+				"item_count": 1,
+				"access_rules": [
+					"$Json_Crenel_Mines_Melari"
+				],
+				"chest_unopened_img": "images/items-map/chest_closed.png",
+				"chest_opened_img": "images/items-map/chest_open.png"
+			}
+		]
+	},
   {
     "name": "Crenel - Mines - Digging Spot 8",
     "map_locations": [
