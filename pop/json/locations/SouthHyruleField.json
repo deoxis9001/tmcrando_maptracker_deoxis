@@ -12,27 +12,36 @@
       {
         "name": "Gift",
         "item_count": 1,
-        "access_rules": ["^$Json_SouthHyruleField_Tingle_Gift"],
+        "access_rules": [
+          "^$Json_SouthHyruleField_Tingle_Gift"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Tingle 1",
         "hosted_item": "fusions59",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_SouthHyruleField_Tingle_Fuser1"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_SouthHyruleField_Tingle_Fuser1"
+        ]
       },
       {
         "name": "Fuser Tingle 2",
         "hosted_item": "fusions0d",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_SouthHyruleField_Tingle_Fuser2"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_SouthHyruleField_Tingle_Fuser2"
+        ]
       }
     ]
   },
   {
     "name": "South Field - Smith's House",
-
     "map_locations": [
       {
         "map": "map",
@@ -44,21 +53,31 @@
       {
         "name": "Chests",
         "item_count": 3,
-        "access_rules": ["^$Json_SouthHyruleField_SmithsHouse_Chests"],
+        "access_rules": [
+          "^$Json_SouthHyruleField_SmithsHouse_Chests"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Smith 1",
         "hosted_item": "fusions16",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_SouthHyruleField_SmithsHouse_Fuser1"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_SouthHyruleField_SmithsHouse_Fuser1"
+        ]
       },
       {
         "name": "Fuser Smith 2",
         "hosted_item": "fusions52",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_SouthHyruleField_SmithsHouse_Fuser2"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_SouthHyruleField_SmithsHouse_Fuser2"
+        ]
       }
     ]
   },
@@ -90,14 +109,18 @@
         "map": "map",
         "x": 1047,
         "y": 1836,
-        "restrict_visibility_rules": ["$FusionsGreen,$has|rupees_on"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|rupees_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Rupees",
         "item_count": 15,
-        "access_rules": ["^$Json_SouthHyruleField_RupeeCave_Rupees"],
+        "access_rules": [
+          "^$Json_SouthHyruleField_RupeeCave_Rupees"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -110,14 +133,18 @@
         "map": "map",
         "x": 1622,
         "y": 2000,
-        "restrict_visibility_rules": ["$FusionsBlue"]
+        "restrict_visibility_rules": [
+          "$FusionsBlue"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["^$Json_SouthHyruleField_TreeHeartPiece_HeartPiece"],
+        "access_rules": [
+          "^$Json_SouthHyruleField_TreeHeartPiece_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -130,14 +157,18 @@
         "map": "map",
         "x": 1505,
         "y": 1889,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_SouthHyruleField_NearLinksHouseChest_Chest"],
+        "access_rules": [
+          "^$Json_SouthHyruleField_NearLinksHouseChest_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -151,15 +182,19 @@
         "x": 1047,
         "y": 1936,
         "shape": "diamond",
-		"size": 70
+        "size": 70
       }
     ],
     "sections": [
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions14",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_SouthField_MinishHouse_Fuser"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_SouthField_MinishHouse_Fuser"
+        ]
       }
     ]
   }

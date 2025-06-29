@@ -12,15 +12,21 @@
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["$Json_Valley_NorthwestGrave_HeartPiece"],
+        "access_rules": [
+          "$Json_Valley_NorthwestGrave_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
         "name": "Chest",
-        "visibility_rules": ["$FusionsGreen"],
+        "visibility_rules": [
+          "$FusionsGreen"
+        ],
         "item_count": 1,
-        "access_rules": ["$Json_Valley_NorthwestGrave_Chest"],
+        "access_rules": [
+          "$Json_Valley_NorthwestGrave_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -39,7 +45,9 @@
       {
         "name": "Chest (Left Left Left Up Up Up)",
         "item_count": 1,
-        "access_rules": ["$Json_Valley_LostWoodsSecret_Chest"],
+        "access_rules": [
+          "$Json_Valley_LostWoodsSecret_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -58,7 +66,9 @@
       {
         "name": "Gift",
         "item_count": 1,
-        "access_rules": ["$Json_Valley_GreatFairy_Gift"],
+        "access_rules": [
+          "$Json_Valley_GreatFairy_Gift"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -77,21 +87,31 @@
       {
         "name": "Gift",
         "item_count": 1,
-        "access_rules": ["$Json_Valley_Dampe_Gift"],
+        "access_rules": [
+          "$Json_Valley_Dampe_Gift"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Dampe 1",
         "hosted_item": "fusions30",
-        "visibility_rules": ["$has|fusionblue_vanilla"],
-        "access_rules": ["$Json_Valley_Dampe_Fuser1"]
+        "visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Valley_Dampe_Fuser1"
+        ]
       },
       {
         "name": "Fuser Dampe 2",
         "hosted_item": "fusions41",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Valley_Dampe_Fuser2"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Valley_Dampe_Fuser2"
+        ]
       }
     ]
   },
@@ -102,37 +122,56 @@
         "map": "map",
         "x": 930,
         "y": 200,
-        "restrict_visibility_rules": ["$FusionsGreen", "$FusionsBlue"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen",
+          "$FusionsBlue"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Grave Chest",
-        "visibility_rules": ["$FusionsBlue"],
+        "visibility_rules": [
+          "$FusionsBlue"
+        ],
         "item_count": 1,
-        "access_rules": ["$Json_Valley_NortheastGrave_GraveChest"],
+        "access_rules": [
+          "$Json_Valley_NortheastGrave_GraveChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Chest",
         "item_count": 1,
-        "visibility_rules": ["$FusionsGreen"],
-        "access_rules": ["$Json_Valley_NortheastGrave_Chest"],
+        "visibility_rules": [
+          "$FusionsGreen"
+        ],
+        "access_rules": [
+          "$Json_Valley_NortheastGrave_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Gina 1",
         "hosted_item": "fusions42",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Valley_NortheastGrave_Fuser1"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Valley_NortheastGrave_Fuser1"
+        ]
       },
       {
         "name": "Fuser Gina 2",
         "hosted_item": "fusions3a",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Valley_NortheastGrave_Fuser2"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Valley_NortheastGrave_Fuser2"
+        ]
       }
     ]
   },
@@ -143,13 +182,17 @@
         "map": "map",
         "x": 705,
         "y": 270,
-        "restrict_visibility_rules": ["$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Joy Butterfly",
-        "access_rules": ["$Json_Valley_Butterfly_JoyButterfly"],
+        "access_rules": [
+          "$Json_Valley_Butterfly_JoyButterfly"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png",
         "item_count": 1
@@ -169,14 +212,22 @@
       {
         "name": "Fuser Spekter 1",
         "hosted_item": "fusions31",
-        "visibility_rules": ["$has|fusionblue_vanilla"],
-        "access_rules": ["$Json_Valley_Spekter_Fuser1"]
+        "visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Valley_Spekter_Fuser1"
+        ]
       },
       {
         "name": "Fuser Spekter 2",
         "hosted_item": "fusions28",
-        "visibility_rules": ["$has|fusionblue_vanilla"],
-        "access_rules": ["$Json_Valley_Spekter_Fuser2"]
+        "visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Valley_Spekter_Fuser2"
+        ]
       }
     ]
   },
@@ -187,13 +238,17 @@
         "map": "map",
         "x": 1058,
         "y": 528,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
-        "access_rules": ["$Json_Valley_PreRoyalValeyChest_Chest"],
+        "access_rules": [
+          "$Json_Valley_PreRoyalValeyChest_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png",
         "item_count": 1

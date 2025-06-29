@@ -2,7 +2,7 @@
   {
     "name": "map",
     "img": "images/maps/overworld.png",
-    "location_size": 50, 
+    "location_size": 50,
     "location_border_thickness": 5
   },
   {

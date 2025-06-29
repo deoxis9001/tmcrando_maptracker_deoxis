@@ -12,7 +12,9 @@
       {
         "name": "Gift",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -25,14 +27,18 @@
         "map": "mines",
         "x": 1110,
         "y": 1100,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -45,14 +51,18 @@
         "map": "mines",
         "x": 580,
         "y": 1650,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -65,14 +75,18 @@
         "map": "mines",
         "x": 1375,
         "y": 1700,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -85,14 +99,18 @@
         "map": "mines",
         "x": 2080,
         "y": 1750,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -105,14 +123,18 @@
         "map": "mines",
         "x": 2175,
         "y": 400,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -125,14 +147,18 @@
         "map": "mines",
         "x": 750,
         "y": 240,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -145,14 +171,18 @@
         "map": "mines",
         "x": 1700,
         "y": 240,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -165,14 +195,18 @@
         "map": "mines",
         "x": 790,
         "y": 785,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["^$Json_Crenel_Mines_Digging"],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }

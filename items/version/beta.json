@@ -1,19 +1,19 @@
 [
- {
-   "name": "beta",
-   "type": "progressive",
-   "img": "images/items/Beta.png",
-   "allow_disabled": false,
-   "inherit_codes": false,
-   "stages":[
-     {
-       "img":"images/items/Beta.png",
-       "codes": "beta"
-     },
-     {
-       "img":"images/items/Beta.png",
-       "codes": "beta"
-     }
-   ]
- }
+  {
+    "name": "beta",
+    "type": "progressive",
+    "img": "images/items/Beta.png",
+    "allow_disabled": false,
+    "inherit_codes": false,
+    "stages": [
+      {
+        "img": "images/items/Beta.png",
+        "codes": "beta"
+      },
+      {
+        "img": "images/items/Beta.png",
+        "codes": "beta"
+      }
+    ]
+  }
 ]

@@ -6,14 +6,18 @@
         "map": "map",
         "x": 230,
         "y": 2000,
-        "restrict_visibility_rules": ["$FusionsGold"]
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_MinishWallHole_HeartPiece"],
+        "access_rules": [
+          "$Json_Ruins_MinishWallHole_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -26,22 +30,30 @@
         "map": "map",
         "x": 50,
         "y": 2000,
-        "restrict_visibility_rules": ["$FusionsGold"]
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_MinishHole_Chest"],
+        "access_rules": [
+          "$Json_Ruins_MinishHole_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions17",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["$Json_Ruins_MinishHole_Fuser"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Ruins_MinishHole_Fuser"
+        ]
       }
     ]
   },
@@ -52,14 +64,18 @@
         "map": "map",
         "x": 130,
         "y": 1780,
-        "restrict_visibility_rules": ["$FusionsGold"]
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_BombableWall_Chest"],
+        "access_rules": [
+          "$Json_Ruins_BombableWall_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -72,14 +88,18 @@
         "map": "map",
         "x": 560,
         "y": 1930,
-        "restrict_visibility_rules": ["$FusionsGold"]
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chests",
         "item_count": 2,
-        "access_rules": ["$Json_Ruins_ArmosKill_Chest"],
+        "access_rules": [
+          "$Json_Ruins_ArmosKill_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -92,14 +112,18 @@
         "map": "map",
         "x": 640,
         "y": 1867,
-        "restrict_visibility_rules": ["$FusionsGold,$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_PreFOW_Chest"],
+        "access_rules": [
+          "$Json_Ruins_PreFOW_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -112,14 +136,18 @@
         "map": "map",
         "x": 250,
         "y": 2060,
-        "restrict_visibility_rules": ["$FusionsGold,$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_4Pillars_Chest"],
+        "access_rules": [
+          "$Json_Ruins_4Pillars_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -141,7 +169,9 @@
       {
         "name": "Kill",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_OctoGolden_Kill"],
+        "access_rules": [
+          "$Json_Ruins_OctoGolden_Kill"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -154,14 +184,18 @@
         "map": "map",
         "x": 291,
         "y": 1953,
-        "restrict_visibility_rules": ["$FusionsGold,$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_MinishCrack_Chest"],
+        "access_rules": [
+          "$Json_Ruins_MinishCrack_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -174,14 +208,18 @@
         "map": "map",
         "x": 20,
         "y": 1850,
-        "restrict_visibility_rules": ["$FusionsGold,$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Joy Butterfly",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_JoyButterfly_Butterfly"],
+        "access_rules": [
+          "$Json_Ruins_JoyButterfly_Butterfly"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -194,14 +232,18 @@
         "map": "map",
         "x": 210,
         "y": 1795,
-        "restrict_visibility_rules": ["$FusionsGold,$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Big Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Ruins_Beanstalk_BigChest"],
+        "access_rules": [
+          "$Json_Ruins_Beanstalk_BigChest"
+        ],
         "chest_unopened_img": "images/items-map/big_chest_closed.png",
         "chest_opened_img": "images/items-map/big_chest_open.png"
       }

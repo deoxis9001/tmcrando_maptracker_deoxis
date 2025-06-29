@@ -6,22 +6,30 @@
         "map": "map",
         "x": 710,
         "y": 2005,
-        "restrict_visibility_rules": ["$FusionsBlue"]
+        "restrict_visibility_rules": [
+          "$FusionsBlue"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_WesternWoods_Beanstalk_Chest"],
+        "access_rules": [
+          "$Json_WesternWoods_Beanstalk_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Rupees",
-        "visibility_rules": ["$has|rupees_on"],
+        "visibility_rules": [
+          "$has|rupees_on"
+        ],
         "item_count": 16,
-        "access_rules": ["$Json_WesternWoods_Beanstalk_Rupees"],
+        "access_rules": [
+          "$Json_WesternWoods_Beanstalk_Rupees"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -40,8 +48,12 @@
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions24",
-        "visibility_rules": ["$has|fusionblue_vanilla"],
-        "access_rules": ["$Json_WesternWoods_MinishHouse_Fuser"]
+        "visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "access_rules": [
+          "$Json_WesternWoods_MinishHouse_Fuser"
+        ]
       }
     ]
   },
@@ -52,14 +64,18 @@
         "map": "map",
         "x": 945,
         "y": 1780,
-        "restrict_visibility_rules": ["$FusionsGreen,$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Buried Treasure",
         "item_count": 2,
-        "access_rules": ["$Json_WesternWoods_SouthDigging_BuriedTreasure"],
+        "access_rules": [
+          "$Json_WesternWoods_SouthDigging_BuriedTreasure"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -72,14 +88,18 @@
         "map": "map",
         "x": 800,
         "y": 1475,
-        "restrict_visibility_rules": ["$FusionsGreen,$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Buried Treasure",
         "item_count": 6,
-        "access_rules": ["$Json_WesternWoods_SouthDigging_BuriedTreasure"],
+        "access_rules": [
+          "$Json_WesternWoods_SouthDigging_BuriedTreasure"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -92,14 +112,18 @@
         "map": "map",
         "x": 755,
         "y": 1750,
-        "restrict_visibility_rules": ["$FusionsRedLibrary"]
+        "restrict_visibility_rules": [
+          "$FusionsRedLibrary"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["$Json_WesternWoods_Tree_HeartPiece"],
+        "access_rules": [
+          "$Json_WesternWoods_Tree_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -112,7 +136,9 @@
         "map": "map",
         "x": 825,
         "y": 1603,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -134,21 +160,27 @@
         "map": "map",
         "x": 765,
         "y": 1912,
-        "restrict_visibility_rules": ["$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Moblin Reward",
         "item_count": 1,
-        "access_rules": ["$Json_WesternWoods_Percy_MoblinReward"],
+        "access_rules": [
+          "$Json_WesternWoods_Percy_MoblinReward"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Percy Reward",
         "item_count": 1,
-        "access_rules": ["$Json_WesternWoods_Percy_PercyReward"],
+        "access_rules": [
+          "$Json_WesternWoods_Percy_PercyReward"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -161,14 +193,18 @@
         "map": "map",
         "x": 900,
         "y": 1912,
-        "restrict_visibility_rules": ["$FusionsGreen,$has|golden_enemy_on"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Kill",
         "item_count": 1,
-        "access_rules": ["$Json_WesternWoods_OctoGolden_Kill"],
+        "access_rules": [
+          "$Json_WesternWoods_OctoGolden_Kill"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
