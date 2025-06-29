@@ -12,14 +12,22 @@
       {
         "name": "Fuser Gale",
         "hosted_item": "fusions13",
-        "visibility_rules": ["$CloudTopFallVisibility,$has|fusionred_vanilla"],
-        "access_rules": ["$Json_Clouds_Fuser_Fuser1"]
+        "visibility_rules": [
+          "$CloudTopFallVisibility,$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_Fuser_Fuser1"
+        ]
       },
       {
         "name": "Fuser Hailey",
         "hosted_item": "fusions4a",
-        "visibility_rules": ["$CloudTopFallVisibility,$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Clouds_Fuser_Fuser2"]
+        "visibility_rules": [
+          "$CloudTopFallVisibility,$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_Fuser_Fuser2"
+        ]
       }
     ]
   },
@@ -39,7 +47,9 @@
       {
         "name": "Fusion",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_CentralFusion_Fusion"],
+        "access_rules": [
+          "$Json_Clouds_CentralFusion_Fusion"
+        ],
         "chest_unopened_img": "images/items-map/Gold Kinstone (Clouds).png",
         "chest_opened_img": "images/items-map/Gold Kinstone (Clouds) Gray.png"
       }
@@ -52,14 +62,18 @@
         "map": "map",
         "x": 2670,
         "y": 730,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_BottomLeftDiggingSpot_Digging"],
+        "access_rules": [
+          "$Json_Clouds_BottomLeftDiggingSpot_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -72,14 +86,18 @@
         "map": "map",
         "x": 3300,
         "y": 175,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_TopRightDiggingSpot_Digging"],
+        "access_rules": [
+          "$Json_Clouds_TopRightDiggingSpot_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -92,22 +110,30 @@
         "map": "map",
         "x": 2730,
         "y": 150,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chests",
         "item_count": 2,
-        "access_rules": ["$Json_Clouds_TopLeftNorthChests_Chests"],
+        "access_rules": [
+          "$Json_Clouds_TopLeftNorthChests_Chests"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Digging",
         "item_count": 1,
-        "visibility_rules": ["$has|digging_on"],
-        "access_rules": ["$Json_Clouds_TopLeftNorthChests_Digging"],
+        "visibility_rules": [
+          "$has|digging_on"
+        ],
+        "access_rules": [
+          "$Json_Clouds_TopLeftNorthChests_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -120,14 +146,18 @@
         "map": "map",
         "x": 3300,
         "y": 730,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_SoutheastSouthDiggingSpot_Digging"],
+        "access_rules": [
+          "$Json_Clouds_SoutheastSouthDiggingSpot_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -140,14 +170,18 @@
         "map": "map",
         "x": 3300,
         "y": 600,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_SoutheastNorthDiggingSpot_Digging"],
+        "access_rules": [
+          "$Json_Clouds_SoutheastNorthDiggingSpot_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -160,14 +194,18 @@
         "map": "map",
         "x": 3150,
         "y": 730,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_SouthDiggingSpot_Digging"],
+        "access_rules": [
+          "$Json_Clouds_SouthDiggingSpot_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -180,14 +218,18 @@
         "map": "map",
         "x": 2920,
         "y": 550,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility,$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_CenterDiggingSpot_Digging"],
+        "access_rules": [
+          "$Json_Clouds_CenterDiggingSpot_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -200,14 +242,18 @@
         "map": "map",
         "x": 2970,
         "y": 840,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Kill",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_KillPiranhasNorth_Kill"],
+        "access_rules": [
+          "$Json_Clouds_KillPiranhasNorth_Kill"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -220,14 +266,18 @@
         "map": "map",
         "x": 3010,
         "y": 1270,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Kill",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_KillPiranhasSouth_Kill"],
+        "access_rules": [
+          "$Json_Clouds_KillPiranhasSouth_Kill"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -240,14 +290,18 @@
         "map": "map",
         "x": 3290,
         "y": 450,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_RightChest_Chest"],
+        "access_rules": [
+          "$Json_Clouds_RightChest_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -269,7 +323,9 @@
       {
         "name": "Fusion",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_TopLeftFusion_Fusion"],
+        "access_rules": [
+          "$Json_Clouds_TopLeftFusion_Fusion"
+        ],
         "chest_unopened_img": "images/items-map/Gold Kinstone (Clouds).png",
         "chest_opened_img": "images/items-map/Gold Kinstone (Clouds) Gray.png"
       }
@@ -282,14 +338,18 @@
         "map": "map",
         "x": 2710,
         "y": 260,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_TopLeftSouthChest_Chest"],
+        "access_rules": [
+          "$Json_Clouds_TopLeftSouthChest_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -311,7 +371,9 @@
       {
         "name": "Fusion",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_TopRightFusion_Fusion"],
+        "access_rules": [
+          "$Json_Clouds_TopRightFusion_Fusion"
+        ],
         "chest_unopened_img": "images/items-map/Gold Kinstone (Clouds).png",
         "chest_opened_img": "images/items-map/Gold Kinstone (Clouds) Gray.png"
       }
@@ -324,102 +386,152 @@
         "map": "map",
         "x": 2303,
         "y": 350,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       },
       {
         "map": "map",
         "x": 1375,
         "y": 1830,
-        "restrict_visibility_rules": ["$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "1F Chests",
         "item_count": 2,
-        "access_rules": ["$Json_WindTribe_WindTribeHouse_1FChests"],
+        "access_rules": [
+          "$Json_WindTribe_WindTribeHouse_1FChests"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "2F Chest",
         "item_count": 1,
-        "access_rules": ["$Json_WindTribe_WindTribeHouse_2FChest"],
+        "access_rules": [
+          "$Json_WindTribe_WindTribeHouse_2FChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "2F Save Gregal",
         "item_count": 1,
-        "access_rules": ["$Json_WindTribe_WindTribeHouse_2FSaveGregal"],
+        "access_rules": [
+          "$Json_WindTribe_WindTribeHouse_2FSaveGregal"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "2F Gregal's Gift",
         "item_count": 1,
-        "visibility_rules": ["$CloudTopFallVisibility"],
-        "access_rules": ["$Json_WindTribe_WindTribeHouse_2FGregalGift"],
+        "visibility_rules": [
+          "$CloudTopFallVisibility"
+        ],
+        "access_rules": [
+          "$Json_WindTribe_WindTribeHouse_2FGregalGift"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "3F Chests",
         "item_count": 3,
-        "visibility_rules": ["$CloudTopFallVisibility"],
-        "access_rules": ["$Json_WindTribe_WindTribeHouse_3FChests"],
+        "visibility_rules": [
+          "$CloudTopFallVisibility"
+        ],
+        "access_rules": [
+          "$Json_WindTribe_WindTribeHouse_3FChests"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "4F Chests",
         "item_count": 2,
-        "visibility_rules": ["$CloudTopFallVisibility"],
-        "access_rules": ["$Json_WindTribe_WindTribeHouse_4FChests"],
+        "visibility_rules": [
+          "$CloudTopFallVisibility"
+        ],
+        "access_rules": [
+          "$Json_WindTribe_WindTribeHouse_4FChests"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Flurris 1",
         "hosted_item": "fusions49",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser1"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_WindTribeHouse_Fuser1"
+        ]
       },
       {
         "name": "Fuser Flurris 2",
         "hosted_item": "fusions48",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser2"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_WindTribeHouse_Fuser2"
+        ]
       },
       {
         "name": "Fuser Caprice",
         "hosted_item": "fusions61",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser3"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_WindTribeHouse_Fuser3"
+        ]
       },
       {
         "name": "Fuser Gale",
         "hosted_item": "fusions13",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser4"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_WindTribeHouse_Fuser4"
+        ]
       },
       {
         "name": "Fuser Hailey",
         "hosted_item": "fusions4a",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser5"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_WindTribeHouse_Fuser5"
+        ]
       },
       {
         "name": "Fuser Siroc 1",
         "hosted_item": "fusions5c",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser6"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_WindTribeHouse_Fuser6"
+        ]
       },
       {
         "name": "Fuser Siroc 2",
         "hosted_item": "fusions5d",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Clouds_WindTribeHouse_Fuser7"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Clouds_WindTribeHouse_Fuser7"
+        ]
       }
     ]
   },
@@ -430,14 +542,18 @@
         "map": "map",
         "x": 2730,
         "y": 680,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_BottomLeftChest_Chest"],
+        "access_rules": [
+          "$Json_Clouds_BottomLeftChest_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -459,7 +575,9 @@
       {
         "name": "Fusion",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_BottomLeftFusion_Fusion"],
+        "access_rules": [
+          "$Json_Clouds_BottomLeftFusion_Fusion"
+        ],
         "chest_unopened_img": "images/items-map/Gold Kinstone (Clouds).png",
         "chest_opened_img": "images/items-map/Gold Kinstone (Clouds) Gray.png"
       }
@@ -481,7 +599,9 @@
       {
         "name": "Fusion",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_BottomRightFusion_Fusion"],
+        "access_rules": [
+          "$Json_Clouds_BottomRightFusion_Fusion"
+        ],
         "chest_unopened_img": "images/items-map/Gold Kinstone (Clouds).png",
         "chest_opened_img": "images/items-map/Gold Kinstone (Clouds) Gray.png"
       }
@@ -494,14 +614,18 @@
         "map": "map",
         "x": 2845,
         "y": 575,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_CenterLeft_Chest"],
+        "access_rules": [
+          "$Json_Clouds_CenterLeft_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -514,14 +638,18 @@
         "map": "map",
         "x": 3000,
         "y": 575,
-        "restrict_visibility_rules": ["$CloudTopFallVisibility"]
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Clouds_CenterRight_Chest"],
+        "access_rules": [
+          "$Json_Clouds_CenterRight_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }

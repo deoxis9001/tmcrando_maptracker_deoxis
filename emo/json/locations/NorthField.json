@@ -6,14 +6,18 @@
         "map": "map",
         "x": 1250,
         "y": 800,
-        "restrict_visibility_rules": ["$has|digging_on"]
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Digging",
         "item_count": 1,
-        "access_rules": ["$Json_NorthField_DiggingSpot_Digging"],
+        "access_rules": [
+          "$Json_NorthField_DiggingSpot_Digging"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -37,7 +41,9 @@
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["$Json_NorthField_Cave_HeartPiece"],
+        "access_rules": [
+          "$Json_NorthField_Cave_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -50,14 +56,18 @@
         "map": "map",
         "x": 1120,
         "y": 800,
-        "restrict_visibility_rules": ["$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Greatblade",
         "item_count": 1,
-        "access_rules": ["$Json_NorthField_DojoWaterfall_Greatblade"],
+        "access_rules": [
+          "$Json_NorthField_DojoWaterfall_Greatblade"
+        ],
         "chest_unopened_img": "images/items-map/Tiger Scroll.png",
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       }
@@ -70,14 +80,18 @@
         "map": "map",
         "x": 1370,
         "y": 655,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_NorthField_TopRightTree_Chest"],
+        "access_rules": [
+          "$Json_NorthField_TopRightTree_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -90,14 +104,18 @@
         "map": "map",
         "x": 1275,
         "y": 655,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_NorthField_TopLeftTree_Chest"],
+        "access_rules": [
+          "$Json_NorthField_TopLeftTree_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -110,14 +128,18 @@
         "map": "map",
         "x": 1370,
         "y": 730,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_NorthField_BottomRightTree_Chest"],
+        "access_rules": [
+          "$Json_NorthField_BottomRightTree_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -130,14 +152,18 @@
         "map": "map",
         "x": 1275,
         "y": 730,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_NorthField_BottomLeftTree_Chest"],
+        "access_rules": [
+          "$Json_NorthField_BottomLeftTree_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -150,14 +176,18 @@
         "map": "map",
         "x": 1325,
         "y": 695,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Big Chest",
         "item_count": 1,
-        "access_rules": ["$Json_NorthField_TingleChest_BigChest"],
+        "access_rules": [
+          "$Json_NorthField_TingleChest_BigChest"
+        ],
         "chest_unopened_img": "images/items-map/big_chest_closed.png",
         "chest_opened_img": "images/items-map/big_chest_open.png"
       }
@@ -176,8 +206,12 @@
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions64",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_NorthField_MinishCrack_Fuser"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_NorthField_MinishCrack_Fuser"
+        ]
       }
     ]
   }

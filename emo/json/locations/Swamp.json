@@ -6,28 +6,36 @@
         "map": "map",
         "x": 660,
         "y": 1560,
-        "restrict_visibility_rules": ["$has|underwater_on"]
+        "restrict_visibility_rules": [
+          "$has|underwater_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Diving Top",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_DivingSpots_Diving"],
+        "access_rules": [
+          "$Json_Swamp_DivingSpots_Diving"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Diving Middle",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_DivingSpots_Diving"],
+        "access_rules": [
+          "$Json_Swamp_DivingSpots_Diving"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Diving Bottom",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_DivingSpots_Diving"],
+        "access_rules": [
+          "$Json_Swamp_DivingSpots_Diving"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -46,14 +54,18 @@
       {
         "name": "Swiftblade",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_Dojo_Swiftblade"],
+        "access_rules": [
+          "$Json_Swamp_Dojo_Swiftblade"
+        ],
         "chest_unopened_img": "images/items-map/Tiger Scroll.png",
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_Dojo_HeartPiece"],
+        "access_rules": [
+          "$Json_Swamp_Dojo_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -72,7 +84,9 @@
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_SouthLakeCave_chest"],
+        "access_rules": [
+          "$Json_Swamp_SouthLakeCave_chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -91,7 +105,9 @@
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_PlatformChest_Chest"],
+        "access_rules": [
+          "$Json_Swamp_PlatformChest_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -110,7 +126,9 @@
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_NortheastLakeCave_HeartPiece"],
+        "access_rules": [
+          "$Json_Swamp_NortheastLakeCave_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -129,7 +147,9 @@
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_NorthCave_Chest"],
+        "access_rules": [
+          "$Json_Swamp_NorthCave_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -142,14 +162,18 @@
         "map": "map",
         "x": 350,
         "y": 1165,
-        "restrict_visibility_rules": ["$has|fusionblue_vanilla"]
+        "restrict_visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Fuser Business Scrub",
         "hosted_item": "fusions27",
-        "access_rules": ["$Json_Swamp_BusinessScrub_Fuser"]
+        "access_rules": [
+          "$Json_Swamp_BusinessScrub_Fuser"
+        ]
       }
     ]
   },
@@ -166,15 +190,21 @@
       {
         "name": "Big Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_Mulldozers_BigChest"],
+        "access_rules": [
+          "$Json_Swamp_Mulldozers_BigChest"
+        ],
         "chest_unopened_img": "images/items-map/big_chest_closed.png",
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
         "name": "Left Chest",
-        "visibility_rules": ["$FusionsGreen"],
+        "visibility_rules": [
+          "$FusionsGreen"
+        ],
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_Mulldozers_LeftChest"],
+        "access_rules": [
+          "$Json_Swamp_Mulldozers_LeftChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -193,7 +223,9 @@
       {
         "name": "Chests",
         "item_count": 2,
-        "access_rules": ["$Json_Swamp_MittsCave_Chests"],
+        "access_rules": [
+          "$Json_Swamp_MittsCave_Chests"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -212,7 +244,9 @@
       {
         "name": "Kill",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_Darknut_Kill"],
+        "access_rules": [
+          "$Json_Swamp_Darknut_Kill"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -225,14 +259,18 @@
         "map": "map",
         "x": 75,
         "y": 1700,
-        "restrict_visibility_rules": ["$has|fusiongold_vanilla"]
+        "restrict_visibility_rules": [
+          "$has|fusiongold_vanilla"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Fusions",
         "item_count": 3,
-        "access_rules": ["$Json_Swamp_CastorWildsFusions_Fusions"],
+        "access_rules": [
+          "$Json_Swamp_CastorWildsFusions_Fusions"
+        ],
         "chest_opened_img": "images/items-map/Gold Kinstone (Wilds) Gray.png",
         "chest_unopened_img": "images/items-map/Gold Kinstone (Wilds).png"
       }
@@ -245,14 +283,18 @@
         "map": "map",
         "x": 40,
         "y": 1325,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_WesternMinishCrack_Chest"],
+        "access_rules": [
+          "$Json_Swamp_WesternMinishCrack_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -265,21 +307,27 @@
         "map": "map",
         "x": 630,
         "y": 1630,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_WaterMinishHole_Chest"],
+        "access_rules": [
+          "$Json_Swamp_WaterMinishHole_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_WaterMinishHole_HeartPiece"],
+        "access_rules": [
+          "$Json_Swamp_WaterMinishHole_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -292,14 +340,18 @@
         "map": "map",
         "x": 590,
         "y": 1150,
-        "restrict_visibility_rules": ["$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Scarblade",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_DojoWaterfall_Scarblade"],
+        "access_rules": [
+          "$Json_Swamp_DojoWaterfall_Scarblade"
+        ],
         "chest_unopened_img": "images/items-map/Tiger Scroll.png",
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       }
@@ -312,14 +364,18 @@
         "map": "map",
         "x": 240,
         "y": 1600,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_VineMinishCrack_Chest"],
+        "access_rules": [
+          "$Json_Swamp_VineMinishCrack_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -332,14 +388,18 @@
         "map": "map",
         "x": 400,
         "y": 1240,
-        "restrict_visibility_rules": ["$FusionsGreen,$has|golden_enemy_on"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Kill",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_RopeGolden_Kill"],
+        "access_rules": [
+          "$Json_Swamp_RopeGolden_Kill"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -352,14 +412,18 @@
         "map": "map",
         "x": 131,
         "y": 1165,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_NorthernMinishCrack_Chest"],
+        "access_rules": [
+          "$Json_Swamp_NorthernMinishCrack_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -372,14 +436,18 @@
         "map": "map",
         "x": 280,
         "y": 1465,
-        "restrict_visibility_rules": ["$FusionsRed"]
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Joy Butterfly",
         "item_count": 1,
-        "access_rules": ["$Json_Swamp_Butterfly_JoyButterfly"],
+        "access_rules": [
+          "$Json_Swamp_Butterfly_JoyButterfly"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }

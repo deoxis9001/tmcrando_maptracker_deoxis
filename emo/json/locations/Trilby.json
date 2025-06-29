@@ -6,14 +6,18 @@
         "map": "map",
         "x": 705,
         "y": 1250,
-        "restrict_visibility_rules": ["$FusionsGreen,$has|rupees_on"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|rupees_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Rupees",
         "item_count": 15,
-        "access_rules": ["$Json_Trilby_RupeeCave_Rupees"],
+        "access_rules": [
+          "$Json_Trilby_RupeeCave_Rupees"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -36,8 +40,12 @@
       {
         "name": "Fuser Percy",
         "hosted_item": "fusions21",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["$Json_Trilby_TreeHouse_Fuser"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Trilby_TreeHouse_Fuser"
+        ]
       }
     ]
   },
@@ -54,8 +62,12 @@
       {
         "name": "Fuser Knuckle",
         "hosted_item": "fusions4d",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Trilby_Knuckle_Fuser"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Trilby_Knuckle_Fuser"
+        ]
       }
     ]
   },
@@ -72,15 +84,21 @@
       {
         "name": "Chests",
         "item_count": 2,
-        "access_rules": ["$Json_Trilby_MittsCave_Chest"],
+        "access_rules": [
+          "$Json_Trilby_MittsCave_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Mysterious Wall",
         "hosted_item": "fusions25",
-        "visibility_rules": ["$has|fusionblue_vanilla"],
-        "access_rules": ["$Json_Trilby_MittsCave_Fuser"]
+        "visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Trilby_MittsCave_Fuser"
+        ]
       }
     ]
   },
@@ -97,7 +115,9 @@
       {
         "name": "Item",
         "item_count": 1,
-        "access_rules": ["$Json_Trilby_BusinessScrub_Item"],
+        "access_rules": [
+          "$Json_Trilby_BusinessScrub_Item"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -116,7 +136,9 @@
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Trilby_BombWall_Chest"],
+        "access_rules": [
+          "$Json_Trilby_BombWall_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -129,14 +151,18 @@
         "map": "map",
         "x": 856,
         "y": 1092,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Trilby_RockChest_Chest"],
+        "access_rules": [
+          "$Json_Trilby_RockChest_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -149,14 +175,18 @@
         "map": "map",
         "x": 931,
         "y": 831,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Trilby_NorthernChest_Chest"],
+        "access_rules": [
+          "$Json_Trilby_NorthernChest_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -169,14 +199,18 @@
         "map": "map",
         "x": 845,
         "y": 950,
-        "restrict_visibility_rules": ["$FusionsBlueLibrary"]
+        "restrict_visibility_rules": [
+          "$FusionsBlueLibrary"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["$Json_Trilby_FusionMittsCave_Chest"],
+        "access_rules": [
+          "$Json_Trilby_FusionMittsCave_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -189,15 +223,21 @@
         "map": "map",
         "x": 700,
         "y": 825,
-        "restrict_visibility_rules": ["$has|fusiongreen_vanilla"]
+        "restrict_visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Fuser Forest Minish",
         "hosted_item": "fusions3f",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["$Json_Trilby_MinishHouse_Fuser"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "$Json_Trilby_MinishHouse_Fuser"
+        ]
       }
     ]
   }

@@ -12,24 +12,36 @@
       {
         "name": "Scissor Beetles",
         "item_count": 1,
-        "visibility_rules": ["$LibraryWorld"],
-        "access_rules": ["^$Json_Town_FlippersCave_ScissorBeetles"],
+        "visibility_rules": [
+          "$LibraryWorld"
+        ],
+        "access_rules": [
+          "^$Json_Town_FlippersCave_ScissorBeetles"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Frozen Chest",
         "item_count": 1,
-        "visibility_rules": ["$LibraryWorld"],
-        "access_rules": ["^$Json_Town_FlippersCave_FrozenChest"],
+        "visibility_rules": [
+          "$LibraryWorld"
+        ],
+        "access_rules": [
+          "^$Json_Town_FlippersCave_FrozenChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Under the Waterfall",
-        "visibility_rules": ["$LibraryWorld,$has|underwater_on"],
+        "visibility_rules": [
+          "$LibraryWorld,$has|underwater_on"
+        ],
         "item_count": 1,
-        "access_rules": ["^$Json_Town_FlippersCave_UndertheWaterfall"],
+        "access_rules": [
+          "^$Json_Town_FlippersCave_UndertheWaterfall"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -48,41 +60,63 @@
       {
         "name": "Back Door - Heart Piece",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_Inn_BackDoorHeartPiece"],
+        "access_rules": [
+          "^$Json_Town_Inn_BackDoorHeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
         "name": "Right Pot",
-        "visibility_rules": ["$has|specialpot_on"],
+        "visibility_rules": [
+          "$has|specialpot_on"
+        ],
         "item_count": 1,
-        "access_rules": ["^$Json_Town_Inn_RightPot"],
+        "access_rules": [
+          "^$Json_Town_Inn_RightPot"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Din/Nayru/Farore 1",
         "hosted_item": "fusions1b",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_Town_Inn_Fuser1"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Inn_Fuser1"
+        ]
       },
       {
         "name": "Fuser Din 2",
         "hosted_item": "fusions20",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_Town_Inn_Fuser2"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Inn_Fuser2"
+        ]
       },
       {
         "name": "Fuser Nayru 2",
         "hosted_item": "fusions19",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_Town_Inn_Fuser3"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Inn_Fuser3"
+        ]
       },
       {
         "name": "Fuser Farore 2",
         "hosted_item": "fusions10",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_Town_Inn_Fuser4"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Inn_Fuser4"
+        ]
       }
     ]
   },
@@ -99,14 +133,18 @@
       {
         "name": "Chests",
         "item_count": 3,
-        "access_rules": ["^$Json_Town_DiggingCave_Chests"],
+        "access_rules": [
+          "^$Json_Town_DiggingCave_Chests"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Basement Left - Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_DiggingCave_BasementLeftChest"],
+        "access_rules": [
+          "^$Json_Town_DiggingCave_BasementLeftChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -125,28 +163,36 @@
       {
         "name": "Spin Attack",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_SwiftbladeDojo_SpinAttack"],
+        "access_rules": [
+          "^$Json_Town_SwiftbladeDojo_SpinAttack"
+        ],
         "chest_unopened_img": "images/items-map/Tiger Scroll.png",
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
         "name": "Rock Breaker",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_SwiftbladeDojo_RockBreaker"],
+        "access_rules": [
+          "^$Json_Town_SwiftbladeDojo_RockBreaker"
+        ],
         "chest_unopened_img": "images/items-map/Tiger Scroll.png",
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
         "name": "Dash Attack",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_SwiftbladeDojo_DashAttack"],
+        "access_rules": [
+          "^$Json_Town_SwiftbladeDojo_DashAttack"
+        ],
         "chest_unopened_img": "images/items-map/Tiger Scroll.png",
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
         "name": "Down Thrust",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_SwiftbladeDojo_DownThrust"],
+        "access_rules": [
+          "^$Json_Town_SwiftbladeDojo_DownThrust"
+        ],
         "chest_unopened_img": "images/items-map/Tiger Scroll.png",
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       }
@@ -164,7 +210,9 @@
     "sections": [
       {
         "name": "Wallet Spot (80 Rupees)",
-        "access_rules": ["^$Json_Town_StockwellShop_Wallet"],
+        "access_rules": [
+          "^$Json_Town_StockwellShop_Wallet"
+        ],
         "item_count": 1,
         "capture_item": true,
         "chest_unopened_img": "images/items-map/chest_closed.png",
@@ -172,7 +220,9 @@
       },
       {
         "name": "Boomerang Spot (300 Rupees)",
-        "access_rules": ["^$Json_Town_StockwellShop_Boomerang"],
+        "access_rules": [
+          "^$Json_Town_StockwellShop_Boomerang"
+        ],
         "item_count": 1,
         "capture_item": true,
         "chest_unopened_img": "images/items-map/chest_closed.png",
@@ -182,7 +232,9 @@
         "name": "Quiver Spot (600 Rupees)",
         "item_count": 1,
         "capture_item": true,
-        "access_rules": ["^$Json_Town_StockwellShop_QuiverSpot"],
+        "access_rules": [
+          "^$Json_Town_StockwellShop_QuiverSpot"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
@@ -190,15 +242,21 @@
         "name": "Bombag Spot (600 Rupees)",
         "item_count": 1,
         "capture_item": true,
-        "visibility_rules": ["$has|shopbag_extra_on"],
-        "access_rules": ["^$Json_Town_StockwellShop_BombagSpot"],
+        "visibility_rules": [
+          "$has|shopbag_extra_on"
+        ],
+        "access_rules": [
+          "^$Json_Town_StockwellShop_BombagSpot"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Attic Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_StockwellShop_AtticChest"],
+        "access_rules": [
+          "^$Json_Town_StockwellShop_AtticChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
@@ -206,7 +264,9 @@
         "name": "Dog Food Bottle",
         "item_count": 1,
         "capture_item": true,
-        "access_rules": ["^$Json_Town_StockwellShop_DogFoodBottle"],
+        "access_rules": [
+          "^$Json_Town_StockwellShop_DogFoodBottle"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -225,7 +285,9 @@
       {
         "name": "Garden Chests",
         "item_count": 3,
-        "access_rules": ["^$Json_Town_SchoolGardens_GardenChests"],
+        "access_rules": [
+          "^$Json_Town_SchoolGardens_GardenChests"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
@@ -233,15 +295,21 @@
         "name": "Heart Piece",
         "item_count": 1,
         "capture_item": true,
-        "access_rules": ["^$Json_Town_SchoolGardens_HeartPiece"],
+        "access_rules": [
+          "^$Json_Town_SchoolGardens_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
         "name": "Minish Path Chest",
-        "visibility_rules": ["$FusionsGreen"],
+        "visibility_rules": [
+          "$FusionsGreen"
+        ],
         "item_count": 1,
-        "access_rules": ["^$Json_Town_SchoolGardens_MinishPathChest"],
+        "access_rules": [
+          "^$Json_Town_SchoolGardens_MinishPathChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -260,22 +328,30 @@
       {
         "name": "Roof Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_School_RoofChest"],
+        "access_rules": [
+          "^$Json_Town_School_RoofChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Pull the Statue",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_School_PulltheStatue"],
+        "access_rules": [
+          "^$Json_Town_School_PulltheStatue"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Tina",
         "hosted_item": "fusions5e",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_School_Fuser"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_School_Fuser"
+        ]
       }
     ]
   },
@@ -292,7 +368,9 @@
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_MayorHouseBasement_Chest"],
+        "access_rules": [
+          "^$Json_Town_MayorHouseBasement_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -311,40 +389,64 @@
       {
         "name": "Yellow Minish - Gift",
         "item_count": 1,
-        "visibility_rules": ["$LibraryWorld"],
-        "access_rules": ["^$Json_Town_Library_YellowMinishGift"],
+        "visibility_rules": [
+          "$LibraryWorld"
+        ],
+        "access_rules": [
+          "^$Json_Town_Library_YellowMinishGift"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Librari",
         "hosted_item": "fusions54",
-        "visibility_rules": ["$LibraryWorld,$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_Library_Fuser1"]
+        "visibility_rules": [
+          "$LibraryWorld,$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Library_Fuser1"
+        ]
       },
       {
         "name": "Fuser Candy",
         "hosted_item": "fusions22",
-        "visibility_rules": ["$LibraryWorld,$has|fusionblue_vanilla"],
-        "access_rules": ["^$Json_Town_Library_Fuser2"]
+        "visibility_rules": [
+          "$LibraryWorld,$has|fusionblue_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Library_Fuser2"
+        ]
       },
       {
         "name": "Fuser Zill 1 ( above Library )",
         "hosted_item": "fusions4b",
-        "visibility_rules": ["$LibraryWorld,$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_Library_Fuser3"]
+        "visibility_rules": [
+          "$LibraryWorld,$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Library_Fuser3"
+        ]
       },
       {
         "name": "Fuser Zill 2 ( above Library )",
         "hosted_item": "fusions57",
-        "visibility_rules": ["$LibraryWorld,$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_Library_Fuser4"]
+        "visibility_rules": [
+          "$LibraryWorld,$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Library_Fuser4"
+        ]
       },
       {
         "name": "Fuser Zill 3 ( above Library )",
         "hosted_item": "fusions3e",
-        "visibility_rules": ["$LibraryWorld,$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_Library_Fuser5"]
+        "visibility_rules": [
+          "$LibraryWorld,$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Library_Fuser5"
+        ]
       }
     ]
   },
@@ -361,21 +463,31 @@
       {
         "name": "Lady Next to Cafe - Gift",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_Cafe_Gift"],
+        "access_rules": [
+          "^$Json_Town_Cafe_Gift"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Mama",
         "hosted_item": "fusions34",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_Cafe_Fuser1"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Cafe_Fuser1"
+        ]
       },
       {
         "name": "Fuser Hurdy-gurdy Man 1",
         "hosted_item": "fusions32",
-        "visibility_rules": ["$has|fusionblue_vanilla"],
-        "access_rules": ["^$Json_Town_Cafe_Fuser2"]
+        "visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Cafe_Fuser2"
+        ]
       }
     ]
   },
@@ -393,7 +505,9 @@
         "name": "Item",
         "item_count": 1,
         "capture_item": true,
-        "access_rules": ["^$Json_Town_JuliettaHouse_Item"],
+        "access_rules": [
+          "^$Json_Town_JuliettaHouse_Item"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -412,14 +526,18 @@
       {
         "name": "Bottom Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_HyruleWell_BottomChest"],
+        "access_rules": [
+          "^$Json_Town_HyruleWell_BottomChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Center Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_HyruleWell_CenterChest"],
+        "access_rules": [
+          "^$Json_Town_HyruleWell_CenterChest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -438,7 +556,9 @@
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_HearthLedge_Chest"],
+        "access_rules": [
+          "^$Json_Town_HearthLedge_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -457,14 +577,18 @@
       {
         "name": "Mulldozers",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_Fountain_Mulldozers"],
+        "access_rules": [
+          "^$Json_Town_Fountain_Mulldozers"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_Fountain_Chest"],
+        "access_rules": [
+          "^$Json_Town_Fountain_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
@@ -472,13 +596,14 @@
         "name": "Heart Piece",
         "item_count": 1,
         "capture_item": true,
-        "access_rules": ["^$Json_Town_Fountain_HeartPiece"],
+        "access_rules": [
+          "^$Json_Town_Fountain_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
     ]
   },
-
   {
     "name": "Town - Eastern Shops",
     "map_locations": [
@@ -492,28 +617,36 @@
       {
         "name": "Rem",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_EasternShops_Rem"],
+        "access_rules": [
+          "^$Json_Town_EasternShops_Rem"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Simon's Simulations",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_EasternShops_SimonSimulations"],
+        "access_rules": [
+          "^$Json_Town_EasternShops_SimonSimulations"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Figurine House",
         "item_count": 3,
-        "access_rules": ["^$Json_Town_EasternShops_FigurineHouse"],
+        "access_rules": [
+          "^$Json_Town_EasternShops_FigurineHouse"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Figurine House Heart Piece",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_EasternShops_FigurineHouseHeartPiece"],
+        "access_rules": [
+          "^$Json_Town_EasternShops_FigurineHouseHeartPiece"
+        ],
         "capture_item": true,
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -533,7 +666,9 @@
       {
         "name": "Item",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_DrLeftHouse_DrLeftHouse"],
+        "access_rules": [
+          "^$Json_Town_DrLeftHouse_DrLeftHouse"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -552,7 +687,9 @@
       {
         "name": "Gift",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_Carlov_Gift"],
+        "access_rules": [
+          "^$Json_Town_Carlov_Gift"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -571,7 +708,9 @@
       {
         "name": "Heart Piece",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_Bell_HeartPiece"],
+        "access_rules": [
+          "^$Json_Town_Bell_HeartPiece"
+        ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -590,7 +729,9 @@
       {
         "name": "Chest",
         "item_count": 1,
-        "access_rules": ["^$Json_Town_BakeryAttic_Chest"],
+        "access_rules": [
+          "^$Json_Town_BakeryAttic_Chest"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -609,80 +750,120 @@
       {
         "name": "Round 1 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_10"],
-        "access_rules": ["^$Json_Town_Anju_Gift1"],
+        "visibility_rules": [
+          "$has|cucco_10"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift1"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 2 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_9"],
-        "access_rules": ["^$Json_Town_Anju_Gift2"],
+        "visibility_rules": [
+          "$has|cucco_9"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift2"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 3 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_8"],
-        "access_rules": ["^$Json_Town_Anju_Gift3"],
+        "visibility_rules": [
+          "$has|cucco_8"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift3"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 4 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_7"],
-        "access_rules": ["^$Json_Town_Anju_Gift4"],
+        "visibility_rules": [
+          "$has|cucco_7"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift4"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 5 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_6"],
-        "access_rules": ["^$Json_Town_Anju_Gift5"],
+        "visibility_rules": [
+          "$has|cucco_6"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift5"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 6 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_5"],
-        "access_rules": ["^$Json_Town_Anju_Gift6"],
+        "visibility_rules": [
+          "$has|cucco_5"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift6"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 7 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_4"],
-        "access_rules": ["^$Json_Town_Anju_Gift7"],
+        "visibility_rules": [
+          "$has|cucco_4"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift7"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 8 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_3"],
-        "access_rules": ["^$Json_Town_Anju_Gift8"],
+        "visibility_rules": [
+          "$has|cucco_3"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift8"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 9 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_2"],
-        "access_rules": ["^$Json_Town_Anju_Gift9"],
+        "visibility_rules": [
+          "$has|cucco_2"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift9"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Round 10 Gift",
         "item_count": 1,
-        "visibility_rules": ["$has|cucco_1"],
-        "access_rules": ["^$Json_Town_Anju_Gift10"],
+        "visibility_rules": [
+          "$has|cucco_1"
+        ],
+        "access_rules": [
+          "^$Json_Town_Anju_Gift10"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -695,13 +876,17 @@
         "map": "map",
         "x": 1150,
         "y": 1271,
-        "restrict_visibility_rules": ["$FusionsGreen"]
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Waterfall",
-        "access_rules": ["^$Json_Town_TownWaterfall_Waterfall"],
+        "access_rules": [
+          "^$Json_Town_TownWaterfall_Waterfall"
+        ],
         "item_count": 1,
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -716,15 +901,19 @@
         "x": 1030,
         "y": 1050,
         "shape": "diamond",
-		"size": 70
+        "size": 70
       }
     ],
     "sections": [
       {
         "name": "Fuser Bremor",
         "hosted_item": "fusions0b",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_Town_NearPostOffice_Fuser"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_NearPostOffice_Fuser"
+        ]
       }
     ]
   },
@@ -736,15 +925,19 @@
         "x": 1100,
         "y": 1221,
         "shape": "diamond",
-		"size": 70
+        "size": 70
       }
     ],
     "sections": [
       {
         "name": "Fuser Stranger",
         "hosted_item": "fusions0f",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_Town_Stranger_Fuser"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Stranger_Fuser"
+        ]
       }
     ]
   },
@@ -756,15 +949,19 @@
         "x": 1465,
         "y": 1210,
         "shape": "diamond",
-		"size": 70
+        "size": 70
       }
     ],
     "sections": [
       {
         "name": "Fuser Hagen",
         "hosted_item": "fusions1e",
-        "visibility_rules": ["$has|fusionred_vanilla"],
-        "access_rules": ["^$Json_Town_Mayor_Fuser"]
+        "visibility_rules": [
+          "$has|fusionred_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Mayor_Fuser"
+        ]
       }
     ]
   },
@@ -776,15 +973,19 @@
         "x": 1325,
         "y": 1275,
         "shape": "diamond",
-		"size": 70
+        "size": 70
       }
     ],
     "sections": [
       {
         "name": "Fuser Postman",
         "hosted_item": "fusions2c",
-        "visibility_rules": ["$has|fusionblue_vanilla"],
-        "access_rules": ["^$Json_Town_Postman_Fuser"]
+        "visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_Postman_Fuser"
+        ]
       }
     ]
   },
@@ -801,96 +1002,144 @@
       {
         "name": "Set 1 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["$has|goron_eu,$has|goron_1"],
-        "access_rules": ["^$Json_Town_GoronShop_Set1_Item2"],
+        "visibility_rules": [
+          "$has|goron_eu,$has|goron_1"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set1_Item2"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 1 - Item Center and Right",
         "item_count": 2,
-        "visibility_rules": ["$has|goron_eu,$has|goron_1"],
-        "access_rules": ["^$Json_Town_GoronShop_Set1_Item1"],
+        "visibility_rules": [
+          "$has|goron_eu,$has|goron_1"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set1_Item1"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 1 - Item Left and Center",
         "item_count": 2,
-        "visibility_rules": ["$has|goron_jp,$has|goron_1"],
-        "access_rules": ["^$Json_Town_GoronShop_Set1_Item2"],
+        "visibility_rules": [
+          "$has|goron_jp,$has|goron_1"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set1_Item2"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 1 - Item Right",
         "item_count": 1,
-        "visibility_rules": ["$has|goron_jp,$has|goron_1"],
-        "access_rules": ["^$Json_Town_GoronShop_Set1_Item1"],
+        "visibility_rules": [
+          "$has|goron_jp,$has|goron_1"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set1_Item1"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 2 - Items",
         "item_count": 3,
-        "visibility_rules": ["$has|goron_2"],
-        "access_rules": ["^$Json_Town_GoronShop_Set2_Items"],
+        "visibility_rules": [
+          "$has|goron_2"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set2_Items"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 3 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["$has|goron_eu,$has|goron_3"],
-        "access_rules": ["^$Json_Town_GoronShop_Set3_Item1"],
+        "visibility_rules": [
+          "$has|goron_eu,$has|goron_3"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set3_Item1"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 3 - Items Other",
         "item_count": 2,
-        "visibility_rules": ["$has|goron_eu,$has|goron_3"],
-        "access_rules": ["^$Json_Town_GoronShop_Set3_Items"],
+        "visibility_rules": [
+          "$has|goron_eu,$has|goron_3"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set3_Items"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 3 - Items",
         "item_count": 3,
-        "visibility_rules": ["$has|goron_jp,$has|goron_3"],
-        "access_rules": ["^$Json_Town_GoronShop_Set3_Items"],
+        "visibility_rules": [
+          "$has|goron_jp,$has|goron_3"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set3_Items"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 4 - Items",
         "item_count": 3,
-        "visibility_rules": ["$has|goron_4"],
-        "access_rules": ["^$Json_Town_GoronShop_Set4_Items"],
+        "visibility_rules": [
+          "$has|goron_4"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set4_Items"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 5 - Item Left",
         "item_count": 1,
-        "visibility_rules": ["$has|goron_eu,$has|goron_5"],
-        "access_rules": ["^$Json_Town_GoronShop_Set5_Item1"],
+        "visibility_rules": [
+          "$has|goron_eu,$has|goron_5"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set5_Item1"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 5 - Items Other",
         "item_count": 2,
-        "visibility_rules": ["$has|goron_eu,$has|goron_5"],
-        "access_rules": ["^$Json_Town_GoronShop_Set5_Items"],
+        "visibility_rules": [
+          "$has|goron_eu,$has|goron_5"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set5_Items"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Set 5 - Items",
         "item_count": 3,
-        "visibility_rules": ["$has|goron_jp,$has|goron_5"],
-        "access_rules": ["^$Json_Town_GoronShop_Set5_Items"],
+        "visibility_rules": [
+          "$has|goron_jp,$has|goron_5"
+        ],
+        "access_rules": [
+          "^$Json_Town_GoronShop_Set5_Items"
+        ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -904,27 +1153,39 @@
         "x": 1030,
         "y": 1295,
         "shape": "diamond",
-		"size": 70
+        "size": 70
       }
     ],
     "sections": [
       {
         "name": "Fuser Town Minish 1",
         "hosted_item": "fusions4b",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_MinishHouse_Fuser1"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_MinishHouse_Fuser1"
+        ]
       },
       {
         "name": "Fuser Town Minish 2",
         "hosted_item": "fusions57",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_MinishHouse_Fuser2"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_MinishHouse_Fuser2"
+        ]
       },
       {
         "name": "Fuser Town Minish 3",
         "hosted_item": "fusions3e",
-        "visibility_rules": ["$has|fusiongreen_vanilla"],
-        "access_rules": ["^$Json_Town_MinishHouse_Fuser3"]
+        "visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "access_rules": [
+          "^$Json_Town_MinishHouse_Fuser3"
+        ]
       }
     ]
   }
