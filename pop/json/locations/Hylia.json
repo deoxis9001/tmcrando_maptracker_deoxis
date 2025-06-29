@@ -302,7 +302,9 @@
 	  {
 		"map":"map",
 		"x":2264,
-		"y":1074
+		"y":1074,
+        "shape": "diamond",
+		"size": 70
 	  }
 	],
 	"sections":[

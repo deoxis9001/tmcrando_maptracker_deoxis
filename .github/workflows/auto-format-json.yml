@@ -1,0 +1,45 @@
+name: Auto-format JSON (local)
+
+on:
+  push:
+    paths:
+      - '**.json'
+      
+  workflow_dispatch:
+
+jobs:
+  format-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Manual Git clone
+        run: |
+          echo "Cloning repo..."
+          git clone https://github.com/${{ github.repository }} repo
+          cd repo
+
+          # Récupère le nom de la branche qui a déclenché le workflow
+          BRANCH_NAME="${GITHUB_REF##*/}"
+          echo "Checkout on branch: $BRANCH_NAME"
+
+          git checkout "$BRANCH_NAME"
+
+          echo "Installing jq..."
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+          echo "Formatting JSON files..."
+          find . -name "*.json" -not -path "./.git/*" | while read file; do
+            jq . "$file" > tmp.json && mv tmp.json "$file"
+          done
+
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Changes detected. Committing..."
+            git config user.name "github-actions"
+            git config user.email "github-actions@github.com"
+            git add .
+            git commit -m "Auto-formatted JSON files"
+            git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:$BRANCH_NAME
+          else
+            echo "No changes to commit."
+          fi

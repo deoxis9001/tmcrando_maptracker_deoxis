@@ -24,12 +24,14 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 720,
-        "y": 1395,
+        "x": 715,
+        "y": 1390,
         "restrict_visibility_rules": [
           "$has|fusionred_vanilla",
           "$has|fusiongreen_vanilla"
-        ]
+        ],
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
@@ -47,7 +49,9 @@
       {
         "map": "map",
         "x": 795,
-        "y": 850
+        "y": 855,
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
@@ -189,7 +193,9 @@
         "map": "map",
         "x": 700,
         "y": 825,
-        "restrict_visibility_rules": ["$has|fusiongreen_vanilla"]
+        "restrict_visibility_rules": ["$has|fusiongreen_vanilla"],
+        "shape": "diamond",
+		"size": 70
       }
     ],
     "sections": [
