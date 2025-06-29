@@ -76,3 +76,4 @@ jobs:
           else
             git commit -m "Auto-update init.lua for branch ${{ steps.get_branch.outputs.branch_name }}"
             git push origin ${{ steps.get_branch.outputs.branch_name }}
+          fi
