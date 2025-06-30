@@ -75,12 +75,12 @@ function Json_Dungeon_Droplet_RightPathRupees()
 		return AccessibilityLevel.None
 	end
 end
-function Json_Dungeon_Droplet_RightPathRupees1_2()
-	if function_Cached("Droplets_RightPath_B2_UnderpassItem1_2") == 1 then
+function Json_Dungeon_Droplet_RightPathRupees1_2_5()
+	if function_Cached("Droplets_RightPath_B2_UnderpassItem1_2_5") == 1 then
 		return AccessibilityLevel.Normal
-	elseif function_Cached("Droplets_RightPath_B2_UnderpassItem1_2") == 2 then
+	elseif function_Cached("Droplets_RightPath_B2_UnderpassItem1_2_5") == 2 then
 		return  AccessibilityLevel.SequenceBreak
-	elseif function_Cached("Droplets_RightPath_B2_UnderpassItem1_2") == 3 then
+	elseif function_Cached("Droplets_RightPath_B2_UnderpassItem1_2_5") == 3 then
 		return  AccessibilityLevel.Inspect
 	else
 		return AccessibilityLevel.None

@@ -449,7 +449,7 @@ function Droplets_RightPath_B2_UnderpassItem()
 	end
 end
 
-function Droplets_RightPath_B2_UnderpassItem1_2()
+function Droplets_RightPath_B2_UnderpassItem1_2_5()
 	if function_Cached("TodDungeons") == 1 and function_Cached("ToDRightRupees") == 1 then
 		return 1
 	elseif

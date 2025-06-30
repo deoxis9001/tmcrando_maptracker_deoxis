@@ -2309,7 +2309,7 @@
     "sections": [
       {
         "name": "Rupees",
-        "item_count": 3,
+        "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_Droplet_RightPathRupees"
         ],
@@ -2318,9 +2318,9 @@
       },
       {
         "name": "Rupees Grabbable",
-        "item_count": 2,
+        "item_count": 3,
         "access_rules": [
-          "^$Json_Dungeon_Droplet_RightPathRupees1_2"
+          "^$Json_Dungeon_Droplet_RightPathRupees1_2_5"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"

@@ -2934,8 +2934,8 @@ function updateLocations(segment)
 			"@Droplet/Left Path Rupees",
 			{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}
 		)
-		updateDecreaseCount(segment, "@Droplet/Right Path Rupees", {{0x2002d95, 0x10}, {0x2002d95, 0x20}, {0x2002d95, 0x40}})
-		updateDecreaseCount(segment, "@Droplet/Right Path Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
+		updateDecreaseCount(segment, "@Droplet/Right Path Rupees", {{0x2002d95, 0x10}, {0x2002d95, 0x20}})
+		updateDecreaseCount(segment, "@Droplet/Right Path Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}, {0x2002d95, 0x40}})
 		updateDecreaseCount(
 			segment,
 			"@Droplet/Upper Water Rupees",
