@@ -605,6 +605,25 @@
     ]
   },
   {
+    "name": "Mirror Shield can reflect rocks from Octoroks back at them and deal damage.",
+    "type": "progressive",
+    "loop": true,
+    "initial_stage_idx": 0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic/weapons/mirrorshield_no.png",
+        "codes": "weaponsmirrorshield_no",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/logic/weapons/mirrorshield_yes.png",
+        "codes": "weaponsmirrorshield_yes",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
     "name": "Dungeons Entrance\n Deepwoods\n Settings: \n  -\n  DWS\n  CoF\n  FOW\n  TOD\n  CRYPT\n  POW\n  DHC",
     "type": "progressive",
     "loop": true,

@@ -571,7 +571,8 @@
             [
               "weaponsgust_no",
               "weaponslamp_no"
-            ]
+            ],
+            ["weaponsmirrorshield_no",""]
           ]
         }
       ]

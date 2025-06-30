@@ -497,7 +497,7 @@ function FusionsRedNumber(code)
 			function_data_fusion[code] = 1
 			return 1
 		elseif count_Fuser < redW:getActive() then
-			function_data_fusion[code] = 1
+			function_data_fusion[code] = 2
 			return 2
 		else
 			function_data_fusion[code] = 0
@@ -544,7 +544,7 @@ function FusionsBlueNumber(code)
 			function_data_fusion[code] = 1
 			return 1
 		elseif count_Fuser < blueL:getActive() then
-			function_data_fusion[code] = 1
+			function_data_fusion[code] = 2
 			return 2
 		else
 			function_data_fusion[code] = 0
@@ -1163,6 +1163,18 @@ function HasGhiniDamage()
 	end
 end
 
+function HasGoldOctorokDamage()
+	if (function_Cached("HasSword") == 1) then
+		return 1
+	elseif (has("weaponsmirrorshield_yes") and function_Cached("HasMirrorShield")) then
+		return 1
+	elseif (has("damage_source_out_on") and function_Cached("HasMirrorShield")) then
+		return 2
+	else
+		return 0
+	end
+end
+
 function ShopBack()
 	if (function_Cached("TownDog") == 1) then
 		return 1
@@ -1288,9 +1300,11 @@ end
 function LakeIslandHP()
 	if (has("cape")) then
 		return 1
-	elseif ((has("grabbable_easy") or has("grabbable_hard")) and function_Cached("HasMagicBoomerang") == 1) then
+	elseif ( has("grabbable_easy") and function_Cached("HasMagicBoomerang") == 1 ) then
 		return 1
-	elseif (has("grabbable_allow") and function_Cached("HasMagicBoomerang") == 1) then
+	elseif ( has("grabbable_hard") and ( function_Cached("HasMagicBoomerang") == 1 or has("gust") ) ) then
+		return 1
+	elseif (has("grabbable_allow") and ( function_Cached("HasMagicBoomerang") == 1 or has("gust") ) ) then
 		return 2
 	else
 		return 0

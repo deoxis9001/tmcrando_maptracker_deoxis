@@ -9,9 +9,9 @@ function MinishWoods_GreatFairy_NPC()
 end
 
 function MinishWoods_GoldenOcto() 
-	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions56") ) ) and function_Cached("AccessNorthMinish")==1 and function_Cached("HasSword")==1 ) then
+	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions56") ) ) and function_Cached("AccessNorthMinish")==1 and function_Cached("HasGoldOctorokDamage")==1 ) then
 		return 1
-	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions56") ) ) and function_Cached("AccessNorthMinish")==2 and function_Cached("HasSword")==1 ) then
+	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions56") ) ) and ( function_Cached("AccessNorthMinish")==1 or function_Cached("AccessNorthMinish")==2 ) and ( function_Cached("HasGoldOctorokDamage")==1 or function_Cached("HasGoldOctorokDamage")==2 ) ) then
 		return 2
 	else
 		return 0

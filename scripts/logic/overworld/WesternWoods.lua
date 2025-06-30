@@ -50,6 +50,8 @@ end
 function WesternWoods_GoldenOcto() 
 	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3d") ) ) and function_Cached("AccessWestern")==1 and function_Cached("HasSword")==1 ) then
 		return 1
+	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions3d") ) ) and function_Cached("AccessWestern")==1 and function_Cached("HasSword")==2 ) then
+		return 2
 	else
 		return 0
 	end 
