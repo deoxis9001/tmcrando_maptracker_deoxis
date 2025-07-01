@@ -3,7 +3,7 @@ function PoWFans()
 		return 1
 	elseif (has("small_key_none")) then
 		return 1
-	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("pow_smallkey") >= 3) then
+	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("pow_smallkey") >= 2) then
 		return 2
 	else
 		return 0
@@ -14,7 +14,7 @@ function PoWBigChest()
 		return 1
 	elseif (has("small_key_none")) then
 		return 1
-	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("pow_smallkey") >= 4) then
+	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("pow_smallkey") >= 3) then
 		return 2
 	else
 		return 0
