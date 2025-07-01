@@ -207,11 +207,7 @@ function Deepwood_1F_Madderpillar_HP()
 		return 2
 	elseif
 		((function_Cached("DeepwoodDungeons") == 1 or function_Cached("DeepwoodDungeons") == 2) and
-			(function_Cached("DeepwoodRedWarp") == 1 or
-				((function_Cached("Deepwood1stDoor") == 1 or
-					(function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2)) and
-					has("gust") and
-					(function_Cached("DeepwoodBasementDoor") == 1 or function_Cached("DeepwoodBasementDoor") == 2))))
+			( function_Cached("Deepwood1stDoor") == 1 ))
 	 then
 		return 3
 	else

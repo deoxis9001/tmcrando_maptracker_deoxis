@@ -3,6 +3,8 @@ function Deepwood1stDoor()
 		return 1
 	elseif (has("small_key_none")) then
 		return 1
+	elseif (function_Cached("DeepwoodBlueWarp") == 1) then
+		return 1
 	else
 		return 0
 	end
@@ -14,9 +16,9 @@ function Deepwood2ndDoor()
 		return 1
 	elseif (has("small_key_none")) then
 		return 1
-	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("dws_smallkey") >= 2) then
-		return 2
 	elseif (has("small_key_out_on") and has("dws_warps_blue") and Tracker:ProviderCountForCode("dws_smallkey") >= 1) then
+		return 2
+	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("dws_smallkey") >= 2) then
 		return 2
 	else
 		return 0
@@ -27,7 +29,9 @@ function DeepwoodMadderpillarDoor()
 		return 1
 	elseif (has("small_key_none")) then
 		return 1
-	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("dws_smallkey") >= 3) then
+	elseif (has("small_key_out_on") and has("dws_warps_blue") and Tracker:ProviderCountForCode("dws_smallkey") >= 1) then
+		return 2
+	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("dws_smallkey") >= 2) then
 		return 2
 	else
 		return 0
@@ -38,6 +42,8 @@ function DeepwoodBasementDoor()
 		return 1
 	elseif (has("small_key_none")) then
 		return 1
+	elseif (has("small_key_out_on") and has("dws_warps_blue") and Tracker:ProviderCountForCode("dws_smallkey") >= 1) then
+		return 2
 	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("dws_smallkey") >= 2) then
 		return 2
 	else
