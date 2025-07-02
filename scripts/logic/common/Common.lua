@@ -1482,15 +1482,6 @@ function FallsHP()
 end
 
 function DeepwoodMadderHP()
-print("---------------------")
-print("---------------------")
-print("---------------------")
-print('function_Cached("DeepwoodPreMadderpillar")',function_Cached("DeepwoodPreMadderpillar"))
-print('function_Cached("DeepwoodMadderpillarDoor")',function_Cached("DeepwoodMadderpillarDoor"))
-print('function_Cached("DeepwoodWeb")',function_Cached("DeepwoodWeb"))
-print("---------------------")
-print("---------------------")
-print("---------------------")
 	if
 		(function_Cached("DeepwoodPreMadderpillar") == 1 and function_Cached("DeepwoodMadderpillarDoor") == 1 and
 			function_Cached("DeepwoodWeb") == 1)
