@@ -88,13 +88,13 @@ function DrLeft()
 		return 1
 	elseif
 		(has("bracelets") and function_Cached("TownDog") == 1 and function_Cached("BlowDust") == 1 and
-			(function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1))
+			(function_Cached("DrLeftClones") == 1))
 	 then
 		return 1
 	elseif
 		(has("bracelets") and function_Cached("TownDog") == 1 and
 			(function_Cached("BlowDust") == 1 or function_Cached("BlowDust") == 2) and
-			(function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1))
+			(function_Cached("DrLeftClones") == 1 or function_Cached("DrLeftClones") == 2))
 	 then
 		return 2
 	else
@@ -567,8 +567,10 @@ end
 function FoWStatueCloneSwitch()
 	if (has("openworld_on")) then
 		return 1
-	elseif (function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1) then
+	elseif ( function_Cached("FoWStatueDropClones") == 1 ) then
 		return 1
+	elseif ( function_Cached("FoWStatueDropClones") == 2 ) then
+		return 2
 	else
 		return 0
 	end
@@ -578,10 +580,14 @@ function FoWLeftDrop()
 		return 1
 	elseif
 		(function_Cached("FoWEyeSwitch") == 1 and function_Cached("FoWStalfosFight") == 1 and
-			(has("cape") or function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or
-				function_Cached("CanSplit4") == 1))
+			(has("cape") or function_Cached("FoWLeftDropClones") == 1 ))
 	 then
 		return 1
+	elseif
+		( function_Cached("FoWEyeSwitch") == 1 and function_Cached("FoWStalfosFight") == 1 and
+			(has("cape") or ( function_Cached("FoWLeftDropClones") == 1 or function_Cached("FoWLeftDropClones") == 2 )))
+	 then
+		return 2
 	else
 		return 0
 	end
@@ -841,7 +847,7 @@ function PoWPeahatRoom()
 	if (has("openworld_on")) then
 		return 1
 	elseif
-		(function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1 or
+		(function_Cached("PoWPeahatClones") == 1 or
 			(function_Cached("HasSword") == 1 and has("bombs")))
 	 then
 		return 1

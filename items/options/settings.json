@@ -1530,7 +1530,7 @@
     "name": "Low Difficulty:\n Dust piles can be found that can be blown away to what is underneath.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1549,7 +1549,7 @@
     "name": "Low Difficulty:\n Half way up Mt Crenel across the wooden bridge, the mushroom on the ledge above can be grabbed with the Gust Jar to continue climbing up the mountain.\n This only matters when playing with 'OpenWorld' enabled, since reaching this area requires either Bombs or Grip ring.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1568,7 +1568,7 @@
     "name": "Low Difficulty:\n Fully charged Light Arrow shots can break pots, bushes, and small trees.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1587,7 +1587,7 @@
     "name": "Low Difficulty:\n Bobombs can be used in 2 rooms in Cave of Flames, when a Bobomb is killed it explodes which can open Bomb Walls.\n Items such as Sword and Gust Jar can easily be used to move the Bobombs near the bomb wall to blow it up.\n Other items like the Boomerang, Shield, Bow, and even thrown pots can be used to make bobombs explode but with much higher difficulty, these will never be required due to it being mostly luck.\n If you killed all the bobombs in a room without blowing up the wall, they will respawn after you do a QUICKWARP.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1644,7 +1644,7 @@
     "name": "Medium Difficulty:\n In the section after the rain on Mt Crenel is a series of caves, one cave has a switch on the other side of a gap that needs to be hit to extend a bridge.\n This switch can be hit with any of: Boomerang, Bomb Bag, Bow, Sword and Peril Beam, Sword and Sword Beam, or can be skipped entirely with the Rocs Cape.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1663,7 +1663,7 @@
     "name": "Low Difficulty:\n The spikey beetles found in the entrance of Cave of Flames need to be flipped onto their back in order to be killed.\n The actions that can do this are: Cane shot, Shield bonk, Bomb explosion, or Down Strike.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1701,7 +1701,7 @@
     "name": "Medium Difficulty:\n The Cape can be used to make many unintended jumps across bodies of water you wouldn't expect. Some gaps seem too far to be reachable normally or require jumping at a weird angle, however the distance of the cape glide can be extended:\n Instead of holding the cape button the entire time, tap the cape to do a hop and then press and hold to glide after link is near the end of his hop.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1739,7 +1739,7 @@
     "name": "Low Difficulty:\n In the Minish path located at the lake cabin, there is a lilypad you can use to reach the pier on the bottom side of the path. If you try and swim down to the pier you cannot climb up onto it from in the water,\n however you can instead swim to the screen transition at the bottom which will make you enter the cabin, you can then exit the doorway you came from to be placed on the pier.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1777,7 +1777,7 @@
     "name": "High Difficulty:\n In Palace of Winds 2F is a sequence of rooms that at the end requires the Cane of Pacci to hole jump up to a higher platform.\n However the majority of the floor can be skipped with a reasonably precise jump to a moving platform seen when first entering that floor at the bottom of the screen, this skips all the other rooms on this floor which never have any items.\n The jump can be done either with a known setup to make it completely consistent, or the player can just attempt to jump and land on the platform when it stops moving.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1872,7 +1872,7 @@
     "name": "Low Difficulty:\n In Fortress of Winds there are 2 pots that contain items when playing with 'Special Pots', these are located in a dirt filled room in the back right section of the dungeon on 2F locked behind various locked doors.\n However the lower of the 2 pots can be grabbed with the Gust Jar from a much earlier part of the dungeon located in the front right section 2F.\n The pot can accidentally be released inside the wall which makes the item unobtainable, simply reload the room and the pot and item will respawn.",
     "type": "progressive",
     "loop": true,
-    "initial_stage_idx": 1,
+    "initial_stage_idx": 0,
     "allow_disabled": false,
     "stages": [
       {
@@ -1883,6 +1883,25 @@
       {
         "img": "images/options/logic/require_trick/fow_pot_on.png",
         "codes": "fowpot_on",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Medium Difficulty:\nYour clones can walk on pits and even through the sides of some solid objects if you are quick enough.\nThis can allow you to complete certain puzzles with more clones than you would normally have at that point in the vanilla game.\nThis setting only has an impact when Swords are not Progressive as otherwise you can always switch to a smaller number of clones.",
+    "type": "progressive",
+    "loop": true,
+    "initial_stage_idx": 0,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic/require_trick/clonetrick_off.png",
+        "codes": "clonetrick_off",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/logic/require_trick/clonetrick_on.png",
+        "codes": "clonetrick_on",
         "inherit_codes": false
       }
     ]
@@ -2263,6 +2282,25 @@
       {
         "img": "images/options/tracker/require_trick/fowpot_out_on.png",
         "codes": "fowpot_out_on",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Medium Difficulty:\nYour clones can walk on pits and even through the sides of some solid objects if you are quick enough.\nThis can allow you to complete certain puzzles with more clones than you would normally have at that point in the vanilla game.\nThis setting only has an impact when Swords are not Progressive as otherwise you can always switch to a smaller number of clones.",
+    "type": "progressive",
+    "loop": true,
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/tracker/require_trick/clonetrick_out_off.png",
+        "codes": "clonetrick_out_off",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/tracker/require_trick/clonetrick_out_on.png",
+        "codes": "clonetrick_out_on",
         "inherit_codes": false
       }
     ]

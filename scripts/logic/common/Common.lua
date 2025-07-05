@@ -1603,7 +1603,7 @@ end
 
 function PoWDrop()
 	if
-		(has("cape") and (function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) and has("cane") and
+		(has("cape") and function_Cached("PoWPlatformClones") == 1 and has("cane") and
 			function_Cached("PoWPotPuzzle") == 1)
 	 then
 		return 1
@@ -1632,7 +1632,7 @@ function PoWDrop()
 	 then
 		return 1
 	elseif
-		(has("cape") and (function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) and has("cane") and
+		(has("cape") and ( function_Cached("PoWPlatformClones") == 1 or function_Cached("PoWPlatformClones") == 2 ) and has("cane") and
 			(function_Cached("PoWPotPuzzle") == 1 or function_Cached("PoWPotPuzzle") == 2))
 	 then
 		return 2
@@ -1939,6 +1939,56 @@ function DHCSwitchHit()
 		return 0
 	end
 end
+
+function DrLeftClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 1
+	elseif (function_Cached("CanSplit2") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 2
+	end
+end
+
+function FoWLeftDropClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 1
+	elseif (function_Cached("CanSplit2") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 2
+	end
+end
+function FoWStatueDropClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 ) then
+		return 1
+	elseif (function_Cached("CanSplit2") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 ) then
+		return 2
+	end
+end
+
+function PoWPlatformClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1 ) then
+		return 1
+	elseif (function_Cached("CanSplit3") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1 ) then
+		return 2
+	end
+end
+
+function PoWPeahatClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 1 
+	elseif (function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 2 
+	end
+end
+
 function StrangerFusion()
 	if (has("fusionred_complet") or (has("fusionred_vanilla") and has("fusions0f"))) then
 		return 1

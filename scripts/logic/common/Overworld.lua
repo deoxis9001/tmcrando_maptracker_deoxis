@@ -298,7 +298,7 @@ end
 function PoW2ndHalf()
 	if
 		((function_Cached("PoWBlueWarp") == 1 and function_Cached("PoWDarknut") == 1) or
-			(has("cape") and (function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) and
+			(has("cape") and (function_Cached("PoWPlatformClones") == 1) and
 				function_Cached("PoWJump") == 1 and
 				function_Cached("PoW1stDoor") == 1 and
 				function_Cached("PoWBossDoor") == 1))
@@ -306,7 +306,7 @@ function PoW2ndHalf()
 		return 1
 	elseif
 		((function_Cached("PoWBlueWarp") == 1 and (function_Cached("PoWDarknut") == 1 or function_Cached("PoWDarknut") == 2)) or
-			(has("cape") and (function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) and
+			(has("cape") and ( function_Cached("PoWPlatformClones") == 1 or function_Cached("PoWPlatformClones") == 2 ) and
 				(function_Cached("PoWJump") == 1 or function_Cached("PoWJump") == 2) and
 				(function_Cached("PoW1stDoor") == 1 or function_Cached("PoW1stDoor") == 2) and
 				(function_Cached("PoWBossDoor") == 1 or function_Cached("PoWBossDoor") == 2)))
