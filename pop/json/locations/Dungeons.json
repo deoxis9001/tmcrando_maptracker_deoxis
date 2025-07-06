@@ -1608,7 +1608,8 @@
         "name": "Vaati",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_warp_vaati"
         ],
         "item_count": 1,
         "access_rules": [

@@ -3112,7 +3112,8 @@
         "y": 300,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_warp_vaati"
         ]
       },
       {
@@ -3148,7 +3149,8 @@
         "y": 220,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_warp_vaati"
         ]
       }
     ],

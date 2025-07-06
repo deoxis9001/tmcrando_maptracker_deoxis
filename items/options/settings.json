@@ -989,6 +989,11 @@
         "img": "images/options/main/requirements/dhc_open.png",
         "codes": "dhc_open",
         "inherit_codes": false
+      },
+      {
+        "img": "images/options/main/requirements/dhc_warp_vaati.png",
+        "codes": "dhc_warp_vaati",
+        "inherit_codes": false
       }
     ]
   },
