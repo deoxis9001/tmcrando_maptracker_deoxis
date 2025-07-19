@@ -221,16 +221,8 @@ function DHC_2F_BlueWarp_BigChest()
 end
 
 function BeatVaati()
-	print("--- BeatVaati ---")
-	print("function_Cached(AccessDHC) = ", function_Cached("AccessDHC"))
-	print("has(dhc_warp_vaati) = ", has("dhc_warp_vaati"))
-	print("function_Cached(CanSplit4) = ", function_Cached("CanSplit4"))
-	print("function_Cached(HasBow) = ", function_Cached("HasBow"))
-	print("has(gust) = ", has("gust"))
-	print("has(cane) = ", has("cane"))
-	print("function_Cached(DarkRooms) = ", function_Cached("DarkRooms"))
 
-	 if ( function_Cached("AccessDHC") == 1 and has("dhc_warp_vaati") and function_Cached("CanSplit4") == 1 and function_Cached("HasBow") == 1 and
+	 if ( function_Cached("AccessDHC") == 1 and has("dhc_fast_vaati") and function_Cached("CanSplit4") == 1 and function_Cached("HasBow") == 1 and
 			has("gust") and has("cane") and	function_Cached("DarkRooms") == 1 ) then
 		return 1
 	elseif
@@ -258,7 +250,7 @@ function BeatVaati()
 			(function_Cached("DarkRooms") == 1 or function_Cached("DarkRooms") == 2))
 	 then
 		return 2
-	 elseif (  (function_Cached("AccessDHC") == 1 or function_Cached("AccessDHC") == 2) and  has("dhc_warp_vaati") and 
+	 elseif (  (function_Cached("AccessDHC") == 1 or function_Cached("AccessDHC") == 2) and  has("dhc_fast_vaati") and 
 			function_Cached("CanSplit4") == 1 and
 			function_Cached("HasBow") == 1 and
 			has("gust") and

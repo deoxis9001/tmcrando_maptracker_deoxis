@@ -1478,7 +1478,8 @@
       {
         "name": "Win",
         "visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1491,7 +1492,8 @@
         "name": "Blade Chest",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1504,7 +1506,8 @@
         "name": "Platform Chest",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1517,7 +1520,8 @@
         "name": "Stone King",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1530,7 +1534,8 @@
         "name": "Post Throne Big Chest",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1543,7 +1548,8 @@
         "name": "Northeast Tower",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1556,7 +1562,8 @@
         "name": "Southeast Tower",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1569,7 +1576,8 @@
         "name": "Southwest Tower",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1582,7 +1590,8 @@
         "name": "Northwest Tower",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1595,7 +1604,8 @@
         "name": "Big Block Chest",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1609,7 +1619,7 @@
         "visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
-          "$has|dhc_warp_vaati"
+          "$has|dhc_fast_vaati"
         ],
         "item_count": 1,
         "access_rules": [

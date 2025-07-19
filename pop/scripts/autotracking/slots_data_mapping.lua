@@ -1,6 +1,6 @@
 SLOTS_DATA_MAPPING = {
     -- goal_vaati
-    ["goal_vaati"]  = {"dhc_closed","OPT",{1,0}},
+    ["goal_vaati_dhc"]  = {"dhc_closed","OPT",{3,0,2,1,4}},
     -- Dungeons
     ["dungeon_small_keys"]   =   {"small_key_none","OPT",{0,0,1,2,2,2,2,2,2,2}},
     ["dungeon_big_keys"]   =   {"big_key_none","OPT",{0,0,1,2,2,2,2,2,2,2}},

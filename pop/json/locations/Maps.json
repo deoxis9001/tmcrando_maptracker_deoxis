@@ -2770,7 +2770,8 @@
         "y": 870,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2779,7 +2780,8 @@
         "y": 835,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2804,7 +2806,8 @@
         "y": 1800,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2813,7 +2816,8 @@
         "y": 1305,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2838,7 +2842,8 @@
         "y": 110,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2847,7 +2852,8 @@
         "y": 75,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2872,7 +2878,8 @@
         "y": 70,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2881,7 +2888,8 @@
         "y": 35,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2906,7 +2914,8 @@
         "y": 130,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2915,7 +2924,8 @@
         "y": 145,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2924,7 +2934,8 @@
         "y": 92,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2949,7 +2960,8 @@
         "y": 1490,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2958,7 +2970,8 @@
         "y": 1505,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2967,7 +2980,8 @@
         "y": 1452,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2992,7 +3006,8 @@
         "y": 1490,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3001,7 +3016,8 @@
         "y": 1505,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3010,7 +3026,8 @@
         "y": 1452,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -3035,7 +3052,8 @@
         "y": 135,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3044,7 +3062,8 @@
         "y": 145,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3053,7 +3072,8 @@
         "y": 92,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -3078,7 +3098,8 @@
         "y": 225,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3087,7 +3108,8 @@
         "y": 25,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -3150,7 +3172,7 @@
         "restrict_visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
-          "$has|dhc_warp_vaati"
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -3174,7 +3196,7 @@
         "x": 3090,
         "y": 1480,
         "restrict_visibility_rules": [
-          "$has|ped_items_on,dhc_open"
+          "$has|ped_items_on,$has|dhc_open"
         ]
       },
       {
@@ -3182,7 +3204,7 @@
         "x": 136,
         "y": 50,
         "restrict_visibility_rules": [
-          "$has|ped_items_on,dhc_open"
+          "$has|ped_items_on,$has|dhc_open"
         ]
       },
       {
@@ -3190,7 +3212,7 @@
         "x": 406,
         "y": 975,
         "restrict_visibility_rules": [
-          "$has|ped_items_on,dhc_open"
+          "$has|ped_items_on,$has|dhc_open"
         ]
       }
     ],
@@ -3232,7 +3254,8 @@
         "x": 3090,
         "y": 1480,
         "restrict_visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3240,7 +3263,8 @@
         "x": 136,
         "y": 50,
         "restrict_visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3248,7 +3272,8 @@
         "x": 406,
         "y": 975,
         "restrict_visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ]
       }
     ],

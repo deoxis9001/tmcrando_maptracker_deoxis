@@ -1989,6 +1989,16 @@ function PoWPeahatClones()
 	end
 end
 
+function CloneSwitchesWithBomb()
+	if has("cloneswitcheswithbomb_on") and has("HasSword") and has("bombs") then
+		return 1
+	elseif has("cloneswitcheswithbomb_out_on")  and has("HasSword") and has("bombs") then
+		return 2
+	else
+		return 0
+	end
+end
+
 function StrangerFusion()
 	if (has("fusionred_complet") or (has("fusionred_vanilla") and has("fusions0f"))) then
 		return 1

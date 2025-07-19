@@ -991,8 +991,13 @@
         "inherit_codes": false
       },
       {
-        "img": "images/options/main/requirements/dhc_warp_vaati.png",
-        "codes": "dhc_warp_vaati",
+        "img": "images/options/main/requirements/dhc_fast_vaati.png",
+        "codes": "dhc_fast_vaati",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/main/requirements/dhc_open_fast.png",
+        "codes": "dhc_open_fast",
         "inherit_codes": false
       }
     ]

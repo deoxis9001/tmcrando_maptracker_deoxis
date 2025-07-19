@@ -2450,7 +2450,7 @@
         "restrict_visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
-          "$has|dhc_warp_vaati"
+          "$has|dhc_fast_vaati"
         ]
       }
     ],
