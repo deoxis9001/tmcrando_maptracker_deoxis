@@ -26,7 +26,9 @@ function CoF2ndDoor()
 	end
 end
 function CoFBossDoor()
-	if (has("cof_bigkey")) then
+	if (has("cof_bigkey") and ( has("big_key_shuffle") or has("big_key_vanilla") ) ) then
+		return 1
+	elseif (has("ud_bigkey") and has("big_key_universal") ) then
 		return 1
 	elseif (has("big_key_none")) then
 		return 1

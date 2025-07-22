@@ -2,9 +2,9 @@ function ToDRightBlock()
 	return 1
 end
 function ToDLeftBlock()
-	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4 and has("tod_bigkey")) then
+	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4 and has("tod_bigkey") and ( has("big_key_shuffle") or has("big_key_vanilla") ) ) then
 		return 1
-	elseif (Tracker:ProviderCountForCode("tod_smallkey") >= 1 and hasnot("tod_bigkey")) then
+	elseif (Tracker:ProviderCountForCode("tod_smallkey") >= 1 and hasnot("tod_bigkey") and ( has("big_key_shuffle") or has("big_key_vanilla") ) ) then
 		return 1
 	elseif (has("small_key_none")) then
 		return 1
@@ -15,7 +15,9 @@ function ToDLeftBlock()
 	end
 end
 function ToDBigDoor()
-	if (has("tod_bigkey")) then
+	if (has("tod_bigkey")  and ( has("big_key_shuffle") or has("big_key_vanilla") ) ) then
+		return 1
+	elseif (has("ud_bigkey") and has("big_key_universal") ) then
 		return 1
 	elseif (has("big_key_none")) then
 		return 1

@@ -51,7 +51,9 @@ function DeepwoodBasementDoor()
 	end
 end
 function DeepwoodBossDoor()
-	if (has("dws_bigkey")) then
+	if (has("dws_bigkey")  and ( has("big_key_shuffle") or has("big_key_vanilla") ) ) then
+		return 1
+	elseif (has("ud_bigkey") and has("big_key_universal") ) then
 		return 1
 	elseif (has("big_key_none")) then
 		return 1
