@@ -847,10 +847,13 @@ function PoWPeahatRoom()
 	if (has("openworld_on")) then
 		return 1
 	elseif
-		(function_Cached("PoWPeahatClones") == 1 or
-			(function_Cached("HasSword") == 1 and has("bombs")))
+		(function_Cached("PoWPeahatClones") == 1 or function_Cached("CloneSwitchesWithBomb") == 1)
 	 then
 		return 1
+	elseif
+		(function_Cached("PoWPeahatClones") == 2 or function_Cached("CloneSwitchesWithBomb") == 2)
+	 then
+		return 2
 	else
 		return 0
 	end
