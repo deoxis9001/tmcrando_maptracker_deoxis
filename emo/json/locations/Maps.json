@@ -2516,7 +2516,8 @@
         "x": 3090,
         "y": 1480,
         "restrict_visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ]
       }
     ],
