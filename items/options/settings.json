@@ -1917,6 +1917,25 @@
     ]
   },
   {
+    "name": "Low Difficulty:\nSome rooms in Palace of Winds require you to hit 4 switches almost simultaneously.\nThis is normally done by using a Sword slash with clones to hit all of them at the same time.\nHowever, an alternative solution without clones is to place a Bomb next to 2 of the switches, and then hit the other 2 with a Sword slash while the Bomb is exploding.",
+    "type": "progressive",
+    "loop": true,
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/logic/require_trick/cloneswitcheswithbomb_off.png",
+        "codes": "cloneswitcheswithbomb_off",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/logic/require_trick/cloneswitcheswithbomb_on.png",
+        "codes": "cloneswitcheswithbomb_on",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
     "name": "If enabled will use the prices found in the JP and US versions.\nThese are the prices from left to right:\nEU 1st set: 200, 100, 50\nEU 2nd set: 300, 200, 100\nEU 3rd set: 400, 300, 200\nEU 4th set: 500, 400, 300\nEU 5th set: 600, 500, 400\nJP any set: 300, 200, 50",
     "type": "progressive",
     "loop": true,
@@ -2311,6 +2330,25 @@
       {
         "img": "images/options/tracker/require_trick/clonetrick_out_on.png",
         "codes": "clonetrick_out_on",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Low Difficulty:\nSome rooms in Palace of Winds require you to hit 4 switches almost simultaneously.\nThis is normally done by using a Sword slash with clones to hit all of them at the same time.\nHowever, an alternative solution without clones is to place a Bomb next to 2 of the switches, and then hit the other 2 with a Sword slash while the Bomb is exploding.",
+    "type": "progressive",
+    "loop": true,
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/options/tracker/require_trick/cloneswitcheswithbomb_out_off.png",
+        "codes": "cloneswitcheswithbomb_out_off",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/tracker/require_trick/cloneswitcheswithbomb_out_on.png",
+        "codes": "cloneswitcheswithbomb_out_on",
         "inherit_codes": false
       }
     ]

@@ -550,7 +550,11 @@
           [
             "fowpot_off",
             "clonetrick_off"
-          ]
+          ],
+            [
+              "cloneswitcheswithbomb_off",
+              ""
+            ]
         ]
       }
     ]
@@ -660,7 +664,11 @@
           [
             "fowpot_out_off",
             "clonetrick_out_off"
-          ]
+          ],
+            [
+              "cloneswitcheswithbomb_out_off",
+              ""
+            ]
         ]
       }
     ]
