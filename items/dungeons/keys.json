@@ -329,5 +329,18 @@
     "img": "images/dungeons/Small Key.png",
     "codes": "rc_smallkey",
     "max_quantity": 3
+  },
+  {
+    "name": "Universal Big Key",
+    "type": "toggle",
+    "img": "images/dungeons/Big Key.png",
+    "codes": "ud_bigkey"
+  },
+  {
+    "name": "Universal Small Key",
+    "type": "consumable",
+    "img": "images/dungeons/Small Key.png",
+    "codes": "ud_smallkey",
+    "max_quantity": 28
   }
 ]

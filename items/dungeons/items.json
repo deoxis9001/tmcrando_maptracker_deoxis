@@ -106,5 +106,11 @@
     "type": "toggle",
     "img": "images/dungeons/vaati.png",
     "codes": "dhc"
+  },
+  {
+    "name": "Universal Dungeons",
+    "type": "toggle",
+    "img": "images/dungeons/universal_dungeons.png",
+    "codes": "universal_dungeons"
   }
 ]

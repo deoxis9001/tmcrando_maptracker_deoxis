@@ -18,7 +18,8 @@
         "todx",
         "rcx",
         "powx",
-        "dhc"
+        "dhc",
+        "universal_dungeons"
       ],
       [
         "sword0",
@@ -34,7 +35,8 @@
         "tod_smallkey",
         "rc_smallkey",
         "pow_smallkey",
-        "dhc_smallkey"
+        "dhc_smallkey",
+        "ud_smallkey"
       ],
       [
         "shield",
@@ -50,7 +52,8 @@
         "tod_bigkey",
         "",
         "pow_bigkey",
-        "dhc_bigkey"
+        "dhc_bigkey",
+        "ud_bigkey"
       ],
       [
         "boots",
@@ -66,7 +69,8 @@
         "tod_cm",
         "beta",
         "pow_cm",
-        "dhc_cm"
+        "dhc_cm",
+        ""
       ],
       [
         "flippersandfly",
@@ -82,7 +86,8 @@
         "fastsplit",
         "greatspin",
         "longspin",
-        "sevenscrolls"
+        "sevenscrolls",
+        ""
       ],
       [
         "redW",
@@ -98,7 +103,8 @@
         "rockbreaker",
         "dashattack",
         "downthrust",
-        "rollattack"
+        "rollattack",
+        ""
       ]
     ]
   },

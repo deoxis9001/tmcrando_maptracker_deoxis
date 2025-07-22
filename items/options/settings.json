@@ -365,6 +365,11 @@
         "img": "images/options/main/dungeons_settings/small_key_shuffle.png",
         "codes": "small_key_shuffle",
         "inherit_codes": false
+      },
+      {
+        "img": "images/options/main/dungeons_settings/small_key_universal.png",
+        "codes": "small_key_universal",
+        "inherit_codes": false
       }
     ]
   },
@@ -388,6 +393,11 @@
       {
         "img": "images/options/main/dungeons_settings/big_key_shuffle.png",
         "codes": "big_key_shuffle",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/main/dungeons_settings/big_key_universal.png",
+        "codes": "big_key_universal",
         "inherit_codes": false
       }
     ]
