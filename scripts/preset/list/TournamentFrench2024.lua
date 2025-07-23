@@ -1,5 +1,5 @@
 
--- Generated 13.10.24 by deoxis9001 
+-- Generated 23.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="TournamentFrench2024"
 numero_preset=numero_preset+1
 setting_preset_data["TournamentFrench2024"] = {}
@@ -32,15 +32,16 @@ setting_preset_data["TournamentFrench2024"]["open_library_no"] = 0
 setting_preset_data["TournamentFrench2024"]["crenelwindcrest_no"] = 0
 setting_preset_data["TournamentFrench2024"]["fallswindcrest_no"] = 0
 setting_preset_data["TournamentFrench2024"]["cloudwindcrest_no"] = 0
+setting_preset_data["TournamentFrench2024"]["lakewindcrest_no"] = 1
 setting_preset_data["TournamentFrench2024"]["swampwindcrest_no"] = 0
 setting_preset_data["TournamentFrench2024"]["shfwindcrest_no"] = 0
-setting_preset_data["TournamentFrench2024"]["lakewindcrest_no"] = 1
 setting_preset_data["TournamentFrench2024"]["minishwindcrest_no"] = 0
 setting_preset_data["TournamentFrench2024"]["grabbable_none"] = 1
 setting_preset_data["TournamentFrench2024"]["weaponsbombs_no"] = 0
 setting_preset_data["TournamentFrench2024"]["weaponsbow_no"] = 0
 setting_preset_data["TournamentFrench2024"]["weaponsgust_no"] = 0
 setting_preset_data["TournamentFrench2024"]["weaponslamp_no"] = 0
+setting_preset_data["TournamentFrench2024"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["TournamentFrench2024"]["blowdust_off"] = 1
 setting_preset_data["TournamentFrench2024"]["crenelmushroom_off"] = 1
 setting_preset_data["TournamentFrench2024"]["lightarrowbreak_off"] = 1
@@ -60,6 +61,8 @@ setting_preset_data["TournamentFrench2024"]["dhccanonhit_off"] = 0
 setting_preset_data["TournamentFrench2024"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["TournamentFrench2024"]["dhcswitchhit_off"] = 0
 setting_preset_data["TournamentFrench2024"]["fowpot_off"] = 0
+setting_preset_data["TournamentFrench2024"]["clonetrick_off"] = 0
+setting_preset_data["TournamentFrench2024"]["cloneswitcheswithbomb_off"] = 0
 setting_preset_data["TournamentFrench2024"]["goron_eu"] = 0
 setting_preset_data["TournamentFrench2024"]["figurine_option"] = 0
 setting_preset_data["TournamentFrench2024"]["progressiveitems"] = true
