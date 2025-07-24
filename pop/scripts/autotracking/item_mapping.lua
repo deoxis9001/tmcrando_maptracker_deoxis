@@ -90,6 +90,7 @@ ITEM_MAPPING = {
 	[20764] = {{ "pow_Compass","toggle"}},
 	[20765] = {{ "dhc_Compass","toggle"}},
 
+	[21015] = {{ "ud_bigkey","toggle" }},
 	[21016] = {{ "dws_bigkey","toggle" }},
 	[21017] = {{ "cof_bigkey","toggle" }},
 	[21018] = {{ "fow_bigkey","toggle" }},
@@ -97,6 +98,7 @@ ITEM_MAPPING = {
 	[21020] = {{ "pow_bigkey","toggle" }},
 	[21021] = {{ "dhc_bigkey","toggle" }},
 	
+	[21271] = {{ "ud_smallkey","consumable" }},
 	[21272] = {{ "dws_smallkey","consumable" }},
 	[21273] = {{ "cof_smallkey","consumable" }},
 	[21274] = {{ "fow_smallkey","consumable" }},
