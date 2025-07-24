@@ -2,6 +2,7 @@ items_codes_autotracking={}
 
 function autotracker_started()
 	print("Started Tracking")
+	UD_KEY_COUNT = 0
 	DWS_KEY_COUNT = 0
 	DWS_KEY_USED = 0
 	COF_KEY_COUNT = 0
@@ -1401,31 +1402,34 @@ function updateHearts(segment, address)
 	end
 end
 function updateBigKeys(segment, code)
-	if code == "dws_bigkey" then
+	local item = Tracker:FindObjectForCode("big_key_none")
+	if code == "ud_bigkey" and item.CurrentStage = 3 then
+		updateToggleFlag(segment, "ud_bigkey", 0x2002eac, 0x04)
+	elseif code == "dws_bigkey" and item.CurrentStage < 3 then
 		if testFlag(segment, 0x2002D45, 0x02) then
 			updateToggleFlag(segment, "dws_bigkey", 0x2002D45, 0x02)
 		else
 			updateToggleFlag(segment, "dws_bigkey", 0x2002ead, 0x04)
 		end
-	elseif code == "cof_bigkey" then
+	elseif code == "cof_bigkey"  and item.CurrentStage < 3 then
 		if testFlag(segment, 0x2002D5A, 0x40) then
 			updateToggleFlag(segment, "cof_bigkey", 0x2002D5A, 0x40)
 		else
 			updateToggleFlag(segment, "cof_bigkey", 0x2002eae, 0x04)
 		end
-	elseif code == "fow_bigkey" then
+	elseif code == "fow_bigkey"  and item.CurrentStage< 3 then
 		if testFlag(segment, 0x2002D70, 0x40) then
 			updateToggleFlag(segment, "fow_bigkey", 0x2002D70, 0x40)
 		else
 			updateToggleFlag(segment, "fow_bigkey", 0x2002eaf, 0x04)
 		end
-	elseif code == "tod_bigkey" then
+	elseif code == "tod_bigkey" and item.CurrentStage < 3  then
 		if testFlag(segment, 0x2002D89, 0x10) then
 			updateToggleFlag(segment, "tod_bigkey", 0x2002D89, 0x10)
 		else
 			updateToggleFlag(segment, "tod_bigkey", 0x2002eb0, 0x04)
 		end
-	elseif code == "pow_bigkey" then
+	elseif code == "pow_bigkey" and item.CurrentStage < 3  then
 		if testFlag(segment, 0x2002DA2, 0x40) then
 			updateToggleFlag(segment, "pow_bigkey", 0x2002DA2, 0x40)
 		elseif testFlag(segment, 0x2002DA4, 0x04) then
@@ -1433,7 +1437,7 @@ function updateBigKeys(segment, code)
 		else
 			updateToggleFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
 		end
-	elseif code == "dhc_bigkey" then
+	elseif code == "dhc_bigkey" and item.CurrentStage < 3  then
 		if testFlag(segment, 0x2002DBE, 0x20) then
 			updateToggleFlag(segment, "dhc_bigkey", 0x2002DBE, 0x20)
 		else
@@ -1443,6 +1447,7 @@ function updateBigKeys(segment, code)
 end
 
 function updateSmallKeys(segment, code, address)
+	local item2 = Tracker:FindObjectForCode("small_key_none")
 	local item = Tracker:FindObjectForCode(code)
 	if code == "dws_smallkey" then
 		DWS_KEY_USED = 0
@@ -1459,7 +1464,9 @@ function updateSmallKeys(segment, code, address)
 			DWS_KEY_USED = DWS_KEY_USED + 1
 		end
 		DWS_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
+		if item2.CurrentStage < 3 then
+			item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
+		end
 	elseif code == "cof_smallkey" then
 		COF_KEY_USED = 0
 		if testFlag(segment, 0x2002d56, 0x10) then
@@ -1469,7 +1476,9 @@ function updateSmallKeys(segment, code, address)
 			COF_KEY_USED = COF_KEY_USED + 1
 		end
 		COF_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
+		if item2.CurrentStage < 3 then
+			item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
+		end
 	elseif code == "fow_smallkey" then
 		FOW_KEY_USED = 0
 		if testFlag(segment, 0x2002d6f, 0x20) then
@@ -1485,7 +1494,9 @@ function updateSmallKeys(segment, code, address)
 			FOW_KEY_USED = FOW_KEY_USED + 1
 		end
 		FOW_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
+		if item2.CurrentStage < 3 then
+			item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
+		end
 	elseif code == "tod_smallkey" then
 		TOD_KEY_USED = 0
 		if testFlag(segment, 0x2002d89, 0x04) then
@@ -1501,7 +1512,9 @@ function updateSmallKeys(segment, code, address)
 			TOD_KEY_USED = TOD_KEY_USED + 1
 		end
 		TOD_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
+		if item2.CurrentStage < 3 then
+			item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
+		end
 	elseif code == "pow_smallkey" then
 		POW_KEY_USED = 0
 		if testFlag(segment, 0x2002da3, 0x10) then
@@ -1523,7 +1536,9 @@ function updateSmallKeys(segment, code, address)
 			POW_KEY_USED = POW_KEY_USED + 1
 		end
 		POW_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
+		if item2.CurrentStage < 3 then
+			item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
+		end
 	elseif code == "dhc_smallkey" then
 		DHC_KEY_USED = 0
 		if testFlag(segment, 0x2002dbb, 0x20) then
@@ -1542,7 +1557,9 @@ function updateSmallKeys(segment, code, address)
 			DHC_KEY_USED = DHC_KEY_USED + 1
 		end
 		DHC_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
+		if item2.CurrentStage < 3 then
+			item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
+		end
 	elseif code == "rc_smallkey" then
 		RC_KEY_USED = 0
 		if testFlag(segment, 0x2002d00, 0x80) then
@@ -1555,7 +1572,12 @@ function updateSmallKeys(segment, code, address)
 			RC_KEY_USED = RC_KEY_USED + 1
 		end
 		RC_KEY_COUNT = ReadU8(segment, address)
-		item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED
+		if item2.CurrentStage < 3 then
+			item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED + DHC_KEY_USED + POW_KEY_USED + TOD_KEY_USED + FOW_KEY_USED + COF_KEY_USED + DWS_KEY_USED
+		end
+	elseif code == "ud_smallkey" and item2.CurrentStage == 3 then	
+		UD_KEY_COUNT = ReadU8(segment, address)
+		item.AcquiredCount = UD_KEY_COUNT + RC_KEY_USED + DHC_KEY_USED + POW_KEY_USED + TOD_KEY_USED + FOW_KEY_USED + COF_KEY_USED + DWS_KEY_USED
 	else
 		item.AcquiredCount = 0
 	end
@@ -3090,6 +3112,7 @@ function updateKeys(segment)
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
 		-- if has("big_key_shuffle") or has("big_key_vanilla") then
+			updateBigKeys(segment, "ud_bigkey")
 			updateBigKeys(segment, "dws_bigkey")
 			updateBigKeys(segment, "cof_bigkey")
 			updateBigKeys(segment, "fow_bigkey")
@@ -3111,6 +3134,7 @@ function updateKeys(segment)
 		updateToggleFlag(segment, "pow_compass", 0x2002eb1, 0x02)
 		updateToggleFlag(segment, "dhc_compass", 0x2002eb2, 0x02)
 		-- if has("small_key_shuffle") or has("small_key_vanilla") then
+			updateSmallKeys(segment, "ud_smallkey", 0x2002e9c)
 			updateSmallKeys(segment, "dws_smallkey", 0x2002e9d)
 			updateSmallKeys(segment, "cof_smallkey", 0x2002e9e)
 			updateSmallKeys(segment, "fow_smallkey", 0x2002e9f)
