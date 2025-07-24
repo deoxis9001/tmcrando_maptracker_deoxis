@@ -221,7 +221,6 @@ function DHC_2F_BlueWarp_BigChest()
 end
 
 function BeatVaati()
-
 	 if ( function_Cached("AccessDHC") == 1 and has("dhc_fast_vaati") and function_Cached("CanSplit4") == 1 and function_Cached("HasBow") == 1 and
 			has("gust") and has("cane") and	function_Cached("DarkRooms") == 1 ) then
 		return 1

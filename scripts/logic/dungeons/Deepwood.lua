@@ -30,7 +30,7 @@ function Deepwood_1F_BarrelRoom_Chest()
 		return 1
 	elseif
 		((function_Cached("DeepwoodDungeons") == 1 or function_Cached("DeepwoodDungeons") == 2) and
-			(function_Cached("Deepwood1stDoor") == 1 or
+			( ( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) or
 				(function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2)) and
 			(function_Cached("BlowDust") == 1 or function_Cached("BlowDust") == 2))
 	 then
@@ -48,7 +48,7 @@ function Deepwood_1F_West_BigChest()
 		return 1
 	elseif
 		((function_Cached("DeepwoodDungeons") == 1 or function_Cached("DeepwoodDungeons") == 2) and
-			(function_Cached("Deepwood1stDoor") == 1 or
+			(( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) or
 				(function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2)))
 	 then
 		return 2
@@ -65,7 +65,7 @@ function Deepwood_1F_West_StatuePuzzle_Chest()
 		return 1
 	elseif
 		((function_Cached("DeepwoodDungeons") == 1 or function_Cached("DeepwoodDungeons") == 2) and
-			(function_Cached("Deepwood1stDoor") == 1 or
+			(( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) or
 				(function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2)))
 	 then
 		return 2
@@ -84,7 +84,7 @@ function Deepwood_1F_East_MulldozerFight_Item()
 		return 1
 	elseif
 		((function_Cached("DeepwoodDungeons") == 1 or function_Cached("DeepwoodDungeons") == 2) and
-			(function_Cached("Deepwood1stDoor") == 1 or
+			(( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) or
 				(function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2)) and
 			(function_Cached("Deepwood2ndDoor") == 1 or function_Cached("Deepwood2ndDoor") == 2) and
 			(function_Cached("DeepwoodMulldozers") == 1 or function_Cached("DeepwoodMulldozers") == 2))
@@ -136,7 +136,7 @@ function Deepwood_B1_SwitchRoom_Chest()
 		((function_Cached("DeepwoodDungeons") == 1 or function_Cached("DeepwoodDungeons") == 2) and
 			(((function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2) and
 				has("cape")) or
-				(function_Cached("Deepwood1stDoor") == 1 and has("gust"))))
+				(( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) and has("gust"))))
 	 then
 		return 2
 	else
@@ -207,7 +207,7 @@ function Deepwood_1F_Madderpillar_HP()
 		return 2
 	elseif
 		((function_Cached("DeepwoodDungeons") == 1 or function_Cached("DeepwoodDungeons") == 2) and
-			( function_Cached("Deepwood1stDoor") == 1 ))
+			( ( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) ))
 	 then
 		return 3
 	else
@@ -226,7 +226,7 @@ function Deepwood_B1_West_BigChest()
 	elseif
 		((function_Cached("DeepwoodDungeons") == 1 or function_Cached("DeepwoodDungeons") == 2) and
 			(function_Cached("DeepwoodRedWarp") == 1 or
-				((function_Cached("Deepwood1stDoor") == 1 or
+				((( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) or
 					(function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2)) and
 					has("gust") and
 					(function_Cached("DeepwoodBasementDoor") == 1 or function_Cached("DeepwoodBasementDoor") == 2))))

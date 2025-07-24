@@ -1506,7 +1506,7 @@ function DeepwoodMadderHP()
 				(function_Cached("DeepwoodMadderpillarDoor") == 1 or function_Cached("DeepwoodMadderpillarDoor") == 2) and
 				function_Cached("DeepwoodWeb") == 1) or
 				has("gust") and
-					(function_Cached("Deepwood1stDoor") == 1 or
+					( ( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) or
 						(function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2))))
 	 then
 		return 2
