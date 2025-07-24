@@ -183,7 +183,7 @@ function Palace_2ndHalf_5F_RightSide_Chest()
 end
 
 function CompletePalace()
-	if has("pow" ) then 
+	if has("pow") then 
 		return 1
 	else
 		return 0
