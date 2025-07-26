@@ -396,7 +396,7 @@ function Hylia_MinishHouseWindCrest_Fuser()
 	if (FusionsRedNumber("redW") == 1 and has("ocarina")) then
 		return 1
 	elseif (FusionsRedNumber("redW") == 2 and has("ocarina")) then
-		return 1
+		return 2
 	else
 		return 0
 	end
