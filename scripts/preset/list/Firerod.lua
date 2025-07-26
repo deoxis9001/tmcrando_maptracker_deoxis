@@ -1,5 +1,5 @@
 
--- Generated 02.01.24 by deoxis9001 
+-- Generated 23.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="Firerod"
 numero_preset=numero_preset+1
 setting_preset_data["Firerod"] = {}
@@ -32,8 +32,8 @@ setting_preset_data["Firerod"]["open_library_no"] = 0
 setting_preset_data["Firerod"]["crenelwindcrest_no"] = 0
 setting_preset_data["Firerod"]["fallswindcrest_no"] = 0
 setting_preset_data["Firerod"]["cloudwindcrest_no"] = 0
-setting_preset_data["Firerod"]["swampwindcrest_no"] = 0
 setting_preset_data["Firerod"]["lakewindcrest_no"] = 1
+setting_preset_data["Firerod"]["swampwindcrest_no"] = 0
 setting_preset_data["Firerod"]["shfwindcrest_no"] = 0
 setting_preset_data["Firerod"]["minishwindcrest_no"] = 0
 setting_preset_data["Firerod"]["grabbable_none"] = 1
@@ -41,6 +41,7 @@ setting_preset_data["Firerod"]["weaponsbombs_no"] = 0
 setting_preset_data["Firerod"]["weaponsbow_no"] = 0
 setting_preset_data["Firerod"]["weaponsgust_no"] = 0
 setting_preset_data["Firerod"]["weaponslamp_no"] = 0
+setting_preset_data["Firerod"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["Firerod"]["blowdust_off"] = 0
 setting_preset_data["Firerod"]["crenelmushroom_off"] = 0
 setting_preset_data["Firerod"]["lightarrowbreak_off"] = 0
@@ -60,8 +61,10 @@ setting_preset_data["Firerod"]["dhccanonhit_off"] = 0
 setting_preset_data["Firerod"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["Firerod"]["dhcswitchhit_off"] = 0
 setting_preset_data["Firerod"]["fowpot_off"] = 0
+setting_preset_data["Firerod"]["clonetrick_off"] = 0
+setting_preset_data["Firerod"]["cloneswitcheswithbomb_off"] = 0
 setting_preset_data["Firerod"]["goron_eu"] = 0
-setting_preset_data["Firerod"]["figurine_option"] = 0
+setting_preset_data["Firerod"]["figurine_option"] = 20
 setting_preset_data["Firerod"]["progressiveitems"] = true
 setting_preset_data["Firerod"]["dws_warps_none"] = 0
 setting_preset_data["Firerod"]["cof_warps_none"] = 0

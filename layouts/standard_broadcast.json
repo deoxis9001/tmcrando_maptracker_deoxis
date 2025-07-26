@@ -101,7 +101,7 @@
                 "rcx",
                 "powx",
                 "dhc",
-                ""
+                "universal_dungeons"
               ],
               [
                 "dws_smallkey",
@@ -111,7 +111,7 @@
                 "rc_smallkey",
                 "pow_smallkey",
                 "dhc_smallkey",
-                ""
+                "ud_smallkey"
               ],
               [
                 "dws_bigkey",
@@ -121,7 +121,7 @@
                 "",
                 "pow_bigkey",
                 "dhc_bigkey",
-                ""
+                "ud_bigkey"
               ],
               [
                 "dws_cm",

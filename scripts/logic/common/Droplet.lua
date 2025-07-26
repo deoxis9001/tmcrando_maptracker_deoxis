@@ -2,20 +2,26 @@ function ToDRightBlock()
 	return 1
 end
 function ToDLeftBlock()
-	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4 and has("tod_bigkey")) then
+	if Tracker:ProviderCountForCode("tod_smallkey") >= 4 then
 		return 1
-	elseif (Tracker:ProviderCountForCode("tod_smallkey") >= 1 and hasnot("tod_bigkey")) then
+	elseif Tracker:ProviderCountForCode("ud_smallkey") >= 28 then
 		return 1
-	elseif (has("small_key_none")) then
+	elseif Tracker:ProviderCountForCode("tod_smallkey") >= 1 and hasnot("tod_bigkey")  then
 		return 1
-	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("tod_smallkey") >= 1) then
+	elseif has("small_key_none") then
+		return 1
+	elseif has("small_key_out_on") and Tracker:ProviderCountForCode("tod_smallkey") >= 1 then
+		return 2
+	elseif has("small_key_out_on") and Tracker:ProviderCountForCode("ud_smallkey") >= 1 then
 		return 2
 	else
 		return 0
 	end
 end
 function ToDBigDoor()
-	if (has("tod_bigkey")) then
+	if (has("tod_bigkey")  and ( has("big_key_shuffle") or has("big_key_vanilla") ) ) then
+		return 1
+	elseif (has("ud_bigkey") and has("big_key_universal") ) then
 		return 1
 	elseif (has("big_key_none")) then
 		return 1
@@ -26,9 +32,13 @@ end
 function ToDWestDoor()
 	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4) then
 		return 1
+	elseif Tracker:ProviderCountForCode("ud_smallkey") >= 28 then
+		return 1
 	elseif (has("small_key_none")) then
 		return 1
 	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("tod_smallkey") >= 1) then
+		return 2
+	elseif has("small_key_out_on") and Tracker:ProviderCountForCode("ud_smallkey") >= 1 then
 		return 2
 	else
 		return 0
@@ -37,9 +47,13 @@ end
 function ToDDarkDoor()
 	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4) then
 		return 1
+	elseif Tracker:ProviderCountForCode("ud_smallkey") >= 28 then
+		return 1
 	elseif (has("small_key_none")) then
 		return 1
 	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("tod_smallkey") >= 1) then
+		return 2
+	elseif has("small_key_out_on") and Tracker:ProviderCountForCode("ud_smallkey") >= 1 then
 		return 2
 	else
 		return 0
@@ -48,9 +62,13 @@ end
 function ToDEitherDoor()
 	if (Tracker:ProviderCountForCode("tod_smallkey") >= 3) then
 		return 1
+	elseif Tracker:ProviderCountForCode("ud_smallkey") >= 27 then
+		return 1
 	elseif (has("small_key_none")) then
 		return 1
 	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("tod_smallkey") >= 1) then
+		return 2
+	elseif has("small_key_out_on") and Tracker:ProviderCountForCode("ud_smallkey") >= 1 then
 		return 2
 	else
 		return 0
@@ -59,9 +77,13 @@ end
 function ToDChuDoor()
 	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4) then
 		return 1
+	elseif Tracker:ProviderCountForCode("ud_smallkey") >= 28 then
+		return 1
 	elseif (has("small_key_none")) then
 		return 1
 	elseif (has("small_key_out_on") and Tracker:ProviderCountForCode("tod_smallkey") >= 1) then
+		return 2
+	elseif has("small_key_out_on") and Tracker:ProviderCountForCode("ud_smallkey") >= 1 then
 		return 2
 	else
 		return 0

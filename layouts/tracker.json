@@ -18,7 +18,8 @@
         "todx",
         "rcx",
         "powx",
-        "dhc"
+        "dhc",
+        "universal_dungeons"
       ],
       [
         "sword0",
@@ -34,7 +35,8 @@
         "tod_smallkey",
         "rc_smallkey",
         "pow_smallkey",
-        "dhc_smallkey"
+        "dhc_smallkey",
+        "ud_smallkey"
       ],
       [
         "shield",
@@ -50,7 +52,8 @@
         "tod_bigkey",
         "",
         "pow_bigkey",
-        "dhc_bigkey"
+        "dhc_bigkey",
+        "ud_bigkey"
       ],
       [
         "boots",
@@ -66,7 +69,8 @@
         "tod_cm",
         "beta",
         "pow_cm",
-        "dhc_cm"
+        "dhc_cm",
+        ""
       ],
       [
         "flippersandfly",
@@ -82,7 +86,8 @@
         "fastsplit",
         "greatspin",
         "longspin",
-        "sevenscrolls"
+        "sevenscrolls",
+        ""
       ],
       [
         "redW",
@@ -98,7 +103,8 @@
         "rockbreaker",
         "dashattack",
         "downthrust",
-        "rollattack"
+        "rollattack",
+        ""
       ]
     ]
   },
@@ -470,13 +476,13 @@
           "rows": [
             [
               "crenelwindcrest_no",
-              "swampwindcrest_no",
+              "fallswindcrest_no",
               "cloudwindcrest_no"
             ],
             [
               "",
               "lakewindcrest_no",
-              "fallswindcrest_no"
+              "swampwindcrest_no"
             ],
             [
               "shfwindcrest_no",
@@ -571,6 +577,10 @@
             [
               "weaponsgust_no",
               "weaponslamp_no"
+            ],
+            [
+              "weaponsmirrorshield_no",
+              ""
             ]
           ]
         }
@@ -654,6 +664,10 @@
             ],
             [
               "fowpot_off",
+              "clonetrick_off"
+            ],
+            [
+              "cloneswitcheswithbomb_off",
               ""
             ]
           ]
@@ -788,6 +802,10 @@
             ],
             [
               "fowpot_out_off",
+              "clonetrick_out_off"
+            ],
+            [
+              "cloneswitcheswithbomb_out_off",
               ""
             ]
           ]
@@ -1097,14 +1115,17 @@
       }
     ]
   },
-  "dws_map": {
+  "maps": {
     "type": "dock",
     "content": [
       {
         "type": "tabbed",
+        "dock": "top",
+        "style": "wrap",
         "tabs": [
           {
-            "title": "Dungeon",
+            "title": "Deepwood Shrine",
+            "icon": "images/icon-maps/chu.png",
             "content": {
               "type": "map",
               "maps": [
@@ -1113,44 +1134,8 @@
             }
           },
           {
-            "title": "1F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dws_1F"
-              ]
-            }
-          },
-          {
-            "title": "B1",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dws_B1"
-              ]
-            }
-          },
-          {
-            "title": "B2",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dws_B2"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "cof_map": {
-    "type": "dock",
-    "content": [
-      {
-        "type": "tabbed",
-        "tabs": [
-          {
-            "title": "Dungeon",
+            "title": "Cave of Flames",
+            "icon": "images/icon-maps/gleerok.png",
             "content": {
               "type": "map",
               "maps": [
@@ -1159,53 +1144,8 @@
             }
           },
           {
-            "title": "1F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "cof_1F"
-              ]
-            }
-          },
-          {
-            "title": "B1",
-            "content": {
-              "type": "map",
-              "maps": [
-                "cof_B1"
-              ]
-            }
-          },
-          {
-            "title": "B2",
-            "content": {
-              "type": "map",
-              "maps": [
-                "cof_B2"
-              ]
-            }
-          },
-          {
-            "title": "B3",
-            "content": {
-              "type": "map",
-              "maps": [
-                "cof_B3"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "fow_map": {
-    "type": "dock",
-    "content": [
-      {
-        "type": "tabbed",
-        "tabs": [
-          {
-            "title": "Dungeon",
+            "title": "Fortress of Winds",
+            "icon": "images/icon-maps/mazaal.png",
             "content": {
               "type": "map",
               "maps": [
@@ -1214,264 +1154,13 @@
             }
           },
           {
-            "title": "1F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "fow_1F"
-              ]
-            }
-          },
-          {
-            "title": "2F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "fow_2F"
-              ]
-            }
-          },
-          {
-            "title": "3F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "fow_3F"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "tod_map": {
-    "type": "dock",
-    "content": [
-      {
-        "type": "tabbed",
-        "tabs": [
-          {
-            "title": "Dungeon",
+            "title": "Temple of Droplets",
+            "icon": "images/icon-maps/octo.png",
             "content": {
               "type": "map",
               "maps": [
                 "tod"
               ]
-            }
-          },
-          {
-            "title": "B1",
-            "content": {
-              "type": "map",
-              "maps": [
-                "tod_B1"
-              ]
-            }
-          },
-          {
-            "title": "B2",
-            "content": {
-              "type": "map",
-              "maps": [
-                "tod_B2"
-              ]
-            }
-          },
-          {
-            "title": "B3",
-            "content": {
-              "type": "map",
-              "maps": [
-                "tod_B3"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "pow_map": {
-    "type": "dock",
-    "content": [
-      {
-        "type": "tabbed",
-        "tabs": [
-          {
-            "title": "Dungeon",
-            "content": {
-              "type": "map",
-              "maps": [
-                "pow"
-              ]
-            }
-          },
-          {
-            "title": "1F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "pow_1F"
-              ]
-            }
-          },
-          {
-            "title": "2F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "pow_2F"
-              ]
-            }
-          },
-          {
-            "title": "3F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "pow_3F"
-              ]
-            }
-          },
-          {
-            "title": "4F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "pow_4F"
-              ]
-            }
-          },
-          {
-            "title": "5F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "pow_5F"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "dhc_map": {
-    "type": "dock",
-    "content": [
-      {
-        "type": "tabbed",
-        "tabs": [
-          {
-            "title": "Dungeon",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dhc"
-              ]
-            }
-          },
-          {
-            "title": "Sanctuary",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dhc_sanc"
-              ]
-            }
-          },
-          {
-            "title": "B2",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dhc_B2"
-              ]
-            }
-          },
-          {
-            "title": "B1",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dhc_B1"
-              ]
-            }
-          },
-          {
-            "title": "1F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dhc_1F"
-              ]
-            }
-          },
-          {
-            "title": "2F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dhc_2F"
-              ]
-            }
-          },
-          {
-            "title": "3F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dhc_3F"
-              ]
-            }
-          },
-          {
-            "title": "4F",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dhc_4F"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "maps": {
-    "type": "dock",
-    "content": [
-      {
-        "type": "tabbed",
-        "tabs": [
-          {
-            "title": "Deepwood Shrine",
-            "icon": "images/icon-maps/chu.png",
-            "content": {
-              "type": "layout",
-              "key": "dws_map"
-            }
-          },
-          {
-            "title": "Cave of Flames",
-            "icon": "images/icon-maps/gleerok.png",
-            "content": {
-              "type": "layout",
-              "key": "cof_map"
-            }
-          },
-          {
-            "title": "Fortress of Winds",
-            "icon": "images/icon-maps/mazaal.png",
-            "content": {
-              "type": "layout",
-              "key": "fow_map"
-            }
-          },
-          {
-            "title": "Temple of Droplets",
-            "icon": "images/icon-maps/octo.png",
-            "content": {
-              "type": "layout",
-              "key": "tod_map"
             }
           },
           {
@@ -1488,16 +1177,20 @@
             "title": "Palace of Winds",
             "icon": "images/icon-maps/gyorg.png",
             "content": {
-              "type": "layout",
-              "key": "pow_map"
+              "type": "map",
+              "maps": [
+                "pow"
+              ]
             }
           },
           {
             "title": "Dark Hyrule Castle",
             "icon": "images/icon-maps/vaati.png",
             "content": {
-              "type": "layout",
-              "key": "dhc_map"
+              "type": "map",
+              "maps": [
+                "dhc"
+              ]
             }
           }
         ]

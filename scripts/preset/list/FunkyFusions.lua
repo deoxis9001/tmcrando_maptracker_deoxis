@@ -1,5 +1,5 @@
 
--- Generated 02.01.24 by deoxis9001 
+-- Generated 23.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="FunkyFusions"
 numero_preset=numero_preset+1
 setting_preset_data["FunkyFusions"] = {}
@@ -32,8 +32,8 @@ setting_preset_data["FunkyFusions"]["open_library_no"] = 0
 setting_preset_data["FunkyFusions"]["crenelwindcrest_no"] = 1
 setting_preset_data["FunkyFusions"]["fallswindcrest_no"] = 1
 setting_preset_data["FunkyFusions"]["cloudwindcrest_no"] = 0
-setting_preset_data["FunkyFusions"]["swampwindcrest_no"] = 1
 setting_preset_data["FunkyFusions"]["lakewindcrest_no"] = 1
+setting_preset_data["FunkyFusions"]["swampwindcrest_no"] = 1
 setting_preset_data["FunkyFusions"]["shfwindcrest_no"] = 1
 setting_preset_data["FunkyFusions"]["minishwindcrest_no"] = 1
 setting_preset_data["FunkyFusions"]["grabbable_none"] = 1
@@ -41,6 +41,7 @@ setting_preset_data["FunkyFusions"]["weaponsbombs_no"] = 0
 setting_preset_data["FunkyFusions"]["weaponsbow_no"] = 0
 setting_preset_data["FunkyFusions"]["weaponsgust_no"] = 0
 setting_preset_data["FunkyFusions"]["weaponslamp_no"] = 0
+setting_preset_data["FunkyFusions"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["FunkyFusions"]["blowdust_off"] = 0
 setting_preset_data["FunkyFusions"]["crenelmushroom_off"] = 0
 setting_preset_data["FunkyFusions"]["lightarrowbreak_off"] = 0
@@ -60,6 +61,8 @@ setting_preset_data["FunkyFusions"]["dhccanonhit_off"] = 0
 setting_preset_data["FunkyFusions"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["FunkyFusions"]["dhcswitchhit_off"] = 0
 setting_preset_data["FunkyFusions"]["fowpot_off"] = 0
+setting_preset_data["FunkyFusions"]["clonetrick_off"] = 0
+setting_preset_data["FunkyFusions"]["cloneswitcheswithbomb_off"] = 0
 setting_preset_data["FunkyFusions"]["goron_eu"] = 0
 setting_preset_data["FunkyFusions"]["figurine_option"] = 0
 setting_preset_data["FunkyFusions"]["progressiveitems"] = true

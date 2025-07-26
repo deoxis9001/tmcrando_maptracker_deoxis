@@ -355,12 +355,17 @@ function apply_slot_data(slot_data)
 						end
 					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "PRIZE" then
 						slots_data_entry = slots_data_entry + 1
-						if slots_data_entry > 0 then
+						if slots_data_entry > 1 then
 							if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 								print(string.format("[SLOT DATA][INFO] slots_data_entry + 1: %s", slots_data_entry))
+								print(string.format("[SLOT DATA][INFO] obj.Active: %s", obj.Active))
 							end
 							obj.Active = true
 						else
+							if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+								print(string.format("[SLOT DATA][INFO] slots_data_entry + 1: %s", slots_data_entry))
+								print(string.format("[SLOT DATA][INFO] obj.Active: %s", obj.Active))
+							end
 							obj.Active = false
 						end
 					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "BOOL" then

@@ -156,8 +156,8 @@
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -260,8 +260,8 @@
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_PreLavaBasementRoom"
         ],
-        "chest_unopened_img": "images/items-map/Heart Piece.png",
-        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
       }
     ]
   },
@@ -557,8 +557,8 @@
         "access_rules": [
           "^$Json_Dungeon_Deepwood_SlugRoom"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -661,8 +661,8 @@
         "access_rules": [
           "^$Json_Dungeon_Deepwood_TwoStatueRoom"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -765,8 +765,8 @@
         "access_rules": [
           "^$Json_Dungeon_Deepwood_BasementSwitchChest"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -1497,8 +1497,8 @@
         "access_rules": [
           "^$Json_Dungeon_Fortress_MinishDirtRoomKeyDrop"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -1802,8 +1802,8 @@
         "access_rules": [
           "^$Json_Dungeon_Palace_SparkChest"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -1854,8 +1854,8 @@
         "access_rules": [
           "^$Json_Dungeon_Palace_RollerChest"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -1906,8 +1906,8 @@
         "access_rules": [
           "^$Json_Dungeon_Palace_DarkRoomSmall"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2037,8 +2037,8 @@
         "access_rules": [
           "^$Json_Dungeon_Palace_BombarossaMaze"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2141,8 +2141,8 @@
         "access_rules": [
           "^$Json_Dungeon_Droplet_FirstIceBlock"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2309,7 +2309,7 @@
     "sections": [
       {
         "name": "Rupees",
-        "item_count": 3,
+        "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_Droplet_RightPathRupees"
         ],
@@ -2318,9 +2318,9 @@
       },
       {
         "name": "Rupees Grabbable",
-        "item_count": 2,
+        "item_count": 3,
         "access_rules": [
-          "^$Json_Dungeon_Droplet_RightPathRupees1_2"
+          "^$Json_Dungeon_Droplet_RightPathRupees1_2_5"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -2600,8 +2600,8 @@
         "access_rules": [
           "^$Json_Dungeon_Droplet_BasementFrozenChest"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2730,8 +2730,8 @@
         "access_rules": [
           "^$Json_Dungeon_Droplet_DarkMazeBombWall"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2770,7 +2770,8 @@
         "y": 870,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2779,7 +2780,8 @@
         "y": 835,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2804,7 +2806,8 @@
         "y": 1800,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2813,7 +2816,8 @@
         "y": 1305,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2838,7 +2842,8 @@
         "y": 110,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2847,7 +2852,8 @@
         "y": 75,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2858,8 +2864,8 @@
         "access_rules": [
           "^$Json_Dungeon_DHC_StoneKing"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2872,7 +2878,8 @@
         "y": 70,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2881,7 +2888,8 @@
         "y": 35,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2892,8 +2900,8 @@
         "access_rules": [
           "^$Json_Dungeon_DHC_PostThroneBigChest"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       }
     ]
   },
@@ -2906,7 +2914,8 @@
         "y": 130,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2915,7 +2924,8 @@
         "y": 145,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2924,7 +2934,8 @@
         "y": 92,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2949,7 +2960,8 @@
         "y": 1490,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2958,7 +2970,8 @@
         "y": 1505,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -2967,7 +2980,8 @@
         "y": 1452,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2992,7 +3006,8 @@
         "y": 1490,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3001,7 +3016,8 @@
         "y": 1505,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3010,7 +3026,8 @@
         "y": 1452,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -3035,7 +3052,8 @@
         "y": 135,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3044,7 +3062,8 @@
         "y": 145,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3053,7 +3072,8 @@
         "y": 92,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -3078,7 +3098,8 @@
         "y": 225,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3087,7 +3108,8 @@
         "y": 25,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -3112,7 +3134,8 @@
         "y": 300,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_warp_vaati"
         ]
       },
       {
@@ -3148,7 +3171,8 @@
         "y": 220,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -3172,7 +3196,7 @@
         "x": 3090,
         "y": 1480,
         "restrict_visibility_rules": [
-          "$has|ped_items_on,dhc_open"
+          "$has|ped_items_on,$has|dhc_open"
         ]
       },
       {
@@ -3180,7 +3204,7 @@
         "x": 136,
         "y": 50,
         "restrict_visibility_rules": [
-          "$has|ped_items_on,dhc_open"
+          "$has|ped_items_on,$has|dhc_open"
         ]
       },
       {
@@ -3188,7 +3212,7 @@
         "x": 406,
         "y": 975,
         "restrict_visibility_rules": [
-          "$has|ped_items_on,dhc_open"
+          "$has|ped_items_on,$has|dhc_open"
         ]
       }
     ],
@@ -3230,7 +3254,8 @@
         "x": 3090,
         "y": 1480,
         "restrict_visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3238,7 +3263,8 @@
         "x": 136,
         "y": 50,
         "restrict_visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ]
       },
       {
@@ -3246,7 +3272,8 @@
         "x": 406,
         "y": 975,
         "restrict_visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ]
       }
     ],

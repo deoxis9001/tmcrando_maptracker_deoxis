@@ -1,5 +1,5 @@
 
--- Generated 02.01.24 by deoxis9001 
+-- Generated 23.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="FrenchWeekly2023"
 numero_preset=numero_preset+1
 setting_preset_data["FrenchWeekly2023"] = {}
@@ -32,8 +32,8 @@ setting_preset_data["FrenchWeekly2023"]["open_library_no"] = 0
 setting_preset_data["FrenchWeekly2023"]["crenelwindcrest_no"] = 0
 setting_preset_data["FrenchWeekly2023"]["fallswindcrest_no"] = 0
 setting_preset_data["FrenchWeekly2023"]["cloudwindcrest_no"] = 0
-setting_preset_data["FrenchWeekly2023"]["swampwindcrest_no"] = 1
 setting_preset_data["FrenchWeekly2023"]["lakewindcrest_no"] = 1
+setting_preset_data["FrenchWeekly2023"]["swampwindcrest_no"] = 1
 setting_preset_data["FrenchWeekly2023"]["shfwindcrest_no"] = 1
 setting_preset_data["FrenchWeekly2023"]["minishwindcrest_no"] = 1
 setting_preset_data["FrenchWeekly2023"]["grabbable_none"] = 1
@@ -41,6 +41,7 @@ setting_preset_data["FrenchWeekly2023"]["weaponsbombs_no"] = 1
 setting_preset_data["FrenchWeekly2023"]["weaponsbow_no"] = 1
 setting_preset_data["FrenchWeekly2023"]["weaponsgust_no"] = 1
 setting_preset_data["FrenchWeekly2023"]["weaponslamp_no"] = 1
+setting_preset_data["FrenchWeekly2023"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["FrenchWeekly2023"]["blowdust_off"] = 1
 setting_preset_data["FrenchWeekly2023"]["crenelmushroom_off"] = 1
 setting_preset_data["FrenchWeekly2023"]["lightarrowbreak_off"] = 1
@@ -60,6 +61,8 @@ setting_preset_data["FrenchWeekly2023"]["dhccanonhit_off"] = 0
 setting_preset_data["FrenchWeekly2023"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["FrenchWeekly2023"]["dhcswitchhit_off"] = 0
 setting_preset_data["FrenchWeekly2023"]["fowpot_off"] = 0
+setting_preset_data["FrenchWeekly2023"]["clonetrick_off"] = 0
+setting_preset_data["FrenchWeekly2023"]["cloneswitcheswithbomb_off"] = 0
 setting_preset_data["FrenchWeekly2023"]["goron_eu"] = 0
 setting_preset_data["FrenchWeekly2023"]["figurine_option"] = 0
 setting_preset_data["FrenchWeekly2023"]["progressiveitems"] = true

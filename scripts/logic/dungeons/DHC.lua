@@ -221,7 +221,10 @@ function DHC_2F_BlueWarp_BigChest()
 end
 
 function BeatVaati()
-	if
+	 if ( function_Cached("AccessDHC") == 1 and has("dhc_fast_vaati") and function_Cached("CanSplit4") == 1 and function_Cached("HasBow") == 1 and
+			has("gust") and has("cane") and	function_Cached("DarkRooms") == 1 ) then
+		return 1
+	elseif
 		(function_Cached("AccessDHC") == 1 and
 			((function_Cached("DHC1stDoor") == 1 and function_Cached("BombWalls") == 1) or function_Cached("DHCRedWarp") == 1 or
 				(function_Cached("DHCBlueWarp") == 1 and (function_Cached("OverworldBlocks") == 1 or has("cape")))) and
@@ -231,7 +234,7 @@ function BeatVaati()
 			has("gust") and
 			has("cane") and
 			function_Cached("DarkRooms") == 1)
-	 then
+	then
 		return 1
 	elseif
 		((function_Cached("AccessDHC") == 1 or function_Cached("AccessDHC") == 2) and
@@ -245,6 +248,13 @@ function BeatVaati()
 			has("cane") and
 			(function_Cached("DarkRooms") == 1 or function_Cached("DarkRooms") == 2))
 	 then
+		return 2
+	 elseif (  (function_Cached("AccessDHC") == 1 or function_Cached("AccessDHC") == 2) and  has("dhc_fast_vaati") and 
+			function_Cached("CanSplit4") == 1 and
+			function_Cached("HasBow") == 1 and
+			has("gust") and
+			has("cane") and
+			(function_Cached("DarkRooms") == 1 or function_Cached("DarkRooms") == 2) ) then
 		return 2
 	else
 		return 0

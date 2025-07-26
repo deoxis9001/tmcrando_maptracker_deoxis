@@ -263,11 +263,19 @@ function AccessDHC()
 	
 	if ( function_Cached("DhcDungeons")==1 and has("dhc_open") ) then
 		return 1
+	elseif ( function_Cached("DhcDungeons")==1 and has("dhc_open_fast") ) then
+		return 1
+	elseif ( function_Cached("DhcDungeons")==1 and has("dhc_fast_vaati") and function_Cached("CompletePed")==1 ) then
+		return 1
 	elseif ( ( function_Cached("DhcDungeons")==1 and has("dhc_closed") or has("dhc_ped") ) and function_Cached("CompletePed")==1 ) then
 		return 1
 	elseif ( function_Cached("DhcDungeons")==2 and has("dhc_open") ) then
 		return 2
 	elseif ( ( function_Cached("DhcDungeons")==2 and has("dhc_closed") or has("dhc_ped") ) and function_Cached("CompletePed")==1 ) then
+		return 2
+	elseif ( function_Cached("DhcDungeons")==2 and has("dhc_open_fast") ) then
+		return 2
+	elseif ( function_Cached("DhcDungeons")==2 and has("dhc_fast_vaati") and function_Cached("CompletePed")==1 ) then
 		return 2
 	else
 		return 0

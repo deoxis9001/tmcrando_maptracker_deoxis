@@ -41,9 +41,9 @@ function Palace_1stHalf_3F_PotPuzzle_ItemDrop()
 end
 
 function Palace_1stHalf_4F_BowMoblins_Chest()
-	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1) and function_Cached("PoWJump")==1 and function_Cached("PoW1stDoor")==1 then
+	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("PoWPlatformClones")==1) and function_Cached("PoWJump")==1 and function_Cached("PoW1stDoor")==1 then
 		return 1
-	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoW1stDoor")==1 or function_Cached("PoW1stDoor")==2 ) then
+	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("PoWPlatformClones") == 1 or function_Cached("PoWPlatformClones") == 2 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoW1stDoor")==1 or function_Cached("PoW1stDoor")==2 ) then
 		return 2
 	else
 		return 0
@@ -51,9 +51,9 @@ function Palace_1stHalf_4F_BowMoblins_Chest()
 end
 
 function Palace_1stHalf_5F_BallAndChainSoldiers_ItemDrop() 
-	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and function_Cached("PoWJump")==1 and function_Cached("PoW1stDoor")==1 then
+	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("PoWPlatformClones")==1 ) and function_Cached("PoWJump")==1 and function_Cached("PoW1stDoor")==1 then
 		return 1
-	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoW1stDoor")==1 or function_Cached("PoW1stDoor")==2 ) then
+	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("PoWPlatformClones") == 1 or function_Cached("PoWPlatformClones") == 2 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoW1stDoor")==1 or function_Cached("PoW1stDoor")==2 ) then
 		return 2
 	else
 		return 0
@@ -61,9 +61,9 @@ function Palace_1stHalf_5F_BallAndChainSoldiers_ItemDrop()
 end
 
 function Palace_1stHalf_5F_FanLoop_Chest() 
-	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and function_Cached("PoWJump")==1 and function_Cached("PoWFans")==1 then
+	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("PoWPlatformClones")==1 ) and function_Cached("PoWJump")==1 and function_Cached("PoWFans")==1 then
 		return 1
-	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoWFans")==1 or function_Cached("PoWFans")==2 ) then
+	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("PoWPlatformClones") == 1 or function_Cached("PoWPlatformClones") == 2 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoWFans")==1 or function_Cached("PoWFans")==2 ) then
 		return 2
 	else
 		return 0
@@ -71,16 +71,16 @@ function Palace_1stHalf_5F_FanLoop_Chest()
 end
 
 function Palace_1stHalf_5F_BigChest() 
-	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and function_Cached("PoWJump")==1 and function_Cached("PoWBigChest")==1 then
+	if function_Cached("PowDungeons")==1 and has("cape") and ( function_Cached("PoWPlatformClones")==1 ) and function_Cached("PoWJump")==1 and function_Cached("PoWBigChest")==1 then
 		return 1
-	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("CanSplit3")==1 or function_Cached("CanSplit4")==1 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoWBigChest")==1 or function_Cached("PoWBigChest")==2 ) then
+	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and has("cape") and ( function_Cached("PoWPlatformClones") == 1 or function_Cached("PoWPlatformClones") == 2 ) and ( function_Cached("PoWJump")==1 or function_Cached("PoWJump")==2 ) and ( function_Cached("PoWBigChest")==1 or function_Cached("PoWBigChest")==2 ) then
 		return 2
 	else
 		return 0
 	end 
 end
 
-function Palace_2ndHalf_1F_DarkRoom_BigChest() 
+function Palace_2ndHalf_1F_DarkRoom_BigChest()
 	if function_Cached("PowDungeons")==1 and ( function_Cached("PoW2ndHalf")==1 or (function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 )) and function_Cached("DarkRooms")==1 then
 		return 1
 	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and ( ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) or (function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1 )) and ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) then
@@ -103,7 +103,7 @@ end
 function Palace_2ndHalf_2F_ManyRollers_Chest() 
 	if function_Cached("PowDungeons")==1 and ( ( function_Cached("DarkRooms")==1 and function_Cached("PoW2ndHalf")==1 ) or (function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1) ) and function_Cached("PoWPeahatRoom")==1 then
 		return 1
-	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and ( ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) ) or (function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1) ) and function_Cached("PoWPeahatRoom")==1 then
+	elseif ( function_Cached("PowDungeons")==1 or function_Cached("PowDungeons")==2 ) and ( ( ( function_Cached("DarkRooms")==1 or function_Cached("DarkRooms")==2 ) and ( function_Cached("PoW2ndHalf")==1 or function_Cached("PoW2ndHalf")==2 ) ) or (function_Cached("PoWRedWarp")==1 and function_Cached("OverworldBlocks")==1) ) and ( function_Cached("PoWPeahatRoom")==1 or function_Cached("PoWPeahatRoom")==2 ) then
 		return 2
 	else
 		return 0
@@ -183,7 +183,7 @@ function Palace_2ndHalf_5F_RightSide_Chest()
 end
 
 function CompletePalace()
-	if has("pow" ) then 
+	if has("pow") then 
 		return 1
 	else
 		return 0

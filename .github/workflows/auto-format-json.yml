@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - '**.json'
-      
   workflow_dispatch:
 
 jobs:
