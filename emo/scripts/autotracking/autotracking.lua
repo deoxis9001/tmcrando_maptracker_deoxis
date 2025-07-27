@@ -1403,6 +1403,7 @@ function updateHearts(segment, address)
 end
 function updateBigKeys(segment, code)
 	local item = Tracker:FindObjectForCode("big_key_none")
+	local item2 = Tracker:FindObjectForCode("require_reward_no")
 	if code == "ud_bigkey" and item.CurrentStage == 3 then
 		updateToggleFlag(segment, "ud_bigkey", 0x2002eac, 0x04)
 	elseif code == "dws_bigkey" and item.CurrentStage < 3 then
@@ -1437,7 +1438,7 @@ function updateBigKeys(segment, code)
 		else
 			updateToggleFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
 		end
-	elseif code == "dhc_bigkey" and item.CurrentStage < 3  then
+	elseif code == "dhc_bigkey" and (item.CurrentStage < 3 or  item2.CurrentStage == 1)  then
 		if testFlag(segment, 0x2002DBE, 0x20) then
 			updateToggleFlag(segment, "dhc_bigkey", 0x2002DBE, 0x20)
 		else

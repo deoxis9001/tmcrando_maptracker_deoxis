@@ -6,6 +6,7 @@ setting_preset_data["FunkyFusions"] = {}
 setting_preset_data["FunkyFusions"]["small_key_none"] = 1
 setting_preset_data["FunkyFusions"]["big_key_none"] = 1
 setting_preset_data["FunkyFusions"]["dhc_closed"] = 2
+setting_preset_data["FunkyFusions"]["require_reward_no_yes"] = 1
 setting_preset_data["FunkyFusions"]["dungeons"] = 0
 setting_preset_data["FunkyFusions"]["sword0Needed"] = 5
 setting_preset_data["FunkyFusions"]["element4Needed"] = 4

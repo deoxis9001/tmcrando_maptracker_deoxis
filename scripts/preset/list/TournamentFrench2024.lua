@@ -6,6 +6,7 @@ setting_preset_data["TournamentFrench2024"] = {}
 setting_preset_data["TournamentFrench2024"]["small_key_none"] = 2
 setting_preset_data["TournamentFrench2024"]["big_key_none"] = 2
 setting_preset_data["TournamentFrench2024"]["dhc_closed"] = 2
+setting_preset_data["TournamentFrench2024"]["require_reward_no_yes"] = 1
 setting_preset_data["TournamentFrench2024"]["dungeons"] = 0
 setting_preset_data["TournamentFrench2024"]["sword0Needed"] = 5
 setting_preset_data["TournamentFrench2024"]["element4Needed"] = 4

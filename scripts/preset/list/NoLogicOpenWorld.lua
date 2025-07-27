@@ -6,6 +6,7 @@ setting_preset_data["NoLogicOpenWorld"] = {}
 setting_preset_data["NoLogicOpenWorld"]["small_key_none"] = 0
 setting_preset_data["NoLogicOpenWorld"]["big_key_none"] = 0
 setting_preset_data["NoLogicOpenWorld"]["dhc_closed"] = 2
+setting_preset_data["NoLogicOpenWorld"]["require_reward_no_yes"] = 1
 setting_preset_data["NoLogicOpenWorld"]["dungeons"] = 0
 setting_preset_data["NoLogicOpenWorld"]["sword0Needed"] = 5
 setting_preset_data["NoLogicOpenWorld"]["element4Needed"] = 4

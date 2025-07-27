@@ -6,6 +6,7 @@ setting_preset_data["Expert"] = {}
 setting_preset_data["Expert"]["small_key_none"] = 2
 setting_preset_data["Expert"]["big_key_none"] = 2
 setting_preset_data["Expert"]["dhc_closed"] = 2
+setting_preset_data["Expert"]["require_reward_no_yes"] = 1
 setting_preset_data["Expert"]["dungeons"] = 6
 setting_preset_data["Expert"]["sword0Needed"] = 5
 setting_preset_data["Expert"]["element4Needed"] = 4

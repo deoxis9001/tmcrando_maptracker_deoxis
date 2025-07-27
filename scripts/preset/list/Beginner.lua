@@ -6,6 +6,7 @@ setting_preset_data["Beginner"] = {}
 setting_preset_data["Beginner"]["small_key_none"] = 0
 setting_preset_data["Beginner"]["big_key_none"] = 0
 setting_preset_data["Beginner"]["dhc_closed"] = 1
+setting_preset_data["Beginner"]["require_reward_no_yes"] = 1
 setting_preset_data["Beginner"]["dungeons"] = 0
 setting_preset_data["Beginner"]["sword0Needed"] = 5
 setting_preset_data["Beginner"]["element4Needed"] = 4

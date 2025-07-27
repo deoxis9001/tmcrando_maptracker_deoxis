@@ -1013,6 +1013,26 @@
     ]
   },
   {
+    "name": "An item that the player receives once they meet the selected requirements.",
+    "type": "progressive",
+    "loop": true,
+    "initial_stage_idx": 0,
+    "allow_disabled": false,
+    "inherit_codes": false,
+    "stages": [
+      {
+        "img": "images/options/main/requirements/require_reward_no_yes.png",
+        "codes": "require_reward_no_yes",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/options/main/requirements/require_reward_bk_dhc.png",
+        "codes": "require_reward_bk_dhc",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
     "name": "The number of dungeons that have to be beaten to activate the Sanctuary. There are 6 dungeons in the game that count:\n Deepwood Shrine\n Cave of Flames\n Fortress of Winds\n Temple of Droplets\n Royal Crypt\n Palace of Winds",
     "type": "progressive",
     "loop": true,
