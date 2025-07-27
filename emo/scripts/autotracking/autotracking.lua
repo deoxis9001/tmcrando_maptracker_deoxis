@@ -916,8 +916,11 @@ function updateBlueL(segment, flag)
 		BlueLBag = 0
 	end
 	fusion_count["blueL"] = BlueLBag
-	blueL:setActive(fusion_count_used["blueL"] + fusion_count["blueL"] + fusion_count_wall["blueL"])
-	if TMC_AUTOTRACKER_DEBUG_ITEM then
+	if fusionbluecombined:getActive() then
+		blueL:setActive(fusion_count_used["blueL"] + fusion_count["blueL"] + fusion_count_wall["blueL"]+fusion_count_used["blueS"] + fusion_count["blueS"] + fusion_count_wall["blueS"])
+	else
+		blueL:setActive(fusion_count_used["blueL"] + fusion_count["blueL"] + fusion_count_wall["blueL"])
+	end	if TMC_AUTOTRACKER_DEBUG_ITEM then
 		print("Blue L Obtained", BlueLBag)
 	end
 end
@@ -1201,7 +1204,11 @@ function updateFusionUsedFixed(code, segment, locationData)
 			end
 		end
 		if code=="blueL" or code=="blueS" then
-			count_fusion = fusion_count[code] + fusion_count_used[code] + fusion_count_wall[code]
+			if fusionbluecombined:getActive() then
+				count_fusion = fusion_count["blueL"] + fusion_count_used["blueL"] + fusion_count_wall["blueL"] + fusion_count["blueS"] + fusion_count_used["blueS"] + fusion_count_wall["blueS"]
+			else
+				count_fusion = fusion_count[code] + fusion_count_used[code] + fusion_count_wall[code]
+			end
 		else
 			count_fusion = fusion_count[code] + fusion_count_used[code]
 		end
