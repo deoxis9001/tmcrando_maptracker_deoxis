@@ -1,9 +1,9 @@
 
--- Generated 23.07.25 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="Expert"
 numero_preset=numero_preset+1
 setting_preset_data["Expert"] = {}
-setting_preset_data["Expert"]["small_key_none"] = 3
+setting_preset_data["Expert"]["small_key_none"] = 2
 setting_preset_data["Expert"]["big_key_none"] = 2
 setting_preset_data["Expert"]["dhc_closed"] = 2
 setting_preset_data["Expert"]["dungeons"] = 6
