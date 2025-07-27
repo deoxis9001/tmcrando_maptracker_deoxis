@@ -1,9 +1,9 @@
 
--- Generated 23.07.25 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="MaxRandom"
 numero_preset=numero_preset+1
 setting_preset_data["MaxRandom"] = {}
-setting_preset_data["MaxRandom"]["small_key_none"] = 3
+setting_preset_data["MaxRandom"]["small_key_none"] = 2
 setting_preset_data["MaxRandom"]["big_key_none"] = 2
 setting_preset_data["MaxRandom"]["dhc_closed"] = 2
 setting_preset_data["MaxRandom"]["dungeons"] = 6

@@ -1,5 +1,5 @@
 
--- Generated 23.07.25 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="FunkyFusions"
 numero_preset=numero_preset+1
 setting_preset_data["FunkyFusions"] = {}

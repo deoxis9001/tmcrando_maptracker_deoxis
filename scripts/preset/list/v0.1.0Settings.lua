@@ -1,5 +1,5 @@
 
--- Generated 23.07.25 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="v0.1.0Settings"
 numero_preset=numero_preset+1
 setting_preset_data["v0.1.0Settings"] = {}

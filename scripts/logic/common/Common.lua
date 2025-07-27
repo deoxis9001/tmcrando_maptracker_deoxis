@@ -245,7 +245,12 @@ function FusionsBlueSNumber()
 		count_fusion2 = count_fusion2 + 1
 	end
 	count_fusion3 = math.floor(count_fusion2 / 2)
-	count_fusion = count_fusion + count_fusion3
+
+	if fusiongreencombined:getActive() then
+		count_fusion = count_fusion + count_fusion2
+	else
+		count_fusion = count_fusion + count_fusion3
+	end
 	return count_fusion
 end
 function FusionsBlueLNumber()
@@ -289,7 +294,11 @@ function FusionsBlueLNumber()
 		count_fusion2 = count_fusion2 + 1
 	end
 	count_fusion3 = math.ceil(count_fusion2 / 2)
-	count_fusion = count_fusion + count_fusion3
+	if fusiongreencombined:getActive() then
+		count_fusion = count_fusion + count_fusion2
+	else
+		count_fusion = count_fusion + count_fusion3
+	end
 	return count_fusion
 end
 function FusionsBlueWallNumber()
@@ -315,7 +324,9 @@ function FusionsBlueWallNumber()
 	count_fusion3 = math.ceil(count_fusion2 / 2)
 	count_fusion4 = math.floor(count_fusion2 / 2)
 	count_fusion = count_fusion3 - count_fusion4
-	if (count_fusion == 0) then
+	if fusiongreencombined:getActive() then
+		return count_fusion - count_fusion2
+	elseif (count_fusion == 0) then
 		return FusionsBlueLNumber() - count_fusion3
 	else
 		return FusionsBlueSNumber() - count_fusion4
@@ -573,7 +584,9 @@ function FusionsBlueNumber(code)
 		count_fusion3 = math.ceil(count_fusion2 / 2)
 		count_fusion4 = math.floor(count_fusion2 / 2)
 		count_fusion = count_fusion3 - count_fusion4
-		if (count_fusion == 0) then
+		if fusiongreencombined:getActive() then
+			info_Fuser = blueL:getActive() - count_fusion2
+		elseif (count_fusion == 0) then
 			info_Fuser = blueL:getActive() - count_fusion3
 		else
 			info_Fuser = blueS:getActive() - count_fusion4
