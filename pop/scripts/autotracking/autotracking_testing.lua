@@ -1,4 +1,5 @@
 ScriptHost:LoadScript(ScriptAutotracking.."room_id_fonction.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."room_mapping.lua")
 
 items_codes_autotracking={}
 items_codes_autotracking_cache={}
@@ -1535,6 +1536,12 @@ function updateFusionUsedFixed(code, segment, locationData)
 			count_fusion = fusion_count[code] + fusion_count_used[code]
 		end
 		item.ItemState:setActive(count_fusion)
+			print("--tracking "..code.."--")
+			print("sac:", fusion_count[code])
+			print("used:",fusion_count_used[code])
+			print("wall:", fusion_count_wall[code])
+			print("total:", count_fusion)
+			print("------------------")
 		if TMC_AUTOTRACKER_DEBUG_ITEM then
 			print("--tracking "..code.."--")
 			print("sac:", fusion_count[code])
@@ -1630,6 +1637,7 @@ function updateWilds(segment, code, flag)
 	end
 	wilds:setActive(WildsFused + WildsBag)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
+
 		print("Wilds Obtained", WildsBag)
 	end
 end
@@ -1808,7 +1816,6 @@ function updateWarps(segment, type)
 end
 function updateBigKeys(segment, code)
 	local item = Tracker:FindObjectForCode("big_key_none")
-	local item2 = Tracker:FindObjectForCode("require_reward_no")
 	if code == "ud_bigkey" and item.CurrentStage == 3 then
 		updateToggleFlag(segment, "ud_bigkey", 0x2002eac, 0x04)
 	elseif code == "dws_bigkey"  and item.CurrentStage < 3 then
@@ -1855,7 +1862,7 @@ function updateBigKeys(segment, code)
 		else
 			updateToggleFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
 		end
-	elseif code == "dhc_bigkey"  and (item.CurrentStage < 3 or  item2.CurrentStage == 1 ) then
+	elseif code == "dhc_bigkey"  and item.CurrentStage < 3 then
 		if testFlag(segment, 0x2002DBE, 0x20)  and code_type_cache["DHC_ENTER"] == 1 then
 			updateToggleFlag(segment, "dhc_bigkey", 0x2002DBE, 0x20)
 		elseif testFlag(segment, 0x2002DBE, 0x20) then
@@ -2577,6 +2584,7 @@ function updateLocations(segment)
 						{0x2002c85, 0x80},
 						{0x2002c86, 0x01},
 						{0x2002c86, 0x10},
+						
 						{0x2002c86, 0x20},
 						{0x2002c86, 0x40},
 						{0x2002c87, 0x01},
@@ -3861,31 +3869,83 @@ function area(segment)
 				end
 			end
 		end
+		if ROOM_FLAG_MAPPING_SPEC[hex] then
+			local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
+			local number_tab = 0
+			if tabs2 then
+				for _, tab in ipairs(tabs2) do
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
+						Tracker:UiHint("ActivateTab", tab)
+					end
+				end
+			end
+		elseif ROOM_FLAG_MAPPING[hex2] then
+			local tabs = ROOM_FLAG_MAPPING[hex2][0]
+			local number_tab = 0
+			if tabs then
+				for _, tab in ipairs(tabs) do
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
+						Tracker:UiHint("ActivateTab", tab)
+					end
+				end
+			end
+		else
+			local tabs3 = ROOM_FLAG_MAPPING["00"][0]
+			local number_tab = 0
+			if tabs3 then
+				for _, tab in ipairs(tabs3) do
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
+						Tracker:UiHint("ActivateTab", tab)
+					end
+				end
+			end
+		end
 		AUTOTRACKING_dungeons_last=hex
-		print(string.format("[MAP][INFO] AUTOTRACKING_dungeons  - %s", AUTOTRACKING_dungeons))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DWS\"]  - %s", code_type_cache["ENTRANCE_IN_DWS"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_COF\"]  - %s", code_type_cache["ENTRANCE_IN_COF"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_FOW\"]  - %s", code_type_cache["ENTRANCE_IN_FOW"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_RC\"]  - %s", code_type_cache["ENTRANCE_IN_RC"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_TOD\"]  - %s", code_type_cache["ENTRANCE_IN_TOD"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_POW\"]  - %s", code_type_cache["ENTRANCE_IN_POW"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DHC\"]  - %s", code_type_cache["ENTRANCE_IN_DHC"] ))
+		-- print(string.format("[MAP][INFO] AUTOTRACKING_dungeons  - %s", AUTOTRACKING_dungeons))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DWS\"]  - %s", code_type_cache["ENTRANCE_IN_DWS"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_COF\"]  - %s", code_type_cache["ENTRANCE_IN_COF"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_FOW\"]  - %s", code_type_cache["ENTRANCE_IN_FOW"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_RC\"]  - %s", code_type_cache["ENTRANCE_IN_RC"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_TOD\"]  - %s", code_type_cache["ENTRANCE_IN_TOD"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_POW\"]  - %s", code_type_cache["ENTRANCE_IN_POW"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DHC\"]  - %s", code_type_cache["ENTRANCE_IN_DHC"] ))
 
-		print(string.format("[MAP][INFO] code_type_cache[\"POT_SPOT\"]  - %s", code_type_cache["POT_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"UNDERWATER_SPOT\"]  - %s", code_type_cache["UNDERWATER_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"DIG_SPOT\"]  - %s", code_type_cache["DIG_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"DWS_ENTER\"] - %s", code_type_cache["DWS_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"COF_ENTER\"] - %s", code_type_cache["COF_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"FOW_ENTER\"] - %s", code_type_cache["FOW_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"FOW_WARPS\"] - %s", code_type_cache["FOW_WARPS"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"TOD_ENTER\"] - %s", code_type_cache["TOD_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"POW_ENTER\"] - %s", code_type_cache["POW_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"RC_ENTER\"] - %s", code_type_cache["RC_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"DHC_ENTER\"] - %s", code_type_cache["DHC_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"TRIBE_EARLY\"] - %s", code_type_cache["TRIBE_EARLY"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"SWORD\"] - %s", code_type_cache["SWORD"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"SWORD_COUNT\"] - %s", code_type_cache["SWORD_COUNT"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"OCARINA\"] - %s", code_type_cache["OCARINA"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"POT_SPOT\"]  - %s", code_type_cache["POT_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"UNDERWATER_SPOT\"]  - %s", code_type_cache["UNDERWATER_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DIG_SPOT\"]  - %s", code_type_cache["DIG_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DWS_ENTER\"] - %s", code_type_cache["DWS_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"COF_ENTER\"] - %s", code_type_cache["COF_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"FOW_ENTER\"] - %s", code_type_cache["FOW_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"FOW_WARPS\"] - %s", code_type_cache["FOW_WARPS"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"TOD_ENTER\"] - %s", code_type_cache["TOD_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"POW_ENTER\"] - %s", code_type_cache["POW_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"RC_ENTER\"] - %s", code_type_cache["RC_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DHC_ENTER\"] - %s", code_type_cache["DHC_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"TRIBE_EARLY\"] - %s", code_type_cache["TRIBE_EARLY"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"SWORD\"] - %s", code_type_cache["SWORD"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"SWORD_COUNT\"] - %s", code_type_cache["SWORD_COUNT"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"OCARINA\"] - %s", code_type_cache["OCARINA"]))
 	end
 end
 ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)

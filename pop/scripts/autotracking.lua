@@ -11,7 +11,7 @@ AP_AUTOTRACKER_ENABLE_DEBUG_LOGGING=AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOT
 
 -- loads the AP autotracking code
 ScriptHost:LoadScript(ScriptAutotracking.."archipelago.lua")
-ScriptHost:LoadScript(ScriptLuaConnector.."autotracking.lua")
+ScriptHost:LoadScript(ScriptLuaConnector.."autotracking_testing.lua")
 
 -------------------------------------------------------
 print("")
