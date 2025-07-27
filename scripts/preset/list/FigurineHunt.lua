@@ -6,6 +6,7 @@ setting_preset_data["FigurineHunt"] = {}
 setting_preset_data["FigurineHunt"]["small_key_none"] = 2
 setting_preset_data["FigurineHunt"]["big_key_none"] = 2
 setting_preset_data["FigurineHunt"]["dhc_closed"] = 2
+setting_preset_data["FigurineHunt"]["require_reward_no_yes"] = 1
 setting_preset_data["FigurineHunt"]["dungeons"] = 0
 setting_preset_data["FigurineHunt"]["sword0Needed"] = 5
 setting_preset_data["FigurineHunt"]["element4Needed"] = 4

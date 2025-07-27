@@ -6,6 +6,7 @@ setting_preset_data["FrenchWeekly2023"] = {}
 setting_preset_data["FrenchWeekly2023"]["small_key_none"] = 2
 setting_preset_data["FrenchWeekly2023"]["big_key_none"] = 2
 setting_preset_data["FrenchWeekly2023"]["dhc_closed"] = 2
+setting_preset_data["FrenchWeekly2023"]["require_reward_no_yes"] = 1
 setting_preset_data["FrenchWeekly2023"]["dungeons"] = 0
 setting_preset_data["FrenchWeekly2023"]["sword0Needed"] = 5
 setting_preset_data["FrenchWeekly2023"]["element4Needed"] = 4

@@ -6,6 +6,7 @@ setting_preset_data["Advanced"] = {}
 setting_preset_data["Advanced"]["small_key_none"] = 2
 setting_preset_data["Advanced"]["big_key_none"] = 2
 setting_preset_data["Advanced"]["dhc_closed"] = 2
+setting_preset_data["Advanced"]["require_reward_no_yes"] = 1
 setting_preset_data["Advanced"]["dungeons"] = 0
 setting_preset_data["Advanced"]["sword0Needed"] = 5
 setting_preset_data["Advanced"]["element4Needed"] = 4

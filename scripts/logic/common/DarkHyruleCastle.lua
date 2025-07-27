@@ -39,9 +39,9 @@ function DHCBigBlock()
 	end
 end
 function DHCBossDoor()
-	if (has("dhc_bigkey")  and ( has("big_key_shuffle") or has("big_key_vanilla") )) then
+	if (has("dhc_bigkey")  and ( has("big_key_shuffle") or has("big_key_vanilla") or has("require_reward_bk_dhc"))) then
 		return 1
-	elseif (has("ud_bigkey") and has("big_key_universal") ) then
+	elseif (has("ud_bigkey") and has("big_key_universal") and hasnot("require_reward_bk_dhc")) then
 		return 1
 	elseif (has("big_key_none")) then
 		return 1

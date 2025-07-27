@@ -6,6 +6,7 @@ setting_preset_data["v0.1.0Settings"] = {}
 setting_preset_data["v0.1.0Settings"]["small_key_none"] = 2
 setting_preset_data["v0.1.0Settings"]["big_key_none"] = 2
 setting_preset_data["v0.1.0Settings"]["dhc_closed"] = 2
+setting_preset_data["v0.1.0Settings"]["require_reward_no_yes"] = 0
 setting_preset_data["v0.1.0Settings"]["dungeons"] = 0
 setting_preset_data["v0.1.0Settings"]["sword0Needed"] = 0
 setting_preset_data["v0.1.0Settings"]["element4Needed"] = 0

@@ -296,7 +296,7 @@
           "rows": [
             [
               "dhc_closed",
-              ""
+              "require_reward_no_yes"
             ],
             [
               "dungeons",

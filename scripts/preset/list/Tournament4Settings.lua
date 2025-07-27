@@ -6,6 +6,7 @@ setting_preset_data["Tournament4Settings"] = {}
 setting_preset_data["Tournament4Settings"]["small_key_none"] = 2
 setting_preset_data["Tournament4Settings"]["big_key_none"] = 2
 setting_preset_data["Tournament4Settings"]["dhc_closed"] = 0
+setting_preset_data["Tournament4Settings"]["require_reward_no_yes"] = 0
 setting_preset_data["Tournament4Settings"]["dungeons"] = 0
 setting_preset_data["Tournament4Settings"]["sword0Needed"] = 5
 setting_preset_data["Tournament4Settings"]["element4Needed"] = 4

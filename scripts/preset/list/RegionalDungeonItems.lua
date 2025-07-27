@@ -6,6 +6,7 @@ setting_preset_data["RegionalDungeonItems"] = {}
 setting_preset_data["RegionalDungeonItems"]["small_key_none"] = 2
 setting_preset_data["RegionalDungeonItems"]["big_key_none"] = 2
 setting_preset_data["RegionalDungeonItems"]["dhc_closed"] = 2
+setting_preset_data["RegionalDungeonItems"]["require_reward_no_yes"] = 1
 setting_preset_data["RegionalDungeonItems"]["dungeons"] = 0
 setting_preset_data["RegionalDungeonItems"]["sword0Needed"] = 5
 setting_preset_data["RegionalDungeonItems"]["element4Needed"] = 4

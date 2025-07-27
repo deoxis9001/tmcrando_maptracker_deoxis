@@ -120,6 +120,9 @@ setting_preset_data["Custom"] = {}
 			-- 0 = Never Open
 			-- 1 = Always Open
 			-- 2 = After Requirements
+		setting_preset_data["Custom"]["require_reward_no_yes"] = 0
+			-- 0 = shuffle or disabled
+			-- 1 = DHC BK
 		setting_preset_data["Custom"]["dungeons"] = 0
 			-- 0-6
 		setting_preset_data["Custom"]["sword0Needed"] = 0

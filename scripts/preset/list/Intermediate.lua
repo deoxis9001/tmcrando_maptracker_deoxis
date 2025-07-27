@@ -6,6 +6,7 @@ setting_preset_data["Intermediate"] = {}
 setting_preset_data["Intermediate"]["small_key_none"] = 2
 setting_preset_data["Intermediate"]["big_key_none"] = 2
 setting_preset_data["Intermediate"]["dhc_closed"] = 2
+setting_preset_data["Intermediate"]["require_reward_no_yes"] = 1
 setting_preset_data["Intermediate"]["dungeons"] = 0
 setting_preset_data["Intermediate"]["sword0Needed"] = 5
 setting_preset_data["Intermediate"]["element4Needed"] = 4

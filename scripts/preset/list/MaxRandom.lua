@@ -6,6 +6,7 @@ setting_preset_data["MaxRandom"] = {}
 setting_preset_data["MaxRandom"]["small_key_none"] = 2
 setting_preset_data["MaxRandom"]["big_key_none"] = 2
 setting_preset_data["MaxRandom"]["dhc_closed"] = 2
+setting_preset_data["MaxRandom"]["require_reward_no_yes"] = 1
 setting_preset_data["MaxRandom"]["dungeons"] = 6
 setting_preset_data["MaxRandom"]["sword0Needed"] = 5
 setting_preset_data["MaxRandom"]["element4Needed"] = 4

@@ -6,6 +6,7 @@ setting_preset_data["Firerod"] = {}
 setting_preset_data["Firerod"]["small_key_none"] = 2
 setting_preset_data["Firerod"]["big_key_none"] = 2
 setting_preset_data["Firerod"]["dhc_closed"] = 2
+setting_preset_data["Firerod"]["require_reward_no_yes"] = 1
 setting_preset_data["Firerod"]["dungeons"] = 0
 setting_preset_data["Firerod"]["sword0Needed"] = 5
 setting_preset_data["Firerod"]["element4Needed"] = 4
