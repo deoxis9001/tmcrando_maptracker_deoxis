@@ -49,14 +49,14 @@ items_codes_autotracking_cache["RC_ENTER"]["COUNT"]={}
 items_codes_autotracking_cache["RC_ENTER"]["ACTIVE"]={}
 items_codes_autotracking_cache["RC_ENTER"]["SETTING"]={}
 
-items_codes_autotracking["redW"] = true
-items_codes_autotracking["redV"] = true
-items_codes_autotracking["redE"] = true
-items_codes_autotracking["blueL"] = true
-items_codes_autotracking["blueS"] = true
-items_codes_autotracking["greenG"] = true
-items_codes_autotracking["greenC"] = true
-items_codes_autotracking["greenP"] = true
+items_codes_autotracking_cache["FUSION_RED"]={}
+items_codes_autotracking_cache["FUSION_RED"]["LOC_ACTIVE"]={}
+
+items_codes_autotracking_cache["FUSION_BLUE"]={}
+items_codes_autotracking_cache["FUSION_BLUE"]["LOC_ACTIVE"]={}
+
+items_codes_autotracking_cache["FUSION_GREEN"]={}
+items_codes_autotracking_cache["FUSION_GREEN"]["LOC_ACTIVE"]={}
 
 code_type_cache={}
 
@@ -180,9 +180,9 @@ function updateWall(segment, code, address)
 end
 function updateWallUsedFixed(code, segment, locationData)
 	local item1 = Tracker:FindObjectForCode("blueL")
-	local item2 = Tracker:FindObjectForCode("blueS")
+	local item2_blues = Tracker:FindObjectForCode("blueS")
 
-	if item1 or item2 then
+	if item1 or item2_blues then
 		local fusion_count_wall_local = 0
 		fusion_count_wall["blueL"] = 0
 		fusion_count_wall["blueS"] = 0
@@ -209,7 +209,7 @@ function updateWallUsedFixed(code, segment, locationData)
 			item1.ItemState:setActive(count_fusion1+count_fusion2)
 		else
 			item1.ItemState:setActive(count_fusion1)
-			item2.ItemState:setActive(count_fusion2)
+			item2_blues.ItemState:setActive(count_fusion2)
 		end
 			
 		if TMC_AUTOTRACKER_DEBUG_ITEM then
@@ -1534,6 +1534,7 @@ function updateFusionUsedFixed(code, segment, locationData)
 		else
 			count_fusion = fusion_count[code] + fusion_count_used[code]
 		end
+		if 
 		item.ItemState:setActive(count_fusion)
 		if TMC_AUTOTRACKER_DEBUG_ITEM then
 			print("--tracking "..code.."--")
@@ -1808,7 +1809,7 @@ function updateWarps(segment, type)
 end
 function updateBigKeys(segment, code)
 	local item = Tracker:FindObjectForCode("big_key_none")
-	local item2 = Tracker:FindObjectForCode("require_reward_no")
+	local item2_require = Tracker:FindObjectForCode("require_reward_no_yes")
 	if code == "ud_bigkey" and item.CurrentStage == 3 then
 		updateToggleFlag(segment, "ud_bigkey", 0x2002eac, 0x04)
 	elseif code == "dws_bigkey"  and item.CurrentStage < 3 then
@@ -1855,7 +1856,7 @@ function updateBigKeys(segment, code)
 		else
 			updateToggleFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
 		end
-	elseif code == "dhc_bigkey"  and (item.CurrentStage < 3 or  item2.CurrentStage == 1 ) then
+	elseif code == "dhc_bigkey"  and (item.CurrentStage < 3 or  item2_require.CurrentStage == 1 ) then
 		if testFlag(segment, 0x2002DBE, 0x20)  and code_type_cache["DHC_ENTER"] == 1 then
 			updateToggleFlag(segment, "dhc_bigkey", 0x2002DBE, 0x20)
 		elseif testFlag(segment, 0x2002DBE, 0x20) then
@@ -1867,7 +1868,7 @@ function updateBigKeys(segment, code)
 end
 
 function updateSmallKeys(segment, code, address)
-	local item2 = Tracker:FindObjectForCode("small_key_none")	  
+	local item2_small_key = Tracker:FindObjectForCode("small_key_none")	  
 	local item = Tracker:FindObjectForCode(code)
 	if code == "dws_smallkey" then
 		DWS_KEY_USED = 0
@@ -1884,10 +1885,10 @@ function updateSmallKeys(segment, code, address)
 			DWS_KEY_USED = DWS_KEY_USED + 1
 		end
 		DWS_KEY_COUNT = ReadU8(segment, address)
-		if DWS_KEY_COUNT > 0 and code_type_cache["DWS_ENTER"]==1 and item2.CurrentStage < 3 then
+		if DWS_KEY_COUNT > 0 and code_type_cache["DWS_ENTER"]==1 and item2_small_key.CurrentStage < 3 then
 			items_codes_autotracking_cache["DWS_ENTER"]["COUNT"][code] = DWS_KEY_COUNT + DWS_KEY_USED
 			item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
-		elseif DWS_KEY_COUNT > 0 and item2.CurrentStage < 3 then
+		elseif DWS_KEY_COUNT > 0 and item2_small_key.CurrentStage < 3 then
 			items_codes_autotracking_cache["DWS_ENTER"]["COUNT"][code] = DWS_KEY_COUNT
 			item.AcquiredCount = DWS_KEY_COUNT
 		end
@@ -1900,10 +1901,10 @@ function updateSmallKeys(segment, code, address)
 			COF_KEY_USED = COF_KEY_USED + 1
 		end
 		COF_KEY_COUNT = ReadU8(segment, address)
-		if COF_KEY_COUNT > 0 and code_type_cache["COF_ENTER"]==1  and item2.CurrentStage < 3 then
+		if COF_KEY_COUNT > 0 and code_type_cache["COF_ENTER"]==1  and item2_small_key.CurrentStage < 3 then
 			items_codes_autotracking_cache["COF_ENTER"]["COUNT"][code] = COF_KEY_COUNT + COF_KEY_USED
 			item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
-		elseif COF_KEY_COUNT > 0  and item2.CurrentStage < 3 then
+		elseif COF_KEY_COUNT > 0  and item2_small_key.CurrentStage < 3 then
 			items_codes_autotracking_cache["COF_ENTER"]["COUNT"][code] = COF_KEY_COUNT
 			item.AcquiredCount = COF_KEY_COUNT
 		end
@@ -1922,10 +1923,10 @@ function updateSmallKeys(segment, code, address)
 			FOW_KEY_USED = FOW_KEY_USED + 1
 		end
 		FOW_KEY_COUNT = ReadU8(segment, address)
-		if FOW_KEY_COUNT > 0 and code_type_cache["FOW_ENTER"]==1  and item2.CurrentStage < 3 then
+		if FOW_KEY_COUNT > 0 and code_type_cache["FOW_ENTER"]==1  and item2_small_key.CurrentStage < 3 then
 			items_codes_autotracking_cache["FOW_ENTER"]["COUNT"][code] = FOW_KEY_COUNT + FOW_KEY_USED
 			item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
-		elseif FOW_KEY_COUNT > 0  and item2.CurrentStage < 3 then
+		elseif FOW_KEY_COUNT > 0  and item2_small_key.CurrentStage < 3 then
 			items_codes_autotracking_cache["FOW_ENTER"]["COUNT"][code] = FOW_KEY_COUNT
 			item.AcquiredCount = FOW_KEY_COUNT
 		end
@@ -1944,10 +1945,10 @@ function updateSmallKeys(segment, code, address)
 			TOD_KEY_USED = TOD_KEY_USED + 1
 		end
 		TOD_KEY_COUNT = ReadU8(segment, address)
-		if TOD_KEY_COUNT > 0 and code_type_cache["TOD_ENTER"]==1 and item2.CurrentStage < 3  then
+		if TOD_KEY_COUNT > 0 and code_type_cache["TOD_ENTER"]==1 and item2_small_key.CurrentStage < 3  then
 			items_codes_autotracking_cache["TOD_ENTER"]["COUNT"][code] = TOD_KEY_COUNT + TOD_KEY_USED
 			item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
-		elseif TOD_KEY_COUNT > 0 and item2.CurrentStage < 3  then
+		elseif TOD_KEY_COUNT > 0 and item2_small_key.CurrentStage < 3  then
 			items_codes_autotracking_cache["TOD_ENTER"]["COUNT"][code] = TOD_KEY_COUNT
 			item.AcquiredCount = TOD_KEY_COUNT
 		end
@@ -1972,10 +1973,10 @@ function updateSmallKeys(segment, code, address)
 			POW_KEY_USED = POW_KEY_USED + 1
 		end
 		POW_KEY_COUNT = ReadU8(segment, address)
-		if POW_KEY_COUNT > 0 and code_type_cache["POW_ENTER"]==1  and item2.CurrentStage < 3 then
+		if POW_KEY_COUNT > 0 and code_type_cache["POW_ENTER"]==1  and item2_small_key.CurrentStage < 3 then
 			items_codes_autotracking_cache["POW_ENTER"]["COUNT"][code] = POW_KEY_COUNT + POW_KEY_USED
 			item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
-		elseif POW_KEY_COUNT > 0  and item2.CurrentStage < 3 then
+		elseif POW_KEY_COUNT > 0  and item2_small_key.CurrentStage < 3 then
 			items_codes_autotracking_cache["POW_ENTER"]["COUNT"][code] = POW_KEY_COUNT
 			item.AcquiredCount = POW_KEY_COUNT
 		end
@@ -1997,10 +1998,10 @@ function updateSmallKeys(segment, code, address)
 			DHC_KEY_USED = DHC_KEY_USED + 1
 		end
 		DHC_KEY_COUNT = ReadU8(segment, address)
-		if DHC_KEY_COUNT > 0 and code_type_cache["DHC_ENTER"]==1 and item2.CurrentStage < 3  then
+		if DHC_KEY_COUNT > 0 and code_type_cache["DHC_ENTER"]==1 and item2_small_key.CurrentStage < 3  then
 			items_codes_autotracking_cache["DHC_ENTER"]["COUNT"][code] = DHC_KEY_USED + DHC_KEY_COUNT
 			item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
-		elseif DHC_KEY_COUNT > 0 and item2.CurrentStage < 3  then
+		elseif DHC_KEY_COUNT > 0 and item2_small_key.CurrentStage < 3  then
 			items_codes_autotracking_cache["DHC_ENTER"]["COUNT"][code] = DHC_KEY_COUNT
 			item.AcquiredCount = DHC_KEY_COUNT
 		end
@@ -2016,14 +2017,14 @@ function updateSmallKeys(segment, code, address)
 			RC_KEY_USED = RC_KEY_USED + 1
 		end
 		RC_KEY_COUNT = ReadU8(segment, address)
-		if RC_KEY_COUNT > 0 and code_type_cache["RC_ENTER"]==1 and item2.CurrentStage < 3  then
+		if RC_KEY_COUNT > 0 and code_type_cache["RC_ENTER"]==1 and item2_small_key.CurrentStage < 3  then
 			items_codes_autotracking_cache["RC_ENTER"]["COUNT"][code] = RC_KEY_COUNT + RC_KEY_USED
 			item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED
-		elseif RC_KEY_COUNT > 0 and item2.CurrentStage < 3  then
+		elseif RC_KEY_COUNT > 0 and item2_small_key.CurrentStage < 3  then
 			items_codes_autotracking_cache["RC_ENTER"]["COUNT"][code] = RC_KEY_COUNT
 			item.AcquiredCount = RC_KEY_COUNT
 		end
-	elseif code == "ud_smallkey" and item2.CurrentStage == 3 then	
+	elseif code == "ud_smallkey" and item2_small_key.CurrentStage == 3 then	
 		UD_KEY_COUNT = ReadU8(segment, address)
 		item.AcquiredCount = UD_KEY_COUNT + RC_KEY_USED + DHC_KEY_USED + POW_KEY_USED + TOD_KEY_USED + FOW_KEY_USED + COF_KEY_USED + DWS_KEY_USED
 	else
@@ -3719,7 +3720,7 @@ function area(segment)
 	InvalidateReadCaches()
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
-		if ReadU8(segment, 0x03000BF4) then
+		if ReadU8(segment, 0x03000BF6)>0 then
 			local hex1 = ReadU8(segment, 0x03000BF4)
 			local hex1 = string.upper(string.format('%02x',hex1))
 			local hex2 = ReadU8(segment, 0x03000BF5)
@@ -3896,5 +3897,5 @@ ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey)
 ScriptHost:AddMemoryWatch("TMC Keys", 0x2002d00, 0x200, updateKeys)
 ScriptHost:AddMemoryWatch("TMC figurine", 0x2002af0, 0x01, figurine)
 ScriptHost:AddMemoryWatch("TMC CREST", 0x2002a83, 0x01, crest)
-ScriptHost:AddMemoryWatch("area", 0x03000BF4, 0x02, area,1)
+ScriptHost:AddMemoryWatch("area", 0x03000BF4, 0x3, area,1)
 --10CF
