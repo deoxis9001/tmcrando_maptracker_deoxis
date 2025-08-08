@@ -1,7 +1,7 @@
 
 
 function LonLon_RanchPot() 
-	if ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 ) then
+	if ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 or function_Cached("MinishWindCrest") ) then
 		return 1
 	elseif ( function_Cached("CanDestroyTrees")==2 or function_Cached("LakeWindCrest")==1 ) then
 		return 2
