@@ -106,9 +106,9 @@ function LonLon_GoronCaveFusion_SmallChest()
 	else
 		GoronNumber = 0
 	end
-	if ( GoronNumber >=4 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 ) ) then
+	if ( GoronNumber >=4 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1  or function_Cached("MinishWindCrest")==1  ) ) then
 		return 1
-	elseif ( GoronNumber >=4 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and (  function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 or function_Cached("LakeWindCrest")==1 ) ) then
+	elseif ( GoronNumber >=4 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and (  function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 or function_Cached("LakeWindCrest")==1  or function_Cached("MinishWindCrest")==1 ) ) then
 		return 2
 	else
 		return 0
@@ -142,9 +142,9 @@ function LonLon_GoronCaveFusion_BigChest()
 		GoronNumber = 0
 	end
 
-	if ( GoronNumber>=6 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 ) ) then
+	if ( GoronNumber>=6 and function_Cached("GoronCave")==1 and ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 or function_Cached("MinishWindCrest")==1 ) ) then
 		return 1
-	elseif ( GoronNumber >=6 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and (  function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 or function_Cached("LakeWindCrest")==1 ) ) then
+	elseif ( GoronNumber >=6 and ( function_Cached("GoronCave")==1 or function_Cached("GoronCave")==2 ) and (  function_Cached("CanDestroyTrees")==1 or function_Cached("CanDestroyTrees")==2 or function_Cached("LakeWindCrest")==1 or function_Cached("MinishWindCrest")==1 ) ) then
 		return 2
 	else
 		return 0
