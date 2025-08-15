@@ -1,11 +1,12 @@
 
--- Generated 02.01.24 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="Intermediate"
 numero_preset=numero_preset+1
 setting_preset_data["Intermediate"] = {}
 setting_preset_data["Intermediate"]["small_key_none"] = 2
 setting_preset_data["Intermediate"]["big_key_none"] = 2
 setting_preset_data["Intermediate"]["dhc_closed"] = 2
+setting_preset_data["Intermediate"]["require_reward_no_yes"] = 1
 setting_preset_data["Intermediate"]["dungeons"] = 0
 setting_preset_data["Intermediate"]["sword0Needed"] = 5
 setting_preset_data["Intermediate"]["element4Needed"] = 4
@@ -32,8 +33,8 @@ setting_preset_data["Intermediate"]["open_library_no"] = 0
 setting_preset_data["Intermediate"]["crenelwindcrest_no"] = 0
 setting_preset_data["Intermediate"]["fallswindcrest_no"] = 0
 setting_preset_data["Intermediate"]["cloudwindcrest_no"] = 0
-setting_preset_data["Intermediate"]["swampwindcrest_no"] = 0
 setting_preset_data["Intermediate"]["lakewindcrest_no"] = 1
+setting_preset_data["Intermediate"]["swampwindcrest_no"] = 0
 setting_preset_data["Intermediate"]["shfwindcrest_no"] = 1
 setting_preset_data["Intermediate"]["minishwindcrest_no"] = 1
 setting_preset_data["Intermediate"]["grabbable_none"] = 1
@@ -41,6 +42,7 @@ setting_preset_data["Intermediate"]["weaponsbombs_no"] = 0
 setting_preset_data["Intermediate"]["weaponsbow_no"] = 0
 setting_preset_data["Intermediate"]["weaponsgust_no"] = 0
 setting_preset_data["Intermediate"]["weaponslamp_no"] = 0
+setting_preset_data["Intermediate"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["Intermediate"]["blowdust_off"] = 0
 setting_preset_data["Intermediate"]["crenelmushroom_off"] = 0
 setting_preset_data["Intermediate"]["lightarrowbreak_off"] = 0
@@ -60,6 +62,8 @@ setting_preset_data["Intermediate"]["dhccanonhit_off"] = 0
 setting_preset_data["Intermediate"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["Intermediate"]["dhcswitchhit_off"] = 0
 setting_preset_data["Intermediate"]["fowpot_off"] = 0
+setting_preset_data["Intermediate"]["clonetrick_off"] = 0
+setting_preset_data["Intermediate"]["cloneswitcheswithbomb_off"] = 0
 setting_preset_data["Intermediate"]["goron_eu"] = 0
 setting_preset_data["Intermediate"]["figurine_option"] = 0
 setting_preset_data["Intermediate"]["progressiveitems"] = true

@@ -1861,9 +1861,9 @@
       },
       {
         "name": "Rupees Grabbable",
-        "item_count": 2,
+        "item_count": 3,
         "access_rules": [
-          "$Json_Dungeon_Droplet_RightPathRupees1_2"
+          "$Json_Dungeon_Droplet_RightPathRupees1_2_5"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -2449,7 +2449,8 @@
         "y": 300,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_fast_vaati"
         ]
       }
     ],
@@ -2515,7 +2516,8 @@
         "x": 3090,
         "y": 1480,
         "restrict_visibility_rules": [
-          "$has|dhc_ped"
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
         ]
       }
     ],

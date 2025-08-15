@@ -10,7 +10,7 @@ end
 
 function AccessLonLon()
 	
-	if ( function_Cached("LakeWindCrest")==1 or ( function_Cached("CanDestroyTrees")==1 and ( has("llrkey") or has("cape") or function_Cached("LonLonNorthShortcut")==1 or ( has("flippers") and has("mitts") ) ) ) ) then
+	if ( function_Cached("LakeWindCrest")==1 or ( ( function_Cached("CanDestroyTrees")==1 or function_Cached("MinishWindCrest")==1 ) and ( has("llrkey") or has("cape") or function_Cached("LonLonNorthShortcut")==1 or ( has("flippers") and has("mitts") ) ) ) ) then
 		return 1
 	elseif ( (function_Cached("CanDestroyTrees")==2 and ( has("llrkey") or has("cape") or function_Cached("LonLonNorthShortcut")==1 or ( has("flippers") and has("mitts") ) ) ) ) then
 		return 2
@@ -42,7 +42,7 @@ function AccessTreasureCave()
 end
 
 function AccessMinishWoods()
-	if ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 ) then
+	if ( function_Cached("CanDestroyTrees")==1 or function_Cached("LakeWindCrest")==1 or function_Cached("MinishWindCrest")==1 ) then
 		return 1
 	elseif ( function_Cached("CanDestroyTrees")==2 ) then
 		return 2
@@ -263,11 +263,19 @@ function AccessDHC()
 	
 	if ( function_Cached("DhcDungeons")==1 and has("dhc_open") ) then
 		return 1
+	elseif ( function_Cached("DhcDungeons")==1 and has("dhc_open_fast") ) then
+		return 1
+	elseif ( function_Cached("DhcDungeons")==1 and has("dhc_fast_vaati") and function_Cached("CompletePed")==1 ) then
+		return 1
 	elseif ( ( function_Cached("DhcDungeons")==1 and has("dhc_closed") or has("dhc_ped") ) and function_Cached("CompletePed")==1 ) then
 		return 1
 	elseif ( function_Cached("DhcDungeons")==2 and has("dhc_open") ) then
 		return 2
 	elseif ( ( function_Cached("DhcDungeons")==2 and has("dhc_closed") or has("dhc_ped") ) and function_Cached("CompletePed")==1 ) then
+		return 2
+	elseif ( function_Cached("DhcDungeons")==2 and has("dhc_open_fast") ) then
+		return 2
+	elseif ( function_Cached("DhcDungeons")==2 and has("dhc_fast_vaati") and function_Cached("CompletePed")==1 ) then
 		return 2
 	else
 		return 0

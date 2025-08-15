@@ -1,11 +1,12 @@
 
--- Generated 02.01.24 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="v0.1.0Settings"
 numero_preset=numero_preset+1
 setting_preset_data["v0.1.0Settings"] = {}
 setting_preset_data["v0.1.0Settings"]["small_key_none"] = 2
 setting_preset_data["v0.1.0Settings"]["big_key_none"] = 2
 setting_preset_data["v0.1.0Settings"]["dhc_closed"] = 2
+setting_preset_data["v0.1.0Settings"]["require_reward_no_yes"] = 0
 setting_preset_data["v0.1.0Settings"]["dungeons"] = 0
 setting_preset_data["v0.1.0Settings"]["sword0Needed"] = 0
 setting_preset_data["v0.1.0Settings"]["element4Needed"] = 0
@@ -32,8 +33,8 @@ setting_preset_data["v0.1.0Settings"]["open_library_no"] = 0
 setting_preset_data["v0.1.0Settings"]["crenelwindcrest_no"] = 0
 setting_preset_data["v0.1.0Settings"]["fallswindcrest_no"] = 0
 setting_preset_data["v0.1.0Settings"]["cloudwindcrest_no"] = 0
-setting_preset_data["v0.1.0Settings"]["swampwindcrest_no"] = 0
 setting_preset_data["v0.1.0Settings"]["lakewindcrest_no"] = 1
+setting_preset_data["v0.1.0Settings"]["swampwindcrest_no"] = 0
 setting_preset_data["v0.1.0Settings"]["shfwindcrest_no"] = 0
 setting_preset_data["v0.1.0Settings"]["minishwindcrest_no"] = 0
 setting_preset_data["v0.1.0Settings"]["grabbable_none"] = 0
@@ -41,6 +42,7 @@ setting_preset_data["v0.1.0Settings"]["weaponsbombs_no"] = 0
 setting_preset_data["v0.1.0Settings"]["weaponsbow_no"] = 0
 setting_preset_data["v0.1.0Settings"]["weaponsgust_no"] = 0
 setting_preset_data["v0.1.0Settings"]["weaponslamp_no"] = 0
+setting_preset_data["v0.1.0Settings"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["v0.1.0Settings"]["blowdust_off"] = 1
 setting_preset_data["v0.1.0Settings"]["crenelmushroom_off"] = 0
 setting_preset_data["v0.1.0Settings"]["lightarrowbreak_off"] = 0
@@ -60,6 +62,8 @@ setting_preset_data["v0.1.0Settings"]["dhccanonhit_off"] = 0
 setting_preset_data["v0.1.0Settings"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["v0.1.0Settings"]["dhcswitchhit_off"] = 0
 setting_preset_data["v0.1.0Settings"]["fowpot_off"] = 0
+setting_preset_data["v0.1.0Settings"]["clonetrick_off"] = 1
+setting_preset_data["v0.1.0Settings"]["cloneswitcheswithbomb_off"] = 1
 setting_preset_data["v0.1.0Settings"]["goron_eu"] = 0
 setting_preset_data["v0.1.0Settings"]["figurine_option"] = 0
 setting_preset_data["v0.1.0Settings"]["progressiveitems"] = false

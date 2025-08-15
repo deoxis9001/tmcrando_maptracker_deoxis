@@ -1,11 +1,12 @@
 
--- Generated 02.01.24 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="NoLogicOpenWorld"
 numero_preset=numero_preset+1
 setting_preset_data["NoLogicOpenWorld"] = {}
 setting_preset_data["NoLogicOpenWorld"]["small_key_none"] = 0
 setting_preset_data["NoLogicOpenWorld"]["big_key_none"] = 0
 setting_preset_data["NoLogicOpenWorld"]["dhc_closed"] = 2
+setting_preset_data["NoLogicOpenWorld"]["require_reward_no_yes"] = 1
 setting_preset_data["NoLogicOpenWorld"]["dungeons"] = 0
 setting_preset_data["NoLogicOpenWorld"]["sword0Needed"] = 5
 setting_preset_data["NoLogicOpenWorld"]["element4Needed"] = 4
@@ -28,12 +29,12 @@ setting_preset_data["NoLogicOpenWorld"]["fusionblue_removed"] = 2
 setting_preset_data["NoLogicOpenWorld"]["fusiongreen_removed"] = 2
 setting_preset_data["NoLogicOpenWorld"]["open_wind_tribe_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["open_tingle_no"] = 1
-setting_preset_data["NoLogicOpenWorld"]["open_library_no"] = 0
+setting_preset_data["NoLogicOpenWorld"]["open_library_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["crenelwindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["fallswindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["cloudwindcrest_no"] = 1
-setting_preset_data["NoLogicOpenWorld"]["swampwindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["lakewindcrest_no"] = 1
+setting_preset_data["NoLogicOpenWorld"]["swampwindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["shfwindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["minishwindcrest_no"] = 1
 setting_preset_data["NoLogicOpenWorld"]["grabbable_none"] = 1
@@ -41,6 +42,7 @@ setting_preset_data["NoLogicOpenWorld"]["weaponsbombs_no"] = 0
 setting_preset_data["NoLogicOpenWorld"]["weaponsbow_no"] = 0
 setting_preset_data["NoLogicOpenWorld"]["weaponsgust_no"] = 0
 setting_preset_data["NoLogicOpenWorld"]["weaponslamp_no"] = 0
+setting_preset_data["NoLogicOpenWorld"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["NoLogicOpenWorld"]["blowdust_off"] = 0
 setting_preset_data["NoLogicOpenWorld"]["crenelmushroom_off"] = 0
 setting_preset_data["NoLogicOpenWorld"]["lightarrowbreak_off"] = 0
@@ -60,6 +62,8 @@ setting_preset_data["NoLogicOpenWorld"]["dhccanonhit_off"] = 0
 setting_preset_data["NoLogicOpenWorld"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["NoLogicOpenWorld"]["dhcswitchhit_off"] = 0
 setting_preset_data["NoLogicOpenWorld"]["fowpot_off"] = 0
+setting_preset_data["NoLogicOpenWorld"]["clonetrick_off"] = 0
+setting_preset_data["NoLogicOpenWorld"]["cloneswitcheswithbomb_off"] = 0
 setting_preset_data["NoLogicOpenWorld"]["goron_eu"] = 0
 setting_preset_data["NoLogicOpenWorld"]["figurine_option"] = 0
 setting_preset_data["NoLogicOpenWorld"]["progressiveitems"] = true

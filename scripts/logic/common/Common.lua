@@ -245,7 +245,12 @@ function FusionsBlueSNumber()
 		count_fusion2 = count_fusion2 + 1
 	end
 	count_fusion3 = math.floor(count_fusion2 / 2)
-	count_fusion = count_fusion + count_fusion3
+
+	if fusiongreencombined:getActive() then
+		count_fusion = count_fusion + count_fusion2
+	else
+		count_fusion = count_fusion + count_fusion3
+	end
 	return count_fusion
 end
 function FusionsBlueLNumber()
@@ -289,7 +294,11 @@ function FusionsBlueLNumber()
 		count_fusion2 = count_fusion2 + 1
 	end
 	count_fusion3 = math.ceil(count_fusion2 / 2)
-	count_fusion = count_fusion + count_fusion3
+	if fusiongreencombined:getActive() then
+		count_fusion = count_fusion + count_fusion2
+	else
+		count_fusion = count_fusion + count_fusion3
+	end
 	return count_fusion
 end
 function FusionsBlueWallNumber()
@@ -315,7 +324,9 @@ function FusionsBlueWallNumber()
 	count_fusion3 = math.ceil(count_fusion2 / 2)
 	count_fusion4 = math.floor(count_fusion2 / 2)
 	count_fusion = count_fusion3 - count_fusion4
-	if (count_fusion == 0) then
+	if fusiongreencombined:getActive() then
+		return count_fusion - count_fusion2
+	elseif (count_fusion == 0) then
 		return FusionsBlueLNumber() - count_fusion3
 	else
 		return FusionsBlueSNumber() - count_fusion4
@@ -497,7 +508,7 @@ function FusionsRedNumber(code)
 			function_data_fusion[code] = 1
 			return 1
 		elseif count_Fuser < redW:getActive() then
-			function_data_fusion[code] = 1
+			function_data_fusion[code] = 2
 			return 2
 		else
 			function_data_fusion[code] = 0
@@ -544,7 +555,7 @@ function FusionsBlueNumber(code)
 			function_data_fusion[code] = 1
 			return 1
 		elseif count_Fuser < blueL:getActive() then
-			function_data_fusion[code] = 1
+			function_data_fusion[code] = 2
 			return 2
 		else
 			function_data_fusion[code] = 0
@@ -573,7 +584,9 @@ function FusionsBlueNumber(code)
 		count_fusion3 = math.ceil(count_fusion2 / 2)
 		count_fusion4 = math.floor(count_fusion2 / 2)
 		count_fusion = count_fusion3 - count_fusion4
-		if (count_fusion == 0) then
+		if fusiongreencombined:getActive() then
+			info_Fuser = blueL:getActive() - count_fusion2
+		elseif (count_fusion == 0) then
 			info_Fuser = blueL:getActive() - count_fusion3
 		else
 			info_Fuser = blueS:getActive() - count_fusion4
@@ -1163,6 +1176,18 @@ function HasGhiniDamage()
 	end
 end
 
+function HasGoldOctorokDamage()
+	if (function_Cached("HasSword") == 1) then
+		return 1
+	elseif (has("weaponsmirrorshield_yes") and function_Cached("HasMirrorShield")) then
+		return 1
+	elseif (has("damage_source_out_on") and function_Cached("HasMirrorShield")) then
+		return 2
+	else
+		return 0
+	end
+end
+
 function ShopBack()
 	if (function_Cached("TownDog") == 1) then
 		return 1
@@ -1288,9 +1313,11 @@ end
 function LakeIslandHP()
 	if (has("cape")) then
 		return 1
-	elseif ((has("grabbable_easy") or has("grabbable_hard")) and function_Cached("HasMagicBoomerang") == 1) then
+	elseif ( has("grabbable_easy") and function_Cached("HasMagicBoomerang") == 1 ) then
 		return 1
-	elseif (has("grabbable_allow") and function_Cached("HasMagicBoomerang") == 1) then
+	elseif ( has("grabbable_hard") and ( function_Cached("HasMagicBoomerang") == 1 or has("gust") ) ) then
+		return 1
+	elseif (has("grabbable_allow") and ( function_Cached("HasMagicBoomerang") == 1 or has("gust") ) ) then
 		return 2
 	else
 		return 0
@@ -1492,7 +1519,7 @@ function DeepwoodMadderHP()
 				(function_Cached("DeepwoodMadderpillarDoor") == 1 or function_Cached("DeepwoodMadderpillarDoor") == 2) and
 				function_Cached("DeepwoodWeb") == 1) or
 				has("gust") and
-					(function_Cached("Deepwood1stDoor") == 1 or
+					( ( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) or
 						(function_Cached("DeepwoodPreMadderpillar") == 1 or function_Cached("DeepwoodPreMadderpillar") == 2))))
 	 then
 		return 2
@@ -1589,7 +1616,7 @@ end
 
 function PoWDrop()
 	if
-		(has("cape") and (function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) and has("cane") and
+		(has("cape") and function_Cached("PoWPlatformClones") == 1 and has("cane") and
 			function_Cached("PoWPotPuzzle") == 1)
 	 then
 		return 1
@@ -1618,7 +1645,7 @@ function PoWDrop()
 	 then
 		return 1
 	elseif
-		(has("cape") and (function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) and has("cane") and
+		(has("cape") and ( function_Cached("PoWPlatformClones") == 1 or function_Cached("PoWPlatformClones") == 2 ) and has("cane") and
 			(function_Cached("PoWPotPuzzle") == 1 or function_Cached("PoWPotPuzzle") == 2))
 	 then
 		return 2
@@ -1925,6 +1952,66 @@ function DHCSwitchHit()
 		return 0
 	end
 end
+
+function DrLeftClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 1
+	elseif (function_Cached("CanSplit2") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 2
+	end
+end
+
+function FoWLeftDropClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 1
+	elseif (function_Cached("CanSplit2") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 2
+	end
+end
+function FoWStatueDropClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 ) then
+		return 1
+	elseif (function_Cached("CanSplit2") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 ) then
+		return 2
+	end
+end
+
+function PoWPlatformClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1 ) then
+		return 1
+	elseif (function_Cached("CanSplit3") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1 ) then
+		return 2
+	end
+end
+
+function PoWPeahatClones()
+	if has("clonetrick_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 1 
+	elseif (function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1) then
+		return 1
+	elseif has("clonetrick_out_on") and ( function_Cached("CanSplit2") == 1 or function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) then
+		return 2 
+	end
+end
+
+function CloneSwitchesWithBomb()
+	if has("cloneswitcheswithbomb_on") and has("HasSword") and has("bombs") then
+		return 1
+	elseif has("cloneswitcheswithbomb_out_on")  and has("HasSword") and has("bombs") then
+		return 2
+	else
+		return 0
+	end
+end
+
 function StrangerFusion()
 	if (has("fusionred_complet") or (has("fusionred_vanilla") and has("fusions0f"))) then
 		return 1

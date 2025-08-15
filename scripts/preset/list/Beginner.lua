@@ -1,11 +1,12 @@
 
--- Generated 02.01.24 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="Beginner"
 numero_preset=numero_preset+1
 setting_preset_data["Beginner"] = {}
 setting_preset_data["Beginner"]["small_key_none"] = 0
 setting_preset_data["Beginner"]["big_key_none"] = 0
 setting_preset_data["Beginner"]["dhc_closed"] = 1
+setting_preset_data["Beginner"]["require_reward_no_yes"] = 1
 setting_preset_data["Beginner"]["dungeons"] = 0
 setting_preset_data["Beginner"]["sword0Needed"] = 5
 setting_preset_data["Beginner"]["element4Needed"] = 4
@@ -32,8 +33,8 @@ setting_preset_data["Beginner"]["open_library_no"] = 0
 setting_preset_data["Beginner"]["crenelwindcrest_no"] = 0
 setting_preset_data["Beginner"]["fallswindcrest_no"] = 0
 setting_preset_data["Beginner"]["cloudwindcrest_no"] = 0
-setting_preset_data["Beginner"]["swampwindcrest_no"] = 0
 setting_preset_data["Beginner"]["lakewindcrest_no"] = 1
+setting_preset_data["Beginner"]["swampwindcrest_no"] = 0
 setting_preset_data["Beginner"]["shfwindcrest_no"] = 0
 setting_preset_data["Beginner"]["minishwindcrest_no"] = 0
 setting_preset_data["Beginner"]["grabbable_none"] = 1
@@ -41,6 +42,7 @@ setting_preset_data["Beginner"]["weaponsbombs_no"] = 0
 setting_preset_data["Beginner"]["weaponsbow_no"] = 0
 setting_preset_data["Beginner"]["weaponsgust_no"] = 0
 setting_preset_data["Beginner"]["weaponslamp_no"] = 0
+setting_preset_data["Beginner"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["Beginner"]["blowdust_off"] = 0
 setting_preset_data["Beginner"]["crenelmushroom_off"] = 0
 setting_preset_data["Beginner"]["lightarrowbreak_off"] = 0
@@ -60,6 +62,8 @@ setting_preset_data["Beginner"]["dhccanonhit_off"] = 0
 setting_preset_data["Beginner"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["Beginner"]["dhcswitchhit_off"] = 0
 setting_preset_data["Beginner"]["fowpot_off"] = 0
+setting_preset_data["Beginner"]["clonetrick_off"] = 0
+setting_preset_data["Beginner"]["cloneswitcheswithbomb_off"] = 0
 setting_preset_data["Beginner"]["goron_eu"] = 0
 setting_preset_data["Beginner"]["figurine_option"] = 0
 setting_preset_data["Beginner"]["progressiveitems"] = true

@@ -1,5 +1,5 @@
 
--- Generated 03.01.24 by deoxis9001 
+-- Generated 23.07.25 by deoxis9001 
 
 -- Tracker
 
@@ -120,6 +120,9 @@ setting_preset_data["Custom"] = {}
 			-- 0 = Never Open
 			-- 1 = Always Open
 			-- 2 = After Requirements
+		setting_preset_data["Custom"]["require_reward_no_yes"] = 0
+			-- 0 = shuffle or disabled
+			-- 1 = DHC BK
 		setting_preset_data["Custom"]["dungeons"] = 0
 			-- 0-6
 		setting_preset_data["Custom"]["sword0Needed"] = 0
@@ -320,6 +323,9 @@ setting_preset_data["Custom"] = {}
 		setting_preset_data["Custom"]["weaponslamp_no"] = 0
 			-- 0 = No
 			-- 1 = Yes
+		setting_preset_data["Custom"]["weaponsmirrorshield_no"] = 0
+			-- 0 = No
+			-- 1 = Yes
 			
 	-- Require Trick 1/2
 	
@@ -381,6 +387,12 @@ setting_preset_data["Custom"] = {}
 			-- 0 = No
 			-- 1 = Yes
 		setting_preset_data["Custom"]["fowpot_off"] = 0
+			-- 0 = No
+			-- 1 = Yes
+		setting_preset_data["Custom"]["clonetrick_off"] = 0
+			-- 0 = No
+			-- 1 = Yes
+		setting_preset_data["Custom"]["cloneswitcheswithbomb_off"] = 0
 			-- 0 = No
 			-- 1 = Yes
 -- Item Pool

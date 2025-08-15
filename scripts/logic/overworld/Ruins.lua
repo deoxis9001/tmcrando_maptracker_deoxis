@@ -81,9 +81,9 @@ function Ruins_ArmosKill_Chest()
 end
 
 function Ruins_GoldenOcto() 
-	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions54") ) ) and has("golden_enemy_on") and function_Cached("AccessRuins")==1 and function_Cached("HasSword")==1 ) then
+	if ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions54") ) ) and function_Cached("AccessRuins")==1 and function_Cached("HasGoldOctorokDamage")==1 ) then
 		return 1
-	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions54") ) ) and has("golden_enemy_on") and function_Cached("AccessRuins")==2 and function_Cached("HasSword")==1 ) then
+	elseif ( ( has("fusiongreen_complet") or ( has("fusiongreen_vanilla") and has("fusions54") ) ) and ( function_Cached("AccessRuins")==1 or function_Cached("AccessRuins")==2 ) and ( function_Cached("HasGoldOctorokDamage")==1 or function_Cached("HasGoldOctorokDamage")==2 ) ) then
 		return 2
 	else
 		return 0

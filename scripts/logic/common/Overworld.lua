@@ -61,8 +61,12 @@ end
 function CryptDoor()
 	if (Tracker:ProviderCountForCode("rc_smallkey") >= 1) then
 		return 1
+	elseif (Tracker:ProviderCountForCode("ud_smallkey") >= 26) then
+		return 1
 	elseif (has("small_key_none")) then
 		return 1
+	elseif (Tracker:ProviderCountForCode("ud_smallkey") >= 1) then
+		return 2
 	else
 		return 0
 	end
@@ -70,8 +74,12 @@ end
 function CryptBlocks()
 	if (Tracker:ProviderCountForCode("rc_smallkey") >= 3) then
 		return 1
+	elseif (Tracker:ProviderCountForCode("ud_smallkey") >= 28) then
+		return 1
 	elseif (has("small_key_none")) then
 		return 1
+	elseif (Tracker:ProviderCountForCode("ud_smallkey") >= 3) then
+		return 2
 	else
 		return 0
 	end
@@ -98,14 +106,15 @@ function DeepwoodPreMadderpillar()
 	if
 		(function_Cached("DeepwoodBlueWarp") == 1 or
 			(function_Cached("Deepwood1stDoor") == 1 and
-				(function_Cached("Deepwood2ndDoor") == 1 or Tracker:ProviderCountForCode("dws_smallkey") >= 2 or has("gust"))))
+				(function_Cached("Deepwood2ndDoor") == 1 or Tracker:ProviderCountForCode("dws_smallkey") >= 2 or has("gust") or Tracker:ProviderCountForCode("ud_smallkey") >= 26)))
 	 then
 		return 1
 	elseif
 		(function_Cached("DeepwoodBlueWarp") == 1 or
-			(function_Cached("Deepwood1stDoor") == 1 and
+			( ( function_Cached("Deepwood1stDoor") == 1 or function_Cached("Deepwood1stDoor") == 2 ) and
 				((function_Cached("Deepwood2ndDoor") == 1 or function_Cached("Deepwood2ndDoor") == 2) or
 					Tracker:ProviderCountForCode("dws_smallkey") >= 2 or
+					Tracker:ProviderCountForCode("ud_smallkey") >= 2 or
 					has("gust"))))
 	 then
 		return 2
@@ -298,7 +307,7 @@ end
 function PoW2ndHalf()
 	if
 		((function_Cached("PoWBlueWarp") == 1 and function_Cached("PoWDarknut") == 1) or
-			(has("cape") and (function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) and
+			(has("cape") and (function_Cached("PoWPlatformClones") == 1) and
 				function_Cached("PoWJump") == 1 and
 				function_Cached("PoW1stDoor") == 1 and
 				function_Cached("PoWBossDoor") == 1))
@@ -306,7 +315,7 @@ function PoW2ndHalf()
 		return 1
 	elseif
 		((function_Cached("PoWBlueWarp") == 1 and (function_Cached("PoWDarknut") == 1 or function_Cached("PoWDarknut") == 2)) or
-			(has("cape") and (function_Cached("CanSplit3") == 1 or function_Cached("CanSplit4") == 1) and
+			(has("cape") and ( function_Cached("PoWPlatformClones") == 1 or function_Cached("PoWPlatformClones") == 2 ) and
 				(function_Cached("PoWJump") == 1 or function_Cached("PoWJump") == 2) and
 				(function_Cached("PoW1stDoor") == 1 or function_Cached("PoW1stDoor") == 2) and
 				(function_Cached("PoWBossDoor") == 1 or function_Cached("PoWBossDoor") == 2)))

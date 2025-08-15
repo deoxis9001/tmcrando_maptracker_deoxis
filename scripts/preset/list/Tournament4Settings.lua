@@ -1,11 +1,12 @@
 
--- Generated 02.01.24 by deoxis9001 
+-- Generated 27.07.25 by deoxis9001 
 setting_preset_data_title[numero_preset]="Tournament4Settings"
 numero_preset=numero_preset+1
 setting_preset_data["Tournament4Settings"] = {}
 setting_preset_data["Tournament4Settings"]["small_key_none"] = 2
 setting_preset_data["Tournament4Settings"]["big_key_none"] = 2
 setting_preset_data["Tournament4Settings"]["dhc_closed"] = 0
+setting_preset_data["Tournament4Settings"]["require_reward_no_yes"] = 0
 setting_preset_data["Tournament4Settings"]["dungeons"] = 0
 setting_preset_data["Tournament4Settings"]["sword0Needed"] = 5
 setting_preset_data["Tournament4Settings"]["element4Needed"] = 4
@@ -32,15 +33,16 @@ setting_preset_data["Tournament4Settings"]["open_library_no"] = 0
 setting_preset_data["Tournament4Settings"]["crenelwindcrest_no"] = 0
 setting_preset_data["Tournament4Settings"]["fallswindcrest_no"] = 0
 setting_preset_data["Tournament4Settings"]["cloudwindcrest_no"] = 0
+setting_preset_data["Tournament4Settings"]["lakewindcrest_no"] = 1
 setting_preset_data["Tournament4Settings"]["swampwindcrest_no"] = 0
 setting_preset_data["Tournament4Settings"]["shfwindcrest_no"] = 0
-setting_preset_data["Tournament4Settings"]["lakewindcrest_no"] = 1
 setting_preset_data["Tournament4Settings"]["minishwindcrest_no"] = 0
 setting_preset_data["Tournament4Settings"]["grabbable_none"] = 0
 setting_preset_data["Tournament4Settings"]["weaponsbombs_no"] = 1
 setting_preset_data["Tournament4Settings"]["weaponsbow_no"] = 1
 setting_preset_data["Tournament4Settings"]["weaponsgust_no"] = 0
 setting_preset_data["Tournament4Settings"]["weaponslamp_no"] = 0
+setting_preset_data["Tournament4Settings"]["weaponsmirrorshield_no"] = 0
 setting_preset_data["Tournament4Settings"]["blowdust_off"] = 1
 setting_preset_data["Tournament4Settings"]["crenelmushroom_off"] = 1
 setting_preset_data["Tournament4Settings"]["lightarrowbreak_off"] = 1
@@ -60,6 +62,8 @@ setting_preset_data["Tournament4Settings"]["dhccanonhit_off"] = 0
 setting_preset_data["Tournament4Settings"]["dhcbladepuzzleshuffle_off"] = 0
 setting_preset_data["Tournament4Settings"]["dhcswitchhit_off"] = 0
 setting_preset_data["Tournament4Settings"]["fowpot_off"] = 0
+setting_preset_data["Tournament4Settings"]["clonetrick_off"] = 1
+setting_preset_data["Tournament4Settings"]["cloneswitcheswithbomb_off"] = 1
 setting_preset_data["Tournament4Settings"]["goron_eu"] = 0
 setting_preset_data["Tournament4Settings"]["figurine_option"] = 0
 setting_preset_data["Tournament4Settings"]["progressiveitems"] = true
