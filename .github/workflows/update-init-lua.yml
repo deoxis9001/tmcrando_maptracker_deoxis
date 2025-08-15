@@ -57,7 +57,7 @@ jobs:
             sed -i 's/^VERSION_BETA = false/VERSION_BETA = true/' "$FILE"
             sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
 
-          eliif [[ "$BRANCH" == "rework-lua" ]]; then
+          elif [[ "$BRANCH" == "rework-lua" ]]; then
             echo "Applying Beta rules..."
             sed -i 's/^VERSION_BETA = false/VERSION_BETA = true/' "$FILE"
             sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
