@@ -22,7 +22,7 @@ SLOTS_DATA_MAPPING = {
     ["cucco_rounds"]   =   {"cucco_none","INT",{0,10}},
 
     ["goron_sets"]     =   {"goron_none","INT",{0,5}},
-    ["goron_jp_prices"] = {"dungeonser_off","OPT",{0,1}},
+    ["goron_jp_prices"] = {"goron_eu","OPT",{0,1}},
 
     ["shuffle_heart_pieces"]   =   {"hp_vanilla","OPT",{0,1}},
     ["shuffle_rupees"]   =    {"rupees_off","OPT",{0,1}},
