@@ -458,13 +458,13 @@ end
 function LonLon_GoronQuest_Fuser1()
 	if
 		(FusionsBlueNumber("blueS") == 1 and function_Cached("GoronCave") == 1 and
-			(function_Cached("CanDestroyTrees") == 1 or has("ocarina")))
+			(function_Cached("CanDestroyTrees") == 1 or function_Cached("LakeWindCrest")==1 or function_Cached("MinishWindCrest")==1))
 	 then
 		return 1
 	elseif
 		((FusionsBlueNumber("blueS") == 1 or FusionsBlueNumber("blueS") == 2) and
 			(function_Cached("GoronCave") == 1 or function_Cached("GoronCave") == 2) and
-			((function_Cached("CanDestroyTrees") == 1 or function_Cached("CanDestroyTrees") == 2) or has("ocarina")))
+			((function_Cached("CanDestroyTrees") == 1 or function_Cached("CanDestroyTrees") == 2) or function_Cached("LakeWindCrest")==1 or function_Cached("MinishWindCrest")==1 ))
 	 then
 		return 2
 	else

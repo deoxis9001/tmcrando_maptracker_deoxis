@@ -465,98 +465,171 @@ function Json_Town_BakeryAttic_Chest()
     return AccessibilityLevel.None
   end
 end
-
-function Json_Town_GoronShop_Set1_Item2()
-  if function_Cached("Town_GoronShop_Set1_Item2") == 1 then
+function Json_Town_GoronShop_Set1_Item_Left()
+  if function_Cached("Town_GoronShop_Set1_Item_Left") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set1_Item2") == 1 then
+  elseif function_Cached("Town_GoronShop_Set1_Item_Left") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set1_Item_Left") == 3 then
+    return AccessibilityLevel.Inspect
+  else
+    return AccessibilityLevel.None
+  end
+end
+function Json_Town_GoronShop_Set1_Item_Center()
+  if function_Cached("Town_GoronShop_Set1_Item_Center") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set1_Item2") == 1 then
+  elseif function_Cached("Town_GoronShop_Set1_Item_Center") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set1_Item_Center") == 3 then
+    return AccessibilityLevel.Inspect
+  else
+    return AccessibilityLevel.None
+  end
+end
+function Json_Town_GoronShop_Set1_Item_Right()
+  if function_Cached("Town_GoronShop_Set1_Item_Right") == 1 then
     return AccessibilityLevel.Normal
+  elseif function_Cached("Town_GoronShop_Set1_Item_Right") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set1_Item_Right") == 3 then
+    return AccessibilityLevel.Inspect
   else
     return AccessibilityLevel.None
   end
 end
 
-function Json_Town_GoronShop_Set1_Item1()
-  if function_Cached("Town_GoronShop_Set1_Item1") == 1 then
+function Json_Town_GoronShop_Set2_Item_Left()
+  if function_Cached("Town_GoronShop_Set2_Item_Left") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set1_Item1") == 1 then
+  elseif function_Cached("Town_GoronShop_Set2_Item_Left") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set2_Item_Left") == 3 then
+    return AccessibilityLevel.Inspect
+  else
+    return AccessibilityLevel.None
+  end
+end
+function Json_Town_GoronShop_Set2_Item_Center()
+  if function_Cached("Town_GoronShop_Set2_Item_Center") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set1_Item1") == 1 then
+  elseif function_Cached("Town_GoronShop_Set2_Item_Center") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set2_Item_Center") == 3 then
+    return AccessibilityLevel.Inspect
+  else
+    return AccessibilityLevel.None
+  end
+end
+function Json_Town_GoronShop_Set2_Item_Right()
+  if function_Cached("Town_GoronShop_Set2_Item_Right") == 1 then
     return AccessibilityLevel.Normal
+  elseif function_Cached("Town_GoronShop_Set2_Item_Right") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set2_Item_Right") == 3 then
+    return AccessibilityLevel.Inspect
   else
     return AccessibilityLevel.None
   end
 end
 
-function Json_Town_GoronShop_Set2_Items()
-  if function_Cached("Town_GoronShop_Set2_Items") == 1 then
+function Json_Town_GoronShop_Set3_Item_Left()
+  if function_Cached("Town_GoronShop_Set3_Item_Left") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set2_Items") == 1 then
+  elseif function_Cached("Town_GoronShop_Set3_Item_Left") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set3_Item_Left") == 3 then
+    return AccessibilityLevel.Inspect
+  else
+    return AccessibilityLevel.None
+  end
+end
+function Json_Town_GoronShop_Set3_Item_Center()
+  if function_Cached("Town_GoronShop_Set3_Item_Center") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set2_Items") == 1 then
+  elseif function_Cached("Town_GoronShop_Set3_Item_Center") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set3_Item_Center") == 3 then
+    return AccessibilityLevel.Inspect
+  else
+    return AccessibilityLevel.None
+  end
+end
+function Json_Town_GoronShop_Set3_Item_Right()
+  if function_Cached("Town_GoronShop_Set3_Item_Right") == 1 then
     return AccessibilityLevel.Normal
+  elseif function_Cached("Town_GoronShop_Set3_Item_Right") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set3_Item_Right") == 3 then
+    return AccessibilityLevel.Inspect
   else
     return AccessibilityLevel.None
   end
 end
 
-function Json_Town_GoronShop_Set3_Item1()
-  if function_Cached("Town_GoronShop_Set3_Item1") == 1 then
+function Json_Town_GoronShop_Set4_Item_Left()
+  if function_Cached("Town_GoronShop_Set4_Item_Left") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set3_Item1") == 1 then
+  elseif function_Cached("Town_GoronShop_Set4_Item_Left") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set4_Item_Left") == 3 then
+    return AccessibilityLevel.Inspect
+  else
+    return AccessibilityLevel.None
+  end
+end
+function Json_Town_GoronShop_Set4_Item_Center()
+  if function_Cached("Town_GoronShop_Set4_Item_Center") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set3_Item1") == 1 then
+  elseif function_Cached("Town_GoronShop_Set4_Item_Center") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set4_Item_Center") == 3 then
+    return AccessibilityLevel.Inspect
+  else
+    return AccessibilityLevel.None
+  end
+end
+function Json_Town_GoronShop_Set4_Item_Right()
+  if function_Cached("Town_GoronShop_Set4_Item_Right") == 1 then
     return AccessibilityLevel.Normal
+  elseif function_Cached("Town_GoronShop_Set4_Item_Right") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set4_Item_Right") == 3 then
+    return AccessibilityLevel.Inspect
   else
     return AccessibilityLevel.None
   end
 end
 
-function Json_Town_GoronShop_Set3_Items()
-  if function_Cached("Town_GoronShop_Set3_Items") == 1 then
+function Json_Town_GoronShop_Set5_Item_Left()
+  if function_Cached("Town_GoronShop_Set5_Item_Left") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set3_Items") == 1 then
-    return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set3_Items") == 1 then
-    return AccessibilityLevel.Normal
+  elseif function_Cached("Town_GoronShop_Set5_Item_Left") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set5_Item_Left") == 3 then
+    return AccessibilityLevel.Inspect
   else
     return AccessibilityLevel.None
   end
 end
-
-function Json_Town_GoronShop_Set4_Items()
-  if function_Cached("Town_GoronShop_Set4_Items") == 1 then
+function Json_Town_GoronShop_Set5_Item_Center()
+  if function_Cached("Town_GoronShop_Set5_Item_Center") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set4_Items") == 1 then
-    return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set4_Items") == 1 then
-    return AccessibilityLevel.Normal
+  elseif function_Cached("Town_GoronShop_Set5_Item_Center") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set5_Item_Center") == 3 then
+    return AccessibilityLevel.Inspect
   else
     return AccessibilityLevel.None
   end
 end
-
-function Json_Town_GoronShop_Set5_Item1()
-  if function_Cached("Town_GoronShop_Set5_Item1") == 1 then
+function Json_Town_GoronShop_Set5_Item_Right()
+  if function_Cached("Town_GoronShop_Set5_Item_Right") == 1 then
     return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set5_Item1") == 1 then
-    return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set5_Item1") == 1 then
-    return AccessibilityLevel.Normal
-  else
-    return AccessibilityLevel.None
-  end
-end
-
-function Json_Town_GoronShop_Set5_Items()
-  if function_Cached("Town_GoronShop_Set5_Items") == 1 then
-    return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set5_Items") == 1 then
-    return AccessibilityLevel.Normal
-  elseif function_Cached("Town_GoronShop_Set5_Items") == 1 then
-    return AccessibilityLevel.Normal
+  elseif function_Cached("Town_GoronShop_Set5_Item_Right") == 2 then
+    return AccessibilityLevel.SequenceBreak
+  elseif function_Cached("Town_GoronShop_Set5_Item_Right") == 3 then
+    return AccessibilityLevel.Inspect
   else
     return AccessibilityLevel.None
   end

@@ -103,7 +103,7 @@
         "name": "First Rollobite Room Chest",
         "item_count": 1,
         "access_rules": [
-          "$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"
+          "^$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
