@@ -69,82 +69,150 @@ end
 function Town_Well_RightChest() 
 	return 1
 end
-function Town_GoronShop_Set1_Item2() 
-	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set1_Item1")==1 and has("wallet") ) then
-		return 1
-	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set1_Item1")==1 and has("wallet") ) then
-		return 1
-	else
-		return 0
-	end 
-end
 
-function Town_GoronShop_Set1_Item1() 
+function Town_GoronShop_Set1_Item_Right() 
 	if ( has("fusionblue_complet") or ( has("fusionblue_vanilla") and has("fusions33") ) ) then
 		return 1
 	else
 		return 0
 	end 
 end
-
-function Town_GoronShop_Set2_Items()
-	if function_Cached("Town_GoronShop_Set1_Item1")==1 and has("goron_eu") and has("wallet") then
+function Town_GoronShop_Set1_Item_Center() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set1_Item_Right")==1 ) then
 		return 1
-	elseif function_Cached("Town_GoronShop_Set1_Item1")==1 and has("goron_jp") and has("wallet") then
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set1_Item_Right")==1 and has("wallet") ) then
 		return 1
 	else
 		return 0
-	end
+	end 
 end
 
-function Town_GoronShop_Set3_Item1()
-	if function_Cached("Town_GoronShop_Set2_Items")==1 and has("goron_eu") and has("wallet2") then
+function Town_GoronShop_Set1_Item_Left() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set1_Item_Center")==1 and has("wallet") ) then
 		return 1
-	elseif function_Cached("Town_GoronShop_Set2_Items")==1 and has("goron_jp") and has("wallet") then
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set1_Item_Center")==1 and has("wallet") ) then
 		return 1
 	else
 		return 0
-	end
+	end 
 end
 
-function Town_GoronShop_Set3_Items()
-	if function_Cached("Town_GoronShop_Set2_Items")==1 and has("goron_eu") and has("wallet") then
+function Town_GoronShop_Set2_Item_Right() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set1_Item_Left")==1 ) then
 		return 1
-	elseif function_Cached("Town_GoronShop_Set2_Items")==1 and has("goron_jp") and has("wallet") then
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set1_Item_Left")==1 ) then
 		return 1
 	else
 		return 0
-	end
+	end 
+end
+function Town_GoronShop_Set2_Item_Center() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set2_Item_Right")==1 and has("wallet") ) then
+		return 1
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set2_Item_Right")==1 and has("wallet") ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
-function Town_GoronShop_Set4_Items()
-	if function_Cached("Town_GoronShop_Set3_Items")==1 and has("goron_eu") and has("wallet2") then
+function Town_GoronShop_Set2_Item_Left() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set2_Item_Center")==1 and has("wallet") ) then
 		return 1
-	elseif function_Cached("Town_GoronShop_Set3_Items")==1 and has("goron_jp") and has("wallet") then
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set2_Item_Center")==1 and has("wallet") ) then
 		return 1
 	else
 		return 0
-	end
+	end 
 end
 
-function Town_GoronShop_Set5_Item1()
-	if function_Cached("Town_GoronShop_Set4_Items")==1 and has("goron_eu") and has("wallet3") then
+
+function Town_GoronShop_Set3_Item_Right() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set2_Item_Left")==1 and has("wallet") ) then
 		return 1
-	elseif function_Cached("Town_GoronShop_Set4_Items")==1 and has("goron_jp") and has("wallet") then
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set2_Item_Left")==1 ) then
 		return 1
 	else
 		return 0
-	end
+	end 
+end
+function Town_GoronShop_Set3_Item_Center() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set3_Item_Right")==1 and has("wallet") ) then
+		return 1
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set3_Item_Right")==1 and has("wallet") ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
-function Town_GoronShop_Set5_Items()
-	if function_Cached("Town_GoronShop_Set4_Items")==1 and has("goron_eu") and has("wallet2") then
+function Town_GoronShop_Set3_Item_Left() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set3_Item_Center")==1 and has("wallet2") ) then
 		return 1
-	elseif function_Cached("Town_GoronShop_Set4_Items")==1 and has("goron_jp") and has("wallet") then
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set3_Item_Center")==1 and has("wallet") ) then
 		return 1
 	else
 		return 0
-	end
+	end 
+end
+
+
+function Town_GoronShop_Set4_Item_Right() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set3_Item_Left")==1 and has("wallet") ) then
+		return 1
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set3_Item_Left")==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Town_GoronShop_Set4_Item_Center() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set4_Item_Right")==1 and has("wallet2") ) then
+		return 1
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set4_Item_Right")==1 and has("wallet") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Town_GoronShop_Set4_Item_Left() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set4_Item_Center")==1 and has("wallet2") ) then
+		return 1
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set4_Item_Center")==1 and has("wallet") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Town_GoronShop_Set5_Item_Right() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set4_Item_Left")==1 and has("wallet2") ) then
+		return 1
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set4_Item_Left")==1 ) then
+		return 1
+	else
+		return 0
+	end 
+end
+function Town_GoronShop_Set5_Item_Center() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set5_Item_Right")==1 and has("wallet2") ) then
+		return 1
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set5_Item_Right")==1 and has("wallet") ) then
+		return 1
+	else
+		return 0
+	end 
+end
+
+function Town_GoronShop_Set5_Item_Left() 
+	if ( has("goron_eu") and function_Cached("Town_GoronShop_Set5_Item_Center")==1 and has("wallet3") ) then
+		return 1
+	elseif ( has("goron_jp") and function_Cached("Town_GoronShop_Set5_Item_Center")==1 and has("wallet") ) then
+		return 1
+	else
+		return 0
+	end 
 end
 
 function Town_Dojo_NPC1() 
