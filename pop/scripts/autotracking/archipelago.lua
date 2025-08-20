@@ -3,6 +3,16 @@ ScriptHost:LoadScript(ScriptAutotracking.."location_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."room_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."events_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."slots_data_mapping.lua")
+HINT_STATUS_MAPPING = {}
+if Highlight then
+	HINT_STATUS_MAPPING = {
+		[0] = Highlight.Unspecified,
+		[10] = Highlight.NoPriority,
+		[20] = Highlight.Avoid,
+		[30] = Highlight.Priority,
+		[40] = Highlight.None,
+	}
+end
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -511,6 +521,8 @@ function onClear(slot_data)
 				Archipelago:Get({ITEMS_ID[event_name[1]]})
 			end
 		end
+        Archipelago:SetNotify({getHintDataStorageKey()})
+        Archipelago:Get({getHintDataStorageKey()})
         updateMap(0, true)
         ROOM_ID = "tmc_room_"..TEAM_NUMBER.."_"..PLAYER_ID
         Archipelago:SetNotify({ROOM_ID})
@@ -671,6 +683,8 @@ function onNotify(k, v, old_value)
 			updateMap(v, false)
 		elseif k == CLIENTSTATUS then
 			updateStatus(_, v)
+		elseif k == getHintDataStorageKey() then
+			onHintsUpdate(v)
 		else
 			for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
 				if 	ITEMS_ID[event_name[1]] == k then
@@ -694,10 +708,14 @@ function onNotifyLaunch(k, v)
 		print(string.format("[EVENT][INFO] k - %s", k))
 		print(string.format("[EVENT][INFO] v - %s", v))
 	end
+	
+	
 	if k == ROOM_ID then
         updateMap(v, false)
     elseif k == CLIENTSTATUS then
         updateStatus(_, v)
+	elseif k == getHintDataStorageKey() then
+		onHintsUpdate(v)
 	else
 		for _, event_name in pairs(EVENTS_FLAG_MAPPING) do
 			if 	ITEMS_ID[event_name[1]] == k then
@@ -746,6 +764,16 @@ function updateEvents(key, value, reset)
 			end
 		end
 	end
+end
+
+function getHintDataStorageKey()
+	if AutoTracker:GetConnectionState("AP") ~= 3 or Archipelago.TeamNumber == nil or Archipelago.TeamNumber == -1 or Archipelago.PlayerNumber == nil or Archipelago.PlayerNumber == -1 then
+		if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+			print("Tried to call getHintDataStorageKey while not connect to AP server")
+		end
+		return nil
+	end
+	return string.format("_read_hints_%s_%s", Archipelago.TeamNumber, Archipelago.PlayerNumber)
 end
 
 function updateStatus(_, v)
@@ -868,6 +896,86 @@ function updateMap(v, reset)
 	end
 end
 
+
+function onHintsUpdate(hints)
+	-- Highlight is only supported since version 0.32.0
+	if PopVersion < "0.32.0" or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+		return
+	end
+	local player_number = Archipelago.PlayerNumber
+	-- get all new highlight values per section
+	local sections_to_update = {}
+	for _, hint in ipairs(hints) do
+		-- we only care about hints in our world
+		if hint.finding_player == player_number then
+			updateHint(hint, sections_to_update)
+		end
+	end
+	-- update the sections
+	for location_code, highlight_code in pairs(sections_to_update) do
+		-- find the location object
+		local obj = Tracker:FindObjectForCode(location_code)
+		-- check if we got the location and if it supports Highlight
+		if obj and obj.Highlight then
+			obj.Highlight = highlight_code
+		end
+	end
+end
+
+function updateHint(hint, sections_to_update)
+	-- get the highlight enum value for the hint status
+	local hint_status = hint.status
+	local highlight_code = nil
+	if hint_status then
+		highlight_code = HINT_STATUS_MAPPING[hint_status]
+		print("-----------------------------------------")
+		print(string.format("highlight_code: %s", highlight_code))
+		print("-----------------------------------------")
+	end
+	if not highlight_code then
+		if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+			print(string.format("updateHint: unknown hint status %s for hint on location id %s", hint.status,
+				hint.location))
+		end
+		-- try to "recover" by checking hint.found (older AP versions without hint.status)
+		if hint.found == true then
+			highlight_code = Highlight.None
+		elseif hint.found == false then
+			highlight_code = Highlight.Unspecified
+		else
+			return
+		end
+	end
+	-- get the location mapping for the location id
+	local mapping_entry = LOCATION_MAPPING[hint.location]
+	if not mapping_entry then
+		if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+			print(string.format("updateHint: could not find location mapping for id %s", hint.location))
+		end
+		return
+	end
+	--get the "highest" highlight value pre section
+	for _, location_table in pairs(mapping_entry) do
+		if location_table then
+			local location_code = location_table[1]
+			-- skip hosted items, they don't support Highlight
+			if location_code and location_code:sub(1, 1) == "@" then
+				-- see if we already set a Highlight for this section
+				local existing_highlight_code = sections_to_update[location_code]
+				if existing_highlight_code then
+					-- make sure we only replace None or "increase" the highlight but never overwrite with None
+					-- this so sections with mulitple mapped locations show the "highest" Highlight and
+					-- only show no Highlight when all hints are found
+					if existing_highlight_code == Highlight.None or (existing_highlight_code < highlight_code and highlight_code ~= Highlight.None) then
+						sections_to_update[location_code] = highlight_code
+					end
+				else
+					sections_to_update[location_code] = highlight_code
+				end
+			end
+		end
+	end
+end
 
 
 
