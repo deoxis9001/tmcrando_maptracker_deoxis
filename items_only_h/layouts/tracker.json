@@ -9,7 +9,7 @@
 			["shield","mittsandfly","lamp","bombsremote","clouds","dogbottle","water","dws_bigkey","cof_bigkey","fow_bigkey","tod_bigkey","","pow_bigkey","dhc_bigkey"],
 			["boots","cape","ocarina","bowandfly","falls","quiver","wind","dws_map","cof_map","fow_map","tod_map","","pow_map","dhc_map"],
 			["flippersandfly","ringandbracelets","carlovtingle","nutandshroom","bothkeys","books","figurine","dws_compass","cof_compass","fow_compass","tod_compass","","pow_compass","dhc_compass"],
-			["spinattack","fastspin","fastsplit","greatspin","longspin","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack","sevenscrolls","gomode",""],
+			["spinattack","fastspin","fastsplit","greatspin","longspin","perilbeam","swordbeam","rockbreaker","dashattack","downthrust","rollattack","sevenscrolls","gomode",""]
 		]
     },
     "tracker_capture_item": {
@@ -21,8 +21,6 @@
     },
     "tracker_default": {
         "type": "container",
-        //"width": 270,
-        //"height": 250,
         "background": "#212121",
         "content": {
             "dropshadow": true,
