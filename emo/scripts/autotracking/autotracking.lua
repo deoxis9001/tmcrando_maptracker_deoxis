@@ -1581,7 +1581,7 @@ function updateSmallKeys(segment, code, address)
 		end
 		RC_KEY_COUNT = ReadU8(segment, address)
 		if item2.CurrentStage < 3 then
-			item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED + DHC_KEY_USED + POW_KEY_USED + TOD_KEY_USED + FOW_KEY_USED + COF_KEY_USED + DWS_KEY_USED
+			item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED
 		end
 	elseif code == "ud_smallkey" and item2.CurrentStage == 3 then	
 		UD_KEY_COUNT = ReadU8(segment, address)

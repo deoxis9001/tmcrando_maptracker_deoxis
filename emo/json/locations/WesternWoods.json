@@ -98,7 +98,7 @@
         "name": "Buried Treasure",
         "item_count": 6,
         "access_rules": [
-          "$Json_WesternWoods_SouthDigging_BuriedTreasure"
+          "$Json_WesternWoods_NorthDigging_BuriedTreasure"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"

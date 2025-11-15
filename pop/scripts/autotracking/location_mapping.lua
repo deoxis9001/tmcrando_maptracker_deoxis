@@ -421,7 +421,7 @@ LOCATION_MAPPING = {
     [6029398] = {{"@DeepWoods/Madderpillar Heart Piece"},{"@Deepwoods - Madderpillar Heart Piece/Heart Piece"}},
     [6029399] = {{"@DeepWoods/Basement Big Chest"},{"@Deepwoods - Basement Big Chest/Big Chest"}},
     [6029400] = {{"@DeepWoods/Green Chu"},{"@Deepwoods - Green Chu/Heart"}},
-    [6029401] = {{"dws","toggle"}},
+    [6029401] = {{"@DeepWoods/Reward","toggle"},{"dws","toggle"}},
 
     [6029402] = {{"@Cave Of Flame/Spiny Beetle Fight"},{"@Cave Of Flame - Spiny Beetle Fight/Kill"}},
     [6029403] = {{"@Cave Of Flame/Rupees"},{"@Cave Of Flame - Rupees/Rupees"}},
@@ -443,7 +443,7 @@ LOCATION_MAPPING = {
     [6029419] = {{"@Cave Of Flame/Lava Basement (Left,Right)"},{"@Cave Of Flame - Lava Basement Left/Chest"}},
     [6029420] = {{"@Cave Of Flame/Lava Basement Big Chest"},{"@Cave Of Flame - Lava Basement Big Chest/Big Chest"}},
     [6029421] = {{"@Cave Of Flame/Gleerok"},{"@Cave Of Flame - Gleerok/Heart"}},
-    [6029422] = {{"cof","toggle"}},
+    [6029422] = {{"@Cave Of Flame/Reward","toggle"},{"cof","toggle"}},
     [6029423] = {{"@Crenel - Mines/Melari"},{"@Crenel - Mines - Melari/Gift"}},
 
     [6029424] = {{"@Fortress/Entrance Far Left"},{"@Fortress - Far Left Entrance Room/Chest"}},
@@ -496,7 +496,7 @@ LOCATION_MAPPING = {
     [6029471] = {{"@Fortress/Right Side Moldorm Bottom Pot"},{"@Fortress - Right Side Left Moldorm Pot/Drop"}},
     [6029472] = {{"@Fortress/Skull Room Chest"},{"@Fortress - Skull Room/Big Chest"}},
     [6029473] = {{"@Fortress/Mazaal"},{"@Fortress - Mazaal/Heart"}},
-    [6029474] = {{"@Fortress/FOW Reward"},{"fow","toggle"}},
+    [6029474] = {{"@Fortress/Reward"},{"fow","toggle"}},
 
     [6029475] = {{"@Droplet/First Ice Block"},{"@Droplet - First Ice Block/Ice Block"}},
     [6029476] = {{"@Droplet/Locked Ice Block"},{"@Droplet - Key Locked Ice Block/Ice Block"}},
@@ -539,7 +539,7 @@ LOCATION_MAPPING = {
     [6029513] = {{"@Droplet/Right Path Rupees"},{"@Droplet - Right Path/Rupees"}},
     [6029514] = {{"@Droplet/Right Path Rupees Grabbable"},{"@Droplet - Right Path/Rupees Grabbable"}},
     [6029515] = {{"@Droplet/Octo"},{"@Droplet - Octo/Heart"}},
-    [6029516] = {{"tod","toggle"}},
+    [6029516] = {{"@Droplet/Reward","toggle"},{"tod","toggle"}},
 
     [6029517] = {{"@Palace/Firebar Grate"},{"@Palace - Firebar Grate/Chest"}},
     [6029518] = {{"@Palace/Wizzrobe Platform Fight"},{"@Palace - Wizzrobe Platform Fight/Kill"}},
@@ -564,7 +564,7 @@ LOCATION_MAPPING = {
     [6029537] = {{"@Palace/Block Maze Room"},{"@Palace - Block Maze Room/Chest"}},
     [6029538] = {{"@Palace/Block Maze Detour"},{"@Palace - Block Maze Room Detour/Chest"}},
     [6029539] = {{"@Palace/Gyorg"},{"@Palace - Gyorg/Heart"}},
-    [6029540] = {{"pow","toggle"}},
+    [6029540] = {{"@Palace/Reward","toggle"},{"pow","toggle"}},
 
     [6029541] = {{"@DHC/Pedestal Two Elements"},{"@Dark Hyrule Castle - Pedestal Items/Two Elements"}},
     [6029542] = {{"@DHC/Pedestal Three Elements"},{"@Dark Hyrule Castle - Pedestal Items/Three Elements"}},

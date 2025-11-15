@@ -24,7 +24,7 @@
       {
         "name": "Rupees",
         "visibility_rules": [
-          "rupees_on"
+          "$has|rupees_on"
         ],
         "item_count": 16,
         "access_rules": [
