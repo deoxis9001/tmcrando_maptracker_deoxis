@@ -7,7 +7,6 @@
         "map": "map",
         "x": 2337,
         "y": 1050,
-							 
         "restrict_visibility_rules": [
           "$has|cof_tod,$has|dungeonser_on"
         ]
@@ -16,7 +15,6 @@
         "map": "map",
         "x": 2303,
         "y": 250,
-							 
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|cof_pow,$has|dungeonser_on"
         ]
@@ -25,7 +23,6 @@
         "map": "map",
         "x": 592,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$FusionsGold,$has|cof_fow,$has|dungeonser_on"
         ]
@@ -34,7 +31,6 @@
         "map": "map",
         "x": 323,
         "y": 200,
-							 
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
           "$has|cof_cof,$has|dungeonser_on"
@@ -44,7 +40,6 @@
         "map": "map",
         "x": 827,
         "y": 150,
-							 
         "restrict_visibility_rules": [
           "$has|cof_crypt,$has|dungeonser_on"
         ]
@@ -53,7 +48,6 @@
         "map": "map",
         "x": 2282,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$has|cof_dws,$has|dungeonser_on"
         ]
@@ -62,7 +56,6 @@
         "map": "map",
         "x": 1326,
         "y": 130,
-							 
         "restrict_visibility_rules": [
           "$has|cof_dhc,$has|dungeonser_on"
         ]
@@ -214,7 +207,6 @@
         "map": "map",
         "x": 2337,
         "y": 1050,
-							 
         "restrict_visibility_rules": [
           "$has|crypt_tod,$has|dungeonser_on"
         ]
@@ -223,7 +215,6 @@
         "map": "map",
         "x": 2303,
         "y": 250,
-							 
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|crypt_pow,$has|dungeonser_on"
         ]
@@ -232,7 +223,6 @@
         "map": "map",
         "x": 592,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$FusionsGold,$has|crypt_fow,$has|dungeonser_on"
         ]
@@ -241,7 +231,6 @@
         "map": "map",
         "x": 323,
         "y": 200,
-							 
         "restrict_visibility_rules": [
           "$has|crypt_cof,$has|dungeonser_on"
         ]
@@ -250,7 +239,6 @@
         "map": "map",
         "x": 827,
         "y": 150,
-							 
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
           "$has|crypt_crypt,$has|dungeonser_on"
@@ -260,7 +248,6 @@
         "map": "map",
         "x": 2282,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$has|crypt_dws,$has|dungeonser_on"
         ]
@@ -269,7 +256,6 @@
         "map": "map",
         "x": 1326,
         "y": 130,
-							 
         "restrict_visibility_rules": [
           "$has|crypt_dhc,$has|dungeonser_on"
         ]
@@ -344,7 +330,6 @@
         "map": "map",
         "x": 2337,
         "y": 1050,
-							 
         "restrict_visibility_rules": [
           "$has|dws_tod,$has|dungeonser_on"
         ]
@@ -353,7 +338,6 @@
         "map": "map",
         "x": 2303,
         "y": 250,
-							 
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|dws_pow,$has|dungeonser_on"
         ]
@@ -362,7 +346,6 @@
         "map": "map",
         "x": 592,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$FusionsGold,$has|dws_fow,$has|dungeonser_on"
         ]
@@ -371,7 +354,6 @@
         "map": "map",
         "x": 323,
         "y": 200,
-							 
         "restrict_visibility_rules": [
           "$has|dws_cof,$has|dungeonser_on"
         ]
@@ -380,7 +362,6 @@
         "map": "map",
         "x": 827,
         "y": 150,
-							 
         "restrict_visibility_rules": [
           "$has|dws_crypt,$has|dungeonser_on"
         ]
@@ -389,7 +370,6 @@
         "map": "map",
         "x": 2282,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
           "$has|dws_dws,$has|dungeonser_on"
@@ -399,7 +379,6 @@
         "map": "map",
         "x": 1326,
         "y": 130,
-							 
         "restrict_visibility_rules": [
           "$has|dws_dhc,$has|dungeonser_on"
         ]
@@ -564,7 +543,6 @@
         "map": "map",
         "x": 2337,
         "y": 1050,
-							 
         "restrict_visibility_rules": [
           "$has|fow_tod,$has|dungeonser_on"
         ]
@@ -573,7 +551,6 @@
         "map": "map",
         "x": 2303,
         "y": 250,
-							 
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|fow_pow,$has|dungeonser_on"
         ]
@@ -582,7 +559,6 @@
         "map": "map",
         "x": 592,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$FusionsGold,$has|dungeonser_off",
           "$FusionsGold,$has|fow_fow,$has|dungeonser_on"
@@ -592,7 +568,6 @@
         "map": "map",
         "x": 323,
         "y": 200,
-							 
         "restrict_visibility_rules": [
           "$has|fow_cof,$has|dungeonser_on"
         ]
@@ -601,7 +576,6 @@
         "map": "map",
         "x": 827,
         "y": 150,
-							 
         "restrict_visibility_rules": [
           "$has|fow_crypt,$has|dungeonser_on"
         ]
@@ -610,7 +584,6 @@
         "map": "map",
         "x": 2282,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$has|fow_dws,$has|dungeonser_on"
         ]
@@ -619,7 +592,6 @@
         "map": "map",
         "x": 1326,
         "y": 130,
-							 
         "restrict_visibility_rules": [
           "$has|fow_dhc,$has|dungeonser_on"
         ]
@@ -874,7 +846,6 @@
         "map": "map",
         "x": 2337,
         "y": 2050,
-							 
         "restrict_visibility_rules": [
           "$has|pow_tod,$has|dungeonser_on"
         ]
@@ -883,7 +854,6 @@
         "map": "map",
         "x": 2303,
         "y": 250,
-							 
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|dungeonser_off",
           "$CloudTopFallVisibility,$has|pow_pow,$has|dungeonser_on"
@@ -893,7 +863,6 @@
         "map": "map",
         "x": 592,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$FusionsGold,$has|pow_fow,$has|dungeonser_on"
         ]
@@ -902,7 +871,6 @@
         "map": "map",
         "x": 323,
         "y": 200,
-							 
         "restrict_visibility_rules": [
           "$has|pow_cof,$has|dungeonser_on"
         ]
@@ -911,7 +879,6 @@
         "map": "map",
         "x": 827,
         "y": 150,
-							 
         "restrict_visibility_rules": [
           "$has|pow_crypt,$has|dungeonser_on"
         ]
@@ -920,7 +887,6 @@
         "map": "map",
         "x": 2282,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$has|pow_dws,$has|dungeonser_on"
         ]
@@ -929,7 +895,6 @@
         "map": "map",
         "x": 1326,
         "y": 130,
-							 
         "restrict_visibility_rules": [
           "$has|pow_dhc,$has|dungeonser_on"
         ]
@@ -1134,7 +1099,6 @@
         "map": "map",
         "x": 2337,
         "y": 1050,
-							 
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
           "$has|tod_tod,$has|dungeonser_on"
@@ -1144,7 +1108,6 @@
         "map": "map",
         "x": 2303,
         "y": 250,
-							 
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|tod_pow,$has|dungeonser_on"
         ]
@@ -1153,7 +1116,6 @@
         "map": "map",
         "x": 592,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$FusionsGold,$has|tod_fow,$has|dungeonser_on"
         ]
@@ -1162,7 +1124,6 @@
         "map": "map",
         "x": 323,
         "y": 200,
-							 
         "restrict_visibility_rules": [
           "$has|tod_cof,$has|dungeonser_on"
         ]
@@ -1171,7 +1132,6 @@
         "map": "map",
         "x": 827,
         "y": 150,
-							 
         "restrict_visibility_rules": [
           "$has|tod_crypt,$has|dungeonser_on"
         ]
@@ -1180,7 +1140,6 @@
         "map": "map",
         "x": 2282,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$has|tod_dws,$has|dungeonser_on"
         ]
@@ -1189,7 +1148,6 @@
         "map": "map",
         "x": 1326,
         "y": 130,
-							 
         "restrict_visibility_rules": [
           "$has|tod_dhc,$has|dungeonser_on"
         ]
@@ -1449,7 +1407,6 @@
         "map": "map",
         "x": 2337,
         "y": 1050,
-							 
         "restrict_visibility_rules": [
           "$has|dhc_tod,$has|dungeonser_on"
         ]
@@ -1458,7 +1415,6 @@
         "map": "map",
         "x": 2303,
         "y": 250,
-							 
         "restrict_visibility_rules": [
           "$has|dhc_pow,$has|dungeonser_on"
         ]
@@ -1467,7 +1423,6 @@
         "map": "map",
         "x": 592,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$FusionsGold,$has|dhc_fow,$has|dungeonser_on"
         ]
@@ -1476,7 +1431,6 @@
         "map": "map",
         "x": 323,
         "y": 200,
-							 
         "restrict_visibility_rules": [
           "$has|dhc_cof,$has|dungeonser_on"
         ]
@@ -1485,7 +1439,6 @@
         "map": "map",
         "x": 827,
         "y": 150,
-							 
         "restrict_visibility_rules": [
           "$has|dhc_crypt,$has|dungeonser_on"
         ]
@@ -1494,7 +1447,6 @@
         "map": "map",
         "x": 2282,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$has|dhc_dws,$has|dungeonser_on"
         ]
@@ -1503,7 +1455,6 @@
         "map": "map",
         "x": 1326,
         "y": 130,
-							 
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
           "$has|dhc_dhc,$has|dungeonser_on"
@@ -1580,7 +1531,6 @@
           "$has|dhc_open",
           "$has|dhc_closed",
           "$has|dhc_open_fast"
-							  
         ],
         "item_count": 1,
         "access_rules": [
@@ -1710,7 +1660,6 @@
         "map": "map",
         "x": 1326,
         "y": 130,
-							 
         "force_invisibility_rules": [
           "$has|dungeonser_off",
           "$has|dws_dhc",
@@ -1754,7 +1703,6 @@
         "map": "map",
         "x": 2337,
         "y": 1050,
-							 
         "force_invisibility_rules": [
           "$has|dungeonser_off",
           "$has|dws_tod",
@@ -1798,7 +1746,6 @@
         "map": "map",
         "x": 2303,
         "y": 250,
-							 
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ],
@@ -1845,7 +1792,6 @@
         "map": "map",
         "x": 592,
         "y": 1800,
-							 
         "restrict_visibility_rules": [
           "$FusionsGold"
         ],
@@ -1892,7 +1838,6 @@
         "map": "map",
         "x": 323,
         "y": 200,
-							 
         "force_invisibility_rules": [
           "$has|dungeonser_off",
           "$has|dws_cof",
@@ -1936,7 +1881,6 @@
         "map": "map",
         "x": 827,
         "y": 150,
-							 
         "force_invisibility_rules": [
           "$has|dungeonser_off",
           "$has|dws_crypt",
@@ -1980,7 +1924,6 @@
         "map": "map",
         "x": 2282,
         "y": 1800,
-							 
         "force_invisibility_rules": [
           "$has|dungeonser_off",
           "$has|dws_dws",
