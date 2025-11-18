@@ -845,7 +845,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 2050,
+        "y": 1050,
         "restrict_visibility_rules": [
           "$has|pow_tod,$has|dungeonser_on"
         ]
