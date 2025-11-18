@@ -1794,8 +1794,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", right)
 	elseif count > 0 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", 0)
@@ -1816,8 +1816,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", right)
 	elseif count > 1 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", 0)
@@ -1838,8 +1838,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", right)
 	elseif count > 2 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", 0)
@@ -1860,8 +1860,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", right)
 	elseif count > 3 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", 0)
@@ -1882,8 +1882,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", right)
 	elseif count > 4 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", 0)
@@ -1893,6 +1893,17 @@ function UpdateGoronShop(segment)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", 1)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", 1)
 	end
+	print("---------------")
+	print("---------------")
+	print("---------------")
+	print("Left:",left)
+	print("Center:",center)
+	print("Right:",right)
+	print("---------------")
+	print("---------------")
+	print("---------------")
+
+
 end
 
 function updateItemsFromMemorySegment(segment)
