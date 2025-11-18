@@ -1893,17 +1893,6 @@ function UpdateGoronShop(segment)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", 1)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", 1)
 	end
-	print("---------------")
-	print("---------------")
-	print("---------------")
-	print("Left:",left)
-	print("Center:",center)
-	print("Right:",right)
-	print("---------------")
-	print("---------------")
-	print("---------------")
-
-
 end
 
 function updateItemsFromMemorySegment(segment)
