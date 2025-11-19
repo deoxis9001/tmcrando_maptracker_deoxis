@@ -2501,6 +2501,7 @@ function updateLocations(segment)
 	end
 
 	if AUTOTRACKER_ENABLE_FUSER_TRACKING then
+		if has("fusionred_vanilla") then
 			if fusionredcombined:getActive() then
 				updateFusionUsedFixed(
 					"redW",
@@ -2576,6 +2577,8 @@ function updateLocations(segment)
 					}
 				)
 			end
+		end
+		if has("fusionblue_vanilla") then
 			if fusionbluecombined:getActive() then
 				updateFusionUsedFixed(
 					"blueL",
@@ -2621,6 +2624,8 @@ function updateLocations(segment)
 					}
 				)
 			end
+		end
+		if has("fusiongreen_vanilla") then
 			if fusiongreencombined:getActive() then
 				updateFusionUsedFixed(
 					"greenC",
@@ -2746,6 +2751,8 @@ function updateLocations(segment)
 					}
 				)
 			end
+		end
+		if has("fusionred_vanilla") then
 			updateFusion("RedW", segment, "fusions0a", 0x2002c82, 0x04)
 			updateFusion("RedW", segment, "fusions0b", 0x2002c82, 0x08)
 			updateFusion("RedW", segment, "fusions0c", 0x2002c82, 0x10)
@@ -2772,7 +2779,8 @@ function updateLocations(segment)
 			updateFusion("RedE", segment, "fusions1f", 0x2002c84, 0x80)
 			updateFusion("RedE", segment, "fusions20", 0x2002c85, 0x01)
 			updateFusion("RedE", segment, "fusions21", 0x2002c85, 0x02)
-			
+		end
+		if has("fusionblue_vanilla") then
 			updateFusion("BlueL", segment, "fusions22", 0x2002c85, 0x04)
 			updateFusion("BlueL", segment, "fusions23", 0x2002c85, 0x08)
 			updateFusion("BlueL", segment, "fusions24", 0x2002c85, 0x10)
@@ -2786,7 +2794,8 @@ function updateLocations(segment)
 			updateFusion("BlueS", segment, "fusions31", 0x2002c87, 0x02)
 			updateFusion("BlueS", segment, "fusions32", 0x2002c87, 0x04)
 			updateFusion("BlueS", segment, "fusions33", 0x2002c87, 0x08)
-			
+		end
+		if has("fusiongreen_vanilla") then			
 			updateFusion("GreenC", segment, "fusions34", 0x2002c87, 0x10)
 			updateFusion("GreenC", segment, "fusions35", 0x2002c87, 0x20)
 			updateFusion("GreenC", segment, "fusions36", 0x2002c87, 0x40)
@@ -2838,6 +2847,7 @@ function updateLocations(segment)
 			updateFusion("GreenP", segment, "fusions5e", 0x2002c8c, 0x40)
 			updateFusion("GreenP", segment, "fusions61", 0x2002c8d, 0x02)
 			updateFusion("GreenP", segment, "fusions64", 0x2002c8d, 0x10)
+		end
 	end
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		-- if has("golden_enemy_on") then
