@@ -2235,8 +2235,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", right)
 	elseif count > 0 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", 0)
@@ -2257,8 +2257,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", right)
 	elseif count > 1 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", 0)
@@ -2279,8 +2279,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", right)
 	elseif count > 2 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", 0)
@@ -2301,8 +2301,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", right)
 	elseif count > 3 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", 0)
@@ -2323,8 +2323,8 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", Center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", Right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", right)
 	elseif count > 4 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", 0)
@@ -3318,8 +3318,8 @@ function updateLocations(segment)
 			{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
 		)
 		updateDecreaseCountDungeons(segment, "COF_ENTER", "@Cave Of Flame/Big Chest Room", {{0x2002d59, 0x02}, {0x2002d59, 0x04}})
-		updateSectionFlag(segment, "@Cave Of Flame/First Rollobite Room Chest", 0x2002d58, 0x80)
-		updateSectionFlag(segment, "@Cave Of Flame/First Rollobite Room Pillar", 0x2002d58, 0x40)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/First Rollobite Room Chest", 0x2002d58, 0x80)
+		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/First Rollobite Room Pillar", 0x2002d58, 0x40)
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Bombable Wall Heart Piece", 0x2002d5b, 0x10)
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Spiny Chu Fight", 0x2002d57, 0x02)
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Spiny Chu Pillar Chest", 0x2002d57, 0x01)
@@ -3667,7 +3667,7 @@ function crest(segment)
 	updateToggleFlagSettings(segment, "OCARINA", "crenelwindcrest_no", 0x2002a83, 0x01)
 	updateToggleFlagSettings(segment, "OCARINA", "fallswindcrest_no", 0x2002a83, 0x02)
 	updateToggleFlagSettings(segment, "OCARINA", "cloudwindcrest_no", 0x2002a83, 0x04)
---	updateToggleFlagSettings(segment, "OCARINA", "townwindcrest_no", 0x2002a83, 0x08) - no used
+--	updateToggleFlagSettings(segment, "OCARINA", "townwindcrest_no", 0x2002a83, 0x08) -- no used
 	updateToggleFlagSettings(segment, "OCARINA", "lakewindcrest_no", 0x2002a83, 0x10)
 	updateToggleFlagSettings(segment, "OCARINA", "swampwindcrest_no", 0x2002a83, 0x20)
 	updateToggleFlagSettings(segment, "OCARINA", "shfwindcrest_no", 0x2002a83, 0x30)
@@ -3694,38 +3694,38 @@ function UpdateWallLocation(segment)
 end
 
 function UPDATE(code)
-	--items_codes_autotracking_cache
-	print(string.format("[MAP][INFO] code - %s", code))
+	-- items_codes_autotracking_cache
+	-- print(string.format("[MAP][INFO] code - %s", code))
 	if items_codes_autotracking_cache[code] then
 		if items_codes_autotracking_cache[code]["COUNT"] then
 			for k, v in pairs(items_codes_autotracking_cache[code]["COUNT"]) do
 				
-				print(string.format("[MAP][INFO] k - %s", k))
-				print(string.format("[MAP][INFO] v - %s", v))
+				-- print(string.format("[MAP][INFO] k - %s", k))
+				-- print(string.format("[MAP][INFO] v - %s", v))
 				local item = Tracker:FindObjectForCode(k)
 				item.AcquiredCount = v
 			end
 		end
 		if items_codes_autotracking_cache[code]["ACTIVE"] then
 			for k, v in pairs(items_codes_autotracking_cache[code]["ACTIVE"]) do
-				print(string.format("[MAP][INFO] k - %s", k))
-				print(string.format("[MAP][INFO] v - %s", v))
+				-- print(string.format("[MAP][INFO] k - %s", k))
+				-- print(string.format("[MAP][INFO] v - %s", v))
 				local item = Tracker:FindObjectForCode(k)
 				item.Active = v
 			end
 		end
 		if items_codes_autotracking_cache[code]["SETTING"] then
 			for k, v in pairs(items_codes_autotracking_cache[code]["SETTING"]) do
-				print(string.format("[MAP][INFO] k - %s", k))
-				print(string.format("[MAP][INFO] v - %s", v))
+				-- print(string.format("[MAP][INFO] k - %s", k))
+				-- print(string.format("[MAP][INFO] v - %s", v))
 				local item = Tracker:FindObjectForCode(k)
 				item.CurrentStage = v
 			end
 		end
 		if items_codes_autotracking_cache[code]["LOC_ACTIVE"] then
 			for k, v in pairs(items_codes_autotracking_cache[code]["LOC_ACTIVE"]) do
-				print(string.format("[MAP][INFO] k - %s", k))
-				print(string.format("[MAP][INFO] v - %s", v))
+				-- print(string.format("[MAP][INFO] k - %s", k))
+				-- print(string.format("[MAP][INFO] v - %s", v))
 				local location = Tracker:FindObjectForCode(k)
 				location.AvailableChestCount = v
 			end
@@ -3744,14 +3744,14 @@ function area(segment)
 			local hex1 = string.upper(string.format('%02x',hex1))
 			local hex2 = ReadU8(segment, 0x03000BF5)
 			local hex2 = string.upper(string.format('%02x',hex2))
-			print(string.format("[MAP][INFO] hex2 - %s", hex2))
+			-- print(string.format("[MAP][INFO] hex2 - %s", hex2))
 			local hex = hex2..hex1
 			AUTOTRACKING_dungeons=hex
-			print(string.format("[MAP][INFO] hex - %s", hex))
-			--local hex = string.upper(string.format('%04x',hex))
-			--local hex = string.upper(string.format('%04s',hex))
-			print(string.format("[MAP][INFO] hex - %s", hex))
-			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING_SPEC[%s][1] - %s", hex,ROOM_FLAG_MAPPING_SPEC[hex][1]))
+			-- print(string.format("[MAP][INFO] hex - %s", hex))
+			-- local hex = string.upper(string.format('%04x',hex))
+			-- local hex = string.upper(string.format('%04s',hex))
+			-- print(string.format("[MAP][INFO] hex - %s", hex))
+			-- print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING_SPEC[%s][1] - %s", hex,ROOM_FLAG_MAPPING_SPEC[hex][1]))
 			for _, flag_room in pairs(ROOM_FLAG_MAPPING_SPEC[hex][1]) do
 				print(string.format("[MAP][INFO] flag_room - %s", flag_room))
 				if ( flag_room == "POT_SPOT" ) then
@@ -3882,30 +3882,30 @@ function area(segment)
 			end
 		end
 		AUTOTRACKING_dungeons_last=hex
-		print(string.format("[MAP][INFO] AUTOTRACKING_dungeons  - %s", AUTOTRACKING_dungeons))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DWS\"]  - %s", code_type_cache["ENTRANCE_IN_DWS"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_COF\"]  - %s", code_type_cache["ENTRANCE_IN_COF"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_FOW\"]  - %s", code_type_cache["ENTRANCE_IN_FOW"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_RC\"]  - %s", code_type_cache["ENTRANCE_IN_RC"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_TOD\"]  - %s", code_type_cache["ENTRANCE_IN_TOD"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_POW\"]  - %s", code_type_cache["ENTRANCE_IN_POW"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DHC\"]  - %s", code_type_cache["ENTRANCE_IN_DHC"] ))
+		-- print(string.format("[MAP][INFO] AUTOTRACKING_dungeons  - %s", AUTOTRACKING_dungeons))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DWS\"]  - %s", code_type_cache["ENTRANCE_IN_DWS"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_COF\"]  - %s", code_type_cache["ENTRANCE_IN_COF"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_FOW\"]  - %s", code_type_cache["ENTRANCE_IN_FOW"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_RC\"]  - %s", code_type_cache["ENTRANCE_IN_RC"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_TOD\"]  - %s", code_type_cache["ENTRANCE_IN_TOD"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_POW\"]  - %s", code_type_cache["ENTRANCE_IN_POW"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DHC\"]  - %s", code_type_cache["ENTRANCE_IN_DHC"] ))
 
-		print(string.format("[MAP][INFO] code_type_cache[\"POT_SPOT\"]  - %s", code_type_cache["POT_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"UNDERWATER_SPOT\"]  - %s", code_type_cache["UNDERWATER_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"DIG_SPOT\"]  - %s", code_type_cache["DIG_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"DWS_ENTER\"] - %s", code_type_cache["DWS_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"COF_ENTER\"] - %s", code_type_cache["COF_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"FOW_ENTER\"] - %s", code_type_cache["FOW_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"FOW_WARPS\"] - %s", code_type_cache["FOW_WARPS"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"TOD_ENTER\"] - %s", code_type_cache["TOD_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"POW_ENTER\"] - %s", code_type_cache["POW_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"RC_ENTER\"] - %s", code_type_cache["RC_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"DHC_ENTER\"] - %s", code_type_cache["DHC_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"TRIBE_EARLY\"] - %s", code_type_cache["TRIBE_EARLY"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"SWORD\"] - %s", code_type_cache["SWORD"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"SWORD_COUNT\"] - %s", code_type_cache["SWORD_COUNT"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"OCARINA\"] - %s", code_type_cache["OCARINA"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"POT_SPOT\"]  - %s", code_type_cache["POT_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"UNDERWATER_SPOT\"]  - %s", code_type_cache["UNDERWATER_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DIG_SPOT\"]  - %s", code_type_cache["DIG_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DWS_ENTER\"] - %s", code_type_cache["DWS_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"COF_ENTER\"] - %s", code_type_cache["COF_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"FOW_ENTER\"] - %s", code_type_cache["FOW_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"FOW_WARPS\"] - %s", code_type_cache["FOW_WARPS"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"TOD_ENTER\"] - %s", code_type_cache["TOD_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"POW_ENTER\"] - %s", code_type_cache["POW_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"RC_ENTER\"] - %s", code_type_cache["RC_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DHC_ENTER\"] - %s", code_type_cache["DHC_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"TRIBE_EARLY\"] - %s", code_type_cache["TRIBE_EARLY"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"SWORD\"] - %s", code_type_cache["SWORD"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"SWORD_COUNT\"] - %s", code_type_cache["SWORD_COUNT"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"OCARINA\"] - %s", code_type_cache["OCARINA"]))
 	end
 end
 ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)

@@ -354,7 +354,7 @@ end
 if PopVersion then
 	ScriptHost:LoadScript(Script.."autotracking.lua")
 elseif _VERSION == "Lua 5.3"  then
-	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
+	ScriptHost:LoadScript(ScriptAutotracking.."autotracking_testing.lua")
 else
 	print("Your tracker version does not support autotracking")
 end
