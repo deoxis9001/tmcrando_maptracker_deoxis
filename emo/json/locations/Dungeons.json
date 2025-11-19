@@ -6,7 +6,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1035,
+        "y": 1050,
         "restrict_visibility_rules": [
           "$has|cof_tod,$has|dungeonser_on"
         ]
@@ -206,7 +206,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1035,
+        "y": 1050,
         "restrict_visibility_rules": [
           "$has|crypt_tod,$has|dungeonser_on"
         ]
@@ -329,7 +329,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1035,
+        "y": 1050,
         "restrict_visibility_rules": [
           "$has|dws_tod,$has|dungeonser_on"
         ]
@@ -403,8 +403,8 @@
         "access_rules": [
           "$Json_Dungeon_Deepwood_SlugRoom"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
         "name": "Upstairs Chest",
@@ -542,7 +542,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1035,
+        "y": 1050,
         "restrict_visibility_rules": [
           "$has|fow_tod,$has|dungeonser_on"
         ]
@@ -845,7 +845,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1035,
+        "y": 1050,
         "restrict_visibility_rules": [
           "$has|pow_tod,$has|dungeonser_on"
         ]
@@ -1098,7 +1098,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1035,
+        "y": 1050,
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
           "$has|tod_tod,$has|dungeonser_on"
@@ -1232,7 +1232,7 @@
         "visibility_rules": [
           "$has|rupees_on"
         ],
-        "item_count": 3,
+        "item_count": 2,
         "access_rules": [
           "$Json_Dungeon_Droplet_RightPathRupees"
         ],
@@ -1406,7 +1406,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1035,
+        "y": 1050,
         "restrict_visibility_rules": [
           "$has|dhc_tod,$has|dungeonser_on"
         ]
@@ -1529,7 +1529,8 @@
         "name": "Platform Chest",
         "visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ],
         "item_count": 1,
         "access_rules": [
@@ -1701,7 +1702,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1035,
+        "y": 1050,
         "force_invisibility_rules": [
           "$has|dungeonser_off",
           "$has|dws_tod",

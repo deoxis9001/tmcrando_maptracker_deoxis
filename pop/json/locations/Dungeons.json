@@ -192,6 +192,15 @@
         ],
         "chest_unopened_img": "images/items-map/Heart Container.png",
         "chest_opened_img": "images/items-map/Heart Container Gray.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "^$Json_Dungeon_CaveOfFlame_Gleerok"
+        ],
+        "item_count": 1,
+        "chest_unopened_img": "images/items-map/Fire Element.png",
+        "chest_opened_img": "images/items-map/Fire Element Gray.png"
       }
     ]
   },
@@ -517,6 +526,15 @@
         ],
         "chest_unopened_img": "images/items-map/Heart Container.png",
         "chest_opened_img": "images/items-map/Heart Container Gray.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "^$Json_Dungeon_Deepwood_GreenChu"
+        ],
+        "item_count": 1,
+        "chest_unopened_img": "images/items-map/Earth Element.png",
+        "chest_opened_img": "images/items-map/Earth Element Gray.png"
       }
     ]
   },
@@ -808,13 +826,13 @@
         "chest_opened_img": "images/items-map/Heart Container Gray.png"
       },
       {
-        "name": "FOW Reward",
-        "item_count": 1,
+        "name": "Reward",
         "access_rules": [
           "^$Json_Dungeon_Fortress_FOWReward"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "item_count": 1,
+        "chest_unopened_img": "images/items-map/Ocarina of Wind.png",
+        "chest_opened_img": "images/items-map/Ocarina of Wind Gray.png"
       }
     ]
   },
@@ -1063,6 +1081,15 @@
         ],
         "chest_unopened_img": "images/items-map/Heart Container.png",
         "chest_opened_img": "images/items-map/Heart Container Gray.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "^$Json_Dungeon_Palace_Gyorg"
+        ],
+        "item_count": 1,
+        "chest_unopened_img": "images/items-map/Wind Element.png",
+        "chest_opened_img": "images/items-map/Wind Element Gray.png"
       }
     ]
   },
@@ -1367,6 +1394,15 @@
         ],
         "chest_unopened_img": "images/items-map/Heart Container.png",
         "chest_opened_img": "images/items-map/Heart Container Gray.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "^$Json_Dungeon_Droplet_Octo"
+        ],
+        "item_count": 1,
+        "chest_unopened_img": "images/items-map/Water Element.png",
+        "chest_opened_img": "images/items-map/Water Element Gray.png"
       }
     ]
   },

@@ -14,5 +14,16 @@ EVENTS_FLAG_MAPPING = {
     {"fuse_06","@Castor Wilds - Fusions/Fusions"},
     {"fuse_07","@Castor Wilds - Fusions/Fusions"},
     {"fuse_08","@Castor Wilds - Fusions/Fusions"},
-    {"fuse_09","@Veil Falls - Source of the Flow Cave/Fusion"}
+    {"fuse_09","@Veil Falls - Source of the Flow Cave/Fusion"},
+--    {"dungeon_dws","dws"}
+--    {"dungeon_cof","cof"}
+--    {"dungeon_fow","fow"}
+--    {"dungeon_tod","tod"}
+--    {"dungeon_pow","pow"}
+--    {"dungeon_rc","rc"}
+--    {"dungeon_dhc","dhc"}
+--    {"tod_east_lever",""}
+--    {"tod_west_lever",""}
+
+
 }
