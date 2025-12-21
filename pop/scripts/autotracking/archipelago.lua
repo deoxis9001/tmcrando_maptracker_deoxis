@@ -159,13 +159,21 @@ function incrementItem(item_code, item_type, multiplier)
 			end
 		elseif item_type == "progressive" or item_type == "progressive_toggle" then
 			if obj.Active then
-				obj.CurrentStage = obj.CurrentStage + 1
+				if multiplier>=1 then
+					obj.CurrentStage = obj.CurrentStage + ( 1 * multiplier )
+				else
+					obj.CurrentStage = obj.CurrentStage + 1
+				end
 			else
 				obj.Active = true
+				if multiplier>=1 then
+					obj.CurrentStage = obj.CurrentStage + ( 1 * multiplier )
+				end
 			end
 			if AP_AUTOTRACKER_ENABLE_DEBUG_ITEM then
 				print(string.format("[ITEM][INCREMENT] %s.CurrentStage : %s", item_code,obj.CurrentStage))
 				print(string.format("[ITEM][INCREMENT] %s.Active : %s", item_code,obj.Active))
+				print(string.format("[ITEM][INCREMENT] %s.multiplier : %s", item_code,multiplier))
 			end
 		elseif item_type == "consumable" then
 			obj.AcquiredCount = obj.AcquiredCount + obj.Increment * multiplier
@@ -178,30 +186,34 @@ function incrementItem(item_code, item_type, multiplier)
 			if spin_setting_count==0 then
 					Tracker:FindObjectForCode("spinattack").Active=true
 					spin_setting_count=1
-			else
-				if item_code == "fastspin" and Tracker:FindObjectForCode("fastspin").Active == false then
+			elseif spin_setting_count==1 then
+					Tracker:FindObjectForCode("spinattack").Active=true
 					Tracker:FindObjectForCode("fastspin").Active = true
-				elseif item_code == "fastsplit" and Tracker:FindObjectForCode("fastsplit").Active == false then
+					spin_setting_count=2
+			elseif spin_setting_count==2 then
+					Tracker:FindObjectForCode("spinattack").Active=true
+					Tracker:FindObjectForCode("fastspin").Active = true
 					Tracker:FindObjectForCode("fastsplit").Active = true
-				elseif item_code == "greatspin" and Tracker:FindObjectForCode("greatspin").Active == false then
+					spin_setting_count=3
+			elseif spin_setting_count==3 then
+					Tracker:FindObjectForCode("spinattack").Active=true
+					Tracker:FindObjectForCode("fastspin").Active = true
+					Tracker:FindObjectForCode("fastsplit").Active = true
 					Tracker:FindObjectForCode("greatspin").Active = true
-				elseif item_code == "longspin" and Tracker:FindObjectForCode("longspin").Active == false then
-					if Tracker:FindObjectForCode("greatspin").Active == false then
-						Tracker:FindObjectForCode("greatspin").Active = true
-					else
-						Tracker:FindObjectForCode("fastspin").Active = true
-					end
-				else
-					if Tracker:FindObjectForCode("fastspin").Active == false then
-						Tracker:FindObjectForCode("fastspin").Active = true
-					elseif Tracker:FindObjectForCode("fastsplit").Active == false then
-						Tracker:FindObjectForCode("fastsplit").Active = true
-					elseif Tracker:FindObjectForCode("greatspin").Active == false then
-						Tracker:FindObjectForCode("greatspin").Active = true
-					elseif Tracker:FindObjectForCode("longspin").Active == false then
-						Tracker:FindObjectForCode("longspin").Active = true
-					end
-				end
+					spin_setting_count=4
+			elseif spin_setting_count==4 then
+					Tracker:FindObjectForCode("spinattack").Active=true
+					Tracker:FindObjectForCode("fastspin").Active = true
+					Tracker:FindObjectForCode("fastsplit").Active = true
+					Tracker:FindObjectForCode("greatspin").Active = true
+					Tracker:FindObjectForCode("longspin").Active = true
+					spin_setting_count=5
+			else
+					Tracker:FindObjectForCode("spinattack").Active=true
+					Tracker:FindObjectForCode("fastspin").Active = true
+					Tracker:FindObjectForCode("fastsplit").Active = true
+					Tracker:FindObjectForCode("greatspin").Active = true
+					Tracker:FindObjectForCode("longspin").Active = true
 			end
 			if AP_AUTOTRACKER_ENABLE_DEBUG_ITEM then
 				print(string.format("[ITEM][INCREMENT] item_code :%s", item_code))
@@ -352,6 +364,18 @@ function apply_slot_data(slot_data)
 						elseif slots_data_entry < SLOTS_DATA_MAPPING[slots_data_key][3][1] then
 							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][1]
 						end
+					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "CON" then
+						if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3][1]))
+							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][2]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3][2]))
+						end
+						if slots_data_entry>=SLOTS_DATA_MAPPING[slots_data_key][3][1] and slots_data_entry<=SLOTS_DATA_MAPPING[slots_data_key][3][2] then
+							obj.AcquiredCount = slots_data_entry
+						elseif slots_data_entry > SLOTS_DATA_MAPPING[slots_data_key][3][2] then
+							obj.AcquiredCount = SLOTS_DATA_MAPPING[slots_data_key][3][2]
+						elseif slots_data_entry < SLOTS_DATA_MAPPING[slots_data_key][3][1] then
+							obj.AcquiredCount = SLOTS_DATA_MAPPING[slots_data_key][3][1]
+						end
 					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "OPT" then
 						slots_data_entry = slots_data_entry + 1
 						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry] then
@@ -393,43 +417,54 @@ function apply_slot_data(slot_data)
 						else
 							obj.CurrentStage = 0
 						end
+					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "PRO" then
+						slots_data_entry = slots_data_entry + 1
+							if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+								print(string.format("[SLOT DATA][INFO] slots_data_entry + 1: %s", slots_data_entry))
+								print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][%s]: %s", slots_data_key, slots_data_entry, SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]))
+							end
+						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry] then
+							swordprogress:setActive(true)
+						else
+							swordprogress:setActive(false)
+						end
 					elseif SLOTS_DATA_MAPPING[slots_data_key][2] == "KIN" then
 						slots_data_entry = slots_data_entry + 1
-						if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
+						--if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][1]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][1]))
 							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][2]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][2]))
 							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][3]))
 							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][3][%s]: %s", slots_data_key, slots_data_entry, SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]))
 							print(string.format("[SLOT DATA][INFO] SLOTS_DATA_MAPPING[%s][4]: %s", slots_data_key, SLOTS_DATA_MAPPING[slots_data_key][4]))
-						end
+						--end
 						local obj_combined = Tracker:FindObjectForCode(SLOTS_DATA_MAPPING[slots_data_key][4])
 						if SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]==3 then
 							obj.CurrentStage = 1
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongoldcombined" then
-								--fusiongoldcombined:setActive(1)
+								--fusiongoldcombined:setActive(true)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionredcombined" then
-								--fusionredcombined:setActive(1)
+								--fusionredcombined:setActive(true)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongreencombined" then
-								--fusiongreencombined:setActive(1)
+								--fusiongreencombined:setActive(true)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionbluecombined" then
-								--fusionbluecombined:setActive(1)
+								--fusionbluecombined:setActive(true)
 							end
 						else
 							obj.CurrentStage = SLOTS_DATA_MAPPING[slots_data_key][3][slots_data_entry]
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongoldcombined" then
-								--fusiongoldcombined:setActive(1)
+								--fusiongoldcombined:setActive(false)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionredcombined" then
-								--fusionredcombined:setActive(1)
+								--fusionredcombined:setActive(false)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusiongreencombined" then
-								--fusiongreencombined:setActive(1)
+								--fusiongreencombined:setActive(false)
 							end
 							if SLOTS_DATA_MAPPING[slots_data_key][4] == "fusionbluecombined" then
-								--fusionbluecombined:setActive(1)
+								--fusionbluecombined:setActive(false)
 							end
 						end
 					end

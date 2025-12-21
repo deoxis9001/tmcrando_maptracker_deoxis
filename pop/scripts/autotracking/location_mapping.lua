@@ -26,7 +26,7 @@ LOCATION_MAPPING = {
     [6029023] = {{"@Town - Stockwell's Shop/Wallet Spot (80 Rupees)"}},
     [6029024] = {{"@Town - Stockwell's Shop/Boomerang Spot (300 Rupees)"}},
     [6029025] = {{"@Town - Stockwell's Shop/Quiver Spot (600 Rupees)"}},
-    [6029026] = {{"@Town - Stockwell's Shop/Bomg Bag Spot (600 Rupees)"}},
+    [6029026] = {{"@Town - Stockwell's Shop/Bombag Spot (600 Rupees)"}},
     [6029027] = {{"@Town - Stockwell's Shop/Dog Food Bottle"}},
     [6029028] = {{"@Town - Stockwell's Shop/Attic Chest"}},
     [6029029] = {{"@Town - Bakery Attic/Chest"}},
@@ -374,7 +374,7 @@ LOCATION_MAPPING = {
     [6029354] = {{"@Veil Falls - Upper Cave/Underwater Rupees"}},
     [6029355] = {{"@Veil Falls - Upper Cave/Bomb Wall Chest"}},
     [6029356] = {{"@Veil Falls - Upper Cave/Freestanding Chest"}},
-    [6029357] = {{"@Veil Falls - Top of Falls/Biggoron"}},
+    [6029357] = {{"@Veil Falls - Biggoron/Mirror Shield"}},
 
     [6029358] = {{"@Clouds - Right Chest/Chest"}},
     [6029359] = {{"@Clouds - Top Right Digging Spot/Digging"}},

@@ -6,11 +6,12 @@ function Kinstone:init(name, code, imagePathActive1, imagePathActive2, numbermax
 	self.image = 0
 	self.choice = true
 	self.InfoStage = 0
-	self.textnone = 0
+	self.textnone = -1
 	self:setProperty("CurrentStage", 0)
 	self:setProperty("count_max", numbermax1)
 	self.countactive = numbermax1
 	self.noImage = nil
+	self.imageold = -1
 	self.activeImage1 = ImageReference:FromPackRelativePath(imagePathActive1)
 	
 	if imagePathActive2 == nil then
@@ -74,38 +75,40 @@ function Kinstone:updateIconTexte(id)
 		self.ItemInstance:SetOverlay(tostring(id))
 end
 function Kinstone:updateIcon()
-	if self:getActive() == self.textnone then
-		return
-	end
-	if self:getActiveCount()==1 and self:getActive()==1 and self.textnone == 0 then
-		self:updateIconTexte(" ")
-		self.textnone=self:getActive()
-	elseif self:getActive() == 0 and self.textnone > 0 then
-		self:updateIconTexte(" ")
-		self.textnone=0
-	elseif self:getActive() > self.textnone or self:getActive() < self.textnone then
-		self:updateIconTexte(self:getActive())
-		self.textnone=self:getActive()
-	end
-	self.code = self.codebase..tostring(self:getActive())
-
-	if self:getActiveCount() <= self:getActive() then
-		self.ItemInstance.BadgeTextColor = "#0f0"
-	else
-		self.ItemInstance.BadgeTextColor = "#fff"
-	end
-	self.code = self.codebase
-	self.ItemInstance.Icon = self.disabledImage1
-	if self.image == 0 then
-		if self:getActive() == 0 then
-			self.ItemInstance.Icon = self.disabledImage1
+	if self:getActive() ~= self.textnone or self.image~=self.imageold then
+		self.code = self.codebase
+		self.ItemInstance.Icon = self.disabledImage1
+		if self.image == 0 then
+			if self:getActive() == 0 then
+				self.ItemInstance.Icon = self.disabledImage1
+			else
+				self.ItemInstance.Icon = self.activeImage1
+			end
+		elseif self:getActive() == 0 then
+			self.ItemInstance.Icon = self.disabledImage2
 		else
-			self.ItemInstance.Icon = self.activeImage1
+			self.ItemInstance.Icon = self.activeImage2
 		end
-	elseif self:getActive() == 0 then
-		self.ItemInstance.Icon = self.disabledImage2
-	else
-		self.ItemInstance.Icon = self.activeImage2
+		self.imageold = self.image
+	end
+	if self:getActive() ~= self.textnone then
+		if self:getActiveCount()==1 and self:getActive()==1 and self.textnone == 0 then
+			self:updateIconTexte(" ")
+			self.textnone=self:getActive()
+		elseif self:getActive() == 0 and (self.textnone > 0 or self.textnone == -1) then
+			self:updateIconTexte(" ")
+			self.textnone=0
+		elseif self:getActive() > self.textnone or self:getActive() < self.textnone then
+			self:updateIconTexte(self:getActive())
+			self.textnone=self:getActive()
+		end
+		--self.code = self.codebase..tostring(self:getActive())
+
+		if self:getActiveCount() <= self:getActive() then
+			self.ItemInstance.BadgeTextColor = "#0f0"
+		else
+			self.ItemInstance.BadgeTextColor = "#fff"
+		end
 	end
 end
 function Kinstone:onLeftClick()
