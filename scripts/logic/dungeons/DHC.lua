@@ -220,6 +220,20 @@ function DHC_2F_BlueWarp_BigChest()
 	end
 end
 
+function DHC_Win()
+	if (function_Cached("AccessDHC") == 1 and has("dhc_open_fast")  and function_Cached("CompletePed")==1) then
+		return 1
+	elseif ( function_Cached("AccessDHC")==1 and ( has("dhc_closed") or has("dhc_ped") )  and function_Cached("CompletePed")==1 ) then
+		return 1
+	elseif (function_Cached("AccessDHC") == 2 and has("dhc_open_fast")  and function_Cached("CompletePed")==1) then
+		return 2
+	elseif ( function_Cached("AccessDHC")==2 and ( has("dhc_closed") or has("dhc_ped") )  and function_Cached("CompletePed")==1 ) then
+		return 2
+	else
+		return 0
+	end
+end
+
 function BeatVaati()
 	 if ( function_Cached("AccessDHC") == 1 and has("dhc_fast_vaati") and function_Cached("CanSplit4") == 1 and function_Cached("HasBow") == 1 and
 			has("gust") and has("cane") and	function_Cached("DarkRooms") == 1 ) then
