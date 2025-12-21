@@ -6,6 +6,7 @@ on:
       - Stable
       - Beta
       - Alpha
+      - rework-lua
 
   workflow_dispatch:
     inputs:
@@ -17,6 +18,7 @@ on:
           - Stable
           - Beta
           - Alpha
+          - rework-lua
 
 jobs:
   update-init-lua:
@@ -51,6 +53,11 @@ jobs:
             sed -i 's/^VERSION_BETA = true/VERSION_BETA = false/' "$FILE"
 
           elif [[ "$BRANCH" == "Beta" ]]; then
+            echo "Applying Beta rules..."
+            sed -i 's/^VERSION_BETA = false/VERSION_BETA = true/' "$FILE"
+            sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
+
+          elif [[ "$BRANCH" == "rework-lua" ]]; then
             echo "Applying Beta rules..."
             sed -i 's/^VERSION_BETA = false/VERSION_BETA = true/' "$FILE"
             sed -i 's/^VERSION_ALPHA = true/VERSION_ALPHA = false/' "$FILE"
