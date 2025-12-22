@@ -359,6 +359,7 @@ else
 end
 if PopVersion then
 	ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
+	ScriptHost:AddOnLocationSectionChangedHandler("location_check",tracker_on_accessibility_updating_section)
 	tracker_on_pack_ready() 
 	Tracker.BulkUpdate = false
 end

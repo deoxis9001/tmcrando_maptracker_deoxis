@@ -262,7 +262,20 @@ function UpdateFusion()
     end
   end
 end
-
+function tracker_on_accessibility_updating_section(locationCheck)
+  cache_number = cache_number + 1
+  if cache_number > 100000000 then
+    return 0
+  end
+  if Cache_reset then
+    has_item_data = {}
+    function_data = {}
+    function_count = 0
+    function_data_fusion = {}
+    Preset()
+    UpdateFusion()
+  end
+end
 function tracker_on_accessibility_updating()
   cache_number = cache_number + 1
   if cache_number > 100000000 then
