@@ -290,6 +290,15 @@ function DHCBlackKnight()
 		return 0
 	end 
 end
+function DHCSouthTowers()	
+	if ( ( function_Cached("DHCBlueWarp")==1 and ( function_Cached("OverworldBlocks")==1 or has("cape") ) or ( function_Cached("DHCRedWarp")==1 and function_Cached("DHCChainSoldiers")==1 and function_Cached("DHCGrateRoom")==1 and function_Cached("OverworldBlocks")==1 ) or ( function_Cached("DHC1stDoor")==1 and function_Cached("DHC2ndCanon")==1 and function_Cached("BombWalls")==1 and function_Cached("DHCThrone")==1 and function_Cached("CanSplit4")==1 and function_Cached("DHCOutsideSwitch")==1 and function_Cached("DHCSwitchPuzzles")==1 and function_Cached("DHCChainSoldiers")==1 and function_Cached("DHCGrateRoom")==1 and function_Cached("OverworldBlocks")==1 ) ) ) then
+		return 1
+	elseif ( ( function_Cached("DHCBlueWarp")==1 and ( function_Cached("OverworldBlocks")==1 or has("cape") ) or ( function_Cached("DHCRedWarp")==1 and ( function_Cached("DHCChainSoldiers")==1 or function_Cached("DHCChainSoldiers")==2 ) and ( function_Cached("DHCGrateRoom")==1 or function_Cached("DHCGrateRoom")==2 ) and function_Cached("OverworldBlocks")==1 ) or ( ( function_Cached("DHC1stDoor")==1 or function_Cached("DHC1stDoor")==2 ) and function_Cached("DHC2ndCanon")==1 and function_Cached("BombWalls")==1 and ( function_Cached("DHCThrone")==1 or function_Cached("DHCThrone")==2 ) and function_Cached("CanSplit4")==1 and ( function_Cached("DHCOutsideSwitch")==1 or function_Cached("DHCOutsideSwitch")==2 ) and ( function_Cached("DHCSwitchPuzzles")==1 or function_Cached("DHCSwitchPuzzles")==2 ) and function_Cached("DHCChainSoldiers")==1 and function_Cached("DHCGrateRoom")==1 and function_Cached("OverworldBlocks")==1 ) ) ) then
+		return 2
+	else
+		return 0
+	end 
+end
 function Json_AccessDeepwood()
 	
 	if ( function_Cached("AccessDeepwood")==1 ) then

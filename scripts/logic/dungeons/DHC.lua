@@ -167,6 +167,7 @@ end
 function DHC_3F_SouthWest_Chest()
 	if
 		(function_Cached("AccessDHC") == 1 and function_Cached("DHCBlackKnight") == 1 and
+			function_Cached("DHCSouthTowers") == 1
 			function_Cached("DHCTowerDarknuts") == 1 and
 			function_Cached("DHCGhini") == 1)
 	 then
@@ -174,6 +175,7 @@ function DHC_3F_SouthWest_Chest()
 	elseif
 		((function_Cached("AccessDHC") == 1 or function_Cached("AccessDHC") == 2) and
 			(function_Cached("DHCBlackKnight") == 1 or function_Cached("DHCBlackKnight") == 2) and
+			(function_Cached("DHCSouthTowers") == 1 or function_Cached("DHCSouthTowers") == 2) and
 			(function_Cached("DHCTowerDarknuts") == 1 or function_Cached("DHCTowerDarknuts") == 2) and
 			(function_Cached("DHCGhini") == 1 or function_Cached("DHCGhini") == 2))
 	 then
@@ -186,6 +188,7 @@ end
 function DHC_3F_SouthEast_Chest()
 	if
 		(function_Cached("AccessDHC") == 1 and function_Cached("DHCBlackKnight") == 1 and
+			function_Cached("DHCSouthTowers") == 1
 			function_Cached("DHCTowerDarknuts") == 1 and
 			function_Cached("DHCSwitchPuzzles") == 1)
 	 then
@@ -193,6 +196,7 @@ function DHC_3F_SouthEast_Chest()
 	elseif
 		((function_Cached("AccessDHC") == 1 or function_Cached("AccessDHC") == 2) and
 			(function_Cached("DHCBlackKnight") == 1 or function_Cached("DHCBlackKnight") == 2) and
+			(function_Cached("DHCSouthTowers") == 1 or function_Cached("DHCSouthTowers") == 2) and
 			(function_Cached("DHCTowerDarknuts") == 1 or function_Cached("DHCTowerDarknuts") == 2) and
 			(function_Cached("DHCSwitchPuzzles") == 1 or function_Cached("DHCSwitchPuzzles") == 2))
 	 then
