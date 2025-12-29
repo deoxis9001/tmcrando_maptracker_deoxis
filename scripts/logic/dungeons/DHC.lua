@@ -167,7 +167,7 @@ end
 function DHC_3F_SouthWest_Chest()
 	if
 		(function_Cached("AccessDHC") == 1 and function_Cached("DHCBlackKnight") == 1 and
-			function_Cached("DHCSouthTowers") == 1
+			function_Cached("DHCSouthTowers") == 1 and
 			function_Cached("DHCTowerDarknuts") == 1 and
 			function_Cached("DHCGhini") == 1)
 	 then
@@ -188,7 +188,7 @@ end
 function DHC_3F_SouthEast_Chest()
 	if
 		(function_Cached("AccessDHC") == 1 and function_Cached("DHCBlackKnight") == 1 and
-			function_Cached("DHCSouthTowers") == 1
+			function_Cached("DHCSouthTowers") == 1 and
 			function_Cached("DHCTowerDarknuts") == 1 and
 			function_Cached("DHCSwitchPuzzles") == 1)
 	 then
