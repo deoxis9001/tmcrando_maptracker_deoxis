@@ -630,7 +630,16 @@
     "img": "images/items/Heart Container.png",
     "allow_disabled": false,
     "inherit_codes": false,
+    "initial_stage_idx": 2,
     "stages": [
+      {
+        "img": "images/items/Heart Container1.png",
+        "codes": "hearts"
+      },
+      {
+        "img": "images/items/Heart Container2.png",
+        "codes": "hearts"
+      },
       {
         "img": "images/items/Heart Container3.png",
         "codes": "hearts"

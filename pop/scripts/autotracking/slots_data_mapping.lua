@@ -92,6 +92,7 @@ SLOTS_DATA_MAPPING = {
     ["prize_rc"] = {"rcx","PRIZE"},
     ["prize_pow"] = {"powx","PRIZE"},
     ["progressive_sword"] =   {"progressiveitems","PRO",{false,true}},
+    ["starting_hearts"] = {"hearts","HEARTS"},
 }
 -- SLOTS_DATA_RESET_MAPPING = {
     -- ["prize_dws"] = {"dwsx"},
