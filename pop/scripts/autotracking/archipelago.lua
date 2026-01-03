@@ -292,7 +292,7 @@ function incrementItem(item_code, item_type, multiplier)
 					   print(string.format("[ITEM][INCREMENT] heart_count: %s", heart_count))
 				   end
 				end
-				obj.CurrentStage = heart_count
+				obj.CurrentStage = heart_count_start + heart_count
 			elseif item_code == "bombs" then
 				if multiplier == 3 then
 					bombag_count = bombag_count + 1
