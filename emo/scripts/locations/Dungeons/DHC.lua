@@ -1,7 +1,7 @@
 function Json_Dungeon_DHC_Win()
-	if function_Cached("AccessDHC") == 1 then
+	if function_Cached("DHC_Win") == 1 then
 		return 1
-	elseif function_Cached("AccessDHC") == 2 then
+	elseif function_Cached("DHC_Win") == 2 then
 		return 1, AccessibilityLevel.SequenceBreak
 	else
 		return 0

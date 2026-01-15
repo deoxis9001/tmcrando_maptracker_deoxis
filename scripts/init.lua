@@ -52,7 +52,7 @@ AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUSER_TRACKING = true
 VERSION_ALPHA = false
-VERSION_BETA = false
+VERSION_BETA = true
 VERSION_RANDO = "1.0.0RC2"
 ------------------------------------------------------------------
 -- Configuration Debug options
@@ -359,6 +359,7 @@ else
 end
 if PopVersion then
 	ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
+	ScriptHost:AddOnLocationSectionChangedHandler("location_check",tracker_on_accessibility_updating_section)
 	tracker_on_pack_ready() 
 	Tracker.BulkUpdate = false
 end

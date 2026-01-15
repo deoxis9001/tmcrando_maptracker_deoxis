@@ -167,6 +167,7 @@ end
 function DHC_3F_SouthWest_Chest()
 	if
 		(function_Cached("AccessDHC") == 1 and function_Cached("DHCBlackKnight") == 1 and
+			function_Cached("DHCSouthTowers") == 1 and
 			function_Cached("DHCTowerDarknuts") == 1 and
 			function_Cached("DHCGhini") == 1)
 	 then
@@ -174,6 +175,7 @@ function DHC_3F_SouthWest_Chest()
 	elseif
 		((function_Cached("AccessDHC") == 1 or function_Cached("AccessDHC") == 2) and
 			(function_Cached("DHCBlackKnight") == 1 or function_Cached("DHCBlackKnight") == 2) and
+			(function_Cached("DHCSouthTowers") == 1 or function_Cached("DHCSouthTowers") == 2) and
 			(function_Cached("DHCTowerDarknuts") == 1 or function_Cached("DHCTowerDarknuts") == 2) and
 			(function_Cached("DHCGhini") == 1 or function_Cached("DHCGhini") == 2))
 	 then
@@ -186,6 +188,7 @@ end
 function DHC_3F_SouthEast_Chest()
 	if
 		(function_Cached("AccessDHC") == 1 and function_Cached("DHCBlackKnight") == 1 and
+			function_Cached("DHCSouthTowers") == 1 and
 			function_Cached("DHCTowerDarknuts") == 1 and
 			function_Cached("DHCSwitchPuzzles") == 1)
 	 then
@@ -193,6 +196,7 @@ function DHC_3F_SouthEast_Chest()
 	elseif
 		((function_Cached("AccessDHC") == 1 or function_Cached("AccessDHC") == 2) and
 			(function_Cached("DHCBlackKnight") == 1 or function_Cached("DHCBlackKnight") == 2) and
+			(function_Cached("DHCSouthTowers") == 1 or function_Cached("DHCSouthTowers") == 2) and
 			(function_Cached("DHCTowerDarknuts") == 1 or function_Cached("DHCTowerDarknuts") == 2) and
 			(function_Cached("DHCSwitchPuzzles") == 1 or function_Cached("DHCSwitchPuzzles") == 2))
 	 then
@@ -214,6 +218,20 @@ function DHC_2F_BlueWarp_BigChest()
 			(function_Cached("DHCBigBlock") == 1 or function_Cached("DHCBigBlock") == 2) and
 			function_Cached("CanSplit4") == 1)
 	 then
+		return 2
+	else
+		return 0
+	end
+end
+
+function DHC_Win()
+	if (function_Cached("AccessDHC") == 1 and has("dhc_open_fast")  and function_Cached("CompletePed")==1) then
+		return 1
+	elseif ( function_Cached("AccessDHC")==1 and ( has("dhc_closed") or has("dhc_ped") )  and function_Cached("CompletePed")==1 ) then
+		return 1
+	elseif (function_Cached("AccessDHC") == 2 and has("dhc_open_fast")  and function_Cached("CompletePed")==1) then
+		return 2
+	elseif ( function_Cached("AccessDHC")==2 and ( has("dhc_closed") or has("dhc_ped") )  and function_Cached("CompletePed")==1 ) then
 		return 2
 	else
 		return 0
