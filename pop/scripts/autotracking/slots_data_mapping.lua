@@ -10,7 +10,7 @@ SLOTS_DATA_MAPPING = {
     ["goal_dungeons"]   =   {"dungeons","INT",{0,6}},
     ["goal_swords"]     =   {"sword0Needed","INT",{0,5}},
     ["goal_elements"]   =   {"element0Needed","INT",{0,4}},
-    ["goal_figurines"]   =   {"figurine_option","INT",{0,136}},
+    ["goal_figurines"]   =   {"figurine_option","CON",{0,136}},
 
     ["dungeon_warp_dws"]   =   {"dws_warps_none","OPT",{0,1,2,3}},
     ["dungeon_warp_cof"]   =   {"cof_warps_none","OPT",{0,1,2,3}},
@@ -31,7 +31,7 @@ SLOTS_DATA_MAPPING = {
     ["shuffle_underwater"]   =   {"underwater_off","OPT",{0,1}},
     ["shuffle_gold_enemies"] = {"golden_enemy_off","OPT",{0,1}},
     ["shuffle_pedestal"]   =   {"ped_items_off","OPT",{0,1}},
-    ["shuffle_biggoron"] = {"biggoron_none","OPT",{0,1}},
+    ["shuffle_biggoron"] = {"biggoron_none","OPT",{0,1,2}},
 
     ["kinstones_gold"]   =   {"fusiongold_removed","KIN",{0,1,3,2},"fusiongoldcombined"},
     ["kinstones_red"]   =   {"fusionred_removed","KIN",{0,1,3,2},"fusionredcombined"},
@@ -91,6 +91,8 @@ SLOTS_DATA_MAPPING = {
     ["prize_tod"] = {"todx","PRIZE"},
     ["prize_rc"] = {"rcx","PRIZE"},
     ["prize_pow"] = {"powx","PRIZE"},
+    ["progressive_sword"] =   {"progressiveitems","PRO",{false,true}},
+    ["starting_hearts"] = {"hearts","HEARTS"},
 }
 -- SLOTS_DATA_RESET_MAPPING = {
     -- ["prize_dws"] = {"dwsx"},

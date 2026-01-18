@@ -140,9 +140,9 @@ function Falls_TopCave_Chest()
 	end 
 end
 function Falls_Biggoron() 
-	if ( function_Cached("AccessFalls")==1 and function_Cached("HasBiggoronShield")==1 and ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0e") ) )) then
+	if ( function_Cached("AccessClouds")==1 and function_Cached("HasBiggoronShield")==1 and ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0e") ) )) then
 		return 1
-	elseif ( ( function_Cached("AccessFalls")==1 or function_Cached("AccessFalls")==2 ) and function_Cached("HasBiggoronShield")==1 and ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0e") ) )) then
+	elseif ( ( function_Cached("AccessClouds")==1 or function_Cached("AccessClouds")==2 ) and function_Cached("HasBiggoronShield")==1 and ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0e") ) )) then
 			return 2
 	else
 		return 0
