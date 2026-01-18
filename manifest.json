@@ -1,11 +1,10 @@
-{
-  "name": "[BETA][1.0.0] Minish Cap Randomizer Map Tracker - Help (F1)",
+  "name": "[Stable][1.0.0] Minish Cap Randomizer Map Tracker - Help (F1)",
   "game_name": "Minish Cap Randomizer",
   "platform": "gba",
-  "package_version": "1.0.0.13",
-  "versions_url": "https://en-minish-cap.deoxis9001.ovh/dev/beta-version.json",
+  "package_version": "1.0.0.48",
+  "versions_url": "https://en-minish-cap.deoxis9001.ovh/dev/version.json",
   "homepage": "https://en-minish-cap.deoxis9001.ovh/",
-  "package_uid": "BetaTmcrTrackerDeoxis",
+  "package_uid": "StableTmcrTrackerDeoxis",
   "author": "Deoxis Hysteria",
   "min_poptracker_version": "0.32.1",
   "variants": {
@@ -34,10 +33,10 @@
       ]
     },
     "items_only": {
-      "display_name": "Standard Items Tracker - Vertical"
+      "display_name": "[Standard] Items Tracker - Vertical"
     },
     "items_only_h": {
-      "display_name": "Standard Items Tracker - Horizontal"
+      "display_name": "[Standard] Items Tracker - Horizontal"
     }
   }
 }
