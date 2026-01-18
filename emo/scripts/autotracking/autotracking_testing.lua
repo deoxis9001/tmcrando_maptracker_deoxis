@@ -1727,7 +1727,7 @@ end
 function updateHearts(segment, address)
 	local item = Tracker:FindObjectForCode("hearts")
 	if item then
-		item.CurrentStage = ReadU8(segment, address) / 8 - 3
+		item.CurrentStage = ReadU8(segment, address) / 8 - 1
 	end
 end
 function updateWarps(segment, type)
