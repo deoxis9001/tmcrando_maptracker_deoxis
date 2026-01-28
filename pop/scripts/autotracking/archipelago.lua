@@ -369,7 +369,6 @@ function apply_slot_data(slot_data)
 	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
 	end
-			print(string.format("[SLOT DATA][INFO] version: %s", slot_data["version"]))
 	-- Compatibility Version
 	if ITEM_MAPPING_OLD[slot_data["version"]]~=nil then
 		for id, value in pairs(ITEM_MAPPING_OLD[slot_data["version"]]) do
