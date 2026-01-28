@@ -1,4 +1,5 @@
 ScriptHost:LoadScript(ScriptAutotracking.."item_mapping.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."item_mapping_old.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."location_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."room_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."events_mapping.lua")
@@ -54,6 +55,9 @@ function resetItem(item_code, item_type)
 				print(string.format("[RESET][ITEM][INFO] %s : %s", item_code,obj.AcquiredCount))
 			end
 		elseif item_type == "spin" then
+			obj.Active=0
+			spin_setting_count = 0
+		elseif item_type == "spin_0.2.0" then
 			obj.Active=0
 			spin_setting_count = 0
 		elseif item_type == "custom" then
@@ -182,6 +186,35 @@ function incrementItem(item_code, item_type, multiplier)
 				print(string.format("[ITEM][INCREMENT] %s.AcquiredCount : %s", item_code,obj.AcquiredCount))
 				print(string.format("[ITEM][INCREMENT] %s.Increment : %s", item_code,obj.AcquiredCount))
 				print(string.format("[ITEM][INCREMENT] %s.multiplier : %s", item_code,multiplier))
+			end		
+		elseif item_type == "spin_0.2.0" then
+			if spin_setting_count==0 then
+					Tracker:FindObjectForCode("spinattack").Active=true
+					spin_setting_count=1
+			else
+				if item_code == "fastspin" and Tracker:FindObjectForCode("fastspin").Active == false then
+					Tracker:FindObjectForCode("fastspin").Active = true
+				elseif item_code == "fastsplit" and Tracker:FindObjectForCode("fastsplit").Active == false then
+					Tracker:FindObjectForCode("fastsplit").Active = true
+				elseif item_code == "greatspin" and Tracker:FindObjectForCode("greatspin").Active == false then
+					Tracker:FindObjectForCode("greatspin").Active = true
+				elseif item_code == "longspin" and Tracker:FindObjectForCode("longspin").Active == false then
+					if Tracker:FindObjectForCode("greatspin").Active == false then
+						Tracker:FindObjectForCode("greatspin").Active = true
+					else
+						Tracker:FindObjectForCode("fastspin").Active = true
+					end
+				else
+					if Tracker:FindObjectForCode("fastspin").Active == false then
+						Tracker:FindObjectForCode("fastspin").Active = true
+					elseif Tracker:FindObjectForCode("fastsplit").Active == false then
+						Tracker:FindObjectForCode("fastsplit").Active = true
+					elseif Tracker:FindObjectForCode("greatspin").Active == false then
+						Tracker:FindObjectForCode("greatspin").Active = true
+					elseif Tracker:FindObjectForCode("longspin").Active == false then
+						Tracker:FindObjectForCode("longspin").Active = true
+					end
+				end
 			end
 		elseif item_type == "spin" then
 			if spin_setting_count==0 then
@@ -335,6 +368,18 @@ function apply_slot_data(slot_data)
 	-- put any code here that slot_data should affect (toggling setting items for example)
 	if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
 		print(string.format("----- SLOT DATA -----"))
+	end
+			print(string.format("[SLOT DATA][INFO] version: %s", slot_data["version"]))
+	-- Compatibility Version
+	if ITEM_MAPPING_OLD[slot_data["version"]]~=nil then
+		for id, value in pairs(ITEM_MAPPING_OLD[slot_data["version"]]) do
+			print(string.format("[SLOT DATA][INFO] id: %s", id))
+			print(string.format("[SLOT DATA][INFO] value: %s", value))
+			ITEM_MAPPING[id] = value
+		end
+	end
+	if slot_data["version"]=="0.2.0" then
+		heart_count_start = 2
 	end
 	for slots_data_key, slots_data_entry in pairs(slot_data) do
 		if AP_AUTOTRACKER_ENABLE_DEBUG_SLOT or AP_AUTOTRACKER_ENABLE_DEBUG_RESET then
