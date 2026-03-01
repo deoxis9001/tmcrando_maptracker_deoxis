@@ -1,460 +1,460 @@
 [
- {
-  "name": "Swamp - Underwater",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 655,
-    "y": 1560,
-    "restrict_visibility_rules": [
-     "$has|underwater_on"
+  {
+    "name": "Swamp - Underwater",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 655,
+        "y": 1560,
+        "restrict_visibility_rules": [
+          "$has|underwater_on"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Top",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_DivingSpots_Diving"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Middle",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_DivingSpots_Diving"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Bottom",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_DivingSpots_Diving"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
     ]
-   }
-  ],
-  "sections": [
-   {
-    "name": "Top",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_DivingSpots_Diving"
+  },
+  {
+    "name": "Swamp - Dojo",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 37,
+        "y": 1610
+      }
     ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   },
-   {
-    "name": "Middle",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_DivingSpots_Diving"
-    ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   },
-   {
-    "name": "Bottom",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_DivingSpots_Diving"
-    ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Dojo",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 37,
-    "y": 1610
-   }
-  ],
-  "sections": [
-   {
-    "name": "Gift",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_Dojo_Swiftblade"
-    ],
-    "chest_unopened_img": "images/items-map/Tiger Scroll.png",
-    "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
-   },
-   {
-    "name": "HP",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_Dojo_HeartPiece"
-    ],
-    "chest_unopened_img": "images/items-map/Heart Piece.png",
-    "chest_opened_img": "images/items-map/Heart Piece Gray.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - South Cave",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 484,
-    "y": 1724
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_SouthLakeCave_chest"
-    ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Center",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 144,
-    "y": 1412
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_PlatformChest_Chest"
-    ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Near Waterfall Cave",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 645,
-    "y": 1158
-   }
-  ],
-  "sections": [
-   {
-    "name": "HP",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_NortheastLakeCave_HeartPiece"
-    ],
-    "chest_unopened_img": "images/items-map/Heart Piece.png",
-    "chest_opened_img": "images/items-map/Heart Piece Gray.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - North Cave",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 432,
-    "y": 1160
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_NorthCave_Chest"
-    ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Business Scrub",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 350,
-    "y": 1165,
-    "restrict_visibility_rules": [
-     "$has|fusionblue_vanilla"
-    ],
-    "shape": "diamond",
-    "size": 70
-   }
-  ],
-  "sections": [
-   {
-    "name": "Fuser Business Scrub",
-    "hosted_item": "fusions27",
-    "access_rules": [
-     "^$Json_Swamp_BusinessScrub_Fuser"
+    "sections": [
+      {
+        "name": "Gift",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_Dojo_Swiftblade"
+        ],
+        "chest_unopened_img": "images/items-map/Tiger Scroll.png",
+        "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
+      },
+      {
+        "name": "HP",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_Dojo_HeartPiece"
+        ],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
     ]
-   }
-  ]
- },
- {
-  "name": "Swamp - Minish Mulldozer",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 28,
-    "y": 1178
-   }
-  ],
-  "sections": [
-   {
-    "name": "Big Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_Mulldozers_BigChest"
+  },
+  {
+    "name": "Swamp - South Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 484,
+        "y": 1724
+      }
     ],
-    "chest_unopened_img": "images/items-map/big_chest_closed.png",
-    "chest_opened_img": "images/items-map/big_chest_open.png"
-   },
-   {
-    "name": "Left Chest",
-    "visibility_rules": [
-     "$FusionsGreen"
-    ],
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_Mulldozers_LeftChest"
-    ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Digging Cave",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 517,
-    "y": 1393
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chests",
-    "item_count": 2,
-    "access_rules": [
-     "^$Json_Swamp_MittsCave_Chests"
-    ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Center Cave Darknut",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 283,
-    "y": 1403
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_Darknut_Kill"
-    ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Fusions",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 75,
-    "y": 1700,
-    "restrict_visibility_rules": [
-     "$has|fusiongold_vanilla"
-    ],
-    "shape": "diamond",
-    "size": 70
-   }
-  ],
-  "sections": [
-   {
-    "name": "Fusions",
-    "item_count": 3,
-    "access_rules": [
-     "^$Json_Swamp_CastorWildsFusions_Fusions"
-    ],
-    "chest_opened_img": "images/items-map/Gold Kinstone (Wilds) Gray.png",
-    "chest_unopened_img": "images/items-map/Gold Kinstone (Wilds).png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Minish Fusion West Crack",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 37,
-    "y": 1326,
-    "restrict_visibility_rules": [
-     "$FusionsGreen"
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_SouthLakeCave_chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
     ]
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_WesternMinishCrack_Chest"
+  },
+  {
+    "name": "Swamp - Center",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 144,
+        "y": 1412
+      }
     ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Minish Fusion Water Hole",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 634,
-    "y": 1628,
-    "restrict_visibility_rules": [
-     "$FusionsGreen"
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_PlatformChest_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
     ]
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_WaterMinishHole_Chest"
+  },
+  {
+    "name": "Swamp - Near Waterfall Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 645,
+        "y": 1158
+      }
     ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   },
-   {
-    "name": "HP",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_WaterMinishHole_HeartPiece"
-    ],
-    "chest_unopened_img": "images/items-map/Heart Piece.png",
-    "chest_opened_img": "images/items-map/Heart Piece Gray.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Waterfall Fusion Dojo",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 612,
-    "y": 1158,
-    "restrict_visibility_rules": [
-     "$FusionsRed"
+    "sections": [
+      {
+        "name": "HP",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_NortheastLakeCave_HeartPiece"
+        ],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
     ]
-   }
-  ],
-  "sections": [
-   {
-    "name": "Gift",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_DojoWaterfall_Scarblade"
+  },
+  {
+    "name": "Swamp - North Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 432,
+        "y": 1160
+      }
     ],
-    "chest_unopened_img": "images/items-map/Tiger Scroll.png",
-    "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Minish Fusion Vine Crack",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 240,
-    "y": 1603,
-    "restrict_visibility_rules": [
-     "$FusionsGreen"
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_NorthCave_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
     ]
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_VineMinishCrack_Chest"
+  },
+  {
+    "name": "Swamp - Business Scrub",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 350,
+        "y": 1165,
+        "restrict_visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 70
+      }
     ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Golden Rope",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 400,
-    "y": 1230,
-    "restrict_visibility_rules": [
-     "$FusionsGreen,$has|golden_enemy_on"
+    "sections": [
+      {
+        "name": "Fuser Business Scrub",
+        "hosted_item": "fusions27",
+        "access_rules": [
+          "^$Json_Swamp_BusinessScrub_Fuser"
+        ]
+      }
     ]
-   }
-  ],
-  "sections": [
-   {
-    "name": "Kill",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_RopeGolden_Kill"
+  },
+  {
+    "name": "Swamp - Minish Mulldozer",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 28,
+        "y": 1178
+      }
     ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Minish Fusion North Crack",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 133,
-    "y": 1167,
-    "restrict_visibility_rules": [
-     "$FusionsGreen"
+    "sections": [
+      {
+        "name": "Big Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_Mulldozers_BigChest"
+        ],
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
+      },
+      {
+        "name": "Left Chest",
+        "visibility_rules": [
+          "$FusionsGreen"
+        ],
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_Mulldozers_LeftChest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
     ]
-   }
-  ],
-  "sections": [
-   {
-    "name": "Chest",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_NorthernMinishCrack_Chest"
+  },
+  {
+    "name": "Swamp - Digging Cave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 517,
+        "y": 1393
+      }
     ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- },
- {
-  "name": "Swamp - Butterfly Fusion",
-  "map_locations": [
-   {
-    "map": "map",
-    "x": 283,
-    "y": 1463,
-    "restrict_visibility_rules": [
-     "$FusionsRed"
+    "sections": [
+      {
+        "name": "Chests",
+        "item_count": 2,
+        "access_rules": [
+          "^$Json_Swamp_MittsCave_Chests"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
     ]
-   }
-  ],
-  "sections": [
-   {
-    "name": "Item",
-    "item_count": 1,
-    "access_rules": [
-     "^$Json_Swamp_Butterfly_JoyButterfly"
+  },
+  {
+    "name": "Swamp - Center Cave Darknut",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 283,
+        "y": 1403
+      }
     ],
-    "chest_unopened_img": "images/items-map/chest_closed.png",
-    "chest_opened_img": "images/items-map/chest_open.png"
-   }
-  ]
- }
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_Darknut_Kill"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Swamp - Fusions",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 75,
+        "y": 1700,
+        "restrict_visibility_rules": [
+          "$has|fusiongold_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 70
+      }
+    ],
+    "sections": [
+      {
+        "name": "Fusions",
+        "item_count": 3,
+        "access_rules": [
+          "^$Json_Swamp_CastorWildsFusions_Fusions"
+        ],
+        "chest_opened_img": "images/items-map/Gold Kinstone (Wilds) Gray.png",
+        "chest_unopened_img": "images/items-map/Gold Kinstone (Wilds).png"
+      }
+    ]
+  },
+  {
+    "name": "Swamp - Minish Fusion West Crack",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 37,
+        "y": 1326,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_WesternMinishCrack_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Swamp - Minish Fusion Water Hole",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 634,
+        "y": 1628,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_WaterMinishHole_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "HP",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_WaterMinishHole_HeartPiece"
+        ],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+  {
+    "name": "Swamp - Waterfall Fusion Dojo",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 612,
+        "y": 1158,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Gift",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_DojoWaterfall_Scarblade"
+        ],
+        "chest_unopened_img": "images/items-map/Tiger Scroll.png",
+        "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
+      }
+    ]
+  },
+  {
+    "name": "Swamp - Minish Fusion Vine Crack",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 240,
+        "y": 1603,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_VineMinishCrack_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Swamp - Golden Rope",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 400,
+        "y": 1230,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Kill",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_RopeGolden_Kill"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Swamp - Minish Fusion North Crack",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 133,
+        "y": 1167,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_NorthernMinishCrack_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Swamp - Butterfly Fusion",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 283,
+        "y": 1463,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Item",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Swamp_Butterfly_JoyButterfly"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  }
 ]
