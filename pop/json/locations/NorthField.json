@@ -1,11 +1,11 @@
 [
   {
-    "name": "North Field - Digging Spot",
+    "name": "North Field - Dig Spot",
     "map_locations": [
       {
         "map": "map",
-        "x": 1250,
-        "y": 800,
+        "x": 1235,
+        "y": 795,
         "restrict_visibility_rules": [
           "$has|digging_on"
         ]
@@ -28,18 +28,18 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1175,
-        "y": 650
+        "x": 1177,
+        "y": 628
       },
       {
         "map": "map",
-        "x": 1180,
-        "y": 800
+        "x": 1198,
+        "y": 808
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_NorthField_Cave_HeartPiece"
@@ -50,12 +50,12 @@
     ]
   },
   {
-    "name": "North Field - Dojo Waterfall",
+    "name": "North Field - Waterfall Fusion Dojo",
     "map_locations": [
       {
         "map": "map",
-        "x": 1120,
-        "y": 800,
+        "x": 1124,
+        "y": 805,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -63,7 +63,7 @@
     ],
     "sections": [
       {
-        "name": "Greatblade",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "^$Json_NorthField_DojoWaterfall_Greatblade"
@@ -74,12 +74,12 @@
     ]
   },
   {
-    "name": "North Field - Top Right Tree",
+    "name": "North Field - Tree Fusion Top Right",
     "map_locations": [
       {
         "map": "map",
-        "x": 1370,
-        "y": 655,
+        "x": 1374,
+        "y": 677,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -98,12 +98,12 @@
     ]
   },
   {
-    "name": "North Field - Top Left Tree",
+    "name": "North Field - Tree Fusion Top Left",
     "map_locations": [
       {
         "map": "map",
-        "x": 1275,
-        "y": 655,
+        "x": 1278,
+        "y": 677,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -122,12 +122,12 @@
     ]
   },
   {
-    "name": "North Field - Bottom Right Tree",
+    "name": "North Field - Tree Fusion Bottom Right",
     "map_locations": [
       {
         "map": "map",
-        "x": 1370,
-        "y": 730,
+        "x": 1374,
+        "y": 740,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -146,12 +146,12 @@
     ]
   },
   {
-    "name": "North Field - Bottom Left Tree",
+    "name": "North Field - Tree Fusion Bottom Left",
     "map_locations": [
       {
         "map": "map",
-        "x": 1275,
-        "y": 730,
+        "x": 1278,
+        "y": 740,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -170,12 +170,12 @@
     ]
   },
   {
-    "name": "North Field - Tingle Chest",
+    "name": "North Field - Tree Fusion Center",
     "map_locations": [
       {
         "map": "map",
-        "x": 1325,
-        "y": 695,
+        "x": 1326,
+        "y": 690,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]

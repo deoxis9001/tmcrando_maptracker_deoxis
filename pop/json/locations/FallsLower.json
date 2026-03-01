@@ -1,6 +1,6 @@
 [
   {
-    "name": "Veil Falls South - Rupees",
+    "name": "Falls Lower - Rock",
     "map_locations": [
       {
         "map": "map",
@@ -13,7 +13,7 @@
     ],
     "sections": [
       {
-        "name": "Rupee 1",
+        "name": "Item 1",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -23,7 +23,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Rupee 2",
+        "name": "Item 2",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -33,7 +33,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Rupee 3",
+        "name": "Item 3",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -45,12 +45,12 @@
     ]
   },
   {
-    "name": "Veil Falls South - Mitts Cave",
+    "name": "Falls Lower - Dig Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 1970,
-        "y": 525
+        "x": 1943,
+        "y": 533
       }
     ],
     "sections": [
@@ -75,17 +75,17 @@
     ]
   },
   {
-    "name": "Veil Falls South - Heart Piece",
+    "name": "Falls Lower",
     "map_locations": [
       {
         "map": "map",
-        "x": 1910,
-        "y": 750
+        "x": 1932,
+        "y": 762
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_FallsLower_HeartPiece_HeartPiece"
@@ -96,12 +96,12 @@
     ]
   },
   {
-    "name": "Veil Falls South - Dojo Waterfall",
+    "name": "Falls Lower - Waterfall Fusion Dojo",
     "map_locations": [
       {
         "map": "map",
-        "x": 1820,
-        "y": 686,
+        "x": 1826,
+        "y": 689,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -109,7 +109,7 @@
     ],
     "sections": [
       {
-        "name": "Splitblade",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "^$Json_FallsLower_DojoWaterfall_Splitblade"
@@ -120,11 +120,11 @@
     ]
   },
   {
-    "name": "Veil Falls South - North Ranch Chest",
+    "name": "Falls Lower - Lon Lon - Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1772,
+        "x": 1773,
         "y": 826,
         "restrict_visibility_rules": [
           "$FusionsGreen"

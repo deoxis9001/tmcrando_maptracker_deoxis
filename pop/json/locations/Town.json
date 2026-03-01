@@ -1,16 +1,16 @@
 [
   {
-    "name": "Town - Flippers Cave",
+    "name": "Town - Under Library",
     "map_locations": [
       {
         "map": "map",
-        "x": 1125,
-        "y": 1050
+        "x": 1139,
+        "y": 1065
       }
     ],
     "sections": [
       {
-        "name": "Scissor Beetles",
+        "name": "Big Chest",
         "item_count": 1,
         "visibility_rules": [
           "$LibraryWorld"
@@ -18,8 +18,8 @@
         "access_rules": [
           "^$Json_Town_FlippersCave_ScissorBeetles"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
         "name": "Frozen Chest",
@@ -34,7 +34,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Under the Waterfall",
+        "name": "Underwater",
         "visibility_rules": [
           "$LibraryWorld,$has|underwater_on"
         ],
@@ -48,26 +48,43 @@
     ]
   },
   {
-    "name": "Town - Inn",
+    "name": "Town - Inn Backdoor",
     "map_locations": [
       {
         "map": "map",
-        "x": 1610,
-        "y": 1275
+        "x": 1616,
+        "y": 1257
       }
     ],
     "sections": [
       {
-        "name": "Back Door - Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_Inn_BackDoorHeartPiece"
         ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+  {
+    "name": "Town - Inn",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1570,
+        "y": 1310
       },
       {
-        "name": "Right Pot",
+        "map": "map",
+        "x": 1592,
+        "y": 1414
+      }
+    ],
+    "sections": [
+      {
+        "name": "Pot",
         "visibility_rules": [
           "$has|specialpot_on"
         ],
@@ -121,12 +138,12 @@
     ]
   },
   {
-    "name": "Town - Digging Cave",
+    "name": "Town - Digging",
     "map_locations": [
       {
         "map": "map",
-        "x": 1465,
-        "y": 1275
+        "x": 1475,
+        "y": 1277
       }
     ],
     "sections": [
@@ -151,17 +168,17 @@
     ]
   },
   {
-    "name": "Town - Swiftblade's Dojo",
+    "name": "Town - Dojo",
     "map_locations": [
       {
         "map": "map",
-        "x": 1194,
-        "y": 1575
+        "x": 1198,
+        "y": 1618
       }
     ],
     "sections": [
       {
-        "name": "Spin Attack",
+        "name": "Sword",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_SwiftbladeDojo_SpinAttack"
@@ -170,7 +187,7 @@
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
-        "name": "Rock Breaker",
+        "name": "Green Sword",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_SwiftbladeDojo_RockBreaker"
@@ -179,7 +196,7 @@
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
-        "name": "Dash Attack",
+        "name": "Boots + Sword",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_SwiftbladeDojo_DashAttack"
@@ -188,7 +205,7 @@
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
-        "name": "Down Thrust",
+        "name": "Cape + Sword",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_SwiftbladeDojo_DownThrust"
@@ -199,17 +216,17 @@
     ]
   },
   {
-    "name": "Town - Stockwell's Shop",
+    "name": "Town - Shop",
     "map_locations": [
       {
         "map": "map",
-        "x": 1378,
-        "y": 1482
+        "x": 1390,
+        "y": 1510
       }
     ],
     "sections": [
       {
-        "name": "Wallet Spot (80 Rupees)",
+        "name": "80 Item",
         "access_rules": [
           "^$Json_Town_StockwellShop_Wallet"
         ],
@@ -219,7 +236,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Boomerang Spot (300 Rupees)",
+        "name": "300 Item",
         "access_rules": [
           "^$Json_Town_StockwellShop_Boomerang"
         ],
@@ -229,7 +246,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Quiver Spot (600 Rupees)",
+        "name": "600 Item",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -239,7 +256,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Bombag Spot (600 Rupees)",
+        "name": "600 Item 2",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -261,7 +278,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Dog Food Bottle",
+        "name": "Behind Counter",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -273,17 +290,17 @@
     ]
   },
   {
-    "name": "Town - School Gardens",
+    "name": "Town - School Path",
     "map_locations": [
       {
         "map": "map",
-        "x": 1600,
+        "x": 1602,
         "y": 1067
       }
     ],
     "sections": [
       {
-        "name": "Garden Chests",
+        "name": "Chests",
         "item_count": 3,
         "access_rules": [
           "^$Json_Town_SchoolGardens_GardenChests"
@@ -292,7 +309,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -302,7 +319,7 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Minish Path Chest",
+        "name": "Fusion Chest",
         "visibility_rules": [
           "$FusionsGreen"
         ],
@@ -320,22 +337,13 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1500,
-        "y": 1050
+        "x": 1464,
+        "y": 1115
       }
     ],
     "sections": [
       {
-        "name": "Roof Chest",
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Town_School_RoofChest"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Pull the Statue",
+        "name": "Basement Top - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_School_PulltheStatue"
@@ -356,12 +364,33 @@
     ]
   },
   {
-    "name": "Town - Mayor's House Basement",
+    "name": "Town - School Roof",
     "map_locations": [
       {
         "map": "map",
-        "x": 1535,
-        "y": 1220
+        "x": 1475,
+        "y": 1070
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Town_School_RoofChest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Town - Well Left",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 1538,
+        "y": 1210
       }
     ],
     "sections": [
@@ -381,8 +410,13 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1215,
-        "y": 1045
+        "x": 1199,
+        "y": 1060
+      },
+      {
+        "map": "map",
+        "x": 1230,
+        "y": 1125
       }
     ],
     "sections": [
@@ -455,13 +489,13 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1240,
-        "y": 1490
+        "x": 1262,
+        "y": 1510
       }
     ],
     "sections": [
       {
-        "name": "Lady Next to Cafe - Gift",
+        "name": "Cafe Lady",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_Cafe_Gift"
@@ -492,12 +526,12 @@
     ]
   },
   {
-    "name": "Town - Julietta's House",
+    "name": "Town - Jullieta",
     "map_locations": [
       {
         "map": "map",
-        "x": 1540,
-        "y": 1500
+        "x": 1550,
+        "y": 1524
       }
     ],
     "sections": [
@@ -514,12 +548,12 @@
     ]
   },
   {
-    "name": "Town - Hyrule Well",
+    "name": "Town - Well",
     "map_locations": [
       {
         "map": "map",
-        "x": 1500,
-        "y": 1425
+        "x": 1497,
+        "y": 1435
       }
     ],
     "sections": [
@@ -533,7 +567,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Center Chest",
+        "name": "Pillar Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_HyruleWell_CenterChest"
@@ -544,12 +578,12 @@
     ]
   },
   {
-    "name": "Town - Hearth Ledge",
+    "name": "Town - Inn Ledge",
     "map_locations": [
       {
         "map": "map",
-        "x": 1550,
-        "y": 1350
+        "x": 1571,
+        "y": 1357
       }
     ],
     "sections": [
@@ -569,22 +603,22 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1225,
-        "y": 1250
+        "x": 1238,
+        "y": 1275
       }
     ],
     "sections": [
       {
-        "name": "Mulldozers",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_Fountain_Mulldozers"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Chest",
+        "name": "Small Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_Fountain_Chest"
@@ -593,7 +627,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -605,35 +639,59 @@
     ]
   },
   {
-    "name": "Town - Eastern Shops",
+    "name": "Town - Shoe Shop",
     "map_locations": [
       {
         "map": "map",
-        "x": 1225,
-        "y": 1350
+        "x": 1220,
+        "y": 1342
       }
     ],
     "sections": [
       {
-        "name": "Rem",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_EasternShops_Rem"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Town - Simulation",
+    "map_locations": [
       {
-        "name": "Simon's Simulations",
+        "map": "map",
+        "x": 1220,
+        "y": 1385
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_EasternShops_SimonSimulations"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Town - Music House",
+    "map_locations": [
       {
-        "name": "Figurine House",
+        "map": "map",
+        "x": 1220,
+        "y": 1427
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
         "item_count": 3,
         "access_rules": [
           "^$Json_Town_EasternShops_FigurineHouse"
@@ -642,7 +700,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Figurine House Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_EasternShops_FigurineHouseHeartPiece"
@@ -654,17 +712,17 @@
     ]
   },
   {
-    "name": "Town - Dr. Left's House",
+    "name": "Town - Dr Left Attic",
     "map_locations": [
       {
         "map": "map",
-        "x": 1030,
-        "y": 1355
+        "x": 1028,
+        "y": 1405
       }
     ],
     "sections": [
       {
-        "name": "Item",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_DrLeftHouse_DrLeftHouse"
@@ -679,8 +737,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1050,
-        "y": 1580
+        "x": 1043,
+        "y": 1603
       }
     ],
     "sections": [
@@ -701,12 +759,12 @@
       {
         "map": "map",
         "x": 1325,
-        "y": 1200
+        "y": 1205
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Town_Bell_HeartPiece"
@@ -721,8 +779,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1425,
-        "y": 1345
+        "x": 1431,
+        "y": 1325
       }
     ],
     "sections": [
@@ -738,7 +796,7 @@
     ]
   },
   {
-    "name": "Town - Anju",
+    "name": "Town - Cuccos",
     "map_locations": [
       {
         "map": "map",
@@ -748,7 +806,7 @@
     ],
     "sections": [
       {
-        "name": "Round 1 Gift",
+        "name": "Lv 1",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_10"
@@ -760,7 +818,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 2 Gift",
+        "name": "Lv 2",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_9"
@@ -772,7 +830,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 3 Gift",
+        "name": "Lv 3",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_8"
@@ -784,7 +842,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 4 Gift",
+        "name": "Lv 4",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_7"
@@ -796,7 +854,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 5 Gift",
+        "name": "Lv 5",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_6"
@@ -808,7 +866,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 6 Gift",
+        "name": "Lv 6",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_5"
@@ -820,7 +878,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 7 Gift",
+        "name": "Lv 7",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_4"
@@ -832,7 +890,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 8 Gift",
+        "name": "Lv 8",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_3"
@@ -844,7 +902,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 9 Gift",
+        "name": "Lv 9",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_2"
@@ -856,7 +914,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Round 10 Gift",
+        "name": "Lv 10",
         "item_count": 1,
         "visibility_rules": [
           "$has|cucco_1"
@@ -870,7 +928,7 @@
     ]
   },
   {
-    "name": "Town - Waterfall",
+    "name": "Town - Waterfall Fusion",
     "map_locations": [
       {
         "map": "map",
@@ -883,7 +941,7 @@
     ],
     "sections": [
       {
-        "name": "Waterfall",
+        "name": "Chest",
         "access_rules": [
           "^$Json_Town_TownWaterfall_Waterfall"
         ],
@@ -990,17 +1048,17 @@
     ]
   },
   {
-    "name": "Town - Goron Shop",
+    "name": "Town - Goron Merchant",
     "map_locations": [
       {
         "map": "map",
-        "x": 1350,
+        "x": 1352,
         "y": 1350
       }
     ],
     "sections": [
       {
-        "name": "Set 1 - Item Left",
+        "name": "1 Left",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1013,7 +1071,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 1 - Item Center",
+        "name": "1 Middle",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1026,7 +1084,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 1 - Item Right",
+        "name": "1 Right",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1039,7 +1097,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 2 - Item Left",
+        "name": "2 Left",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1052,7 +1110,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 2 - Item Center",
+        "name": "2 Middle",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1065,7 +1123,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 2 - Item Right",
+        "name": "2 Right",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1078,7 +1136,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 3 - Item Left",
+        "name": "3 Left",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1091,7 +1149,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 3 - Item Center",
+        "name": "3 Middle",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1104,7 +1162,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 3 - Item Right",
+        "name": "3 Right",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1117,7 +1175,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 4 - Item Left",
+        "name": "4 Left",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1130,7 +1188,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 4 - Item Center",
+        "name": "4 Middle",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1143,7 +1201,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 4 - Item Right",
+        "name": "4 Right",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1156,7 +1214,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 5 - Item Left",
+        "name": "5 Left",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1169,7 +1227,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 5 - Item Center",
+        "name": "5 Middle",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [
@@ -1182,7 +1240,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Set 5 - Item Right",
+        "name": "5 Right",
         "item_count": 1,
         "capture_item": true,
         "visibility_rules": [

@@ -4,13 +4,13 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 2310,
-        "y": 1250
+        "x": 2311,
+        "y": 1262
       }
     ],
     "sections": [
       {
-        "name": "Waveblade",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "^$Json_Hylia_Dojo_Waveblade"
@@ -19,7 +19,7 @@
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Hylia_Dojo_HeartPiece"
@@ -40,17 +40,17 @@
     ]
   },
   {
-    "name": "Hylia - Pond Heart Piece",
+    "name": "Hylia - Sunken",
     "map_locations": [
       {
         "map": "map",
-        "x": 2290,
-        "y": 820
+        "x": 2294,
+        "y": 827
       }
     ],
     "sections": [
       {
-        "name": "Diving",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Hylia_PondHeartPiece_Chest"
@@ -65,12 +65,12 @@
     ]
   },
   {
-    "name": "Hylia - North Minish Hole",
+    "name": "Hylia North - Minish Hole",
     "map_locations": [
       {
         "map": "map",
-        "x": 2600,
-        "y": 850
+        "x": 2603,
+        "y": 862
       }
     ],
     "sections": [
@@ -86,12 +86,12 @@
     ]
   },
   {
-    "name": "Hylia - Treasure Cave",
+    "name": "Hylia - Cape Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 2450,
-        "y": 850
+        "x": 2464,
+        "y": 862
       }
     ],
     "sections": [
@@ -105,7 +105,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Beanstalk - Chest",
+        "name": "Beanstalk Fusion - Chests",
         "visibility_rules": [
           "$FusionsBlue"
         ],
@@ -117,7 +117,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Beanstalk - Heart Piece",
+        "name": "Beanstalk Fusion - HP",
         "visibility_rules": [
           "$FusionsBlue"
         ],
@@ -141,12 +141,12 @@
     ]
   },
   {
-    "name": "Hylia - Minish Woods - North Minish Hole",
+    "name": "Hylia South - Minish Hole",
     "map_locations": [
       {
         "map": "map",
-        "x": 2626,
-        "y": 1470
+        "x": 2614,
+        "y": 1480
       }
     ],
     "sections": [
@@ -162,17 +162,17 @@
     ]
   },
   {
-    "name": "Hylia - Lon Lon Ranch - North Heart Piece",
+    "name": "Hylia - Cape Cave - Lon Lon",
     "map_locations": [
       {
         "map": "map",
-        "x": 2020,
-        "y": 875
+        "x": 2017,
+        "y": 878
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -184,12 +184,12 @@
     ]
   },
   {
-    "name": "Hylia - Lake Cabin",
+    "name": "Hylia - Mayor Cabin",
     "map_locations": [
       {
         "map": "map",
-        "x": 2590,
-        "y": 1365
+        "x": 2587,
+        "y": 1395
       }
     ],
     "sections": [
@@ -202,7 +202,19 @@
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Hylia - Cabin Path Fusion",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2592,
+        "y": 1335
+      }
+    ],
+    "sections": [
       {
         "name": "Chest",
         "item_count": 1,
@@ -218,17 +230,17 @@
     ]
   },
   {
-    "name": "Hylia - Southern",
+    "name": "Hylia - Bottom",
     "map_locations": [
       {
         "map": "map",
-        "x": 2430,
-        "y": 1335
+        "x": 2423,
+        "y": 1326
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -240,17 +252,17 @@
     ]
   },
   {
-    "name": "Hylia - Cape Heart Piece",
+    "name": "Hylia - Small Island",
     "map_locations": [
       {
         "map": "map",
-        "x": 2475,
-        "y": 950
+        "x": 2491,
+        "y": 959
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -262,12 +274,12 @@
     ]
   },
   {
-    "name": "Hylia - Fifi",
+    "name": "Hylia - Dog",
     "map_locations": [
       {
         "map": "map",
-        "x": 2360,
-        "y": 820
+        "x": 2332,
+        "y": 842
       }
     ],
     "sections": [
@@ -293,12 +305,12 @@
     ]
   },
   {
-    "name": "Hylia - Middle Island Cave",
+    "name": "Hylia - Middle Island Fusion Dig Cave",
     "map_locations": [
       {
         "map": "map",
         "x": 2464,
-        "y": 1133,
+        "y": 1127,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -317,12 +329,12 @@
     ]
   },
   {
-    "name": "Hylia - Librari",
+    "name": "Hylia - Crack Fusion Librari",
     "map_locations": [
       {
         "map": "map",
-        "x": 2239,
-        "y": 1144,
+        "x": 2241,
+        "y": 1145,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -330,7 +342,7 @@
       {
         "map": "map",
         "x": 2464,
-        "y": 1083,
+        "y": 1086,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]

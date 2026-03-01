@@ -422,22 +422,17 @@
     ]
   },
   {
-    "name": "Crypt - Gibdos",
+    "name": "Crypt - Gibdo Left",
     "map_locations": [
       {
         "map": "rc",
-        "x": 295,
-        "y": 805
-      },
-      {
-        "map": "rc",
-        "x": 295,
-        "y": 805
+        "x": 257,
+        "y": 808
       }
     ],
     "sections": [
       {
-        "name": "First Kill",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_Gibdos"
@@ -445,9 +440,21 @@
         "capture_item": true,
         "chest_unopened_img": "images/items-map/Small Key.png",
         "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Crypt - Gibdo Right",
+    "map_locations": [
       {
-        "name": "Second Kill",
+        "map": "rc",
+        "x": 347,
+        "y": 808
+      }
+    ],
+    "sections": [
+      {
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_OtherGibdos"
@@ -459,22 +466,17 @@
     ]
   },
   {
-    "name": "Crypt - Left Path",
+    "name": "Crypt - Left",
     "map_locations": [
       {
         "map": "rc",
-        "x": 143,
-        "y": 85
-      },
-      {
-        "map": "rc",
-        "x": 143,
-        "y": 85
+        "x": 145,
+        "y": 87
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_LeftPath"
@@ -485,22 +487,17 @@
     ]
   },
   {
-    "name": "Crypt - Right Path",
+    "name": "Crypt - Right",
     "map_locations": [
       {
         "map": "rc",
-        "x": 447,
-        "y": 85
-      },
-      {
-        "map": "rc",
-        "x": 447,
-        "y": 85
+        "x": 450,
+        "y": 87
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_RightPath"
@@ -511,17 +508,12 @@
     ]
   },
   {
-    "name": "Crypt - King Gustaf",
+    "name": "Crypt - Prize",
     "map_locations": [
       {
         "map": "rc",
         "x": 895,
-        "y": 75
-      },
-      {
-        "map": "rc",
-        "x": 895,
-        "y": 75
+        "y": 110
       }
     ],
     "sections": [

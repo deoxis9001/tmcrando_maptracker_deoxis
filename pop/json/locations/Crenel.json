@@ -1,11 +1,35 @@
 [
   {
+    "name": "Crenel - Mines Path Fusion",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 410,
+        "y": 329
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "visibility_rules": [
+          "$FusionsGreen"
+        ],
+        "access_rules": [
+          "^$Json_Crenel_Mines_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
     "name": "Crenel - Mines",
     "map_locations": [
       {
         "map": "map",
-        "x": 425,
-        "y": 350
+        "x": 385,
+        "y": 357
       }
     ],
     "sections": [
@@ -26,18 +50,6 @@
         "item_count": 8,
         "access_rules": [
           "^$Json_Crenel_Mines_Digging"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Chest",
-        "item_count": 1,
-        "visibility_rules": [
-          "$FusionsGreen"
-        ],
-        "access_rules": [
-          "^$Json_Crenel_Mines_Chest"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -99,8 +111,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 225,
-        "y": 500
+        "x": 218,
+        "y": 477
       }
     ],
     "sections": [
@@ -116,7 +128,7 @@
     ]
   },
   {
-    "name": "Crenel - Beanstalk",
+    "name": "Crenel - Beanstalk Fusion",
     "map_locations": [
       {
         "map": "map",
@@ -129,7 +141,7 @@
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Crenel_Beanstalk_HeartPiece"
@@ -138,7 +150,7 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Rupees",
+        "name": "Items",
         "visibility_rules": [
           "$has|rupees_on"
         ],
@@ -152,11 +164,11 @@
     ]
   },
   {
-    "name": "Crenel - Climbing Wall Chest",
+    "name": "Crenel - Climb Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 121,
+        "x": 123,
         "y": 399,
         "restrict_visibility_rules": [
           "$FusionsGreen"
@@ -176,7 +188,7 @@
     ]
   },
   {
-    "name": "Crenel - Middle Tektite Golden",
+    "name": "Crenel - Vine Top Golden Tektite",
     "map_locations": [
       {
         "map": "map",
@@ -200,12 +212,12 @@
     ]
   },
   {
-    "name": "Crenel - Rainy Minish Path Chest",
+    "name": "Crenel - Rain Path Fusion",
     "map_locations": [
       {
         "map": "map",
         "x": 490,
-        "y": 100,
+        "y": 101,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -224,7 +236,7 @@
     ]
   },
   {
-    "name": "Crenel - Top Tektite Golden",
+    "name": "Crenel - Below CoF Golden Tektite",
     "map_locations": [
       {
         "map": "map",
@@ -252,8 +264,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 557,
-        "y": 595
+        "x": 559,
+        "y": 617
       }
     ],
     "sections": [
@@ -269,17 +281,17 @@
     ]
   },
   {
-    "name": "Crenel - Business Scrub",
+    "name": "Crenel - Scrub",
     "map_locations": [
       {
         "map": "map",
-        "x": 583,
-        "y": 470
+        "x": 581,
+        "y": 467
       }
     ],
     "sections": [
       {
-        "name": "Scrub",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "^$Json_Crenel_BusinessScrub_Scrub"
@@ -290,17 +302,17 @@
     ]
   },
   {
-    "name": "Crenel - Fairy",
+    "name": "Crenel - Fairy Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 110,
-        "y": 600
+        "x": 112,
+        "y": 605
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Crenel_Fairy_HeartPiece"
@@ -315,8 +327,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 600,
-        "y": 350
+        "x": 602,
+        "y": 372
       }
     ],
     "sections": [
@@ -330,7 +342,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Crenel_Dojo_HeartPiece"
@@ -339,7 +351,7 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Grayblade",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "^$Json_Crenel_Dojo_Grayblade"
@@ -360,12 +372,12 @@
     ]
   },
   {
-    "name": "Crenel - Mines Cave",
+    "name": "Crenel - Upper Block",
     "map_locations": [
       {
         "map": "map",
-        "x": 500,
-        "y": 300
+        "x": 517,
+        "y": 319
       }
     ],
     "sections": [
@@ -381,17 +393,17 @@
     ]
   },
   {
-    "name": "Crenel - Mitts Cave",
+    "name": "Crenel - Dig Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 35,
-        "y": 200
+        "x": 37,
+        "y": 212
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Crenel_DiggingCave_Heartpiece"

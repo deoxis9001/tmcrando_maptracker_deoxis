@@ -64,8 +64,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 2670,
-        "y": 730,
+        "x": 2677,
+        "y": 744,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "name": "Clouds - Top Right Digging Spot",
+    "name": "Clouds - North East",
     "map_locations": [
       {
         "map": "map",
@@ -97,7 +97,7 @@
     ],
     "sections": [
       {
-        "name": "Digging",
+        "name": "Dig Spot",
         "item_count": 1,
         "access_rules": [
           "^$Json_Clouds_TopRightDiggingSpot_Digging"
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "name": "Clouds - Top Left North Chests",
+    "name": "Clouds - North West Top",
     "map_locations": [
       {
         "map": "map",
@@ -130,7 +130,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Digging",
+        "name": "Dig Spot",
         "item_count": 1,
         "visibility_rules": [
           "$has|digging_on"
@@ -148,8 +148,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 3300,
-        "y": 730,
+        "x": 3290,
+        "y": 710,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
@@ -197,7 +197,7 @@
       {
         "map": "map",
         "x": 3150,
-        "y": 730,
+        "y": 720,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
@@ -240,12 +240,12 @@
     ]
   },
   {
-    "name": "Clouds - Kill Piranhas (North)",
+    "name": "Clouds - North Shark",
     "map_locations": [
       {
         "map": "map",
-        "x": 2970,
-        "y": 840,
+        "x": 2997,
+        "y": 837,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
@@ -268,8 +268,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 3010,
-        "y": 1270,
+        "x": 3029,
+        "y": 1294,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "name": "Clouds - Right Chest",
+    "name": "Clouds - Free",
     "map_locations": [
       {
         "map": "map",
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "name": "Clouds - Top Left South Chest",
+    "name": "Clouds - North West Bottom",
     "map_locations": [
       {
         "map": "map",
@@ -388,20 +388,20 @@
     ]
   },
   {
-    "name": "Wind Tribe House",
+    "name": "Wind Tribe",
     "map_locations": [
       {
         "map": "map",
-        "x": 2303,
-        "y": 350,
+        "x": 2305,
+        "y": 360,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
       },
       {
         "map": "map",
-        "x": 1375,
-        "y": 1830,
+        "x": 1379,
+        "y": 1826,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -409,7 +409,7 @@
     ],
     "sections": [
       {
-        "name": "1F Chests",
+        "name": "1F - Chests",
         "item_count": 2,
         "access_rules": [
           "^$Json_WindTribe_WindTribeHouse_1FChests"
@@ -418,7 +418,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "2F Chest",
+        "name": "2F - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_WindTribe_WindTribeHouse_2FChest"
@@ -427,7 +427,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "2F Save Gregal",
+        "name": "2F - Gregal Gift 1",
         "item_count": 1,
         "access_rules": [
           "^$Json_WindTribe_WindTribeHouse_2FSaveGregal"
@@ -436,7 +436,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "2F Gregal's Gift",
+        "name": "2F - Gregal Gift 2",
         "item_count": 1,
         "visibility_rules": [
           "$CloudTopFallVisibility"
@@ -448,7 +448,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "3F Chests",
+        "name": "3F - Chests",
         "item_count": 3,
         "visibility_rules": [
           "$CloudTopFallVisibility"
@@ -460,7 +460,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "4F Chests",
+        "name": "4F - Chests",
         "item_count": 2,
         "visibility_rules": [
           "$CloudTopFallVisibility"
@@ -544,12 +544,12 @@
     ]
   },
   {
-    "name": "Clouds - Bottom Left Chest",
+    "name": "Clouds - South Left",
     "map_locations": [
       {
         "map": "map",
-        "x": 2730,
-        "y": 680,
+        "x": 2731,
+        "y": 677,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
@@ -572,7 +572,7 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 2855,
+        "x": 2858,
         "y": 1270,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|fusiongold_vanilla"
@@ -598,8 +598,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 3275,
-        "y": 1270,
+        "x": 3274,
+        "y": 1277,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|fusiongold_vanilla"
         ],
@@ -624,8 +624,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 2845,
-        "y": 575,
+        "x": 2869,
+        "y": 579,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
@@ -648,8 +648,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 3000,
-        "y": 575,
+        "x": 3007,
+        "y": 579,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]

@@ -1,11 +1,11 @@
 [
   {
-    "name": "Wind Ruins - Minish Wall Hole",
+    "name": "Ruins - Minish Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 230,
-        "y": 2000,
+        "x": 197,
+        "y": 2014,
         "restrict_visibility_rules": [
           "$FusionsGold"
         ]
@@ -13,7 +13,7 @@
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Ruins_MinishWallHole_HeartPiece"
@@ -24,12 +24,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - Minish Hole",
+    "name": "Ruins - Minish Home",
     "map_locations": [
       {
         "map": "map",
-        "x": 50,
-        "y": 2000,
+        "x": 48,
+        "y": 2019,
         "restrict_visibility_rules": [
           "$FusionsGold"
         ]
@@ -58,12 +58,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - Bombable Wall",
+    "name": "Ruins - Bomb Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 130,
-        "y": 1780,
+        "x": 133,
+        "y": 1798,
         "restrict_visibility_rules": [
           "$FusionsGold"
         ]
@@ -82,12 +82,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - Armos Kill",
+    "name": "Ruins - Armos Kill",
     "map_locations": [
       {
         "map": "map",
-        "x": 560,
-        "y": 1930,
+        "x": 554,
+        "y": 1942,
         "restrict_visibility_rules": [
           "$FusionsGold"
         ]
@@ -106,12 +106,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - Pre FOW",
+    "name": "Ruins - Near Dungeon Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 640,
-        "y": 1867,
+        "x": 645,
+        "y": 1869,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsRed"
         ]
@@ -130,12 +130,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - 4 Pillars",
+    "name": "Ruins - Pillars Fusion",
     "map_locations": [
       {
         "map": "map",
         "x": 250,
-        "y": 2060,
+        "y": 2061,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsGreen"
         ]
@@ -154,12 +154,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - Octo Golden",
+    "name": "Ruins - Golden Octo",
     "map_locations": [
       {
         "map": "map",
-        "x": 500,
-        "y": 2060,
+        "x": 520,
+        "y": 2070,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsGreenLibrary,$has|golden_enemy_on"
         ]
@@ -178,12 +178,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - Minish Crack",
+    "name": "Ruins - Minish Crack",
     "map_locations": [
       {
         "map": "map",
-        "x": 291,
-        "y": 1953,
+        "x": 293,
+        "y": 1954,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsGreen"
         ]
@@ -202,12 +202,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - Joy Butterfly",
+    "name": "Ruins - Butterfly Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 20,
-        "y": 1850,
+        "x": 26,
+        "y": 1847,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsRed"
         ]
@@ -215,7 +215,7 @@
     ],
     "sections": [
       {
-        "name": "Joy Butterfly",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Ruins_JoyButterfly_Butterfly"
@@ -226,12 +226,12 @@
     ]
   },
   {
-    "name": "Wind Ruins - Beanstalk",
+    "name": "Ruins - Beanstalk Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 210,
-        "y": 1795,
+        "x": 209,
+        "y": 1780,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsRed"
         ]

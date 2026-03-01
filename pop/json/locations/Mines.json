@@ -1,6 +1,6 @@
 [
   {
-    "name": "Crenel - Mines - Melari",
+    "name": "Crenel - Melari Mines - Melari",
     "map_locations": [
       {
         "map": "mines",
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "name": "Crenel - Mines - Digging Spot 8",
+    "name": "Crenel - Melari Mines - Center",
     "map_locations": [
       {
         "map": "mines",
@@ -45,12 +45,12 @@
     ]
   },
   {
-    "name": "Crenel - Mines - Digging Spot 7",
+    "name": "Crenel - Melari Mines - Bottom Left",
     "map_locations": [
       {
         "map": "mines",
-        "x": 580,
-        "y": 1650,
+        "x": 570,
+        "y": 1670,
         "restrict_visibility_rules": [
           "$has|digging_on"
         ]
@@ -69,12 +69,12 @@
     ]
   },
   {
-    "name": "Crenel - Mines - Digging Spot 6",
+    "name": "Crenel - Melari Mines - Bottom Middle",
     "map_locations": [
       {
         "map": "mines",
-        "x": 1375,
-        "y": 1700,
+        "x": 1387,
+        "y": 1727,
         "restrict_visibility_rules": [
           "$has|digging_on"
         ]
@@ -93,12 +93,12 @@
     ]
   },
   {
-    "name": "Crenel - Mines - Digging Spot 5",
+    "name": "Crenel - Melari Mines - Bottom Right",
     "map_locations": [
       {
         "map": "mines",
-        "x": 2080,
-        "y": 1750,
+        "x": 2090,
+        "y": 1760,
         "restrict_visibility_rules": [
           "$has|digging_on"
         ]
@@ -117,11 +117,11 @@
     ]
   },
   {
-    "name": "Crenel - Mines - Digging Spot 4",
+    "name": "Crenel - Melari Mines - Top Right",
     "map_locations": [
       {
         "map": "mines",
-        "x": 2175,
+        "x": 2220,
         "y": 400,
         "restrict_visibility_rules": [
           "$has|digging_on"
@@ -141,11 +141,11 @@
     ]
   },
   {
-    "name": "Crenel - Mines - Digging Spot 3",
+    "name": "Crenel - Melari Mines - Top Left",
     "map_locations": [
       {
         "map": "mines",
-        "x": 750,
+        "x": 745,
         "y": 240,
         "restrict_visibility_rules": [
           "$has|digging_on"
@@ -165,7 +165,7 @@
     ]
   },
   {
-    "name": "Crenel - Mines - Digging Spot 2",
+    "name": "Crenel - Melari Mines - Top Middle",
     "map_locations": [
       {
         "map": "mines",
@@ -189,7 +189,7 @@
     ]
   },
   {
-    "name": "Crenel - Mines - Digging Spot 1",
+    "name": "Crenel - Melari Mines - Left",
     "map_locations": [
       {
         "map": "mines",

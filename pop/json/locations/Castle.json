@@ -1,27 +1,39 @@
 [
   {
-    "name": "Castle - Moat",
+    "name": "Castle - Moat Right",
     "map_locations": [
       {
         "map": "map",
-        "x": 1050,
-        "y": 450
+        "x": 1102,
+        "y": 452
       }
     ],
     "sections": [
       {
-        "name": "Left Chest",
+        "name": "Chest",
         "access_rules": [
-          "^$Json_Castle_Moat_LeftChest"
+          "^$Json_Castle_Moat_RightChest"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png",
         "item_count": 1
-      },
+      }
+    ]
+  },
+  {
+    "name": "Castle - Moat Left",
+    "map_locations": [
       {
-        "name": "Right Chest",
+        "map": "map",
+        "x": 1017,
+        "y": 452
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
         "access_rules": [
-          "^$Json_Castle_Moat_RightChest"
+          "^$Json_Castle_Moat_LeftChest"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png",
@@ -34,13 +46,13 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1610,
-        "y": 360
+        "x": 1612,
+        "y": 375
       }
     ],
     "sections": [
       {
-        "name": "Grimblade",
+        "name": "Gift",
         "access_rules": [
           "^$Json_Castle_Dojo_Grimblade"
         ],
@@ -49,7 +61,7 @@
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "access_rules": [
           "^$Json_Castle_Dojo_HeartPiece"
         ],
@@ -70,7 +82,7 @@
     ]
   },
   {
-    "name": "Castle - Rope Golden",
+    "name": "Castle - Golden Rope",
     "map_locations": [
       {
         "map": "map",
@@ -98,8 +110,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1610,
-        "y": 160,
+        "x": 1613,
+        "y": 175,
         "shape": "diamond",
         "size": 70
       }
@@ -122,8 +134,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1505,
-        "y": 160,
+        "x": 1506,
+        "y": 170,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -140,7 +152,7 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Minish Hole",
+        "name": "Fusion Minish Hole - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Castle_RightFountain_MinishHole"
@@ -155,8 +167,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1140,
-        "y": 160,
+        "x": 1144,
+        "y": 152,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -164,7 +176,7 @@
     ],
     "sections": [
       {
-        "name": "Minish Hole",
+        "name": "Fusion Minish Hole - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Castle_LeftFountain_MinishHole"

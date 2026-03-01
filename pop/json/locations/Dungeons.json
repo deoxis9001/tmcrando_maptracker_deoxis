@@ -42,8 +42,8 @@
       },
       {
         "map": "map",
-        "x": 827,
-        "y": 150,
+        "x": 830,
+        "y": 165,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|cof_crypt,$has|dungeonser_on"
@@ -205,7 +205,7 @@
     ]
   },
   {
-    "name": "Royal Crypt",
+    "name": "Crypt",
     "map_locations": [
       {
         "map": "map",
@@ -245,8 +245,8 @@
       },
       {
         "map": "map",
-        "x": 827,
-        "y": 150,
+        "x": 830,
+        "y": 165,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
@@ -274,7 +274,7 @@
     ],
     "sections": [
       {
-        "name": "First Gibdos",
+        "name": "Gibdo Left - Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_Gibdos"
@@ -284,7 +284,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Other Gibdos",
+        "name": "Gibdo Right - Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_OtherGibdos"
@@ -294,7 +294,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Left Path",
+        "name": "Left - Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_LeftPath"
@@ -303,7 +303,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Right Path",
+        "name": "Right - Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_RightPath"
@@ -312,7 +312,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "King Gustaf",
+        "name": "Prize",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_KingGustaf"
@@ -363,8 +363,8 @@
       },
       {
         "map": "map",
-        "x": 827,
-        "y": 150,
+        "x": 830,
+        "y": 165,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dws_crypt,$has|dungeonser_on"
@@ -581,8 +581,8 @@
       },
       {
         "map": "map",
-        "x": 827,
-        "y": 150,
+        "x": 830,
+        "y": 165,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|fow_crypt,$has|dungeonser_on"
@@ -879,8 +879,8 @@
       },
       {
         "map": "map",
-        "x": 827,
-        "y": 150,
+        "x": 830,
+        "y": 165,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|pow_crypt,$has|dungeonser_on"
@@ -1136,8 +1136,8 @@
       },
       {
         "map": "map",
-        "x": 827,
-        "y": 150,
+        "x": 830,
+        "y": 165,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|tod_crypt,$has|dungeonser_on"
@@ -1447,8 +1447,8 @@
       },
       {
         "map": "map",
-        "x": 827,
-        "y": 150,
+        "x": 830,
+        "y": 165,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dhc_crypt,$has|dungeonser_on"
@@ -1837,8 +1837,8 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 827,
-        "y": 150,
+        "x": 830,
+        "y": 165,
         "shape": "trapezoid",
         "force_invisibility_rules": [
           "$has|dungeonser_off",
