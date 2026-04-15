@@ -1001,6 +1001,169 @@
       }
     ]
   },
+  "map_overworld": {
+    "type": "dock",
+    "content": [
+      {
+        "type": "tabbed",
+        "tabs": [
+          {
+            "title": "Overworld",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map"
+              ]
+            }
+          },
+          {
+            "title": "Castle",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_castle"
+              ]
+            }
+          },
+          {
+            "title": "Clouds",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_clouds"
+              ]
+            }
+          },
+          {
+            "title": "Crenel",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_crenel"
+              ]
+            }
+          },
+          {
+            "title": "Falls",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_falls"
+              ]
+            }
+          },
+          {
+            "title": "Hills",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_hills"
+              ]
+            }
+          },
+          {
+            "title": "Hylia",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_hylia"
+              ]
+            }
+          },
+          {
+            "title": "Lon Lon",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_lonlon"
+              ]
+            }
+          },
+          {
+            "title": "Minish Woods",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_minishwoods"
+              ]
+            }
+          },
+          {
+            "title": "North Field",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_northfield"
+              ]
+            }
+          },
+          {
+            "title": "Ruins",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_ruins"
+              ]
+            }
+          },
+          {
+            "title": "South Field",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_southfield"
+              ]
+            }
+          },
+          {
+            "title": "Swamp",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_swamp"
+              ]
+            }
+          },
+          {
+            "title": "Town",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_town"
+              ]
+            }
+          },
+          {
+            "title": "Trilby",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_trilby"
+              ]
+            }
+          },
+          {
+            "title": "Valley",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_valley"
+              ]
+            }
+          },
+          {
+            "title": "Western Woods",
+            "content": {
+              "type": "map",
+              "maps": [
+                "map_westernwoods"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
   "dws_map": {
     "type": "dock",
     "content": [
@@ -1013,6 +1176,15 @@
               "type": "map",
               "maps": [
                 "dws"
+              ]
+            }
+          },
+          {
+            "title": "2F",
+            "content": {
+              "type": "map",
+              "maps": [
+                "dws_2F"
               ]
             }
           },
@@ -1031,15 +1203,6 @@
               "type": "map",
               "maps": [
                 "dws_B1"
-              ]
-            }
-          },
-          {
-            "title": "B2",
-            "content": {
-              "type": "map",
-              "maps": [
-                "dws_B2"
               ]
             }
           }
@@ -1425,10 +1588,8 @@
                   "title": "Overworld",
                   "icon": "images/icon-maps/Compass.png",
                   "content": {
-                    "type": "map",
-                    "maps": [
-                      "map"
-                    ]
+                    "type": "layout",
+                    "key": "map_overworld"
                   }
                 },
                 {

@@ -5,7 +5,7 @@
   "package_version": "1.0.0.13",
   "versions_url": "https://en-minish-cap.deoxis9001.ovh/dev/beta-version.json",
   "homepage": "https://en-minish-cap.deoxis9001.ovh/",
-  "package_uid": "StableTmcrTrackerDeoxis",
+  "package_uid": "BetaTmcrTrackerDeoxis",
   "author": "Deoxis Hysteria",
   "min_poptracker_version": "0.32.1",
   "variants": {
