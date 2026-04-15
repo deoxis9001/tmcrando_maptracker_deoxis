@@ -17,6 +17,17 @@ on:
     types:
       - completed
   workflow_dispatch:
+    inputs:
+      check:
+        description: "What to validate"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - all
+          - json
+          - lua
+          - images
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -35,6 +46,7 @@ jobs:
           sudo apt-get install -y jq lua5.4
 
       - name: Validate JSON files
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.check == 'all' || inputs.check == 'json' }}
         run: |
           ERRORS=0
           while IFS= read -r -d '' file; do
@@ -53,6 +65,7 @@ jobs:
           echo "All JSON files are valid."
 
       - name: Validate Lua files
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.check == 'all' || inputs.check == 'lua' }}
         run: |
           ERRORS=0
           while IFS= read -r -d '' file; do
@@ -71,6 +84,7 @@ jobs:
           echo "All Lua files are valid."
 
       - name: Check image path casing in JSON files
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.check == 'all' || inputs.check == 'images' }}
         run: |
           # Extracts ALL values matching "images/..." regardless of the key
           # (covers: "icon", "img", "chest_unopened_img", "chest_opened_img", etc.)
@@ -92,6 +106,7 @@ jobs:
           echo "All image paths in JSON files are valid."
 
       - name: Check image path casing in Lua files
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.check == 'all' || inputs.check == 'images' }}
         run: |
           # Extracts all "images/..." string literals from Lua source files
           ERRORS=0
