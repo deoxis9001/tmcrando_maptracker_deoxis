@@ -11,6 +11,11 @@ on:
       - '**.json'
       - '**.lua'
       - 'images/**'
+  workflow_run:
+    workflows:
+      - "Auto-format JSON (local)"
+    types:
+      - completed
   workflow_dispatch:
 
 env:
