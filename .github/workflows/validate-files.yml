@@ -1,0 +1,102 @@
+name: Validate JSON, Lua and Image paths
+
+on:
+  push:
+    paths:
+      - '**.json'
+      - '**.lua'
+      - 'images/**'
+  pull_request:
+    paths:
+      - '**.json'
+      - '**.lua'
+      - 'images/**'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y jq lua5.1
+
+      - name: Validate JSON files
+        run: |
+          ERRORS=0
+          while IFS= read -r -d '' file; do
+            if ! jq empty "$file" 2>/dev/null; then
+              ERROR_MSG=$(jq empty "$file" 2>&1)
+              echo "::error file=$file::$ERROR_MSG"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done < <(find . -name "*.json" -not -path "./.git/*" -print0)
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "::error::$ERRORS JSON file(s) have syntax errors"
+            exit 1
+          fi
+          echo "All JSON files are valid."
+
+      - name: Validate Lua files
+        run: |
+          ERRORS=0
+          while IFS= read -r -d '' file; do
+            if ! luac5.1 -p "$file" 2>/dev/null; then
+              ERROR_MSG=$(luac5.1 -p "$file" 2>&1)
+              echo "::error file=$file::$ERROR_MSG"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done < <(find . -name "*.lua" -not -path "./.git/*" -print0)
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "::error::$ERRORS Lua file(s) have syntax errors"
+            exit 1
+          fi
+          echo "All Lua files are valid."
+
+      - name: Check image path casing in JSON files
+        run: |
+          # Extracts ALL values matching "images/..." regardless of the key
+          # (covers: "icon", "img", "chest_unopened_img", "chest_opened_img", etc.)
+          ERRORS=0
+          while IFS= read -r -d '' file; do
+            while IFS= read -r img_path; do
+              [ -z "$img_path" ] && continue
+              if [ ! -f "$img_path" ]; then
+                echo "::error file=$file::Image not found (casing issue?): $img_path"
+                ERRORS=$((ERRORS + 1))
+              fi
+            done < <(grep -o '"images/[^"]*"' "$file" | tr -d '"')
+          done < <(find . -name "*.json" -not -path "./.git/*" -print0)
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "::error::$ERRORS image path(s) not found in JSON files"
+            exit 1
+          fi
+          echo "All image paths in JSON files are valid."
+
+      - name: Check image path casing in Lua files
+        run: |
+          # Extracts all "images/..." string literals from Lua source files
+          ERRORS=0
+          while IFS= read -r -d '' file; do
+            while IFS= read -r img_path; do
+              [ -z "$img_path" ] && continue
+              if [ ! -f "$img_path" ]; then
+                echo "::error file=$file::Image not found (casing issue?): $img_path"
+                ERRORS=$((ERRORS + 1))
+              fi
+            done < <(grep -o '"images/[^"]*"' "$file" | tr -d '"')
+          done < <(find . -name "*.lua" -not -path "./.git/*" -print0)
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "::error::$ERRORS image path(s) not found in Lua files"
+            exit 1
+          fi
+          echo "All image paths in Lua files are valid."
