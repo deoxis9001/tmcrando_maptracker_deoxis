@@ -2803,7 +2803,7 @@
           "^$Json_Dungeon_DHC_BladeChest"
         ],
         "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Gray.png"
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
