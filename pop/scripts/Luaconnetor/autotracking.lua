@@ -1984,12 +1984,12 @@ function updateLocations(segment)
 		updateToggleFlag(segment, "pow", 0x2002c9c, 0x40)
 		updateToggleFlag(segment, "rc", 0x2002d02, 0x04)
 		updateToggleFlag(segment, "dhc", 0x2002ca6, 0x20)
-		updateSectionFlag(segment, "@DeepWoods/Prize", 0x2002c9c, 0x04)
-		updateSectionFlag(segment, "@Cave Of Flame/Prize", 0x2002c9c, 0x08)
-		updateSectionFlag(segment, "@Fortress/Prize", 0x2002c9c, 0x10)
-		updateSectionFlag(segment, "@Droplet/Prize", 0x2002c9c, 0x20)
-		updateSectionFlag(segment, "@Palace/Prize", 0x2002c9c, 0x40)
-		updateSectionFlag(segment, "@Royal Crypt/Prize", 0x2002d02, 0x04)
+		updateSectionFlag(segment, "@DeepWoods/Reward", 0x2002c9c, 0x04)
+		updateSectionFlag(segment, "@Cave Of Flame/Reward", 0x2002c9c, 0x08)
+		updateSectionFlag(segment, "@Fortress/Reward", 0x2002c9c, 0x10)
+		updateSectionFlag(segment, "@Droplet/Reward", 0x2002c9c, 0x20)
+		updateSectionFlag(segment, "@Palace/Reward", 0x2002c9c, 0x40)
+		updateSectionFlag(segment, "@Royal Crypt/Reward", 0x2002d02, 0x04)
 		if has("fusiongold_vanilla") then
 			if fusiongoldcombined:getActive() then
 				updateCloudsUsedFixed(

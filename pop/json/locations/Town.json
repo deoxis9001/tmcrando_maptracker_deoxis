@@ -6,6 +6,11 @@
         "map": "map",
         "x": 1139,
         "y": 1065
+      },
+      {
+        "map": "map_town",
+        "x": 149,
+        "y": 55
       }
     ],
     "sections": [
@@ -54,6 +59,11 @@
         "map": "map",
         "x": 1616,
         "y": 1257
+      },
+      {
+        "map": "map_town",
+        "x": 626,
+        "y": 247
       }
     ],
     "sections": [
@@ -80,6 +90,16 @@
         "map": "map",
         "x": 1592,
         "y": 1414
+      },
+      {
+        "map": "map_town",
+        "x": 580,
+        "y": 300
+      },
+      {
+        "map": "map_town",
+        "x": 602,
+        "y": 404
       }
     ],
     "sections": [
@@ -144,6 +164,11 @@
         "map": "map",
         "x": 1475,
         "y": 1277
+      },
+      {
+        "map": "map_town",
+        "x": 485,
+        "y": 267
       }
     ],
     "sections": [
@@ -174,6 +199,11 @@
         "map": "map",
         "x": 1198,
         "y": 1618
+      },
+      {
+        "map": "map_town",
+        "x": 208,
+        "y": 608
       }
     ],
     "sections": [
@@ -222,6 +252,11 @@
         "map": "map",
         "x": 1390,
         "y": 1510
+      },
+      {
+        "map": "map_town",
+        "x": 400,
+        "y": 500
       }
     ],
     "sections": [
@@ -296,6 +331,11 @@
         "map": "map",
         "x": 1602,
         "y": 1067
+      },
+      {
+        "map": "map_town",
+        "x": 612,
+        "y": 57
       }
     ],
     "sections": [
@@ -339,6 +379,11 @@
         "map": "map",
         "x": 1464,
         "y": 1115
+      },
+      {
+        "map": "map_town",
+        "x": 474,
+        "y": 105
       }
     ],
     "sections": [
@@ -370,6 +415,11 @@
         "map": "map",
         "x": 1475,
         "y": 1070
+      },
+      {
+        "map": "map_town",
+        "x": 485,
+        "y": 60
       }
     ],
     "sections": [
@@ -391,6 +441,11 @@
         "map": "map",
         "x": 1538,
         "y": 1210
+      },
+      {
+        "map": "map_town",
+        "x": 548,
+        "y": 200
       }
     ],
     "sections": [
@@ -417,6 +472,16 @@
         "map": "map",
         "x": 1230,
         "y": 1125
+      },
+      {
+        "map": "map_town",
+        "x": 209,
+        "y": 50
+      },
+      {
+        "map": "map_town",
+        "x": 240,
+        "y": 115
       }
     ],
     "sections": [
@@ -491,6 +556,11 @@
         "map": "map",
         "x": 1262,
         "y": 1510
+      },
+      {
+        "map": "map_town",
+        "x": 272,
+        "y": 500
       }
     ],
     "sections": [
@@ -532,6 +602,11 @@
         "map": "map",
         "x": 1550,
         "y": 1524
+      },
+      {
+        "map": "map_town",
+        "x": 560,
+        "y": 514
       }
     ],
     "sections": [
@@ -554,6 +629,11 @@
         "map": "map",
         "x": 1497,
         "y": 1435
+      },
+      {
+        "map": "map_town",
+        "x": 507,
+        "y": 425
       }
     ],
     "sections": [
@@ -584,6 +664,11 @@
         "map": "map",
         "x": 1571,
         "y": 1357
+      },
+      {
+        "map": "map_town",
+        "x": 581,
+        "y": 347
       }
     ],
     "sections": [
@@ -605,6 +690,11 @@
         "map": "map",
         "x": 1238,
         "y": 1275
+      },
+      {
+        "map": "map_town",
+        "x": 248,
+        "y": 265
       }
     ],
     "sections": [
@@ -645,6 +735,11 @@
         "map": "map",
         "x": 1220,
         "y": 1342
+      },
+      {
+        "map": "map_town",
+        "x": 230,
+        "y": 332
       }
     ],
     "sections": [
@@ -666,6 +761,11 @@
         "map": "map",
         "x": 1220,
         "y": 1385
+      },
+      {
+        "map": "map_town",
+        "x": 230,
+        "y": 375
       }
     ],
     "sections": [
@@ -687,6 +787,11 @@
         "map": "map",
         "x": 1220,
         "y": 1427
+      },
+      {
+        "map": "map_town",
+        "x": 230,
+        "y": 417
       }
     ],
     "sections": [
@@ -718,6 +823,11 @@
         "map": "map",
         "x": 1028,
         "y": 1405
+      },
+      {
+        "map": "map_town",
+        "x": 38,
+        "y": 395
       }
     ],
     "sections": [
@@ -739,6 +849,11 @@
         "map": "map",
         "x": 1043,
         "y": 1603
+      },
+      {
+        "map": "map_town",
+        "x": 53,
+        "y": 593
       }
     ],
     "sections": [
@@ -760,6 +875,11 @@
         "map": "map",
         "x": 1325,
         "y": 1205
+      },
+      {
+        "map": "map_town",
+        "x": 335,
+        "y": 195
       }
     ],
     "sections": [
@@ -781,6 +901,11 @@
         "map": "map",
         "x": 1431,
         "y": 1325
+      },
+      {
+        "map": "map_town",
+        "x": 441,
+        "y": 315
       }
     ],
     "sections": [
@@ -802,6 +927,11 @@
         "map": "map",
         "x": 1550,
         "y": 1600
+      },
+      {
+        "map": "map_town",
+        "x": 560,
+        "y": 590
       }
     ],
     "sections": [
@@ -937,6 +1067,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_town",
+        "x": 160,
+        "y": 261,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -960,6 +1098,13 @@
         "y": 1050,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_town",
+        "x": 40,
+        "y": 40,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -984,6 +1129,13 @@
         "y": 1221,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_town",
+        "x": 110,
+        "y": 211,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -1008,6 +1160,13 @@
         "y": 1210,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_town",
+        "x": 475,
+        "y": 200,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -1032,6 +1191,13 @@
         "y": 1275,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_town",
+        "x": 335,
+        "y": 265,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -1054,6 +1220,11 @@
         "map": "map",
         "x": 1352,
         "y": 1350
+      },
+      {
+        "map": "map_town",
+        "x": 362,
+        "y": 340
       }
     ],
     "sections": [
@@ -1263,6 +1434,13 @@
         "y": 1295,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_town",
+        "x": 40,
+        "y": 285,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [

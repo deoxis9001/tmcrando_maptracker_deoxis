@@ -6,6 +6,11 @@
         "map": "map",
         "x": 1624,
         "y": 1837
+      },
+      {
+        "map": "map_southfield",
+        "x": 634,
+        "y": 127
       }
     ],
     "sections": [
@@ -47,6 +52,11 @@
         "map": "map",
         "x": 1427,
         "y": 1918
+      },
+      {
+        "map": "map_southfield",
+        "x": 437,
+        "y": 208
       }
     ],
     "sections": [
@@ -88,6 +98,11 @@
         "map": "map",
         "x": 1241,
         "y": 1798
+      },
+      {
+        "map": "map_southfield",
+        "x": 251,
+        "y": 88
       }
     ],
     "sections": [
@@ -109,6 +124,14 @@
         "map": "map",
         "x": 1049,
         "y": 1842,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|rupees_on"
+        ]
+      },
+      {
+        "map": "map_southfield",
+        "x": 59,
+        "y": 132,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|rupees_on"
         ]
@@ -136,6 +159,14 @@
         "restrict_visibility_rules": [
           "$FusionsBlue"
         ]
+      },
+      {
+        "map": "map_southfield",
+        "x": 618,
+        "y": 308,
+        "restrict_visibility_rules": [
+          "$FusionsBlue"
+        ]
       }
     ],
     "sections": [
@@ -157,6 +188,14 @@
         "map": "map",
         "x": 1507,
         "y": 1892,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_southfield",
+        "x": 517,
+        "y": 182,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -183,6 +222,13 @@
         "y": 1936,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_southfield",
+        "x": 57,
+        "y": 226,
+        "shape": "diamond",
+        "size": 28
       }
     ],
     "sections": [

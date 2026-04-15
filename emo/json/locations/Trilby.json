@@ -1,11 +1,19 @@
 [
   {
-    "name": "Trilby Highlands - Rupee Cave",
+    "name": "Trilby - Puddle Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 705,
-        "y": 1250,
+        "x": 708,
+        "y": 1257,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|rupees_on"
+        ]
+      },
+      {
+        "map": "map_trilby",
+        "x": 37,
+        "y": 458,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|rupees_on"
         ]
@@ -13,7 +21,7 @@
     ],
     "sections": [
       {
-        "name": "Rupees",
+        "name": "Item",
         "item_count": 15,
         "access_rules": [
           "$Json_Trilby_RupeeCave_Rupees"
@@ -24,16 +32,29 @@
     ]
   },
   {
-    "name": "Trilby Highlands - Tree House",
+    "name": "Trilby - Tree House",
     "map_locations": [
       {
         "map": "map",
-        "x": 720,
-        "y": 1395,
+        "x": 725,
+        "y": 1390,
         "restrict_visibility_rules": [
           "$has|fusionred_vanilla",
           "$has|fusiongreen_vanilla"
-        ]
+        ],
+        "shape": "diamond",
+        "size": 70
+      },
+      {
+        "map": "map_trilby",
+        "x": 54,
+        "y": 591,
+        "restrict_visibility_rules": [
+          "$has|fusionred_vanilla",
+          "$has|fusiongreen_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -50,12 +71,21 @@
     ]
   },
   {
-    "name": "Trilby Highlands - Knuckle",
+    "name": "Trilby - Knuckle",
     "map_locations": [
       {
         "map": "map",
         "x": 795,
-        "y": 850
+        "y": 855,
+        "shape": "diamond",
+        "size": 70
+      },
+      {
+        "map": "map_trilby",
+        "x": 124,
+        "y": 56,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -72,12 +102,17 @@
     ]
   },
   {
-    "name": "Trilby Highlands - Mitts Cave",
+    "name": "Trilby - Dig Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 725,
-        "y": 950
+        "x": 730,
+        "y": 957
+      },
+      {
+        "map": "map_trilby",
+        "x": 59,
+        "y": 158
       }
     ],
     "sections": [
@@ -103,12 +138,27 @@
     ]
   },
   {
-    "name": "Trilby Highlands - Business Scrub",
+    "name": "Trilby - Scrub",
     "map_locations": [
       {
         "map": "map",
-        "x": 875,
-        "y": 1210
+        "x": 857,
+        "y": 1212
+      },
+      {
+        "map": "map",
+        "x": 772,
+        "y": 1212
+      },
+      {
+        "map": "map_trilby",
+        "x": 186,
+        "y": 413
+      },
+      {
+        "map": "map_trilby",
+        "x": 101,
+        "y": 413
       }
     ],
     "sections": [
@@ -124,12 +174,17 @@
     ]
   },
   {
-    "name": "Trilby Highlands - Bomb Wall",
+    "name": "Trilby - Bomb Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 760,
-        "y": 1160
+        "x": 762,
+        "y": 1170
+      },
+      {
+        "map": "map_trilby",
+        "x": 91,
+        "y": 371
       }
     ],
     "sections": [
@@ -145,12 +200,20 @@
     ]
   },
   {
-    "name": "Trilby Highlands - Rocks Chest",
+    "name": "Trilby - Middle Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 856,
+        "x": 857,
         "y": 1092,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_trilby",
+        "x": 186,
+        "y": 293,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -169,12 +232,20 @@
     ]
   },
   {
-    "name": "Trilby Highlands - Northern Chest",
+    "name": "Trilby - Top Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 931,
-        "y": 831,
+        "x": 932,
+        "y": 837,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_trilby",
+        "x": 261,
+        "y": 38,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -193,12 +264,20 @@
     ]
   },
   {
-    "name": "Trilby Highlands - Fusion Mitts Cave",
+    "name": "Trilby - Dig Cave Water Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 845,
-        "y": 950,
+        "x": 846,
+        "y": 957,
+        "restrict_visibility_rules": [
+          "$FusionsBlueLibrary"
+        ]
+      },
+      {
+        "map": "map_trilby",
+        "x": 175,
+        "y": 158,
         "restrict_visibility_rules": [
           "$FusionsBlueLibrary"
         ]
@@ -225,7 +304,19 @@
         "y": 825,
         "restrict_visibility_rules": [
           "$has|fusiongreen_vanilla"
-        ]
+        ],
+        "shape": "diamond",
+        "size": 70
+      },
+      {
+        "map": "map_trilby",
+        "x": 29,
+        "y": 26,
+        "restrict_visibility_rules": [
+          "$has|fusiongreen_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [

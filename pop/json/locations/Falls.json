@@ -9,6 +9,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
+      },
+      {
+        "map": "map_falls",
+        "x": 111,
+        "y": 266,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
@@ -48,6 +56,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
+      },
+      {
+        "map": "map_falls",
+        "x": 186,
+        "y": 180,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
@@ -81,6 +97,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
+      },
+      {
+        "map": "map_falls",
+        "x": 208,
+        "y": 647,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
@@ -101,6 +125,15 @@
       {
         "map": "map",
         "x": 1890,
+        "y": 250,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$FusionsGreen",
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
+      },
+      {
+        "map": "map_falls",
+        "x": 229,
         "y": 250,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$FusionsGreen",
@@ -145,6 +178,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$FusionsRed"
         ]
+      },
+      {
+        "map": "map_falls",
+        "x": 37,
+        "y": 155,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$FusionsRed"
+        ]
       }
     ],
     "sections": [
@@ -165,6 +206,14 @@
       {
         "map": "map",
         "x": 1815,
+        "y": 550,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_falls",
+        "x": 154,
         "y": 550,
         "restrict_visibility_rules": [
           "$FusionsRed"
@@ -202,6 +251,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$FusionsGreen,$has|golden_enemy_on"
         ]
+      },
+      {
+        "map": "map_falls",
+        "x": 169,
+        "y": 275,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$FusionsGreen,$has|golden_enemy_on"
+        ]
       }
     ],
     "sections": [
@@ -222,6 +279,11 @@
       {
         "map": "map",
         "x": 1762,
+        "y": 533
+      },
+      {
+        "map": "map_falls",
+        "x": 101,
         "y": 533
       }
     ],
@@ -250,6 +312,16 @@
         ],
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_falls",
+        "x": 39,
+        "y": 453,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ],
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -273,6 +345,14 @@
       {
         "map": "map",
         "x": 1805,
+        "y": 435,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
+      },
+      {
+        "map": "map_falls",
+        "x": 144,
         "y": 435,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
@@ -301,6 +381,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
+      },
+      {
+        "map": "map_falls",
+        "x": 133,
+        "y": 367,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
@@ -321,6 +409,15 @@
       {
         "map": "map",
         "x": 1875,
+        "y": 50,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$FusionsRed,$has|biggoron_mirror",
+          "$CloudTopFallVisibility,$FusionsRed,$has|biggoron_shield"
+        ]
+      },
+      {
+        "map": "map_falls",
+        "x": 214,
         "y": 50,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$FusionsRed,$has|biggoron_mirror",

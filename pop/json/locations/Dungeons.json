@@ -6,7 +6,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1050,
+        "y": 1060,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|cof_tod,$has|dungeonser_on"
@@ -14,8 +14,8 @@
       },
       {
         "map": "map",
-        "x": 2303,
-        "y": 250,
+        "x": 2304,
+        "y": 245,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|cof_pow,$has|dungeonser_on"
@@ -23,8 +23,8 @@
       },
       {
         "map": "map",
-        "x": 592,
-        "y": 1800,
+        "x": 591,
+        "y": 1777,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$FusionsGold,$has|cof_fow,$has|dungeonser_on"
@@ -32,8 +32,8 @@
       },
       {
         "map": "map",
-        "x": 323,
-        "y": 200,
+        "x": 325,
+        "y": 233,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
@@ -51,8 +51,8 @@
       },
       {
         "map": "map",
-        "x": 2282,
-        "y": 1800,
+        "x": 2284,
+        "y": 1842,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|cof_dws,$has|dungeonser_on"
@@ -61,16 +61,104 @@
       {
         "map": "map",
         "x": 1326,
-        "y": 130,
+        "y": 164,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
-          "$has|cof_dhc,$has|dungeonser_on"
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map",
+        "x": 1060,
+        "y": 188,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 197,
+        "y": 261,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|cof_tod,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 324,
+        "y": 117,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|cof_pow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 591,
+        "y": 20,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$FusionsGold,$has|cof_fow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 325,
+        "y": 233,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dungeonser_off",
+          "$has|cof_cof,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 160,
+        "y": 37,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|cof_crypt,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 304,
+        "y": 405,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|cof_dws,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 336,
+        "y": 36,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 70,
+        "y": 60,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|cof_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
         ]
       }
     ],
     "sections": [
       {
-        "name": "Spiny Beetle Fight",
+        "name": "1F - Spike Beetle - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_SpinyBeetleFight"
@@ -79,7 +167,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Rupees",
+        "name": "1F - Items",
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_Rupees"
         ],
@@ -91,8 +179,17 @@
         "item_count": 5
       },
       {
-        "name": "Big Chest Room",
-        "item_count": 2,
+        "name": "B1 - Hazy Room - Big Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_CaveOfFlame_BigChestRoom"
+        ],
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
+      },
+      {
+        "name": "B1 - Hazy Room - Small Chest",
+        "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_BigChestRoom"
         ],
@@ -100,7 +197,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "First Rollobite Room Chest",
+        "name": "B1 - Rollobite - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"
@@ -109,7 +206,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "First Rollobite Room Pillar",
+        "name": "B1 - Rollobite - Pillar Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_FirstRollobiteRoom"
@@ -118,8 +215,16 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Bombable Wall Heart Piece",
-        "short_name": "Bomb Wall HP",
+        "name": "B1 - Spikey Chus - Pillar Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_CaveOfFlame_SpinyChuPillarChest"
+        ],
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
+      },
+      {
+        "name": "B1 - HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -129,25 +234,16 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Spiny Chu Fight",
+        "name": "B1 - Spikey Chus - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_SpinyChuFight"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Spiny Chu Pillar Chest",
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_CaveOfFlame_SpinyChuPillarChest"
-        ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
-      {
-        "name": "Pre Lava Basement Room",
+        "name": "B2 - Pre Lava - Chests",
         "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_PreLavaBasementRoom"
@@ -157,7 +253,7 @@
         "clear group": false
       },
       {
-        "name": "Blade Chest",
+        "name": "B2 - Lava Room Blade - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_BladeChest"
@@ -166,7 +262,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Lava Basement (Left,Right)",
+        "name": "B2 - Lava Room - Chests",
         "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_LavaBasement"
@@ -176,7 +272,7 @@
         "clear group": false
       },
       {
-        "name": "Lava Basement Big Chest",
+        "name": "B2 - Lava Room - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_LavaBasementBigChest"
@@ -199,6 +295,9 @@
           "^$Json_Dungeon_CaveOfFlame_Gleerok"
         ],
         "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Fire Element.png",
         "chest_opened_img": "images/items-map/Fire Element Gray.png"
       }
@@ -210,7 +309,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1050,
+        "y": 1060,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|crypt_tod,$has|dungeonser_on"
@@ -218,8 +317,8 @@
       },
       {
         "map": "map",
-        "x": 2303,
-        "y": 250,
+        "x": 2304,
+        "y": 245,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|crypt_pow,$has|dungeonser_on"
@@ -227,8 +326,8 @@
       },
       {
         "map": "map",
-        "x": 592,
-        "y": 1800,
+        "x": 591,
+        "y": 1777,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$FusionsGold,$has|crypt_fow,$has|dungeonser_on"
@@ -236,8 +335,8 @@
       },
       {
         "map": "map",
-        "x": 323,
-        "y": 200,
+        "x": 325,
+        "y": 233,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|crypt_cof,$has|dungeonser_on"
@@ -255,8 +354,8 @@
       },
       {
         "map": "map",
-        "x": 2282,
-        "y": 1800,
+        "x": 2284,
+        "y": 1842,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|crypt_dws,$has|dungeonser_on"
@@ -265,10 +364,98 @@
       {
         "map": "map",
         "x": 1326,
-        "y": 130,
+        "y": 164,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
-          "$has|crypt_dhc,$has|dungeonser_on"
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map",
+        "x": 1060,
+        "y": 188,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 197,
+        "y": 261,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|crypt_tod,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 324,
+        "y": 117,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|crypt_pow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 591,
+        "y": 20,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$FusionsGold,$has|crypt_fow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 325,
+        "y": 233,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|crypt_cof,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 160,
+        "y": 37,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dungeonser_off",
+          "$has|crypt_crypt,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 304,
+        "y": 405,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|crypt_dws,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 336,
+        "y": 36,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 70,
+        "y": 60,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|crypt_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
         ]
       }
     ],
@@ -312,11 +499,14 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Prize",
+        "name": "Reward",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_KingGustaf"
         ],
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -328,7 +518,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1050,
+        "y": 1060,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dws_tod,$has|dungeonser_on"
@@ -336,8 +526,8 @@
       },
       {
         "map": "map",
-        "x": 2303,
-        "y": 250,
+        "x": 2304,
+        "y": 245,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|dws_pow,$has|dungeonser_on"
@@ -345,8 +535,8 @@
       },
       {
         "map": "map",
-        "x": 592,
-        "y": 1800,
+        "x": 591,
+        "y": 1777,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$FusionsGold,$has|dws_fow,$has|dungeonser_on"
@@ -354,8 +544,8 @@
       },
       {
         "map": "map",
-        "x": 323,
-        "y": 200,
+        "x": 325,
+        "y": 233,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dws_cof,$has|dungeonser_on"
@@ -372,8 +562,8 @@
       },
       {
         "map": "map",
-        "x": 2282,
-        "y": 1800,
+        "x": 2284,
+        "y": 1842,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
@@ -383,25 +573,104 @@
       {
         "map": "map",
         "x": 1326,
-        "y": 130,
+        "y": 164,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
-          "$has|dws_dhc,$has|dungeonser_on"
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map",
+        "x": 1060,
+        "y": 188,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 197,
+        "y": 261,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dws_tod,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 324,
+        "y": 117,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|dws_pow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 591,
+        "y": 20,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$FusionsGold,$has|dws_fow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 325,
+        "y": 233,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dws_cof,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 160,
+        "y": 37,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dws_crypt,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 304,
+        "y": 405,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_dws,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 336,
+        "y": 36,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 70,
+        "y": 60,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|dws_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
         ]
       }
     ],
     "sections": [
       {
-        "name": "Slug Room",
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_Deepwood_SlugRoom"
-        ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
-      {
-        "name": "Upstairs Chest",
+        "name": "2F - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_UpstairsChest"
@@ -410,7 +679,16 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Barrel Room Northwest",
+        "name": "1F - Slug Room - Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_Deepwood_SlugRoom"
+        ],
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
+      },
+      {
+        "name": "1F - Barrel Room - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_BarrelRoomNorthwest"
@@ -419,7 +697,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "West Side Big Chest",
+        "name": "1F - West - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_WestSideBigChest"
@@ -428,7 +706,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Two Statue Room",
+        "name": "1F - West Statue Puzzle - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_TwoStatueRoom"
@@ -437,7 +715,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Mulldozer Key",
+        "name": "1F - East Mulldozer Fight - Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_MulldozerKey"
@@ -446,7 +724,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Two Lamp Chest",
+        "name": "1F - North East - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_TwoLampChest"
@@ -455,7 +733,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Basement Switch Big Chest",
+        "name": "B1 - Switch Room - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_BasementSwitchRoomBigChest"
@@ -464,7 +742,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Basement Switch Chest",
+        "name": "B1 - Switch Room - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_BasementSwitchChest"
@@ -473,7 +751,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Blue Warp Heart Piece",
+        "name": "1F - Blue Warp - HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_BlueWarpHeartPiece"
@@ -482,7 +760,7 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Puffstool Room",
+        "name": "1F - Blue Warp - Chests",
         "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_PuffstoolRoom"
@@ -491,7 +769,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Madderpillar Chest",
+        "name": "1F - Madderpillar - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_MadderpillarChest"
@@ -500,7 +778,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Madderpillar Heart Piece",
+        "name": "1F - Madderpillar - HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -510,7 +788,7 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Basement Big Chest",
+        "name": "B1 - West - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_BasementBigChest"
@@ -533,6 +811,7 @@
           "^$Json_Dungeon_Deepwood_GreenChu"
         ],
         "item_count": 1,
+        "capture_item": true,
         "chest_unopened_img": "images/items-map/Earth Element.png",
         "chest_opened_img": "images/items-map/Earth Element Gray.png"
       }
@@ -545,7 +824,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1050,
+        "y": 1060,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|fow_tod,$has|dungeonser_on"
@@ -553,8 +832,8 @@
       },
       {
         "map": "map",
-        "x": 2303,
-        "y": 250,
+        "x": 2304,
+        "y": 245,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|fow_pow,$has|dungeonser_on"
@@ -562,8 +841,8 @@
       },
       {
         "map": "map",
-        "x": 592,
-        "y": 1800,
+        "x": 591,
+        "y": 1777,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$FusionsGold,$has|dungeonser_off",
@@ -572,8 +851,8 @@
       },
       {
         "map": "map",
-        "x": 323,
-        "y": 200,
+        "x": 325,
+        "y": 233,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|fow_cof,$has|dungeonser_on"
@@ -590,8 +869,8 @@
       },
       {
         "map": "map",
-        "x": 2282,
-        "y": 1800,
+        "x": 2284,
+        "y": 1842,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|fow_dws,$has|dungeonser_on"
@@ -600,16 +879,104 @@
       {
         "map": "map",
         "x": 1326,
-        "y": 130,
+        "y": 164,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
-          "$has|fow_dhc,$has|dungeonser_on"
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map",
+        "x": 1060,
+        "y": 188,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 197,
+        "y": 261,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|fow_tod,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 324,
+        "y": 117,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|fow_pow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 591,
+        "y": 20,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$FusionsGold,$has|dungeonser_off",
+          "$FusionsGold,$has|fow_fow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 325,
+        "y": 233,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|fow_cof,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 160,
+        "y": 37,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|fow_crypt,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 304,
+        "y": 405,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|fow_dws,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 336,
+        "y": 36,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 70,
+        "y": 60,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|fow_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
         ]
       }
     ],
     "sections": [
       {
-        "name": "Entrance Far Left",
+        "name": "Entrance 1F - Left - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_EntranceFarLeft"
@@ -618,7 +985,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Wizzrobe Fight",
+        "name": "Entrance 1F - Left Wizzrobe - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_WizzrobeFight"
@@ -627,7 +994,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Entrance Large Rupee",
+        "name": "Entrance 1F - Right - Item",
         "visibility_rules": [
           "$has|rupees_on"
         ],
@@ -639,8 +1006,8 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Left Side Mitts Chests",
-        "item_count": 2,
+        "name": "Left 2F - Dig - Chest",
+        "item_count": 1,
         "clear_as_group": false,
         "access_rules": [
           "^$Json_Dungeon_Fortress_LeftSideMittsChests"
@@ -649,7 +1016,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Left Side Rupees",
+        "name": "Left 2F - Items",
         "visibility_rules": [
           "$has|rupees_on"
         ],
@@ -661,7 +1028,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Left Side Rupees Grabbable",
+        "name": "Left 2F - Item Grabbable",
         "visibility_rules": [
           "$has|rupees_on"
         ],
@@ -673,7 +1040,17 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Eyegores",
+        "name": "Left 3F - Switch - Chest",
+        "item_count": 2,
+        "clear_as_group": false,
+        "access_rules": [
+          "^$Json_Dungeon_Fortress_LeftSideMittsChests"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Left 3F - Eyegore - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_Eyegores"
@@ -682,7 +1059,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Left Side Key Drop",
+        "name": "Left 3F - Item Drop",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_LeftSideKeyDrop"
@@ -691,7 +1068,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Right Side Two Lever Room",
+        "name": "Right 2F - Chests",
         "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_Fortress_RightSideTwoLeverRoom"
@@ -700,8 +1077,8 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Right Side Mitts Chests",
-        "item_count": 2,
+        "name": "Right 2F - Dig - Chest",
+        "item_count": 1,
         "clear_as_group": false,
         "access_rules": [
           "^$Json_Dungeon_Fortress_RightSideMittsChests"
@@ -710,7 +1087,17 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Right Side Key Drop",
+        "name": "Right 3F - Dig - Chest",
+        "item_count": 1,
+        "clear_as_group": false,
+        "access_rules": [
+          "^$Json_Dungeon_Fortress_RightSideMittsChests"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Right 3F - Item Drop",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_RightSideKeyDrop"
@@ -719,7 +1106,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Right Side Heart Piece",
+        "name": "Entrance 1F - Right - HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_RightSideHeartPiece"
@@ -729,7 +1116,7 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Pedestal Chest",
+        "name": "Middle 2F - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_PedestalChest"
@@ -738,7 +1125,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Center Path Switch",
+        "name": "Middle 2F - Statue - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_CenterPathSwitch"
@@ -747,7 +1134,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Bombable Wall Big Chest",
+        "name": "Back 2F - Left - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_BombableWallBigChest"
@@ -756,7 +1143,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Bombable Wall Small Chest",
+        "name": "Back 2F - Left - Small Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_BombableWallSmallChest"
@@ -765,7 +1152,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Clone Puzzle Key Drop",
+        "name": "Back 2F - Right Statue - Item Drop",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_ClonePuzzleKeyDrop"
@@ -774,7 +1161,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Minish Dirt Room Key Drop",
+        "name": "Back 2F - Right Minish - Item Drop",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -784,7 +1171,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Right Side Moldorm Top Pot",
+        "name": "Back 2F - Right Dig Room Top - Pot",
         "item_count": 1,
         "visibility_rules": [
           "$has|specialpot_on"
@@ -796,7 +1183,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Right Side Moldorm Bottom Pot",
+        "name": "Back 2F - Right Dig Room Bottom - Pot",
         "item_count": 1,
         "visibility_rules": [
           "$has|specialpot_on"
@@ -808,7 +1195,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Skull Room Chest",
+        "name": "Back 2F - Right - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Fortress_SkullRoomChest"
@@ -831,6 +1218,9 @@
           "^$Json_Dungeon_Fortress_FOWReward"
         ],
         "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Ocarina of Wind.png",
         "chest_opened_img": "images/items-map/Ocarina of Wind Gray.png"
       }
@@ -843,7 +1233,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 2050,
+        "y": 1060,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|pow_tod,$has|dungeonser_on"
@@ -851,8 +1241,8 @@
       },
       {
         "map": "map",
-        "x": 2303,
-        "y": 250,
+        "x": 2304,
+        "y": 245,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|dungeonser_off",
@@ -861,8 +1251,8 @@
       },
       {
         "map": "map",
-        "x": 592,
-        "y": 1800,
+        "x": 591,
+        "y": 1777,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$FusionsGold,$has|pow_fow,$has|dungeonser_on"
@@ -870,8 +1260,8 @@
       },
       {
         "map": "map",
-        "x": 323,
-        "y": 200,
+        "x": 325,
+        "y": 233,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|pow_cof,$has|dungeonser_on"
@@ -888,8 +1278,8 @@
       },
       {
         "map": "map",
-        "x": 2282,
-        "y": 1800,
+        "x": 2284,
+        "y": 1842,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|pow_dws,$has|dungeonser_on"
@@ -898,16 +1288,104 @@
       {
         "map": "map",
         "x": 1326,
-        "y": 130,
+        "y": 164,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
-          "$has|pow_dhc,$has|dungeonser_on"
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map",
+        "x": 1060,
+        "y": 188,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 197,
+        "y": 261,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|pow_tod,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 324,
+        "y": 117,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|dungeonser_off",
+          "$CloudTopFallVisibility,$has|pow_pow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 591,
+        "y": 20,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$FusionsGold,$has|pow_fow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 325,
+        "y": 233,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|pow_cof,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 160,
+        "y": 37,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|pow_crypt,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 304,
+        "y": 405,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|pow_dws,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 336,
+        "y": 36,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 70,
+        "y": 60,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|pow_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
         ]
       }
     ],
     "sections": [
       {
-        "name": "Firebar Grate",
+        "name": "1st Half 1F - Grate - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_FirebarGrate"
@@ -916,7 +1394,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Wizzrobe Platform Fight",
+        "name": "1st Half 1F - Wizzrobe - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_WizzrobePlatformFight"
@@ -925,7 +1403,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Rupees",
+        "name": "1st Half 2F - Items",
         "item_count": 5,
         "visibility_rules": [
           "$has|rupees_on"
@@ -937,7 +1415,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Pot Puzzle Key",
+        "name": "1st Half 3F - Pot Puzzle - Item Drop",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -947,7 +1425,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Moblin Archer Chest",
+        "name": "1st Half 4F - Bow Moblins - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_MoblinArcherChest"
@@ -956,7 +1434,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Flail Soldiers",
+        "name": "1st Half 5F - Ball And Chain Soldiers - Item Drop",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_FlailSoldiers"
@@ -965,7 +1443,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Spark Chest",
+        "name": "1st Half 5F - Fan Loop - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_SparkChest"
@@ -974,7 +1452,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Pre Big Key Door Big Chest",
+        "name": "1st Half 5F - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_PreBigKeyDoorBigChest"
@@ -983,7 +1461,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Dark Room Big",
+        "name": "2nd Half 1F - Dark Room - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_DarkRoomBig"
@@ -992,7 +1470,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Dark Room Small",
+        "name": "2nd Half 1F - Dark Room - Small Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_DarkRoomSmall"
@@ -1001,7 +1479,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Roller Chest",
+        "name": "2nd Half 2F - Many Rollers - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_RollerChest"
@@ -1010,7 +1488,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Twin Wizzrobe Fight",
+        "name": "2nd Half 2F - Twin Wizzrobes - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_TwinWizzrobeFight"
@@ -1019,7 +1497,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Fire Wizzrobe Fight",
+        "name": "2nd Half 3F - Fire Wizzrobes - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_FireWizzrobeFight"
@@ -1028,7 +1506,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "2nd Half 4F - HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_HeartPiece"
@@ -1038,7 +1516,7 @@
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
       {
-        "name": "Switch Chest",
+        "name": "2nd Half 4F - Switch Hit - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_SwitchChest"
@@ -1047,7 +1525,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Bombarossa Maze",
+        "name": "2nd Half 5F - Bombarossa - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_BombarossaMaze"
@@ -1056,7 +1534,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Block Maze Room",
+        "name": "2nd Half 4F - Block Maze - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_BlockMazeRoom"
@@ -1065,7 +1543,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Block Maze Detour",
+        "name": "2nd Half 5F - Right Side - Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Palace_BlockMazeDetour"
@@ -1088,6 +1566,7 @@
           "^$Json_Dungeon_Palace_Gyorg"
         ],
         "item_count": 1,
+        "capture_item": true,
         "chest_unopened_img": "images/items-map/Wind Element.png",
         "chest_opened_img": "images/items-map/Wind Element Gray.png"
       }
@@ -1100,7 +1579,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1050,
+        "y": 1060,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dungeonser_off",
@@ -1109,8 +1588,8 @@
       },
       {
         "map": "map",
-        "x": 2303,
-        "y": 250,
+        "x": 2304,
+        "y": 245,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|tod_pow,$has|dungeonser_on"
@@ -1118,8 +1597,8 @@
       },
       {
         "map": "map",
-        "x": 592,
-        "y": 1800,
+        "x": 591,
+        "y": 1777,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$FusionsGold,$has|tod_fow,$has|dungeonser_on"
@@ -1127,8 +1606,8 @@
       },
       {
         "map": "map",
-        "x": 323,
-        "y": 200,
+        "x": 325,
+        "y": 233,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|tod_cof,$has|dungeonser_on"
@@ -1145,8 +1624,8 @@
       },
       {
         "map": "map",
-        "x": 2282,
-        "y": 1800,
+        "x": 2284,
+        "y": 1842,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|tod_dws,$has|dungeonser_on"
@@ -1155,16 +1634,104 @@
       {
         "map": "map",
         "x": 1326,
-        "y": 130,
+        "y": 164,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
-          "$has|tod_dhc,$has|dungeonser_on"
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map",
+        "x": 1060,
+        "y": 188,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 197,
+        "y": 261,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dungeonser_off",
+          "$has|tod_tod,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 324,
+        "y": 117,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|tod_pow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 591,
+        "y": 20,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$FusionsGold,$has|tod_fow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 325,
+        "y": 233,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|tod_cof,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 160,
+        "y": 37,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|tod_crypt,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 304,
+        "y": 405,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|tod_dws,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 336,
+        "y": 36,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 70,
+        "y": 60,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|tod_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
         ]
       }
     ],
     "sections": [
       {
-        "name": "First Ice Block",
+        "name": "Entrance B2 - East - Iceblock",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Droplet_FirstIceBlock"
@@ -1173,7 +1740,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Locked Ice Block",
+        "name": "Entrance B2 - West - Iceblock",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Droplet_LockedIceBlock"
@@ -1182,16 +1749,52 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Post Madderpillar Chest",
+        "name": "Left Path B1 - Underpass - Items",
+        "visibility_rules": [
+          "$has|rupees_on"
+        ],
+        "item_count": 5,
+        "access_rules": [
+          "^$Json_Dungeon_Droplet_LeftPathRupees"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Left Path B1 - Waterfall - Big Chest",
         "item_count": 1,
         "access_rules": [
-          "^$Json_Dungeon_Droplet_PostMadderpillarChest"
+          "^$Json_Dungeon_Droplet_OverhangChest"
         ],
         "chest_unopened_img": "images/items-map/big_chest_closed.png",
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Underwater Pot",
+        "name": "Left Path B1 - Waterfall - Underwater",
+        "visibility_rules": [
+          "$has|underwater_on"
+        ],
+        "item_count": 6,
+        "access_rules": [
+          "^$Json_Dungeon_Droplet_UpperWaterRupees"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Left Path B2 - Waterfall - Underwater",
+        "item_count": 6,
+        "visibility_rules": [
+          "$has|underwater_on"
+        ],
+        "access_rules": [
+          "^$Json_Dungeon_Droplet_LowerWaterRupees"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Left Path B2 - Underwater - Pot",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Droplet_UnderwaterPot"
@@ -1204,85 +1807,16 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Overhang Chest",
+        "name": "Left Path B2 - Ice Madderpillar - Big Chest",
         "item_count": 1,
         "access_rules": [
-          "^$Json_Dungeon_Droplet_OverhangChest"
+          "^$Json_Dungeon_Droplet_PostMadderpillarChest"
         ],
         "chest_unopened_img": "images/items-map/big_chest_closed.png",
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Left Path Rupees",
-        "visibility_rules": [
-          "$has|rupees_on"
-        ],
-        "item_count": 5,
-        "access_rules": [
-          "^$Json_Dungeon_Droplet_LeftPathRupees"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Right Path Rupees",
-        "visibility_rules": [
-          "$has|rupees_on"
-        ],
-        "item_count": 2,
-        "access_rules": [
-          "^$Json_Dungeon_Droplet_RightPathRupees"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Right Path Rupees Grabbable",
-        "visibility_rules": [
-          "$has|rupees_on"
-        ],
-        "item_count": 3,
-        "access_rules": [
-          "^$Json_Dungeon_Droplet_RightPathRupees1_2_5"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Upper Water Rupees",
-        "visibility_rules": [
-          "$has|underwater_on"
-        ],
-        "item_count": 6,
-        "access_rules": [
-          "^$Json_Dungeon_Droplet_UpperWaterRupees"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Lower Water Rupees",
-        "item_count": 6,
-        "visibility_rules": [
-          "$has|underwater_on"
-        ],
-        "access_rules": [
-          "^$Json_Dungeon_Droplet_LowerWaterRupees"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Ice Puzzle Free Chest",
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_Droplet_IcePuzzleFreeChest"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Ice Puzzle Frozen Chest",
+        "name": "Left Path B2 - Ice Plain - Frozen Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Droplet_IcePuzzleFrozenChest"
@@ -1291,7 +1825,16 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Post Ice Puzzle Frozen Chest",
+        "name": "Left Path B2 - Ice Plain - Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_Droplet_IcePuzzleFreeChest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Left Path B2 - Lilypad Corner - Frozen Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Droplet_PostIcePuzzleFrozenChest"
@@ -1300,7 +1843,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Right Path Ice Walkway Chests",
+        "name": "Right Path B1 - Chests",
         "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_Droplet_RightPathIceWalkwayChests"
@@ -1309,7 +1852,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Right Path Ice Walkway Pot",
+        "name": "Right Path B1 - Pot",
         "item_count": 1,
         "visibility_rules": [
           "$has|specialpot_on"
@@ -1321,7 +1864,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Basement Frozen Chest",
+        "name": "Right Path B3 - Frozen Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Droplet_BasementFrozenChest"
@@ -1330,7 +1873,7 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Blue Chu",
+        "name": "Right Path B1 - Blu Chu - Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Droplet_BlueChu"
@@ -1339,7 +1882,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Post Blue Chu Frozen Chest",
+        "name": "Right Path B2 - Frozen Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Droplet_PostBlueChuFrozenChest"
@@ -1348,7 +1891,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Dark Maze Bottom",
+        "name": "Right Path B2 - Dark Maze - Bottom Chest",
         "item_count": 1,
         "clear_as_group": false,
         "access_rules": [
@@ -1358,17 +1901,16 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Dark Maze Top Left",
+        "name": "Right Path B2 - Mulldozers - Item Drop",
         "item_count": 1,
-        "clear_as_group": false,
         "access_rules": [
-          "^$Json_Dungeon_Droplets_DarkMazeTopLeftChest"
+          "^$Json_Dungeon_Droplet_DarkMazeBombWall"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Dark Maze Top Right",
+        "name": "Right Path B2 - Dark Maze - Top Right Chest",
         "item_count": 1,
         "clear_as_group": false,
         "access_rules": [
@@ -1378,13 +1920,38 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Dark Maze Bomb Wall",
+        "name": "Right Path B2 - Dark Maze - Top Left Chest",
         "item_count": 1,
+        "clear_as_group": false,
         "access_rules": [
-          "^$Json_Dungeon_Droplet_DarkMazeBombWall"
+          "^$Json_Dungeon_Droplets_DarkMazeTopLeftChest"
         ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Right Path B2 - Underpass - Items",
+        "visibility_rules": [
+          "$has|rupees_on"
+        ],
+        "item_count": 2,
+        "access_rules": [
+          "^$Json_Dungeon_Droplet_RightPathRupees"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Right Path B2 - Underpass - Items Grabbable",
+        "visibility_rules": [
+          "$has|rupees_on"
+        ],
+        "item_count": 3,
+        "access_rules": [
+          "^$Json_Dungeon_Droplet_RightPathRupees1_2_5"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Octo",
@@ -1401,6 +1968,9 @@
           "^$Json_Dungeon_Droplet_Octo"
         ],
         "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Water Element.png",
         "chest_opened_img": "images/items-map/Water Element Gray.png"
       }
@@ -1412,7 +1982,7 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1050,
+        "y": 1060,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dhc_tod,$has|dungeonser_on"
@@ -1420,8 +1990,8 @@
       },
       {
         "map": "map",
-        "x": 2303,
-        "y": 250,
+        "x": 2304,
+        "y": 245,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dhc_pow,$has|dungeonser_on"
@@ -1429,8 +1999,8 @@
       },
       {
         "map": "map",
-        "x": 592,
-        "y": 1800,
+        "x": 591,
+        "y": 1777,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$FusionsGold,$has|dhc_fow,$has|dungeonser_on"
@@ -1438,8 +2008,8 @@
       },
       {
         "map": "map",
-        "x": 323,
-        "y": 200,
+        "x": 325,
+        "y": 233,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dhc_cof,$has|dungeonser_on"
@@ -1456,8 +2026,8 @@
       },
       {
         "map": "map",
-        "x": 2282,
-        "y": 1800,
+        "x": 2284,
+        "y": 1842,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$has|dhc_dws,$has|dungeonser_on"
@@ -1466,17 +2036,113 @@
       {
         "map": "map",
         "x": 1326,
-        "y": 130,
+        "y": 164,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
-          "$has|dungeonser_off",
-          "$has|dhc_dhc,$has|dungeonser_on"
+          "$has|dungeonser_off,$has|dhc_open",
+          "$has|dungeonser_off,$has|dhc_open_fast",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map",
+        "x": 1060,
+        "y": 188,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dungeonser_off,$has|dhc_closed",
+          "$has|dungeonser_off,$has|dhc_ped",
+          "$has|dungeonser_off,$has|dhc_fast_vaati",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 197,
+        "y": 261,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dhc_tod,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 324,
+        "y": 117,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dhc_pow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 591,
+        "y": 20,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$FusionsGold,$has|dhc_fow,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 325,
+        "y": 233,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dhc_cof,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 160,
+        "y": 37,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dhc_crypt,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 304,
+        "y": 405,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dhc_dws,$has|dungeonser_on"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 336,
+        "y": 36,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dungeonser_off,$has|dhc_open",
+          "$has|dungeonser_off,$has|dhc_open_fast",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_open",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 70,
+        "y": 60,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$has|dungeonser_off,$has|dhc_closed",
+          "$has|dungeonser_off,$has|dhc_ped",
+          "$has|dungeonser_off,$has|dhc_fast_vaati",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_closed",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_ped",
+          "$has|dhc_dhc,$has|dungeonser_on,$has|dhc_fast_vaati"
         ]
       }
     ],
     "sections": [
       {
-        "name": "Pedestal Two Elements",
+        "name": "Sanctuary - Pedestal - Item 1",
         "visibility_rules": [
           "$has|ped_items_on,$has|dhc_open"
         ],
@@ -1488,7 +2154,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Pedestal Three Elements",
+        "name": "Sanctuary - Pedestal - Item 2",
         "visibility_rules": [
           "$has|ped_items_on,$has|dhc_open"
         ],
@@ -1500,7 +2166,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Pedestal Four Elements",
+        "name": "Sanctuary - Pedestal - Item 3",
         "visibility_rules": [
           "$has|ped_items_on,$has|dhc_open"
         ],
@@ -1512,48 +2178,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Win",
-        "visibility_rules": [
-          "$has|dhc_ped",
-          "$has|dhc_open_fast"
-        ],
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_DHC_Win"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Blade Chest",
-        "visibility_rules": [
-          "$has|dhc_open",
-          "$has|dhc_closed",
-          "$has|dhc_open_fast"
-        ],
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_DHC_BladeChest"
-        ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
-      {
-        "name": "Platform Chest",
-        "visibility_rules": [
-          "$has|dhc_open",
-          "$has|dhc_closed",
-          "$has|dhc_open_fast"
-        ],
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_DHC_PlatformChest"
-        ],
-        "chest_unopened_img": "images/items-map/big_chest_closed.png",
-        "chest_opened_img": "images/items-map/big_chest_open.png"
-      },
-      {
-        "name": "Stone King",
+        "name": "B2 - King",
         "visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
@@ -1567,7 +2192,35 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Post Throne Big Chest",
+        "name": "B1 - Big Chest",
+        "visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ],
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_DHC_PlatformChest"
+        ],
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
+      },
+      {
+        "name": "1F - Blade - Chest",
+        "visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ],
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_DHC_BladeChest"
+        ],
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
+      },
+      {
+        "name": "1F - Throne - Big Chest",
         "visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
@@ -1581,49 +2234,7 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Northeast Tower",
-        "visibility_rules": [
-          "$has|dhc_open",
-          "$has|dhc_closed",
-          "$has|dhc_open_fast"
-        ],
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_DHC_NortheastTower"
-        ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
-      {
-        "name": "Southeast Tower",
-        "visibility_rules": [
-          "$has|dhc_open",
-          "$has|dhc_closed",
-          "$has|dhc_open_fast"
-        ],
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_DHC_SoutheastTower"
-        ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
-      {
-        "name": "Southwest Tower",
-        "visibility_rules": [
-          "$has|dhc_open",
-          "$has|dhc_closed",
-          "$has|dhc_open_fast"
-        ],
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_DHC_SouthwestTower"
-        ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
-      {
-        "name": "Northwest Tower",
+        "name": "3F - North West - Chest",
         "visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
@@ -1637,7 +2248,49 @@
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
       {
-        "name": "Big Block Chest",
+        "name": "3F - North East - Chest",
+        "visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ],
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_DHC_NortheastTower"
+        ],
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
+      },
+      {
+        "name": "3F - South West - Chest",
+        "visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ],
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_DHC_SouthwestTower"
+        ],
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
+      },
+      {
+        "name": "3F - South East - Chest",
+        "visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ],
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_DHC_SoutheastTower"
+        ],
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
+      },
+      {
+        "name": "2F - Blue Warp - Big Chest",
         "visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
@@ -1651,7 +2304,20 @@
         "chest_opened_img": "images/items-map/big_chest_open.png"
       },
       {
-        "name": "Vaati",
+        "name": "Sanctuary - Win",
+        "visibility_rules": [
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
+        ],
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_DHC_Win"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "2F - Vaati - Kill",
         "visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
@@ -1672,7 +2338,7 @@
       {
         "map": "map",
         "x": 1326,
-        "y": 130,
+        "y": 164,
         "shape": "trapezoid",
         "force_invisibility_rules": [
           "$has|dungeonser_off",
@@ -1682,7 +2348,65 @@
           "$has|tod_dhc",
           "$has|crypt_dhc",
           "$has|pow_dhc",
-          "$has|dhc_dhc"
+          "$has|dhc_dhc",
+          "$has|dhc_closed",
+          "$has|dhc_ped",
+          "$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map",
+        "x": 1060,
+        "y": 188,
+        "shape": "trapezoid",
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_dhc",
+          "$has|cof_dhc",
+          "$has|fow_dhc",
+          "$has|tod_dhc",
+          "$has|crypt_dhc",
+          "$has|pow_dhc",
+          "$has|dhc_dhc",
+          "$has|dhc_open",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 336,
+        "y": 36,
+        "shape": "trapezoid",
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_dhc",
+          "$has|cof_dhc",
+          "$has|fow_dhc",
+          "$has|tod_dhc",
+          "$has|crypt_dhc",
+          "$has|pow_dhc",
+          "$has|dhc_dhc",
+          "$has|dhc_closed",
+          "$has|dhc_ped",
+          "$has|dhc_fast_vaati"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 70,
+        "y": 60,
+        "shape": "trapezoid",
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_dhc",
+          "$has|cof_dhc",
+          "$has|fow_dhc",
+          "$has|tod_dhc",
+          "$has|crypt_dhc",
+          "$has|pow_dhc",
+          "$has|dhc_dhc",
+          "$has|dhc_open",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -1695,6 +2419,18 @@
         ],
         "chest_unopened_img": "images/items-map/Cave Entrance Icon.png",
         "chest_opened_img": "images/items-map/Cave Entrance Icon.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "{}"
+        ],
+        "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
+        "chest_unopened_img": "images/items-map/Elements.png",
+        "chest_opened_img": "images/items-map/noElements.png"
       }
     ]
   },
@@ -1704,7 +2440,23 @@
       {
         "map": "map",
         "x": 2337,
-        "y": 1050,
+        "y": 1060,
+        "shape": "trapezoid",
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_tod",
+          "$has|cof_tod",
+          "$has|fow_tod",
+          "$has|tod_tod",
+          "$has|crypt_tod",
+          "$has|pow_tod",
+          "$has|dhc_tod"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 197,
+        "y": 261,
         "shape": "trapezoid",
         "force_invisibility_rules": [
           "$has|dungeonser_off",
@@ -1727,6 +2479,18 @@
         ],
         "chest_unopened_img": "images/items-map/Cave Entrance Icon.png",
         "chest_opened_img": "images/items-map/Cave Entrance Icon.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "{}"
+        ],
+        "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
+        "chest_unopened_img": "images/items-map/Elements.png",
+        "chest_opened_img": "images/items-map/noElements.png"
       }
     ]
   },
@@ -1735,8 +2499,27 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 2303,
-        "y": 250,
+        "x": 2304,
+        "y": 245,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ],
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_pow",
+          "$has|cof_pow",
+          "$has|fow_pow",
+          "$has|tod_pow",
+          "$has|crypt_pow",
+          "$has|pow_pow",
+          "$has|dhc_pow"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 324,
+        "y": 117,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
@@ -1762,6 +2545,18 @@
         ],
         "chest_unopened_img": "images/items-map/Cave Entrance Icon.png",
         "chest_opened_img": "images/items-map/Cave Entrance Icon.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "{}"
+        ],
+        "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
+        "chest_unopened_img": "images/items-map/Elements.png",
+        "chest_opened_img": "images/items-map/noElements.png"
       }
     ]
   },
@@ -1770,8 +2565,27 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 592,
-        "y": 1800,
+        "x": 591,
+        "y": 1777,
+        "shape": "trapezoid",
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ],
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_fow",
+          "$has|cof_fow",
+          "$has|fow_fow",
+          "$has|tod_fow",
+          "$has|crypt_fow",
+          "$has|pow_fow",
+          "$has|dhc_fow"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 591,
+        "y": 20,
         "shape": "trapezoid",
         "restrict_visibility_rules": [
           "$FusionsGold"
@@ -1797,6 +2611,18 @@
         ],
         "chest_unopened_img": "images/items-map/Cave Entrance Icon.png",
         "chest_opened_img": "images/items-map/Cave Entrance Icon.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "{}"
+        ],
+        "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
+        "chest_unopened_img": "images/items-map/Elements.png",
+        "chest_opened_img": "images/items-map/noElements.png"
       }
     ]
   },
@@ -1805,8 +2631,24 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 323,
-        "y": 200,
+        "x": 325,
+        "y": 233,
+        "shape": "trapezoid",
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_cof",
+          "$has|cof_cof",
+          "$has|fow_cof",
+          "$has|tod_cof",
+          "$has|crypt_cof",
+          "$has|pow_cof",
+          "$has|dhc_cof"
+        ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 325,
+        "y": 233,
         "shape": "trapezoid",
         "force_invisibility_rules": [
           "$has|dungeonser_off",
@@ -1829,6 +2671,18 @@
         ],
         "chest_unopened_img": "images/items-map/Cave Entrance Icon.png",
         "chest_opened_img": "images/items-map/Cave Entrance Icon.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "{}"
+        ],
+        "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
+        "chest_unopened_img": "images/items-map/Elements.png",
+        "chest_opened_img": "images/items-map/noElements.png"
       }
     ]
   },
@@ -1839,6 +2693,22 @@
         "map": "map",
         "x": 830,
         "y": 165,
+        "shape": "trapezoid",
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_crypt",
+          "$has|cof_crypt",
+          "$has|fow_crypt",
+          "$has|tod_crypt",
+          "$has|crypt_crypt",
+          "$has|pow_crypt",
+          "$has|dhc_crypt"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 160,
+        "y": 37,
         "shape": "trapezoid",
         "force_invisibility_rules": [
           "$has|dungeonser_off",
@@ -1861,6 +2731,18 @@
         ],
         "chest_unopened_img": "images/items-map/Cave Entrance Icon.png",
         "chest_opened_img": "images/items-map/Cave Entrance Icon.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "{}"
+        ],
+        "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
+        "chest_unopened_img": "images/items-map/Elements.png",
+        "chest_opened_img": "images/items-map/noElements.png"
       }
     ]
   },
@@ -1869,8 +2751,24 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 2282,
-        "y": 1800,
+        "x": 2284,
+        "y": 1842,
+        "shape": "trapezoid",
+        "force_invisibility_rules": [
+          "$has|dungeonser_off",
+          "$has|dws_dws",
+          "$has|cof_dws",
+          "$has|fow_dws",
+          "$has|tod_dws",
+          "$has|crypt_dws",
+          "$has|pow_dws",
+          "$has|dhc_dws"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 304,
+        "y": 405,
         "shape": "trapezoid",
         "force_invisibility_rules": [
           "$has|dungeonser_off",
@@ -1893,6 +2791,18 @@
         ],
         "chest_unopened_img": "images/items-map/Cave Entrance Icon.png",
         "chest_opened_img": "images/items-map/Cave Entrance Icon.png"
+      },
+      {
+        "name": "Reward",
+        "access_rules": [
+          "{}"
+        ],
+        "item_count": 1,
+        "capture_item": true,
+        "always_allow_chest_manipulation": true,
+        "capture_item_layout": "Element_capture",
+        "chest_unopened_img": "images/items-map/Elements.png",
+        "chest_opened_img": "images/items-map/noElements.png"
       }
     ]
   }

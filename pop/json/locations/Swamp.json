@@ -9,6 +9,14 @@
         "restrict_visibility_rules": [
           "$has|underwater_on"
         ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 655,
+        "y": 442,
+        "restrict_visibility_rules": [
+          "$has|underwater_on"
+        ]
       }
     ],
     "sections": [
@@ -48,6 +56,11 @@
         "map": "map",
         "x": 37,
         "y": 1610
+      },
+      {
+        "map": "map_swamp",
+        "x": 37,
+        "y": 492
       }
     ],
     "sections": [
@@ -78,6 +91,11 @@
         "map": "map",
         "x": 484,
         "y": 1724
+      },
+      {
+        "map": "map_swamp",
+        "x": 484,
+        "y": 606
       }
     ],
     "sections": [
@@ -99,6 +117,11 @@
         "map": "map",
         "x": 144,
         "y": 1412
+      },
+      {
+        "map": "map_swamp",
+        "x": 144,
+        "y": 294
       }
     ],
     "sections": [
@@ -120,6 +143,11 @@
         "map": "map",
         "x": 645,
         "y": 1158
+      },
+      {
+        "map": "map_swamp",
+        "x": 645,
+        "y": 40
       }
     ],
     "sections": [
@@ -141,6 +169,11 @@
         "map": "map",
         "x": 432,
         "y": 1160
+      },
+      {
+        "map": "map_swamp",
+        "x": 432,
+        "y": 42
       }
     ],
     "sections": [
@@ -167,6 +200,16 @@
         ],
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_swamp",
+        "x": 350,
+        "y": 47,
+        "restrict_visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -186,6 +229,11 @@
         "map": "map",
         "x": 28,
         "y": 1178
+      },
+      {
+        "map": "map_swamp",
+        "x": 28,
+        "y": 60
       }
     ],
     "sections": [
@@ -219,6 +267,11 @@
         "map": "map",
         "x": 517,
         "y": 1393
+      },
+      {
+        "map": "map_swamp",
+        "x": 517,
+        "y": 275
       }
     ],
     "sections": [
@@ -240,6 +293,11 @@
         "map": "map",
         "x": 283,
         "y": 1403
+      },
+      {
+        "map": "map_swamp",
+        "x": 283,
+        "y": 285
       }
     ],
     "sections": [
@@ -266,6 +324,16 @@
         ],
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_swamp",
+        "x": 75,
+        "y": 582,
+        "restrict_visibility_rules": [
+          "$has|fusiongold_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -290,6 +358,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 37,
+        "y": 208,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -311,6 +387,14 @@
         "map": "map",
         "x": 634,
         "y": 1628,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 634,
+        "y": 510,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -347,6 +431,14 @@
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 612,
+        "y": 40,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
@@ -368,6 +460,14 @@
         "map": "map",
         "x": 240,
         "y": 1603,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 240,
+        "y": 485,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -395,6 +495,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|golden_enemy_on"
         ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 400,
+        "y": 112,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
       }
     ],
     "sections": [
@@ -419,6 +527,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 133,
+        "y": 49,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -440,6 +556,14 @@
         "map": "map",
         "x": 283,
         "y": 1463,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 283,
+        "y": 345,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]

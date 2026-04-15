@@ -6,6 +6,11 @@
         "map": "map",
         "x": 709,
         "y": 186
+      },
+      {
+        "map": "map_valley",
+        "x": 38,
+        "y": 58
       }
     ],
     "sections": [
@@ -30,6 +35,11 @@
         "map": "map",
         "x": 730,
         "y": 229
+      },
+      {
+        "map": "map_valley",
+        "x": 59,
+        "y": 101
       }
     ],
     "sections": [
@@ -56,6 +66,16 @@
         "map": "map",
         "x": 751,
         "y": 568
+      },
+      {
+        "map": "map_valley",
+        "x": 79,
+        "y": 522
+      },
+      {
+        "map": "map_valley",
+        "x": 80,
+        "y": 440
       }
     ],
     "sections": [
@@ -77,6 +97,11 @@
         "map": "map",
         "x": 943,
         "y": 584
+      },
+      {
+        "map": "map_valley",
+        "x": 272,
+        "y": 456
       }
     ],
     "sections": [
@@ -98,6 +123,11 @@
         "map": "map",
         "x": 948,
         "y": 405
+      },
+      {
+        "map": "map_valley",
+        "x": 277,
+        "y": 277
       }
     ],
     "sections": [
@@ -139,6 +169,15 @@
         "map": "map",
         "x": 932,
         "y": 229,
+        "restrict_visibility_rules": [
+          "$FusionsGreen",
+          "$FusionsBlue"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 261,
+        "y": 101,
         "restrict_visibility_rules": [
           "$FusionsGreen",
           "$FusionsBlue"
@@ -191,6 +230,15 @@
           "$FusionsGreen",
           "$FusionsBlue"
         ]
+      },
+      {
+        "map": "map_valley",
+        "x": 283,
+        "y": 59,
+        "restrict_visibility_rules": [
+          "$FusionsGreen",
+          "$FusionsBlue"
+        ]
       }
     ],
     "sections": [
@@ -218,6 +266,14 @@
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
+      },
+      {
+        "map": "map_valley",
+        "x": 37,
+        "y": 144,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
@@ -241,6 +297,13 @@
         "y": 300,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_valley",
+        "x": 84,
+        "y": 172,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -273,6 +336,14 @@
         "map": "map",
         "x": 1059,
         "y": 527,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_northfield",
+        "x": 69,
+        "y": 47,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]

@@ -6,6 +6,11 @@
         "map": "map",
         "x": 1102,
         "y": 452
+      },
+      {
+        "map": "map_castle",
+        "x": 112,
+        "y": 324
       }
     ],
     "sections": [
@@ -27,6 +32,11 @@
         "map": "map",
         "x": 1017,
         "y": 452
+      },
+      {
+        "map": "map_castle",
+        "x": 27,
+        "y": 324
       }
     ],
     "sections": [
@@ -48,6 +58,11 @@
         "map": "map",
         "x": 1612,
         "y": 375
+      },
+      {
+        "map": "map_castle",
+        "x": 622,
+        "y": 247
       }
     ],
     "sections": [
@@ -91,6 +106,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|golden_enemy_on"
         ]
+      },
+      {
+        "map": "map_castle",
+        "x": 620,
+        "y": 172,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
       }
     ],
     "sections": [
@@ -114,6 +137,13 @@
         "y": 175,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_castle",
+        "x": 623,
+        "y": 47,
+        "shape": "diamond",
+        "size": 28
       }
     ],
     "sections": [
@@ -136,6 +166,14 @@
         "map": "map",
         "x": 1506,
         "y": 170,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 516,
+        "y": 42,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -169,6 +207,14 @@
         "map": "map",
         "x": 1144,
         "y": 152,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_castle",
+        "x": 154,
+        "y": 24,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]

@@ -8,6 +8,13 @@
         "y": 1110,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_clouds",
+        "x": 990,
+        "y": 982,
+        "shape": "diamond",
+        "size": 42
       }
     ],
     "sections": [
@@ -45,6 +52,16 @@
         ],
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_clouds",
+        "x": 1170,
+        "y": 982,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 42
       }
     ],
     "sections": [
@@ -66,6 +83,14 @@
         "map": "map",
         "x": 2677,
         "y": 744,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 697,
+        "y": 616,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
@@ -93,6 +118,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 1320,
+        "y": 47,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
@@ -114,6 +147,14 @@
         "map": "map",
         "x": 2730,
         "y": 150,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 750,
+        "y": 22,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
@@ -153,6 +194,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 1310,
+        "y": 582,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
@@ -174,6 +223,14 @@
         "map": "map",
         "x": 3300,
         "y": 600,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 1320,
+        "y": 472,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
@@ -201,6 +258,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 1170,
+        "y": 592,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
       }
     ],
     "sections": [
@@ -222,6 +287,14 @@
         "map": "map",
         "x": 2920,
         "y": 550,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|digging_on"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 940,
+        "y": 422,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility,$has|digging_on"
         ]
@@ -249,6 +322,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 1017,
+        "y": 709,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
@@ -273,6 +354,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 1049,
+        "y": 1166,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
@@ -294,6 +383,14 @@
         "map": "map",
         "x": 3290,
         "y": 450,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 1310,
+        "y": 322,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
@@ -323,6 +420,16 @@
         ],
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_clouds",
+        "x": 720,
+        "y": 702,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 42
       }
     ],
     "sections": [
@@ -344,6 +451,14 @@
         "map": "map",
         "x": 2710,
         "y": 260,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 730,
+        "y": 132,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
@@ -373,6 +488,16 @@
         ],
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_clouds",
+        "x": 1295,
+        "y": 722,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 42
       }
     ],
     "sections": [
@@ -402,6 +527,22 @@
         "map": "map",
         "x": 1379,
         "y": 1826,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 325,
+        "y": 232,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
+      },
+      {
+        "map": "map_southfield",
+        "x": 389,
+        "y": 167,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -553,6 +694,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 751,
+        "y": 549,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
@@ -579,6 +728,16 @@
         ],
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_clouds",
+        "x": 878,
+        "y": 1142,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 42
       }
     ],
     "sections": [
@@ -605,6 +764,16 @@
         ],
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_clouds",
+        "x": 1294,
+        "y": 1149,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility,$has|fusiongold_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 42
       }
     ],
     "sections": [
@@ -629,6 +798,14 @@
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 889,
+        "y": 451,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
       }
     ],
     "sections": [
@@ -650,6 +827,14 @@
         "map": "map",
         "x": 3007,
         "y": 579,
+        "restrict_visibility_rules": [
+          "$CloudTopFallVisibility"
+        ]
+      },
+      {
+        "map": "map_clouds",
+        "x": 1027,
+        "y": 451,
         "restrict_visibility_rules": [
           "$CloudTopFallVisibility"
         ]

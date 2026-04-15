@@ -6,6 +6,11 @@
         "map": "map",
         "x": 2311,
         "y": 1262
+      },
+      {
+        "map": "map_hylia",
+        "x": 171,
+        "y": 463
       }
     ],
     "sections": [
@@ -46,6 +51,11 @@
         "map": "map",
         "x": 2294,
         "y": 827
+      },
+      {
+        "map": "map_hylia",
+        "x": 154,
+        "y": 28
       }
     ],
     "sections": [
@@ -71,6 +81,11 @@
         "map": "map",
         "x": 2603,
         "y": 862
+      },
+      {
+        "map": "map_hylia",
+        "x": 463,
+        "y": 63
       }
     ],
     "sections": [
@@ -92,6 +107,11 @@
         "map": "map",
         "x": 2464,
         "y": 862
+      },
+      {
+        "map": "map_hylia",
+        "x": 324,
+        "y": 63
       }
     ],
     "sections": [
@@ -147,6 +167,11 @@
         "map": "map",
         "x": 2614,
         "y": 1480
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 634,
+        "y": 43
       }
     ],
     "sections": [
@@ -168,6 +193,11 @@
         "map": "map",
         "x": 2017,
         "y": 878
+      },
+      {
+        "map": "map_lonlon",
+        "x": 356,
+        "y": 79
       }
     ],
     "sections": [
@@ -190,6 +220,11 @@
         "map": "map",
         "x": 2587,
         "y": 1395
+      },
+      {
+        "map": "map_hylia",
+        "x": 447,
+        "y": 596
       }
     ],
     "sections": [
@@ -212,6 +247,11 @@
         "map": "map",
         "x": 2592,
         "y": 1335
+      },
+      {
+        "map": "map_hylia",
+        "x": 452,
+        "y": 536
       }
     ],
     "sections": [
@@ -236,6 +276,11 @@
         "map": "map",
         "x": 2423,
         "y": 1326
+      },
+      {
+        "map": "map_hylia",
+        "x": 283,
+        "y": 527
       }
     ],
     "sections": [
@@ -258,6 +303,11 @@
         "map": "map",
         "x": 2491,
         "y": 959
+      },
+      {
+        "map": "map_hylia",
+        "x": 351,
+        "y": 160
       }
     ],
     "sections": [
@@ -280,6 +330,11 @@
         "map": "map",
         "x": 2332,
         "y": 842
+      },
+      {
+        "map": "map_hylia",
+        "x": 192,
+        "y": 43
       }
     ],
     "sections": [
@@ -314,6 +369,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 324,
+        "y": 328,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -343,6 +406,22 @@
         "map": "map",
         "x": 2464,
         "y": 1086,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 101,
+        "y": 346,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_hylia",
+        "x": 324,
+        "y": 287,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -382,6 +461,13 @@
         "y": 1074,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_hylia",
+        "x": 124,
+        "y": 275,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -404,6 +490,11 @@
         "map": "map",
         "x": 2350,
         "y": 960
+      },
+      {
+        "map": "map_hylia",
+        "x": 210,
+        "y": 161
       }
     ],
     "sections": [
@@ -436,6 +527,11 @@
         "map": "map",
         "x": 2620,
         "y": 970
+      },
+      {
+        "map": "map_hylia",
+        "x": 480,
+        "y": 171
       }
     ],
     "sections": [

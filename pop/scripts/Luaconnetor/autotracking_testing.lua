@@ -2197,17 +2197,17 @@ function updateLocations(segment)
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
 		updateToggleFlagDungeons(segment, "dws", "dws", 0x2002c9c, 0x04)
-		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Prize", 0x2002c9c, 0x04)
+		updateSectionFlagDungeons(segment, "dws", "@DeepWoods/Reward", 0x2002c9c, 0x04)
 		updateToggleFlagDungeons(segment, "cof", "cof", 0x2002c9c, 0x08)
-		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Prize", 0x2002c9c, 0x08)
+		updateSectionFlagDungeons(segment, "cof", "@Cave Of Flame/Reward", 0x2002c9c, 0x08)
 		updateToggleFlagDungeons(segment, "fow", "fow", 0x2002c9c, 0x10)
-		updateSectionFlagDungeons(segment, "fow", "@Fortress/Prize", 0x2002c9c, 0x10)
+		updateSectionFlagDungeons(segment, "fow", "@Fortress/Reward", 0x2002c9c, 0x10)
 		updateToggleFlagDungeons(segment, "tod", "tod", 0x2002c9c, 0x20)
-		updateSectionFlagDungeons(segment, "tod", "@Droplet/Prize", 0x2002c9c, 0x20)
+		updateSectionFlagDungeons(segment, "tod", "@Droplet/Reward", 0x2002c9c, 0x20)
 		updateToggleFlagDungeons(segment, "pow", "pow", 0x2002c9c, 0x40)
-		updateSectionFlagDungeons(segment, "pow", "@Palace/Prize", 0x2002c9c, 0x40)
+		updateSectionFlagDungeons(segment, "pow", "@Palace/Reward", 0x2002c9c, 0x40)
 		updateToggleFlagDungeons(segment, "rc", "rc", 0x2002d02, 0x04)
-		updateSectionFlagDungeons(segment, "rc", "@Royal Crypt/Prize", 0x2002d02, 0x04)
+		updateSectionFlagDungeons(segment, "rc", "@Royal Crypt/Reward", 0x2002d02, 0x04)
 		updateToggleFlagDungeons(segment, "dhc", "dhc", 0x2002ca6, 0x20)
 		if has("fusiongold_vanilla") then
 			if fusiongoldcombined:getActive() then

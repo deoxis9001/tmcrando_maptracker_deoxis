@@ -9,6 +9,14 @@
         "restrict_visibility_rules": [
           "$has|digging_on"
         ]
+      },
+      {
+        "map": "map_lonlon",
+        "x": 207,
+        "y": 176,
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
       }
     ],
     "sections": [
@@ -30,6 +38,11 @@
         "map": "map",
         "x": 1871,
         "y": 1221
+      },
+      {
+        "map": "map_lonlon",
+        "x": 210,
+        "y": 422
       }
     ],
     "sections": [
@@ -54,6 +67,11 @@
         "map": "map",
         "x": 2039,
         "y": 814
+      },
+      {
+        "map": "map_lonlon",
+        "x": 378,
+        "y": 15
       }
     ],
     "sections": [
@@ -75,6 +93,11 @@
         "map": "map",
         "x": 1816,
         "y": 1095
+      },
+      {
+        "map": "map_lonlon",
+        "x": 155,
+        "y": 296
       }
     ],
     "sections": [
@@ -105,6 +128,11 @@
         "map": "map",
         "x": 1980,
         "y": 1045
+      },
+      {
+        "map": "map_lonlon",
+        "x": 319,
+        "y": 246
       }
     ],
     "sections": [
@@ -141,6 +169,14 @@
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
+      },
+      {
+        "map": "map_lonlon",
+        "x": 335,
+        "y": 353,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
       }
     ],
     "sections": [
@@ -162,6 +198,15 @@
         "map": "map",
         "x": 1751,
         "y": 1372,
+        "restrict_visibility_rules": [
+          "$FusionsBlue",
+          "$has|fusionred_vanilla"
+        ]
+      },
+      {
+        "map": "map_lonlon",
+        "x": 90,
+        "y": 573,
         "restrict_visibility_rules": [
           "$FusionsBlue",
           "$has|fusionred_vanilla"
@@ -224,6 +269,13 @@
         "y": 980,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_lonlon",
+        "x": 139,
+        "y": 181,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [

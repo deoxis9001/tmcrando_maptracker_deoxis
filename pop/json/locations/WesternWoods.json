@@ -9,6 +9,14 @@
         "restrict_visibility_rules": [
           "$FusionsBlue"
         ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 39,
+        "y": 555,
+        "restrict_visibility_rules": [
+          "$FusionsBlue"
+        ]
       }
     ],
     "sections": [
@@ -44,6 +52,13 @@
         "y": 2005,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 129,
+        "y": 585,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -66,6 +81,14 @@
         "map": "map",
         "x": 947,
         "y": 1781,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|digging_on"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 276,
+        "y": 361,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|digging_on"
         ]
@@ -93,6 +116,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|digging_on"
         ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 133,
+        "y": 53,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|digging_on"
+        ]
       }
     ],
     "sections": [
@@ -114,6 +145,14 @@
         "map": "map",
         "x": 778,
         "y": 1765,
+        "restrict_visibility_rules": [
+          "$FusionsRedLibrary"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 107,
+        "y": 345,
         "restrict_visibility_rules": [
           "$FusionsRedLibrary"
         ]
@@ -141,6 +180,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 155,
+        "y": 183,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -162,6 +209,14 @@
         "map": "map",
         "x": 767,
         "y": 1915,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 96,
+        "y": 495,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -195,6 +250,14 @@
         "map": "map",
         "x": 920,
         "y": 1920,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 249,
+        "y": 500,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|golden_enemy_on"
         ]

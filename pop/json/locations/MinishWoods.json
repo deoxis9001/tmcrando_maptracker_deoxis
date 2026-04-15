@@ -6,6 +6,11 @@
         "map": "map",
         "x": 2449,
         "y": 1487
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 469,
+        "y": 50
       }
     ],
     "sections": [
@@ -27,6 +32,11 @@
         "map": "map",
         "x": 2252,
         "y": 1901
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 272,
+        "y": 464
       }
     ],
     "sections": [
@@ -53,6 +63,16 @@
         "map": "map",
         "x": 2315,
         "y": 1607
+      },
+      {
+        "map": "map_hylia",
+        "x": 218,
+        "y": 574
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 335,
+        "y": 170
       }
     ],
     "sections": [
@@ -84,6 +104,11 @@
         "map": "map",
         "x": 2055,
         "y": 1485
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 75,
+        "y": 48
       }
     ],
     "sections": [
@@ -105,6 +130,11 @@
         "map": "map",
         "x": 2295,
         "y": 2000
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 315,
+        "y": 563
       }
     ],
     "sections": [
@@ -195,6 +225,11 @@
         "map": "map",
         "x": 2295,
         "y": 2050
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 315,
+        "y": 613
       }
     ],
     "sections": [
@@ -219,6 +254,11 @@
         "map": "map",
         "x": 2049,
         "y": 1797
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 69,
+        "y": 360
       }
     ],
     "sections": [
@@ -267,6 +307,11 @@
         "map": "map",
         "x": 2379,
         "y": 1650
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 399,
+        "y": 213
       }
     ],
     "sections": [
@@ -288,6 +333,11 @@
         "map": "map",
         "x": 2187,
         "y": 1968
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 207,
+        "y": 531
       }
     ],
     "sections": [
@@ -334,6 +384,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 357,
+        "y": 646,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -355,6 +413,14 @@
         "map": "map",
         "x": 2582,
         "y": 1826,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 602,
+        "y": 389,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -382,6 +448,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 442,
+        "y": 486,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -403,6 +477,14 @@
         "map": "map",
         "x": 2038,
         "y": 1879,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 58,
+        "y": 442,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -430,6 +512,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|golden_enemy_on"
         ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 220,
+        "y": 113,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
       }
     ],
     "sections": [
@@ -451,6 +541,14 @@
         "map": "map",
         "x": 2114,
         "y": 1677,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 134,
+        "y": 240,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -478,6 +576,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 69,
+        "y": 134,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -499,6 +605,11 @@
         "map": "map",
         "x": 2114,
         "y": 1645
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 134,
+        "y": 208
       }
     ],
     "sections": [
@@ -523,6 +634,13 @@
         "y": 1710,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 350,
+        "y": 273,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [

@@ -9,6 +9,14 @@
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
+      },
+      {
+        "map": "map_falls",
+        "x": 244,
+        "y": 543,
+        "restrict_visibility_rules": [
+          "$has|rupees_on"
+        ]
       }
     ],
     "sections": [
@@ -51,6 +59,11 @@
         "map": "map",
         "x": 1943,
         "y": 533
+      },
+      {
+        "map": "map_falls",
+        "x": 282,
+        "y": 533
       }
     ],
     "sections": [
@@ -81,6 +94,11 @@
         "map": "map",
         "x": 1932,
         "y": 762
+      },
+      {
+        "map": "map_falls",
+        "x": 271,
+        "y": 762
       }
     ],
     "sections": [
@@ -101,6 +119,14 @@
       {
         "map": "map",
         "x": 1826,
+        "y": 689,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_falls",
+        "x": 165,
         "y": 689,
         "restrict_visibility_rules": [
           "$FusionsRed"
@@ -126,6 +152,14 @@
         "map": "map",
         "x": 1773,
         "y": 826,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_lonlon",
+        "x": 112,
+        "y": 27,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]

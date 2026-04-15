@@ -9,6 +9,14 @@
         "restrict_visibility_rules": [
           "$FusionsGold"
         ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 197,
+        "y": 257,
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ]
       }
     ],
     "sections": [
@@ -30,6 +38,14 @@
         "map": "map",
         "x": 48,
         "y": 2019,
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 48,
+        "y": 262,
         "restrict_visibility_rules": [
           "$FusionsGold"
         ]
@@ -67,6 +83,14 @@
         "restrict_visibility_rules": [
           "$FusionsGold"
         ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 133,
+        "y": 41,
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ]
       }
     ],
     "sections": [
@@ -88,6 +112,14 @@
         "map": "map",
         "x": 554,
         "y": 1942,
+        "restrict_visibility_rules": [
+          "$FusionsGold"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 554,
+        "y": 185,
         "restrict_visibility_rules": [
           "$FusionsGold"
         ]
@@ -115,6 +147,14 @@
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsRed"
         ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 645,
+        "y": 112,
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsRed"
+        ]
       }
     ],
     "sections": [
@@ -136,6 +176,14 @@
         "map": "map",
         "x": 250,
         "y": 2061,
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 250,
+        "y": 304,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsGreen"
         ]
@@ -163,6 +211,14 @@
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsGreenLibrary,$has|golden_enemy_on"
         ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 520,
+        "y": 313,
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsGreenLibrary,$has|golden_enemy_on"
+        ]
       }
     ],
     "sections": [
@@ -184,6 +240,14 @@
         "map": "map",
         "x": 293,
         "y": 1954,
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 293,
+        "y": 197,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsGreen"
         ]
@@ -211,6 +275,14 @@
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsRed"
         ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 26,
+        "y": 90,
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsRed"
+        ]
       }
     ],
     "sections": [
@@ -232,6 +304,14 @@
         "map": "map",
         "x": 209,
         "y": 1780,
+        "restrict_visibility_rules": [
+          "$FusionsGold,$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_ruins",
+        "x": 209,
+        "y": 23,
         "restrict_visibility_rules": [
           "$FusionsGold,$FusionsRed"
         ]

@@ -1,32 +1,45 @@
 [
   {
-    "name": "Cave Of Flame - Spiny Beetle Fight",
+    "name": "Cave Of Flame - 1F - Spike Beetle",
     "map_locations": [
       {
         "map": "cof",
-        "x": 2259,
+        "x": 2260,
         "y": 1005
+      },
+      {
+        "map": "cof_1F",
+        "x": 392,
+        "y": 92
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_CaveOfFlame_SpinyBeetleFight"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       }
     ]
   },
   {
-    "name": "Cave Of Flame - Rupees",
+    "name": "Cave Of Flame - 1F",
     "map_locations": [
       {
         "map": "cof",
-        "x": 2005,
-        "y": 1005,
+        "x": 2004,
+        "y": 993,
+        "restrict_visibility_rules": [
+          "$has|rupees_on"
+        ]
+      },
+      {
+        "map": "cof_1F",
+        "x": 135,
+        "y": 86,
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
@@ -34,7 +47,7 @@
     ],
     "sections": [
       {
-        "name": "Rupees",
+        "name": "Items",
         "item_count": 5,
         "access_rules": [
           "$Json_Dungeon_CaveOfFlame_Rupees"
@@ -45,12 +58,17 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Big Chest Room Big Chest",
+    "name": "Cave Of Flame - B1 - Hazy Room - Big Chest",
     "map_locations": [
       {
         "map": "cof",
-        "x": 890,
-        "y": 1090
+        "x": 893,
+        "y": 1096
+      },
+      {
+        "map": "cof_B1",
+        "x": 893,
+        "y": 804
       }
     ],
     "sections": [
@@ -66,17 +84,22 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Big Chest Room Chest",
+    "name": "Cave Of Flame - B1 - Hazy Room - Small Chest",
     "map_locations": [
       {
         "map": "cof",
-        "x": 690,
-        "y": 1290
+        "x": 693,
+        "y": 1291
+      },
+      {
+        "map": "cof_B1",
+        "x": 693,
+        "y": 999
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Small Chest",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_CaveOfFlame_BigChestRoom"
@@ -87,12 +110,17 @@
     ]
   },
   {
-    "name": "Cave Of Flame - First Rollobite Room",
+    "name": "Cave Of Flame - B1 - Rollobite",
     "map_locations": [
       {
         "map": "cof",
         "x": 370,
         "y": 1390
+      },
+      {
+        "map": "cof_B1",
+        "x": 368,
+        "y": 995
       }
     ],
     "sections": [
@@ -108,12 +136,17 @@
     ]
   },
   {
-    "name": "Cave Of Flame - First Rollobite Room Pillar",
+    "name": "Cave Of Flame - B1 - Rollobite Pillar",
     "map_locations": [
       {
         "map": "cof",
         "x": 370,
         "y": 1120
+      },
+      {
+        "map": "cof_B1",
+        "x": 368,
+        "y": 825
       }
     ],
     "sections": [
@@ -129,38 +162,22 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Bombable Wall",
-    "map_locations": [
-      {
-        "map": "cof",
-        "x": 840,
-        "y": 850
-      }
-    ],
-    "sections": [
-      {
-        "name": "Heart Piece",
-        "item_count": 1,
-        "access_rules": [
-          "$Json_Dungeon_CaveOfFlame_BombableWallHeartPiece"
-        ],
-        "chest_unopened_img": "images/items-map/Heart Piece.png",
-        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
-      }
-    ]
-  },
-  {
-    "name": "Cave Of Flame - Spiny Chu Fight",
+    "name": "Cave Of Flame - B1 - Spikey Chus Pillar",
     "map_locations": [
       {
         "map": "cof",
         "x": 730,
         "y": 410
+      },
+      {
+        "map": "cof_B1",
+        "x": 730,
+        "y": 115
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Chest",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_CaveOfFlame_SpinyChuFight"
@@ -171,33 +188,69 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Spiny Chu Pillar Chest",
+    "name": "Cave Of Flame - B1",
+    "map_locations": [
+      {
+        "map": "cof",
+        "x": 840,
+        "y": 850
+      },
+      {
+        "map": "cof_B1",
+        "x": 842,
+        "y": 554
+      }
+    ],
+    "sections": [
+      {
+        "name": "HP",
+        "item_count": 1,
+        "access_rules": [
+          "$Json_Dungeon_CaveOfFlame_BombableWallHeartPiece"
+        ],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+  {
+    "name": "Cave Of Flame - B1 - Spikey Chus",
     "map_locations": [
       {
         "map": "cof",
         "x": 860,
         "y": 340
+      },
+      {
+        "map": "cof_B1",
+        "x": 860,
+        "y": 68
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_CaveOfFlame_SpinyChuPillarChest"
         ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       }
     ]
   },
   {
-    "name": "Cave Of Flame - Pre Lava Basement Room Block Chest",
+    "name": "Cave Of Flame - B2 - Pre Lava North",
     "map_locations": [
       {
         "map": "cof",
         "x": 1220,
         "y": 270
+      },
+      {
+        "map": "cof_B2",
+        "x": 450,
+        "y": 265
       }
     ],
     "sections": [
@@ -213,12 +266,17 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Pre Lava Basement Room Ledge",
+    "name": "Cave Of Flame - B2 - Pre Lava South",
     "map_locations": [
       {
         "map": "cof",
         "x": 1270,
         "y": 340
+      },
+      {
+        "map": "cof_B2",
+        "x": 475,
+        "y": 345
       }
     ],
     "sections": [
@@ -234,11 +292,16 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Blade Chest",
+    "name": "Cave Of Flame - B2 - Lava Room Blade",
     "map_locations": [
       {
         "map": "cof",
         "x": 2370,
+        "y": 120
+      },
+      {
+        "map": "cof_B2",
+        "x": 1600,
         "y": 120
       }
     ],
@@ -255,32 +318,16 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Lava Basement Left",
+    "name": "Cave Of Flame - B2 - Lava Room Left",
     "map_locations": [
       {
         "map": "cof",
         "x": 1520,
         "y": 665
-      }
-    ],
-    "sections": [
+      },
       {
-        "name": "Chest",
-        "item_count": 1,
-        "access_rules": [
-          "$Json_Dungeon_CaveOfFlame_LavaBasement"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      }
-    ]
-  },
-  {
-    "name": "Cave Of Flame - Lava Basement Right",
-    "map_locations": [
-      {
-        "map": "cof",
-        "x": 2050,
+        "map": "cof_B2",
+        "x": 750,
         "y": 665
       }
     ],
@@ -297,11 +344,42 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Lava Basement Big Chest",
+    "name": "Cave Of Flame - B2 - Lava Room Right",
+    "map_locations": [
+      {
+        "map": "cof",
+        "x": 2050,
+        "y": 665
+      },
+      {
+        "map": "cof_B2",
+        "x": 1295,
+        "y": 665
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "$Json_Dungeon_CaveOfFlame_LavaBasement"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Cave Of Flame - B2 - Lava Room",
     "map_locations": [
       {
         "map": "cof",
         "x": 1665,
+        "y": 400
+      },
+      {
+        "map": "cof_B2",
+        "x": 895,
         "y": 400
       }
     ],
@@ -324,6 +402,11 @@
         "map": "cof",
         "x": 1380,
         "y": 1200
+      },
+      {
+        "map": "cof_B3",
+        "x": 165,
+        "y": 55
       }
     ],
     "sections": [
@@ -335,21 +418,30 @@
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Reward",
+        "item_count": 1,
+        "access_rules": [
+          "$Json_Dungeon_CaveOfFlame_Gleerok"
+        ],
+        "chest_unopened_img": "images/items-map/Fire Element.png",
+        "chest_opened_img": "images/items-map/Fire Element Gray.png"
       }
     ]
   },
   {
-    "name": "Crypt - Gibdos",
+    "name": "Crypt - Gibdo Left",
     "map_locations": [
       {
         "map": "rc",
-        "x": 295,
-        "y": 805
+        "x": 257,
+        "y": 808
       }
     ],
     "sections": [
       {
-        "name": "First Kill",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_Crypt_Gibdos"
@@ -357,9 +449,21 @@
         "capture_item": true,
         "chest_unopened_img": "images/items-map/Small Key.png",
         "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Crypt - Gibdo Right",
+    "map_locations": [
       {
-        "name": "Second Kill",
+        "map": "rc",
+        "x": 347,
+        "y": 808
+      }
+    ],
+    "sections": [
+      {
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_Crypt_OtherGibdos"
@@ -371,17 +475,17 @@
     ]
   },
   {
-    "name": "Crypt - Left Path",
+    "name": "Crypt - Left",
     "map_locations": [
       {
         "map": "rc",
-        "x": 143,
-        "y": 85
+        "x": 145,
+        "y": 87
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_Crypt_LeftPath"
@@ -392,17 +496,17 @@
     ]
   },
   {
-    "name": "Crypt - Right Path",
+    "name": "Crypt - Right",
     "map_locations": [
       {
         "map": "rc",
-        "x": 447,
-        "y": 85
+        "x": 450,
+        "y": 87
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_Crypt_RightPath"
@@ -413,12 +517,12 @@
     ]
   },
   {
-    "name": "Crypt - King Gustaf",
+    "name": "Crypt - Prize",
     "map_locations": [
       {
         "map": "rc",
         "x": 895,
-        "y": 75
+        "y": 110
       }
     ],
     "sections": [
@@ -434,11 +538,42 @@
     ]
   },
   {
-    "name": "Deepwoods - Slug Room",
+    "name": "Deepwoods - 2F",
+    "map_locations": [
+      {
+        "map": "dws",
+        "x": 152,
+        "y": 1137
+      },
+      {
+        "map": "dws_2F",
+        "x": 70,
+        "y": 400
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "$Json_Dungeon_Deepwood_UpstairsChest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Deepwoods - 1F - Slug Room",
     "map_locations": [
       {
         "map": "dws",
         "x": 786,
+        "y": 1054
+      },
+      {
+        "map": "dws_1F",
+        "x": 779,
         "y": 1054
       }
     ],
@@ -455,32 +590,16 @@
     ]
   },
   {
-    "name": "Deepwoods - Upstairs Room",
-    "map_locations": [
-      {
-        "map": "dws",
-        "x": 152,
-        "y": 1137
-      }
-    ],
-    "sections": [
-      {
-        "name": "Chest",
-        "item_count": 1,
-        "access_rules": [
-          "$Json_Dungeon_Deepwood_UpstairsChest"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      }
-    ]
-  },
-  {
-    "name": "Deepwoods - Barrel Room Northwest",
+    "name": "Deepwoods - 1F - Barrel Room",
     "map_locations": [
       {
         "map": "dws",
         "x": 622,
+        "y": 299
+      },
+      {
+        "map": "dws_1F",
+        "x": 615,
         "y": 299
       }
     ],
@@ -497,11 +616,16 @@
     ]
   },
   {
-    "name": "Deepwoods - West Side",
+    "name": "Deepwoods - 1F - West",
     "map_locations": [
       {
         "map": "dws",
         "x": 410,
+        "y": 280
+      },
+      {
+        "map": "dws_1F",
+        "x": 403,
         "y": 280
       }
     ],
@@ -518,11 +642,16 @@
     ]
   },
   {
-    "name": "Deepwoods - Two Statue Room",
+    "name": "Deepwoods - 1F - West Statue Puzzle",
     "map_locations": [
       {
         "map": "dws",
         "x": 145,
+        "y": 570
+      },
+      {
+        "map": "dws_1F",
+        "x": 138,
         "y": 570
       }
     ],
@@ -539,17 +668,22 @@
     ]
   },
   {
-    "name": "Deepwoods - Mulldozer Key",
+    "name": "Deepwoods - 1F - East Mulldozer Fight",
     "map_locations": [
       {
         "map": "dws",
         "x": 1425,
         "y": 330
+      },
+      {
+        "map": "dws_1F",
+        "x": 1418,
+        "y": 330
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_Deepwood_MulldozerKey"
@@ -560,11 +694,16 @@
     ]
   },
   {
-    "name": "Deepwoods - Two Lamp",
+    "name": "Deepwoods - 1F - North East",
     "map_locations": [
       {
         "map": "dws",
         "x": 1040,
+        "y": 140
+      },
+      {
+        "map": "dws_1F",
+        "x": 1033,
         "y": 140
       }
     ],
@@ -581,12 +720,17 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Switch Room Big Chest",
+    "name": "Deepwoods - B1 - Switch Room Big Chest",
     "map_locations": [
       {
         "map": "dws",
         "x": 1635,
         "y": 730
+      },
+      {
+        "map": "dws_B1",
+        "x": 656,
+        "y": 45
       }
     ],
     "sections": [
@@ -602,12 +746,17 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Switch Room Chest",
+    "name": "Deepwoods - B1 - Switch Room Chest",
     "map_locations": [
       {
         "map": "dws",
         "x": 1450,
         "y": 795
+      },
+      {
+        "map": "dws_B1",
+        "x": 471,
+        "y": 115
       }
     ],
     "sections": [
@@ -623,17 +772,22 @@
     ]
   },
   {
-    "name": "Deepwoods - Blue Warp",
+    "name": "Deepwoods - 1F - Blue Warp",
     "map_locations": [
       {
         "map": "dws",
         "x": 785,
         "y": 60
+      },
+      {
+        "map": "dws_1F",
+        "x": 778,
+        "y": 60
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_Deepwood_BlueWarpHeartPiece"
@@ -644,17 +798,22 @@
     ]
   },
   {
-    "name": "Deepwoods - Puffstool Room",
+    "name": "Deepwoods - 1F - Blue Warp Chests",
     "map_locations": [
       {
         "map": "dws",
         "x": 665,
         "y": 60
+      },
+      {
+        "map": "dws_1F",
+        "x": 658,
+        "y": 60
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Chests",
         "item_count": 2,
         "access_rules": [
           "$Json_Dungeon_Deepwood_PuffstoolRoom"
@@ -665,17 +824,22 @@
     ]
   },
   {
-    "name": "Deepwoods - Madderpillar Fight",
+    "name": "Deepwoods - 1F - Madderpillar Big Chest",
     "map_locations": [
       {
         "map": "dws",
         "x": 420,
         "y": 115
+      },
+      {
+        "map": "dws_1F",
+        "x": 413,
+        "y": 115
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "$Json_Dungeon_Deepwood_MadderpillarChest"
@@ -686,17 +850,22 @@
     ]
   },
   {
-    "name": "Deepwoods - Madderpillar Heart Piece",
+    "name": "Deepwoods - 1F - Madderpillar",
     "map_locations": [
       {
         "map": "dws",
         "x": 480,
         "y": 320
+      },
+      {
+        "map": "dws_1F",
+        "x": 473,
+        "y": 320
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -708,12 +877,17 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Big Chest",
+    "name": "Deepwoods - B1 - West",
     "map_locations": [
       {
         "map": "dws",
         "x": 1155,
         "y": 775
+      },
+      {
+        "map": "dws_B1",
+        "x": 176,
+        "y": 95
       }
     ],
     "sections": [
@@ -735,6 +909,11 @@
         "map": "dws",
         "x": 245,
         "y": 820
+      },
+      {
+        "map": "dws_2F",
+        "x": 166,
+        "y": 83
       }
     ],
     "sections": [
@@ -746,6 +925,15 @@
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Reward",
+        "item_count": 1,
+        "access_rules": [
+          "$Json_Dungeon_Deepwood_GreenChu"
+        ],
+        "chest_unopened_img": "images/items-map/Earth Element.png",
+        "chest_opened_img": "images/items-map/Earth Element Gray.png"
       }
     ]
   },
@@ -756,6 +944,11 @@
         "map": "fow",
         "x": 250,
         "y": 1115
+      },
+      {
+        "map": "fow_1F",
+        "x": 170,
+        "y": 245
       }
     ],
     "sections": [
@@ -780,6 +973,14 @@
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
+      },
+      {
+        "map": "fow_1F",
+        "x": 1031,
+        "y": 244,
+        "restrict_visibility_rules": [
+          "$has|rupees_on"
+        ]
       }
     ],
     "sections": [
@@ -801,6 +1002,11 @@
         "map": "fow",
         "x": 200,
         "y": 970
+      },
+      {
+        "map": "fow_1F",
+        "x": 120,
+        "y": 100
       }
     ],
     "sections": [
@@ -821,6 +1027,11 @@
       {
         "map": "fow",
         "x": 1805,
+        "y": 870
+      },
+      {
+        "map": "fow_2F",
+        "x": 410,
         "y": 870
       }
     ],
@@ -846,6 +1057,14 @@
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
+      },
+      {
+        "map": "fow_2F",
+        "x": 293,
+        "y": 992,
+        "restrict_visibility_rules": [
+          "$has|rupees_on"
+        ]
       }
     ],
     "sections": [
@@ -866,6 +1085,14 @@
       {
         "map": "fow",
         "x": 1920,
+        "y": 993,
+        "restrict_visibility_rules": [
+          "$has|rupees_on"
+        ]
+      },
+      {
+        "map": "fow_2F",
+        "x": 525,
         "y": 993,
         "restrict_visibility_rules": [
           "$has|rupees_on"
@@ -900,6 +1127,11 @@
         "map": "fow",
         "x": 295,
         "y": 725
+      },
+      {
+        "map": "fow_3F",
+        "x": 295,
+        "y": 725
       }
     ],
     "sections": [
@@ -919,6 +1151,11 @@
     "map_locations": [
       {
         "map": "fow",
+        "x": 125,
+        "y": 305
+      },
+      {
+        "map": "fow_3F",
         "x": 125,
         "y": 305
       }
@@ -942,6 +1179,11 @@
         "map": "fow",
         "x": 485,
         "y": 460
+      },
+      {
+        "map": "fow_3F",
+        "x": 485,
+        "y": 460
       }
     ],
     "sections": [
@@ -962,6 +1204,11 @@
       {
         "map": "fow",
         "x": 2415,
+        "y": 675
+      },
+      {
+        "map": "fow_2F",
+        "x": 1020,
         "y": 675
       }
     ],
@@ -984,6 +1231,11 @@
         "map": "fow",
         "x": 2285,
         "y": 675
+      },
+      {
+        "map": "fow_2F",
+        "x": 890,
+        "y": 675
       }
     ],
     "sections": [
@@ -1005,6 +1257,11 @@
         "map": "fow",
         "x": 2190,
         "y": 1060
+      },
+      {
+        "map": "fow_2F",
+        "x": 795,
+        "y": 1060
       }
     ],
     "sections": [
@@ -1024,6 +1281,11 @@
     "map_locations": [
       {
         "map": "fow",
+        "x": 795,
+        "y": 710
+      },
+      {
+        "map": "fow_3F",
         "x": 795,
         "y": 710
       }
@@ -1047,6 +1309,11 @@
         "map": "fow",
         "x": 900,
         "y": 460
+      },
+      {
+        "map": "fow_3F",
+        "x": 900,
+        "y": 460
       }
     ],
     "sections": [
@@ -1068,6 +1335,11 @@
         "map": "fow",
         "x": 1110,
         "y": 935
+      },
+      {
+        "map": "fow_1F",
+        "x": 1030,
+        "y": 65
       }
     ],
     "sections": [
@@ -1090,6 +1362,11 @@
         "map": "fow",
         "x": 2075,
         "y": 610
+      },
+      {
+        "map": "fow_2F",
+        "x": 680,
+        "y": 610
       }
     ],
     "sections": [
@@ -1110,6 +1387,11 @@
       {
         "map": "fow",
         "x": 2030,
+        "y": 995
+      },
+      {
+        "map": "fow_2F",
+        "x": 635,
         "y": 995
       }
     ],
@@ -1132,6 +1414,11 @@
         "map": "fow",
         "x": 1765,
         "y": 260
+      },
+      {
+        "map": "fow_2F",
+        "x": 370,
+        "y": 260
       }
     ],
     "sections": [
@@ -1152,6 +1439,11 @@
       {
         "map": "fow",
         "x": 1900,
+        "y": 260
+      },
+      {
+        "map": "fow_2F",
+        "x": 505,
         "y": 260
       }
     ],
@@ -1174,6 +1466,11 @@
         "map": "fow",
         "x": 2665,
         "y": 230
+      },
+      {
+        "map": "fow_2F",
+        "x": 1270,
+        "y": 230
       }
     ],
     "sections": [
@@ -1194,6 +1491,11 @@
       {
         "map": "fow",
         "x": 2430,
+        "y": 280
+      },
+      {
+        "map": "fow_2F",
+        "x": 1035,
         "y": 280
       }
     ],
@@ -1216,6 +1518,14 @@
       {
         "map": "fow",
         "x": 2480,
+        "y": 930,
+        "restrict_visibility_rules": [
+          "$has|specialpot_on"
+        ]
+      },
+      {
+        "map": "fow_2F",
+        "x": 1085,
         "y": 930,
         "restrict_visibility_rules": [
           "$has|specialpot_on"
@@ -1244,6 +1554,14 @@
         "restrict_visibility_rules": [
           "$has|specialpot_on"
         ]
+      },
+      {
+        "map": "fow_2F",
+        "x": 970,
+        "y": 1080,
+        "restrict_visibility_rules": [
+          "$has|specialpot_on"
+        ]
       }
     ],
     "sections": [
@@ -1264,6 +1582,11 @@
       {
         "map": "fow",
         "x": 2680,
+        "y": 480
+      },
+      {
+        "map": "fow_2F",
+        "x": 1285,
         "y": 480
       }
     ],
@@ -1286,6 +1609,11 @@
         "map": "fow",
         "x": 660,
         "y": 55
+      },
+      {
+        "map": "fow_3F",
+        "x": 680,
+        "y": 55
       }
     ],
     "sections": [
@@ -1305,6 +1633,11 @@
     "map_locations": [
       {
         "map": "pow",
+        "x": 630,
+        "y": 90
+      },
+      {
+        "map": "pow_1F",
         "x": 630,
         "y": 90
       }
@@ -1328,6 +1661,11 @@
         "map": "pow",
         "x": 120,
         "y": 215
+      },
+      {
+        "map": "pow_1F",
+        "x": 120,
+        "y": 215
       }
     ],
     "sections": [
@@ -1348,6 +1686,11 @@
       {
         "map": "pow",
         "x": 3720,
+        "y": 535
+      },
+      {
+        "map": "pow_3F",
+        "x": 920,
         "y": 535
       }
     ],
@@ -1374,6 +1717,14 @@
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
+      },
+      {
+        "map": "pow_2F",
+        "x": 440,
+        "y": 383,
+        "restrict_visibility_rules": [
+          "$has|rupees_on"
+        ]
       }
     ],
     "sections": [
@@ -1395,6 +1746,11 @@
         "map": "pow",
         "x": 585,
         "y": 1645
+      },
+      {
+        "map": "pow_4F",
+        "x": 585,
+        "y": 260
       }
     ],
     "sections": [
@@ -1416,6 +1772,11 @@
         "map": "pow",
         "x": 2385,
         "y": 2125
+      },
+      {
+        "map": "pow_5F",
+        "x": 840,
+        "y": 735
       }
     ],
     "sections": [
@@ -1437,6 +1798,11 @@
         "map": "pow",
         "x": 2110,
         "y": 2075
+      },
+      {
+        "map": "pow_5F",
+        "x": 570,
+        "y": 685
       }
     ],
     "sections": [
@@ -1458,6 +1824,11 @@
         "map": "pow",
         "x": 2140,
         "y": 1865
+      },
+      {
+        "map": "pow_5F",
+        "x": 600,
+        "y": 480
       }
     ],
     "sections": [
@@ -1479,6 +1850,11 @@
         "map": "pow",
         "x": 1595,
         "y": 825
+      },
+      {
+        "map": "pow_2F",
+        "x": 105,
+        "y": 825
       }
     ],
     "sections": [
@@ -1498,6 +1874,11 @@
     "map_locations": [
       {
         "map": "pow",
+        "x": 775,
+        "y": 627
+      },
+      {
+        "map": "pow_1F",
         "x": 775,
         "y": 627
       }
@@ -1521,6 +1902,11 @@
         "map": "pow",
         "x": 600,
         "y": 520
+      },
+      {
+        "map": "pow_1F",
+        "x": 600,
+        "y": 520
       }
     ],
     "sections": [
@@ -1541,6 +1927,11 @@
       {
         "map": "pow",
         "x": 2090,
+        "y": 695
+      },
+      {
+        "map": "pow_2F",
+        "x": 600,
         "y": 695
       }
     ],
@@ -1563,6 +1954,11 @@
         "map": "pow",
         "x": 3400,
         "y": 355
+      },
+      {
+        "map": "pow_3F",
+        "x": 600,
+        "y": 355
       }
     ],
     "sections": [
@@ -1584,6 +1980,11 @@
         "map": "pow",
         "x": 425,
         "y": 1660
+      },
+      {
+        "map": "pow_4F",
+        "x": 425,
+        "y": 275
       }
     ],
     "sections": [
@@ -1606,6 +2007,11 @@
         "map": "pow",
         "x": 710,
         "y": 1915
+      },
+      {
+        "map": "pow_4F",
+        "x": 710,
+        "y": 530
       }
     ],
     "sections": [
@@ -1627,6 +2033,11 @@
         "map": "pow",
         "x": 2625,
         "y": 1820
+      },
+      {
+        "map": "pow_5F",
+        "x": 1080,
+        "y": 430
       }
     ],
     "sections": [
@@ -1648,6 +2059,11 @@
         "map": "pow",
         "x": 950,
         "y": 1660
+      },
+      {
+        "map": "pow_4F",
+        "x": 950,
+        "y": 275
       }
     ],
     "sections": [
@@ -1669,6 +2085,11 @@
         "map": "pow",
         "x": 3340,
         "y": 1870
+      },
+      {
+        "map": "pow_5F",
+        "x": 1800,
+        "y": 480
       }
     ],
     "sections": [
@@ -1690,6 +2111,11 @@
         "map": "pow",
         "x": 3010,
         "y": 1580
+      },
+      {
+        "map": "pow_5F",
+        "x": 1470,
+        "y": 190
       }
     ],
     "sections": [
@@ -1711,6 +2137,11 @@
         "map": "tod",
         "x": 1225,
         "y": 110
+      },
+      {
+        "map": "tod_B2",
+        "x": 1225,
+        "y": 80
       }
     ],
     "sections": [
@@ -1732,6 +2163,11 @@
         "map": "tod",
         "x": 905,
         "y": 140
+      },
+      {
+        "map": "tod_B2",
+        "x": 905,
+        "y": 110
       }
     ],
     "sections": [
@@ -1753,6 +2189,11 @@
         "map": "tod",
         "x": 1505,
         "y": 1215
+      },
+      {
+        "map": "tod_B2",
+        "x": 1505,
+        "y": 1185
       }
     ],
     "sections": [
@@ -1774,6 +2215,11 @@
         "map": "tod",
         "x": 910,
         "y": 1420
+      },
+      {
+        "map": "tod_B2",
+        "x": 910,
+        "y": 1390
       }
     ],
     "sections": [
@@ -1785,7 +2231,7 @@
         ],
         "visibility_rules": [
           "$has|underwater_on",
-          "$has|small_key_vanilla"
+          "small_key_vanilla"
         ],
         "chest_unopened_img": "images/items-map/Small Key.png",
         "chest_opened_img": "images/items-map/Small Key Done.png"
@@ -1799,6 +2245,11 @@
         "map": "tod",
         "x": 740,
         "y": 2925
+      },
+      {
+        "map": "tod_B1",
+        "x": 472,
+        "y": 1270
       }
     ],
     "sections": [
@@ -1820,6 +2271,14 @@
         "map": "tod",
         "x": 690,
         "y": 2815,
+        "restrict_visibility_rules": [
+          "$has|rupees_on"
+        ]
+      },
+      {
+        "map": "tod_B1",
+        "x": 422,
+        "y": 1160,
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
@@ -1847,12 +2306,20 @@
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
+      },
+      {
+        "map": "tod_B2",
+        "x": 1450,
+        "y": 487,
+        "restrict_visibility_rules": [
+          "$has|rupees_on"
+        ]
       }
     ],
     "sections": [
       {
         "name": "Rupees",
-        "item_count": 3,
+        "item_count": 2,
         "access_rules": [
           "$Json_Dungeon_Droplet_RightPathRupees"
         ],
@@ -1880,6 +2347,14 @@
         "restrict_visibility_rules": [
           "$has|underwater_on"
         ]
+      },
+      {
+        "map": "tod_B1",
+        "x": 102,
+        "y": 695,
+        "restrict_visibility_rules": [
+          "$has|underwater_on"
+        ]
       }
     ],
     "sections": [
@@ -1904,6 +2379,14 @@
         "restrict_visibility_rules": [
           "$has|underwater_on"
         ]
+      },
+      {
+        "map": "tod_B2",
+        "x": 600,
+        "y": 1185,
+        "restrict_visibility_rules": [
+          "$has|underwater_on"
+        ]
       }
     ],
     "sections": [
@@ -1925,6 +2408,11 @@
         "map": "tod",
         "x": 1000,
         "y": 830
+      },
+      {
+        "map": "tod_B2",
+        "x": 1000,
+        "y": 800
       }
     ],
     "sections": [
@@ -1946,6 +2434,11 @@
         "map": "tod",
         "x": 1110,
         "y": 975
+      },
+      {
+        "map": "tod_B2",
+        "x": 1110,
+        "y": 945
       }
     ],
     "sections": [
@@ -1967,6 +2460,11 @@
         "map": "tod",
         "x": 695,
         "y": 1025
+      },
+      {
+        "map": "tod_B2",
+        "x": 695,
+        "y": 995
       }
     ],
     "sections": [
@@ -1988,6 +2486,11 @@
         "map": "tod",
         "x": 1475,
         "y": 2365
+      },
+      {
+        "map": "tod_B1",
+        "x": 1207,
+        "y": 710
       }
     ],
     "sections": [
@@ -2009,6 +2512,11 @@
         "map": "tod",
         "x": 1680,
         "y": 2545
+      },
+      {
+        "map": "tod_B1",
+        "x": 1412,
+        "y": 890
       }
     ],
     "sections": [
@@ -2033,6 +2541,14 @@
         "restrict_visibility_rules": [
           "$has|specialpot_on"
         ]
+      },
+      {
+        "map": "tod_B1",
+        "x": 1512,
+        "y": 1125,
+        "restrict_visibility_rules": [
+          "$has|specialpot_on"
+        ]
       }
     ],
     "sections": [
@@ -2054,6 +2570,11 @@
         "map": "tod",
         "x": 1440,
         "y": 3010
+      },
+      {
+        "map": "tod_B1",
+        "x": 1172,
+        "y": 1355
       }
     ],
     "sections": [
@@ -2075,6 +2596,11 @@
         "map": "tod",
         "x": 1720,
         "y": 1440
+      },
+      {
+        "map": "tod_B3",
+        "x": 120,
+        "y": 105
       }
     ],
     "sections": [
@@ -2096,6 +2622,11 @@
         "map": "tod",
         "x": 1385,
         "y": 1235
+      },
+      {
+        "map": "tod_B2",
+        "x": 1385,
+        "y": 1205
       }
     ],
     "sections": [
@@ -2117,6 +2648,11 @@
         "map": "tod",
         "x": 1895,
         "y": 1120
+      },
+      {
+        "map": "tod_B2",
+        "x": 1895,
+        "y": 1090
       }
     ],
     "sections": [
@@ -2138,6 +2674,11 @@
         "map": "tod",
         "x": 1850,
         "y": 800
+      },
+      {
+        "map": "tod_B2",
+        "x": 1850,
+        "y": 770
       }
     ],
     "sections": [
@@ -2159,6 +2700,11 @@
         "map": "tod",
         "x": 1990,
         "y": 720
+      },
+      {
+        "map": "tod_B2",
+        "x": 1990,
+        "y": 690
       }
     ],
     "sections": [
@@ -2180,6 +2726,11 @@
         "map": "tod",
         "x": 1670,
         "y": 975
+      },
+      {
+        "map": "tod_B2",
+        "x": 1670,
+        "y": 945
       }
     ],
     "sections": [
@@ -2201,6 +2752,11 @@
         "map": "tod",
         "x": 1040,
         "y": 2875
+      },
+      {
+        "map": "tod_B1",
+        "x": 775,
+        "y": 1225
       }
     ],
     "sections": [
@@ -2224,7 +2780,18 @@
         "y": 870,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_1F",
+        "x": 933,
+        "y": 835,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2249,7 +2816,18 @@
         "y": 1800,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_B1",
+        "x": 406,
+        "y": 1305,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2274,7 +2852,18 @@
         "y": 110,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_B2",
+        "x": 555,
+        "y": 75,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2299,7 +2888,18 @@
         "y": 70,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_1F",
+        "x": 898,
+        "y": 35,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2324,7 +2924,28 @@
         "y": 130,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_3F",
+        "x": 140,
+        "y": 145,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_2F",
+        "x": 100,
+        "y": 92,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2336,7 +2957,7 @@
           "$Json_Dungeon_DHC_NorthwestTower"
         ],
         "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Gray.png"
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2349,7 +2970,28 @@
         "y": 1490,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_3F",
+        "x": 140,
+        "y": 1505,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_2F",
+        "x": 100,
+        "y": 1452,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2361,7 +3003,7 @@
           "$Json_Dungeon_DHC_SouthwestTower"
         ],
         "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Gray.png"
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2374,7 +3016,28 @@
         "y": 1490,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_3F",
+        "x": 1225,
+        "y": 1505,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_2F",
+        "x": 1185,
+        "y": 1452,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2386,7 +3049,7 @@
           "$Json_Dungeon_DHC_SoutheastTower"
         ],
         "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Gray.png"
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2399,7 +3062,28 @@
         "y": 135,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_3F",
+        "x": 1225,
+        "y": 145,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_2F",
+        "x": 1185,
+        "y": 92,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2411,7 +3095,7 @@
           "$Json_Dungeon_DHC_NortheastTower"
         ],
         "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Gray.png"
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },
@@ -2424,7 +3108,18 @@
         "y": 225,
         "restrict_visibility_rules": [
           "$has|dhc_open",
-          "$has|dhc_closed"
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_2F",
+        "x": 678,
+        "y": 25,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2450,7 +3145,44 @@
         "restrict_visibility_rules": [
           "$has|dhc_open",
           "$has|dhc_closed",
-          "$has|dhc_fast_vaati"
+          "$has|dhc_warp_vaati"
+        ]
+      },
+      {
+        "map": "dhc_4F",
+        "x": 120,
+        "y": 280,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed"
+        ]
+      },
+      {
+        "map": "dhc_3F",
+        "x": 677,
+        "y": 45,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed"
+        ]
+      },
+      {
+        "map": "dhc_2F",
+        "x": 678,
+        "y": 660,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed"
+        ]
+      },
+      {
+        "map": "dhc_sanc",
+        "x": 136,
+        "y": 220,
+        "restrict_visibility_rules": [
+          "$has|dhc_open",
+          "$has|dhc_closed",
+          "$has|dhc_open_fast"
         ]
       }
     ],
@@ -2473,6 +3205,22 @@
         "map": "dhc",
         "x": 3090,
         "y": 1480,
+        "restrict_visibility_rules": [
+          "$has|ped_items_on,$has|dhc_open"
+        ]
+      },
+      {
+        "map": "dhc_sanc",
+        "x": 136,
+        "y": 50,
+        "restrict_visibility_rules": [
+          "$has|ped_items_on,$has|dhc_open"
+        ]
+      },
+      {
+        "map": "dhc_B1",
+        "x": 406,
+        "y": 975,
         "restrict_visibility_rules": [
           "$has|ped_items_on,$has|dhc_open"
         ]
@@ -2515,6 +3263,24 @@
         "map": "dhc",
         "x": 3090,
         "y": 1480,
+        "restrict_visibility_rules": [
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_sanc",
+        "x": 136,
+        "y": 50,
+        "restrict_visibility_rules": [
+          "$has|dhc_ped",
+          "$has|dhc_open_fast"
+        ]
+      },
+      {
+        "map": "dhc_B1",
+        "x": 406,
+        "y": 975,
         "restrict_visibility_rules": [
           "$has|dhc_ped",
           "$has|dhc_open_fast"

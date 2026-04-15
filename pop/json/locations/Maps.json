@@ -1,10 +1,10 @@
 [
   {
-    "name": "Cave Of Flame - Spiny Beetle Fight",
+    "name": "Cave Of Flame - 1F - Spike Beetle",
     "map_locations": [
       {
         "map": "cof",
-        "x": 2259,
+        "x": 2260,
         "y": 1005
       },
       {
@@ -15,31 +15,31 @@
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_SpinyBeetleFight"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       }
     ]
   },
   {
-    "name": "Cave Of Flame - Rupees",
+    "name": "Cave Of Flame - 1F",
     "map_locations": [
       {
         "map": "cof",
-        "x": 2005,
-        "y": 1005,
+        "x": 2004,
+        "y": 993,
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
       },
       {
         "map": "cof_1F",
-        "x": 136,
-        "y": 75,
+        "x": 135,
+        "y": 86,
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
@@ -47,7 +47,7 @@
     ],
     "sections": [
       {
-        "name": "Rupees",
+        "name": "Items",
         "item_count": 5,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_Rupees"
@@ -58,17 +58,17 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Big Chest Room Big Chest",
+    "name": "Cave Of Flame - B1 - Hazy Room - Big Chest",
     "map_locations": [
       {
         "map": "cof",
-        "x": 890,
-        "y": 1090
+        "x": 893,
+        "y": 1096
       },
       {
         "map": "cof_B1",
-        "x": 885,
-        "y": 805
+        "x": 893,
+        "y": 804
       }
     ],
     "sections": [
@@ -84,22 +84,22 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Big Chest Room Chest",
+    "name": "Cave Of Flame - B1 - Hazy Room - Small Chest",
     "map_locations": [
       {
         "map": "cof",
-        "x": 690,
-        "y": 1290
+        "x": 693,
+        "y": 1291
       },
       {
         "map": "cof_B1",
-        "x": 695,
-        "y": 995
+        "x": 693,
+        "y": 999
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Small Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_BigChestRoom"
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - First Rollobite Room",
+    "name": "Cave Of Flame - B1 - Rollobite",
     "map_locations": [
       {
         "map": "cof",
@@ -136,7 +136,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - First Rollobite Room Pillar",
+    "name": "Cave Of Flame - B1 - Rollobite Pillar",
     "map_locations": [
       {
         "map": "cof",
@@ -162,33 +162,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Bombable Wall",
-    "map_locations": [
-      {
-        "map": "cof",
-        "x": 840,
-        "y": 850
-      },
-      {
-        "map": "cof_B1",
-        "x": 842,
-        "y": 554
-      }
-    ],
-    "sections": [
-      {
-        "name": "Heart Piece",
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_CaveOfFlame_BombableWallHeartPiece"
-        ],
-        "chest_unopened_img": "images/items-map/Heart Piece.png",
-        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
-      }
-    ]
-  },
-  {
-    "name": "Cave Of Flame - Spiny Chu Fight",
+    "name": "Cave Of Flame - B1 - Spikey Chus Pillar",
     "map_locations": [
       {
         "map": "cof",
@@ -203,7 +177,7 @@
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_SpinyChuFight"
@@ -214,7 +188,33 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Spiny Chu Pillar Chest",
+    "name": "Cave Of Flame - B1",
+    "map_locations": [
+      {
+        "map": "cof",
+        "x": 840,
+        "y": 850
+      },
+      {
+        "map": "cof_B1",
+        "x": 842,
+        "y": 554
+      }
+    ],
+    "sections": [
+      {
+        "name": "HP",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_CaveOfFlame_BombableWallHeartPiece"
+        ],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+  {
+    "name": "Cave Of Flame - B1 - Spikey Chus",
     "map_locations": [
       {
         "map": "cof",
@@ -229,18 +229,18 @@
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_SpinyChuPillarChest"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       }
     ]
   },
   {
-    "name": "Cave Of Flame - Pre Lava Basement Room Block Chest",
+    "name": "Cave Of Flame - B2 - Pre Lava North",
     "map_locations": [
       {
         "map": "cof",
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Pre Lava Basement Room Ledge",
+    "name": "Cave Of Flame - B2 - Pre Lava South",
     "map_locations": [
       {
         "map": "cof",
@@ -292,7 +292,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Blade Chest",
+    "name": "Cave Of Flame - B2 - Lava Room Blade",
     "map_locations": [
       {
         "map": "cof",
@@ -318,7 +318,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Lava Basement Left",
+    "name": "Cave Of Flame - B2 - Lava Room Left",
     "map_locations": [
       {
         "map": "cof",
@@ -344,7 +344,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Lava Basement Right",
+    "name": "Cave Of Flame - B2 - Lava Room Right",
     "map_locations": [
       {
         "map": "cof",
@@ -370,7 +370,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Lava Basement Big Chest",
+    "name": "Cave Of Flame - B2 - Lava Room",
     "map_locations": [
       {
         "map": "cof",
@@ -418,6 +418,15 @@
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Reward",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_CaveOfFlame_Gleerok"
+        ],
+        "chest_unopened_img": "images/items-map/Fire Element.png",
+        "chest_opened_img": "images/items-map/Fire Element Gray.png"
       }
     ]
   },
@@ -529,33 +538,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Slug Room",
-    "map_locations": [
-      {
-        "map": "dws",
-        "x": 786,
-        "y": 1054
-      },
-      {
-        "map": "dws_B1",
-        "x": 779,
-        "y": 1054
-      }
-    ],
-    "sections": [
-      {
-        "name": "Chest",
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_Deepwood_SlugRoom"
-        ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
-      }
-    ]
-  },
-  {
-    "name": "Deepwoods - Upstairs Room",
+    "name": "Deepwoods - 2F",
     "map_locations": [
       {
         "map": "dws",
@@ -563,7 +546,7 @@
         "y": 1137
       },
       {
-        "map": "dws_1F",
+        "map": "dws_2F",
         "x": 70,
         "y": 400
       }
@@ -581,7 +564,33 @@
     ]
   },
   {
-    "name": "Deepwoods - Barrel Room Northwest",
+    "name": "Deepwoods - 1F - Slug Room",
+    "map_locations": [
+      {
+        "map": "dws",
+        "x": 786,
+        "y": 1054
+      },
+      {
+        "map": "dws_1F",
+        "x": 779,
+        "y": 1054
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_Deepwood_SlugRoom"
+        ],
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
+      }
+    ]
+  },
+  {
+    "name": "Deepwoods - 1F - Barrel Room",
     "map_locations": [
       {
         "map": "dws",
@@ -589,7 +598,7 @@
         "y": 299
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 615,
         "y": 299
       }
@@ -607,7 +616,7 @@
     ]
   },
   {
-    "name": "Deepwoods - West Side",
+    "name": "Deepwoods - 1F - West",
     "map_locations": [
       {
         "map": "dws",
@@ -615,7 +624,7 @@
         "y": 280
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 403,
         "y": 280
       }
@@ -633,7 +642,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Two Statue Room",
+    "name": "Deepwoods - 1F - West Statue Puzzle",
     "map_locations": [
       {
         "map": "dws",
@@ -641,7 +650,7 @@
         "y": 570
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 138,
         "y": 570
       }
@@ -659,7 +668,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Mulldozer Key",
+    "name": "Deepwoods - 1F - East Mulldozer Fight",
     "map_locations": [
       {
         "map": "dws",
@@ -667,14 +676,14 @@
         "y": 330
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 1418,
         "y": 330
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_MulldozerKey"
@@ -685,7 +694,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Two Lamp",
+    "name": "Deepwoods - 1F - North East",
     "map_locations": [
       {
         "map": "dws",
@@ -693,7 +702,7 @@
         "y": 140
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 1033,
         "y": 140
       }
@@ -711,7 +720,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Switch Room Big Chest",
+    "name": "Deepwoods - B1 - Switch Room Big Chest",
     "map_locations": [
       {
         "map": "dws",
@@ -719,7 +728,7 @@
         "y": 730
       },
       {
-        "map": "dws_B2",
+        "map": "dws_B1",
         "x": 656,
         "y": 45
       }
@@ -737,7 +746,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Switch Room Chest",
+    "name": "Deepwoods - B1 - Switch Room Chest",
     "map_locations": [
       {
         "map": "dws",
@@ -745,7 +754,7 @@
         "y": 795
       },
       {
-        "map": "dws_B2",
+        "map": "dws_B1",
         "x": 471,
         "y": 115
       }
@@ -763,7 +772,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Blue Warp",
+    "name": "Deepwoods - 1F - Blue Warp",
     "map_locations": [
       {
         "map": "dws",
@@ -771,14 +780,14 @@
         "y": 60
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 778,
         "y": 60
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_BlueWarpHeartPiece"
@@ -789,7 +798,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Puffstool Room",
+    "name": "Deepwoods - 1F - Blue Warp Chests",
     "map_locations": [
       {
         "map": "dws",
@@ -797,14 +806,14 @@
         "y": 60
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 658,
         "y": 60
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Chests",
         "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_PuffstoolRoom"
@@ -815,7 +824,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Madderpillar Fight",
+    "name": "Deepwoods - 1F - Madderpillar Big Chest",
     "map_locations": [
       {
         "map": "dws",
@@ -823,14 +832,14 @@
         "y": 115
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 413,
         "y": 115
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_MadderpillarChest"
@@ -841,7 +850,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Madderpillar Heart Piece",
+    "name": "Deepwoods - 1F - Madderpillar",
     "map_locations": [
       {
         "map": "dws",
@@ -849,14 +858,14 @@
         "y": 320
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 473,
         "y": 320
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -868,7 +877,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Big Chest",
+    "name": "Deepwoods - B1 - West",
     "map_locations": [
       {
         "map": "dws",
@@ -876,7 +885,7 @@
         "y": 775
       },
       {
-        "map": "dws_B2",
+        "map": "dws_B1",
         "x": 176,
         "y": 95
       }
@@ -902,7 +911,7 @@
         "y": 820
       },
       {
-        "map": "dws_1F",
+        "map": "dws_2F",
         "x": 166,
         "y": 83
       }
@@ -916,6 +925,15 @@
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Reward",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_Deepwood_GreenChu"
+        ],
+        "chest_unopened_img": "images/items-map/Earth Element.png",
+        "chest_opened_img": "images/items-map/Earth Element Gray.png"
       }
     ]
   },

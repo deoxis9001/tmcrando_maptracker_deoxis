@@ -6,6 +6,11 @@
         "map": "map",
         "x": 410,
         "y": 329
+      },
+      {
+        "map": "map_crenel",
+        "x": 410,
+        "y": 329
       }
     ],
     "sections": [
@@ -28,6 +33,11 @@
     "map_locations": [
       {
         "map": "map",
+        "x": 385,
+        "y": 357
+      },
+      {
+        "map": "map_crenel",
         "x": 385,
         "y": 357
       }
@@ -113,6 +123,11 @@
         "map": "map",
         "x": 218,
         "y": 477
+      },
+      {
+        "map": "map_crenel",
+        "x": 218,
+        "y": 477
       }
     ],
     "sections": [
@@ -132,6 +147,14 @@
     "map_locations": [
       {
         "map": "map",
+        "x": 100,
+        "y": 20,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_crenel",
         "x": 100,
         "y": 20,
         "restrict_visibility_rules": [
@@ -173,6 +196,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 123,
+        "y": 399,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -192,6 +223,14 @@
     "map_locations": [
       {
         "map": "map",
+        "x": 300,
+        "y": 730,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
         "x": 300,
         "y": 730,
         "restrict_visibility_rules": [
@@ -221,6 +260,14 @@
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
+      },
+      {
+        "map": "map_crenel",
+        "x": 490,
+        "y": 101,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
       }
     ],
     "sections": [
@@ -240,6 +287,14 @@
     "map_locations": [
       {
         "map": "map",
+        "x": 425,
+        "y": 470,
+        "restrict_visibility_rules": [
+          "$FusionsRed,$has|golden_enemy_on"
+        ]
+      },
+      {
+        "map": "map_crenel",
         "x": 425,
         "y": 470,
         "restrict_visibility_rules": [
@@ -266,6 +321,11 @@
         "map": "map",
         "x": 559,
         "y": 617
+      },
+      {
+        "map": "map_crenel",
+        "x": 559,
+        "y": 617
       }
     ],
     "sections": [
@@ -285,6 +345,11 @@
     "map_locations": [
       {
         "map": "map",
+        "x": 581,
+        "y": 467
+      },
+      {
+        "map": "map_crenel",
         "x": 581,
         "y": 467
       }
@@ -308,6 +373,11 @@
         "map": "map",
         "x": 112,
         "y": 605
+      },
+      {
+        "map": "map_crenel",
+        "x": 112,
+        "y": 605
       }
     ],
     "sections": [
@@ -327,6 +397,11 @@
     "map_locations": [
       {
         "map": "map",
+        "x": 602,
+        "y": 372
+      },
+      {
+        "map": "map_crenel",
         "x": 602,
         "y": 372
       }
@@ -378,6 +453,11 @@
         "map": "map",
         "x": 517,
         "y": 319
+      },
+      {
+        "map": "map_crenel",
+        "x": 517,
+        "y": 319
       }
     ],
     "sections": [
@@ -397,6 +477,11 @@
     "map_locations": [
       {
         "map": "map",
+        "x": 37,
+        "y": 212
+      },
+      {
+        "map": "map_crenel",
         "x": 37,
         "y": 212
       }

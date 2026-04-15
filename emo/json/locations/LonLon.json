@@ -1,11 +1,19 @@
 [
   {
-    "name": "Lon Lon Ranch - Digging Spot",
+    "name": "Lon Lon - Dig Spot",
     "map_locations": [
       {
         "map": "map",
-        "x": 1865,
-        "y": 980,
+        "x": 1868,
+        "y": 975,
+        "restrict_visibility_rules": [
+          "$has|digging_on"
+        ]
+      },
+      {
+        "map": "map_lonlon",
+        "x": 207,
+        "y": 176,
         "restrict_visibility_rules": [
           "$has|digging_on"
         ]
@@ -13,7 +21,7 @@
     ],
     "sections": [
       {
-        "name": "Digging (Above Tree)",
+        "name": "Digging",
         "item_count": 1,
         "access_rules": [
           "$Json_LonLon_DiggingSpot_Digging"
@@ -24,12 +32,17 @@
     ]
   },
   {
-    "name": "Lon Lon Ranch - Malon's Pot",
+    "name": "Lon Lon - Ranch",
     "map_locations": [
       {
         "map": "map",
-        "x": 1910,
-        "y": 1190
+        "x": 1871,
+        "y": 1221
+      },
+      {
+        "map": "map_lonlon",
+        "x": 210,
+        "y": 422
       }
     ],
     "sections": [
@@ -48,12 +61,17 @@
     ]
   },
   {
-    "name": "Lon Lon Ranch - Minish Crack",
+    "name": "Lon Lon North - Minish Crack",
     "map_locations": [
       {
         "map": "map",
-        "x": 2025,
-        "y": 805
+        "x": 2039,
+        "y": 814
+      },
+      {
+        "map": "map_lonlon",
+        "x": 378,
+        "y": 15
       }
     ],
     "sections": [
@@ -69,12 +87,17 @@
     ]
   },
   {
-    "name": "Lon Lon Ranch - Cave",
+    "name": "Lon Lon - Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 1825,
-        "y": 1075
+        "x": 1816,
+        "y": 1095
+      },
+      {
+        "map": "map_lonlon",
+        "x": 155,
+        "y": 296
       }
     ],
     "sections": [
@@ -88,7 +111,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Hidden Chest (Bomb Wall)",
+        "name": "Secret Chest (behind bombable wall on the right)",
         "item_count": 1,
         "access_rules": [
           "$Json_LonLon_Cave_HiddenChest"
@@ -99,17 +122,22 @@
     ]
   },
   {
-    "name": "Lon Lon Ranch - Bonk the Tree",
+    "name": "Lon Lon - Path",
     "map_locations": [
       {
         "map": "map",
-        "x": 1975,
-        "y": 1025
+        "x": 1980,
+        "y": 1045
+      },
+      {
+        "map": "map_lonlon",
+        "x": 319,
+        "y": 246
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Fusion Chest",
         "visibility_rules": [
           "$FusionsGreen"
         ],
@@ -121,7 +149,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "$Json_LonLon_BonktheTree_HeartPiece"
@@ -132,12 +160,20 @@
     ]
   },
   {
-    "name": "Lon Lon Ranch - Dried Up Pond",
+    "name": "Lon Lon - Puddle Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1995,
-        "y": 1140,
+        "x": 1996,
+        "y": 1152,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_lonlon",
+        "x": 335,
+        "y": 353,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -156,12 +192,21 @@
     ]
   },
   {
-    "name": "Lon Lon Ranch - Goron Quest",
+    "name": "Lon Lon - Goron Cave Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1750,
-        "y": 1365,
+        "x": 1751,
+        "y": 1372,
+        "restrict_visibility_rules": [
+          "$FusionsBlue",
+          "$has|fusionred_vanilla"
+        ]
+      },
+      {
+        "map": "map_lonlon",
+        "x": 90,
+        "y": 573,
         "restrict_visibility_rules": [
           "$FusionsBlue",
           "$has|fusionred_vanilla"
@@ -170,7 +215,7 @@
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Small Chest",
         "item_count": 1,
         "visibility_rules": [
           "$FusionsBlue"
@@ -221,7 +266,16 @@
       {
         "map": "map",
         "x": 1800,
-        "y": 980
+        "y": 980,
+        "shape": "diamond",
+        "size": 70
+      },
+      {
+        "map": "map_lonlon",
+        "x": 139,
+        "y": 181,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
