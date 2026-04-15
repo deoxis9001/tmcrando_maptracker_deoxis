@@ -13,6 +13,9 @@ on:
       - 'images/**'
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -24,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y jq lua5.1
+          sudo apt-get install -y jq lua5.4
 
       - name: Validate JSON files
         run: |
@@ -32,7 +35,8 @@ jobs:
           while IFS= read -r -d '' file; do
             if ! jq empty "$file" 2>/dev/null; then
               ERROR_MSG=$(jq empty "$file" 2>&1) || true
-              echo "::error file=$file::$ERROR_MSG"
+              LINE=$(echo "$ERROR_MSG" | grep -oE 'line [0-9]+' | head -1 | grep -oE '[0-9]+')
+              echo "::error file=${file#./},line=${LINE:-1}::$ERROR_MSG"
               ERRORS=$((ERRORS + 1))
             fi
           done < <(find . -name "*.json" -not -path "./.git/*" -print0)
@@ -47,9 +51,10 @@ jobs:
         run: |
           ERRORS=0
           while IFS= read -r -d '' file; do
-            if ! luac5.1 -p "$file" 2>/dev/null; then
-              ERROR_MSG=$(luac5.1 -p "$file" 2>&1) || true
-              echo "::error file=$file::$ERROR_MSG"
+            if ! luac5.4 -p "$file" 2>/dev/null; then
+              ERROR_MSG=$(luac5.4 -p "$file" 2>&1) || true
+              LINE=$(echo "$ERROR_MSG" | grep -oE ':[0-9]+:' | head -1 | tr -d ':')
+              echo "::error file=${file#./},line=${LINE:-1}::$ERROR_MSG"
               ERRORS=$((ERRORS + 1))
             fi
           done < <(find . -name "*.lua" -not -path "./.git/*" -print0)
@@ -69,7 +74,7 @@ jobs:
             while IFS= read -r img_path; do
               [ -z "$img_path" ] && continue
               if [ ! -f "$img_path" ]; then
-                echo "::error file=$file::Image not found (casing issue?): $img_path"
+                echo "::error file=${file#./}::Image not found (casing issue?): $img_path"
                 ERRORS=$((ERRORS + 1))
               fi
             done < <(grep -o '"images/[^"]*"' "$file" | tr -d '"')
@@ -89,7 +94,7 @@ jobs:
             while IFS= read -r img_path; do
               [ -z "$img_path" ] && continue
               if [ ! -f "$img_path" ]; then
-                echo "::error file=$file::Image not found (casing issue?): $img_path"
+                echo "::error file=${file#./}::Image not found (casing issue?): $img_path"
                 ERRORS=$((ERRORS + 1))
               fi
             done < <(grep -o '"images/[^"]*"' "$file" | tr -d '"')
