@@ -30,15 +30,12 @@ echo.
 
 REM ── 2. Increment package_version ────────────
 echo [2/4] Increment version in manifest.json...
-FOR /F "delims=" %%v IN ('powershell -NoProfile -Command ^
-    "$c = Get-Content 'manifest.json' -Raw;" ^
-    "$c -match '\"package_version\":\s*\"(\d+\.\d+\.\d+\.)(\d+)\"' | Out-Null;" ^
-    "$prefix = $Matches[1];" ^
-    "$n = [int]$Matches[2] + 1;" ^
-    "$c = $c -replace '\"package_version\":\s*\"\d+\.\d+\.\d+\.\d+\"', ('\"package_version\": \"' + $prefix + $n + '\"');" ^
-    "$c | Set-Content 'manifest.json' -Encoding UTF8 -NoNewline;" ^
-    "Write-Output ($prefix + $n)" ^
-') DO SET NEW_VERSION=%%v
+FOR /F "delims=" %%v IN ('powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0bump_version.ps1" -ManifestPath "manifest.json"') DO SET NEW_VERSION=%%v
+if "%NEW_VERSION%"=="" (
+    echo ERREUR lors de l'increment de version. Abandon.
+    pause
+    exit /b 1
+)
 
 echo Version -> %NEW_VERSION%
 echo.
