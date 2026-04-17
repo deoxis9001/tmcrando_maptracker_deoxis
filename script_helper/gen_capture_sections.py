@@ -1,3 +1,4 @@
+
 """
 Generates the CaptureBadgeSections Lua table by scanning all
 emo/json/locations/*.json files for sections with "capture_item": true.
@@ -6,7 +7,7 @@ emo/json/locations/*.json files for sections with "capture_item": true.
 import json
 import os
 
-LOCATIONS_DIR = os.path.join(os.path.dirname(__file__), "emo", "json", "locations")
+LOCATIONS_DIR = os.path.join(os.path.dirname(__file__),"..", "emo", "json", "locations")
 
 
 def collect_sections(loc_name, sections):

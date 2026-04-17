@@ -1041,7 +1041,7 @@
       },
       {
         "name": "Left 3F - Switch - Chest",
-        "item_count": 2,
+        "item_count": 21,
         "clear_as_group": false,
         "access_rules": [
           "^$Json_Dungeon_Fortress_LeftSideMittsChests"
