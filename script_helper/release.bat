@@ -51,9 +51,12 @@ REM ── 4. Create ZIP ──────────────────�
 echo [4/4] Create ZIP...
 del "%TGT%.zip" 2>nul
 
-%ZIP% a -tzip "%TGT%.zip" ^
-    -xr!.github -xr!.claude -xr!.git -xr!.vscode -xr!script_helper ^
-    "*.json" "*.png" "*.gif" "*.lua" "README.md" "LICENSE"
+%ZIP% a -tzip "%TGT%.zip" -r *.json -xr!.github -xr!.claude -xr!.git -xr!.vscode -xr!script_helper
+%ZIP% a -tzip "%TGT%.zip" -r *.png -xr!.github -xr!.claude -xr!.git -xr!.vscode -xr!script_helper
+%ZIP% a -tzip "%TGT%.zip" -r *.gif -xr!.github -xr!.claude -xr!.git -xr!.vscode -xr!script_helper
+%ZIP% a -tzip "%TGT%.zip" -r *.lua -xr!.github -xr!.claude -xr!.git -xr!.vscode -xr!script_helper
+%ZIP% a -tzip "%TGT%.zip" README.md
+%ZIP% a -tzip "%TGT%.zip" LICENSE
 
 echo.
 echo Deplacement du ZIP vers %DEST%...
