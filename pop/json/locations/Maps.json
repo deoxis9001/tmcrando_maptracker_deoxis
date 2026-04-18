@@ -938,7 +938,7 @@
     ]
   },
   {
-    "name": "Fortress - Far Left Entrance Room",
+    "name": "Fortress - Entrance 1F - Left",
     "map_locations": [
       {
         "map": "fow",
@@ -964,7 +964,7 @@
     ]
   },
   {
-    "name": "Fortress - Entrance Rupee",
+    "name": "Fortress - Entrance 1F - Right",
     "map_locations": [
       {
         "map": "fow",
@@ -996,7 +996,7 @@
     ]
   },
   {
-    "name": "Fortress - Wizzrobe Fight",
+    "name": "Fortress - Entrance 1F - Left Wizzrobe",
     "map_locations": [
       {
         "map": "fow",
@@ -1022,7 +1022,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side 2nd Floor Mitts",
+    "name": "Fortress - Left 2F - Dig",
     "map_locations": [
       {
         "map": "fow",
@@ -1048,7 +1048,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side Left Rupees",
+    "name": "Fortress - Left 2F - Items",
     "map_locations": [
       {
         "map": "fow",
@@ -1080,7 +1080,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side Right Rupees",
+    "name": "Fortress - Left 2F - Item Grabbable",
     "map_locations": [
       {
         "map": "fow",
@@ -1121,7 +1121,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side 3rd Floor Mitts",
+    "name": "Fortress - Left 3F - Switch",
     "map_locations": [
       {
         "map": "fow",
@@ -1147,7 +1147,7 @@
     ]
   },
   {
-    "name": "Fortress - Eyegores",
+    "name": "Fortress - Left 3F - Eyegore",
     "map_locations": [
       {
         "map": "fow",
@@ -1173,7 +1173,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side Key",
+    "name": "Fortress - Left 3F - Item Drop",
     "map_locations": [
       {
         "map": "fow",
@@ -1199,7 +1199,7 @@
     ]
   },
   {
-    "name": "Fortress - Two Lever Room Right",
+    "name": "Fortress - Right 2F - Right",
     "map_locations": [
       {
         "map": "fow",
@@ -1225,7 +1225,7 @@
     ]
   },
   {
-    "name": "Fortress - Two Lever Room Left",
+    "name": "Fortress - Right 2F",
     "map_locations": [
       {
         "map": "fow",
@@ -1251,7 +1251,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side 2nd Floor Mitts",
+    "name": "Fortress - Right 2F - Dig",
     "map_locations": [
       {
         "map": "fow",
@@ -1277,7 +1277,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side 3rd Floor Mitts",
+    "name": "Fortress - Right 3F - Dig",
     "map_locations": [
       {
         "map": "fow",
@@ -1303,7 +1303,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side Key",
+    "name": "Fortress - Right 3F - Item Drop",
     "map_locations": [
       {
         "map": "fow",
@@ -1329,7 +1329,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side Heart Piece",
+    "name": "Fortress - Entrance 1F - Right HP",
     "map_locations": [
       {
         "map": "fow",
@@ -1356,7 +1356,7 @@
     ]
   },
   {
-    "name": "Fortress - Pedestal",
+    "name": "Fortress - Middle 2F",
     "map_locations": [
       {
         "map": "fow",
@@ -1382,7 +1382,7 @@
     ]
   },
   {
-    "name": "Fortress - Center Path Switch",
+    "name": "Fortress - Middle 2F - Statue",
     "map_locations": [
       {
         "map": "fow",
@@ -1408,7 +1408,7 @@
     ]
   },
   {
-    "name": "Fortress - Bombable Wall Big Chest",
+    "name": "Fortress - Back 2F - Left Big Chest",
     "map_locations": [
       {
         "map": "fow",
@@ -1434,7 +1434,7 @@
     ]
   },
   {
-    "name": "Fortress - Bombable Wall Chest",
+    "name": "Fortress - Back 2F - Left Small Chest",
     "map_locations": [
       {
         "map": "fow",
@@ -1460,7 +1460,7 @@
     ]
   },
   {
-    "name": "Fortress - Clone Puzzle Key",
+    "name": "Fortress - Back 2F - Right Statue",
     "map_locations": [
       {
         "map": "fow",
@@ -1486,7 +1486,7 @@
     ]
   },
   {
-    "name": "Fortress - Minish Dirt Room Key",
+    "name": "Fortress - Back 2F - Right Minish",
     "map_locations": [
       {
         "map": "fow",
@@ -1513,7 +1513,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side Top Moldorm Pot",
+    "name": "Fortress - Back 2F - Right Dig Room Top",
     "map_locations": [
       {
         "map": "fow",
@@ -1545,7 +1545,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side Left Moldorm Pot",
+    "name": "Fortress - Back 2F - Right Dig Room Bottom",
     "map_locations": [
       {
         "map": "fow",
@@ -1577,7 +1577,7 @@
     ]
   },
   {
-    "name": "Fortress - Skull Room",
+    "name": "Fortress - Back 2F - Right",
     "map_locations": [
       {
         "map": "fow",
@@ -1629,7 +1629,7 @@
     ]
   },
   {
-    "name": "Palace - Firebar Grate",
+    "name": "Palace - 1st Half 1F - Grate",
     "map_locations": [
       {
         "map": "pow",
@@ -1655,7 +1655,7 @@
     ]
   },
   {
-    "name": "Palace - Wizzrobe Platform Fight",
+    "name": "Palace - 1st Half 1F - Wizzrobe",
     "map_locations": [
       {
         "map": "pow",
@@ -1681,7 +1681,7 @@
     ]
   },
   {
-    "name": "Palace - Pot Puzzle Key",
+    "name": "Palace - 1st Half 3F - Pot Puzzle",
     "map_locations": [
       {
         "map": "pow",
@@ -1708,7 +1708,7 @@
     ]
   },
   {
-    "name": "Palace - Rupees",
+    "name": "Palace - 1st Half 2F - Items",
     "map_locations": [
       {
         "map": "pow",
@@ -1740,7 +1740,7 @@
     ]
   },
   {
-    "name": "Palace - Moblin Archer Chest",
+    "name": "Palace - 1st Half 4F - Bow Moblins",
     "map_locations": [
       {
         "map": "pow",
@@ -1766,7 +1766,7 @@
     ]
   },
   {
-    "name": "Palace - Flail Soldiers",
+    "name": "Palace - 1st Half 5F - Ball And Chain Soldiers",
     "map_locations": [
       {
         "map": "pow",
@@ -1792,7 +1792,7 @@
     ]
   },
   {
-    "name": "Palace - Spark",
+    "name": "Palace - 1st Half 5F - Fan Loop",
     "map_locations": [
       {
         "map": "pow",
@@ -1818,7 +1818,7 @@
     ]
   },
   {
-    "name": "Palace - Pre Big Key Door",
+    "name": "Palace - 1st Half 5F",
     "map_locations": [
       {
         "map": "pow",
@@ -1844,7 +1844,7 @@
     ]
   },
   {
-    "name": "Palace - Roller",
+    "name": "Palace - 2nd Half 2F - Many Rollers",
     "map_locations": [
       {
         "map": "pow",
@@ -1870,7 +1870,7 @@
     ]
   },
   {
-    "name": "Palace - Dark Room Big Chest",
+    "name": "Palace - 2nd Half 1F - Dark Room",
     "map_locations": [
       {
         "map": "pow",
@@ -1896,7 +1896,7 @@
     ]
   },
   {
-    "name": "Palace - Dark Room Chest",
+    "name": "Palace - 2nd Half 1F - Dark Room - Small",
     "map_locations": [
       {
         "map": "pow",
@@ -1922,7 +1922,7 @@
     ]
   },
   {
-    "name": "Palace - Twin Wizzrobe Fight",
+    "name": "Palace - 2nd Half 2F - Twin Wizzrobes",
     "map_locations": [
       {
         "map": "pow",
@@ -1948,7 +1948,7 @@
     ]
   },
   {
-    "name": "Palace - Firerobe Fight",
+    "name": "Palace - 2nd Half 3F - Fire Wizzrobes",
     "map_locations": [
       {
         "map": "pow",
@@ -1974,7 +1974,7 @@
     ]
   },
   {
-    "name": "Palace - Heart Piece",
+    "name": "Palace - 2nd Half 4F",
     "map_locations": [
       {
         "map": "pow",
@@ -2001,7 +2001,7 @@
     ]
   },
   {
-    "name": "Palace - Switch",
+    "name": "Palace - 2nd Half 4F - Switch Hit",
     "map_locations": [
       {
         "map": "pow",
@@ -2027,7 +2027,7 @@
     ]
   },
   {
-    "name": "Palace - Bombarossa Maze",
+    "name": "Palace - 2nd Half 5F - Bombarossa",
     "map_locations": [
       {
         "map": "pow",
@@ -2053,7 +2053,7 @@
     ]
   },
   {
-    "name": "Palace - Block Maze Room",
+    "name": "Palace - 2nd Half 4F - Block Maze",
     "map_locations": [
       {
         "map": "pow",
@@ -2079,7 +2079,7 @@
     ]
   },
   {
-    "name": "Palace - Block Maze Room Detour",
+    "name": "Palace - 2nd Half 5F - Right Side",
     "map_locations": [
       {
         "map": "pow",
@@ -2131,7 +2131,7 @@
     ]
   },
   {
-    "name": "Droplet - First Ice Block",
+    "name": "Droplet - Entrance B2 - East",
     "map_locations": [
       {
         "map": "tod",
@@ -2157,7 +2157,7 @@
     ]
   },
   {
-    "name": "Droplet - Key Locked Ice Block",
+    "name": "Droplet - Entrance B2 - West",
     "map_locations": [
       {
         "map": "tod",
@@ -2183,7 +2183,7 @@
     ]
   },
   {
-    "name": "Droplet - Post Madderpillar",
+    "name": "Droplet - Left Path B2 - Ice Madderpillar",
     "map_locations": [
       {
         "map": "tod",
@@ -2209,7 +2209,7 @@
     ]
   },
   {
-    "name": "Droplet - Underwater Pot",
+    "name": "Droplet - Left Path B2 - Underwater",
     "map_locations": [
       {
         "map": "tod",
@@ -2239,7 +2239,7 @@
     ]
   },
   {
-    "name": "Droplet - Overhang",
+    "name": "Droplet - Left Path B1 - Waterfall",
     "map_locations": [
       {
         "map": "tod",
@@ -2265,7 +2265,7 @@
     ]
   },
   {
-    "name": "Droplet - Left Path",
+    "name": "Droplet - Left Path B1 - Underpass",
     "map_locations": [
       {
         "map": "tod",
@@ -2297,7 +2297,7 @@
     ]
   },
   {
-    "name": "Droplet - Right Path",
+    "name": "Droplet - Right Path B2 - Underpass",
     "map_locations": [
       {
         "map": "tod",
@@ -2338,7 +2338,7 @@
     ]
   },
   {
-    "name": "Droplet - Upper Underwater",
+    "name": "Droplet - Left Path B1 - Waterfall - Underwater",
     "map_locations": [
       {
         "map": "tod",
@@ -2370,7 +2370,7 @@
     ]
   },
   {
-    "name": "Droplet - Lower Underwater",
+    "name": "Droplet - Left Path B2 - Waterfall - Underwater",
     "map_locations": [
       {
         "map": "tod",
@@ -2402,7 +2402,7 @@
     ]
   },
   {
-    "name": "Droplet - Ice Puzzle",
+    "name": "Droplet - Left Path B2 - Ice Plain",
     "map_locations": [
       {
         "map": "tod",
@@ -2428,7 +2428,7 @@
     ]
   },
   {
-    "name": "Droplet - Ice Puzzle Frozen",
+    "name": "Droplet - Left Path B2 - Ice Plain - Frozen",
     "map_locations": [
       {
         "map": "tod",
@@ -2454,7 +2454,7 @@
     ]
   },
   {
-    "name": "Droplet - Post Ice Puzzle",
+    "name": "Droplet - Left Path B2 - Lilypad Corner",
     "map_locations": [
       {
         "map": "tod",
@@ -2480,7 +2480,7 @@
     ]
   },
   {
-    "name": "Droplet - Right Path Ice Walkway First",
+    "name": "Droplet - Right Path B1 - Ice Walkway",
     "map_locations": [
       {
         "map": "tod",
@@ -2506,7 +2506,7 @@
     ]
   },
   {
-    "name": "Droplet - Right Path Ice Walkway Second",
+    "name": "Droplet - Right Path B1 - Ice Walkway Right",
     "map_locations": [
       {
         "map": "tod",
@@ -2532,7 +2532,7 @@
     ]
   },
   {
-    "name": "Droplet - Right Path Ice Walkway Pot",
+    "name": "Droplet - Right Path B1 - Pot",
     "map_locations": [
       {
         "map": "tod",
@@ -2564,7 +2564,7 @@
     ]
   },
   {
-    "name": "Droplet - Blue Chu",
+    "name": "Droplet - Right Path B1 - Blu Chu",
     "map_locations": [
       {
         "map": "tod",
@@ -2590,7 +2590,7 @@
     ]
   },
   {
-    "name": "Droplet - Basement Frozen",
+    "name": "Droplet - Right Path B3 - Frozen",
     "map_locations": [
       {
         "map": "tod",
@@ -2616,7 +2616,7 @@
     ]
   },
   {
-    "name": "Droplet - Post Blue Chu Frozen",
+    "name": "Droplet - Right Path B2 - Frozen",
     "map_locations": [
       {
         "map": "tod",
@@ -2642,7 +2642,7 @@
     ]
   },
   {
-    "name": "Droplet - Dark Maze Bottom",
+    "name": "Droplet - Right Path B2 - Dark Maze - Bottom",
     "map_locations": [
       {
         "map": "tod",
@@ -2668,7 +2668,7 @@
     ]
   },
   {
-    "name": "Droplet - Dark Maze Top Left",
+    "name": "Droplet - Right Path B2 - Dark Maze - Top Left",
     "map_locations": [
       {
         "map": "tod",
@@ -2694,7 +2694,7 @@
     ]
   },
   {
-    "name": "Droplet - Dark Maze Top Right",
+    "name": "Droplet - Right Path B2 - Dark Maze - Top Right",
     "map_locations": [
       {
         "map": "tod",
@@ -2720,7 +2720,7 @@
     ]
   },
   {
-    "name": "Droplet - Dark Maze Bombable Wall",
+    "name": "Droplet - Right Path B2 - Mulldozers",
     "map_locations": [
       {
         "map": "tod",
