@@ -1,10 +1,10 @@
 [
   {
-    "name": "Cave Of Flame - Spiny Beetle Fight",
+    "name": "Cave Of Flame - 1F - Spike Beetle",
     "map_locations": [
       {
         "map": "cof",
-        "x": 2259,
+        "x": 2260,
         "y": 1005
       },
       {
@@ -15,31 +15,31 @@
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_SpinyBeetleFight"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       }
     ]
   },
   {
-    "name": "Cave Of Flame - Rupees",
+    "name": "Cave Of Flame - 1F",
     "map_locations": [
       {
         "map": "cof",
-        "x": 2005,
-        "y": 1005,
+        "x": 2004,
+        "y": 993,
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
       },
       {
         "map": "cof_1F",
-        "x": 136,
-        "y": 75,
+        "x": 135,
+        "y": 86,
         "restrict_visibility_rules": [
           "$has|rupees_on"
         ]
@@ -47,7 +47,7 @@
     ],
     "sections": [
       {
-        "name": "Rupees",
+        "name": "Items",
         "item_count": 5,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_Rupees"
@@ -58,17 +58,17 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Big Chest Room Big Chest",
+    "name": "Cave Of Flame - B1 - Hazy Room - Big Chest",
     "map_locations": [
       {
         "map": "cof",
-        "x": 890,
-        "y": 1090
+        "x": 893,
+        "y": 1096
       },
       {
         "map": "cof_B1",
-        "x": 885,
-        "y": 805
+        "x": 893,
+        "y": 804
       }
     ],
     "sections": [
@@ -84,22 +84,22 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Big Chest Room Chest",
+    "name": "Cave Of Flame - B1 - Hazy Room - Small Chest",
     "map_locations": [
       {
         "map": "cof",
-        "x": 690,
-        "y": 1290
+        "x": 693,
+        "y": 1291
       },
       {
         "map": "cof_B1",
-        "x": 695,
-        "y": 995
+        "x": 693,
+        "y": 999
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Small Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_BigChestRoom"
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - First Rollobite Room",
+    "name": "Cave Of Flame - B1 - Rollobite",
     "map_locations": [
       {
         "map": "cof",
@@ -136,7 +136,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - First Rollobite Room Pillar",
+    "name": "Cave Of Flame - B1 - Rollobite Pillar",
     "map_locations": [
       {
         "map": "cof",
@@ -162,33 +162,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Bombable Wall",
-    "map_locations": [
-      {
-        "map": "cof",
-        "x": 840,
-        "y": 850
-      },
-      {
-        "map": "cof_B1",
-        "x": 842,
-        "y": 554
-      }
-    ],
-    "sections": [
-      {
-        "name": "Heart Piece",
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_CaveOfFlame_BombableWallHeartPiece"
-        ],
-        "chest_unopened_img": "images/items-map/Heart Piece.png",
-        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
-      }
-    ]
-  },
-  {
-    "name": "Cave Of Flame - Spiny Chu Fight",
+    "name": "Cave Of Flame - B1 - Spikey Chus Pillar",
     "map_locations": [
       {
         "map": "cof",
@@ -203,7 +177,7 @@
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_SpinyChuFight"
@@ -214,7 +188,33 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Spiny Chu Pillar Chest",
+    "name": "Cave Of Flame - B1",
+    "map_locations": [
+      {
+        "map": "cof",
+        "x": 840,
+        "y": 850
+      },
+      {
+        "map": "cof_B1",
+        "x": 842,
+        "y": 554
+      }
+    ],
+    "sections": [
+      {
+        "name": "HP",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_CaveOfFlame_BombableWallHeartPiece"
+        ],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+  {
+    "name": "Cave Of Flame - B1 - Spikey Chus",
     "map_locations": [
       {
         "map": "cof",
@@ -229,18 +229,18 @@
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_SpinyChuPillarChest"
         ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "chest_unopened_img": "images/items-map/big_chest_closed.png",
+        "chest_opened_img": "images/items-map/big_chest_open.png"
       }
     ]
   },
   {
-    "name": "Cave Of Flame - Pre Lava Basement Room Block Chest",
+    "name": "Cave Of Flame - B2 - Pre Lava North",
     "map_locations": [
       {
         "map": "cof",
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Pre Lava Basement Room Ledge",
+    "name": "Cave Of Flame - B2 - Pre Lava South",
     "map_locations": [
       {
         "map": "cof",
@@ -292,7 +292,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Blade Chest",
+    "name": "Cave Of Flame - B2 - Lava Room Blade",
     "map_locations": [
       {
         "map": "cof",
@@ -318,7 +318,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Lava Basement Left",
+    "name": "Cave Of Flame - B2 - Lava Room Left",
     "map_locations": [
       {
         "map": "cof",
@@ -344,7 +344,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Lava Basement Right",
+    "name": "Cave Of Flame - B2 - Lava Room Right",
     "map_locations": [
       {
         "map": "cof",
@@ -370,7 +370,7 @@
     ]
   },
   {
-    "name": "Cave Of Flame - Lava Basement Big Chest",
+    "name": "Cave Of Flame - B2 - Lava Room",
     "map_locations": [
       {
         "map": "cof",
@@ -418,26 +418,30 @@
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Reward",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_CaveOfFlame_Gleerok"
+        ],
+        "chest_unopened_img": "images/items-map/Fire Element.png",
+        "chest_opened_img": "images/items-map/Fire Element Gray.png"
       }
     ]
   },
   {
-    "name": "Crypt - Gibdos",
+    "name": "Crypt - Gibdo Left",
     "map_locations": [
       {
         "map": "rc",
-        "x": 295,
-        "y": 805
-      },
-      {
-        "map": "rc",
-        "x": 295,
-        "y": 805
+        "x": 257,
+        "y": 808
       }
     ],
     "sections": [
       {
-        "name": "First Kill",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_Gibdos"
@@ -445,9 +449,21 @@
         "capture_item": true,
         "chest_unopened_img": "images/items-map/Small Key.png",
         "chest_opened_img": "images/items-map/Small Key Done.png"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Crypt - Gibdo Right",
+    "map_locations": [
       {
-        "name": "Second Kill",
+        "map": "rc",
+        "x": 347,
+        "y": 808
+      }
+    ],
+    "sections": [
+      {
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_OtherGibdos"
@@ -459,22 +475,17 @@
     ]
   },
   {
-    "name": "Crypt - Left Path",
+    "name": "Crypt - Left",
     "map_locations": [
       {
         "map": "rc",
-        "x": 143,
-        "y": 85
-      },
-      {
-        "map": "rc",
-        "x": 143,
-        "y": 85
+        "x": 145,
+        "y": 87
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_LeftPath"
@@ -485,22 +496,17 @@
     ]
   },
   {
-    "name": "Crypt - Right Path",
+    "name": "Crypt - Right",
     "map_locations": [
       {
         "map": "rc",
-        "x": 447,
-        "y": 85
-      },
-      {
-        "map": "rc",
-        "x": 447,
-        "y": 85
+        "x": 450,
+        "y": 87
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Crypt_RightPath"
@@ -511,17 +517,12 @@
     ]
   },
   {
-    "name": "Crypt - King Gustaf",
+    "name": "Crypt - Prize",
     "map_locations": [
       {
         "map": "rc",
         "x": 895,
-        "y": 75
-      },
-      {
-        "map": "rc",
-        "x": 895,
-        "y": 75
+        "y": 110
       }
     ],
     "sections": [
@@ -537,33 +538,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Slug Room",
-    "map_locations": [
-      {
-        "map": "dws",
-        "x": 786,
-        "y": 1054
-      },
-      {
-        "map": "dws_B1",
-        "x": 779,
-        "y": 1054
-      }
-    ],
-    "sections": [
-      {
-        "name": "Chest",
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_Dungeon_Deepwood_SlugRoom"
-        ],
-        "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Done.png"
-      }
-    ]
-  },
-  {
-    "name": "Deepwoods - Upstairs Room",
+    "name": "Deepwoods - 2F",
     "map_locations": [
       {
         "map": "dws",
@@ -571,7 +546,7 @@
         "y": 1137
       },
       {
-        "map": "dws_1F",
+        "map": "dws_2F",
         "x": 70,
         "y": 400
       }
@@ -589,7 +564,33 @@
     ]
   },
   {
-    "name": "Deepwoods - Barrel Room Northwest",
+    "name": "Deepwoods - 1F - Slug Room",
+    "map_locations": [
+      {
+        "map": "dws",
+        "x": 786,
+        "y": 1054
+      },
+      {
+        "map": "dws_1F",
+        "x": 779,
+        "y": 1054
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_Deepwood_SlugRoom"
+        ],
+        "chest_unopened_img": "images/items-map/Small Key.png",
+        "chest_opened_img": "images/items-map/Small Key Done.png"
+      }
+    ]
+  },
+  {
+    "name": "Deepwoods - 1F - Barrel Room",
     "map_locations": [
       {
         "map": "dws",
@@ -597,7 +598,7 @@
         "y": 299
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 615,
         "y": 299
       }
@@ -615,7 +616,7 @@
     ]
   },
   {
-    "name": "Deepwoods - West Side",
+    "name": "Deepwoods - 1F - West",
     "map_locations": [
       {
         "map": "dws",
@@ -623,7 +624,7 @@
         "y": 280
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 403,
         "y": 280
       }
@@ -641,7 +642,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Two Statue Room",
+    "name": "Deepwoods - 1F - West Statue Puzzle",
     "map_locations": [
       {
         "map": "dws",
@@ -649,7 +650,7 @@
         "y": 570
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 138,
         "y": 570
       }
@@ -667,7 +668,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Mulldozer Key",
+    "name": "Deepwoods - 1F - East Mulldozer Fight",
     "map_locations": [
       {
         "map": "dws",
@@ -675,14 +676,14 @@
         "y": 330
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 1418,
         "y": 330
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_MulldozerKey"
@@ -693,7 +694,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Two Lamp",
+    "name": "Deepwoods - 1F - North East",
     "map_locations": [
       {
         "map": "dws",
@@ -701,7 +702,7 @@
         "y": 140
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 1033,
         "y": 140
       }
@@ -719,7 +720,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Switch Room Big Chest",
+    "name": "Deepwoods - B1 - Switch Room Big Chest",
     "map_locations": [
       {
         "map": "dws",
@@ -727,7 +728,7 @@
         "y": 730
       },
       {
-        "map": "dws_B2",
+        "map": "dws_B1",
         "x": 656,
         "y": 45
       }
@@ -745,7 +746,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Switch Room Chest",
+    "name": "Deepwoods - B1 - Switch Room Chest",
     "map_locations": [
       {
         "map": "dws",
@@ -753,7 +754,7 @@
         "y": 795
       },
       {
-        "map": "dws_B2",
+        "map": "dws_B1",
         "x": 471,
         "y": 115
       }
@@ -771,7 +772,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Blue Warp",
+    "name": "Deepwoods - 1F - Blue Warp",
     "map_locations": [
       {
         "map": "dws",
@@ -779,14 +780,14 @@
         "y": 60
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 778,
         "y": 60
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_BlueWarpHeartPiece"
@@ -797,7 +798,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Puffstool Room",
+    "name": "Deepwoods - 1F - Blue Warp Chests",
     "map_locations": [
       {
         "map": "dws",
@@ -805,14 +806,14 @@
         "y": 60
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 658,
         "y": 60
       }
     ],
     "sections": [
       {
-        "name": "Chest",
+        "name": "Chests",
         "item_count": 2,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_PuffstoolRoom"
@@ -823,7 +824,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Madderpillar Fight",
+    "name": "Deepwoods - 1F - Madderpillar Big Chest",
     "map_locations": [
       {
         "map": "dws",
@@ -831,14 +832,14 @@
         "y": 115
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 413,
         "y": 115
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Big Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_Dungeon_Deepwood_MadderpillarChest"
@@ -849,7 +850,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Madderpillar Heart Piece",
+    "name": "Deepwoods - 1F - Madderpillar",
     "map_locations": [
       {
         "map": "dws",
@@ -857,14 +858,14 @@
         "y": 320
       },
       {
-        "map": "dws_B1",
+        "map": "dws_1F",
         "x": 473,
         "y": 320
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -876,7 +877,7 @@
     ]
   },
   {
-    "name": "Deepwoods - Basement Big Chest",
+    "name": "Deepwoods - B1 - West",
     "map_locations": [
       {
         "map": "dws",
@@ -884,7 +885,7 @@
         "y": 775
       },
       {
-        "map": "dws_B2",
+        "map": "dws_B1",
         "x": 176,
         "y": 95
       }
@@ -910,7 +911,7 @@
         "y": 820
       },
       {
-        "map": "dws_1F",
+        "map": "dws_2F",
         "x": 166,
         "y": 83
       }
@@ -924,11 +925,20 @@
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
+      },
+      {
+        "name": "Reward",
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_Dungeon_Deepwood_GreenChu"
+        ],
+        "chest_unopened_img": "images/items-map/Earth Element.png",
+        "chest_opened_img": "images/items-map/Earth Element Gray.png"
       }
     ]
   },
   {
-    "name": "Fortress - Far Left Entrance Room",
+    "name": "Fortress - Entrance 1F - Left",
     "map_locations": [
       {
         "map": "fow",
@@ -954,7 +964,7 @@
     ]
   },
   {
-    "name": "Fortress - Entrance Rupee",
+    "name": "Fortress - Entrance 1F - Right",
     "map_locations": [
       {
         "map": "fow",
@@ -986,7 +996,7 @@
     ]
   },
   {
-    "name": "Fortress - Wizzrobe Fight",
+    "name": "Fortress - Entrance 1F - Left Wizzrobe",
     "map_locations": [
       {
         "map": "fow",
@@ -1012,7 +1022,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side 2nd Floor Mitts",
+    "name": "Fortress - Left 2F - Dig",
     "map_locations": [
       {
         "map": "fow",
@@ -1038,7 +1048,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side Left Rupees",
+    "name": "Fortress - Left 2F - Items",
     "map_locations": [
       {
         "map": "fow",
@@ -1070,7 +1080,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side Right Rupees",
+    "name": "Fortress - Left 2F - Item Grabbable",
     "map_locations": [
       {
         "map": "fow",
@@ -1111,7 +1121,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side 3rd Floor Mitts",
+    "name": "Fortress - Left 3F - Switch",
     "map_locations": [
       {
         "map": "fow",
@@ -1137,7 +1147,7 @@
     ]
   },
   {
-    "name": "Fortress - Eyegores",
+    "name": "Fortress - Left 3F - Eyegore",
     "map_locations": [
       {
         "map": "fow",
@@ -1163,7 +1173,7 @@
     ]
   },
   {
-    "name": "Fortress - Left Side Key",
+    "name": "Fortress - Left 3F - Item Drop",
     "map_locations": [
       {
         "map": "fow",
@@ -1189,7 +1199,7 @@
     ]
   },
   {
-    "name": "Fortress - Two Lever Room Right",
+    "name": "Fortress - Right 2F - Right",
     "map_locations": [
       {
         "map": "fow",
@@ -1215,7 +1225,7 @@
     ]
   },
   {
-    "name": "Fortress - Two Lever Room Left",
+    "name": "Fortress - Right 2F",
     "map_locations": [
       {
         "map": "fow",
@@ -1241,7 +1251,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side 2nd Floor Mitts",
+    "name": "Fortress - Right 2F - Dig",
     "map_locations": [
       {
         "map": "fow",
@@ -1267,7 +1277,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side 3rd Floor Mitts",
+    "name": "Fortress - Right 3F - Dig",
     "map_locations": [
       {
         "map": "fow",
@@ -1293,7 +1303,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side Key",
+    "name": "Fortress - Right 3F - Item Drop",
     "map_locations": [
       {
         "map": "fow",
@@ -1319,7 +1329,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side Heart Piece",
+    "name": "Fortress - Entrance 1F - Right HP",
     "map_locations": [
       {
         "map": "fow",
@@ -1346,7 +1356,7 @@
     ]
   },
   {
-    "name": "Fortress - Pedestal",
+    "name": "Fortress - Middle 2F",
     "map_locations": [
       {
         "map": "fow",
@@ -1372,7 +1382,7 @@
     ]
   },
   {
-    "name": "Fortress - Center Path Switch",
+    "name": "Fortress - Middle 2F - Statue",
     "map_locations": [
       {
         "map": "fow",
@@ -1398,7 +1408,7 @@
     ]
   },
   {
-    "name": "Fortress - Bombable Wall Big Chest",
+    "name": "Fortress - Back 2F - Left Big Chest",
     "map_locations": [
       {
         "map": "fow",
@@ -1424,7 +1434,7 @@
     ]
   },
   {
-    "name": "Fortress - Bombable Wall Chest",
+    "name": "Fortress - Back 2F - Left Small Chest",
     "map_locations": [
       {
         "map": "fow",
@@ -1450,7 +1460,7 @@
     ]
   },
   {
-    "name": "Fortress - Clone Puzzle Key",
+    "name": "Fortress - Back 2F - Right Statue",
     "map_locations": [
       {
         "map": "fow",
@@ -1476,7 +1486,7 @@
     ]
   },
   {
-    "name": "Fortress - Minish Dirt Room Key",
+    "name": "Fortress - Back 2F - Right Minish",
     "map_locations": [
       {
         "map": "fow",
@@ -1503,7 +1513,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side Top Moldorm Pot",
+    "name": "Fortress - Back 2F - Right Dig Room Top",
     "map_locations": [
       {
         "map": "fow",
@@ -1535,7 +1545,7 @@
     ]
   },
   {
-    "name": "Fortress - Right Side Left Moldorm Pot",
+    "name": "Fortress - Back 2F - Right Dig Room Bottom",
     "map_locations": [
       {
         "map": "fow",
@@ -1567,7 +1577,7 @@
     ]
   },
   {
-    "name": "Fortress - Skull Room",
+    "name": "Fortress - Back 2F - Right",
     "map_locations": [
       {
         "map": "fow",
@@ -1619,7 +1629,7 @@
     ]
   },
   {
-    "name": "Palace - Firebar Grate",
+    "name": "Palace - 1st Half 1F - Grate",
     "map_locations": [
       {
         "map": "pow",
@@ -1645,7 +1655,7 @@
     ]
   },
   {
-    "name": "Palace - Wizzrobe Platform Fight",
+    "name": "Palace - 1st Half 1F - Wizzrobe",
     "map_locations": [
       {
         "map": "pow",
@@ -1671,7 +1681,7 @@
     ]
   },
   {
-    "name": "Palace - Pot Puzzle Key",
+    "name": "Palace - 1st Half 3F - Pot Puzzle",
     "map_locations": [
       {
         "map": "pow",
@@ -1698,7 +1708,7 @@
     ]
   },
   {
-    "name": "Palace - Rupees",
+    "name": "Palace - 1st Half 2F - Items",
     "map_locations": [
       {
         "map": "pow",
@@ -1730,7 +1740,7 @@
     ]
   },
   {
-    "name": "Palace - Moblin Archer Chest",
+    "name": "Palace - 1st Half 4F - Bow Moblins",
     "map_locations": [
       {
         "map": "pow",
@@ -1756,7 +1766,7 @@
     ]
   },
   {
-    "name": "Palace - Flail Soldiers",
+    "name": "Palace - 1st Half 5F - Ball And Chain Soldiers",
     "map_locations": [
       {
         "map": "pow",
@@ -1782,7 +1792,7 @@
     ]
   },
   {
-    "name": "Palace - Spark",
+    "name": "Palace - 1st Half 5F - Fan Loop",
     "map_locations": [
       {
         "map": "pow",
@@ -1808,7 +1818,7 @@
     ]
   },
   {
-    "name": "Palace - Pre Big Key Door",
+    "name": "Palace - 1st Half 5F",
     "map_locations": [
       {
         "map": "pow",
@@ -1834,7 +1844,7 @@
     ]
   },
   {
-    "name": "Palace - Roller",
+    "name": "Palace - 2nd Half 2F - Many Rollers",
     "map_locations": [
       {
         "map": "pow",
@@ -1860,7 +1870,7 @@
     ]
   },
   {
-    "name": "Palace - Dark Room Big Chest",
+    "name": "Palace - 2nd Half 1F - Dark Room",
     "map_locations": [
       {
         "map": "pow",
@@ -1886,7 +1896,7 @@
     ]
   },
   {
-    "name": "Palace - Dark Room Chest",
+    "name": "Palace - 2nd Half 1F - Dark Room - Small",
     "map_locations": [
       {
         "map": "pow",
@@ -1912,7 +1922,7 @@
     ]
   },
   {
-    "name": "Palace - Twin Wizzrobe Fight",
+    "name": "Palace - 2nd Half 2F - Twin Wizzrobes",
     "map_locations": [
       {
         "map": "pow",
@@ -1938,7 +1948,7 @@
     ]
   },
   {
-    "name": "Palace - Firerobe Fight",
+    "name": "Palace - 2nd Half 3F - Fire Wizzrobes",
     "map_locations": [
       {
         "map": "pow",
@@ -1964,7 +1974,7 @@
     ]
   },
   {
-    "name": "Palace - Heart Piece",
+    "name": "Palace - 2nd Half 4F",
     "map_locations": [
       {
         "map": "pow",
@@ -1991,7 +2001,7 @@
     ]
   },
   {
-    "name": "Palace - Switch",
+    "name": "Palace - 2nd Half 4F - Switch Hit",
     "map_locations": [
       {
         "map": "pow",
@@ -2017,7 +2027,7 @@
     ]
   },
   {
-    "name": "Palace - Bombarossa Maze",
+    "name": "Palace - 2nd Half 5F - Bombarossa",
     "map_locations": [
       {
         "map": "pow",
@@ -2043,7 +2053,7 @@
     ]
   },
   {
-    "name": "Palace - Block Maze Room",
+    "name": "Palace - 2nd Half 4F - Block Maze",
     "map_locations": [
       {
         "map": "pow",
@@ -2069,7 +2079,7 @@
     ]
   },
   {
-    "name": "Palace - Block Maze Room Detour",
+    "name": "Palace - 2nd Half 5F - Right Side",
     "map_locations": [
       {
         "map": "pow",
@@ -2121,7 +2131,7 @@
     ]
   },
   {
-    "name": "Droplet - First Ice Block",
+    "name": "Droplet - Entrance B2 - East",
     "map_locations": [
       {
         "map": "tod",
@@ -2147,7 +2157,7 @@
     ]
   },
   {
-    "name": "Droplet - Key Locked Ice Block",
+    "name": "Droplet - Entrance B2 - West",
     "map_locations": [
       {
         "map": "tod",
@@ -2173,7 +2183,7 @@
     ]
   },
   {
-    "name": "Droplet - Post Madderpillar",
+    "name": "Droplet - Left Path B2 - Ice Madderpillar",
     "map_locations": [
       {
         "map": "tod",
@@ -2199,7 +2209,7 @@
     ]
   },
   {
-    "name": "Droplet - Underwater Pot",
+    "name": "Droplet - Left Path B2 - Underwater",
     "map_locations": [
       {
         "map": "tod",
@@ -2229,7 +2239,7 @@
     ]
   },
   {
-    "name": "Droplet - Overhang",
+    "name": "Droplet - Left Path B1 - Waterfall",
     "map_locations": [
       {
         "map": "tod",
@@ -2255,7 +2265,7 @@
     ]
   },
   {
-    "name": "Droplet - Left Path",
+    "name": "Droplet - Left Path B1 - Underpass",
     "map_locations": [
       {
         "map": "tod",
@@ -2287,7 +2297,7 @@
     ]
   },
   {
-    "name": "Droplet - Right Path",
+    "name": "Droplet - Right Path B2 - Underpass",
     "map_locations": [
       {
         "map": "tod",
@@ -2328,7 +2338,7 @@
     ]
   },
   {
-    "name": "Droplet - Upper Underwater",
+    "name": "Droplet - Left Path B1 - Waterfall - Underwater",
     "map_locations": [
       {
         "map": "tod",
@@ -2360,7 +2370,7 @@
     ]
   },
   {
-    "name": "Droplet - Lower Underwater",
+    "name": "Droplet - Left Path B2 - Waterfall - Underwater",
     "map_locations": [
       {
         "map": "tod",
@@ -2392,7 +2402,7 @@
     ]
   },
   {
-    "name": "Droplet - Ice Puzzle",
+    "name": "Droplet - Left Path B2 - Ice Plain",
     "map_locations": [
       {
         "map": "tod",
@@ -2418,7 +2428,7 @@
     ]
   },
   {
-    "name": "Droplet - Ice Puzzle Frozen",
+    "name": "Droplet - Left Path B2 - Ice Plain - Frozen",
     "map_locations": [
       {
         "map": "tod",
@@ -2444,7 +2454,7 @@
     ]
   },
   {
-    "name": "Droplet - Post Ice Puzzle",
+    "name": "Droplet - Left Path B2 - Lilypad Corner",
     "map_locations": [
       {
         "map": "tod",
@@ -2470,7 +2480,7 @@
     ]
   },
   {
-    "name": "Droplet - Right Path Ice Walkway First",
+    "name": "Droplet - Right Path B1 - Ice Walkway",
     "map_locations": [
       {
         "map": "tod",
@@ -2496,7 +2506,7 @@
     ]
   },
   {
-    "name": "Droplet - Right Path Ice Walkway Second",
+    "name": "Droplet - Right Path B1 - Ice Walkway Right",
     "map_locations": [
       {
         "map": "tod",
@@ -2522,7 +2532,7 @@
     ]
   },
   {
-    "name": "Droplet - Right Path Ice Walkway Pot",
+    "name": "Droplet - Right Path B1 - Pot",
     "map_locations": [
       {
         "map": "tod",
@@ -2554,7 +2564,7 @@
     ]
   },
   {
-    "name": "Droplet - Blue Chu",
+    "name": "Droplet - Right Path B1 - Blu Chu",
     "map_locations": [
       {
         "map": "tod",
@@ -2580,7 +2590,7 @@
     ]
   },
   {
-    "name": "Droplet - Basement Frozen",
+    "name": "Droplet - Right Path B3 - Frozen",
     "map_locations": [
       {
         "map": "tod",
@@ -2606,7 +2616,7 @@
     ]
   },
   {
-    "name": "Droplet - Post Blue Chu Frozen",
+    "name": "Droplet - Right Path B2 - Frozen",
     "map_locations": [
       {
         "map": "tod",
@@ -2632,7 +2642,7 @@
     ]
   },
   {
-    "name": "Droplet - Dark Maze Bottom",
+    "name": "Droplet - Right Path B2 - Dark Maze - Bottom",
     "map_locations": [
       {
         "map": "tod",
@@ -2658,7 +2668,7 @@
     ]
   },
   {
-    "name": "Droplet - Dark Maze Top Left",
+    "name": "Droplet - Right Path B2 - Dark Maze - Top Left",
     "map_locations": [
       {
         "map": "tod",
@@ -2684,7 +2694,7 @@
     ]
   },
   {
-    "name": "Droplet - Dark Maze Top Right",
+    "name": "Droplet - Right Path B2 - Dark Maze - Top Right",
     "map_locations": [
       {
         "map": "tod",
@@ -2710,7 +2720,7 @@
     ]
   },
   {
-    "name": "Droplet - Dark Maze Bombable Wall",
+    "name": "Droplet - Right Path B2 - Mulldozers",
     "map_locations": [
       {
         "map": "tod",
@@ -2793,7 +2803,7 @@
           "^$Json_Dungeon_DHC_BladeChest"
         ],
         "chest_unopened_img": "images/items-map/Small Key.png",
-        "chest_opened_img": "images/items-map/Small Key Gray.png"
+        "chest_opened_img": "images/items-map/Small Key Done.png"
       }
     ]
   },

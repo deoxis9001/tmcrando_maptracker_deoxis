@@ -1,11 +1,19 @@
 [
   {
-    "name": "Western Woods - Beanstalk",
+    "name": "Western Woods - Beanstalk Fusion",
     "map_locations": [
       {
         "map": "map",
         "x": 710,
-        "y": 2005,
+        "y": 1975,
+        "restrict_visibility_rules": [
+          "$FusionsBlue"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 39,
+        "y": 555,
         "restrict_visibility_rules": [
           "$FusionsBlue"
         ]
@@ -22,7 +30,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Rupees",
+        "name": "Items",
         "visibility_rules": [
           "$has|rupees_on"
         ],
@@ -44,6 +52,13 @@
         "y": 2005,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 129,
+        "y": 585,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -60,12 +75,20 @@
     ]
   },
   {
-    "name": "Western Woods - South Digging Spots",
+    "name": "Western Woods - Bottom",
     "map_locations": [
       {
         "map": "map",
-        "x": 945,
-        "y": 1780,
+        "x": 947,
+        "y": 1781,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|digging_on"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 276,
+        "y": 361,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|digging_on"
         ]
@@ -73,7 +96,7 @@
     ],
     "sections": [
       {
-        "name": "Buried Treasure",
+        "name": "Digging",
         "item_count": 2,
         "access_rules": [
           "^$Json_WesternWoods_SouthDigging_BuriedTreasure"
@@ -84,12 +107,20 @@
     ]
   },
   {
-    "name": "Western Woods - North Digging Spots",
+    "name": "Western Woods - Top",
     "map_locations": [
       {
         "map": "map",
-        "x": 800,
-        "y": 1475,
+        "x": 804,
+        "y": 1473,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|digging_on"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 133,
+        "y": 53,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|digging_on"
         ]
@@ -97,7 +128,7 @@
     ],
     "sections": [
       {
-        "name": "Buried Treasure",
+        "name": "Digging",
         "item_count": 6,
         "access_rules": [
           "^$Json_WesternWoods_NorthDigging_BuriedTreasure"
@@ -108,12 +139,20 @@
     ]
   },
   {
-    "name": "Western Woods - Tree",
+    "name": "Western Woods - Tree Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 755,
-        "y": 1750,
+        "x": 778,
+        "y": 1765,
+        "restrict_visibility_rules": [
+          "$FusionsRedLibrary"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 107,
+        "y": 345,
         "restrict_visibility_rules": [
           "$FusionsRedLibrary"
         ]
@@ -121,7 +160,7 @@
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_WesternWoods_Tree_HeartPiece"
@@ -132,12 +171,20 @@
     ]
   },
   {
-    "name": "Western Woods - Chest",
+    "name": "Western Woods - Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 825,
+        "x": 826,
         "y": 1603,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 155,
+        "y": 183,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -145,7 +192,7 @@
     ],
     "sections": [
       {
-        "name": "Freestanding Chest",
+        "name": "Chest",
         "item_count": 1,
         "access_rules": [
           "^$Json_WesternWoods_WesternWoodChest_FreestandingChest"
@@ -156,12 +203,20 @@
     ]
   },
   {
-    "name": "Western Woods - Percy's House",
+    "name": "Western Woods - Percy Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 765,
-        "y": 1912,
+        "x": 767,
+        "y": 1915,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 96,
+        "y": 495,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -169,7 +224,7 @@
     ],
     "sections": [
       {
-        "name": "Moblin Reward",
+        "name": "Moblin",
         "item_count": 1,
         "access_rules": [
           "^$Json_WesternWoods_Percy_MoblinReward"
@@ -178,7 +233,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Percy Reward",
+        "name": "Percy",
         "item_count": 1,
         "access_rules": [
           "^$Json_WesternWoods_Percy_PercyReward"
@@ -189,12 +244,20 @@
     ]
   },
   {
-    "name": "Western Woods - Octo Golden",
+    "name": "Western Woods - Golden Octo",
     "map_locations": [
       {
         "map": "map",
-        "x": 900,
-        "y": 1912,
+        "x": 920,
+        "y": 1920,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
+      },
+      {
+        "map": "map_westernwoods",
+        "x": 249,
+        "y": 500,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|golden_enemy_on"
         ]

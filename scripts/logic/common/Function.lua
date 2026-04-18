@@ -1,17 +1,17 @@
 local vanilla_captures = {
-  ["@DeepWoods/Prize"] = "",
-  ["@Cave Of Flame/Prize"] = "",
-  ["@Royal Crypt/Prize"] = "",
-  ["@Fortress/Prize"] = "",
-  ["@Palace/Prize"] = "",
-  ["@Droplet/Prize"] = "",
-  ["@Dark Hyrule Castle Entrance/Prize"] = "allelement",
-  ["@Cave Of Flame Entrance/Prize"] = "allelement",
-  ["@Crypt Entrance/Prize"] = "allelement",
-  ["@DeepWoods Entrance/Prize"] = "allelement",
-  ["@Fortress Entrance/Prize"] = "allelement",
-  ["@Palace Entrance/Prize"] = "allelement",
-  ["@Droplet Entrance/Prize"] = "allelement"
+  ["@DeepWoods/Reward"] = "",
+  ["@Cave Of Flame/Reward"] = "",
+  ["@Royal Crypt/Reward"] = "",
+  ["@Fortress/Reward"] = "",
+  ["@Palace/Reward"] = "",
+  ["@Droplet/Reward"] = "",
+  ["@Dark Hyrule Castle Entrance/Reward"] = "allelement",
+  ["@Cave Of Flame Entrance/Reward"] = "allelement",
+  ["@Crypt Entrance/Reward"] = "allelement",
+  ["@DeepWoods Entrance/Reward"] = "allelement",
+  ["@Fortress Entrance/Reward"] = "allelement",
+  ["@Palace Entrance/Reward"] = "allelement",
+  ["@Droplet Entrance/Reward"] = "allelement"
 }
 function update_vanilla_captures()
   for location, item in pairs(vanilla_captures) do
@@ -28,130 +28,130 @@ function update_vanilla_captures()
 end
 local link_captures = {
   ["dws_dws"] = {
-    ["@DeepWoods/Prize"] = "@DeepWoods Entrance/Prize"
+    ["@DeepWoods/Reward"] = "@DeepWoods Entrance/Reward"
   },
   ["dws_cof"] = {
-    ["@DeepWoods/Prize"] = "@Cave Of Flame Entrance/Prize"
+    ["@DeepWoods/Reward"] = "@Cave Of Flame Entrance/Reward"
   },
   ["dws_fow"] = {
-    ["@DeepWoods/Prize"] = "@Fortress Entrance/Prize"
+    ["@DeepWoods/Reward"] = "@Fortress Entrance/Reward"
   },
   ["dws_tod"] = {
-    ["@DeepWoods/Prize"] = "@Droplet Entrance/Prize"
+    ["@DeepWoods/Reward"] = "@Droplet Entrance/Reward"
   },
   ["dws_crypt"] = {
-    ["@DeepWoods/Prize"] = "@Crypt Entrance/Prize"
+    ["@DeepWoods/Reward"] = "@Crypt Entrance/Reward"
   },
   ["dws_pow"] = {
-    ["@DeepWoods/Prize"] = "@Palace Entrance/Prize"
+    ["@DeepWoods/Reward"] = "@Palace Entrance/Reward"
   },
   ["dws_dhc"] = {
-    ["@DeepWoods/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+    ["@DeepWoods/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
   },
   ["cof_dws"] = {
-    ["@Cave Of Flame/Prize"] = "@DeepWoods Entrance/Prize"
+    ["@Cave Of Flame/Reward"] = "@DeepWoods Entrance/Reward"
   },
   ["cof_cof"] = {
-    ["@Cave Of Flame/Prize"] = "@Cave Of Flame Entrance/Prize"
+    ["@Cave Of Flame/Reward"] = "@Cave Of Flame Entrance/Reward"
   },
   ["cof_fow"] = {
-    ["@Cave Of Flame/Prize"] = "@Fortress Entrance/Prize"
+    ["@Cave Of Flame/Reward"] = "@Fortress Entrance/Reward"
   },
   ["cof_tod"] = {
-    ["@Cave Of Flame/Prize"] = "@Droplet Entrance/Prize"
+    ["@Cave Of Flame/Reward"] = "@Droplet Entrance/Reward"
   },
   ["cof_crypt"] = {
-    ["@Cave Of Flame/Prize"] = "@Crypt Entrance/Prize"
+    ["@Cave Of Flame/Reward"] = "@Crypt Entrance/Reward"
   },
   ["cof_pow"] = {
-    ["@Cave Of Flame/Prize"] = "@Palace Entrance/Prize"
+    ["@Cave Of Flame/Reward"] = "@Palace Entrance/Reward"
   },
   ["cof_dhc"] = {
-    ["@Cave Of Flame/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+    ["@Cave Of Flame/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
   },
   ["fow_dws"] = {
-    ["@Fortress/Prize"] = "@DeepWoods Entrance/Prize"
+    ["@Fortress/Reward"] = "@DeepWoods Entrance/Reward"
   },
   ["fow_cof"] = {
-    ["@Fortress/Prize"] = "@Cave Of Flame Entrance/Prize"
+    ["@Fortress/Reward"] = "@Cave Of Flame Entrance/Reward"
   },
   ["fow_fow"] = {
-    ["@Fortress/Prize"] = "@Fortress Entrance/Prize"
+    ["@Fortress/Reward"] = "@Fortress Entrance/Reward"
   },
   ["fow_tod"] = {
-    ["@Fortress/Prize"] = "@Droplet Entrance/Prize"
+    ["@Fortress/Reward"] = "@Droplet Entrance/Reward"
   },
   ["fow_crypt"] = {
-    ["@Fortress/Prize"] = "@Crypt Entrance/Prize"
+    ["@Fortress/Reward"] = "@Crypt Entrance/Reward"
   },
   ["fow_pow"] = {
-    ["@Fortress/Prize"] = "@Palace Entrance/Prize"
+    ["@Fortress/Reward"] = "@Palace Entrance/Reward"
   },
   ["fow_dhc"] = {
-    ["@Fortress/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+    ["@Fortress/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
   },
   ["tod_dws"] = {
-    ["@Droplet/Prize"] = "@DeepWoods Entrance/Prize"
+    ["@Droplet/Reward"] = "@DeepWoods Entrance/Reward"
   },
   ["tod_cof"] = {
-    ["@Droplet/Prize"] = "@Cave Of Flame Entrance/Prize"
+    ["@Droplet/Reward"] = "@Cave Of Flame Entrance/Reward"
   },
   ["tod_fow"] = {
-    ["@Droplet/Prize"] = "@Fortress Entrance/Prize"
+    ["@Droplet/Reward"] = "@Fortress Entrance/Reward"
   },
   ["tod_tod"] = {
-    ["@Droplet/Prize"] = "@Droplet Entrance/Prize"
+    ["@Droplet/Reward"] = "@Droplet Entrance/Reward"
   },
   ["tod_crypt"] = {
-    ["@Droplet/Prize"] = "@Crypt Entrance/Prize"
+    ["@Droplet/Reward"] = "@Crypt Entrance/Reward"
   },
   ["tod_pow"] = {
-    ["@Droplet/Prize"] = "@Palace Entrance/Prize"
+    ["@Droplet/Reward"] = "@Palace Entrance/Reward"
   },
   ["tod_dhc"] = {
-    ["@Droplet/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+    ["@Droplet/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
   },
   ["crypt_dws"] = {
-    ["@Royal Crypt/Prize"] = "@DeepWoods Entrance/Prize"
+    ["@Royal Crypt/Reward"] = "@DeepWoods Entrance/Reward"
   },
   ["crypt_cof"] = {
-    ["@Royal Crypt/Prize"] = "@Cave Of Flame Entrance/Prize"
+    ["@Royal Crypt/Reward"] = "@Cave Of Flame Entrance/Reward"
   },
   ["crypt_fow"] = {
-    ["@Royal Crypt/Prize"] = "@Fortress Entrance/Prize"
+    ["@Royal Crypt/Reward"] = "@Fortress Entrance/Reward"
   },
   ["crypt_tod"] = {
-    ["@Royal Crypt/Prize"] = "@Droplet Entrance/Prize"
+    ["@Royal Crypt/Reward"] = "@Droplet Entrance/Reward"
   },
   ["crypt_crypt"] = {
-    ["@Royal Crypt/Prize"] = "@Crypt Entrance/Prize"
+    ["@Royal Crypt/Reward"] = "@Crypt Entrance/Reward"
   },
   ["crypt_pow"] = {
-    ["@Royal Crypt/Prize"] = "@Palace Entrance/Prize"
+    ["@Royal Crypt/Reward"] = "@Palace Entrance/Reward"
   },
   ["crypt_dhc"] = {
-    ["@Royal Crypt/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+    ["@Royal Crypt/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
   },
   ["pow_dws"] = {
-    ["@Palace/Prize"] = "@DeepWoods Entrance/Prize"
+    ["@Palace/Reward"] = "@DeepWoods Entrance/Reward"
   },
   ["pow_cof"] = {
-    ["@Palace/Prize"] = "@Cave Of Flame Entrance/Prize"
+    ["@Palace/Reward"] = "@Cave Of Flame Entrance/Reward"
   },
   ["pow_fow"] = {
-    ["@Palace/Prize"] = "@Fortress Entrance/Prize"
+    ["@Palace/Reward"] = "@Fortress Entrance/Reward"
   },
   ["pow_tod"] = {
-    ["@Palace/Prize"] = "@Droplet Entrance/Prize"
+    ["@Palace/Reward"] = "@Droplet Entrance/Reward"
   },
   ["pow_crypt"] = {
-    ["@Palace/Prize"] = "@Crypt Entrance/Prize"
+    ["@Palace/Reward"] = "@Crypt Entrance/Reward"
   },
   ["pow_pow"] = {
-    ["@Palace/Prize"] = "@Palace Entrance/Prize"
+    ["@Palace/Reward"] = "@Palace Entrance/Reward"
   },
   ["pow_dhc"] = {
-    ["@Palace/Prize"] = "@Dark Hyrule Castle Entrance/Prize"
+    ["@Palace/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
   }
 }
 link_captures_cache = {}
@@ -291,68 +291,67 @@ function tracker_on_accessibility_updating()
   end
 end
 CaptureBadgeSections = {
-  "@Town - Stockwell's Shop/Wallet Spot (80 Rupees)",
-  "@Town - Stockwell's Shop/Boomerang Spot (300 Rupees)",
-  "@Town - Stockwell's Shop/Quiver Spot (600 Rupees)",
-  "@Town - Stockwell's Shop/Bombag Spot (600 Rupees)",
-  "@Town - Stockwell's Shop/Dog Food Bottle",
-  "@Town - Eastern Shops/Figurine House Heart Piece",
-  "@Town - Fountain/Heart Piece",
-  "@Town - School Gardens/Heart Piece",
-  "@Town - Julietta's House/Item",
-  "@Town - Goron Shop/Set 1 - Item Right",
-  "@Town - Goron Shop/Set 1 - Item Center",
-  "@Town - Goron Shop/Set 1 - Item Left",
-  "@Town - Goron Shop/Set 2 - Item Right",
-  "@Town - Goron Shop/Set 2 - Item Center",
-  "@Town - Goron Shop/Set 2 - Item Left",
-  "@Town - Goron Shop/Set 3 - Item Right",
-  "@Town - Goron Shop/Set 3 - Item Center",
-  "@Town - Goron Shop/Set 3 - Item Left",
-  "@Town - Goron Shop/Set 4 - Item Right",
-  "@Town - Goron Shop/Set 4 - Item Center",
-  "@Town - Goron Shop/Set 4 - Item Left",
-  "@Town - Goron Shop/Set 5 - Item Right",
-  "@Town - Goron Shop/Set 5 - Item Center",
-  "@Town - Goron Shop/Set 5 - Item Left",
-  "@Hylia - Lon Lon Ranch - North Heart Piece/Heart Piece",
-  "@Hylia - Cape Heart Piece/Heart Piece",
-  "@Hylia - Southern/Heart Piece",
-  "@Hylia - Lake Cabin/Item",
-  "@Minish Woods North - Heart Piece/Heart Piece",
-  "@Veil Falls - Heart Piece/Heart Piece",
-  "@Veil Falls South - Rupees/Rupee 1",
-  "@Veil Falls South - Rupees/Rupee 2",
-  "@Veil Falls South - Rupees/Rupee 3",
-  "@DeepWoods/Madderpillar Heart Piece",
-  "@Deepwoods - Madderpillar Heart Piece/Heart Piece",
-  "@DeepWoods/Prize",
-  "@Cave Of Flame/Bombable Wall Heart Piece",
-  "@Cave Of Flame - Bombable Wall/Heart Piece",
-  "@Cave Of Flame/Prize",
-  "@Crypt - Gibdos/First Kill",
-  "@Crypt - Gibdos/Second Kill",
-  "@Royal Crypt/First Gibdos",
-  "@Royal Crypt/Other Gibdos",
-  "@Royal Crypt/Prize",
+  "@Cave Of Flame/B1 - HP",
+  "@Cave Of Flame/Reward",
+  "@Crypt/Gibdo Left - Item",
+  "@Crypt/Gibdo Right - Item",
+  "@Crypt/Reward",
+  "@DeepWoods/1F - Madderpillar - HP",
+  "@DeepWoods/Reward",
+  "@Fortress/Entrance 1F - Right - HP",
+  "@Fortress/Back 2F - Right Minish - Item Drop",
+  "@Fortress/Reward",
+  "@Palace/1st Half 3F - Pot Puzzle - Item Drop",
+  "@Palace/2nd Half 4F - HP",
+  "@Palace/Reward",
+  "@Droplet/Reward",
+  "@Dark Hyrule Castle Entrance/Reward",
+  "@Droplet Entrance/Reward",
+  "@Palace Entrance/Reward",
+  "@Fortress Entrance/Reward",
+  "@Cave Of Flame Entrance/Reward",
+  "@Crypt Entrance/Reward",
+  "@Deepwoods Entrance/Reward",
+  "@Falls - Entrance/HP",
+  "@Falls Lower - Rock/Item 1",
+  "@Falls Lower - Rock/Item 2",
+  "@Falls Lower - Rock/Item 3",
+  "@Hylia - Cape Cave - Lon Lon/HP",
+  "@Hylia - Mayor Cabin/Item",
+  "@Hylia - Bottom/HP",
+  "@Hylia - Small Island/HP",
+  "@Crypt - Gibdo Left/Item",
+  "@Crypt - Gibdo Right/Item",
+  "@Deepwoods - 1F - Madderpillar/HP",
   "@Fortress - Right Side Heart Piece/Heart Piece",
   "@Fortress - Minish Dirt Room Key/Drop",
-  "@Fortress/Right Side Heart Piece",
-  "@Fortress/Minish Dirt Room Key Drop",
-  "@Fortress/Prize",
-  "@Palace/Pot Puzzle Key",
   "@Palace - Pot Puzzle Key/Drop",
-  "@Palace/Heart Piece",
   "@Palace - Heart Piece/Heart Piece",
-  "@Palace/Prize",
-  "@Droplet/Prize",
-  "@Dark Hyrule Castle Entrance/Prize",
-  "@Cave Of Flame Entrance/Prize",
-  "@Crypt Entrance/Prize",
-  "@DeepWoods Entrance/Prize",
-  "@Fortress Entrance/Prize",
-  "@Palace Entrance/Prize",
-  "@Droplet Entrance/Prize"
+  "@Minish Woods - Top/HP",
+  "@Town - Shop/80 Item",
+  "@Town - Shop/300 Item",
+  "@Town - Shop/600 Item",
+  "@Town - Shop/600 Item 2",
+  "@Town - Shop/Behind Counter",
+  "@Town - School Path/HP",
+  "@Town - Jullieta/Item",
+  "@Town - Fountain/HP",
+  "@Town - Music House/HP",
+  "@Town - Goron Merchant/1 Right",
+  "@Town - Goron Merchant/1 Middle",
+  "@Town - Goron Merchant/1 Left",
+  "@Town - Goron Merchant/2 Right",
+  "@Town - Goron Merchant/2 Middle",
+  "@Town - Goron Merchant/2 Left",
+  "@Town - Goron Merchant/3 Right",
+  "@Town - Goron Merchant/3 Middle",
+  "@Town - Goron Merchant/3 Left",
+  "@Town - Goron Merchant/4 Right",
+  "@Town - Goron Merchant/4 Middle",
+  "@Town - Goron Merchant/4 Left",
+  "@Town - Goron Merchant/5 Right",
+  "@Town - Goron Merchant/5 Middle",
+  "@Town - Goron Merchant/5 Left"
 }
 CaptureBadgeCache = {}
 function captureBadge()

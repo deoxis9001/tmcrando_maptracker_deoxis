@@ -11,25 +11,121 @@
     "location_size": 50
   },
   {
+    "name": "map_castle",
+    "img": "images/maps/overworld/castle.png",
+    "location_size": 20,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_clouds",
+    "img": "images/maps/overworld/clouds.png",
+    "location_size": 30,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_crenel",
+    "img": "images/maps/overworld/crenel.png",
+    "location_size": 30,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_falls",
+    "img": "images/maps/overworld/falls.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_hills",
+    "img": "images/maps/overworld/hills.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_hylia",
+    "img": "images/maps/overworld/hylia.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_lonlon",
+    "img": "images/maps/overworld/lonlon.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_minishwoods",
+    "img": "images/maps/overworld/minishwoods.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_northfield",
+    "img": "images/maps/overworld/northfield.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_ruins",
+    "img": "images/maps/overworld/ruins.png",
+    "location_size": 20,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_southfield",
+    "img": "images/maps/overworld/southfield.png",
+    "location_size": 20,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_swamp",
+    "img": "images/maps/overworld/swamp.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_town",
+    "img": "images/maps/overworld/town.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_trilby",
+    "img": "images/maps/overworld/trilby.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_valley",
+    "img": "images/maps/overworld/valley.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
+    "name": "map_westernwoods",
+    "img": "images/maps/overworld/westernwoods.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
     "name": "dws",
     "img": "images/maps/dws.png",
     "location_size": 50
   },
   {
+    "name": "dws_2F",
+    "img": "images/maps/dungeons/dws/2F.png",
+    "location_size": 25,
+    "location_border_thickness": 5
+  },
+  {
     "name": "dws_1F",
     "img": "images/maps/dungeons/dws/1F.png",
-    "location_size": 25,
+    "location_size": 50,
     "location_border_thickness": 5
   },
   {
     "name": "dws_B1",
     "img": "images/maps/dungeons/dws/B1.png",
-    "location_size": 50,
-    "location_border_thickness": 5
-  },
-  {
-    "name": "dws_B2",
-    "img": "images/maps/dungeons/dws/B2.png",
     "location_size": 25,
     "location_border_thickness": 5
   },

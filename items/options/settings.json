@@ -976,7 +976,6 @@
       }
     ]
   },
-  //DHC requirement
   {
     "name": "Dark Hyrule Castle is the last dungeon in the game, it has the final boss Vaati.",
     "type": "progressive",

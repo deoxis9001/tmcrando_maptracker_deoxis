@@ -11,10 +11,10 @@ EVENTS_FLAG_MAPPING = {
     {"fuse_03","@Clouds - Top Left Fusion/Fusion"},
     {"fuse_04","@Clouds - Central Fusion/Fusion"},
     {"fuse_05","@Clouds - Bottom Right Fusion/Fusion"},
-    {"fuse_06","@Castor Wilds - Fusions/Fusions"},
-    {"fuse_07","@Castor Wilds - Fusions/Fusions"},
-    {"fuse_08","@Castor Wilds - Fusions/Fusions"},
-    {"fuse_09","@Veil Falls - Source of the Flow Cave/Fusion"},
+    {"fuse_06","@Swamp - Fusions/Fusions"},
+    {"fuse_07","@Swamp - Fusions/Fusions"},
+    {"fuse_08","@Swamp - Fusions/Fusions"},
+    {"fuse_09","@Falls - Kinstone Door Open/Fusion"},
 --    {"dungeon_dws","dws"}
 --    {"dungeon_cof","cof"}
 --    {"dungeon_fow","fow"}

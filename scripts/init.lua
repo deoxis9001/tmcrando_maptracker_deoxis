@@ -61,7 +61,7 @@ TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_Fuser = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false
-TMC_AUTOTRACKER_DEBUG_ITEM_NOFOUND = false
+TMC_AUTOTRACKER_DEBUG_ITEM_NOFOUND = true
 TMC_AUTOTRACKER_DEBUG_EVENT = false
 TMC_AUTOTRACKER_DEBUG_SLOT = false
 TMC_AUTOTRACKER_DEBUG_RESET = false
@@ -353,10 +353,8 @@ end
 ------------------------------------------------------------------
 if PopVersion then
 	ScriptHost:LoadScript(Script.."autotracking.lua")
-elseif _VERSION == "Lua 5.3"  then
-	ScriptHost:LoadScript(ScriptAutotracking.."autotracking_testing.lua")
 else
-	print("Your tracker version does not support autotracking")
+	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
 end
 if PopVersion then
 	ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)

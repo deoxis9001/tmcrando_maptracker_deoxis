@@ -1,23 +1,19 @@
 [
   {
-    "name": "Royal Valley - Northwest Grave",
+    "name": "Valley Graveyard - Left Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 725,
-        "y": 200
+        "x": 709,
+        "y": 186
+      },
+      {
+        "map": "map_valley",
+        "x": 38,
+        "y": 58
       }
     ],
     "sections": [
-      {
-        "name": "Heart Piece",
-        "item_count": 1,
-        "access_rules": [
-          "$Json_Valley_NorthwestGrave_HeartPiece"
-        ],
-        "chest_unopened_img": "images/items-map/Heart Piece.png",
-        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
-      },
       {
         "name": "Chest",
         "visibility_rules": [
@@ -33,12 +29,53 @@
     ]
   },
   {
-    "name": "Royal Valley - Lost Woods Secret",
+    "name": "Valley Graveyard - Left Grave",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 730,
+        "y": 229
+      },
+      {
+        "map": "map_valley",
+        "x": 59,
+        "y": 101
+      }
+    ],
+    "sections": [
+      {
+        "name": "HP",
+        "item_count": 1,
+        "access_rules": [
+          "$Json_Valley_NorthwestGrave_HeartPiece"
+        ],
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
+      }
+    ]
+  },
+  {
+    "name": "Valley - Lost Woods",
     "map_locations": [
       {
         "map": "map",
         "x": 750,
         "y": 650
+      },
+      {
+        "map": "map",
+        "x": 751,
+        "y": 568
+      },
+      {
+        "map": "map_valley",
+        "x": 79,
+        "y": 522
+      },
+      {
+        "map": "map_valley",
+        "x": 80,
+        "y": 440
       }
     ],
     "sections": [
@@ -54,12 +91,17 @@
     ]
   },
   {
-    "name": "Royal Valley - Great Fairy",
+    "name": "Valley - Great Fairy",
     "map_locations": [
       {
         "map": "map",
-        "x": 940,
-        "y": 570
+        "x": 943,
+        "y": 584
+      },
+      {
+        "map": "map_valley",
+        "x": 272,
+        "y": 456
       }
     ],
     "sections": [
@@ -75,12 +117,17 @@
     ]
   },
   {
-    "name": "Royal Valley - Dampe",
+    "name": "Valley - Dampe",
     "map_locations": [
       {
         "map": "map",
-        "x": 940,
-        "y": 370
+        "x": 948,
+        "y": 405
+      },
+      {
+        "map": "map_valley",
+        "x": 277,
+        "y": 277
       }
     ],
     "sections": [
@@ -116,12 +163,21 @@
     ]
   },
   {
-    "name": "Royal Valley - Northeast Grave",
+    "name": "Valley Graveyard - Right Grave Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 930,
-        "y": 200,
+        "x": 932,
+        "y": 229,
+        "restrict_visibility_rules": [
+          "$FusionsGreen",
+          "$FusionsBlue"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 261,
+        "y": 101,
         "restrict_visibility_rules": [
           "$FusionsGreen",
           "$FusionsBlue"
@@ -130,25 +186,13 @@
     ],
     "sections": [
       {
-        "name": "Grave Chest",
+        "name": "Chest",
         "visibility_rules": [
           "$FusionsBlue"
         ],
         "item_count": 1,
         "access_rules": [
           "$Json_Valley_NortheastGrave_GraveChest"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
-      },
-      {
-        "name": "Chest",
-        "item_count": 1,
-        "visibility_rules": [
-          "$FusionsGreen"
-        ],
-        "access_rules": [
-          "$Json_Valley_NortheastGrave_Chest"
         ],
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
@@ -176,12 +220,57 @@
     ]
   },
   {
-    "name": "Royal Valley - Joy Butterfly",
+    "name": "Valley Graveyard - Right Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 705,
-        "y": 270,
+        "x": 954,
+        "y": 187,
+        "restrict_visibility_rules": [
+          "$FusionsGreen",
+          "$FusionsBlue"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 283,
+        "y": 59,
+        "restrict_visibility_rules": [
+          "$FusionsGreen",
+          "$FusionsBlue"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "item_count": 1,
+        "visibility_rules": [
+          "$FusionsGreen"
+        ],
+        "access_rules": [
+          "$Json_Valley_NortheastGrave_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Valley Graveyard - Butterfly Fusion",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 708,
+        "y": 272,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_valley",
+        "x": 37,
+        "y": 144,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -189,7 +278,7 @@
     ],
     "sections": [
       {
-        "name": "Joy Butterfly",
+        "name": "Item",
         "access_rules": [
           "$Json_Valley_Butterfly_JoyButterfly"
         ],
@@ -200,12 +289,21 @@
     ]
   },
   {
-    "name": "Royal Valley - Spekter",
+    "name": "Valley Graveyard - Spekter",
     "map_locations": [
       {
         "map": "map",
         "x": 755,
-        "y": 300
+        "y": 300,
+        "shape": "diamond",
+        "size": 70
+      },
+      {
+        "map": "map_valley",
+        "x": 84,
+        "y": 172,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -232,12 +330,20 @@
     ]
   },
   {
-    "name": "Pre Royal Valley - Chest",
+    "name": "Valley - Pre Valley Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1058,
-        "y": 528,
+        "x": 1059,
+        "y": 527,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_northfield",
+        "x": 69,
+        "y": 47,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]

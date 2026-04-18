@@ -1721,49 +1721,49 @@ function UpdateCucco(segment)
 		count = count + 8
 	end
 	if count >= 1 then
-		updateSectionFlagSpecial("@Town - Anju/Round 1 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 1", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 1 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 1", 1)
 	end
 	if count >= 2 then
-		updateSectionFlagSpecial("@Town - Anju/Round 2 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 2", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 2 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 2", 1)
 	end
 	if count >= 3 then
-		updateSectionFlagSpecial("@Town - Anju/Round 3 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 3", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 3 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 3", 1)
 	end
 	if count >= 4 then
-		updateSectionFlagSpecial("@Town - Anju/Round 4 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 4", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 4 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 4", 1)
 	end
 	if count >= 5 then
-		updateSectionFlagSpecial("@Town - Anju/Round 5 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 5", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 5 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 5", 1)
 	end
 	if count >= 6 then
-		updateSectionFlagSpecial("@Town - Anju/Round 6 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 6", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 6 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 6", 1)
 	end
 	if count >= 7 then
-		updateSectionFlagSpecial("@Town - Anju/Round 7 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 7", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 7 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 7", 1)
 	end
 	if count >= 8 then
-		updateSectionFlagSpecial("@Town - Anju/Round 8 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 8", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 8 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 8", 1)
 	end
 	if count >= 9 then
-		updateSectionFlagSpecial("@Town - Anju/Round 9 Gift", 0)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 9", 0)
 	else
-		updateSectionFlagSpecial("@Town - Anju/Round 9 Gift", 1)
+		updateSectionFlagSpecial("@Town - Cuccos/Lv 9", 1)
 	end
 end
 function UpdateGoronShop(segment)
@@ -1793,17 +1793,17 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Left", left)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Middle", center)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Right", right)
 	elseif count > 0 then
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Left", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Middle", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Right", 0)
 	else
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Left", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Middle", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/1 Right", 1)
 	end
 	if count == 1 then
 		if testFlag(segment, 0x2002ca4, 0x04) then
@@ -1815,17 +1815,17 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Left", left)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Middle", center)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Right", right)
 	elseif count > 1 then
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Left", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Middle", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Right", 0)
 	else
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Left", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Middle", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/2 Right", 1)
 	end
 	if count == 2 then
 		if testFlag(segment, 0x2002ca4, 0x04) then
@@ -1837,17 +1837,17 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Left", left)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Middle", center)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Right", right)
 	elseif count > 2 then
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Left", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Middle", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Right", 0)
 	else
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Left", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Middle", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/3 Right", 1)
 	end
 	if count == 3 then
 		if testFlag(segment, 0x2002ca4, 0x04) then
@@ -1859,17 +1859,17 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Left", left)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Middle", center)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Right", right)
 	elseif count > 3 then
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Left", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Middle", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Right", 0)
 	else
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Left", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Middle", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/4 Right", 1)
 	end
 	if count == 4 then
 		if testFlag(segment, 0x2002ca4, 0x04) then
@@ -1881,17 +1881,17 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Left", left)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Middle", center)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Right", right)
 	elseif count > 4 then
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Left", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Middle", 0)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Right", 0)
 	else
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Left", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Middle", 1)
+		updateSectionFlagSpecial("@Town - Goron Merchant/5 Right", 1)
 	end
 end
 
@@ -1976,7 +1976,7 @@ function updateItemsFromMemorySegment(segment)
 	end
 
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
-		updateSectionFlag(segment, "@Hylia - Fifi/Gift", 0x2002b3f, 0x20)
+		updateSectionFlag(segment, "@Hylia - Dog/Gift", 0x2002b3f, 0x20)
 	end
 end
 
@@ -2014,12 +2014,12 @@ function updateLocations(segment)
 		updateToggleFlag(segment, "pow", 0x2002c9c, 0x40)
 		updateToggleFlag(segment, "rc", 0x2002d02, 0x04)
 		updateToggleFlag(segment, "dhc", 0x2002ca6, 0x20)
-		updateSectionFlag(segment, "@DeepWoods/Prize", 0x2002c9c, 0x04)
-		updateSectionFlag(segment, "@Cave Of Flame/Prize", 0x2002c9c, 0x08)
-		updateSectionFlag(segment, "@Fortress/Prize", 0x2002c9c, 0x10)
-		updateSectionFlag(segment, "@Droplet/Prize", 0x2002c9c, 0x20)
-		updateSectionFlag(segment, "@Palace/Prize", 0x2002c9c, 0x40)
-		updateSectionFlag(segment, "@Royal Crypt/Prize", 0x2002d02, 0x04)
+		updateSectionFlag(segment, "@DeepWoods/Green Chu", 0x2002c9c, 0x04)
+		updateSectionFlag(segment, "@Cave Of Flame/Gleerok", 0x2002c9c, 0x08)
+		updateSectionFlag(segment, "@Fortress/Reward", 0x2002c9c, 0x10)
+		updateSectionFlag(segment, "@Droplet/Octo", 0x2002c9c, 0x20)
+		updateSectionFlag(segment, "@Palace/Gyorg", 0x2002c9c, 0x40)
+		updateSectionFlag(segment, "@Crypt/Reward", 0x2002d02, 0x04)
 		if has("fusiongold_vanilla") then
 			if fusiongoldcombined:getActive() then
 				updateCloudsUsedFixed(
@@ -2399,15 +2399,15 @@ function updateLocations(segment)
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		-- if has("golden_enemy_on") then
 			--GOLDEN
-			updateSectionFlag(segment, "@Wind Ruins - Octo Golden/Kill", 0x2002ca2, 0x02)
-			updateSectionFlag(segment, "@Crenel - Middle Tektite Golden/Kill", 0x2002ca2, 0x04)
-			updateSectionFlag(segment, "@Castor Wilds - Rope Golden/Kill", 0x2002ca2, 0x08)
-			updateSectionFlag(segment, "@Eastern Hills - Rope Golden/Kill", 0x2002ca2, 0x10)
-			updateSectionFlag(segment, "@Castle - Rope Golden/Kill", 0x2002ca2, 0x20)
-			updateSectionFlag(segment, "@Veil Falls - Tektite Golden/Kill", 0x2002ca2, 0x40)
-			updateSectionFlag(segment, "@Crenel - Top Tektite Golden/Kill", 0x2002ca2, 0x80)
-			updateSectionFlag(segment, "@Minish Woods North - Octo Golden/Kill", 0x2002ca3, 0x01)
-			updateSectionFlag(segment, "@Western Woods - Octo Golden/Kill", 0x2002ca3, 0x02)
+			updateSectionFlag(segment, "@Ruins - Golden Octo/Kill", 0x2002ca2, 0x02)
+			updateSectionFlag(segment, "@Crenel - Vine Top Golden Tektite/Kill", 0x2002ca2, 0x04)
+			updateSectionFlag(segment, "@Swamp - Golden Rope/Kill", 0x2002ca2, 0x08)
+			updateSectionFlag(segment, "@Hills - Golden Rope/Kill", 0x2002ca2, 0x10)
+			updateSectionFlag(segment, "@Castle - Golden Rope/Kill", 0x2002ca2, 0x20)
+			updateSectionFlag(segment, "@Falls - Golden Tektite/Kill", 0x2002ca2, 0x40)
+			updateSectionFlag(segment, "@Crenel - Below CoF Golden Tektite/Kill", 0x2002ca2, 0x80)
+			updateSectionFlag(segment, "@Minish Woods - Golden Octo/Kill", 0x2002ca3, 0x01)
+			updateSectionFlag(segment, "@Western Woods - Golden Octo/Kill", 0x2002ca3, 0x02)
 		-- end
 		--FUSIONS
 		updateSectionFlag(segment, "@Clouds - Top Right Fusion/Fusion", 0x2002c81, 0x02)
@@ -2417,14 +2417,14 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Clouds - Bottom Right Fusion/Fusion", 0x2002c81, 0x20)
 		updateDecreaseCount(
 			segment,
-			"@Castor Wilds - Fusions/Fusions",
+			"@Swamp - Fusions/Fusions",
 			{{0x2002c81, 0x40}, {0x2002c81, 0x80}, {0x2002c82, 0x01}}
 		)
-		updateSectionFlag(segment, "@Veil Falls - Source of the Flow Cave/Fusion", 0x2002c82, 0x02)
+		updateSectionFlag(segment, "@Falls - Kinstone Door Open/Fusion", 0x2002c82, 0x02)
 		--CRENEL
-		updateSectionFlag(segment, "@Crenel - Climbing Wall Chest/Chest", 0x2002cd4, 0x01)
+		updateSectionFlag(segment, "@Crenel - Climb Fusion/Chest", 0x2002cd4, 0x01)
 		updateSectionFlag(segment, "@Crenel - Great Fairy/Gift", 0x2002cf0, 0x01)
-		updateSectionFlag(segment, "@Crenel - Mines/Chest", 0x2002d11, 0x08)
+		updateSectionFlag(segment, "@Crenel - Mines Path Fusion/Chest", 0x2002d11, 0x08)
 		updateDecreaseCount(
 			segment,
 			"@Crenel - Mines/Digging",
@@ -2439,11 +2439,11 @@ function updateLocations(segment)
 				{0x2002cf4, 0x01}
 			}
 		)
-		updateSectionFlag(segment, "@Crenel - Mitts Cave/Heart Piece", 0x2002d04, 0x20)
-		updateSectionFlag(segment, "@Crenel - Beanstalk/Heart Piece", 0x2002d0c, 0x08)
+		updateSectionFlag(segment, "@Crenel - Dig Cave/HP", 0x2002d04, 0x20)
+		updateSectionFlag(segment, "@Crenel - Beanstalk Fusion/HP", 0x2002d0c, 0x08)
 		updateDecreaseCount(
 			segment,
-			"@Crenel - Beanstalk/Rupees",
+			"@Crenel - Beanstalk Fusion/Items",
 			{
 				{0x2002d0e, 0x40},
 				{0x2002d0e, 0x80},
@@ -2455,96 +2455,96 @@ function updateLocations(segment)
 				{0x2002d0f, 0x20}
 			}
 		)
-		updateSectionFlag(segment, "@Crenel - Rainy Minish Path Chest/Chest", 0x2002d10, 0x40)
+		updateSectionFlag(segment, "@Crenel - Rain Path Fusion/Chest", 0x2002d10, 0x40)
 		updateDecreaseCount(segment, "@Crenel - Dojo/Chests", {{0x2002d1c, 0x02}, {0x2002d1c, 0x04}})
-		updateSectionFlag(segment, "@Crenel - Dojo/Heart Piece", 0x2002d2c, 0x01)
+		updateSectionFlag(segment, "@Crenel - Dojo/HP", 0x2002d2c, 0x01)
 		updateSectionFlag(segment, "@Crenel - Bridge Cave/Chest", 0x2002d23, 0x80)
-		updateSectionFlag(segment, "@Crenel - Fairy/Heart Piece", 0x2002d2b, 0x20)
-		updateSectionFlag(segment, "@Crenel - Mines Cave/Chest", 0x2002d23, 0x20)
+		updateSectionFlag(segment, "@Crenel - Fairy Cave/HP", 0x2002d2b, 0x20)
+		updateSectionFlag(segment, "@Crenel - Upper Block/Chest", 0x2002d23, 0x20)
 
 		-- MAP MINES
-		updateSectionFlag(segment, "@Crenel - Mines - Digging Spot 8/Digging", 0x2002cf4, 0x01)
-		updateSectionFlag(segment, "@Crenel - Mines - Digging Spot 1/Digging", 0x2002cf3, 0x02)
-		updateSectionFlag(segment, "@Crenel - Mines - Digging Spot 7/Digging", 0x2002cf3, 0x80)
-		updateSectionFlag(segment, "@Crenel - Mines - Digging Spot 6/Digging", 0x2002cf3, 0x40)
-		updateSectionFlag(segment, "@Crenel - Mines - Digging Spot 5/Digging", 0x2002cf3, 0x20)
-		updateSectionFlag(segment, "@Crenel - Mines - Digging Spot 4/Digging", 0x2002cf3, 0x10)
-		updateSectionFlag(segment, "@Crenel - Mines - Digging Spot 2/Digging", 0x2002cf3, 0x04)
-		updateSectionFlag(segment, "@Crenel - Mines - Digging Spot 3/Digging", 0x2002cf3, 0x08)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf4, 0x01)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x02)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x80)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x40)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x20)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x10)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x04)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x08)
 
 		--CRENEL BASE
-		updateSectionFlag(segment, "@Crenel Base - Vine Rupee/Rupee", 0x2002cc5, 0x02)
-		updateSectionFlag(segment, "@Crenel Base - Chest/Chest", 0x2002cd4, 0x02)
+		updateSectionFlag(segment, "@Crenel Base - Entrance Vine/Item", 0x2002cc5, 0x02)
+		updateSectionFlag(segment, "@Crenel Base - West Fusion/Chest", 0x2002cd4, 0x02)
 		updateSectionFlag(segment, "@Crenel Base - Minish Crack/Chest", 0x2002cde, 0x02)
-		updateSectionFlag(segment, "@Crenel Base - Spring Water Path Chest/Chest", 0x2002d10, 0x80)
-		updateSectionFlag(segment, "@Crenel Base - Heart Piece Cave/Heart Piece", 0x2002d24, 0x01)
-		updateDecreaseCount(segment, "@Crenel Base - Heart Piece Cave/Chests", {{0x2002d24, 0x02}, {0x2002d24, 0x04}})
-		updateDecreaseCount(segment, "@Crenel Base - Fairy/Rupees", {{0x2002d24, 0x08}, {0x2002d24, 0x10}, {0x2002d24, 0x20}})
-		updateSectionFlag(segment, "@Crenel Base - Minish Hole/Chest", 0x2002d28, 0x01)
+		updateSectionFlag(segment, "@Crenel Base - Green Water Fusion/Chest", 0x2002d10, 0x80)
+		updateSectionFlag(segment, "@Crenel Base - Water Cave/HP", 0x2002d24, 0x01)
+		updateDecreaseCount(segment, "@Crenel Base - Water Cave/Chests", {{0x2002d24, 0x02}, {0x2002d24, 0x04}})
+		updateDecreaseCount(segment, "@Crenel Base - Fairy Cave/Items", {{0x2002d24, 0x08}, {0x2002d24, 0x10}, {0x2002d24, 0x20}})
+		updateSectionFlag(segment, "@Crenel Base - Minish Vine Hole/Chest", 0x2002d28, 0x01)
 
 		--CASTOR WILDS
-		updateSectionFlag(segment, "@Castor Wilds - Platform Chest/Chest", 0x2002cbd, 0x10)
-		updateSectionFlag(segment, "@Castor Wilds - Diving Spots/Diving Top", 0x2002cc0, 0x04)
-		updateSectionFlag(segment, "@Castor Wilds - Diving Spots/Diving Middle", 0x2002cc0, 0x08)
-		updateSectionFlag(segment, "@Castor Wilds - Diving Spots/Diving Bottom", 0x2002cc0, 0x10)
-		updateSectionFlag(segment, "@Castor Wilds - Mulldozers/Big Chest", 0x2002cde, 0x01)
-		updateSectionFlag(segment, "@Castor Wilds - Northern Minish Crack/Chest", 0x2002cde, 0x08)
-		updateSectionFlag(segment, "@Castor Wilds - Western Minish Crack/Chest", 0x2002cde, 0x10)
-		updateSectionFlag(segment, "@Castor Wilds - Vine Minish Crack/Chest", 0x2002cde, 0x20)
-		updateSectionFlag(segment, "@Castor Wilds - Mulldozers/Left Chest", 0x2002cf0, 0x20)
-		updateDecreaseCount(segment, "@Castor Wilds - Mitts Cave/Chests", {{0x2002d04, 0x01}, {0x2002d04, 0x02}})
-		updateSectionFlag(segment, "@Castor Wilds - South Lake Cave/Chest", 0x2002d22, 0x10)
-		updateSectionFlag(segment, "@Castor Wilds - North Cave/Chest", 0x2002d22, 0x40)
-		updateSectionFlag(segment, "@Castor Wilds - Northeast Lake Cave/Heart Piece", 0x2002d23, 0x01)
-		updateSectionFlag(segment, "@Castor Wilds - Darknut/Kill", 0x2002d23, 0x04)
-		updateSectionFlag(segment, "@Castor Wilds - Dojo/Heart Piece", 0x2002d2b, 0x80)
-		updateSectionFlag(segment, "@Castor Wilds - Water Minish Hole/Heart Piece", 0x2002d2c, 0x10)
-		updateSectionFlag(segment, "@Castor Wilds - Water Minish Hole/Chest", 0x2002d2c, 0x20)
+		updateSectionFlag(segment, "@Swamp - Center/Chest", 0x2002cbd, 0x10)
+		updateSectionFlag(segment, "@Swamp - Underwater/Top", 0x2002cc0, 0x04)
+		updateSectionFlag(segment, "@Swamp - Underwater/Top", 0x2002cc0, 0x08)
+		updateSectionFlag(segment, "@Swamp - Underwater/Top", 0x2002cc0, 0x10)
+		updateSectionFlag(segment, "@Swamp - Minish Mulldozer/Big Chest", 0x2002cde, 0x01)
+		updateSectionFlag(segment, "@Swamp - Minish Fusion North Crack/Chest", 0x2002cde, 0x08)
+		updateSectionFlag(segment, "@Swamp - Minish Fusion West Crack/Chest", 0x2002cde, 0x10)
+		updateSectionFlag(segment, "@Swamp - Minish Fusion Vine Crack/Chest", 0x2002cde, 0x20)
+		updateSectionFlag(segment, "@Swamp - Minish Mulldozer/Left Chest", 0x2002cf0, 0x20)
+		updateDecreaseCount(segment, "@Swamp - Digging Cave/Chests", {{0x2002d04, 0x01}, {0x2002d04, 0x02}})
+		updateSectionFlag(segment, "@Swamp - South Cave/Chest", 0x2002d22, 0x10)
+		updateSectionFlag(segment, "@Swamp - North Cave/Chest", 0x2002d22, 0x40)
+		updateSectionFlag(segment, "@Swamp - Near Waterfall Cave/HP", 0x2002d23, 0x01)
+		updateSectionFlag(segment, "@Swamp - Center Cave Darknut/Chest", 0x2002d23, 0x04)
+		updateSectionFlag(segment, "@Swamp - Dojo/HP", 0x2002d2b, 0x80)
+		updateSectionFlag(segment, "@Swamp - Minish Fusion Water Hole/HP", 0x2002d2c, 0x10)
+		updateSectionFlag(segment, "@Swamp - Minish Fusion Water Hole/Chest", 0x2002d2c, 0x20)
 
 		--WIND RUINS
-		updateDecreaseCount(segment, "@Wind Ruins - Armos Kill/Chests", {{0x2002cc2, 0x08}, {0x2002cc2, 0x10}})
-		updateSectionFlag(segment, "@Wind Ruins - Pre FOW/Chest", 0x2002cd2, 0x10)
-		updateSectionFlag(segment, "@Wind Ruins - 4 Pillars/Chest", 0x2002cd4, 0x04)
-		updateSectionFlag(segment, "@Wind Ruins - Minish Hole/Chest", 0x2002cde, 0x04)
-		updateSectionFlag(segment, "@Wind Ruins - Minish Crack/Chest", 0x2002cf0, 0x10)
-		updateSectionFlag(segment, "@Wind Ruins - Beanstalk/Big Chest", 0x2002d0c, 0x80)
-		updateSectionFlag(segment, "@Wind Ruins - Bombable Wall/Chest", 0x2002d22, 0x80)
-		updateSectionFlag(segment, "@Wind Ruins - Minish Wall Hole/Heart Piece", 0x2002d2b, 0x40)
+		updateDecreaseCount(segment, "@Ruins - Armos Kill/Chests", {{0x2002cc2, 0x08}, {0x2002cc2, 0x10}})
+		updateSectionFlag(segment, "@Ruins - Near Dungeon Fusion/Chest", 0x2002cd2, 0x10)
+		updateSectionFlag(segment, "@Ruins - Pillars Fusion/Chest", 0x2002cd4, 0x04)
+		updateSectionFlag(segment, "@Ruins - Minish Home/Chest", 0x2002cde, 0x04)
+		updateSectionFlag(segment, "@Ruins - Minish Crack/Chest", 0x2002cf0, 0x10)
+		updateSectionFlag(segment, "@Ruins - Beanstalk Fusion/Big Chest", 0x2002d0c, 0x80)
+		updateSectionFlag(segment, "@Ruins - Bomb Cave/Chest", 0x2002d22, 0x80)
+		updateSectionFlag(segment, "@Ruins - Minish Cave/HP", 0x2002d2b, 0x40)
 
 		--VALLEY
-		updateSectionFlag(segment, "@Royal Valley - Lost Woods Secret/Chest (Left Left Left Up Up Up)", 0x2002cc7, 0x04)
-		updateSectionFlag(segment, "@Royal Valley - Northwest Grave/Chest", 0x2002cd3, 0x04)
-		updateSectionFlag(segment, "@Royal Valley - Northwest Grave/Heart Piece", 0x2002d27, 0x20)
-		updateSectionFlag(segment, "@Royal Valley - Northeast Grave/Chest", 0x2002cd3, 0x08)
-		updateSectionFlag(segment, "@Royal Valley - Northeast Grave/Grave Chest", 0x2002d27, 0x40)
-		updateSectionFlag(segment, "@Royal Valley - Dampe/Gift", 0x2002ce9, 0x02)
-		updateSectionFlag(segment, "@Royal Valley - Great Fairy/Gift", 0x2002cef, 0x40)
-		updateSectionFlag(segment, "@Pre Royal Valley - Chest/Chest", 0x2002cd3, 0x20)
+		updateSectionFlag(segment, "@Valley - Lost Woods/Chest (Left Left Left Up Up Up)", 0x2002cc7, 0x04)
+		updateSectionFlag(segment, "@Valley Graveyard - Left Fusion/Chest", 0x2002cd3, 0x04)
+		updateSectionFlag(segment, "@Valley Graveyard - Left Grave/HP", 0x2002d27, 0x20)
+		updateSectionFlag(segment, "@Valley Graveyard - Right Fusion/Chest", 0x2002cd3, 0x08)
+		updateSectionFlag(segment, "@Valley Graveyard - Right Grave Fusion/Chest", 0x2002d27, 0x40)
+		updateSectionFlag(segment, "@Valley - Dampe/Gift", 0x2002ce9, 0x02)
+		updateSectionFlag(segment, "@Valley - Great Fairy/Gift", 0x2002cef, 0x40)
+		updateSectionFlag(segment, "@Valley - Pre Valley Fusion/Chest", 0x2002cd3, 0x20)
 
 		--Crypt
-		updateSectionFlag(segment, "@Royal Crypt/King Gustaf", 0x2002d02, 0x04)
-		updateSectionFlag(segment, "@Royal Crypt/Left Path", 0x2002d12, 0x40)
-		updateSectionFlag(segment, "@Royal Crypt/Right Path", 0x2002d12, 0x80)
-		updateSectionFlag(segment, "@Royal Crypt/First Gibdos", 0x2002d14, 0x10)
-		updateSectionFlag(segment, "@Royal Crypt/Other Gibdos", 0x2002d14, 0x20)
+		updateSectionFlag(segment, "@Crypt/Reward", 0x2002d02, 0x04)
+		updateSectionFlag(segment, "@Crypt/Left - Item", 0x2002d12, 0x40)
+		updateSectionFlag(segment, "@Crypt/Right - Item", 0x2002d12, 0x80)
+		updateSectionFlag(segment, "@Crypt/Gibdo Left - Item", 0x2002d14, 0x10)
+		updateSectionFlag(segment, "@Crypt/Gibdo Right - Item", 0x2002d14, 0x20)
 
 		--Crypt map
-		updateSectionFlag(segment, "@Crypt - King Gustaf/Gift", 0x2002d02, 0x04)
-		updateSectionFlag(segment, "@Crypt - Left Path/Chest", 0x2002d12, 0x40)
-		updateSectionFlag(segment, "@Crypt - Right Path/Chest", 0x2002d12, 0x80)
-		updateSectionFlag(segment, "@Crypt - Gibdos/First Kill", 0x2002d14, 0x10)
-		updateSectionFlag(segment, "@Crypt - Gibdos/Second Kill", 0x2002d14, 0x20)
+		updateSectionFlag(segment, "@Crypt - Reward/Gift", 0x2002d02, 0x04)
+		updateSectionFlag(segment, "@Crypt - Left/Item", 0x2002d12, 0x40)
+		updateSectionFlag(segment, "@Crypt - Right/Item", 0x2002d12, 0x80)
+		updateSectionFlag(segment, "@Crypt - Gibdo Left/Item", 0x2002d14, 0x10)
+		updateSectionFlag(segment, "@Crypt - Gibdo Right/Item", 0x2002d14, 0x20)
 
 		--TRILBY
-		updateSectionFlag(segment, "@Trilby Highlands - Business Scrub/Item", 0x2002ca7, 0x04)
-		updateSectionFlag(segment, "@Trilby Highlands - Northern Chest/Chest", 0x2002cd2, 0x40)
-		updateSectionFlag(segment, "@Trilby Highlands - Rocks Chest/Chest", 0x2002cd3, 0x10)
-		updateDecreaseCount(segment, "@Trilby Highlands - Mitts Cave/Chests", {{0x2002d04, 0x80}, {0x2002d05, 0x02}})
-		updateSectionFlag(segment, "@Trilby Highlands - Fusion Mitts Cave/Chest", 0x2002d05, 0x01)
-		updateSectionFlag(segment, "@Trilby Highlands - Bomb Wall/Chest", 0x2002d1d, 0x20)
+		updateSectionFlag(segment, "@Trilby - Scrub/Item", 0x2002ca7, 0x04)
+		updateSectionFlag(segment, "@Trilby - Top Fusion/Chest", 0x2002cd2, 0x40)
+		updateSectionFlag(segment, "@Trilby - Middle Fusion/Chest", 0x2002cd3, 0x10)
+		updateDecreaseCount(segment, "@Trilby - Dig Cave/Chests", {{0x2002d04, 0x80}, {0x2002d05, 0x02}})
+		updateSectionFlag(segment, "@Trilby - Dig Cave Water Fusion/Chest", 0x2002d05, 0x01)
+		updateSectionFlag(segment, "@Trilby - Bomb Cave/Chest", 0x2002d1d, 0x20)
 		updateDecreaseCount(
 			segment,
-			"@Trilby Highlands - Rupee Cave/Rupees",
+			"@Trilby - Puddle Fusion/Item",
 			{
 				{0x2002d20, 0x10},
 				{0x2002d20, 0x20},
@@ -2567,22 +2567,22 @@ function updateLocations(segment)
 		--WESTERN WOOD
 		updateDecreaseCount(
 			segment,
-			"@Western Woods - North Digging Spots/Buried Treasure",
+			"@Western Woods - Top/Digging",
 			{{0x2002cce, 0x08}, {0x2002cce, 0x10}, {0x2002cce, 0x20}, {0x2002cce, 0x40}, {0x2002cce, 0x80}, {0x2002ccf, 0x01}}
 		)
 		updateDecreaseCount(
 			segment,
-			"@Western Woods - South Digging Spots/Buried Treasure",
+			"@Western Woods - Bottom/Digging",
 			{{0x2002ccf, 0x02}, {0x2002ccf, 0x04}}
 		)
-		updateSectionFlag(segment, "@Western Woods - Chest/Freestanding Chest", 0x2002ccf, 0x10)
-		updateSectionFlag(segment, "@Western Woods - Percy's House/Percy Reward", 0x2002ce3, 0x80)
-		updateSectionFlag(segment, "@Western Woods - Percy's House/Moblin Reward", 0x2002ce4, 0x04)
-		updateSectionFlag(segment, "@Western Woods - Tree/Heart Piece", 0x2002cef, 0x01)
-		updateSectionFlag(segment, "@Western Woods - Beanstalk/Chest", 0x2002d0d, 0x08)
+		updateSectionFlag(segment, "@Western Woods - Fusion/Chest", 0x2002ccf, 0x10)
+		updateSectionFlag(segment, "@Western Woods - Percy Fusion/Percy", 0x2002ce3, 0x80)
+		updateSectionFlag(segment, "@Western Woods - Percy Fusion/Moblin", 0x2002ce4, 0x04)
+		updateSectionFlag(segment, "@Western Woods - Tree Fusion/HP", 0x2002cef, 0x01)
+		updateSectionFlag(segment, "@Western Woods - Beanstalk Fusion/Chest", 0x2002d0d, 0x08)
 		updateDecreaseCount(
 			segment,
-			"@Western Woods - Beanstalk/Rupees",
+			"@Western Woods - Beanstalk Fusion/Items",
 			{
 				{0x2002d0d, 0x10},
 				{0x2002d0d, 0x20},
@@ -2604,72 +2604,72 @@ function updateLocations(segment)
 		)
 
 		--Castle
-		updateSectionFlag(segment, "@Castle - Moat/Left Chest", 0x2002cbe, 0x04)
-		updateSectionFlag(segment, "@Castle - Moat/Right Chest", 0x2002cbe, 0x08)
-		updateSectionFlag(segment, "@Castle - Dojo/Heart Piece", 0x2002d2c, 0x08)
+		updateSectionFlag(segment, "@Castle - Moat Left/Chest", 0x2002cbe, 0x04)
+		updateSectionFlag(segment, "@Castle - Moat Right/Chest", 0x2002cbe, 0x08)
+		updateSectionFlag(segment, "@Castle - Dojo/HP", 0x2002d2c, 0x08)
 		updateSectionFlag(segment, "@Castle - Right Fountain/Dry Fountain", 0x2002d0e, 0x10)
-		updateSectionFlag(segment, "@Castle - Right Fountain/Minish Hole", 0x2002d28, 0x10)
-		updateSectionFlag(segment, "@Castle - Left Fountain/Minish Hole", 0x2002d28, 0x20)
+		updateSectionFlag(segment, "@Castle - Right Fountain/Fusion Minish Hole - Chest", 0x2002d28, 0x10)
+		updateSectionFlag(segment, "@Castle - Left Fountain/Fusion Minish Hole - Chest", 0x2002d28, 0x20)
 
 		--NORTH FIELD
-		updateSectionFlag(segment, "@North Field - Digging Spot/Digging", 0x2002ccd, 0x20)
-		updateSectionFlag(segment, "@North Field - Top Left Tree/Chest", 0x2002d1c, 0x10)
-		updateSectionFlag(segment, "@North Field - Top Right Tree/Chest", 0x2002d1c, 0x20)
-		updateSectionFlag(segment, "@North Field - Bottom Left Tree/Chest", 0x2002d1c, 0x40)
-		updateSectionFlag(segment, "@North Field - Bottom Right Tree/Chest", 0x2002d1c, 0x80)
-		updateSectionFlag(segment, "@North Field - Tingle Chest/Big Chest", 0x2002d1d, 0x01)
-		updateSectionFlag(segment, "@North Field - Cave/Heart Piece", 0x2002d2b, 0x08)
+		updateSectionFlag(segment, "@North Field - Dig Spot/Digging", 0x2002ccd, 0x20)
+		updateSectionFlag(segment, "@North Field - Tree Fusion Top Left/Chest", 0x2002d1c, 0x10)
+		updateSectionFlag(segment, "@North Field - Tree Fusion Top Right/Chest", 0x2002d1c, 0x20)
+		updateSectionFlag(segment, "@North Field - Tree Fusion Bottom Left/Chest", 0x2002d1c, 0x40)
+		updateSectionFlag(segment, "@North Field - Tree Fusion Bottom Right/Chest", 0x2002d1c, 0x80)
+		updateSectionFlag(segment, "@North Field - Tree Fusion Center/Big Chest", 0x2002d1d, 0x01)
+		updateSectionFlag(segment, "@North Field - Cave/HP", 0x2002d2b, 0x08)
 
 		--HYRULE TOWN
-		updateSectionFlag(segment, "@Town - Eastern Shops/Simon's Simulations", 0x2002c9c, 0x02)
-		updateSectionFlag(segment, "@Town - Anju/Round 10 Gift", 0x2002ca5, 0x80)
+		updateSectionFlag(segment, "@Town - Simulation/Chest", 0x2002c9c, 0x02)
+		updateSectionFlag(segment, "@Town - Cuccos/Lv 10", 0x2002ca5, 0x80)
 		UpdateCucco(segment)
 		UpdateGoronShop(segment)
-		updateSectionFlag(segment, "@Town - Hearth Ledge/Chest", 0x2002cd5, 0x01)
-		updateSectionFlag(segment, "@Town - School/Roof Chest", 0x2002cd5, 0x02)
-		updateSectionFlag(segment, "@Town - School/Pull the Statue", 0x2002cfc, 0x40)
-		updateSectionFlag(segment, "@Town - Bell/Heart Piece", 0x2002cd5, 0x20)
-		updateSectionFlag(segment, "@Town - Cafe/Lady Next to Cafe - Gift", 0x2002cd6, 0x40)
-		updateSectionFlag(segment, "@Town - Inn/Right Pot", 0x2002ce0, 0x80)
-		updateSectionFlag(segment, "@Town - Inn/Back Door - Heart Piece", 0x2002cf3, 0x01)
-		updateSectionFlag(segment, "@Town - Stockwell's Shop/Dog Food Bottle", 0x2002ce6, 0x08)
+		updateSectionFlag(segment, "@Town - Inn Ledge/Chest", 0x2002cd5, 0x01)
+		updateSectionFlag(segment, "@Town - School Roof/Chest", 0x2002cd5, 0x02)
+		updateSectionFlag(segment, "@Town - School/Basement Top - Chest", 0x2002cfc, 0x40)
+		updateSectionFlag(segment, "@Town - Bell/HP", 0x2002cd5, 0x20)
+		updateSectionFlag(segment, "@Town - Cafe/Cafe Lady", 0x2002cd6, 0x40)
+		updateSectionFlag(segment, "@Town - Inn/Pot", 0x2002ce0, 0x80)
+		updateSectionFlag(segment, "@Town - Inn Backdoor/HP", 0x2002cf3, 0x01)
+		updateSectionFlag(segment, "@Town - Shop/Behind Counter", 0x2002ce6, 0x08)
 		updateSectionFlag(segment, "@Town - Library/Yellow Minish - Gift", 0x2002ceb, 0x01)
-		updateSectionFlag(segment, "@Town - Eastern Shops/Figurine House Heart Piece", 0x2002cf2, 0x10)
+		updateSectionFlag(segment, "@Town - Music House/HP", 0x2002cf2, 0x10)
 		updateDecreaseCount(
 			segment,
-			"@Town - Eastern Shops/Figurine House",
+			"@Town - Music House/Chest",
 			{{0x2002cf2, 0x20}, {0x2002cf2, 0x40}, {0x2002cf2, 0x80}}
 		)
-		updateSectionFlag(segment, "@Town - Digging Cave/Basement Left - Chest", 0x2002cfc, 0x80)
-		updateDecreaseCount(segment, "@Town - Digging Cave/Chests", {{0x2002d04, 0x04}, {0x2002d04, 0x08}, {0x2002d04, 0x10}})
-		updateSectionFlag(segment, "@Town - Mayor's House Basement/Chest", 0x2002cfd, 0x01)
-		updateSectionFlag(segment, "@Town - Hyrule Well/Bottom Chest", 0x2002cfd, 0x02)
-		updateSectionFlag(segment, "@Town - Hyrule Well/Center Chest", 0x2002cfd, 0x04)
-		updateSectionFlag(segment, "@Town - Fountain/Mulldozers", 0x2002cfd, 0x80)
-		updateSectionFlag(segment, "@Town - Fountain/Chest", 0x2002cfe, 0x01)
-		updateSectionFlag(segment, "@Town - Fountain/Heart Piece", 0x2002d14, 0x08)
-		updateSectionFlag(segment, "@Town - Flippers Cave/Under the Waterfall", 0x2002cfe, 0x08)
-		updateSectionFlag(segment, "@Town - Flippers Cave/Scissor Beetles", 0x2002cfe, 0x10)
-		updateSectionFlag(segment, "@Town - Flippers Cave/Frozen Chest", 0x2002cfe, 0x20)
-		updateSectionFlag(segment, "@Town - Stockwell's Shop/Attic Chest", 0x2002d0a, 0x80)
-		updateSectionFlag(segment, "@Town - School Gardens/Heart Piece", 0x2002d0b, 0x40)
+		updateSectionFlag(segment, "@Town - Digging/Basement Left - Chest", 0x2002cfc, 0x80)
+		updateDecreaseCount(segment, "@Town - Digging/Chests", {{0x2002d04, 0x04}, {0x2002d04, 0x08}, {0x2002d04, 0x10}})
+		updateSectionFlag(segment, "@Town - Well Left/Chest", 0x2002cfd, 0x01)
+		updateSectionFlag(segment, "@Town - Well/Bottom Chest", 0x2002cfd, 0x02)
+		updateSectionFlag(segment, "@Town - Well/Pillar Chest", 0x2002cfd, 0x04)
+		updateSectionFlag(segment, "@Town - Fountain/Big Chest", 0x2002cfd, 0x80)
+		updateSectionFlag(segment, "@Town - Fountain/Small Chest", 0x2002cfe, 0x01)
+		updateSectionFlag(segment, "@Town - Fountain/HP", 0x2002d14, 0x08)
+		updateSectionFlag(segment, "@Town - Under Library/Underwater", 0x2002cfe, 0x08)
+		updateSectionFlag(segment, "@Town - Under Library/Big Chest", 0x2002cfe, 0x10)
+		updateSectionFlag(segment, "@Town - Under Library/Frozen Chest", 0x2002cfe, 0x20)
+		updateSectionFlag(segment, "@Town - Shop/Attic Chest", 0x2002d0a, 0x80)
+		updateSectionFlag(segment, "@Town - School Path/HP", 0x2002d0b, 0x40)
 		updateDecreaseCount(
 			segment,
-			"@Town - School Gardens/Garden Chests",
+			"@Town - School Path/Chests",
 			{{0x2002d0b, 80}, {0x2002d0c, 0x01}, {0x2002d0c, 0x02}}
 		)
-		updateSectionFlag(segment, "@Town - School Gardens/Minish Path Chest", 0x2002d11, 0x01)
+		updateSectionFlag(segment, "@Town - School Path/Fusion Chest", 0x2002d11, 0x01)
 		updateSectionFlag(segment, "@Town - Bakery Attic/Chest", 0x2002d13, 0x20)
-		updateSectionFlag(segment, "@Town - Waterfall/Waterfall", 0x2002d1d, 0x40)
+		updateSectionFlag(segment, "@Town - Waterfall Fusion/Chest", 0x2002d1d, 0x40)
 
 		--SOUTH FIELD
 		updateSectionFlag(segment, "@South Field - Tingle/Gift", 0x2002ca3, 0x04)
-		updateSectionFlag(segment, "@South Field - Near Link's House Chest/Chest", 0x2002cd3, 0x02)
-		updateSectionFlag(segment, "@South Field - Smith's House/Chests", 0x2002cde, 0x40)
-		updateSectionFlag(segment, "@South Field - Tree Heart Piece/Heart Piece", 0x2002cee, 0x80)
+		updateSectionFlag(segment, "@South Field - Fusion/Chest", 0x2002cd3, 0x02)
+		updateSectionFlag(segment, "@South Field - Smith House/Chests", 0x2002cde, 0x40)
+		updateSectionFlag(segment, "@South Field - Tree Fusion/HP", 0x2002cee, 0x80)
 		updateDecreaseCount(
 			segment,
-			"@South Field - Rupee Cave/Rupees",
+			"@South Field - Puddle Fusion/Items",
 			{
 				{0x2002d1e, 0x20},
 				{0x2002d1e, 0x40},
@@ -2688,22 +2688,22 @@ function updateLocations(segment)
 				{0x2002d20, 0x08}
 			}
 		)
-		updateSectionFlag(segment, "@South Field - Minish Flippers Hole/Heart Piece", 0x2002d2c, 0x02)
+		updateSectionFlag(segment, "@South Field - Minish Size Water Hole/HP", 0x2002d2c, 0x02)
 
 		--VEIL FALLS
-		updateSectionFlag(segment, "@Veil Falls - Heart Piece/Heart Piece", 0x2002cd0, 0x01)
-		updateSectionFlag(segment, "@Veil Falls - Upper Rocks/Digging", 0x2002cd0, 0x80)
-		updateSectionFlag(segment, "@Veil Falls - Upper Rocks/Chest", 0x2002cd3, 0x80)
-		updateSectionFlag(segment, "@Veil Falls - South Digging Spot/Digging", 0x2002cda, 0x80)
-		updateSectionFlag(segment, "@Veil Falls - Mitts Cave/Chest", 0x2002d05, 0x04)
-		updateSectionFlag(segment, "@Veil Falls - Mitts Cave/Heart Piece", 0x2002d05, 0x20)
-		updateSectionFlag(segment, "@Veil Falls - Source of the Flow Cave/Bombable Wall First Chest", 0x2002d25, 0x10)
-		updateSectionFlag(segment, "@Veil Falls - Source of the Flow Cave/Bombable Wall Second Chest", 0x2002cd0, 0x02)
-		updateSectionFlag(segment, "@Veil Falls - Upper Cave/Freestanding Chest", 0x2002d25, 0x01)
-		updateSectionFlag(segment, "@Veil Falls - Upper Cave/Bomb Wall Chest", 0x2002d25, 0x04)
+		updateSectionFlag(segment, "@Falls - Entrance/HP", 0x2002cd0, 0x01)
+		updateSectionFlag(segment, "@Falls - Rock/North Dig Spot - Digging", 0x2002cd0, 0x80)
+		updateSectionFlag(segment, "@Falls - Rock/Fusion - Chest", 0x2002cd3, 0x80)
+		updateSectionFlag(segment, "@Falls - South Dig Spot/Digging", 0x2002cda, 0x80)
+		updateSectionFlag(segment, "@Falls - Water Dig Cave Fusion/Chest", 0x2002d05, 0x04)
+		updateSectionFlag(segment, "@Falls - Water Dig Cave Fusion/HP", 0x2002d05, 0x20)
+		updateSectionFlag(segment, "@Falls - 1st Cave/Chest", 0x2002d25, 0x10)
+		updateSectionFlag(segment, "@Falls - Cliff/Chest", 0x2002cd0, 0x02)
+		updateSectionFlag(segment, "@Falls - Top Cave/Chest", 0x2002d25, 0x01)
+		updateSectionFlag(segment, "@Falls - Top Cave/Bomb Wall - Chest", 0x2002d25, 0x04)
 		updateDecreaseCount(
 			segment,
-			"@Veil Falls - Upper Cave/Downstairs Rupees",
+			"@Falls - Rupee Cave/Items",
 			{
 				{0x2002d25, 0x20},
 				{0x2002d25, 0x40},
@@ -2718,51 +2718,51 @@ function updateLocations(segment)
 		)
 		updateDecreaseCount(
 			segment,
-			"@Veil Falls - Upper Cave/Underwater Rupees",
+			"@Falls - Rupee Cave/Underwater Items",
 			{{0x2002d26, 0x40}, {0x2002d26, 0x80}, {0x2002d27, 0x01}, {0x2002d27, 0x02}, {0x2002d27, 0x04}, {0x2002d27, 0x08}}
 		)
-		updateSectionFlag(segment, "@Veil Falls - Upper Waterfall/Heart Piece", 0x2002d27, 0x10)
-		updateSectionFlag(segment, "@Veil Falls - Biggoron/Mirror Shield", 0x2002cd1, 0x10)
+		updateSectionFlag(segment, "@Falls - Waterfall Fusion/HP", 0x2002d27, 0x10)
+		updateSectionFlag(segment, "@Falls - Biggoron/Mirror Shield", 0x2002cd1, 0x10)
 
 		--VEIL FALLS SOUTH
-		updateSectionFlag(segment, "@Veil Falls South - Heart Piece/Heart Piece", 0x2002cd1, 0x02)
-		updateSectionFlag(segment, "@Veil Falls South - Mitts Cave/Left Chest", 0x2002d05, 0x08)
-		updateSectionFlag(segment, "@Veil Falls South - Mitts Cave/Right Chest", 0x2002d05, 0x10)
+		updateSectionFlag(segment, "@Falls Lower/HP", 0x2002cd1, 0x02)
+		updateSectionFlag(segment, "@Falls Lower - Dig Cave/Left Chest", 0x2002d05, 0x08)
+		updateSectionFlag(segment, "@Falls Lower - Dig Cave/Left Chest", 0x2002d05, 0x10)
 		 --à verifier
-		updateSectionFlag(segment, "@Veil Falls South - Rupees/Rupee 1", 0x2002cd0, 0x04)
-		updateSectionFlag(segment, "@Veil Falls South - Rupees/Rupee 2", 0x2002cd0, 0x08)
-		updateSectionFlag(segmemt, "@Veil Falls South - Rupees/Rupee 3", 0x2002cd0, 0x10)
-		updateSectionFlag(segment, "@Veil Falls South - North Ranch Chest/Chest", 0x2002cd3, 0x40)
+		updateSectionFlag(segment, "@Falls Lower - Rock/Item 1", 0x2002cd0, 0x04)
+		updateSectionFlag(segment, "@Falls Lower - Rock/Item 1", 0x2002cd0, 0x08)
+		updateSectionFlag(segmemt, "@Falls Lower - Rock/Item 1", 0x2002cd0, 0x10)
+		updateSectionFlag(segment, "@Falls Lower - Lon Lon - Fusion/Chest", 0x2002cd3, 0x40)
 
 		--LON LON RANCH
-		updateSectionFlag(segment, "@Lon Lon Ranch - Digging Spot/Digging (Above Tree)", 0x2002ccb, 0x20)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Malon's Pot/Pot", 0x2002ce5, 0x20)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Minish Crack/Chest", 0x2002cf2, 0x04)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Bonk the Tree/Chest", 0x2002d11, 0x02)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Bonk the Tree/Heart Piece", 0x2002d13, 0x04)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Cave/Chest", 0x2002d1d, 0x80)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Cave/Hidden Chest (Bomb Wall)", 0x2002d1e, 0x04)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Dried Up Pond/Big Chest", 0x2002d1e, 0x10)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Goron Quest/Big Chest", 0x2002d2a, 0x40)
-		updateSectionFlag(segment, "@Lon Lon Ranch - Goron Quest/Chest", 0x2002d2a, 0x80)
+		updateSectionFlag(segment, "@Lon Lon - Dig Spot/Digging", 0x2002ccb, 0x20)
+		updateSectionFlag(segment, "@Lon Lon - Ranch/Pot", 0x2002ce5, 0x20)
+		updateSectionFlag(segment, "@Lon Lon North - Minish Crack/Chest", 0x2002cf2, 0x04)
+		updateSectionFlag(segment, "@Lon Lon - Path/Fusion Chest", 0x2002d11, 0x02)
+		updateSectionFlag(segment, "@Lon Lon - Path/HP", 0x2002d13, 0x04)
+		updateSectionFlag(segment, "@Lon Lon - Cave/Chest", 0x2002d1d, 0x80)
+		updateSectionFlag(segment, "@Lon Lon - Cave/Secret Chest (behind bombable wall on the right)", 0x2002d1e, 0x04)
+		updateSectionFlag(segment, "@Lon Lon - Puddle Fusion/Big Chest", 0x2002d1e, 0x10)
+		updateSectionFlag(segment, "@Lon Lon - Goron Cave Fusion/Big Chest", 0x2002d2a, 0x40)
+		updateSectionFlag(segment, "@Lon Lon - Goron Cave Fusion/Small Chest", 0x2002d2a, 0x80)
 
 		--EASTERN HILLS
-		updateSectionFlag(segment, "@Eastern Hills - Farm/Chest", 0x2002cd2, 0x04)
-		updateSectionFlag(segment, "@Eastern Hills - Mitts Cave/Rupee", 0x2002d04, 0x40)
-		updateSectionFlag(segment, "@Eastern Hills - Beanstalk/Heart Piece", 0x2002d0d, 0x01)
-		updateDecreaseCount(segment, "@Eastern Hills - Beanstalk/Chests", {{0x2002d0d, 0x02}, {0x2002d0d, 0x04}})
-		updateSectionFlag(segment, "@Eastern Hills - Bombable Wall/Chest", 0x2002d22, 0x08)
+		updateSectionFlag(segment, "@Hills - Fusion/Chest", 0x2002cd2, 0x04)
+		updateSectionFlag(segment, "@Hills - Farm Dig Cave/Item", 0x2002d04, 0x40)
+		updateSectionFlag(segment, "@Hills - Beanstalk Fusion/HP", 0x2002d0d, 0x01)
+		updateDecreaseCount(segment, "@Hills - Beanstalk Fusion/Chests", {{0x2002d0d, 0x02}, {0x2002d0d, 0x04}})
+		updateSectionFlag(segment, "@Hills - Bomb Cave/Chest", 0x2002d22, 0x08)
 
 		--LAKE HYLIA
-		updateSectionFlag(segment, "@Hylia - Lon Lon Ranch - North Heart Piece/Heart Piece", 0x2002ccb, 0x10)
-		updateSectionFlag(segment, "@Hylia - Cape Heart Piece/Heart Piece", 0x2002cbd, 0x01)
-		updateSectionFlag(segment, "@Hylia - Pond Heart Piece/Diving", 0x2002cbd, 0x02)
-		updateSectionFlag(segment, "@Hylia - Southern/Heart Piece", 0x2002cbd, 0x04)
-		updateSectionFlag(segment, "@Hylia - Librari/Gift", 0x2002cf2, 0x08)
-		updateSectionFlag(segment, "@Hylia - Middle Island Cave/Chest", 0x2002d02, 0x40)
+		updateSectionFlag(segment, "@Hylia - Cape Cave - Lon Lon/HP", 0x2002ccb, 0x10)
+		updateSectionFlag(segment, "@Hylia - Small Island/HP", 0x2002cbd, 0x01)
+		updateSectionFlag(segment, "@Hylia - Sunken/HP", 0x2002cbd, 0x02)
+		updateSectionFlag(segment, "@Hylia - Bottom/HP", 0x2002cbd, 0x04)
+		updateSectionFlag(segment, "@Hylia - Crack Fusion Librari/Gift", 0x2002cf2, 0x08)
+		updateSectionFlag(segment, "@Hylia - Middle Island Fusion Dig Cave/Chest", 0x2002d02, 0x40)
 		updateDecreaseCount(
 			segment,
-			"@Hylia - Treasure Cave/Chest",
+			"@Hylia - Cape Cave/Chest",
 			{
 				{0x2002d02, 0x80},
 				{0x2002d03, 0x02},
@@ -2773,337 +2773,338 @@ function updateLocations(segment)
 				{0x2002d03, 0x40}
 			}
 		)
-		updateSectionFlag(segment, "@Hylia - Treasure Cave/Beanstalk - Heart Piece", 0x2002d0c, 0x10)
-		updateDecreaseCount(segment, "@Hylia - Treasure Cave/Beanstalk - Chest", {{0x2002d0c, 0x20}, {0x2002d0c, 0x40}})
-		updateSectionFlag(segment, "@Hylia - Lake Cabin/Chest", 0x2002d11, 0x10)
-		updateSectionFlag(segment, "@Hylia - North Minish Hole/Chest", 0x2002d2a, 0x04)
-		updateSectionFlag(segment, "@Hylia - Dojo/Heart Piece", 0x2002d2c, 0x04)
-		updateSectionFlag(segment, "@Hylia - Minish Woods - North Minish Hole/Chest", 0x2002d28, 0x04)
+		updateSectionFlag(segment, "@Hylia - Cape Cave/Beanstalk Fusion - HP", 0x2002d0c, 0x10)
+		updateDecreaseCount(segment, "@Hylia - Cape Cave/Beanstalk Fusion - Chests", {{0x2002d0c, 0x20}, {0x2002d0c, 0x40}})
+		updateSectionFlag(segment, "@Hylia - Cabin Path Fusion/Chest", 0x2002d11, 0x10)
+		updateSectionFlag(segment, "@Hylia North - Minish Hole/Chest", 0x2002d2a, 0x04)
+		updateSectionFlag(segment, "@Hylia - Dojo/HP", 0x2002d2c, 0x04)
+		updateSectionFlag(segment, "@Hylia South - Minish Hole/Chest", 0x2002d28, 0x04)
 
 		--MINISH WOODS
-		updateSectionFlag(segment, "@Minish Woods - Great Fairy/Gift", 0x2002cef, 0x80)
-		updateSectionFlag(segment, "@Minish Woods - Post Minish Village/Chest", 0x2002cdb, 0x08)
-		updateSectionFlag(segment, "@Minish Woods - Minish Flippers Cave/Middle Chest", 0x2002d2a, 0x08)
-		updateSectionFlag(segment, "@Minish Woods - Minish Flippers Cave/Right Chest", 0x2002d2a, 0x10)
-		updateSectionFlag(segment, "@Minish Woods - Minish Flippers Cave/Left Chest", 0x2002d2a, 0x20)
-		updateSectionFlag(segment, "@Minish Woods - Minish Flippers Cave/Left Heart Piece", 0x2002d2b, 0x04)
-		updateSectionFlag(segment, "@Minish Woods - Belari/Gift 2nd Item", 0x2002cf2, 0x01)
-		updateSectionFlag(segment, "@Minish Woods - Pre Minish Village - Minish Hole/Chest", 0x2002cf0, 0x08)
-		updateSectionFlag(segment, "@Minish Woods - Minish Village/Heart Piece", 0x2002cf4, 0x04)
-		updateSectionFlag(segment, "@Minish Woods - Minish Village/Barrel", 0x2002cf5, 0x04)
-		updateSectionFlag(segment, "@Minish Woods - Minish Village/Chest", 0x2002d11, 0x04)
-		updateSectionFlag(segment, "@Minish Woods - Entrance/Chest", 0x2002cd3, 0x01)
-		updateSectionFlag(segment, "@Minish Woods - Shrine Heart Piece/Heart Piece", 0x2002cc3, 0x10)
-		updateSectionFlag(segment, "@Minish Woods - Pre Stump Chest/Chest", 0x2002cd2, 0x20)
-		updateSectionFlag(segment, "@Minish Woods - Pre Shrine Chest/Chest", 0x2002cd2, 0x80)
-		updateDecreaseCount(segment, "@Minish Woods - Like Like Cave/Chests", {{0x2002d02, 0x10}, {0x2002d02, 0x20}})
-		updateSectionFlag(segment, "@Minish Woods North - Heart Piece/Heart Piece", 0x2002cc3, 0x08)
-		updateSectionFlag(segment, "@Minish Woods North - Cross the Pond/Chest", 0x2002cd2, 0x08)
-		updateSectionFlag(segment, "@Minish Woods North - Mitts Cave/Chest", 0x2002d02, 0x08)
+		updateSectionFlag(segment, "@Minish - Great Fairy/Gift", 0x2002cef, 0x80)
+		updateSectionFlag(segment, "@Minish Woods - Post Village Fusion/Chest", 0x2002cdb, 0x08)
+		updateSectionFlag(segment, "@Minish Woods - Flipper Hole/Middle Chest", 0x2002d2a, 0x08)
+		updateSectionFlag(segment, "@Minish Woods - Flipper Hole/Right Chest", 0x2002d2a, 0x10)
+		updateSectionFlag(segment, "@Minish Woods - Flipper Hole/Left Chest", 0x2002d2a, 0x20)
+		updateSectionFlag(segment, "@Minish Woods - Flipper Hole/Left HP", 0x2002d2b, 0x04)
+		updateSectionFlag(segment, "@Minish Woods - Bomb Minish/Gift 2", 0x2002cf2, 0x01)
+		updateSectionFlag(segment, "@Minish Woods - Crack Fusion/Chest", 0x2002cf0, 0x08)
+		updateSectionFlag(segment, "@Minish Village/HP", 0x2002cf4, 0x04)
+		updateSectionFlag(segment, "@Minish Village/Barrel House - Item", 0x2002cf5, 0x04)
+		updateSectionFlag(segment, "@Minish Woods - Minish Path Fusion/Chest", 0x2002d11, 0x04)
+		updateSectionFlag(segment, "@Minish Woods - West Fusion/Chest", 0x2002cd3, 0x01)
+		updateSectionFlag(segment, "@Minish Woods - Bottom/HP", 0x2002cc3, 0x10)
+		updateSectionFlag(segment, "@Minish Woods - East Fusion/Chest", 0x2002cd2, 0x20)
+		updateSectionFlag(segment, "@Minish Woods - South Fusion/Chest", 0x2002cd2, 0x80)
+		updateDecreaseCount(segment, "@Minish Woods - Like Like Digging Cave/Chests", {{0x2002d02, 0x10}, {0x2002d02, 0x20}})
+		updateSectionFlag(segment, "@Minish Woods - Top/HP", 0x2002cc3, 0x08)
+		updateSectionFlag(segment, "@Minish Woods North - Fusion/Chest", 0x2002cd2, 0x08)
+		updateSectionFlag(segment, "@Witch - Digging Cave/Chest", 0x2002d02, 0x08)
 
 		--CLOUD TOPS
-		updateSectionFlag(segment, "@Clouds - Top Left South Chest/Chest", 0x2002cd7, 0x20)
-		updateDecreaseCount(segment, "@Clouds - Top Left North Chests/Chests", {{0x2002cd7, 0x40}, {0x2002cd7, 0x80}})
-		updateSectionFlag(segment, "@Clouds - Top Left North Chests/Digging", 0x2002cd8, 0x04)
-		updateSectionFlag(segment, "@Clouds - Kill Piranhas (North)/Kill", 0x2002cda, 0x02)
+		updateSectionFlag(segment, "@Clouds - North West Bottom/Chest", 0x2002cd7, 0x20)
+		updateDecreaseCount(segment, "@Clouds - North West Top/Chests", {{0x2002cd7, 0x40}, {0x2002cd7, 0x80}})
+		updateSectionFlag(segment, "@Clouds - North West Top/Dig Spot", 0x2002cd8, 0x04)
+		updateSectionFlag(segment, "@Clouds - North Shark/Kill", 0x2002cda, 0x02)
 		updateSectionFlag(segment, "@Clouds - Kill Piranhas (South)/Kill", 0x2002cda, 0x08)
-		updateSectionFlag(segment, "@Clouds - Bottom Left Chest/Chest", 0x2002cd8, 0x01)
+		updateSectionFlag(segment, "@Clouds - South Left/Chest", 0x2002cd8, 0x01)
 		updateSectionFlag(segment, "@Clouds - Southeast South Digging Spot/Digging", 0x2002cd9, 0x01)
 		updateSectionFlag(segment, "@Clouds - Southeast North Digging Spot/Digging", 0x2002cd8, 0x20)
 		updateSectionFlag(segment, "@Clouds - South Digging Spot/Digging", 0x2002cd8, 0x80)
 		updateSectionFlag(segment, "@Clouds - Center Right/Chest", 0x2002cd8, 0x02)
 		updateSectionFlag(segment, "@Clouds - Center Digging Spot/Digging", 0x2002cd8, 0x10)
 		updateSectionFlag(segment, "@Clouds - Center Left/Chest", 0x2002cd7, 0x10)
-		updateSectionFlag(segment, "@Clouds - Right Chest/Chest", 0x2002cd7, 0x08)
-		updateSectionFlag(segment, "@Clouds - Top Right Digging Spot/Digging", 0x2002cd8, 0x08)
+		updateSectionFlag(segment, "@Clouds - Free/Chest", 0x2002cd7, 0x08)
+		updateSectionFlag(segment, "@Clouds - North East/Dig Spot", 0x2002cd8, 0x08)
 		updateSectionFlag(segment, "@Clouds - Bottom Left Digging Spot/Digging", 0x2002cd8, 0x40)
 
 		--Wind Tribe
-		updateDecreaseCount(segment, "@Wind Tribe House/1F Chests", {{0x2002cdc, 0x20}, {0x2002cdc, 0x40}})
-		updateSectionFlag(segment, "@Wind Tribe House/2F Chest", 0x2002cdc, 0x80)
-		updateDecreaseCount(segment, "@Wind Tribe House/3F Chests", {{0x2002cdd, 0x01}, {0x2002cdd, 0x02}, {0x2002cdd, 0x04}})
-		updateDecreaseCount(segment, "@Wind Tribe House/4F Chests", {{0x2002cdd, 0x40}, {0x2002cdd, 0x80}})
-		updateSectionFlag(segment, "@Wind Tribe House/2F Save Gregal", 0x2002ce8, 0x20)
-		updateSectionFlag(segment, "@Wind Tribe House/2F Gregal's Gift", 0x2002ce8, 0x40)
+		updateDecreaseCount(segment, "@Wind Tribe/1F - Chests", {{0x2002cdc, 0x20}, {0x2002cdc, 0x40}})
+		updateSectionFlag(segment, "@Wind Tribe/2F - Chest", 0x2002cdc, 0x80)
+		updateDecreaseCount(segment, "@Wind Tribe/3F - Chests", {{0x2002cdd, 0x01}, {0x2002cdd, 0x02}, {0x2002cdd, 0x04}})
+		updateDecreaseCount(segment, "@Wind Tribe/4F - Chests", {{0x2002cdd, 0x40}, {0x2002cdd, 0x80}})
+		updateSectionFlag(segment, "@Wind Tribe/2F - Gregal Gift 1", 0x2002ce8, 0x20)
+		updateSectionFlag(segment, "@Wind Tribe/2F - Gregal Gift 2", 0x2002ce8, 0x40)
 
 		--DWS
-		updateSectionFlag(segment, "@DeepWoods/Slug Room", 0x2002d43, 0x20)
-		updateSectionFlag(segment, "@DeepWoods/Upstairs Chest", 0x2002d45, 0x04)
-		updateSectionFlag(segment, "@DeepWoods/Barrel Room Northwest", 0x2002d41, 0x08)
-		updateSectionFlag(segment, "@DeepWoods/West Side Big Chest", 0x2002d41, 0x02)
-		updateSectionFlag(segment, "@DeepWoods/Two Statue Room", 0x2002d40, 0x80)
-		updateSectionFlag(segment, "@DeepWoods/Mulldozer Key", 0x2002d42, 0x01)
-		updateSectionFlag(segment, "@DeepWoods/Two Lamp Chest", 0x2002d40, 0x10)
-		updateSectionFlag(segment, "@DeepWoods/Basement Switch Big Chest", 0x2002d44, 0x04)
-		updateSectionFlag(segment, "@DeepWoods/Basement Switch Chest", 0x2002d44, 0x02)
-		updateSectionFlag(segment, "@DeepWoods/Blue Warp Heart Piece", 0x2002d45, 0x80)
-		updateDecreaseCount(segment, "@DeepWoods/Puffstool Room", {{0x2002d40, 0x04}, {0x2002d40, 0x08}})
-		updateSectionFlag(segment, "@DeepWoods/Madderpillar Chest", 0x2002d3f, 0x08)
-		updateSectionFlag(segment, "@DeepWoods/Madderpillar Heart Piece", 0x2002d46, 0x04)
-		updateSectionFlag(segment, "@DeepWoods/Basement Big Chest", 0x2002d43, 0x80)
+		updateSectionFlag(segment, "@DeepWoods/1F - Slug Room - Chest", 0x2002d43, 0x20)
+		updateSectionFlag(segment, "@DeepWoods/2F - Chest", 0x2002d45, 0x04)
+		updateSectionFlag(segment, "@DeepWoods/1F - Barrel Room - Chest", 0x2002d41, 0x08)
+		updateSectionFlag(segment, "@DeepWoods/1F - West - Big Chest", 0x2002d41, 0x02)
+		updateSectionFlag(segment, "@DeepWoods/1F - West Statue Puzzle - Chest", 0x2002d40, 0x80)
+		updateSectionFlag(segment, "@DeepWoods/1F - East Mulldozer Fight - Item", 0x2002d42, 0x01)
+		updateSectionFlag(segment, "@DeepWoods/1F - North East - Chest", 0x2002d40, 0x10)
+		updateSectionFlag(segment, "@DeepWoods/B1 - Switch Room - Big Chest", 0x2002d44, 0x04)
+		updateSectionFlag(segment, "@DeepWoods/B1 - Switch Room - Chest", 0x2002d44, 0x02)
+		updateSectionFlag(segment, "@DeepWoods/1F - Blue Warp - HP", 0x2002d45, 0x80)
+		updateDecreaseCount(segment, "@DeepWoods/1F - Blue Warp - Chests", {{0x2002d40, 0x04}, {0x2002d40, 0x08}})
+		updateSectionFlag(segment, "@DeepWoods/1F - Madderpillar - Big Chest", 0x2002d3f, 0x08)
+		updateSectionFlag(segment, "@DeepWoods/1F - Madderpillar - HP", 0x2002d46, 0x04)
+		updateSectionFlag(segment, "@DeepWoods/B1 - West - Big Chest", 0x2002d43, 0x80)
 		updateSectionFlag(segment, "@DeepWoods/Green Chu", 0x2002d44, 0x80)
 
 		-- MAP DWS
-		updateSectionFlag(segment, "@Deepwoods - Slug Room/Chest", 0x2002d43, 0x20)
-		updateSectionFlag(segment, "@Deepwoods - Upstairs Room/Chest", 0x2002d45, 0x04)
-		updateSectionFlag(segment, "@Deepwoods - Barrel Room Northwest/Chest", 0x2002d41, 0x08)
-		updateSectionFlag(segment, "@Deepwoods - West Side/Big Chest", 0x2002d41, 0x02)
-		updateSectionFlag(segment, "@Deepwoods - Two Statue Room/Chest", 0x2002d40, 0x80)
-		updateSectionFlag(segment, "@Deepwoods - Mulldozer Key/Kill", 0x2002d42, 0x01)
-		updateSectionFlag(segment, "@Deepwoods - Two Lamp/Chest", 0x2002d40, 0x10)
-		updateSectionFlag(segment, "@Deepwoods - Basement Switch Room Big Chest/Big Chest", 0x2002d44, 0x04)
-		updateSectionFlag(segment, "@Deepwoods - Basement Switch Room Chest/Chest", 0x2002d44, 0x02)
-		updateSectionFlag(segment, "@Deepwoods - Blue Warp/Heart Piece", 0x2002d45, 0x80)
-		updateDecreaseCount(segment, "@Deepwoods - Puffstool Room/Chest", {{0x2002d40, 0x04}, {0x2002d40, 0x08}})
-		updateSectionFlag(segment, "@Deepwoods - Madderpillar Fight/Kill", 0x2002d3f, 0x08)
-		updateSectionFlag(segment, "@Deepwoods - Madderpillar Heart Piece/Heart Piece", 0x2002d46, 0x04)
-		updateSectionFlag(segment, "@Deepwoods - Basement Big Chest/Big Chest", 0x2002d43, 0x80)
+		updateSectionFlag(segment, "@Deepwoods - 1F - Slug Room/Chest", 0x2002d43, 0x20)
+		updateSectionFlag(segment, "@Deepwoods - 2F/Chest", 0x2002d45, 0x04)
+		updateSectionFlag(segment, "@Deepwoods - 1F - Barrel Room/Chest", 0x2002d41, 0x08)
+		updateSectionFlag(segment, "@Deepwoods - 1F - West/Big Chest", 0x2002d41, 0x02)
+		updateSectionFlag(segment, "@Deepwoods - 1F - West Statue Puzzle/Chest", 0x2002d40, 0x80)
+		updateSectionFlag(segment, "@Deepwoods - 1F - East Mulldozer Fight/Item", 0x2002d42, 0x01)
+		updateSectionFlag(segment, "@Deepwoods - 1F - North East/Chest", 0x2002d40, 0x10)
+		updateSectionFlag(segment, "@Deepwoods - B1 - Switch Room Big Chest/Big Chest", 0x2002d44, 0x04)
+		updateSectionFlag(segment, "@Deepwoods - B1 - Switch Room Chest/Chest", 0x2002d44, 0x02)
+		updateSectionFlag(segment, "@Deepwoods - 1F - Blue Warp/HP", 0x2002d45, 0x80)
+		updateDecreaseCount(segment, "@Deepwoods - 1F - Blue Warp Chests/Chests", {{0x2002d40, 0x04}, {0x2002d40, 0x08}})
+		updateSectionFlag(segment, "@Deepwoods - 1F - Madderpillar Big Chest/Big Chest", 0x2002d3f, 0x08)
+		updateSectionFlag(segment, "@Deepwoods - 1F - Madderpillar/HP", 0x2002d46, 0x04)
+		updateSectionFlag(segment, "@Deepwoods - B1 - West/Big Chest", 0x2002d43, 0x80)
 		updateSectionFlag(segment, "@Deepwoods - Green Chu/Heart", 0x2002d44, 0x80)
 
 		--COF
-		updateSectionFlag(segment, "@Cave Of Flame/Spiny Beetle Fight", 0x2002d5a, 0x04)
+		updateSectionFlag(segment, "@Cave Of Flame/1F - Spike Beetle - Big Chest", 0x2002d5a, 0x04)
 		updateDecreaseCount(
 			segment,
-			"@Cave Of Flame/Rupees",
+			"@Cave Of Flame/1F - Items",
 			{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
 		)
-		updateDecreaseCount(segment, "@Cave Of Flame/Big Chest Room", {{0x2002d59, 0x02}, {0x2002d59, 0x04}})
-		updateSectionFlag(segment, "@Cave Of Flame/First Rollobite Room Chest", 0x2002d58, 0x80)
-		updateSectionFlag(segment, "@Cave Of Flame/First Rollobite Room Pillar", 0x2002d58, 0x40)
-		updateSectionFlag(segment, "@Cave Of Flame/Bombable Wall Heart Piece", 0x2002d5b, 0x10)
-		updateSectionFlag(segment, "@Cave Of Flame/Spiny Chu Fight", 0x2002d57, 0x02)
-		updateSectionFlag(segment, "@Cave Of Flame/Spiny Chu Pillar Chest", 0x2002d57, 0x01)
-		updateDecreaseCount(segment, "@Cave Of Flame/Pre Lava Basement Room", {{0x2002d59, 0x10}, {0x2002d59, 0x20}})
-		updateSectionFlag(segment, "@Cave Of Flame/Blade Chest", 0x2002d5a, 0x01)
-		updateDecreaseCount(segment, "@Cave Of Flame/Lava Basement (Left,Right)", {{0x2002d5a, 0x80}, {0x2002d5b, 0x01}})
-		updateSectionFlag(segment, "@Cave Of Flame/Lava Basement Big Chest", 0x2002d5b, 0x02)
+		updateDecreaseCount(segment, "@Cave Of Flame/B1 - Hazy Room - Big Chest", {{0x2002d59, 0x02}, {0x2002d59, 0x04}})
+		updateSectionFlag(segment, "@Cave Of Flame/B1 - Rollobite - Chest", 0x2002d58, 0x80)
+		updateSectionFlag(segment, "@Cave Of Flame/B1 - Rollobite - Chest", 0x2002d58, 0x40)
+		updateSectionFlag(segment, "@Cave Of Flame/B1 - HP", 0x2002d5b, 0x10)
+		updateSectionFlag(segment, "@Cave Of Flame/B1 - Spikey Chus - Big Chest", 0x2002d57, 0x02)
+		updateSectionFlag(segment, "@Cave Of Flame/B1 - Spikey Chus - Pillar Chest", 0x2002d57, 0x01)
+		updateDecreaseCount(segment, "@Cave Of Flame/B2 - Pre Lava - Chests", {{0x2002d59, 0x10}, {0x2002d59, 0x20}})
+		updateSectionFlag(segment, "@Cave Of Flame/B2 - Lava Room Blade - Chest", 0x2002d5a, 0x01)
+		updateDecreaseCount(segment, "@Cave Of Flame/B2 - Lava Room - Chests", {{0x2002d5a, 0x80}, {0x2002d5b, 0x01}})
+		updateSectionFlag(segment, "@Cave Of Flame/B2 - Lava Room - Big Chest", 0x2002d5b, 0x02)
 		updateSectionFlag(segment, "@Cave Of Flame/Gleerok", 0x2002d5b, 0x04)
 
 		-- MAP COF
-		updateSectionFlag(segment, "@Cave Of Flame - Spiny Beetle Fight/Kill", 0x2002d5a, 0x04)
+		updateSectionFlag(segment, "@Cave Of Flame - 1F - Spike Beetle/Big Chest", 0x2002d5a, 0x04)
 		updateDecreaseCount(
 			segment,
-			"@Cave Of Flame - Rupees/Rupees",
+			"@Cave Of Flame - 1F/Items",
 			{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
 		)
-		updateSectionFlag(segment, "@Cave Of Flame - Big Chest Room Big Chest/Big Chest", 0x2002d59, 0x04)
-		updateSectionFlag(segment, "@Cave Of Flame - Big Chest Room Chest/Chest", 0x2002d59, 0x02)
-		updateSectionFlag(segment, "@Cave Of Flame - First Rollobite Room Pillar/Chest", 0x2002d58, 0x40)
-		updateSectionFlag(segment, "@Cave Of Flame - First Rollobite Room/Chest", 0x2002d58, 0x80)
-		updateSectionFlag(segment, "@Cave Of Flame - Bombable Wall/Heart Piece", 0x2002d5b, 0x10)
-		updateSectionFlag(segment, "@Cave Of Flame - Spiny Chu Fight/Kill", 0x2002d57, 0x02)
-		updateSectionFlag(segment, "@Cave Of Flame - Spiny Chu Pillar Chest/Chest", 0x2002d57, 0x01)
-		updateSectionFlag(segment, "@Cave Of Flame - Pre Lava Basement Room Block Chest/Chest", 0x2002d59, 0x10)
-		updateSectionFlag(segment, "@Cave Of Flame - Pre Lava Basement Room Ledge/Chest", 0x2002d59, 0x20)
-		updateSectionFlag(segment, "@Cave Of Flame - Blade Chest/Chest", 0x2002d5a, 0x01)
-		updateSectionFlag(segment, "@Cave Of Flame - Lava Basement Left/Chest", 0x2002d5a, 0x80)
-		updateSectionFlag(segment, "@Cave Of Flame - Lava Basement Right/Chest", 0x2002d5b, 0x01)
-		updateSectionFlag(segment, "@Cave Of Flame - Lava Basement Big Chest/Big Chest", 0x2002d5b, 0x02)
+		updateSectionFlag(segment, "@Cave Of Flame - B1 - Hazy Room - Big Chest/Big Chest", 0x2002d59, 0x04)
+		updateSectionFlag(segment, "@Cave Of Flame - B1 - Hazy Room - Big Chest/Big Chest", 0x2002d59, 0x02)
+		updateSectionFlag(segment, "@Cave Of Flame - B1 - Rollobite/Chest", 0x2002d58, 0x40)
+		updateSectionFlag(segment, "@Cave Of Flame - B1 - Rollobite/Chest", 0x2002d58, 0x80)
+		updateSectionFlag(segment, "@Cave Of Flame - B1/HP", 0x2002d5b, 0x10)
+		updateSectionFlag(segment, "@Cave Of Flame - B1 - Spikey Chus Pillar/Chest", 0x2002d57, 0x02)
+		updateSectionFlag(segment, "@Cave Of Flame - B1 - Spikey Chus/Big Chest", 0x2002d57, 0x01)
+		updateSectionFlag(segment, "@Cave Of Flame - B2 - Pre Lava North/Chest", 0x2002d59, 0x10)
+		updateSectionFlag(segment, "@Cave Of Flame - B2 - Pre Lava North/Chest", 0x2002d59, 0x20)
+		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room Blade/Chest", 0x2002d5a, 0x01)
+		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room Left/Chest", 0x2002d5a, 0x80)
+		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room Left/Chest", 0x2002d5b, 0x01)
+		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room/Big Chest", 0x2002d5b, 0x02)
 		updateSectionFlag(segment, "@Cave Of Flame - Gleerok/Heart", 0x2002d5b, 0x04)
 
 		--FOW
-		updateSectionFlag(segment, "@Fortress/Entrance Far Left", 0x2002d05, 0x80)
-		updateSectionFlag(segment, "@Fortress/Wizzrobe Fight", 0x2002d74, 0x08)
-		updateSectionFlag(segment, "@Fortress/Entrance Large Rupee", 0x2002d05, 0x40)
-		updateDecreaseCount(segment, "@Fortress/Left Side Mitts Chests", {{0x2002d06, 0x01}, {0x2002d07, 0x20}})
+		updateSectionFlag(segment, "@Fortress/Entrance 1F - Left - Chest", 0x2002d05, 0x80)
+		updateSectionFlag(segment, "@Fortress/Entrance 1F - Left Wizzrobe - Chest", 0x2002d74, 0x08)
+		updateSectionFlag(segment, "@Fortress/Entrance 1F - Right - Item", 0x2002d05, 0x40)
+		updateDecreaseCount(segment, "@Fortress/Left 2F - Dig - Chest", {{0x2002d06, 0x01}, {0x2002d07, 0x20}})
 		updateDecreaseCount(
 			segment,
-			"@Fortress/Left Side Rupees",
+			"@Fortress/Left 2F - Items",
 			{{0x2002d06, 0x20}, {0x2002d06, 0x40}, {0x2002d06, 0x80}, {0x2002d07, 0x01}, {0x2002d07, 0x04}, {0x2002d07, 0x08}}
 		)
-		updateDecreaseCount(segment, "@Fortress/Left Side Rupees Grabbable", {{0x2002d07, 0x02}})
-		updateSectionFlag(segment, "@Fortress/Eyegores", 0x2002d6f, 0x10)
-		updateSectionFlag(segment, "@Fortress/Left Side Key Drop", 0x2002d73, 0x80)
-		updateDecreaseCount(segment, "@Fortress/Right Side Two Lever Room", {{0x2002d73, 0x20}, {0x2002d73, 0x40}})
-		updateDecreaseCount(segment, "@Fortress/Right Side Mitts Chests", {{0x2002d06, 0x04}, {0x2002d07, 0x40}})
-		updateSectionFlag(segment, "@Fortress/Right Side Key Drop", 0x2002d74, 0x02)
-		updateSectionFlag(segment, "@Fortress/Right Side Heart Piece", 0x2002d74, 0x80)
-		updateSectionFlag(segment, "@Fortress/Pedestal Chest", 0x2002d73, 0x02)
-		updateSectionFlag(segment, "@Fortress/Center Path Switch", 0x2002d06, 0x02)
-		updateSectionFlag(segment, "@Fortress/Bombable Wall Big Chest", 0x2002d08, 0x01)
-		updateSectionFlag(segment, "@Fortress/Bombable Wall Small Chest", 0x2002d08, 0x02)
-		updateSectionFlag(segment, "@Fortress/Clone Puzzle Key Drop", 0x2002d71, 0x40)
-		updateSectionFlag(segment, "@Fortress/Minish Dirt Room Key Drop", 0x2002d08, 0x10)
-		updateSectionFlag(segment, "@Fortress/Right Side Moldorm Top Pot", 0x2002d06, 0x08)
-		updateSectionFlag(segment, "@Fortress/Right Side Moldorm Bottom Pot", 0x2002d06, 0x10)
-		updateSectionFlag(segment, "@Fortress/Skull Room Chest", 0x2002d73, 0x04)
+		updateDecreaseCount(segment, "@Fortress/Left 2F - Item Grabbable", {{0x2002d07, 0x02}})
+		updateSectionFlag(segment, "@Fortress/Left 3F - Eyegore - Big Chest", 0x2002d6f, 0x10)
+		updateSectionFlag(segment, "@Fortress/Left 3F - Item Drop", 0x2002d73, 0x80)
+		updateDecreaseCount(segment, "@Fortress/Right 2F - Chests", {{0x2002d73, 0x20}})
+		updateDecreaseCount(segment, "@Fortress/Left 3F - Switch - Chests", {{0x2002d73, 0x40}})
+		updateDecreaseCount(segment, "@Fortress/Right 2F - Dig - Chest", {{0x2002d06, 0x04}, {0x2002d07, 0x40}})
+		updateSectionFlag(segment, "@Fortress/Right 3F - Item Drop", 0x2002d74, 0x02)
+		updateSectionFlag(segment, "@Fortress/Entrance 1F - Right - HP", 0x2002d74, 0x80)
+		updateSectionFlag(segment, "@Fortress/Middle 2F - Big Chest", 0x2002d73, 0x02)
+		updateSectionFlag(segment, "@Fortress/Middle 2F - Statue - Chest", 0x2002d06, 0x02)
+		updateSectionFlag(segment, "@Fortress/Back 2F - Left - Big Chest", 0x2002d08, 0x01)
+		updateSectionFlag(segment, "@Fortress/Back 2F - Left - Small Chest", 0x2002d08, 0x02)
+		updateSectionFlag(segment, "@Fortress/Back 2F - Right Statue - Item Drop", 0x2002d71, 0x40)
+		updateSectionFlag(segment, "@Fortress/Back 2F - Right Minish - Item Drop", 0x2002d08, 0x10)
+		updateSectionFlag(segment, "@Fortress/Back 2F - Right Dig Room Top - Pot", 0x2002d06, 0x08)
+		updateSectionFlag(segment, "@Fortress/Back 2F - Right Dig Room Bottom - Pot", 0x2002d06, 0x10)
+		updateSectionFlag(segment, "@Fortress/Back 2F - Right - Big Chest", 0x2002d73, 0x04)
 		updateSectionFlag(segment, "@Fortress/Mazaal", 0x2002d72, 0x04)
-		updateSectionFlag(segment, "@Fortress/FOW Reward", 0x2002d74, 0x20)
+		updateSectionFlag(segment, "@Fortress/Reward", 0x2002d74, 0x20)
 
 		-- MAP FOW
-		updateSectionFlag(segment, "@Fortress - Far Left Entrance Room/Chest", 0x2002d05, 0x80)
-		updateSectionFlag(segment, "@Fortress - Entrance Rupee/Rupee", 0x2002d05, 0x40)
-		updateSectionFlag(segment, "@Fortress - Wizzrobe Fight/Kill", 0x2002d74, 0x08)
-		updateSectionFlag(segment, "@Fortress - Left Side 2nd Floor Mitts/Chest", 0x2002d06, 0x01)
+		updateSectionFlag(segment, "@Fortress - Entrance 1F - Left/Chest", 0x2002d05, 0x80)
+		updateSectionFlag(segment, "@Fortress - Entrance 1F - Right/Rupee", 0x2002d05, 0x40)
+		updateSectionFlag(segment, "@Fortress - Entrance 1F - Left Wizzrobe/Kill", 0x2002d74, 0x08)
+		updateSectionFlag(segment, "@Fortress - Left 2F - Dig/Chest", 0x2002d06, 0x01)
 		updateDecreaseCount(
 			segment,
-			"@Fortress - Left Side Left Rupees/Rupees",
+			"@Fortress - Left 2F - Items/Rupees",
 			{{0x2002d06, 0x20}, {0x2002d06, 0x40}, {0x2002d06, 0x80}, {0x2002d07, 0x01}}
 		)
-		updateDecreaseCount(segment, "@Fortress - Left Side Right Rupees/Rupees", {{0x2002d07, 0x04}, {0x2002d07, 0x08}})
-		updateDecreaseCount(segment, "@Fortress - Left Side Right Rupees/Rupees Grabbable", {{0x2002d07, 0x02}})
-		updateSectionFlag(segment, "@Fortress - Left Side 3rd Floor Mitts/Chest", 0x2002d07, 0x20)
-		updateSectionFlag(segment, "@Fortress - Eyegores/Kill", 0x2002d6f, 0x10)
-		updateSectionFlag(segment, "@Fortress - Left Side Key/Drop", 0x2002d73, 0x80)
-		updateSectionFlag(segment, "@Fortress - Two Lever Room Left/Chest", 0x2002d73, 0x20)
-		updateSectionFlag(segment, "@Fortress - Two Lever Room Right/Chest", 0x2002d73, 0x40)
-		updateSectionFlag(segment, "@Fortress - Right Side 2nd Floor Mitts/Chest", 0x2002d06, 0x04)
-		updateSectionFlag(segment, "@Fortress - Right Side 3rd Floor Mitts/Chest", 0x2002d07, 0x40)
-		updateSectionFlag(segment, "@Fortress - Right Side Key/Drop", 0x2002d74, 0x02)
-		updateSectionFlag(segment, "@Fortress - Right Side Heart Piece/Heart Piece", 0x2002d74, 0x80)
-		updateSectionFlag(segment, "@Fortress - Pedestal/Big Chest", 0x2002d73, 0x02)
-		updateSectionFlag(segment, "@Fortress - Center Path Switch/Drop", 0x2002d06, 0x02)
-		updateSectionFlag(segment, "@Fortress - Bombable Wall Big Chest/Big Chest", 0x2002d08, 0x01)
-		updateSectionFlag(segment, "@Fortress - Bombable Wall Chest/Chest", 0x2002d08, 0x02)
-		updateSectionFlag(segment, "@Fortress - Clone Puzzle Key/Drop", 0x2002d71, 0x40)
-		updateSectionFlag(segment, "@Fortress - Minish Dirt Room Key/Drop", 0x2002d08, 0x10)
-		updateSectionFlag(segment, "@Fortress - Right Side Top Moldorm Pot/Drop", 0x2002d06, 0x08)
-		updateSectionFlag(segment, "@Fortress - Right Side Left Moldorm Pot/Drop", 0x2002d06, 0x10)
-		updateSectionFlag(segment, "@Fortress - Skull Room/Big Chest", 0x2002d73, 0x04)
+		updateDecreaseCount(segment, "@Fortress - Left 2F - Item Grabbable/Rupees", {{0x2002d07, 0x04}, {0x2002d07, 0x08}})
+		updateDecreaseCount(segment, "@Fortress - Left 2F - Item Grabbable/Rupees Grabbable", {{0x2002d07, 0x02}})
+		updateSectionFlag(segment, "@Fortress - Left 3F - Switch/Chest", 0x2002d07, 0x20)
+		updateSectionFlag(segment, "@Fortress - Left 3F - Eyegore/Kill", 0x2002d6f, 0x10)
+		updateSectionFlag(segment, "@Fortress - Left 3F - Item Drop/Drop", 0x2002d73, 0x80)
+		updateSectionFlag(segment, "@Fortress - Right 2F/Chest", 0x2002d73, 0x20)
+		updateSectionFlag(segment, "@Fortress - Right 2F - Right/Chest", 0x2002d73, 0x40)
+		updateSectionFlag(segment, "@Fortress - Right 2F - Dig/Chest", 0x2002d06, 0x04)
+		updateSectionFlag(segment, "@Fortress - Right 3F - Dig/Chest", 0x2002d07, 0x40)
+		updateSectionFlag(segment, "@Fortress - Right 3F - Item Drop/Drop", 0x2002d74, 0x02)
+		updateSectionFlag(segment, "@Fortress - Entrance 1F - Right HP/Heart Piece", 0x2002d74, 0x80)
+		updateSectionFlag(segment, "@Fortress - Middle 2F/Big Chest", 0x2002d73, 0x02)
+		updateSectionFlag(segment, "@Fortress - Middle 2F - Statue/Drop", 0x2002d06, 0x02)
+		updateSectionFlag(segment, "@Fortress - Back 2F - Left Big Chest/Big Chest", 0x2002d08, 0x01)
+		updateSectionFlag(segment, "@Fortress - Back 2F - Left Small Chest/Chest", 0x2002d08, 0x02)
+		updateSectionFlag(segment, "@Fortress - Back 2F - Right Statue/Drop", 0x2002d71, 0x40)
+		updateSectionFlag(segment, "@Fortress - Back 2F - Right Minish/Drop", 0x2002d08, 0x10)
+		updateSectionFlag(segment, "@Fortress - Back 2F - Right Dig Room Top/Drop", 0x2002d06, 0x08)
+		updateSectionFlag(segment, "@Fortress - Back 2F - Right Dig Room Bottom/Drop", 0x2002d06, 0x10)
+		updateSectionFlag(segment, "@Fortress - Back 2F - Right/Big Chest", 0x2002d73, 0x04)
 		updateSectionFlag(segment, "@Fortress - Mazaal/Heart", 0x2002d72, 0x04)
 
 		--TOD
-		updateSectionFlag(segment, "@Droplet/First Ice Block", 0x2002d8e, 0x04)
-		updateSectionFlag(segment, "@Droplet/Locked Ice Block", 0x2002d8d, 0x80)
-		updateSectionFlag(segment, "@Droplet/Post Madderpillar Chest", 0x2002d92, 0x80)
-		updateSectionFlag(segment, "@Droplet/Underwater Pot", 0x2002d93, 0x04)
-		updateSectionFlag(segment, "@Droplet/Overhang Chest", 0x2002d8b, 0x80)
+		updateSectionFlag(segment, "@Droplet/Entrance B2 - East - Iceblock", 0x2002d8e, 0x04)
+		updateSectionFlag(segment, "@Droplet/Entrance B2 - West - Iceblock", 0x2002d8d, 0x80)
+		updateSectionFlag(segment, "@Droplet/Left Path B2 - Ice Madderpillar - Big Chest", 0x2002d92, 0x80)
+		updateSectionFlag(segment, "@Droplet/Left Path B2 - Underwater - Pot", 0x2002d93, 0x04)
+		updateSectionFlag(segment, "@Droplet/Left Path B1 - Waterfall - Big Chest", 0x2002d8b, 0x80)
 		updateDecreaseCount(
 			segment,
-			"@Droplet/Left Path Rupees",
+			"@Droplet/Left Path B1 - Underpass - Items",
 			{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}
 		)
-		updateDecreaseCount(segment, "@Droplet/Right Path Rupees", {{0x2002d95, 0x10}, {0x2002d95, 0x20}})
-		updateDecreaseCount(segment, "@Droplet/Right Path Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}, {0x2002d95, 0x40}})
+		updateDecreaseCount(segment, "@Droplet/Right Path B2 - Underpass - Items", {{0x2002d95, 0x10}, {0x2002d95, 0x20}})
+		updateDecreaseCount(segment, "@Droplet/Right Path B2 - Underpass - Items Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}, {0x2002d95, 0x40}})
 		updateDecreaseCount(
 			segment,
-			"@Droplet/Upper Water Rupees",
+			"@Droplet/Left Path B1 - Waterfall - Underwater",
 			{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}
 		)
 		updateDecreaseCount(
 			segment,
-			"@Droplet/Lower Water Rupees",
+			"@Droplet/Left Path B2 - Waterfall - Underwater",
 			{{0x2002d95, 0x80}, {0x2002d96, 0x01}, {0x2002d96, 0x02}, {0x2002d96, 0x04}, {0x2002d96, 0x08}, {0x2002d96, 0x10}}
 		)
-		updateSectionFlag(segment, "@Droplet/Ice Puzzle Free Chest", 0x2002d8f, 0x08)
-		updateSectionFlag(segment, "@Droplet/Ice Puzzle Frozen Chest", 0x2002d8f, 0x04)
-		updateSectionFlag(segment, "@Droplet/Post Ice Puzzle Frozen Chest", 0x2002d93, 0x40)
-		updateDecreaseCount(segment, "@Droplet/Right Path Ice Walkway Chests", {{0x2002d8b, 0x01}, {0x2002d8b, 0x04}})
-		updateSectionFlag(segment, "@Droplet/Right Path Ice Walkway Pot", 0x2002d8b, 0x02)
-		updateSectionFlag(segment, "@Droplet/Basement Frozen Chest", 0x2002d8d, 0x10)
-		updateSectionFlag(segment, "@Droplet/Blue Chu", 0x2002d8c, 0x80)
-		updateSectionFlag(segment, "@Droplet/Post Blue Chu Frozen Chest", 0x2002d92, 0x40)
-		updateSectionFlag(segment, "@Droplet/Dark Maze Bottom/Chest", 0x2002d8f, 0x80)
-		updateSectionFlag(segment, "@Droplet/Dark Maze Top Right", 0x2002d8f, 0x20)
-		updateSectionFlag(segment, "@Droplet/Dark Maze Top Left", 0x2002d8f, 0x40)
-		updateSectionFlag(segment, "@Droplet/Dark Maze Bomb Wall", 0x2002d91, 0x80)
+		updateSectionFlag(segment, "@Droplet/Left Path B2 - Ice Plain - Chest", 0x2002d8f, 0x08)
+		updateSectionFlag(segment, "@Droplet/Left Path B2 - Ice Plain - Frozen Chest", 0x2002d8f, 0x04)
+		updateSectionFlag(segment, "@Droplet/Left Path B2 - Lilypad Corner - Frozen Chest", 0x2002d93, 0x40)
+		updateDecreaseCount(segment, "@Droplet/Right Path B1 - Chests", {{0x2002d8b, 0x01}, {0x2002d8b, 0x04}})
+		updateSectionFlag(segment, "@Droplet/Right Path B1 - Pot", 0x2002d8b, 0x02)
+		updateSectionFlag(segment, "@Droplet/Right Path B3 - Frozen Chest", 0x2002d8d, 0x10)
+		updateSectionFlag(segment, "@Droplet/Right Path B1 - Blu Chu - Big Chest", 0x2002d8c, 0x80)
+		updateSectionFlag(segment, "@Droplet/Right Path B2 - Frozen Chest", 0x2002d92, 0x40)
+		updateSectionFlag(segment, "@Droplet/Right Path B2 - Dark Maze - Bottom Chest", 0x2002d8f, 0x80)
+		updateSectionFlag(segment, "@Droplet/Right Path B2 - Dark Maze - Top Right Chest", 0x2002d8f, 0x20)
+		updateSectionFlag(segment, "@Droplet/Right Path B2 - Dark Maze - Top Left Chest", 0x2002d8f, 0x40)
+		updateSectionFlag(segment, "@Droplet/Right Path B2 - Mulldozers - Item Drop", 0x2002d91, 0x80)
 		updateSectionFlag(segment, "@Droplet/Octo", 0x2002d8c, 0x01)
 
 		-- MAP TOD
-		updateSectionFlag(segment, "@Droplet - First Ice Block/Ice Block", 0x2002d8e, 0x04)
-		updateSectionFlag(segment, "@Droplet - Key Locked Ice Block/Ice Block", 0x2002d8d, 0x80)
-		updateSectionFlag(segment, "@Droplet - Post Madderpillar/Chest", 0x2002d92, 0x80)
-		updateSectionFlag(segment, "@Droplet - Underwater Pot/Drop", 0x2002d93, 0x04)
-		updateSectionFlag(segment, "@Droplet - Overhang/Chest", 0x2002d8b, 0x80)
+		updateSectionFlag(segment, "@Droplet - Entrance B2 - East/Ice Block", 0x2002d8e, 0x04)
+		updateSectionFlag(segment, "@Droplet - Entrance B2 - West/Ice Block", 0x2002d8d, 0x80)
+		updateSectionFlag(segment, "@Droplet - Left Path B2 - Ice Madderpillar/Chest", 0x2002d92, 0x80)
+		updateSectionFlag(segment, "@Droplet - Left Path B2 - Underwater/Drop", 0x2002d93, 0x04)
+		updateSectionFlag(segment, "@Droplet - Left Path B1 - Waterfall/Chest", 0x2002d8b, 0x80)
 		updateDecreaseCount(
 			segment,
-			"@Droplet - Left Path/Rupees",
+			"@Droplet - Left Path B1 - Underpass/Rupees",
 			{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}
 		)
 		updateDecreaseCount(
 			segment,
-			"@Droplet - Right Path/Rupees",
+			"@Droplet - Right Path B2 - Underpass/Rupees",
 			{{0x2002d95, 0x10}, {0x2002d95, 0x20}, {0x2002d95, 0x40}}
 		)
-		updateDecreaseCount(segment, "@Droplet - Right Path/Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
+		updateDecreaseCount(segment, "@Droplet - Right Path B2 - Underpass/Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
 		updateDecreaseCount(
 			segment,
-			"@Droplet - Upper Underwater/Rupees",
+			"@Droplet - Left Path B1 - Waterfall - Underwater/Rupees",
 			{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}
 		)
 		updateDecreaseCount(
 			segment,
-			"@Droplet - Lower Underwater/Rupees",
+			"@Droplet - Left Path B2 - Waterfall - Underwater/Rupees",
 			{{0x2002d95, 0x80}, {0x2002d96, 0x01}, {0x2002d96, 0x02}, {0x2002d96, 0x04}, {0x2002d96, 0x08}, {0x2002d96, 0x10}}
 		)
-		updateSectionFlag(segment, "@Droplet - Ice Puzzle/Chest", 0x2002d8f, 0x08)
-		updateSectionFlag(segment, "@Droplet - Ice Puzzle Frozen/Chest", 0x2002d8f, 0x04)
-		updateSectionFlag(segment, "@Droplet - Post Ice Puzzle/Chest", 0x2002d93, 0x40)
-		updateSectionFlag(segment, "@Droplet - Right Path Ice Walkway First/Chest", 0x2002d8b, 0x01)
-		updateSectionFlag(segment, "@Droplet - Right Path Ice Walkway Second/Chest", 0x2002d8b, 0x04)
-		updateSectionFlag(segment, "@Droplet - Right Path Ice Walkway Pot/Drop", 0x2002d8b, 0x02)
-		updateSectionFlag(segment, "@Droplet - Basement Frozen/Chest", 0x2002d8d, 0x10)
-		updateSectionFlag(segment, "@Droplet - Blue Chu/Kill", 0x2002d8c, 0x80)
-		updateSectionFlag(segment, "@Droplet - Post Blue Chu Frozen/Chest", 0x2002d92, 0x40)
-		updateSectionFlag(segment, "@Droplet - Dark Maze Bottom/Chest", 0x2002d8f, 0x80)
-		updateSectionFlag(segment, "@Droplet - Dark Maze Bombable Wall/Chest", 0x2002d91, 0x80)
-		updateSectionFlag(segment, "@Droplet - Dark Maze Top Right/Chest", 0x2002d8f, 0x20)
-		updateSectionFlag(segment, "@Droplet - Dark Maze Top Left/Chest", 0x2002d8f, 0x40)
+		updateSectionFlag(segment, "@Droplet - Left Path B2 - Ice Plain/Chest", 0x2002d8f, 0x08)
+		updateSectionFlag(segment, "@Droplet - Left Path B2 - Ice Plain - Frozen/Chest", 0x2002d8f, 0x04)
+		updateSectionFlag(segment, "@Droplet - Left Path B2 - Lilypad Corner/Chest", 0x2002d93, 0x40)
+		updateSectionFlag(segment, "@Droplet - Right Path B1 - Ice Walkway/Chest", 0x2002d8b, 0x01)
+		updateSectionFlag(segment, "@Droplet - Right Path B1 - Ice Walkway Right/Chest", 0x2002d8b, 0x04)
+		updateSectionFlag(segment, "@Droplet - Right Path B1 - Pot/Drop", 0x2002d8b, 0x02)
+		updateSectionFlag(segment, "@Droplet - Right Path B3 - Frozen/Chest", 0x2002d8d, 0x10)
+		updateSectionFlag(segment, "@Droplet - Right Path B1 - Blu Chu/Kill", 0x2002d8c, 0x80)
+		updateSectionFlag(segment, "@Droplet - Right Path B2 - Frozen/Chest", 0x2002d92, 0x40)
+		updateSectionFlag(segment, "@Droplet - Right Path B2 - Dark Maze - Bottom/Chest", 0x2002d8f, 0x80)
+		updateSectionFlag(segment, "@Droplet - Right Path B2 - Mulldozers/Chest", 0x2002d91, 0x80)
+		updateSectionFlag(segment, "@Droplet - Right Path B2 - Dark Maze - Top Right/Chest", 0x2002d8f, 0x20)
+		updateSectionFlag(segment, "@Droplet - Right Path B2 - Dark Maze - Top Left/Chest", 0x2002d8f, 0x40)
 		updateSectionFlag(segment, "@Droplet - Octo/Heart", 0x2002d8c, 0x01)
 
 		--POW
 
-		updateSectionFlag(segment, "@Palace/Firebar Grate", 0x2002daa, 0x40)
-		updateSectionFlag(segment, "@Palace/Wizzrobe Platform Fight", 0x2002daa, 0x10)
-		updateSectionFlag(segment, "@Palace/Pot Puzzle Key", 0x2002da7, 0x02)
+		updateSectionFlag(segment, "@Palace/1st Half 1F - Grate - Chest", 0x2002daa, 0x40)
+		updateSectionFlag(segment, "@Palace/1st Half 1F - Wizzrobe - Big Chest", 0x2002daa, 0x10)
+		updateSectionFlag(segment, "@Palace/1st Half 3F - Pot Puzzle - Item Drop", 0x2002da7, 0x02)
 		updateDecreaseCount(
 			segment,
-			"@Palace/Rupees",
+			"@Palace/1st Half 2F - Items",
 			{{0x2002da7, 0x04}, {0x2002da7, 0x08}, {0x2002da7, 0x10}, {0x2002da7, 0x20}, {0x2002da7, 0x40}}
 		)
-		updateSectionFlag(segment, "@Palace/Moblin Archer Chest", 0x2002da4, 0x80)
-		updateSectionFlag(segment, "@Palace/Flail Soldiers", 0x2002da4, 0x02)
-		updateSectionFlag(segment, "@Palace/Spark Chest", 0x2002da3, 0x40)
-		updateSectionFlag(segment, "@Palace/Pre Big Key Door Big Chest", 0x2002da2, 0x10)
-		updateSectionFlag(segment, "@Palace/Roller Chest", 0x2002da9, 0x80)
-		updateSectionFlag(segment, "@Palace/Dark Room Big", 0x2002dab, 0x02)
-		updateSectionFlag(segment, "@Palace/Dark Room Small", 0x2002dab, 0x04)
-		updateSectionFlag(segment, "@Palace/Fire Wizzrobe Fight", 0x2002da6, 0x80)
-		updateSectionFlag(segment, "@Palace/Twin Wizzrobe Fight", 0x2002da9, 0x40)
-		updateSectionFlag(segment, "@Palace/Heart Piece", 0x2002dac, 0x01)
-		updateSectionFlag(segment, "@Palace/Switch Chest", 0x2002da5, 0x80)
-		updateSectionFlag(segment, "@Palace/Bombarossa Maze", 0x2002da2, 0x20)
-		updateSectionFlag(segment, "@Palace/Block Maze Room", 0x2002da5, 0x02)
-		updateSectionFlag(segment, "@Palace/Block Maze Detour", 0x2002da2, 0x80)
+		updateSectionFlag(segment, "@Palace/1st Half 4F - Bow Moblins - Chest", 0x2002da4, 0x80)
+		updateSectionFlag(segment, "@Palace/1st Half 5F - Ball And Chain Soldiers - Item Drop", 0x2002da4, 0x02)
+		updateSectionFlag(segment, "@Palace/1st Half 5F - Fan Loop - Chest", 0x2002da3, 0x40)
+		updateSectionFlag(segment, "@Palace/1st Half 5F - Big Chest", 0x2002da2, 0x10)
+		updateSectionFlag(segment, "@Palace/2nd Half 2F - Many Rollers - Chest", 0x2002da9, 0x80)
+		updateSectionFlag(segment, "@Palace/2nd Half 1F - Dark Room - Big Chest", 0x2002dab, 0x02)
+		updateSectionFlag(segment, "@Palace/2nd Half 1F - Dark Room - Small Chest", 0x2002dab, 0x04)
+		updateSectionFlag(segment, "@Palace/2nd Half 3F - Fire Wizzrobes - Big Chest", 0x2002da6, 0x80)
+		updateSectionFlag(segment, "@Palace/2nd Half 2F - Twin Wizzrobes - Chest", 0x2002da9, 0x40)
+		updateSectionFlag(segment, "@Palace/2nd Half 4F - HP", 0x2002dac, 0x01)
+		updateSectionFlag(segment, "@Palace/2nd Half 4F - Switch Hit - Chest", 0x2002da5, 0x80)
+		updateSectionFlag(segment, "@Palace/2nd Half 5F - Bombarossa - Chest", 0x2002da2, 0x20)
+		updateSectionFlag(segment, "@Palace/2nd Half 4F - Block Maze - Chest", 0x2002da5, 0x02)
+		updateSectionFlag(segment, "@Palace/2nd Half 5F - Right Side - Chest", 0x2002da2, 0x80)
 		updateSectionFlag(segment, "@Palace/Gyorg", 0x2002dab, 0x20)
 
 		-- MAP POW
-		updateSectionFlag(segment, "@Palace - Firebar Grate/Chest", 0x2002daa, 0x40)
-		updateSectionFlag(segment, "@Palace - Wizzrobe Platform Fight/Kill", 0x2002daa, 0x10)
-		updateSectionFlag(segment, "@Palace - Pot Puzzle Key/Drop", 0x2002da7, 0x02)
+		updateSectionFlag(segment, "@Palace - 1st Half 1F - Grate/Chest", 0x2002daa, 0x40)
+		updateSectionFlag(segment, "@Palace - 1st Half 1F - Wizzrobe/Kill", 0x2002daa, 0x10)
+		updateSectionFlag(segment, "@Palace - 1st Half 3F - Pot Puzzle/Drop", 0x2002da7, 0x02)
 		updateDecreaseCount(
 			segment,
-			"@Palace - Rupees/Rupees",
+			"@Palace - 1st Half 2F - Items/Rupees",
 			{{0x2002da7, 0x04}, {0x2002da7, 0x08}, {0x2002da7, 0x10}, {0x2002da7, 0x20}, {0x2002da7, 0x40}}
 		)
-		updateSectionFlag(segment, "@Palace - Moblin Archer Chest/Chest", 0x2002da4, 0x80)
-		updateSectionFlag(segment, "@Palace - Flail Soldiers/Drop", 0x2002da4, 0x02)
-		updateSectionFlag(segment, "@Palace - Spark/Chest", 0x2002da3, 0x40)
-		updateSectionFlag(segment, "@Palace - Pre Big Key Door/Big Chest", 0x2002da2, 0x10)
-		updateSectionFlag(segment, "@Palace - Roller/Chest", 0x2002da9, 0x80)
-		updateSectionFlag(segment, "@Palace - Dark Room Big Chest/Big Chest", 0x2002dab, 0x02)
-		updateSectionFlag(segment, "@Palace - Dark Room Chest/Chest", 0x2002dab, 0x04)
-		updateSectionFlag(segment, "@Palace - Firerobe Fight/Kill", 0x2002da6, 0x80)
-		updateSectionFlag(segment, "@Palace - Twin Wizzrobe Fight/Kill", 0x2002da9, 0x40)
-		updateSectionFlag(segment, "@Palace - Heart Piece/Heart Piece", 0x2002dac, 0x01)
-		updateSectionFlag(segment, "@Palace - Switch/Chest", 0x2002da5, 0x80)
-		updateSectionFlag(segment, "@Palace - Bombarossa Maze/Chest", 0x2002da2, 0x20)
-		updateSectionFlag(segment, "@Palace - Block Maze Room/Chest", 0x2002da5, 0x02)
-		updateSectionFlag(segment, "@Palace - Block Maze Room Detour/Chest", 0x2002da2, 0x80)
+		updateSectionFlag(segment, "@Palace - 1st Half 4F - Bow Moblins/Chest", 0x2002da4, 0x80)
+		updateSectionFlag(segment, "@Palace - 1st Half 5F - Ball And Chain Soldiers/Drop", 0x2002da4, 0x02)
+		updateSectionFlag(segment, "@Palace - 1st Half 5F - Fan Loop/Chest", 0x2002da3, 0x40)
+		updateSectionFlag(segment, "@Palace - 1st Half 5F/Big Chest", 0x2002da2, 0x10)
+		updateSectionFlag(segment, "@Palace - 2nd Half 2F - Many Rollers/Chest", 0x2002da9, 0x80)
+		updateSectionFlag(segment, "@Palace - 2nd Half 1F - Dark Room/Big Chest", 0x2002dab, 0x02)
+		updateSectionFlag(segment, "@Palace - 2nd Half 1F - Dark Room - Small/Chest", 0x2002dab, 0x04)
+		updateSectionFlag(segment, "@Palace - 2nd Half 3F - Fire Wizzrobes/Kill", 0x2002da6, 0x80)
+		updateSectionFlag(segment, "@Palace - 2nd Half 2F - Twin Wizzrobes/Kill", 0x2002da9, 0x40)
+		updateSectionFlag(segment, "@Palace - 2nd Half 4F/Heart Piece", 0x2002dac, 0x01)
+		updateSectionFlag(segment, "@Palace - 2nd Half 4F - Switch Hit/Chest", 0x2002da5, 0x80)
+		updateSectionFlag(segment, "@Palace - 2nd Half 5F - Bombarossa/Chest", 0x2002da2, 0x20)
+		updateSectionFlag(segment, "@Palace - 2nd Half 4F - Block Maze/Chest", 0x2002da5, 0x02)
+		updateSectionFlag(segment, "@Palace - 2nd Half 5F - Right Side/Chest", 0x2002da2, 0x80)
 		updateSectionFlag(segment, "@Palace - Gyorg/Heart", 0x2002dab, 0x20)
 
 		--DHC
-		updateSectionFlag(segment, "@DHC/Win", 0x2002ca6, 0x20)
-		updateSectionFlag(segment, "@DHC/Blade Chest", 0x2002dc0, 0x20)
-		updateSectionFlag(segment, "@DHC/Platform Chest", 0x2002dc1, 0x08)
-		updateSectionFlag(segment, "@DHC/Stone King", 0x2002dc2, 0x02)
-		updateSectionFlag(segment, "@DHC/Post Throne Big Chest", 0x2002dbf, 0x80)
-		updateSectionFlag(segment, "@DHC/Northeast Tower", 0x2002dbb, 0x80)
-		updateSectionFlag(segment, "@DHC/Southeast Tower", 0x2002dbc, 0x02)
-		updateSectionFlag(segment, "@DHC/Southwest Tower", 0x2002dbc, 0x01)
-		updateSectionFlag(segment, "@DHC/Northwest Tower", 0x2002dbb, 0x40)
-		updateSectionFlag(segment, "@DHC/Big Block Chest", 0x2002dbc, 0x08)
-		updateSectionFlag(segment, "@DHC/Vaati", 0x2002ca6, 0x20)
+		updateSectionFlag(segment, "@DHC/Sanctuary - Win", 0x2002ca6, 0x20)
+		updateSectionFlag(segment, "@DHC/1F - Blade - Chest", 0x2002dc0, 0x20)
+		updateSectionFlag(segment, "@DHC/B1 - Big Chest", 0x2002dc1, 0x08)
+		updateSectionFlag(segment, "@DHC/B2 - King", 0x2002dc2, 0x02)
+		updateSectionFlag(segment, "@DHC/1F - Throne - Big Chest", 0x2002dbf, 0x80)
+		updateSectionFlag(segment, "@DHC/3F - North East - Chest", 0x2002dbb, 0x80)
+		updateSectionFlag(segment, "@DHC/3F - South East - Chest", 0x2002dbc, 0x02)
+		updateSectionFlag(segment, "@DHC/3F - South West - Chest", 0x2002dbc, 0x01)
+		updateSectionFlag(segment, "@DHC/3F - North West - Chest", 0x2002dbb, 0x40)
+		updateSectionFlag(segment, "@DHC/2F - Blue Warp - Big Chest", 0x2002dbc, 0x08)
+		updateSectionFlag(segment, "@DHC/2F - Vaati - Kill", 0x2002ca6, 0x20)
 
 		-- MAP DHC
 		updateSectionFlag(segment, "@Dark Hyrule Castle - Pull the Pedestal/Win", 0x2002ca6, 0x20)
@@ -3164,45 +3165,45 @@ function updateKeys(segment)
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		-- Town
 		updateSectionFlag(segment, "@Town - Carlov/Gift", 0x2002ea5, 0x02)
-		updateSectionFlag(segment, "@Town - Eastern Shops/Rem", 0x2002ea4, 0x08)
-		updateSectionFlag(segment, "@Town - Julietta's House/Item", 0x2002ea4, 0x10)
-		updateSectionFlag(segment, "@Town - Dr. Left's House/Item", 0x2002ea4, 0x20)
-		updateSectionFlag(segment, "@Town - Swiftblade's Dojo/Spin Attack", 0x2002ea5, 0x10)
-		updateSectionFlag(segment, "@Town - Swiftblade's Dojo/Rock Breaker", 0x2002ea5, 0x20)
-		updateSectionFlag(segment, "@Town - Swiftblade's Dojo/Dash Attack", 0x2002ea5, 0x40)
-		updateSectionFlag(segment, "@Town - Swiftblade's Dojo/Down Thrust", 0x2002ea5, 0x80)
-		updateSectionFlag(segment, "@Town - Stockwell's Shop/Wallet Spot (80 Rupees)", 0x2002ea7, 0x01)
-		updateSectionFlag(segment, "@Town - Stockwell's Shop/Boomerang Spot (300 Rupees)", 0x2002ea7, 0x02)
-		updateSectionFlag(segment, "@Town - Stockwell's Shop/Quiver Spot (600 Rupees)", 0x2002ea7, 0x04)
-		updateSectionFlag(segment, "@Town - Stockwell's Shop/Bombag Spot (600 Rupees)", 0x2002ea8, 0x04)
+		updateSectionFlag(segment, "@Town - Shoe Shop/Gift", 0x2002ea4, 0x08)
+		updateSectionFlag(segment, "@Town - Jullieta/Item", 0x2002ea4, 0x10)
+		updateSectionFlag(segment, "@Town - Dr Left Attic/Gift", 0x2002ea4, 0x20)
+		updateSectionFlag(segment, "@Town - Dojo/Sword", 0x2002ea5, 0x10)
+		updateSectionFlag(segment, "@Town - Dojo/Green Sword", 0x2002ea5, 0x20)
+		updateSectionFlag(segment, "@Town - Dojo/Boots + Sword", 0x2002ea5, 0x40)
+		updateSectionFlag(segment, "@Town - Dojo/Cape + Sword", 0x2002ea5, 0x80)
+		updateSectionFlag(segment, "@Town - Shop/80 Item", 0x2002ea7, 0x01)
+		updateSectionFlag(segment, "@Town - Shop/300 Item", 0x2002ea7, 0x02)
+		updateSectionFlag(segment, "@Town - Shop/600 Item", 0x2002ea7, 0x04)
+		updateSectionFlag(segment, "@Town - Shop/600 Item 2", 0x2002ea8, 0x04)
 		-- Minishwoods
-		updateSectionFlag(segment, "@Minish Woods North - Syrup's Hut/Item (60 Rupees)", 0x2002ea4, 0x04)
-		updateSectionFlag(segment, "@Minish Woods - Belari/Gift 1st Item", 0x2002ea5, 0x01)
+		updateSectionFlag(segment, "@Minish Woods - Witch Hut/Item", 0x2002ea4, 0x04)
+		updateSectionFlag(segment, "@Minish Woods - Bomb Minish/Gift 1", 0x2002ea5, 0x01)
 		-- Hylia
-		updateSectionFlag(segment, "@Hylia - Lake Cabin/Item", 0x2002ea4, 0x40)
-		updateSectionFlag(segment, "@Hylia - Dojo/Waveblade", 0x2002ea6, 0x04)
+		updateSectionFlag(segment, "@Hylia - Mayor Cabin/Item", 0x2002ea4, 0x40)
+		updateSectionFlag(segment, "@Hylia - Dojo/Gift", 0x2002ea6, 0x04)
 		-- Crenel
 		updateSectionFlag(segment, "@Crenel - Mines/Melari", 0x2002ea4, 0x80)
-		updateSectionFlag(segment, "@Crenel - Business Scrub/Scrub", 0x2002ea5, 0x04)
-		updateSectionFlag(segment, "@Crenel - Dojo/Grayblade", 0x2002ea6, 0x01)
+		updateSectionFlag(segment, "@Crenel - Scrub/Gift", 0x2002ea5, 0x04)
+		updateSectionFlag(segment, "@Crenel - Dojo/Gift", 0x2002ea6, 0x01)
 		-- Castle
-		updateSectionFlag(segment, "@Castle - Dojo/Grimblade", 0x2002ea6, 0x02)
+		updateSectionFlag(segment, "@Castle - Dojo/Gift", 0x2002ea6, 0x02)
 		-- Castor Wilds
-		updateSectionFlag(segment, "@Castor Wilds - Dojo/Swiftblade", 0x2002ea6, 0x08)
-		updateSectionFlag(segment, "@Castor Wilds - Dojo Waterfall/Scarblade", 0x2002ea6, 0x10)
-		updateSectionFlag(segment, "@Castor Wilds - Joy Butterfly/Joy Butterfly", 0x2002ea7, 0x10)
+		updateSectionFlag(segment, "@Swamp - Dojo/Gift", 0x2002ea6, 0x08)
+		updateSectionFlag(segment, "@Swamp - Waterfall Fusion Dojo/Gift", 0x2002ea6, 0x10)
+		updateSectionFlag(segment, "@Swamp - Butterfly Fusion/Item", 0x2002ea7, 0x10)
 		-- Veil Falls South
-		updateSectionFlag(segment, "@Veil Falls South - Dojo Waterfall/Splitblade", 0x2002ea6, 0x20)
+		updateSectionFlag(segment, "@Falls Lower - Waterfall Fusion Dojo/Gift", 0x2002ea6, 0x20)
 		-- North Field
-		updateSectionFlag(segment, "@North Field - Dojo Waterfall/Greatblade", 0x2002ea6, 0x40)
+		updateSectionFlag(segment, "@North Field - Waterfall Fusion Dojo/Gift", 0x2002ea6, 0x40)
 		-- Wind Ruins
-		updateSectionFlag(segment, "@Wind Ruins - Joy Butterfly/Joy Butterfly", 0x2002ea7, 0x08)
+		updateSectionFlag(segment, "@Ruins - Butterfly Fusion/Item", 0x2002ea7, 0x08)
 		-- Royal Valley
-		updateSectionFlag(segment, "@Royal Valley - Joy Butterfly/Joy Butterfly", 0x2002ea7, 0x20)
+		updateSectionFlag(segment, "@Valley Graveyard - Butterfly Fusion/Item", 0x2002ea7, 0x20)
 		-- DHC
-		updateSectionFlag(segment, "@DHC/Pedestal Two Elements", 0x2002ea7, 0x80)
-		updateSectionFlag(segment, "@DHC/Pedestal Three Elements", 0x2002ea8, 0x01)
-		updateSectionFlag(segment, "@DHC/Pedestal Four Elements", 0x2002ea8, 0x02)
+		updateSectionFlag(segment, "@DHC/Sanctuary - Pedestal - Item 1", 0x2002ea7, 0x80)
+		updateSectionFlag(segment, "@DHC/Sanctuary - Pedestal - Item 2", 0x2002ea8, 0x01)
+		updateSectionFlag(segment, "@DHC/Sanctuary - Pedestal - Item 3", 0x2002ea8, 0x02)
 
 		-- MAP DHC
 		updateSectionFlag(segment, "@Dark Hyrule Castle - Pedestal Items/Two Elements", 0x2002ea7, 0x80)

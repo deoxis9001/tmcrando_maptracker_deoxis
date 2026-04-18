@@ -1,11 +1,19 @@
 [
   {
-    "name": "Castor Wilds - Diving Spots",
+    "name": "Swamp - Underwater",
     "map_locations": [
       {
         "map": "map",
-        "x": 660,
+        "x": 655,
         "y": 1560,
+        "restrict_visibility_rules": [
+          "$has|underwater_on"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 655,
+        "y": 442,
         "restrict_visibility_rules": [
           "$has|underwater_on"
         ]
@@ -13,7 +21,7 @@
     ],
     "sections": [
       {
-        "name": "Diving Top",
+        "name": "Top",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_DivingSpots_Diving"
@@ -22,7 +30,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Diving Middle",
+        "name": "Middle",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_DivingSpots_Diving"
@@ -31,7 +39,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Diving Bottom",
+        "name": "Bottom",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_DivingSpots_Diving"
@@ -42,17 +50,22 @@
     ]
   },
   {
-    "name": "Castor Wilds - Dojo",
+    "name": "Swamp - Dojo",
     "map_locations": [
       {
         "map": "map",
-        "x": 50,
-        "y": 1600
+        "x": 37,
+        "y": 1610
+      },
+      {
+        "map": "map_swamp",
+        "x": 37,
+        "y": 492
       }
     ],
     "sections": [
       {
-        "name": "Swiftblade",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_Dojo_Swiftblade"
@@ -61,7 +74,7 @@
         "chest_opened_img": "images/items-map/Tiger Scroll Done.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_Dojo_HeartPiece"
@@ -72,12 +85,17 @@
     ]
   },
   {
-    "name": "Castor Wilds - South Lake Cave",
+    "name": "Swamp - South Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 465,
-        "y": 1710
+        "x": 484,
+        "y": 1724
+      },
+      {
+        "map": "map_swamp",
+        "x": 484,
+        "y": 606
       }
     ],
     "sections": [
@@ -93,12 +111,17 @@
     ]
   },
   {
-    "name": "Castor Wilds - Platform Chest",
+    "name": "Swamp - Center",
     "map_locations": [
       {
         "map": "map",
-        "x": 150,
-        "y": 1400
+        "x": 144,
+        "y": 1412
+      },
+      {
+        "map": "map_swamp",
+        "x": 144,
+        "y": 294
       }
     ],
     "sections": [
@@ -114,17 +137,22 @@
     ]
   },
   {
-    "name": "Castor Wilds - Northeast Lake Cave",
+    "name": "Swamp - Near Waterfall Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 650,
-        "y": 1150
+        "x": 645,
+        "y": 1158
+      },
+      {
+        "map": "map_swamp",
+        "x": 645,
+        "y": 40
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_NortheastLakeCave_HeartPiece"
@@ -135,12 +163,17 @@
     ]
   },
   {
-    "name": "Castor Wilds - North Cave",
+    "name": "Swamp - North Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 450,
-        "y": 1165
+        "x": 432,
+        "y": 1160
+      },
+      {
+        "map": "map_swamp",
+        "x": 432,
+        "y": 42
       }
     ],
     "sections": [
@@ -156,7 +189,7 @@
     ]
   },
   {
-    "name": "Castor Wilds - Business Scrub",
+    "name": "Swamp - Business Scrub",
     "map_locations": [
       {
         "map": "map",
@@ -164,7 +197,19 @@
         "y": 1165,
         "restrict_visibility_rules": [
           "$has|fusionblue_vanilla"
-        ]
+        ],
+        "shape": "diamond",
+        "size": 70
+      },
+      {
+        "map": "map_swamp",
+        "x": 350,
+        "y": 47,
+        "restrict_visibility_rules": [
+          "$has|fusionblue_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -178,12 +223,17 @@
     ]
   },
   {
-    "name": "Castor Wilds - Mulldozers",
+    "name": "Swamp - Minish Mulldozer",
     "map_locations": [
       {
         "map": "map",
-        "x": 25,
-        "y": 1175
+        "x": 28,
+        "y": 1178
+      },
+      {
+        "map": "map_swamp",
+        "x": 28,
+        "y": 60
       }
     ],
     "sections": [
@@ -211,12 +261,17 @@
     ]
   },
   {
-    "name": "Castor Wilds - Mitts Cave",
+    "name": "Swamp - Digging Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 525,
-        "y": 1375
+        "x": 517,
+        "y": 1393
+      },
+      {
+        "map": "map_swamp",
+        "x": 517,
+        "y": 275
       }
     ],
     "sections": [
@@ -232,17 +287,22 @@
     ]
   },
   {
-    "name": "Castor Wilds - Darknut",
+    "name": "Swamp - Center Cave Darknut",
     "map_locations": [
       {
         "map": "map",
-        "x": 280,
-        "y": 1375
+        "x": 283,
+        "y": 1403
+      },
+      {
+        "map": "map_swamp",
+        "x": 283,
+        "y": 285
       }
     ],
     "sections": [
       {
-        "name": "Kill",
+        "name": "Chest",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_Darknut_Kill"
@@ -253,7 +313,7 @@
     ]
   },
   {
-    "name": "Castor Wilds - Fusions",
+    "name": "Swamp - Fusions",
     "map_locations": [
       {
         "map": "map",
@@ -261,7 +321,19 @@
         "y": 1700,
         "restrict_visibility_rules": [
           "$has|fusiongold_vanilla"
-        ]
+        ],
+        "shape": "diamond",
+        "size": 70
+      },
+      {
+        "map": "map_swamp",
+        "x": 75,
+        "y": 582,
+        "restrict_visibility_rules": [
+          "$has|fusiongold_vanilla"
+        ],
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -277,12 +349,20 @@
     ]
   },
   {
-    "name": "Castor Wilds - Western Minish Crack",
+    "name": "Swamp - Minish Fusion West Crack",
     "map_locations": [
       {
         "map": "map",
-        "x": 40,
-        "y": 1325,
+        "x": 37,
+        "y": 1326,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 37,
+        "y": 208,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -301,12 +381,20 @@
     ]
   },
   {
-    "name": "Castor Wilds - Water Minish Hole",
+    "name": "Swamp - Minish Fusion Water Hole",
     "map_locations": [
       {
         "map": "map",
-        "x": 630,
-        "y": 1630,
+        "x": 634,
+        "y": 1628,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 634,
+        "y": 510,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -323,7 +411,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_WaterMinishHole_HeartPiece"
@@ -334,12 +422,20 @@
     ]
   },
   {
-    "name": "Castor Wilds - Dojo Waterfall",
+    "name": "Swamp - Waterfall Fusion Dojo",
     "map_locations": [
       {
         "map": "map",
-        "x": 590,
-        "y": 1150,
+        "x": 612,
+        "y": 1158,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 612,
+        "y": 40,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -347,7 +443,7 @@
     ],
     "sections": [
       {
-        "name": "Scarblade",
+        "name": "Gift",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_DojoWaterfall_Scarblade"
@@ -358,12 +454,20 @@
     ]
   },
   {
-    "name": "Castor Wilds - Vine Minish Crack",
+    "name": "Swamp - Minish Fusion Vine Crack",
     "map_locations": [
       {
         "map": "map",
         "x": 240,
-        "y": 1600,
+        "y": 1603,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 240,
+        "y": 485,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -382,12 +486,20 @@
     ]
   },
   {
-    "name": "Castor Wilds - Rope Golden",
+    "name": "Swamp - Golden Rope",
     "map_locations": [
       {
         "map": "map",
         "x": 400,
-        "y": 1240,
+        "y": 1230,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 400,
+        "y": 112,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|golden_enemy_on"
         ]
@@ -406,12 +518,20 @@
     ]
   },
   {
-    "name": "Castor Wilds - Northern Minish Crack",
+    "name": "Swamp - Minish Fusion North Crack",
     "map_locations": [
       {
         "map": "map",
-        "x": 131,
-        "y": 1165,
+        "x": 133,
+        "y": 1167,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 133,
+        "y": 49,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -430,12 +550,20 @@
     ]
   },
   {
-    "name": "Castor Wilds - Joy Butterfly",
+    "name": "Swamp - Butterfly Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 280,
-        "y": 1465,
+        "x": 283,
+        "y": 1463,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_swamp",
+        "x": 283,
+        "y": 345,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -443,7 +571,7 @@
     ],
     "sections": [
       {
-        "name": "Joy Butterfly",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "$Json_Swamp_Butterfly_JoyButterfly"

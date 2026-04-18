@@ -4,6 +4,7 @@ ScriptHost:LoadScript(ScriptAutotracking.."location_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."room_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."events_mapping.lua")
 ScriptHost:LoadScript(ScriptAutotracking.."slots_data_mapping.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."zoom_mapping.lua")
 HINT_STATUS_MAPPING = {}
 if Highlight then
 	HINT_STATUS_MAPPING = {
@@ -618,6 +619,7 @@ function onClear(slot_data)
         Archipelago:SetNotify({getHintDataStorageKey()})
         Archipelago:Get({getHintDataStorageKey()})
         updateMap(0, true)
+		updateZoom(0, true)
         ROOM_ID = "tmc_room_"..TEAM_NUMBER.."_"..PLAYER_ID
         Archipelago:SetNotify({ROOM_ID})
         Archipelago:Get({ROOM_ID})
@@ -775,6 +777,7 @@ function onNotify(k, v, old_value)
 		end
 		if k == ROOM_ID then
 			updateMap(v, false)
+			updateZoom(v, false)
 		elseif k == CLIENTSTATUS then
 			updateStatus(_, v)
 		elseif k == getHintDataStorageKey() then
@@ -806,6 +809,7 @@ function onNotifyLaunch(k, v)
 	
 	if k == ROOM_ID then
         updateMap(v, false)
+		updateZoom(v, false)
     elseif k == CLIENTSTATUS then
         updateStatus(_, v)
 	elseif k == getHintDataStorageKey() then
@@ -879,11 +883,36 @@ function updateStatus(_, v)
 	end
     if v == 30 then
         Tracker:FindObjectForCode("dhc").Active = 1
-        Tracker:FindObjectForCode("@DHC/Vaati").AvailableChestCount = 0
-        Tracker:FindObjectForCode("@DHC/Win").AvailableChestCount = 0
+        Tracker:FindObjectForCode("@DHC/2F - Vaati - Kill").AvailableChestCount = 0
+        Tracker:FindObjectForCode("@DHC/Sanctuary - Win").AvailableChestCount = 0
         Tracker:FindObjectForCode("@Dark Hyrule Castle - Pull the Pedestal/Win").AvailableChestCount = 0
         Tracker:FindObjectForCode("@Dark Hyrule Castle - Vaati/Kill").AvailableChestCount = 0
     end
+end
+function updateZoom(v, reset)
+	if v ~= nil then
+		local tab_auto = Tracker:FindObjectForCode("auto_tab_no")
+		if tab_auto and tab_auto.CurrentStage == 0 then
+			return
+		end
+		local hex = string.upper(string.format('%04x',v))
+		local info=ZOOM_MAPPING[hex]
+		if AP_AUTOTRACKER_ENABLE_DEBUG_EVENT then
+			print(string.format("----- ZOOM -----"))
+			print(string.format("[ZOOM][INFO] Value - %s", v))
+			print(string.format("[ZOOM][INFO] reset - %s", reset))
+			print(string.format("[ZOOM][INFO] hex - %s", hex))
+			print(string.format("[ZOOM][INFO] ZOOM_MAPPING[hex] - %s", ZOOM_MAPPING[hex]))
+			print(string.format("[ZOOM][INFO] info[1] - %s", info[1]))
+			print(string.format("[ZOOM][INFO] info[2] - %s", info[2]))
+			print(string.format("[ZOOM][INFO] info[3] - %s", info[3]))
+			print(string.format("[ZOOM][INFO] info[4] - %s", info[4]))
+			print(string.format("----- ZOOM -----"))
+		end
+		-- Tracker:UiHint("Zoom "..info[1], info[2])
+		-- Tracker:UiHint("Pan "..info[1], info[3])
+		-- Futur maj
+	end
 end
 
 function updateMap(v, reset)

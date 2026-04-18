@@ -121,9 +121,9 @@ function Clouds_WindTribeHouse_Fuser7()
 	end
 end
 function Clouds_Fuser()
-	item1 = Tracker:FindObjectForCode("@Wind Tribe House/2F Gregal's Gift")
-	item2 = Tracker:FindObjectForCode("@Wind Tribe House/3F Chests")
-	item3 = Tracker:FindObjectForCode("@Wind Tribe House/4F Chests")
+	item1 = Tracker:FindObjectForCode("@Wind Tribe/2F - Gregal Gift 2")
+	item2 = Tracker:FindObjectForCode("@Wind Tribe/3F - Chests")
+	item3 = Tracker:FindObjectForCode("@Wind Tribe/4F - Chests")
 	local count = 0
 	if item1.AvailableChestCount ~= 1 then
 		count = count + 1
@@ -135,9 +135,9 @@ function Clouds_Fuser()
 		count = count + 1
 	end
 	if function_Cached("StrangerFusion") == 0 then
-		item4 = Tracker:FindObjectForCode("@Wind Tribe House/1F Chests")
-		item5 = Tracker:FindObjectForCode("@Wind Tribe House/2F Chest")
-		item6 = Tracker:FindObjectForCode("@Wind Tribe House/2F Save Gregal")
+		item4 = Tracker:FindObjectForCode("@Wind Tribe House/1F - Chests")
+		item5 = Tracker:FindObjectForCode("@Wind Tribe House/2F - Chest")
+		item6 = Tracker:FindObjectForCode("@Wind Tribe House/2F - Gregal Gift 1")
 		if item4.AvailableChestCount ~= 2 then
 			count = count + 1
 		end

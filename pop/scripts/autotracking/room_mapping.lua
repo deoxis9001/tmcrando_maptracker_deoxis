@@ -465,30 +465,30 @@ ROOM_FLAG_MAPPING_SPEC = {
     ['0247'] = {[0] = {'Overworld'}}, -- Clone Test Cave - End
 
     -- area = 48
-    ['0048'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Madderpillar
-    ['0148'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Pre-Madderpillar, Blue Portal
-    ['0248'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Stairs to B1
-    ['0348'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Pot Bridge Room
-    ['0448'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Double Statue Room
-    ['0548'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Map & Heart Piece Room
-    ['0648'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Barrel Room
-    ['0748'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Button & Mushrooms
-    ['0848'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Mulldozer Fight
-    ['0948'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Pillars & Slugs
-    ['0A48'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Lever & Mushroom
-    ['0B48'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Entrance Room
-    ['1048'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Slug & Torch Room
-    ['1148'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B2'}}, -- Deepwood Shrine - Boss Key Room
-    ['1248'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B2'}}, -- Deepwood Shrine - Compass Room
-    ['1348'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B2'}}, -- Deepwood Shrine - Unused
-    ['1448'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B2'}}, -- Deepwood Shrine - Lily Pad West
-    ['1548'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B2'}}, -- Deepwood Shrine - Lily Pad East
-    ['1648'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B2'}}, -- Deepwood Shrine - Softlock
-    ['1748'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Pre-Boss Room
-    ['2048'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Inside Barrel
+    ['0048'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Madderpillar
+    ['0148'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Pre-Madderpillar, Blue Portal
+    ['0248'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Stairs to B1
+    ['0348'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Pot Bridge Room
+    ['0448'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Double Statue Room
+    ['0548'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Map & Heart Piece Room
+    ['0648'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Barrel Room
+    ['0748'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Button & Mushrooms
+    ['0848'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Mulldozer Fight
+    ['0948'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Pillars & Slugs
+    ['0A48'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Lever & Mushroom
+    ['0B48'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Entrance Room
+    ['1048'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Slug & Torch Room
+    ['1148'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Boss Key Room
+    ['1248'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Compass Room
+    ['1348'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Unused
+    ['1448'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Lily Pad West
+    ['1548'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Lily Pad East
+    ['1648'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', 'B1'}}, -- Deepwood Shrine - Softlock
+    ['1748'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '2F'}}, -- Deepwood Shrine - Pre-Boss Room
+    ['2048'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine - Inside Barrel
 
     -- area = 49
-    ['0049'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '1F'}}, -- Deepwood Shrine Boss Room - Main
+    ['0049'] = {[0] = {'Maps Dungeons', 'Deepwood Shrine', '2F'}}, -- Deepwood Shrine Boss Room - Main
 
     -- area = 4A
     ['004A'] = {[0] = {'Overworld'}}, -- Outside Deepwood Shrine - Main
@@ -725,7 +725,7 @@ ROOM_FLAG_MAPPING_SPEC = {
     ['0488'] = {[0] = {'Maps Dungeons', 'Dark Hyrule Castle', '3F'}}, -- Dark Hyrule Castle - Bottom Right Corner Key Chest
     ['0588'] = {[0] = {'Maps Dungeons', 'Dark Hyrule Castle', '3F'}}, -- Dark Hyrule Castle - Keaton Hall to Vaati
     ['0688'] = {[0] = {'Maps Dungeons', 'Dark Hyrule Castle', '3F'}}, -- Dark Hyrule Castle - Triple Darknut Fight
-    ['0788'] = {[0] = {'Maps Dungeons', 'Dark Hyrule Castle', '3F'}}, -- Dark Hyrule Castle - Top Left Stairs Corner
+    ['0788'] = {[0] = {'Maps Dungeons', 'Dark Hyrule Castle', '2F'}}, -- Dark Hyrule Castle - Top Left Stairs Corner
     ['0888'] = {[0] = {'Maps Dungeons', 'Dark Hyrule Castle', '2F'}}, -- Dark Hyrule Castle - Top Left Eye Fire Bar
     ['0988'] = {[0] = {'Maps Dungeons', 'Dark Hyrule Castle', '2F'}}, -- Dark Hyrule Castle - Boss Key Room
     ['0A88'] = {[0] = {'Maps Dungeons', 'Dark Hyrule Castle', '2F'}}, -- Dark Hyrule Castle - Darknut Miniboss to Boss Key

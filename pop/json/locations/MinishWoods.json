@@ -1,16 +1,21 @@
 [
   {
-    "name": "Minish Woods North - Syrup's Hut",
+    "name": "Minish Woods - Witch Hut",
     "map_locations": [
       {
         "map": "map",
-        "x": 2435,
-        "y": 1470
+        "x": 2449,
+        "y": 1487
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 469,
+        "y": 50
       }
     ],
     "sections": [
       {
-        "name": "Item (60 Rupees)",
+        "name": "Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_MinishWoods_SyrupsHut_Item"
@@ -21,17 +26,22 @@
     ]
   },
   {
-    "name": "Minish Woods - Shrine Heart Piece",
+    "name": "Minish Woods - Bottom",
     "map_locations": [
       {
         "map": "map",
-        "x": 2250,
-        "y": 1900
+        "x": 2252,
+        "y": 1901
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 272,
+        "y": 464
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_MinishWoods_ShrineHeartPiece_HeartPiece"
@@ -42,12 +52,27 @@
     ]
   },
   {
-    "name": "Minish Woods North - Mitts Cave",
+    "name": "Witch - Digging Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 2300,
-        "y": 1600
+        "x": 2358,
+        "y": 1373
+      },
+      {
+        "map": "map",
+        "x": 2315,
+        "y": 1607
+      },
+      {
+        "map": "map_hylia",
+        "x": 218,
+        "y": 574
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 335,
+        "y": 170
       }
     ],
     "sections": [
@@ -73,12 +98,17 @@
     ]
   },
   {
-    "name": "Minish Woods - Great Fairy",
+    "name": "Minish - Great Fairy",
     "map_locations": [
       {
         "map": "map",
-        "x": 2050,
-        "y": 1470
+        "x": 2055,
+        "y": 1485
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 75,
+        "y": 48
       }
     ],
     "sections": [
@@ -94,17 +124,22 @@
     ]
   },
   {
-    "name": "Minish Woods - Minish Village",
+    "name": "Minish Village",
     "map_locations": [
       {
         "map": "map",
-        "x": 2297,
+        "x": 2295,
         "y": 2000
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 315,
+        "y": 563
       }
     ],
     "sections": [
       {
-        "name": "Barrel",
+        "name": "Barrel House - Item",
         "item_count": 1,
         "access_rules": [
           "^$Json_MinishWoods_MinishVillage_Barrel"
@@ -113,25 +148,13 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_MinishWoods_MinishVillage_HeartPiece"
         ],
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
-      },
-      {
-        "name": "Chest",
-        "visibility_rules": [
-          "$FusionsGreen"
-        ],
-        "item_count": 1,
-        "access_rules": [
-          "^$Json_MinishWoods_MinishVillage_Chest"
-        ],
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
         "name": "Fuser Forest Minish (Lake) 2",
@@ -196,12 +219,46 @@
     ]
   },
   {
-    "name": "Minish Woods - Minish Flippers Cave",
+    "name": "Minish Woods - Minish Path Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 2050,
-        "y": 1800
+        "x": 2295,
+        "y": 2050
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 315,
+        "y": 613
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest",
+        "visibility_rules": [
+          "$FusionsGreen"
+        ],
+        "item_count": 1,
+        "access_rules": [
+          "^$Json_MinishWoods_MinishVillage_Chest"
+        ],
+        "chest_unopened_img": "images/items-map/chest_closed.png",
+        "chest_opened_img": "images/items-map/chest_open.png"
+      }
+    ]
+  },
+  {
+    "name": "Minish Woods - Flipper Hole",
+    "map_locations": [
+      {
+        "map": "map",
+        "x": 2049,
+        "y": 1797
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 69,
+        "y": 360
       }
     ],
     "sections": [
@@ -215,7 +272,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Left Heart Piece",
+        "name": "Left HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_MinishWoods_MinishFlippersCave_LeftHeartPiece"
@@ -244,12 +301,17 @@
     ]
   },
   {
-    "name": "Minish Woods - Like Like Cave",
+    "name": "Minish Woods - Like Like Digging Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 2375,
+        "x": 2379,
         "y": 1650
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 399,
+        "y": 213
       }
     ],
     "sections": [
@@ -265,17 +327,22 @@
     ]
   },
   {
-    "name": "Minish Woods - Belari",
+    "name": "Minish Woods - Bomb Minish",
     "map_locations": [
       {
         "map": "map",
-        "x": 2175,
-        "y": 1950
+        "x": 2187,
+        "y": 1968
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 207,
+        "y": 531
       }
     ],
     "sections": [
       {
-        "name": "Gift 1st Item",
+        "name": "Gift 1",
         "item_count": 1,
         "access_rules": [
           "^$Json_MinishWoods_Belari_Gift1stItem"
@@ -284,7 +351,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Gift 2nd Item",
+        "name": "Gift 2",
         "visibility_rules": [
           "$FusionsRed"
         ],
@@ -308,12 +375,20 @@
     ]
   },
   {
-    "name": "Minish Woods - Pre Minish Village - Minish Hole",
+    "name": "Minish Woods - Crack Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 2336,
-        "y": 2081,
+        "x": 2337,
+        "y": 2083,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 357,
+        "y": 646,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -332,12 +407,20 @@
     ]
   },
   {
-    "name": "Minish Woods - Pre Stump Chest",
+    "name": "Minish Woods - East Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 2580,
+        "x": 2582,
         "y": 1826,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 602,
+        "y": 389,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -356,12 +439,20 @@
     ]
   },
   {
-    "name": "Minish Woods - Pre Shrine Chest",
+    "name": "Minish Woods - South Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 2421,
-        "y": 1921,
+        "x": 2422,
+        "y": 1923,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 442,
+        "y": 486,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -380,12 +471,20 @@
     ]
   },
   {
-    "name": "Minish Woods - Post Minish Village",
+    "name": "Minish Woods - Post Village Fusion",
     "map_locations": [
       {
         "map": "map",
         "x": 2038,
         "y": 1879,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 58,
+        "y": 442,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -404,12 +503,20 @@
     ]
   },
   {
-    "name": "Minish Woods North - Octo Golden",
+    "name": "Minish Woods - Golden Octo",
     "map_locations": [
       {
         "map": "map",
         "x": 2200,
         "y": 1550,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 220,
+        "y": 113,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|golden_enemy_on"
         ]
@@ -428,12 +535,20 @@
     ]
   },
   {
-    "name": "Minish Woods - Entrance",
+    "name": "Minish Woods - West Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 2112,
+        "x": 2114,
         "y": 1677,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 134,
+        "y": 240,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -452,12 +567,20 @@
     ]
   },
   {
-    "name": "Minish Woods North - Cross the Pond",
+    "name": "Minish Woods North - Fusion",
     "map_locations": [
       {
         "map": "map",
         "x": 2049,
         "y": 1571,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 69,
+        "y": 134,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -476,17 +599,22 @@
     ]
   },
   {
-    "name": "Minish Woods North - Heart Piece",
+    "name": "Minish Woods - Top",
     "map_locations": [
       {
         "map": "map",
-        "x": 2100,
-        "y": 1620
+        "x": 2114,
+        "y": 1645
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 134,
+        "y": 208
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "capture_item": true,
         "access_rules": [
@@ -506,6 +634,13 @@
         "y": 1710,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_minishwoods",
+        "x": 350,
+        "y": 273,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [

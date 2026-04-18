@@ -79,8 +79,8 @@ function FusionsGoldCloudNumber()
 	local BottomRight = Tracker:FindObjectForCode("@Clouds - Bottom Right Fusion/Fusion")
 	local BottomLeft = Tracker:FindObjectForCode("@Clouds - Bottom Left Fusion/Fusion")
 	local Central = Tracker:FindObjectForCode("@Clouds - Central Fusion/Fusion")
-	local Swamp = Tracker:FindObjectForCode("@Castor Wilds - Fusions/Fusions")
-	local Fall = Tracker:FindObjectForCode("@Veil Falls - Source of the Flow Cave/Fusion")
+	local Swamp = Tracker:FindObjectForCode("@Swamp - Fusions/Fusions")
+	local Fall = Tracker:FindObjectForCode("@Falls - Kinstone Door Open/Fusion")
 	-- print("item.AcquiredCount",item.AcquiredCount)
 	local compte = 0
 	if TopRight.AvailableChestCount == 0 then
@@ -118,8 +118,8 @@ function FusionsGoldSwampNumber()
 	local BottomRight = Tracker:FindObjectForCode("@Clouds - Bottom Right Fusion/Fusion")
 	local BottomLeft = Tracker:FindObjectForCode("@Clouds - Bottom Left Fusion/Fusion")
 	local Central = Tracker:FindObjectForCode("@Clouds - Central Fusion/Fusion")
-	local Swamp = Tracker:FindObjectForCode("@Castor Wilds - Fusions/Fusions")
-	local Fall = Tracker:FindObjectForCode("@Veil Falls - Source of the Flow Cave/Fusion")
+	local Swamp = Tracker:FindObjectForCode("@Swamp - Fusions/Fusions")
+	local Fall = Tracker:FindObjectForCode("@Falls - Kinstone Door Open/Fusion")
 	-- print("item.AcquiredCount",item.AcquiredCount)
 	local compte = 0
 	if Swamp.AvailableChestCount == 0 then

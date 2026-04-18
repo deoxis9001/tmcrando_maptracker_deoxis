@@ -4,8 +4,13 @@
     "map_locations": [
       {
         "map": "map",
-        "x": 1622,
-        "y": 1835
+        "x": 1624,
+        "y": 1837
+      },
+      {
+        "map": "map_southfield",
+        "x": 634,
+        "y": 127
       }
     ],
     "sections": [
@@ -41,12 +46,17 @@
     ]
   },
   {
-    "name": "South Field - Smith's House",
+    "name": "South Field - Smith House",
     "map_locations": [
       {
         "map": "map",
-        "x": 1430,
-        "y": 1900
+        "x": 1427,
+        "y": 1918
+      },
+      {
+        "map": "map_southfield",
+        "x": 437,
+        "y": 208
       }
     ],
     "sections": [
@@ -82,17 +92,22 @@
     ]
   },
   {
-    "name": "South Field - Minish Flippers Hole",
+    "name": "South Field - Minish Size Water Hole",
     "map_locations": [
       {
         "map": "map",
-        "x": 1225,
-        "y": 1800
+        "x": 1241,
+        "y": 1798
+      },
+      {
+        "map": "map_southfield",
+        "x": 251,
+        "y": 88
       }
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_SouthHyruleField_MinishFlippersHole_HeartPiece"
@@ -103,12 +118,20 @@
     ]
   },
   {
-    "name": "South Field - Rupee Cave",
+    "name": "South Field - Puddle Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1047,
-        "y": 1836,
+        "x": 1049,
+        "y": 1842,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|rupees_on"
+        ]
+      },
+      {
+        "map": "map_southfield",
+        "x": 59,
+        "y": 132,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|rupees_on"
         ]
@@ -116,7 +139,7 @@
     ],
     "sections": [
       {
-        "name": "Rupees",
+        "name": "Items",
         "item_count": 15,
         "access_rules": [
           "^$Json_SouthHyruleField_RupeeCave_Rupees"
@@ -127,12 +150,20 @@
     ]
   },
   {
-    "name": "South Field - Tree Heart Piece",
+    "name": "South Field - Tree Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1622,
-        "y": 2000,
+        "x": 1608,
+        "y": 2018,
+        "restrict_visibility_rules": [
+          "$FusionsBlue"
+        ]
+      },
+      {
+        "map": "map_southfield",
+        "x": 618,
+        "y": 308,
         "restrict_visibility_rules": [
           "$FusionsBlue"
         ]
@@ -140,7 +171,7 @@
     ],
     "sections": [
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_SouthHyruleField_TreeHeartPiece_HeartPiece"
@@ -151,12 +182,20 @@
     ]
   },
   {
-    "name": "South Field - Near Link's House Chest",
+    "name": "South Field - Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1505,
-        "y": 1889,
+        "x": 1507,
+        "y": 1892,
+        "restrict_visibility_rules": [
+          "$FusionsGreen"
+        ]
+      },
+      {
+        "map": "map_southfield",
+        "x": 517,
+        "y": 182,
         "restrict_visibility_rules": [
           "$FusionsGreen"
         ]
@@ -183,6 +222,13 @@
         "y": 1936,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_southfield",
+        "x": 57,
+        "y": 226,
+        "shape": "diamond",
+        "size": 28
       }
     ],
     "sections": [

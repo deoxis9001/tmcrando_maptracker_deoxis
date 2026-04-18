@@ -1,16 +1,21 @@
 [
   {
-    "name": "Eastern Hills - Mitts cave",
+    "name": "Hills - Farm Dig Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 1700,
-        "y": 1560
+        "x": 1699,
+        "y": 1563
+      },
+      {
+        "map": "map_hills",
+        "x": 38,
+        "y": 123
       }
     ],
     "sections": [
       {
-        "name": "Rupee",
+        "name": "Item",
         "item_count": 1,
         "visibility_rules": [
           "rupees_on"
@@ -34,12 +39,17 @@
     ]
   },
   {
-    "name": "Eastern Hills - Bombable Wall",
+    "name": "Hills - Bomb Cave",
     "map_locations": [
       {
         "map": "map",
-        "x": 1775,
-        "y": 1900
+        "x": 1773,
+        "y": 1903
+      },
+      {
+        "map": "map_hills",
+        "x": 112,
+        "y": 463
       }
     ],
     "sections": [
@@ -55,12 +65,20 @@
     ]
   },
   {
-    "name": "Eastern Hills - Rope Golden",
+    "name": "Hills - Golden Rope",
     "map_locations": [
       {
         "map": "map",
-        "x": 1725,
-        "y": 1725,
+        "x": 1730,
+        "y": 1730,
+        "restrict_visibility_rules": [
+          "$FusionsGreen,$has|golden_enemy_on"
+        ]
+      },
+      {
+        "map": "map_hills",
+        "x": 69,
+        "y": 290,
         "restrict_visibility_rules": [
           "$FusionsGreen,$has|golden_enemy_on"
         ]
@@ -79,12 +97,20 @@
     ]
   },
   {
-    "name": "Eastern Hills - Farm",
+    "name": "Hills - Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1795,
-        "y": 1685,
+        "x": 1794,
+        "y": 1688,
+        "restrict_visibility_rules": [
+          "$FusionsRed"
+        ]
+      },
+      {
+        "map": "map_hills",
+        "x": 133,
+        "y": 248,
         "restrict_visibility_rules": [
           "$FusionsRed"
         ]
@@ -103,12 +129,20 @@
     ]
   },
   {
-    "name": "Eastern Hills - Beanstalk",
+    "name": "Hills - Beanstalk Fusion",
     "map_locations": [
       {
         "map": "map",
-        "x": 1705,
-        "y": 1830,
+        "x": 1710,
+        "y": 1805,
+        "restrict_visibility_rules": [
+          "$FusionsBlue"
+        ]
+      },
+      {
+        "map": "map_hills",
+        "x": 49,
+        "y": 365,
         "restrict_visibility_rules": [
           "$FusionsBlue"
         ]
@@ -125,7 +159,7 @@
         "chest_opened_img": "images/items-map/chest_open.png"
       },
       {
-        "name": "Heart Piece",
+        "name": "HP",
         "item_count": 1,
         "access_rules": [
           "^$Json_Hills_Beanstalk_HeartPiece"
@@ -136,7 +170,7 @@
     ]
   },
   {
-    "name": "Eastern Hills - Minish House",
+    "name": "Hills - Minish House",
     "map_locations": [
       {
         "map": "map",
@@ -144,6 +178,13 @@
         "y": 2000,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_hills",
+        "x": 44,
+        "y": 560,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
@@ -160,7 +201,7 @@
     ]
   },
   {
-    "name": "Eastern Hills - Farmer",
+    "name": "Hills - Farmer",
     "map_locations": [
       {
         "map": "map",
@@ -168,6 +209,13 @@
         "y": 1570,
         "shape": "diamond",
         "size": 70
+      },
+      {
+        "map": "map_hills",
+        "x": 134,
+        "y": 130,
+        "shape": "diamond",
+        "size": 35
       }
     ],
     "sections": [
