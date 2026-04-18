@@ -354,7 +354,7 @@ end
 if PopVersion then
 	ScriptHost:LoadScript(Script.."autotracking.lua")
 else
-	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
+	ScriptHost:LoadScript(ScriptAutotracking.."autotracking_testing.lua")
 end
 if PopVersion then
 	ScriptHost:AddWatchForCode("accessibilityUpdating","*", tracker_on_accessibility_updating)
