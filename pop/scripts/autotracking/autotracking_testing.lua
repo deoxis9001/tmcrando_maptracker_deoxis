@@ -1,4 +1,5 @@
 ScriptHost:LoadScript(ScriptAutotracking.."room_id_fonction.lua")
+ScriptHost:LoadScript(ScriptAutotracking.."room_mapping.lua")
 
 items_codes_autotracking={}
 items_codes_autotracking_cache={}
@@ -49,14 +50,14 @@ items_codes_autotracking_cache["RC_ENTER"]["COUNT"]={}
 items_codes_autotracking_cache["RC_ENTER"]["ACTIVE"]={}
 items_codes_autotracking_cache["RC_ENTER"]["SETTING"]={}
 
-items_codes_autotracking_cache["FUSION_RED"]={}
-items_codes_autotracking_cache["FUSION_RED"]["LOC_ACTIVE"]={}
-
-items_codes_autotracking_cache["FUSION_BLUE"]={}
-items_codes_autotracking_cache["FUSION_BLUE"]["LOC_ACTIVE"]={}
-
-items_codes_autotracking_cache["FUSION_GREEN"]={}
-items_codes_autotracking_cache["FUSION_GREEN"]["LOC_ACTIVE"]={}
+items_codes_autotracking["redW"] = true
+items_codes_autotracking["redV"] = true
+items_codes_autotracking["redE"] = true
+items_codes_autotracking["blueL"] = true
+items_codes_autotracking["blueS"] = true
+items_codes_autotracking["greenG"] = true
+items_codes_autotracking["greenC"] = true
+items_codes_autotracking["greenP"] = true
 
 code_type_cache={}
 
@@ -180,9 +181,9 @@ function updateWall(segment, code, address)
 end
 function updateWallUsedFixed(code, segment, locationData)
 	local item1 = Tracker:FindObjectForCode("blueL")
-	local item2_blues = Tracker:FindObjectForCode("blueS")
+	local item2 = Tracker:FindObjectForCode("blueS")
 
-	if item1 or item2_blues then
+	if item1 or item2 then
 		local fusion_count_wall_local = 0
 		fusion_count_wall["blueL"] = 0
 		fusion_count_wall["blueS"] = 0
@@ -209,7 +210,7 @@ function updateWallUsedFixed(code, segment, locationData)
 			item1.ItemState:setActive(count_fusion1+count_fusion2)
 		else
 			item1.ItemState:setActive(count_fusion1)
-			item2_blues.ItemState:setActive(count_fusion2)
+			item2.ItemState:setActive(count_fusion2)
 		end
 			
 		if TMC_AUTOTRACKER_DEBUG_ITEM then
@@ -305,8 +306,8 @@ function updateToggleFlagSettings(segment, type, code, address, flag)
 			else
 				items_codes_autotracking_cache[type]["SETTING"][code]= 1
 			end
-		else
-				item.CurrentStage = 0
+		--else
+--			item.Active = false
 		end
 	end
 end
@@ -1533,8 +1534,14 @@ function updateFusionUsedFixed(code, segment, locationData)
 			end
 		else
 			count_fusion = fusion_count[code] + fusion_count_used[code]
-		end 
+		end
 		item.ItemState:setActive(count_fusion)
+			print("--tracking "..code.."--")
+			print("sac:", fusion_count[code])
+			print("used:",fusion_count_used[code])
+			print("wall:", fusion_count_wall[code])
+			print("total:", count_fusion)
+			print("------------------")
 		if TMC_AUTOTRACKER_DEBUG_ITEM then
 			print("--tracking "..code.."--")
 			print("sac:", fusion_count[code])
@@ -1630,6 +1637,7 @@ function updateWilds(segment, code, flag)
 	end
 	wilds:setActive(WildsFused + WildsBag)
 	if TMC_AUTOTRACKER_DEBUG_ITEM then
+
 		print("Wilds Obtained", WildsBag)
 	end
 end
@@ -1727,7 +1735,7 @@ end
 function updateHearts(segment, address)
 	local item = Tracker:FindObjectForCode("hearts")
 	if item then
-		item.CurrentStage = ReadU8(segment, address) / 8 - 1
+		item.CurrentStage = ReadU8(segment, address) / 8 - 3
 	end
 end
 function updateWarps(segment, type)
@@ -1808,7 +1816,6 @@ function updateWarps(segment, type)
 end
 function updateBigKeys(segment, code)
 	local item = Tracker:FindObjectForCode("big_key_none")
-	local item2_require = Tracker:FindObjectForCode("require_reward_no_yes")
 	if code == "ud_bigkey" and item.CurrentStage == 3 then
 		updateToggleFlag(segment, "ud_bigkey", 0x2002eac, 0x04)
 	elseif code == "dws_bigkey"  and item.CurrentStage < 3 then
@@ -1855,7 +1862,7 @@ function updateBigKeys(segment, code)
 		else
 			updateToggleFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
 		end
-	elseif code == "dhc_bigkey"  and (item.CurrentStage < 3 or  item2_require.CurrentStage == 1 ) then
+	elseif code == "dhc_bigkey"  and item.CurrentStage < 3 then
 		if testFlag(segment, 0x2002DBE, 0x20)  and code_type_cache["DHC_ENTER"] == 1 then
 			updateToggleFlag(segment, "dhc_bigkey", 0x2002DBE, 0x20)
 		elseif testFlag(segment, 0x2002DBE, 0x20) then
@@ -1867,7 +1874,7 @@ function updateBigKeys(segment, code)
 end
 
 function updateSmallKeys(segment, code, address)
-	local item2_small_key = Tracker:FindObjectForCode("small_key_none")	  
+	local item2 = Tracker:FindObjectForCode("small_key_none")	  
 	local item = Tracker:FindObjectForCode(code)
 	if code == "dws_smallkey" then
 		DWS_KEY_USED = 0
@@ -1884,10 +1891,10 @@ function updateSmallKeys(segment, code, address)
 			DWS_KEY_USED = DWS_KEY_USED + 1
 		end
 		DWS_KEY_COUNT = ReadU8(segment, address)
-		if DWS_KEY_COUNT > 0 and code_type_cache["DWS_ENTER"]==1 and item2_small_key.CurrentStage < 3 then
+		if DWS_KEY_COUNT > 0 and code_type_cache["DWS_ENTER"]==1 and item2.CurrentStage < 3 then
 			items_codes_autotracking_cache["DWS_ENTER"]["COUNT"][code] = DWS_KEY_COUNT + DWS_KEY_USED
 			item.AcquiredCount = DWS_KEY_COUNT + DWS_KEY_USED
-		elseif DWS_KEY_COUNT > 0 and item2_small_key.CurrentStage < 3 then
+		elseif DWS_KEY_COUNT > 0 and item2.CurrentStage < 3 then
 			items_codes_autotracking_cache["DWS_ENTER"]["COUNT"][code] = DWS_KEY_COUNT
 			item.AcquiredCount = DWS_KEY_COUNT
 		end
@@ -1900,10 +1907,10 @@ function updateSmallKeys(segment, code, address)
 			COF_KEY_USED = COF_KEY_USED + 1
 		end
 		COF_KEY_COUNT = ReadU8(segment, address)
-		if COF_KEY_COUNT > 0 and code_type_cache["COF_ENTER"]==1  and item2_small_key.CurrentStage < 3 then
+		if COF_KEY_COUNT > 0 and code_type_cache["COF_ENTER"]==1  and item2.CurrentStage < 3 then
 			items_codes_autotracking_cache["COF_ENTER"]["COUNT"][code] = COF_KEY_COUNT + COF_KEY_USED
 			item.AcquiredCount = COF_KEY_COUNT + COF_KEY_USED
-		elseif COF_KEY_COUNT > 0  and item2_small_key.CurrentStage < 3 then
+		elseif COF_KEY_COUNT > 0  and item2.CurrentStage < 3 then
 			items_codes_autotracking_cache["COF_ENTER"]["COUNT"][code] = COF_KEY_COUNT
 			item.AcquiredCount = COF_KEY_COUNT
 		end
@@ -1922,10 +1929,10 @@ function updateSmallKeys(segment, code, address)
 			FOW_KEY_USED = FOW_KEY_USED + 1
 		end
 		FOW_KEY_COUNT = ReadU8(segment, address)
-		if FOW_KEY_COUNT > 0 and code_type_cache["FOW_ENTER"]==1  and item2_small_key.CurrentStage < 3 then
+		if FOW_KEY_COUNT > 0 and code_type_cache["FOW_ENTER"]==1  and item2.CurrentStage < 3 then
 			items_codes_autotracking_cache["FOW_ENTER"]["COUNT"][code] = FOW_KEY_COUNT + FOW_KEY_USED
 			item.AcquiredCount = FOW_KEY_COUNT + FOW_KEY_USED
-		elseif FOW_KEY_COUNT > 0  and item2_small_key.CurrentStage < 3 then
+		elseif FOW_KEY_COUNT > 0  and item2.CurrentStage < 3 then
 			items_codes_autotracking_cache["FOW_ENTER"]["COUNT"][code] = FOW_KEY_COUNT
 			item.AcquiredCount = FOW_KEY_COUNT
 		end
@@ -1944,10 +1951,10 @@ function updateSmallKeys(segment, code, address)
 			TOD_KEY_USED = TOD_KEY_USED + 1
 		end
 		TOD_KEY_COUNT = ReadU8(segment, address)
-		if TOD_KEY_COUNT > 0 and code_type_cache["TOD_ENTER"]==1 and item2_small_key.CurrentStage < 3  then
+		if TOD_KEY_COUNT > 0 and code_type_cache["TOD_ENTER"]==1 and item2.CurrentStage < 3  then
 			items_codes_autotracking_cache["TOD_ENTER"]["COUNT"][code] = TOD_KEY_COUNT + TOD_KEY_USED
 			item.AcquiredCount = TOD_KEY_COUNT + TOD_KEY_USED
-		elseif TOD_KEY_COUNT > 0 and item2_small_key.CurrentStage < 3  then
+		elseif TOD_KEY_COUNT > 0 and item2.CurrentStage < 3  then
 			items_codes_autotracking_cache["TOD_ENTER"]["COUNT"][code] = TOD_KEY_COUNT
 			item.AcquiredCount = TOD_KEY_COUNT
 		end
@@ -1972,10 +1979,10 @@ function updateSmallKeys(segment, code, address)
 			POW_KEY_USED = POW_KEY_USED + 1
 		end
 		POW_KEY_COUNT = ReadU8(segment, address)
-		if POW_KEY_COUNT > 0 and code_type_cache["POW_ENTER"]==1  and item2_small_key.CurrentStage < 3 then
+		if POW_KEY_COUNT > 0 and code_type_cache["POW_ENTER"]==1  and item2.CurrentStage < 3 then
 			items_codes_autotracking_cache["POW_ENTER"]["COUNT"][code] = POW_KEY_COUNT + POW_KEY_USED
 			item.AcquiredCount = POW_KEY_COUNT + POW_KEY_USED
-		elseif POW_KEY_COUNT > 0  and item2_small_key.CurrentStage < 3 then
+		elseif POW_KEY_COUNT > 0  and item2.CurrentStage < 3 then
 			items_codes_autotracking_cache["POW_ENTER"]["COUNT"][code] = POW_KEY_COUNT
 			item.AcquiredCount = POW_KEY_COUNT
 		end
@@ -1997,10 +2004,10 @@ function updateSmallKeys(segment, code, address)
 			DHC_KEY_USED = DHC_KEY_USED + 1
 		end
 		DHC_KEY_COUNT = ReadU8(segment, address)
-		if DHC_KEY_COUNT > 0 and code_type_cache["DHC_ENTER"]==1 and item2_small_key.CurrentStage < 3  then
+		if DHC_KEY_COUNT > 0 and code_type_cache["DHC_ENTER"]==1 and item2.CurrentStage < 3  then
 			items_codes_autotracking_cache["DHC_ENTER"]["COUNT"][code] = DHC_KEY_USED + DHC_KEY_COUNT
 			item.AcquiredCount = DHC_KEY_COUNT + DHC_KEY_USED
-		elseif DHC_KEY_COUNT > 0 and item2_small_key.CurrentStage < 3  then
+		elseif DHC_KEY_COUNT > 0 and item2.CurrentStage < 3  then
 			items_codes_autotracking_cache["DHC_ENTER"]["COUNT"][code] = DHC_KEY_COUNT
 			item.AcquiredCount = DHC_KEY_COUNT
 		end
@@ -2016,14 +2023,14 @@ function updateSmallKeys(segment, code, address)
 			RC_KEY_USED = RC_KEY_USED + 1
 		end
 		RC_KEY_COUNT = ReadU8(segment, address)
-		if RC_KEY_COUNT > 0 and code_type_cache["RC_ENTER"]==1 and item2_small_key.CurrentStage < 3  then
+		if RC_KEY_COUNT > 0 and code_type_cache["RC_ENTER"]==1 and item2.CurrentStage < 3  then
 			items_codes_autotracking_cache["RC_ENTER"]["COUNT"][code] = RC_KEY_COUNT + RC_KEY_USED
 			item.AcquiredCount = RC_KEY_COUNT + RC_KEY_USED
-		elseif RC_KEY_COUNT > 0 and item2_small_key.CurrentStage < 3  then
+		elseif RC_KEY_COUNT > 0 and item2.CurrentStage < 3  then
 			items_codes_autotracking_cache["RC_ENTER"]["COUNT"][code] = RC_KEY_COUNT
 			item.AcquiredCount = RC_KEY_COUNT
 		end
-	elseif code == "ud_smallkey" and item2_small_key.CurrentStage == 3 then	
+	elseif code == "ud_smallkey" and item2.CurrentStage == 3 then	
 		UD_KEY_COUNT = ReadU8(segment, address)
 		item.AcquiredCount = UD_KEY_COUNT + RC_KEY_USED + DHC_KEY_USED + POW_KEY_USED + TOD_KEY_USED + FOW_KEY_USED + COF_KEY_USED + DWS_KEY_USED
 	else
@@ -2234,16 +2241,19 @@ function UpdateGoronShop(segment)
 			right = 0
 		end
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", center)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center and Right", (center + right))
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left and Center", (center + left))
 	elseif count > 0 then
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", 0)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center and Right", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left and Center", 0)
 	else
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center", 1)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Center and Right", 2)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 1 - Item Left and Center", 2)
 	end
 	if count == 1 then
 		if testFlag(segment, 0x2002ca4, 0x04) then
@@ -2255,17 +2265,11 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Items", (left + center + right))
 	elseif count > 1 then
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Items", 0)
 	else
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 2 - Items", 3)
 	end
 	if count == 2 then
 		if testFlag(segment, 0x2002ca4, 0x04) then
@@ -2277,17 +2281,17 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Items", (left + center + right))
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Items Other", (center + right))
 	elseif count > 2 then
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Items", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Items Other", 0)
 	else
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Items", 3)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 3 - Items Other", 2)
 	end
 	if count == 3 then
 		if testFlag(segment, 0x2002ca4, 0x04) then
@@ -2299,17 +2303,11 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Items", (left + center + right))
 	elseif count > 3 then
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Items", 0)
 	else
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 4 - Items", 3)
 	end
 	if count == 4 then
 		if testFlag(segment, 0x2002ca4, 0x04) then
@@ -2321,17 +2319,17 @@ function UpdateGoronShop(segment)
 		if testFlag(segment, 0x2002ca4, 0x10) then
 			right = 0
 		end
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Items", (left + center + right))
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", left)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", center)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", right)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Items Other", (center + right))
 	elseif count > 4 then
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Items", 0)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", 0)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", 0)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Items Other", 0)
 	else
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Items", 3)
 		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Left", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Center", 1)
-		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Item Right", 1)
+		updateSectionFlagSpecial("@Town - Goron Shop/Set 5 - Items Other", 2)
 	end
 end
 function swordCheckFlag(segment)
@@ -2500,7 +2498,6 @@ function updateLocations(segment)
 	end
 
 	if AUTOTRACKER_ENABLE_FUSER_TRACKING then
-		if has("fusionred_vanilla") then
 			if fusionredcombined:getActive() then
 				updateFusionUsedFixed(
 					"redW",
@@ -2576,8 +2573,6 @@ function updateLocations(segment)
 					}
 				)
 			end
-		end
-		if has("fusionblue_vanilla") then
 			if fusionbluecombined:getActive() then
 				updateFusionUsedFixed(
 					"blueL",
@@ -2589,6 +2584,7 @@ function updateLocations(segment)
 						{0x2002c85, 0x80},
 						{0x2002c86, 0x01},
 						{0x2002c86, 0x10},
+						
 						{0x2002c86, 0x20},
 						{0x2002c86, 0x40},
 						{0x2002c87, 0x01},
@@ -2623,8 +2619,6 @@ function updateLocations(segment)
 					}
 				)
 			end
-		end
-		if has("fusiongreen_vanilla") then
 			if fusiongreencombined:getActive() then
 				updateFusionUsedFixed(
 					"greenC",
@@ -2750,8 +2744,6 @@ function updateLocations(segment)
 					}
 				)
 			end
-		end
-		if has("fusionred_vanilla") then
 			updateFusion("RedW", segment, "fusions0a", 0x2002c82, 0x04)
 			updateFusion("RedW", segment, "fusions0b", 0x2002c82, 0x08)
 			updateFusion("RedW", segment, "fusions0c", 0x2002c82, 0x10)
@@ -2778,8 +2770,7 @@ function updateLocations(segment)
 			updateFusion("RedE", segment, "fusions1f", 0x2002c84, 0x80)
 			updateFusion("RedE", segment, "fusions20", 0x2002c85, 0x01)
 			updateFusion("RedE", segment, "fusions21", 0x2002c85, 0x02)
-		end
-		if has("fusionblue_vanilla") then
+			
 			updateFusion("BlueL", segment, "fusions22", 0x2002c85, 0x04)
 			updateFusion("BlueL", segment, "fusions23", 0x2002c85, 0x08)
 			updateFusion("BlueL", segment, "fusions24", 0x2002c85, 0x10)
@@ -2793,8 +2784,7 @@ function updateLocations(segment)
 			updateFusion("BlueS", segment, "fusions31", 0x2002c87, 0x02)
 			updateFusion("BlueS", segment, "fusions32", 0x2002c87, 0x04)
 			updateFusion("BlueS", segment, "fusions33", 0x2002c87, 0x08)
-		end
-		if has("fusiongreen_vanilla") then			
+			
 			updateFusion("GreenC", segment, "fusions34", 0x2002c87, 0x10)
 			updateFusion("GreenC", segment, "fusions35", 0x2002c87, 0x20)
 			updateFusion("GreenC", segment, "fusions36", 0x2002c87, 0x40)
@@ -2846,7 +2836,6 @@ function updateLocations(segment)
 			updateFusion("GreenP", segment, "fusions5e", 0x2002c8c, 0x40)
 			updateFusion("GreenP", segment, "fusions61", 0x2002c8d, 0x02)
 			updateFusion("GreenP", segment, "fusions64", 0x2002c8d, 0x10)
-		end
 	end
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		-- if has("golden_enemy_on") then
@@ -3317,8 +3306,8 @@ function updateLocations(segment)
 			{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
 		)
 		updateDecreaseCountDungeons(segment, "COF_ENTER", "@Cave Of Flame/Big Chest Room", {{0x2002d59, 0x02}, {0x2002d59, 0x04}})
-		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/First Rollobite Room Chest", 0x2002d58, 0x80)
-		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/First Rollobite Room Pillar", 0x2002d58, 0x40)
+		updateSectionFlag(segment, "@Cave Of Flame/First Rollobite Room Chest", 0x2002d58, 0x80)
+		updateSectionFlag(segment, "@Cave Of Flame/First Rollobite Room Pillar", 0x2002d58, 0x40)
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Bombable Wall Heart Piece", 0x2002d5b, 0x10)
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Spiny Chu Fight", 0x2002d57, 0x02)
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/Spiny Chu Pillar Chest", 0x2002d57, 0x01)
@@ -3380,35 +3369,35 @@ function updateLocations(segment)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress/FOW Reward", 0x2002d74, 0x20)
 
 		-- MAP FOW
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Entrance 1F - Left/Chest", 0x2002d05, 0x80)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Entrance 1F - Right/Rupee", 0x2002d05, 0x40)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Entrance 1F - Left Wizzrobe/Kill", 0x2002d74, 0x08)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left 2F - Dig/Chest", 0x2002d06, 0x01)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Far Left Entrance Room/Chest", 0x2002d05, 0x80)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Entrance Rupee/Rupee", 0x2002d05, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Wizzrobe Fight/Kill", 0x2002d74, 0x08)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left Side 2nd Floor Mitts/Chest", 0x2002d06, 0x01)
 		updateDecreaseCountDungeons(
 			segment, "FOW_ENTER",
-			"@Fortress - Left 2F - Items/Rupees",
+			"@Fortress - Left Side Left Rupees/Rupees",
 			{{0x2002d06, 0x20}, {0x2002d06, 0x40}, {0x2002d06, 0x80}, {0x2002d07, 0x01}}
 		)
-		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress - Left 2F - Item Grabbable/Rupees", {{0x2002d07, 0x04}, {0x2002d07, 0x08}})
-		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress - Left 2F - Item Grabbable/Rupees Grabbable", {{0x2002d07, 0x02}})
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left 3F - Switch/Chest", 0x2002d07, 0x20)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left 3F - Eyegore/Kill", 0x2002d6f, 0x10)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left 3F - Item Drop/Drop", 0x2002d73, 0x80)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right 2F/Chest", 0x2002d73, 0x20)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right 2F - Right/Chest", 0x2002d73, 0x40)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right 2F - Dig/Chest", 0x2002d06, 0x04)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right 3F - Dig/Chest", 0x2002d07, 0x40)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right 3F - Item Drop/Drop", 0x2002d74, 0x02)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Entrance 1F - Right HP/Heart Piece", 0x2002d74, 0x80)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Middle 2F/Big Chest", 0x2002d73, 0x02)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Middle 2F - Statue/Drop", 0x2002d06, 0x02)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Back 2F - Left Big Chest/Big Chest", 0x2002d08, 0x01)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Back 2F - Left Small Chest/Chest", 0x2002d08, 0x02)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Back 2F - Right Statue/Drop", 0x2002d71, 0x40)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Back 2F - Right Minish/Drop", 0x2002d08, 0x10)
-		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Fortress - Back 2F - Right Dig Room Top/Drop", 0x2002d06, 0x08)
-		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Fortress - Back 2F - Right Dig Room Bottom/Drop", 0x2002d06, 0x10)
-		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Back 2F - Right/Big Chest", 0x2002d73, 0x04)
+		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress - Left Side Right Rupees/Rupees", {{0x2002d07, 0x04}, {0x2002d07, 0x08}})
+		updateDecreaseCountDungeons(segment, "FOW_ENTER", "@Fortress - Left Side Right Rupees/Rupees Grabbable", {{0x2002d07, 0x02}})
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left Side 3rd Floor Mitts/Chest", 0x2002d07, 0x20)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Eyegores/Kill", 0x2002d6f, 0x10)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Left Side Key/Drop", 0x2002d73, 0x80)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Two Lever Room Left/Chest", 0x2002d73, 0x20)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Two Lever Room Right/Chest", 0x2002d73, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right Side 2nd Floor Mitts/Chest", 0x2002d06, 0x04)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right Side 3rd Floor Mitts/Chest", 0x2002d07, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right Side Key/Drop", 0x2002d74, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Right Side Heart Piece/Heart Piece", 0x2002d74, 0x80)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Pedestal/Big Chest", 0x2002d73, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Center Path Switch/Drop", 0x2002d06, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Bombable Wall Big Chest/Big Chest", 0x2002d08, 0x01)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Bombable Wall Chest/Chest", 0x2002d08, 0x02)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Clone Puzzle Key/Drop", 0x2002d71, 0x40)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Minish Dirt Room Key/Drop", 0x2002d08, 0x10)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Fortress - Right Side Top Moldorm Pot/Drop", 0x2002d06, 0x08)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Fortress - Right Side Left Moldorm Pot/Drop", 0x2002d06, 0x10)
+		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Skull Room/Big Chest", 0x2002d73, 0x04)
 		updateSectionFlagDungeons(segment, "FOW_ENTER", "@Fortress - Mazaal/Heart", 0x2002d72, 0x04)
 		--TOD
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/First Ice Block", 0x2002d8e, 0x04)
@@ -3448,45 +3437,45 @@ function updateLocations(segment)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet/Octo", 0x2002d8c, 0x01)
 
 		-- MAP TOD
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Entrance B2 - East/Ice Block", 0x2002d8e, 0x04)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Entrance B2 - West/Ice Block", 0x2002d8d, 0x80)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Left Path B2 - Ice Madderpillar/Chest", 0x2002d92, 0x80)
-		updateSectionFlagSpecialCheck(segment, "UNDERWATER_SPOT", "@Droplet - Left Path B2 - Underwater/Drop", 0x2002d93, 0x04)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Left Path B1 - Waterfall/Chest", 0x2002d8b, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - First Ice Block/Ice Block", 0x2002d8e, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Key Locked Ice Block/Ice Block", 0x2002d8d, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Madderpillar/Chest", 0x2002d92, 0x80)
+		updateSectionFlagSpecialCheck(segment, "UNDERWATER_SPOT", "@Droplet - Underwater Pot/Drop", 0x2002d93, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Overhang/Chest", 0x2002d8b, 0x80)
 		updateDecreaseCountDungeons(
 			segment, "TOD_ENTER",
-			"@Droplet - Left Path B1 - Underpass/Rupees",
+			"@Droplet - Left Path/Rupees",
 			{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}
 		)
 		updateDecreaseCountDungeons(
 			segment, "TOD_ENTER",
-			"@Droplet - Right Path B2 - Underpass/Rupees",
+			"@Droplet - Right Path/Rupees",
 			{{0x2002d95, 0x10}, {0x2002d95, 0x20}, {0x2002d95, 0x40}}
 		)
-		updateDecreaseCountDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B2 - Underpass/Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
+		updateDecreaseCountDungeons(segment, "TOD_ENTER", "@Droplet - Right Path/Rupees Grabbable", {{0x2002d95, 0x04}, {0x2002d95, 0x08}})
 		updateDecreaseCountDungeons(
 			segment, "TOD_ENTER",
-			"@Droplet - Left Path B1 - Waterfall - Underwater/Rupees",
+			"@Droplet - Upper Underwater/Rupees",
 			{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}
 		)
 		updateDecreaseCountDungeons(
 			segment, "TOD_ENTER",
-			"@Droplet - Left Path B2 - Waterfall - Underwater/Rupees",
+			"@Droplet - Lower Underwater/Rupees",
 			{{0x2002d95, 0x80}, {0x2002d96, 0x01}, {0x2002d96, 0x02}, {0x2002d96, 0x04}, {0x2002d96, 0x08}, {0x2002d96, 0x10}}
 		)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Left Path B2 - Ice Plain/Chest", 0x2002d8f, 0x08)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Left Path B2 - Ice Plain - Frozen/Chest", 0x2002d8f, 0x04)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Left Path B2 - Lilypad Corner/Chest", 0x2002d93, 0x40)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B1 - Ice Walkway/Chest", 0x2002d8b, 0x01)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B1 - Ice Walkway Right/Chest", 0x2002d8b, 0x04)
-		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Droplet - Right Path B1 - Pot/Drop", 0x2002d8b, 0x02)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B3 - Frozen/Chest", 0x2002d8d, 0x10)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B1 - Blu Chu/Kill", 0x2002d8c, 0x80)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B2 - Frozen/Chest", 0x2002d92, 0x40)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B2 - Dark Maze - Bottom/Chest", 0x2002d8f, 0x80)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B2 - Mulldozers/Chest", 0x2002d91, 0x80)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B2 - Dark Maze - Top Right/Chest", 0x2002d8f, 0x20)
-		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path B2 - Dark Maze - Top Left/Chest", 0x2002d8f, 0x40)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Ice Puzzle/Chest", 0x2002d8f, 0x08)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Ice Puzzle Frozen/Chest", 0x2002d8f, 0x04)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Ice Puzzle/Chest", 0x2002d93, 0x40)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path Ice Walkway First/Chest", 0x2002d8b, 0x01)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Right Path Ice Walkway Second/Chest", 0x2002d8b, 0x04)
+		updateSectionFlagSpecialCheck(segment, "POT_SPOT", "@Droplet - Right Path Ice Walkway Pot/Drop", 0x2002d8b, 0x02)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Basement Frozen/Chest", 0x2002d8d, 0x10)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Blue Chu/Kill", 0x2002d8c, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Post Blue Chu Frozen/Chest", 0x2002d92, 0x40)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Dark Maze Bottom/Chest", 0x2002d8f, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Dark Maze Bombable Wall/Chest", 0x2002d91, 0x80)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Dark Maze Top Right/Chest", 0x2002d8f, 0x20)
+		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Dark Maze Top Left/Chest", 0x2002d8f, 0x40)
 		updateSectionFlagDungeons(segment, "TOD_ENTER", "@Droplet - Octo/Heart", 0x2002d8c, 0x01)
 		--POW
 
@@ -3515,28 +3504,28 @@ function updateLocations(segment)
 		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace/Gyorg", 0x2002dab, 0x20)
 
 		-- MAP POW
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 1st Half 1F - Grate/Chest", 0x2002daa, 0x40)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 1st Half 1F - Wizzrobe/Kill", 0x2002daa, 0x10)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 1st Half 3F - Pot Puzzle/Drop", 0x2002da7, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Firebar Grate/Chest", 0x2002daa, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Wizzrobe Platform Fight/Kill", 0x2002daa, 0x10)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Pot Puzzle Key/Drop", 0x2002da7, 0x02)
 		updateDecreaseCountDungeons(
 			segment, "POW_ENTER",
-			"@Palace - 1st Half 2F - Items/Rupees",
+			"@Palace - Rupees/Rupees",
 			{{0x2002da7, 0x04}, {0x2002da7, 0x08}, {0x2002da7, 0x10}, {0x2002da7, 0x20}, {0x2002da7, 0x40}}
 		)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 1st Half 4F - Bow Moblins/Chest", 0x2002da4, 0x80)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 1st Half 5F - Ball And Chain Soldiers/Drop", 0x2002da4, 0x02)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 1st Half 5F - Fan Loop/Chest", 0x2002da3, 0x40)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 1st Half 5F/Big Chest", 0x2002da2, 0x10)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 2F - Many Rollers/Chest", 0x2002da9, 0x80)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 1F - Dark Room/Big Chest", 0x2002dab, 0x02)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 1F - Dark Room - Small/Chest", 0x2002dab, 0x04)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 3F - Fire Wizzrobes/Kill", 0x2002da6, 0x80)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 2F - Twin Wizzrobes/Kill", 0x2002da9, 0x40)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 4F/Heart Piece", 0x2002dac, 0x01)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 4F - Switch Hit/Chest", 0x2002da5, 0x80)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 5F - Bombarossa/Chest", 0x2002da2, 0x20)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 4F - Block Maze/Chest", 0x2002da5, 0x02)
-		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - 2nd Half 5F - Right Side/Chest", 0x2002da2, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Moblin Archer Chest/Chest", 0x2002da4, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Flail Soldiers/Drop", 0x2002da4, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Spark/Chest", 0x2002da3, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Pre Big Key Door/Big Chest", 0x2002da2, 0x10)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Roller/Chest", 0x2002da9, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Dark Room Big Chest/Big Chest", 0x2002dab, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Dark Room Chest/Chest", 0x2002dab, 0x04)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Firerobe Fight/Kill", 0x2002da6, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Twin Wizzrobe Fight/Kill", 0x2002da9, 0x40)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Heart Piece/Heart Piece", 0x2002dac, 0x01)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Switch/Chest", 0x2002da5, 0x80)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Bombarossa Maze/Chest", 0x2002da2, 0x20)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Block Maze Room/Chest", 0x2002da5, 0x02)
+		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Block Maze Room Detour/Chest", 0x2002da2, 0x80)
 		updateSectionFlagDungeons(segment, "POW_ENTER", "@Palace - Gyorg/Heart", 0x2002dab, 0x20)
 		--DHC
 		updateSectionFlagDungeons(segment, "DHC_ENTER", "@DHC/Win", 0x2002ca6, 0x20)
@@ -3666,7 +3655,7 @@ function crest(segment)
 	updateToggleFlagSettings(segment, "OCARINA", "crenelwindcrest_no", 0x2002a83, 0x01)
 	updateToggleFlagSettings(segment, "OCARINA", "fallswindcrest_no", 0x2002a83, 0x02)
 	updateToggleFlagSettings(segment, "OCARINA", "cloudwindcrest_no", 0x2002a83, 0x04)
---	updateToggleFlagSettings(segment, "OCARINA", "townwindcrest_no", 0x2002a83, 0x08) -- no used
+--	updateToggleFlagSettings(segment, "OCARINA", "townwindcrest_no", 0x2002a83, 0x08) - no used
 	updateToggleFlagSettings(segment, "OCARINA", "lakewindcrest_no", 0x2002a83, 0x10)
 	updateToggleFlagSettings(segment, "OCARINA", "swampwindcrest_no", 0x2002a83, 0x20)
 	updateToggleFlagSettings(segment, "OCARINA", "shfwindcrest_no", 0x2002a83, 0x30)
@@ -3693,38 +3682,38 @@ function UpdateWallLocation(segment)
 end
 
 function UPDATE(code)
-	-- items_codes_autotracking_cache
-	-- print(string.format("[MAP][INFO] code - %s", code))
+	--items_codes_autotracking_cache
+	print(string.format("[MAP][INFO] code - %s", code))
 	if items_codes_autotracking_cache[code] then
 		if items_codes_autotracking_cache[code]["COUNT"] then
 			for k, v in pairs(items_codes_autotracking_cache[code]["COUNT"]) do
 				
-				-- print(string.format("[MAP][INFO] k - %s", k))
-				-- print(string.format("[MAP][INFO] v - %s", v))
+				print(string.format("[MAP][INFO] k - %s", k))
+				print(string.format("[MAP][INFO] v - %s", v))
 				local item = Tracker:FindObjectForCode(k)
 				item.AcquiredCount = v
 			end
 		end
 		if items_codes_autotracking_cache[code]["ACTIVE"] then
 			for k, v in pairs(items_codes_autotracking_cache[code]["ACTIVE"]) do
-				-- print(string.format("[MAP][INFO] k - %s", k))
-				-- print(string.format("[MAP][INFO] v - %s", v))
+				print(string.format("[MAP][INFO] k - %s", k))
+				print(string.format("[MAP][INFO] v - %s", v))
 				local item = Tracker:FindObjectForCode(k)
 				item.Active = v
 			end
 		end
 		if items_codes_autotracking_cache[code]["SETTING"] then
 			for k, v in pairs(items_codes_autotracking_cache[code]["SETTING"]) do
-				-- print(string.format("[MAP][INFO] k - %s", k))
-				-- print(string.format("[MAP][INFO] v - %s", v))
+				print(string.format("[MAP][INFO] k - %s", k))
+				print(string.format("[MAP][INFO] v - %s", v))
 				local item = Tracker:FindObjectForCode(k)
 				item.CurrentStage = v
 			end
 		end
 		if items_codes_autotracking_cache[code]["LOC_ACTIVE"] then
 			for k, v in pairs(items_codes_autotracking_cache[code]["LOC_ACTIVE"]) do
-				-- print(string.format("[MAP][INFO] k - %s", k))
-				-- print(string.format("[MAP][INFO] v - %s", v))
+				print(string.format("[MAP][INFO] k - %s", k))
+				print(string.format("[MAP][INFO] v - %s", v))
 				local location = Tracker:FindObjectForCode(k)
 				location.AvailableChestCount = v
 			end
@@ -3738,17 +3727,17 @@ function area(segment)
 	InvalidateReadCaches()
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
-		--if ReadU8(segment, 0x03000BF6)>0 then
+		if ReadU8(segment, 0x03000BF4) then
 			local hex1 = ReadU8(segment, 0x03000BF4)
 			local hex1 = string.upper(string.format('%02x',hex1))
 			local hex2 = ReadU8(segment, 0x03000BF5)
 			local hex2 = string.upper(string.format('%02x',hex2))
-			-- print(string.format("[MAP][INFO] hex2 - %s", hex2))
+			print(string.format("[MAP][INFO] hex2 - %s", hex2))
 			local hex = hex2..hex1
 			AUTOTRACKING_dungeons=hex
-			-- print(string.format("[MAP][INFO] hex - %s", hex))
-			-- local hex = string.upper(string.format('%04x',hex))
-			-- local hex = string.upper(string.format('%04s',hex))
+			print(string.format("[MAP][INFO] hex - %s", hex))
+			--local hex = string.upper(string.format('%04x',hex))
+			--local hex = string.upper(string.format('%04s',hex))
 			print(string.format("[MAP][INFO] hex - %s", hex))
 			print(string.format("[MAP][INFO] ROOM_FLAG_MAPPING_SPEC[%s][1] - %s", hex,ROOM_FLAG_MAPPING_SPEC[hex][1]))
 			for _, flag_room in pairs(ROOM_FLAG_MAPPING_SPEC[hex][1]) do
@@ -3879,32 +3868,84 @@ function area(segment)
 					code_type_cache["ENTRANCE_IN_DHC"] = 1
 				end
 			end
-		--end
+		end
+		if ROOM_FLAG_MAPPING_SPEC[hex] then
+			local tabs2 = ROOM_FLAG_MAPPING_SPEC[hex][0]
+			local number_tab = 0
+			if tabs2 then
+				for _, tab in ipairs(tabs2) do
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
+						Tracker:UiHint("ActivateTab", tab)
+					end
+				end
+			end
+		elseif ROOM_FLAG_MAPPING[hex2] then
+			local tabs = ROOM_FLAG_MAPPING[hex2][0]
+			local number_tab = 0
+			if tabs then
+				for _, tab in ipairs(tabs) do
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
+						Tracker:UiHint("ActivateTab", tab)
+					end
+				end
+			end
+		else
+			local tabs3 = ROOM_FLAG_MAPPING["00"][0]
+			local number_tab = 0
+			if tabs3 then
+				for _, tab in ipairs(tabs3) do
+					if tab_auto and tab_auto.CurrentStage == 2 then
+						if number_tab <= 1 then
+							Tracker:UiHint("ActivateTab", tab)
+							number_tab = number_tab + 1
+						else
+							Tracker:UiHint("ActivateTab", "Dungeon")
+						end
+					else
+						Tracker:UiHint("ActivateTab", tab)
+					end
+				end
+			end
+		end
 		AUTOTRACKING_dungeons_last=hex
-		print(string.format("[MAP][INFO] AUTOTRACKING_dungeons  - %s", AUTOTRACKING_dungeons))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DWS\"]  - %s", code_type_cache["ENTRANCE_IN_DWS"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_COF\"]  - %s", code_type_cache["ENTRANCE_IN_COF"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_FOW\"]  - %s", code_type_cache["ENTRANCE_IN_FOW"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_RC\"]  - %s", code_type_cache["ENTRANCE_IN_RC"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_TOD\"]  - %s", code_type_cache["ENTRANCE_IN_TOD"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_POW\"]  - %s", code_type_cache["ENTRANCE_IN_POW"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DHC\"]  - %s", code_type_cache["ENTRANCE_IN_DHC"] ))
+		-- print(string.format("[MAP][INFO] AUTOTRACKING_dungeons  - %s", AUTOTRACKING_dungeons))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DWS\"]  - %s", code_type_cache["ENTRANCE_IN_DWS"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_COF\"]  - %s", code_type_cache["ENTRANCE_IN_COF"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_FOW\"]  - %s", code_type_cache["ENTRANCE_IN_FOW"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_RC\"]  - %s", code_type_cache["ENTRANCE_IN_RC"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_TOD\"]  - %s", code_type_cache["ENTRANCE_IN_TOD"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_POW\"]  - %s", code_type_cache["ENTRANCE_IN_POW"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"ENTRANCE_IN_DHC\"]  - %s", code_type_cache["ENTRANCE_IN_DHC"] ))
 
-		print(string.format("[MAP][INFO] code_type_cache[\"POT_SPOT\"]  - %s", code_type_cache["POT_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"UNDERWATER_SPOT\"]  - %s", code_type_cache["UNDERWATER_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"DIG_SPOT\"]  - %s", code_type_cache["DIG_SPOT"] ))
-		print(string.format("[MAP][INFO] code_type_cache[\"DWS_ENTER\"] - %s", code_type_cache["DWS_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"COF_ENTER\"] - %s", code_type_cache["COF_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"FOW_ENTER\"] - %s", code_type_cache["FOW_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"FOW_WARPS\"] - %s", code_type_cache["FOW_WARPS"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"TOD_ENTER\"] - %s", code_type_cache["TOD_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"POW_ENTER\"] - %s", code_type_cache["POW_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"RC_ENTER\"] - %s", code_type_cache["RC_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"DHC_ENTER\"] - %s", code_type_cache["DHC_ENTER"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"TRIBE_EARLY\"] - %s", code_type_cache["TRIBE_EARLY"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"SWORD\"] - %s", code_type_cache["SWORD"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"SWORD_COUNT\"] - %s", code_type_cache["SWORD_COUNT"]))
-		print(string.format("[MAP][INFO] code_type_cache[\"OCARINA\"] - %s", code_type_cache["OCARINA"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"POT_SPOT\"]  - %s", code_type_cache["POT_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"UNDERWATER_SPOT\"]  - %s", code_type_cache["UNDERWATER_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DIG_SPOT\"]  - %s", code_type_cache["DIG_SPOT"] ))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DWS_ENTER\"] - %s", code_type_cache["DWS_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"COF_ENTER\"] - %s", code_type_cache["COF_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"FOW_ENTER\"] - %s", code_type_cache["FOW_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"FOW_WARPS\"] - %s", code_type_cache["FOW_WARPS"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"TOD_ENTER\"] - %s", code_type_cache["TOD_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"POW_ENTER\"] - %s", code_type_cache["POW_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"RC_ENTER\"] - %s", code_type_cache["RC_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"DHC_ENTER\"] - %s", code_type_cache["DHC_ENTER"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"TRIBE_EARLY\"] - %s", code_type_cache["TRIBE_EARLY"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"SWORD\"] - %s", code_type_cache["SWORD"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"SWORD_COUNT\"] - %s", code_type_cache["SWORD_COUNT"]))
+		-- print(string.format("[MAP][INFO] code_type_cache[\"OCARINA\"] - %s", code_type_cache["OCARINA"]))
 	end
 end
 ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)
@@ -3915,5 +3956,5 @@ ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey)
 ScriptHost:AddMemoryWatch("TMC Keys", 0x2002d00, 0x200, updateKeys)
 ScriptHost:AddMemoryWatch("TMC figurine", 0x2002af0, 0x01, figurine)
 ScriptHost:AddMemoryWatch("TMC CREST", 0x2002a83, 0x01, crest)
-ScriptHost:AddMemoryWatch("area", 0x03000BF4, 0x3, area,1)
+ScriptHost:AddMemoryWatch("area", 0x03000BF4, 0x02, area,1)
 --10CF

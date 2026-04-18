@@ -51,8 +51,8 @@ cache_number=0
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_FUSER_TRACKING = true
-VERSION_ALPHA = false
-VERSION_BETA = true
+VERSION_ALPHA = true
+VERSION_BETA = false
 VERSION_RANDO = "1.0.0RC2"
 ------------------------------------------------------------------
 -- Configuration Debug options
@@ -89,6 +89,7 @@ ScriptHost:LoadScript(ScriptLogicCommon.."Overworld.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Openworld.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."PalaceOfWind.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Settings.lua")
+ScriptHost:LoadScript(ScriptLogicCommon.."Sword.lua")
 
 ScriptHost:LoadScript(ScriptLogicDungeons.."CaveOfFlame.lua")
 ScriptHost:LoadScript(ScriptLogicDungeons.."Crypt.lua")
@@ -352,6 +353,8 @@ end
 ------------------------------------------------------------------
 if PopVersion then
 	ScriptHost:LoadScript(Script.."autotracking.lua")
+elseif _VERSION == "Lua 5.3"  then
+	ScriptHost:LoadScript(ScriptAutotracking.."autotracking_testing.lua")
 else
 	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
 end
