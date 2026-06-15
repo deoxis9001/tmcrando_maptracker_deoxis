@@ -21,17 +21,6 @@ function Json_Dungeon_Fortress_WizzrobeFight()
 	end
 end
 function Json_Dungeon_Fortress_EntranceLargeRupee()
-	if function_Cached("Deepwood_1F_SlugTorches_Chest") == 1 then
-		return 1
-	elseif function_Cached("Deepwood_1F_SlugTorches_Chest") == 2 then
-		return 1, AccessibilityLevel.SequenceBreak
-	elseif function_Cached("Deepwood_1F_SlugTorches_Chest") == 3 then
-		return 1, AccessibilityLevel.Inspect
-	else
-		return 0
-	end
-end
-function Json_Dungeon_Fortress_EntranceLargeRupee()
 	if function_Cached("Fortress_Entrance_1F_RightItem") == 1 then
 		return 1
 	elseif function_Cached("Fortress_Entrance_1F_RightItem") == 2 then
@@ -158,17 +147,6 @@ function Json_Dungeon_Fortress_CenterPathSwitch()
 	elseif function_Cached("Fortress_Middle_2F_StatueChest") == 2 then
 		return 1, AccessibilityLevel.SequenceBreak
 	elseif function_Cached("Fortress_Middle_2F_StatueChest") == 3 then
-		return 1, AccessibilityLevel.Inspect
-	else
-		return 0
-	end
-end
-function Json_Dungeon_Fortress_BombableWallBigChest()
-	if function_Cached("Deepwood_1F_SlugTorches_Chest") == 1 then
-		return 1
-	elseif function_Cached("Deepwood_1F_SlugTorches_Chest") == 2 then
-		return 1, AccessibilityLevel.SequenceBreak
-	elseif function_Cached("Deepwood_1F_SlugTorches_Chest") == 3 then
 		return 1, AccessibilityLevel.Inspect
 	else
 		return 0

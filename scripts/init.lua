@@ -89,7 +89,7 @@ ScriptHost:LoadScript(ScriptLogicCommon.."Overworld.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Openworld.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."PalaceOfWind.lua")
 ScriptHost:LoadScript(ScriptLogicCommon.."Settings.lua")
-ScriptHost:LoadScript(ScriptLogicCommon.."Sword.lua")
+
 
 ScriptHost:LoadScript(ScriptLogicDungeons.."CaveOfFlame.lua")
 ScriptHost:LoadScript(ScriptLogicDungeons.."Crypt.lua")
@@ -352,7 +352,7 @@ end
 -- Autotracking
 ------------------------------------------------------------------
 if PopVersion then
-	ScriptHost:LoadScript(Script.."autotracking.lua")
+	--ScriptHost:LoadScript(Script.."autotracking.lua")
 else
 	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
 end
