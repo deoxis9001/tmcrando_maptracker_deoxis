@@ -227,6 +227,7 @@
         "name": "B1 - HP",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "^$Json_Dungeon_CaveOfFlame_BombableWallHeartPiece"
         ],
@@ -296,6 +297,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Fire Element.png",
@@ -467,6 +469,7 @@
           "^$Json_Dungeon_Crypt_Gibdos"
         ],
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "chest_unopened_img": "images/items-map/Small Key.png",
         "chest_opened_img": "images/items-map/Small Key Done.png"
       },
@@ -477,6 +480,7 @@
           "^$Json_Dungeon_Crypt_OtherGibdos"
         ],
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
@@ -505,6 +509,7 @@
           "^$Json_Dungeon_Crypt_KingGustaf"
         ],
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/chest_closed.png",
@@ -781,6 +786,7 @@
         "name": "1F - Madderpillar - HP",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "^$Json_Dungeon_Deepwood_MadderpillarHeartPiece"
         ],
@@ -812,6 +818,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "chest_unopened_img": "images/items-map/Earth Element.png",
         "chest_opened_img": "images/items-map/Earth Element Gray.png"
       }
@@ -1041,7 +1048,7 @@
       },
       {
         "name": "Left 3F - Switch - Chest",
-        "item_count": 21,
+        "item_count": 1,
         "clear_as_group": false,
         "access_rules": [
           "^$Json_Dungeon_Fortress_LeftSideMittsChests"
@@ -1112,6 +1119,7 @@
           "^$Json_Dungeon_Fortress_RightSideHeartPiece"
         ],
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
@@ -1164,6 +1172,7 @@
         "name": "Back 2F - Right Minish - Item Drop",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "access_rules": [
           "^$Json_Dungeon_Fortress_MinishDirtRoomKeyDrop"
         ],
@@ -1219,6 +1228,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Ocarina of Wind.png",
@@ -1418,6 +1428,7 @@
         "name": "1st Half 3F - Pot Puzzle - Item Drop",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "^$Json_Dungeon_Palace_PotPuzzleKey"
         ],
@@ -1512,6 +1523,7 @@
           "^$Json_Dungeon_Palace_HeartPiece"
         ],
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       },
@@ -1567,6 +1579,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "chest_unopened_img": "images/items-map/Wind Element.png",
         "chest_opened_img": "images/items-map/Wind Element Gray.png"
       }
@@ -1969,6 +1982,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Water Element.png",
@@ -2427,6 +2441,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Elements.png",
@@ -2487,6 +2502,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Elements.png",
@@ -2553,6 +2569,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Elements.png",
@@ -2619,6 +2636,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Elements.png",
@@ -2679,6 +2697,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Elements.png",
@@ -2739,6 +2758,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Elements.png",
@@ -2799,6 +2819,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "always_allow_chest_manipulation": true,
         "capture_item_layout": "Element_capture",
         "chest_unopened_img": "images/items-map/Elements.png",

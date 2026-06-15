@@ -447,6 +447,7 @@
           "$Json_Dungeon_Crypt_Gibdos"
         ],
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "chest_unopened_img": "images/items-map/Small Key.png",
         "chest_opened_img": "images/items-map/Small Key Done.png"
       }
@@ -469,6 +470,7 @@
           "$Json_Dungeon_Crypt_OtherGibdos"
         ],
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       }
@@ -868,6 +870,7 @@
         "name": "HP",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "$Json_Dungeon_Deepwood_MadderpillarHeartPiece"
         ],
@@ -1350,6 +1353,7 @@
           "$Json_Dungeon_Fortress_RightSideHeartPiece"
         ],
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "chest_unopened_img": "images/items-map/Heart Piece.png",
         "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
@@ -1504,6 +1508,7 @@
         "name": "Drop",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "$Json_Dungeon_Fortress_MinishDirtRoomKeyDrop"
         ],
@@ -1699,6 +1704,7 @@
         "name": "Drop",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "$Json_Dungeon_Palace_PotPuzzleKey"
         ],
@@ -1992,6 +1998,7 @@
         "name": "Heart Piece",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "$Json_Dungeon_Palace_HeartPiece"
         ],

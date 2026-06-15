@@ -617,6 +617,7 @@
         "name": "HP",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "^$Json_MinishWoods_NorthernHeartPiece_HeartPiece"
         ],

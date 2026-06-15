@@ -24,6 +24,7 @@
         "name": "Item 1",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "^$Json_FallsLower_Rupees_Rupee"
         ],
@@ -34,6 +35,7 @@
         "name": "Item 2",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "access_rules": [
           "^$Json_FallsLower_Rupees_Rupee"
         ],
@@ -44,6 +46,7 @@
         "name": "Item 3",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "access_rules": [
           "^$Json_FallsLower_Rupees_Rupee"
         ],

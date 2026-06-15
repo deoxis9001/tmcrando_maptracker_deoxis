@@ -267,6 +267,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
@@ -277,6 +278,7 @@
         ],
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "chest_unopened_img": "images/items-map/chest_closed.png",
         "chest_opened_img": "images/items-map/chest_open.png"
       },
@@ -284,6 +286,7 @@
         "name": "600 Item",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "access_rules": [
           "$Json_Town_StockwellShop_QuiverSpot"
         ],
@@ -294,6 +297,7 @@
         "name": "600 Item 2",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, -32",
         "visibility_rules": [
           "$has|shopbag_extra_on"
         ],
@@ -316,6 +320,7 @@
         "name": "Behind Counter",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, -32",
         "access_rules": [
           "$Json_Town_StockwellShop_DogFoodBottle"
         ],
@@ -352,6 +357,7 @@
         "name": "HP",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "$Json_Town_SchoolGardens_HeartPiece"
         ],
@@ -614,6 +620,7 @@
         "name": "Item",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "$Json_Town_JuliettaHouse_Item"
         ],
@@ -720,6 +727,7 @@
         "name": "HP",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "access_rules": [
           "$Json_Town_Fountain_HeartPiece"
         ],
@@ -811,8 +819,9 @@
           "$Json_Town_EasternShops_FigurineHouseHeartPiece"
         ],
         "capture_item": true,
-        "chest_unopened_img": "images/items-map/chest_closed.png",
-        "chest_opened_img": "images/items-map/chest_open.png"
+        "capture_badge_offset": "0, 0",
+        "chest_unopened_img": "images/items-map/Heart Piece.png",
+        "chest_opened_img": "images/items-map/Heart Piece Gray.png"
       }
     ]
   },
@@ -1232,6 +1241,7 @@
         "name": "1 Left",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "visibility_rules": [
           "$has|goron_1"
         ],
@@ -1245,6 +1255,7 @@
         "name": "1 Middle",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "visibility_rules": [
           "$has|goron_1"
         ],
@@ -1258,6 +1269,7 @@
         "name": "1 Right",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "visibility_rules": [
           "$has|goron_1"
         ],
@@ -1271,6 +1283,7 @@
         "name": "2 Left",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "visibility_rules": [
           "$has|goron_2"
         ],
@@ -1284,6 +1297,7 @@
         "name": "2 Middle",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "visibility_rules": [
           "$has|goron_2"
         ],
@@ -1297,6 +1311,7 @@
         "name": "2 Right",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "visibility_rules": [
           "$has|goron_2"
         ],
@@ -1310,6 +1325,7 @@
         "name": "3 Left",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "visibility_rules": [
           "$has|goron_3"
         ],
@@ -1323,6 +1339,7 @@
         "name": "3 Middle",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "visibility_rules": [
           "$has|goron_3"
         ],
@@ -1336,6 +1353,7 @@
         "name": "3 Right",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "visibility_rules": [
           "$has|goron_3"
         ],
@@ -1349,6 +1367,7 @@
         "name": "4 Left",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "visibility_rules": [
           "$has|goron_4"
         ],
@@ -1362,6 +1381,7 @@
         "name": "4 Middle",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "visibility_rules": [
           "$has|goron_4"
         ],
@@ -1375,6 +1395,7 @@
         "name": "4 Right",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "visibility_rules": [
           "$has|goron_4"
         ],
@@ -1388,6 +1409,7 @@
         "name": "5 Left",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-64, 0",
         "visibility_rules": [
           "$has|goron_5"
         ],
@@ -1401,6 +1423,7 @@
         "name": "5 Middle",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "-32, 0",
         "visibility_rules": [
           "$has|goron_5"
         ],
@@ -1414,6 +1437,7 @@
         "name": "5 Right",
         "item_count": 1,
         "capture_item": true,
+        "capture_badge_offset": "0, 0",
         "visibility_rules": [
           "$has|goron_5"
         ],

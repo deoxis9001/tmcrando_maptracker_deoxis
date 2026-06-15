@@ -1,10 +1,10 @@
 local vanilla_captures = {
-  ["@DeepWoods/Reward"] = "",
-  ["@Cave Of Flame/Reward"] = "",
-  ["@Royal Crypt/Reward"] = "",
-  ["@Fortress/Reward"] = "",
-  ["@Palace/Reward"] = "",
-  ["@Droplet/Reward"] = "",
+  ["@DeepWoods/Reward"] = "allelement",
+  ["@Cave Of Flame/Reward"] = "allelement",
+  ["@Crypt/Reward"] = "allelement",
+  ["@Fortress/Reward"] = "allelement",
+  ["@Palace/Reward"] = "allelement",
+  ["@Droplet/Reward"] = "allelement",
   ["@Dark Hyrule Castle Entrance/Reward"] = "allelement",
   ["@Cave Of Flame Entrance/Reward"] = "allelement",
   ["@Crypt Entrance/Reward"] = "allelement",
@@ -112,25 +112,25 @@ local link_captures = {
     ["@Droplet/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
   },
   ["crypt_dws"] = {
-    ["@Royal Crypt/Reward"] = "@DeepWoods Entrance/Reward"
+    ["@Crypt/Reward"] = "@DeepWoods Entrance/Reward"
   },
   ["crypt_cof"] = {
-    ["@Royal Crypt/Reward"] = "@Cave Of Flame Entrance/Reward"
+    ["@Crypt/Reward"] = "@Cave Of Flame Entrance/Reward"
   },
   ["crypt_fow"] = {
-    ["@Royal Crypt/Reward"] = "@Fortress Entrance/Reward"
+    ["@Crypt/Reward"] = "@Fortress Entrance/Reward"
   },
   ["crypt_tod"] = {
-    ["@Royal Crypt/Reward"] = "@Droplet Entrance/Reward"
+    ["@Crypt/Reward"] = "@Droplet Entrance/Reward"
   },
   ["crypt_crypt"] = {
-    ["@Royal Crypt/Reward"] = "@Crypt Entrance/Reward"
+    ["@Crypt/Reward"] = "@Crypt Entrance/Reward"
   },
   ["crypt_pow"] = {
-    ["@Royal Crypt/Reward"] = "@Palace Entrance/Reward"
+    ["@Crypt/Reward"] = "@Palace Entrance/Reward"
   },
   ["crypt_dhc"] = {
-    ["@Royal Crypt/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
+    ["@Crypt/Reward"] = "@Dark Hyrule Castle Entrance/Reward"
   },
   ["pow_dws"] = {
     ["@Palace/Reward"] = "@DeepWoods Entrance/Reward"
@@ -353,9 +353,10 @@ CaptureBadgeSections = {
   "@Town - Goron Merchant/5 Middle",
   "@Town - Goron Merchant/5 Left"
 }
+CaptureBadgeSections = {}
 CaptureBadgeCache = {}
 function captureBadge()
-  if Cache_reset then
+  if Cache_reset and not Cache_reset then
     local info_target = {}
     for _, section in pairs(CaptureBadgeSections) do
       local target = Tracker:FindObjectForCode(section)
@@ -388,7 +389,7 @@ function tracker_on_accessibility_updated()
   if not PopVersion then
   update_link_captures()
   end
-  captureBadge()
+  --captureBadge()
 end
 
 function tracker_on_begin_loading_save_file()
@@ -434,7 +435,7 @@ function tracker_on_pack_ready()
   Preset()
   UpdateFusion()
   if not PopVersion then
-    captureBadge()
+    --captureBadge()
   end
   print("	Enable Cache :		", Cache_reset)
   if TMC_CACHE_DEBUG_FUNCTION or TMC_CACHE_DEBUG_ITEM then

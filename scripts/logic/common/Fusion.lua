@@ -135,9 +135,9 @@ function Clouds_Fuser()
 		count = count + 1
 	end
 	if function_Cached("StrangerFusion") == 0 then
-		item4 = Tracker:FindObjectForCode("@Wind Tribe House/1F - Chests")
-		item5 = Tracker:FindObjectForCode("@Wind Tribe House/2F - Chest")
-		item6 = Tracker:FindObjectForCode("@Wind Tribe House/2F - Gregal Gift 1")
+		item4 = Tracker:FindObjectForCode("@Wind Tribe/1F - Chests")
+		item5 = Tracker:FindObjectForCode("@Wind Tribe/2F - Chest")
+		item6 = Tracker:FindObjectForCode("@Wind Tribe/2F - Gregal Gift 1")
 		if item4.AvailableChestCount ~= 2 then
 			count = count + 1
 		end
