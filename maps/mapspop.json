@@ -118,14 +118,14 @@
     "location_border_thickness": 5
   },
   {
-    "name": "dws_B1",
-    "img": "images/maps/dungeons/dws/B1.png",
-    "location_size": 25,
+    "name": "dws_1F",
+    "img": "images/maps/dungeons/dws/1F.png",
+    "location_size": 50,
     "location_border_thickness": 5
   },
   {
-    "name": "dws_B2",
-    "img": "images/maps/dungeons/dws/B2.png",
+    "name": "dws_B1",
+    "img": "images/maps/dungeons/dws/B1.png",
     "location_size": 25,
     "location_border_thickness": 5
   },
