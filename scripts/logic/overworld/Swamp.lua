@@ -44,7 +44,7 @@ function Swamp_NearWaterfall_CaveHP()
 end
 
 function Swamp_WaterfallFusion_DojoNPC() 
-	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and function_Cached("AccessSwamp")==1 and ( function_Cached("SwampNorthShortcut")==1 or function_Cached("HasBow")==1 ) and has("flippers") ) then
+	if ( ( has("fusionred_complet") or ( has("fusionred_vanilla") and has("fusions0c") ) ) and function_Cached("AccessSwamp")==1 and function_Cached("HasSword")==1 and ( function_Cached("SwampNorthShortcut")==1 or function_Cached("HasBow")==1 ) and has("flippers") ) then
 		return 1
 	else
 		return 0

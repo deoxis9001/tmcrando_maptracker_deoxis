@@ -30,7 +30,7 @@ function ToDBigDoor()
 	end
 end
 function ToDWestDoor()
-	if (Tracker:ProviderCountForCode("tod_smallkey") >= 3) then
+	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4) then
 		return 1
 	elseif Tracker:ProviderCountForCode("ud_smallkey") >= 28 then
 		return 1
@@ -45,7 +45,7 @@ function ToDWestDoor()
 	end
 end
 function ToDDarkDoor()
-	if (Tracker:ProviderCountForCode("tod_smallkey") >= 3) then
+	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4) then
 		return 1
 	elseif Tracker:ProviderCountForCode("ud_smallkey") >= 28 then
 		return 1
@@ -60,7 +60,7 @@ function ToDDarkDoor()
 	end
 end
 function ToDEitherDoor()
-	if (Tracker:ProviderCountForCode("tod_smallkey") >= 3) then
+	if (Tracker:ProviderCountForCode("tod_smallkey") >= 4) then
 		return 1
 	elseif Tracker:ProviderCountForCode("ud_smallkey") >= 27 then
 		return 1
