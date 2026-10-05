@@ -143,6 +143,17 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
 
     # ------------------------------------------------------- commandes NWA
     def handle(self):
+        # Protocole Bizhawk-nwa-tool : c'est le SERVEUR (le plugin BizHawk) qui
+        # se présente en premier -> sans cet EMULATOR_INFO d'accueil, EmoTracker
+        # ne sait pas quoi demander et ferme la connexion immédiatement.
+        self.send_hash_reply([
+            ("name", "BizHawk-NWA-Simulator"),
+            ("version", "2.9-sim"),
+            ("id", "Happy Skarsnik (simulation)"),
+            ("nwa_version", "1.0"),
+            ("commands", "MY_NAME_IS;CORE_CURRENT_INFO;CORE_MEMORIES;"
+                         "CORE_READ;bCORE_WRITE;EMULATION_STATUS;GAME_INFO"),
+        ])
         while True:
             idle = self.IDLE_TIMEOUT - (time.monotonic() - self.last_rx)
             if idle <= 0:
@@ -178,7 +189,11 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
                 return self.send_error("invalid_argument",
                                        "MY_NAME_IS accept one argument <name>")
             self.name = args[0]
-            return self.send_hash_reply([("name", self.name)])
+            # Protocole Bizhawk-nwa-tool : NwaClient::SendMyName() attend une
+            # confirmation VIDE ("\\n\\n") — pas un dictionnaire. Une réponse
+            # inattendue fait fermer la connexion côté client (EmoTracker se
+            # déconnectait juste après MY_NAME_IS).
+            return self.send_ok()
         if cmd == "EMULATOR_INFO":
             return self.send_hash_reply([
                 ("name", "BizHawk-NWA-Simulator"),

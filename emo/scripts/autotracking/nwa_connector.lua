@@ -161,9 +161,10 @@ local RX_TIMEOUT_MS = 1200  -- patience max pour une réponse (read traité à l
 
 function NWAConnector:_sendCommand(cmd)
         if not self.socket then return false end
-        local data = cmd .. "\n"
-        local n = self.socket:send(data:len())
-        return n == data:len()
+        -- sockSend normalise : LuaConnector (EmoTracker) attend la CHAINE,
+        -- pas le nombre d'octets. send(nbytes) envoyait des commandes
+        -- corrompues -> le serveur fermait la connexion immédiatement.
+        return sockSend(self.socket, cmd .. "\n") ~= nil
 end
 
 -- Remplit le buffer de réception en pompant la socket (timeout ms) ;
@@ -355,8 +356,9 @@ function nwaConnectorWrite(address, bytes)
         local cmd = string.format("bCORE_WRITE %s;0x%x;%d", NWA_DOMAIN, address, size)
         if not c:_sendCommand(cmd) then return false end
         local block = "\0" .. string.pack(">I4", size) .. bytes
-        local n = c.socket:send(block:len())
-        if n ~= block:len() then return false end
+        -- sockSend : envoyer la CHAINE binaire (et non sa longueur, sinon le
+        -- bloc d'écriture est corrompu et le serveur ferme la connexion).
+        if sockSend(c.socket, block) == nil then return false end
         local status = c:_readReply()
         return status == "OK"
 end
