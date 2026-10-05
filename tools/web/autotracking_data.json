@@ -1,1306 +1,1306 @@
 {
- "addresses": [
-  {
-   "addr": 33565376,
-   "hex": "0x2002AC0",
-   "context": "graveKeyStolen(segment, \"gravekey\", 0x2002ac0, 0x01)"
-  },
-  {
-   "addr": 33565412,
-   "hex": "0x2002AE4",
-   "context": "ScriptHost:AddMemoryWatch(\"TMC Item Upgrades\", 0x2002ae4, 0x0c, updateGearFromMemory)"
-  },
-  {
-   "addr": 33565416,
-   "hex": "0x2002AE8",
-   "context": "item.CurrentStage = ReadU8(segment, 0x2002ae8)"
-  },
-  {
-   "addr": 33565419,
-   "hex": "0x2002AEB",
-   "context": "updateHearts(segment, 0x2002aeb)"
-  },
-  {
-   "addr": 33565422,
-   "hex": "0x2002AEE",
-   "context": "item.CurrentStage = ReadU8(segment, 0x2002aee)"
-  },
-  {
-   "addr": 33565423,
-   "hex": "0x2002AEF",
-   "context": "item.CurrentStage = ReadU8(segment, 0x2002aef)"
-  },
-  {
-   "addr": 33565424,
-   "hex": "0x2002AF0",
-   "context": "updatefigurine(segment, \"figurine\", 0x2002af0)"
-  },
-  {
-   "addr": 33565488,
-   "hex": "0x2002B30",
-   "context": "ScriptHost:AddMemoryWatch(\"TMC Item Data\", 0x2002b30, 0x46, updateItemsFromMemorySegment)"
-  },
-  {
-   "addr": 33565490,
-   "hex": "0x2002B32",
-   "context": "return AutoTracker:ReadU8(0x2002b32) > 0x00"
-  },
-  {
-   "addr": 33565491,
-   "hex": "0x2002B33",
-   "context": "if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then"
-  },
-  {
-   "addr": 33565492,
-   "hex": "0x2002B34",
-   "context": "if testFlag(segment, 0x2002b34, 0x04) then"
-  },
-  {
-   "addr": 33565493,
-   "hex": "0x2002B35",
-   "context": "if testFlag(segment, 0x2002b35, 0x01) then"
-  },
-  {
-   "addr": 33565494,
-   "hex": "0x2002B36",
-   "context": "updateToggleFlag(segment, \"gust\", 0x2002b36, 0x04)"
-  },
-  {
-   "addr": 33565495,
-   "hex": "0x2002B37",
-   "context": "updateToggleFlag(segment, \"cape\", 0x2002b37, 0x01)"
-  },
-  {
-   "addr": 33565497,
-   "hex": "0x2002B39",
-   "context": "local value = ReadU8(segment, 0x2002b39)"
-  },
-  {
-   "addr": 33565503,
-   "hex": "0x2002B3F",
-   "context": "updateLLRKey(segment, \"llrkey\", 0x2002b3f, 0x40)"
-  },
-  {
-   "addr": 33565504,
-   "hex": "0x2002B40",
-   "context": "updateMush(segment, \"mushroom\", 0x2002b40, 0x01)"
-  },
-  {
-   "addr": 33565505,
-   "hex": "0x2002B41",
-   "context": "updateToggleFlag(segment, \"trophy\", 0x2002b41, 0x04)"
-  },
-  {
-   "addr": 33565506,
-   "hex": "0x2002B42",
-   "context": "updateToggleFlag(segment, \"earth\", 0x2002b42, 0x01)"
-  },
-  {
-   "addr": 33565507,
-   "hex": "0x2002B43",
-   "context": "updateToggleFlag(segment, \"grip\", 0x2002b43, 0x01)"
-  },
-  {
-   "addr": 33565508,
-   "hex": "0x2002B44",
-   "context": "if testFlag(segment, 0x2002b44, 0x01) then"
-  },
-  {
-   "addr": 33565509,
-   "hex": "0x2002B45",
-   "context": "if testFlag(segment, 0x2002b45, 0x01) then"
-  },
-  {
-   "addr": 33565512,
-   "hex": "0x2002B48",
-   "context": "updateToggleFlag(segment, \"jabber\", 0x2002b48, 0x40)"
-  },
-  {
-   "addr": 33565518,
-   "hex": "0x2002B4E",
-   "context": "if testFlag(segment, 0x2002b4e, 0x40) then"
-  },
-  {
-   "addr": 33565519,
-   "hex": "0x2002B4F",
-   "context": "if testFlag(segment, 0x2002b4f, 0x01) then"
-  },
-  {
-   "addr": 33565528,
-   "hex": "0x2002B58",
-   "context": "if ReadU8(segment, 0x2002b58) == 0x6d then"
-  },
-  {
-   "addr": 33565529,
-   "hex": "0x2002B59",
-   "context": "elseif ReadU8(segment, 0x2002b59) == 0x6d then"
-  },
-  {
-   "addr": 33565530,
-   "hex": "0x2002B5A",
-   "context": "elseif ReadU8(segment, 0x2002b5a) == 0x6d then"
-  },
-  {
-   "addr": 33565531,
-   "hex": "0x2002B5B",
-   "context": "elseif ReadU8(segment, 0x2002b5b) == 0x6d then"
-  },
-  {
-   "addr": 33565532,
-   "hex": "0x2002B5C",
-   "context": "elseif ReadU8(segment, 0x2002b5c) == 0x6d then"
-  },
-  {
-   "addr": 33565533,
-   "hex": "0x2002B5D",
-   "context": "elseif ReadU8(segment, 0x2002b5d) == 0x6d then"
-  },
-  {
-   "addr": 33565534,
-   "hex": "0x2002B5E",
-   "context": "elseif ReadU8(segment, 0x2002b5e) == 0x6d then"
-  },
-  {
-   "addr": 33565535,
-   "hex": "0x2002B5F",
-   "context": "elseif ReadU8(segment, 0x2002b5f) == 0x6d then"
-  },
-  {
-   "addr": 33565536,
-   "hex": "0x2002B60",
-   "context": "elseif ReadU8(segment, 0x2002b60) == 0x6d then"
-  },
-  {
-   "addr": 33565537,
-   "hex": "0x2002B61",
-   "context": "elseif ReadU8(segment, 0x2002b61) == 0x6d then"
-  },
-  {
-   "addr": 33565538,
-   "hex": "0x2002B62",
-   "context": "elseif ReadU8(segment, 0x2002b62) == 0x6d then"
-  },
-  {
-   "addr": 33565547,
-   "hex": "0x2002B6B",
-   "context": "RedWBag = ReadU8(segment, 0x2002b6b)"
-  },
-  {
-   "addr": 33565548,
-   "hex": "0x2002B6C",
-   "context": "RedWBag = ReadU8(segment, 0x2002b6c)"
-  },
-  {
-   "addr": 33565549,
-   "hex": "0x2002B6D",
-   "context": "RedWBag = ReadU8(segment, 0x2002b6d)"
-  },
-  {
-   "addr": 33565550,
-   "hex": "0x2002B6E",
-   "context": "RedWBag = ReadU8(segment, 0x2002b6e)"
-  },
-  {
-   "addr": 33565551,
-   "hex": "0x2002B6F",
-   "context": "RedWBag = ReadU8(segment, 0x2002b6f)"
-  },
-  {
-   "addr": 33565552,
-   "hex": "0x2002B70",
-   "context": "RedWBag = ReadU8(segment, 0x2002b70)"
-  },
-  {
-   "addr": 33565553,
-   "hex": "0x2002B71",
-   "context": "RedWBag = ReadU8(segment, 0x2002b71)"
-  },
-  {
-   "addr": 33565554,
-   "hex": "0x2002B72",
-   "context": "RedWBag = ReadU8(segment, 0x2002b72)"
-  },
-  {
-   "addr": 33565555,
-   "hex": "0x2002B73",
-   "context": "RedWBag = ReadU8(segment, 0x2002b73)"
-  },
-  {
-   "addr": 33565556,
-   "hex": "0x2002B74",
-   "context": "RedWBag = ReadU8(segment, 0x2002b74)"
-  },
-  {
-   "addr": 33565557,
-   "hex": "0x2002B75",
-   "context": "RedWBag = ReadU8(segment, 0x2002b75)"
-  },
-  {
-   "addr": 33565760,
-   "hex": "0x2002C40",
-   "context": "updateWall(segment, \"fusions29\", 0x2002c40)"
-  },
-  {
-   "addr": 33565799,
-   "hex": "0x2002C67",
-   "context": "updateWall(segment, \"fusions25\", 0x2002c67)"
-  },
-  {
-   "addr": 33565800,
-   "hex": "0x2002C68",
-   "context": "updateWall(segment, \"fusions2b\", 0x2002c68)"
-  },
-  {
-   "addr": 33565801,
-   "hex": "0x2002C69",
-   "context": "updateWall(segment, \"fusions2f\", 0x2002c69)"
-  },
-  {
-   "addr": 33565802,
-   "hex": "0x2002C6A",
-   "context": "updateWall(segment, \"fusions26\", 0x2002c6a)"
-  },
-  {
-   "addr": 33565803,
-   "hex": "0x2002C6B",
-   "context": "updateWall(segment, \"fusions2a\", 0x2002c6b)"
-  },
-  {
-   "addr": 33565825,
-   "hex": "0x2002C81",
-   "context": "{0x2002c81, 0x02},"
-  },
-  {
-   "addr": 33565826,
-   "hex": "0x2002C82",
-   "context": "{0x2002c82, 0x01},"
-  },
-  {
-   "addr": 33565827,
-   "hex": "0x2002C83",
-   "context": "{0x2002c83, 0x01},"
-  },
-  {
-   "addr": 33565828,
-   "hex": "0x2002C84",
-   "context": "{0x2002c84, 0x01},"
-  },
-  {
-   "addr": 33565829,
-   "hex": "0x2002C85",
-   "context": "{0x2002c85, 0x01},"
-  },
-  {
-   "addr": 33565830,
-   "hex": "0x2002C86",
-   "context": "{0x2002c86, 0x01},"
-  },
-  {
-   "addr": 33565831,
-   "hex": "0x2002C87",
-   "context": "{0x2002c87, 0x01},"
-  },
-  {
-   "addr": 33565832,
-   "hex": "0x2002C88",
-   "context": "{0x2002c88, 0x01},"
-  },
-  {
-   "addr": 33565833,
-   "hex": "0x2002C89",
-   "context": "{0x2002c89, 0x01},"
-  },
-  {
-   "addr": 33565834,
-   "hex": "0x2002C8A",
-   "context": "{0x2002c8a, 0x80},"
-  },
-  {
-   "addr": 33565835,
-   "hex": "0x2002C8B",
-   "context": "{0x2002c8b, 0x01},"
-  },
-  {
-   "addr": 33565836,
-   "hex": "0x2002C8C",
-   "context": "{0x2002c8c, 0x10},"
-  },
-  {
-   "addr": 33565837,
-   "hex": "0x2002C8D",
-   "context": "{0x2002c8d, 0x02},"
-  },
-  {
-   "addr": 33565852,
-   "hex": "0x2002C9C",
-   "context": "updateToggleFlag(segment, \"dws\", 0x2002c9c, 0x04)"
-  },
-  {
-   "addr": 33565858,
-   "hex": "0x2002CA2",
-   "context": "updateSectionFlag(segment, \"@Ruins - Golden Octo/Kill\", 0x2002ca2, 0x02)"
-  },
-  {
-   "addr": 33565859,
-   "hex": "0x2002CA3",
-   "context": "if testFlag(segment, 0x2002ca3, 0x40) then"
-  },
-  {
-   "addr": 33565860,
-   "hex": "0x2002CA4",
-   "context": "if testFlag(segment, 0x2002ca4, 0x01) then"
-  },
-  {
-   "addr": 33565861,
-   "hex": "0x2002CA5",
-   "context": "if testFlag(segment, 0x2002ca5, 0x08) then"
-  },
-  {
-   "addr": 33565862,
-   "hex": "0x2002CA6",
-   "context": "updateToggleFlag(segment, \"dhc\", 0x2002ca6, 0x20)"
-  },
-  {
-   "addr": 33565863,
-   "hex": "0x2002CA7",
-   "context": "updateSectionFlag(segment, \"@Trilby - Scrub/Item\", 0x2002ca7, 0x04)"
-  },
-  {
-   "addr": 33565885,
-   "hex": "0x2002CBD",
-   "context": "updateSectionFlag(segment, \"@Swamp - Center/Chest\", 0x2002cbd, 0x10)"
-  },
-  {
-   "addr": 33565886,
-   "hex": "0x2002CBE",
-   "context": "updateSectionFlag(segment, \"@Castle - Moat Left/Chest\", 0x2002cbe, 0x04)"
-  },
-  {
-   "addr": 33565888,
-   "hex": "0x2002CC0",
-   "context": "updateSectionFlag(segment, \"@Swamp - Underwater/Top\", 0x2002cc0, 0x04)"
-  },
-  {
-   "addr": 33565890,
-   "hex": "0x2002CC2",
-   "context": "updateDecreaseCount(segment, \"@Ruins - Armos Kill/Chests\", {{0x2002cc2, 0x08}, {0x2002cc2, 0x10}})"
-  },
-  {
-   "addr": 33565891,
-   "hex": "0x2002CC3",
-   "context": "updateSectionFlag(segment, \"@Minish Woods - Bottom/HP\", 0x2002cc3, 0x10)"
-  },
-  {
-   "addr": 33565893,
-   "hex": "0x2002CC5",
-   "context": "updateSectionFlag(segment, \"@Crenel Base - Entrance Vine/Item\", 0x2002cc5, 0x02)"
-  },
-  {
-   "addr": 33565895,
-   "hex": "0x2002CC7",
-   "context": "updateSectionFlag(segment, \"@Valley - Lost Woods/Chest (Left Left Left Up Up Up)\", 0x2002cc7, 0x04)"
-  },
-  {
-   "addr": 33565899,
-   "hex": "0x2002CCB",
-   "context": "updateSectionFlag(segment, \"@Lon Lon - Dig Spot/Digging\", 0x2002ccb, 0x20)"
-  },
-  {
-   "addr": 33565901,
-   "hex": "0x2002CCD",
-   "context": "updateSectionFlag(segment, \"@North Field - Dig Spot/Digging\", 0x2002ccd, 0x20)"
-  },
-  {
-   "addr": 33565902,
-   "hex": "0x2002CCE",
-   "context": "{{0x2002cce, 0x08}, {0x2002cce, 0x10}, {0x2002cce, 0x20}, {0x2002cce, 0x40}, {0x2002cce, 0x80}, {0x2002ccf, 0x01}}"
-  },
-  {
-   "addr": 33565903,
-   "hex": "0x2002CCF",
-   "context": "{{0x2002cce, 0x08}, {0x2002cce, 0x10}, {0x2002cce, 0x20}, {0x2002cce, 0x40}, {0x2002cce, 0x80}, {0x2002ccf, 0x01}}"
-  },
-  {
-   "addr": 33565904,
-   "hex": "0x2002CD0",
-   "context": "updateSectionFlag(segment, \"@Falls - Entrance/HP\", 0x2002cd0, 0x01)"
-  },
-  {
-   "addr": 33565905,
-   "hex": "0x2002CD1",
-   "context": "updateSectionFlag(segment, \"@Falls - Biggoron/Mirror Shield\", 0x2002cd1, 0x10)"
-  },
-  {
-   "addr": 33565906,
-   "hex": "0x2002CD2",
-   "context": "updateSectionFlag(segment, \"@Ruins - Near Dungeon Fusion/Chest\", 0x2002cd2, 0x10)"
-  },
-  {
-   "addr": 33565907,
-   "hex": "0x2002CD3",
-   "context": "updateSectionFlag(segment, \"@Valley Graveyard - Left Fusion/Chest\", 0x2002cd3, 0x04)"
-  },
-  {
-   "addr": 33565908,
-   "hex": "0x2002CD4",
-   "context": "updateSectionFlag(segment, \"@Crenel - Climb Fusion/Chest\", 0x2002cd4, 0x01)"
-  },
-  {
-   "addr": 33565909,
-   "hex": "0x2002CD5",
-   "context": "updateSectionFlag(segment, \"@Town - Inn Ledge/Chest\", 0x2002cd5, 0x01)"
-  },
-  {
-   "addr": 33565910,
-   "hex": "0x2002CD6",
-   "context": "updateSectionFlag(segment, \"@Town - Cafe/Cafe Lady\", 0x2002cd6, 0x40)"
-  },
-  {
-   "addr": 33565911,
-   "hex": "0x2002CD7",
-   "context": "updateSectionFlag(segment, \"@Clouds - North West Bottom/Chest\", 0x2002cd7, 0x20)"
-  },
-  {
-   "addr": 33565912,
-   "hex": "0x2002CD8",
-   "context": "updateSectionFlag(segment, \"@Clouds - North West Top/Dig Spot\", 0x2002cd8, 0x04)"
-  },
-  {
-   "addr": 33565913,
-   "hex": "0x2002CD9",
-   "context": "updateSectionFlag(segment, \"@Clouds - Southeast South Digging Spot/Digging\", 0x2002cd9, 0x01)"
-  },
-  {
-   "addr": 33565914,
-   "hex": "0x2002CDA",
-   "context": "updateSectionFlag(segment, \"@Falls - South Dig Spot/Digging\", 0x2002cda, 0x80)"
-  },
-  {
-   "addr": 33565915,
-   "hex": "0x2002CDB",
-   "context": "updateSectionFlag(segment, \"@Minish Woods - Post Village Fusion/Chest\", 0x2002cdb, 0x08)"
-  },
-  {
-   "addr": 33565916,
-   "hex": "0x2002CDC",
-   "context": "updateDecreaseCount(segment, \"@Wind Tribe/1F - Chests\", {{0x2002cdc, 0x20}, {0x2002cdc, 0x40}})"
-  },
-  {
-   "addr": 33565917,
-   "hex": "0x2002CDD",
-   "context": "updateDecreaseCount(segment, \"@Wind Tribe/3F - Chests\", {{0x2002cdd, 0x01}, {0x2002cdd, 0x02}, {0x2002cdd, 0x04}})"
-  },
-  {
-   "addr": 33565918,
-   "hex": "0x2002CDE",
-   "context": "updateSectionFlag(segment, \"@Crenel Base - Minish Crack/Chest\", 0x2002cde, 0x02)"
-  },
-  {
-   "addr": 33565920,
-   "hex": "0x2002CE0",
-   "context": "updateSectionFlag(segment, \"@Town - Inn/Pot\", 0x2002ce0, 0x80)"
-  },
-  {
-   "addr": 33565923,
-   "hex": "0x2002CE3",
-   "context": "updateSectionFlag(segment, \"@Western Woods - Percy Fusion/Percy\", 0x2002ce3, 0x80)"
-  },
-  {
-   "addr": 33565924,
-   "hex": "0x2002CE4",
-   "context": "updateSectionFlag(segment, \"@Western Woods - Percy Fusion/Moblin\", 0x2002ce4, 0x04)"
-  },
-  {
-   "addr": 33565925,
-   "hex": "0x2002CE5",
-   "context": "updateSectionFlag(segment, \"@Lon Lon - Ranch/Pot\", 0x2002ce5, 0x20)"
-  },
-  {
-   "addr": 33565926,
-   "hex": "0x2002CE6",
-   "context": "updateSectionFlag(segment, \"@Town - Shop/Behind Counter\", 0x2002ce6, 0x08)"
-  },
-  {
-   "addr": 33565928,
-   "hex": "0x2002CE8",
-   "context": "updateSectionFlag(segment, \"@Wind Tribe/2F - Gregal Gift 1\", 0x2002ce8, 0x20)"
-  },
-  {
-   "addr": 33565929,
-   "hex": "0x2002CE9",
-   "context": "updateSectionFlag(segment, \"@Valley - Dampe/Gift\", 0x2002ce9, 0x02)"
-  },
-  {
-   "addr": 33565931,
-   "hex": "0x2002CEB",
-   "context": "updateSectionFlag(segment, \"@Town - Library/Yellow Minish - Gift\", 0x2002ceb, 0x01)"
-  },
-  {
-   "addr": 33565934,
-   "hex": "0x2002CEE",
-   "context": "updateSectionFlag(segment, \"@South Field - Tree Fusion/HP\", 0x2002cee, 0x80)"
-  },
-  {
-   "addr": 33565935,
-   "hex": "0x2002CEF",
-   "context": "updateSectionFlag(segment, \"@Valley - Great Fairy/Gift\", 0x2002cef, 0x40)"
-  },
-  {
-   "addr": 33565936,
-   "hex": "0x2002CF0",
-   "context": "updateSectionFlag(segment, \"@Crenel - Great Fairy/Gift\", 0x2002cf0, 0x01)"
-  },
-  {
-   "addr": 33565938,
-   "hex": "0x2002CF2",
-   "context": "updateSectionFlag(segment, \"@Town - Music House/HP\", 0x2002cf2, 0x10)"
-  },
-  {
-   "addr": 33565939,
-   "hex": "0x2002CF3",
-   "context": "{0x2002cf3, 0x02},"
-  },
-  {
-   "addr": 33565940,
-   "hex": "0x2002CF4",
-   "context": "{0x2002cf4, 0x01}"
-  },
-  {
-   "addr": 33565941,
-   "hex": "0x2002CF5",
-   "context": "updateSectionFlag(segment, \"@Minish Village/Barrel House - Item\", 0x2002cf5, 0x04)"
-  },
-  {
-   "addr": 33565948,
-   "hex": "0x2002CFC",
-   "context": "updateSectionFlag(segment, \"@Town - School/Basement Top - Chest\", 0x2002cfc, 0x40)"
-  },
-  {
-   "addr": 33565949,
-   "hex": "0x2002CFD",
-   "context": "updateSectionFlag(segment, \"@Town - Well Left/Chest\", 0x2002cfd, 0x01)"
-  },
-  {
-   "addr": 33565950,
-   "hex": "0x2002CFE",
-   "context": "updateSectionFlag(segment, \"@Town - Fountain/Small Chest\", 0x2002cfe, 0x01)"
-  },
-  {
-   "addr": 33565952,
-   "hex": "0x2002D00",
-   "context": "if testFlag(segment, 0x2002d00, 0x80) then"
-  },
-  {
-   "addr": 33565953,
-   "hex": "0x2002D01",
-   "context": "if testFlag(segment, 0x2002d01, 0x01) then"
-  },
-  {
-   "addr": 33565954,
-   "hex": "0x2002D02",
-   "context": "updateToggleFlag(segment, \"rc\", 0x2002d02, 0x04)"
-  },
-  {
-   "addr": 33565955,
-   "hex": "0x2002D03",
-   "context": "{0x2002d03, 0x02},"
-  },
-  {
-   "addr": 33565956,
-   "hex": "0x2002D04",
-   "context": "updateSectionFlag(segment, \"@Crenel - Dig Cave/HP\", 0x2002d04, 0x20)"
-  },
-  {
-   "addr": 33565957,
-   "hex": "0x2002D05",
-   "context": "updateDecreaseCount(segment, \"@Trilby - Dig Cave/Chests\", {{0x2002d04, 0x80}, {0x2002d05, 0x02}})"
-  },
-  {
-   "addr": 33565958,
-   "hex": "0x2002D06",
-   "context": "updateDecreaseCount(segment, \"@Fortress/Left 2F - Dig - Chest\", {{0x2002d06, 0x01}, {0x2002d07, 0x20}})"
-  },
-  {
-   "addr": 33565959,
-   "hex": "0x2002D07",
-   "context": "updateDecreaseCount(segment, \"@Fortress/Left 2F - Dig - Chest\", {{0x2002d06, 0x01}, {0x2002d07, 0x20}})"
-  },
-  {
-   "addr": 33565960,
-   "hex": "0x2002D08",
-   "context": "updateSectionFlag(segment, \"@Fortress/Back 2F - Left - Big Chest\", 0x2002d08, 0x01)"
-  },
-  {
-   "addr": 33565962,
-   "hex": "0x2002D0A",
-   "context": "updateSectionFlag(segment, \"@Town - Shop/Attic Chest\", 0x2002d0a, 0x80)"
-  },
-  {
-   "addr": 33565963,
-   "hex": "0x2002D0B",
-   "context": "updateSectionFlag(segment, \"@Town - School Path/HP\", 0x2002d0b, 0x40)"
-  },
-  {
-   "addr": 33565964,
-   "hex": "0x2002D0C",
-   "context": "updateSectionFlag(segment, \"@Crenel - Beanstalk Fusion/HP\", 0x2002d0c, 0x08)"
-  },
-  {
-   "addr": 33565965,
-   "hex": "0x2002D0D",
-   "context": "updateSectionFlag(segment, \"@Western Woods - Beanstalk Fusion/Chest\", 0x2002d0d, 0x08)"
-  },
-  {
-   "addr": 33565966,
-   "hex": "0x2002D0E",
-   "context": "{0x2002d0e, 0x40},"
-  },
-  {
-   "addr": 33565967,
-   "hex": "0x2002D0F",
-   "context": "{0x2002d0f, 0x01},"
-  },
-  {
-   "addr": 33565968,
-   "hex": "0x2002D10",
-   "context": "updateSectionFlag(segment, \"@Crenel - Rain Path Fusion/Chest\", 0x2002d10, 0x40)"
-  },
-  {
-   "addr": 33565969,
-   "hex": "0x2002D11",
-   "context": "updateSectionFlag(segment, \"@Crenel - Mines Path Fusion/Chest\", 0x2002d11, 0x08)"
-  },
-  {
-   "addr": 33565970,
-   "hex": "0x2002D12",
-   "context": "if testFlag(segment, 0x2002d12, 0x08) then"
-  },
-  {
-   "addr": 33565971,
-   "hex": "0x2002D13",
-   "context": "updateSectionFlag(segment, \"@Town - Bakery Attic/Chest\", 0x2002d13, 0x20)"
-  },
-  {
-   "addr": 33565972,
-   "hex": "0x2002D14",
-   "context": "updateSectionFlag(segment, \"@Crypt/Gibdo Left - Item\", 0x2002d14, 0x10)"
-  },
-  {
-   "addr": 33565980,
-   "hex": "0x2002D1C",
-   "context": "updateDecreaseCount(segment, \"@Crenel - Dojo/Chests\", {{0x2002d1c, 0x02}, {0x2002d1c, 0x04}})"
-  },
-  {
-   "addr": 33565981,
-   "hex": "0x2002D1D",
-   "context": "updateSectionFlag(segment, \"@Trilby - Bomb Cave/Chest\", 0x2002d1d, 0x20)"
-  },
-  {
-   "addr": 33565982,
-   "hex": "0x2002D1E",
-   "context": "{0x2002d1e, 0x20},"
-  },
-  {
-   "addr": 33565983,
-   "hex": "0x2002D1F",
-   "context": "{0x2002d1f, 0x01},"
-  },
-  {
-   "addr": 33565984,
-   "hex": "0x2002D20",
-   "context": "{0x2002d20, 0x10},"
-  },
-  {
-   "addr": 33565985,
-   "hex": "0x2002D21",
-   "context": "{0x2002d21, 0x01},"
-  },
-  {
-   "addr": 33565986,
-   "hex": "0x2002D22",
-   "context": "updateSectionFlag(segment, \"@Swamp - South Cave/Chest\", 0x2002d22, 0x10)"
-  },
-  {
-   "addr": 33565987,
-   "hex": "0x2002D23",
-   "context": "updateSectionFlag(segment, \"@Crenel - Bridge Cave/Chest\", 0x2002d23, 0x80)"
-  },
-  {
-   "addr": 33565988,
-   "hex": "0x2002D24",
-   "context": "updateSectionFlag(segment, \"@Crenel Base - Water Cave/HP\", 0x2002d24, 0x01)"
-  },
-  {
-   "addr": 33565989,
-   "hex": "0x2002D25",
-   "context": "updateSectionFlag(segment, \"@Falls - 1st Cave/Chest\", 0x2002d25, 0x10)"
-  },
-  {
-   "addr": 33565990,
-   "hex": "0x2002D26",
-   "context": "{0x2002d26, 0x01},"
-  },
-  {
-   "addr": 33565991,
-   "hex": "0x2002D27",
-   "context": "updateSectionFlag(segment, \"@Valley Graveyard - Left Grave/HP\", 0x2002d27, 0x20)"
-  },
-  {
-   "addr": 33565992,
-   "hex": "0x2002D28",
-   "context": "updateSectionFlag(segment, \"@Crenel Base - Minish Vine Hole/Chest\", 0x2002d28, 0x01)"
-  },
-  {
-   "addr": 33565994,
-   "hex": "0x2002D2A",
-   "context": "updateSectionFlag(segment, \"@Lon Lon - Goron Cave Fusion/Big Chest\", 0x2002d2a, 0x40)"
-  },
-  {
-   "addr": 33565995,
-   "hex": "0x2002D2B",
-   "context": "updateSectionFlag(segment, \"@Crenel - Fairy Cave/HP\", 0x2002d2b, 0x20)"
-  },
-  {
-   "addr": 33565996,
-   "hex": "0x2002D2C",
-   "context": "updateSectionFlag(segment, \"@Crenel - Dojo/HP\", 0x2002d2c, 0x01)"
-  },
-  {
-   "addr": 33566015,
-   "hex": "0x2002D3F",
-   "context": "if testFlag(segment, 0x2002d3f, 0x40) then"
-  },
-  {
-   "addr": 33566016,
-   "hex": "0x2002D40",
-   "context": "updateSectionFlag(segment, \"@DeepWoods/1F - West Statue Puzzle - Chest\", 0x2002d40, 0x80)"
-  },
-  {
-   "addr": 33566017,
-   "hex": "0x2002D41",
-   "context": "if testFlag(segment, 0x2002d41, 0x04) then"
-  },
-  {
-   "addr": 33566018,
-   "hex": "0x2002D42",
-   "context": "updateSectionFlag(segment, \"@DeepWoods/1F - East Mulldozer Fight - Item\", 0x2002d42, 0x01)"
-  },
-  {
-   "addr": 33566019,
-   "hex": "0x2002D43",
-   "context": "if testFlag(segment, 0x2002d43, 0x10) then"
-  },
-  {
-   "addr": 33566020,
-   "hex": "0x2002D44",
-   "context": "if testFlag(segment, 0x2002d44, 0x20) then"
-  },
-  {
-   "addr": 33566021,
-   "hex": "0x2002D45",
-   "context": "if testFlag(segment, 0x2002D45, 0x02) then"
-  },
-  {
-   "addr": 33566022,
-   "hex": "0x2002D46",
-   "context": "updateSectionFlag(segment, \"@DeepWoods/1F - Madderpillar - HP\", 0x2002d46, 0x04)"
-  },
-  {
-   "addr": 33566038,
-   "hex": "0x2002D56",
-   "context": "if testFlag(segment, 0x2002d56, 0x10) then"
-  },
-  {
-   "addr": 33566039,
-   "hex": "0x2002D57",
-   "context": "if testFlag(segment, 0x2002d57, 0x20) then"
-  },
-  {
-   "addr": 33566040,
-   "hex": "0x2002D58",
-   "context": "updateSectionFlag(segment, \"@Cave Of Flame/B1 - Rollobite - Chest\", 0x2002d58, 0x80)"
-  },
-  {
-   "addr": 33566041,
-   "hex": "0x2002D59",
-   "context": "updateSectionFlag(segment, \"@Cave Of Flame/B1 - Hazy Room - Small Chest\", 0x2002d59, 0x02)"
-  },
-  {
-   "addr": 33566042,
-   "hex": "0x2002D5A",
-   "context": "if testFlag(segment, 0x2002D5A, 0x40) then"
-  },
-  {
-   "addr": 33566043,
-   "hex": "0x2002D5B",
-   "context": "{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}"
-  },
-  {
-   "addr": 33566044,
-   "hex": "0x2002D5C",
-   "context": "{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}"
-  },
-  {
-   "addr": 33566063,
-   "hex": "0x2002D6F",
-   "context": "if testFlag(segment, 0x2002d6f, 0x20) then"
-  },
-  {
-   "addr": 33566064,
-   "hex": "0x2002D70",
-   "context": "if testFlag(segment, 0x2002D70, 0x40) then"
-  },
-  {
-   "addr": 33566065,
-   "hex": "0x2002D71",
-   "context": "if testFlag(segment, 0x2002d71, 0x10) then"
-  },
-  {
-   "addr": 33566066,
-   "hex": "0x2002D72",
-   "context": "if testFlag(segment, 0x2002d72, 0x40) then"
-  },
-  {
-   "addr": 33566067,
-   "hex": "0x2002D73",
-   "context": "updateSectionFlag(segment, \"@Fortress/Left 3F - Item Drop\", 0x2002d73, 0x80)"
-  },
-  {
-   "addr": 33566068,
-   "hex": "0x2002D74",
-   "context": "updateSectionFlag(segment, \"@Fortress/Entrance 1F - Left Wizzrobe - Chest\", 0x2002d74, 0x08)"
-  },
-  {
-   "addr": 33566089,
-   "hex": "0x2002D89",
-   "context": "if testFlag(segment, 0x2002D89, 0x10) then"
-  },
-  {
-   "addr": 33566090,
-   "hex": "0x2002D8A",
-   "context": "if testFlag(segment, 0x2002d8a, 0x01) then"
-  },
-  {
-   "addr": 33566091,
-   "hex": "0x2002D8B",
-   "context": "updateSectionFlag(segment, \"@Droplet/Left Path B1 - Waterfall - Big Chest\", 0x2002d8b, 0x80)"
-  },
-  {
-   "addr": 33566092,
-   "hex": "0x2002D8C",
-   "context": "if testFlag(segment, 0x2002d8c, 0x02) then"
-  },
-  {
-   "addr": 33566093,
-   "hex": "0x2002D8D",
-   "context": "updateSectionFlag(segment, \"@Droplet/Entrance B2 - West - Iceblock\", 0x2002d8d, 0x80)"
-  },
-  {
-   "addr": 33566094,
-   "hex": "0x2002D8E",
-   "context": "updateSectionFlag(segment, \"@Droplet/Entrance B2 - East - Iceblock\", 0x2002d8e, 0x04)"
-  },
-  {
-   "addr": 33566095,
-   "hex": "0x2002D8F",
-   "context": "updateSectionFlag(segment, \"@Droplet/Left Path B2 - Ice Plain - Chest\", 0x2002d8f, 0x08)"
-  },
-  {
-   "addr": 33566096,
-   "hex": "0x2002D90",
-   "context": "if testFlag(segment, 0x2002d90, 0x08) then"
-  },
-  {
-   "addr": 33566097,
-   "hex": "0x2002D91",
-   "context": "updateSectionFlag(segment, \"@Droplet/Right Path B2 - Mulldozers - Item Drop\", 0x2002d91, 0x80)"
-  },
-  {
-   "addr": 33566098,
-   "hex": "0x2002D92",
-   "context": "updateSectionFlag(segment, \"@Droplet/Left Path B2 - Ice Madderpillar - Big Chest\", 0x2002d92, 0x80)"
-  },
-  {
-   "addr": 33566099,
-   "hex": "0x2002D93",
-   "context": "updateSectionFlag(segment, \"@Droplet/Left Path B2 - Underwater - Pot\", 0x2002d93, 0x04)"
-  },
-  {
-   "addr": 33566100,
-   "hex": "0x2002D94",
-   "context": "{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}"
-  },
-  {
-   "addr": 33566101,
-   "hex": "0x2002D95",
-   "context": "{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}"
-  },
-  {
-   "addr": 33566102,
-   "hex": "0x2002D96",
-   "context": "{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}"
-  },
-  {
-   "addr": 33566103,
-   "hex": "0x2002D97",
-   "context": "{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}"
-  },
-  {
-   "addr": 33566114,
-   "hex": "0x2002DA2",
-   "context": "if testFlag(segment, 0x2002DA2, 0x40) then"
-  },
-  {
-   "addr": 33566115,
-   "hex": "0x2002DA3",
-   "context": "if testFlag(segment, 0x2002da3, 0x10) then"
-  },
-  {
-   "addr": 33566116,
-   "hex": "0x2002DA4",
-   "context": "elseif testFlag(segment, 0x2002DA4, 0x04) then"
-  },
-  {
-   "addr": 33566117,
-   "hex": "0x2002DA5",
-   "context": "if testFlag(segment, 0x2002da5, 0x04) then"
-  },
-  {
-   "addr": 33566118,
-   "hex": "0x2002DA6",
-   "context": "if testFlag(segment, 0x2002da6, 0x08) then"
-  },
-  {
-   "addr": 33566119,
-   "hex": "0x2002DA7",
-   "context": "updateSectionFlag(segment, \"@Palace/1st Half 3F - Pot Puzzle - Item Drop\", 0x2002da7, 0x02)"
-  },
-  {
-   "addr": 33566121,
-   "hex": "0x2002DA9",
-   "context": "if testFlag(segment, 0x2002da9, 0x04) then"
-  },
-  {
-   "addr": 33566122,
-   "hex": "0x2002DAA",
-   "context": "updateSectionFlag(segment, \"@Palace/1st Half 1F - Grate - Chest\", 0x2002daa, 0x40)"
-  },
-  {
-   "addr": 33566123,
-   "hex": "0x2002DAB",
-   "context": "updateSectionFlag(segment, \"@Palace/2nd Half 1F - Dark Room - Big Chest\", 0x2002dab, 0x02)"
-  },
-  {
-   "addr": 33566124,
-   "hex": "0x2002DAC",
-   "context": "updateSectionFlag(segment, \"@Palace/2nd Half 4F - HP\", 0x2002dac, 0x01)"
-  },
-  {
-   "addr": 33566139,
-   "hex": "0x2002DBB",
-   "context": "if testFlag(segment, 0x2002dbb, 0x20) then"
-  },
-  {
-   "addr": 33566140,
-   "hex": "0x2002DBC",
-   "context": "if testFlag(segment, 0x2002dbc, 0x10) then"
-  },
-  {
-   "addr": 33566142,
-   "hex": "0x2002DBE",
-   "context": "if testFlag(segment, 0x2002DBE, 0x20) then"
-  },
-  {
-   "addr": 33566143,
-   "hex": "0x2002DBF",
-   "context": "updateSectionFlag(segment, \"@DHC/1F - Throne - Big Chest\", 0x2002dbf, 0x80)"
-  },
-  {
-   "addr": 33566144,
-   "hex": "0x2002DC0",
-   "context": "updateSectionFlag(segment, \"@DHC/1F - Blade - Chest\", 0x2002dc0, 0x20)"
-  },
-  {
-   "addr": 33566145,
-   "hex": "0x2002DC1",
-   "context": "updateSectionFlag(segment, \"@DHC/B1 - Big Chest\", 0x2002dc1, 0x08)"
-  },
-  {
-   "addr": 33566146,
-   "hex": "0x2002DC2",
-   "context": "updateSectionFlag(segment, \"@DHC/B2 - King\", 0x2002dc2, 0x02)"
-  },
-  {
-   "addr": 33566364,
-   "hex": "0x2002E9C",
-   "context": "updateSmallKeys(segment, \"ud_smallkey\", 0x2002e9c)"
-  },
-  {
-   "addr": 33566365,
-   "hex": "0x2002E9D",
-   "context": "updateSmallKeys(segment, \"dws_smallkey\", 0x2002e9d)"
-  },
-  {
-   "addr": 33566366,
-   "hex": "0x2002E9E",
-   "context": "updateSmallKeys(segment, \"cof_smallkey\", 0x2002e9e)"
-  },
-  {
-   "addr": 33566367,
-   "hex": "0x2002E9F",
-   "context": "updateSmallKeys(segment, \"fow_smallkey\", 0x2002e9f)"
-  },
-  {
-   "addr": 33566368,
-   "hex": "0x2002EA0",
-   "context": "updateSmallKeys(segment, \"tod_smallkey\", 0x2002ea0)"
-  },
-  {
-   "addr": 33566369,
-   "hex": "0x2002EA1",
-   "context": "updateSmallKeys(segment, \"pow_smallkey\", 0x2002ea1)"
-  },
-  {
-   "addr": 33566370,
-   "hex": "0x2002EA2",
-   "context": "updateSmallKeys(segment, \"dhc_smallkey\", 0x2002ea2)"
-  },
-  {
-   "addr": 33566371,
-   "hex": "0x2002EA3",
-   "context": "updateSmallKeys(segment, \"rc_smallkey\", 0x2002ea3)"
-  },
-  {
-   "addr": 33566372,
-   "hex": "0x2002EA4",
-   "context": "updateSectionFlag(segment, \"@Town - Shoe Shop/Gift\", 0x2002ea4, 0x08)"
-  },
-  {
-   "addr": 33566373,
-   "hex": "0x2002EA5",
-   "context": "updateSectionFlag(segment, \"@Town - Carlov/Gift\", 0x2002ea5, 0x02)"
-  },
-  {
-   "addr": 33566374,
-   "hex": "0x2002EA6",
-   "context": "updateSectionFlag(segment, \"@Hylia - Dojo/Gift\", 0x2002ea6, 0x04)"
-  },
-  {
-   "addr": 33566375,
-   "hex": "0x2002EA7",
-   "context": "updateSectionFlag(segment, \"@Town - Shop/80 Item\", 0x2002ea7, 0x01)"
-  },
-  {
-   "addr": 33566376,
-   "hex": "0x2002EA8",
-   "context": "updateSectionFlag(segment, \"@Town - Shop/600 Item 2\", 0x2002ea8, 0x04)"
-  },
-  {
-   "addr": 33566380,
-   "hex": "0x2002EAC",
-   "context": "updateToggleFlag(segment, \"ud_bigkey\", 0x2002eac, 0x04)"
-  },
-  {
-   "addr": 33566381,
-   "hex": "0x2002EAD",
-   "context": "updateToggleFlag(segment, \"dws_bigkey\", 0x2002ead, 0x04)"
-  },
-  {
-   "addr": 33566382,
-   "hex": "0x2002EAE",
-   "context": "updateToggleFlag(segment, \"cof_bigkey\", 0x2002eae, 0x04)"
-  },
-  {
-   "addr": 33566383,
-   "hex": "0x2002EAF",
-   "context": "updateToggleFlag(segment, \"fow_bigkey\", 0x2002eaf, 0x04)"
-  },
-  {
-   "addr": 33566384,
-   "hex": "0x2002EB0",
-   "context": "updateToggleFlag(segment, \"tod_bigkey\", 0x2002eb0, 0x04)"
-  },
-  {
-   "addr": 33566385,
-   "hex": "0x2002EB1",
-   "context": "updateToggleFlag(segment, \"pow_bigkey\", 0x2002eb1, 0x04)"
-  },
-  {
-   "addr": 33566386,
-   "hex": "0x2002EB2",
-   "context": "updateToggleFlag(segment, \"dhc_bigkey\", 0x2002eb2, 0x04)"
-  }
- ],
- "flags": [
-  {
-   "flag": 0,
-   "hex": "0x00",
-   "context": "return AutoTracker:ReadU8(0x2002b32) > 0x00"
-  },
-  {
-   "flag": 1,
-   "hex": "0x01",
-   "context": "if testFlag(segment, address, 0x01) or testFlag(segment, address, 0x02) then"
-  },
-  {
-   "flag": 2,
-   "hex": "0x02",
-   "context": "if testFlag(segment, address, 0x01) or testFlag(segment, address, 0x02) then"
-  },
-  {
-   "flag": 4,
-   "hex": "0x04",
-   "context": "local bookFlags = {0x04, 0x10, 0x40}"
-  },
-  {
-   "flag": 5,
-   "hex": "0x05",
-   "context": "elseif ReadU8(segment, 0x2002b32) == 0x05 then"
-  },
-  {
-   "flag": 8,
-   "hex": "0x08",
-   "context": "local usedBooks = {0x08, 0x20, 0x80}"
-  },
-  {
-   "flag": 12,
-   "hex": "0x0C",
-   "context": "ScriptHost:AddMemoryWatch(\"TMC Item Upgrades\", 0x2002ae4, 0x0c, updateGearFromMemory)"
-  },
-  {
-   "flag": 16,
-   "hex": "0x10",
-   "context": "if testFlag(segment, address, 0x10) or testFlag(segment, address, 0x20) then"
-  },
-  {
-   "flag": 17,
-   "hex": "0x11",
-   "context": "elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 th"
-  },
-  {
-   "flag": 21,
-   "hex": "0x15",
-   "context": "elseif ReadU8(segment, 0x2002b32) == 0x15 then"
-  },
-  {
-   "flag": 32,
-   "hex": "0x20",
-   "context": "if testFlag(segment, address, 0x10) or testFlag(segment, address, 0x20) then"
-  },
-  {
-   "flag": 44,
-   "hex": "0x2C",
-   "context": "ScriptHost:AddMemoryWatch(\"Wall fusions\", 0x2002c40, 0x2c, UpdateWallLocation)"
-  },
-  {
-   "flag": 64,
-   "hex": "0x40",
-   "context": "if testFlag(segment, address, 0x40) or testFlag(segment, address, 0x80) then"
-  },
-  {
-   "flag": 65,
-   "hex": "0x41",
-   "context": "if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then"
-  },
-  {
-   "flag": 70,
-   "hex": "0x46",
-   "context": "ScriptHost:AddMemoryWatch(\"TMC Item Data\", 0x2002b30, 0x46, updateItemsFromMemorySegment)"
-  },
-  {
-   "flag": 81,
-   "hex": "0x51",
-   "context": "elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 th"
-  },
-  {
-   "flag": 85,
-   "hex": "0x55",
-   "context": "elseif ReadU8(segment, 0x2002b32) == 0x55 then"
-  },
-  {
-   "flag": 101,
-   "hex": "0x65",
-   "context": "updateClouds(segment, \"clouds\", 0x65)"
-  },
-  {
-   "flag": 106,
-   "hex": "0x6A",
-   "context": "updateWilds(segment, \"wilds\", 0x6a)"
-  },
-  {
-   "flag": 109,
-   "hex": "0x6D",
-   "context": "if ReadU8(segment, 0x2002b58) == 0x6d then"
-  },
-  {
-   "flag": 110,
-   "hex": "0x6E",
-   "context": "updateRedW(segment, 0x6e)"
-  },
-  {
-   "flag": 111,
-   "hex": "0x6F",
-   "context": "updateRedV(segment, 0x6f)"
-  },
-  {
-   "flag": 112,
-   "hex": "0x70",
-   "context": "updateRedE(segment, 0x70)"
-  },
-  {
-   "flag": 113,
-   "hex": "0x71",
-   "context": "updateBlueL(segment, 0x71)"
-  },
-  {
-   "flag": 114,
-   "hex": "0x72",
-   "context": "updateBlueS(segment, 0x72)"
-  },
-  {
-   "flag": 115,
-   "hex": "0x73",
-   "context": "updateGreenC(segment, 0x73)"
-  },
-  {
-   "flag": 116,
-   "hex": "0x74",
-   "context": "updateGreenG(segment, 0x74)"
-  },
-  {
-   "flag": 117,
-   "hex": "0x75",
-   "context": "updateGreenP(segment, 0x75)"
-  },
-  {
-   "flag": 128,
-   "hex": "0x80",
-   "context": "if testFlag(segment, address, 0x40) or testFlag(segment, address, 0x80) then"
-  },
-  {
-   "flag": 129,
-   "hex": "0x81",
-   "context": "if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then"
-  },
-  {
-   "flag": 145,
-   "hex": "0x91",
-   "context": "elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 th"
-  },
-  {
-   "flag": 242,
-   "hex": "0xF2",
-   "context": "elseif ReadU8(segment, address) == 0xF2 then"
-  },
-  {
-   "flag": 243,
-   "hex": "0xF3",
-   "context": "if ReadU8(segment, address) == 0xF3 then"
-  },
-  {
-   "flag": 512,
-   "hex": "0x200",
-   "context": "ScriptHost:AddMemoryWatch(\"TMC Locations and Bosses\", 0x2002c81, 0x200, updateLocations)"
-  }
- ]
+  "addresses": [
+    {
+      "addr": 33565376,
+      "hex": "0x2002AC0",
+      "context": "graveKeyStolen(segment, \"gravekey\", 0x2002ac0, 0x01)"
+    },
+    {
+      "addr": 33565412,
+      "hex": "0x2002AE4",
+      "context": "ScriptHost:AddMemoryWatch(\"TMC Item Upgrades\", 0x2002ae4, 0x0c, updateGearFromMemory)"
+    },
+    {
+      "addr": 33565416,
+      "hex": "0x2002AE8",
+      "context": "item.CurrentStage = ReadU8(segment, 0x2002ae8)"
+    },
+    {
+      "addr": 33565419,
+      "hex": "0x2002AEB",
+      "context": "updateHearts(segment, 0x2002aeb)"
+    },
+    {
+      "addr": 33565422,
+      "hex": "0x2002AEE",
+      "context": "item.CurrentStage = ReadU8(segment, 0x2002aee)"
+    },
+    {
+      "addr": 33565423,
+      "hex": "0x2002AEF",
+      "context": "item.CurrentStage = ReadU8(segment, 0x2002aef)"
+    },
+    {
+      "addr": 33565424,
+      "hex": "0x2002AF0",
+      "context": "updatefigurine(segment, \"figurine\", 0x2002af0)"
+    },
+    {
+      "addr": 33565488,
+      "hex": "0x2002B30",
+      "context": "ScriptHost:AddMemoryWatch(\"TMC Item Data\", 0x2002b30, 0x46, updateItemsFromMemorySegment)"
+    },
+    {
+      "addr": 33565490,
+      "hex": "0x2002B32",
+      "context": "return AutoTracker:ReadU8(0x2002b32) > 0x00"
+    },
+    {
+      "addr": 33565491,
+      "hex": "0x2002B33",
+      "context": "if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then"
+    },
+    {
+      "addr": 33565492,
+      "hex": "0x2002B34",
+      "context": "if testFlag(segment, 0x2002b34, 0x04) then"
+    },
+    {
+      "addr": 33565493,
+      "hex": "0x2002B35",
+      "context": "if testFlag(segment, 0x2002b35, 0x01) then"
+    },
+    {
+      "addr": 33565494,
+      "hex": "0x2002B36",
+      "context": "updateToggleFlag(segment, \"gust\", 0x2002b36, 0x04)"
+    },
+    {
+      "addr": 33565495,
+      "hex": "0x2002B37",
+      "context": "updateToggleFlag(segment, \"cape\", 0x2002b37, 0x01)"
+    },
+    {
+      "addr": 33565497,
+      "hex": "0x2002B39",
+      "context": "local value = ReadU8(segment, 0x2002b39)"
+    },
+    {
+      "addr": 33565503,
+      "hex": "0x2002B3F",
+      "context": "updateLLRKey(segment, \"llrkey\", 0x2002b3f, 0x40)"
+    },
+    {
+      "addr": 33565504,
+      "hex": "0x2002B40",
+      "context": "updateMush(segment, \"mushroom\", 0x2002b40, 0x01)"
+    },
+    {
+      "addr": 33565505,
+      "hex": "0x2002B41",
+      "context": "updateToggleFlag(segment, \"trophy\", 0x2002b41, 0x04)"
+    },
+    {
+      "addr": 33565506,
+      "hex": "0x2002B42",
+      "context": "updateToggleFlag(segment, \"earth\", 0x2002b42, 0x01)"
+    },
+    {
+      "addr": 33565507,
+      "hex": "0x2002B43",
+      "context": "updateToggleFlag(segment, \"grip\", 0x2002b43, 0x01)"
+    },
+    {
+      "addr": 33565508,
+      "hex": "0x2002B44",
+      "context": "if testFlag(segment, 0x2002b44, 0x01) then"
+    },
+    {
+      "addr": 33565509,
+      "hex": "0x2002B45",
+      "context": "if testFlag(segment, 0x2002b45, 0x01) then"
+    },
+    {
+      "addr": 33565512,
+      "hex": "0x2002B48",
+      "context": "updateToggleFlag(segment, \"jabber\", 0x2002b48, 0x40)"
+    },
+    {
+      "addr": 33565518,
+      "hex": "0x2002B4E",
+      "context": "if testFlag(segment, 0x2002b4e, 0x40) then"
+    },
+    {
+      "addr": 33565519,
+      "hex": "0x2002B4F",
+      "context": "if testFlag(segment, 0x2002b4f, 0x01) then"
+    },
+    {
+      "addr": 33565528,
+      "hex": "0x2002B58",
+      "context": "if ReadU8(segment, 0x2002b58) == 0x6d then"
+    },
+    {
+      "addr": 33565529,
+      "hex": "0x2002B59",
+      "context": "elseif ReadU8(segment, 0x2002b59) == 0x6d then"
+    },
+    {
+      "addr": 33565530,
+      "hex": "0x2002B5A",
+      "context": "elseif ReadU8(segment, 0x2002b5a) == 0x6d then"
+    },
+    {
+      "addr": 33565531,
+      "hex": "0x2002B5B",
+      "context": "elseif ReadU8(segment, 0x2002b5b) == 0x6d then"
+    },
+    {
+      "addr": 33565532,
+      "hex": "0x2002B5C",
+      "context": "elseif ReadU8(segment, 0x2002b5c) == 0x6d then"
+    },
+    {
+      "addr": 33565533,
+      "hex": "0x2002B5D",
+      "context": "elseif ReadU8(segment, 0x2002b5d) == 0x6d then"
+    },
+    {
+      "addr": 33565534,
+      "hex": "0x2002B5E",
+      "context": "elseif ReadU8(segment, 0x2002b5e) == 0x6d then"
+    },
+    {
+      "addr": 33565535,
+      "hex": "0x2002B5F",
+      "context": "elseif ReadU8(segment, 0x2002b5f) == 0x6d then"
+    },
+    {
+      "addr": 33565536,
+      "hex": "0x2002B60",
+      "context": "elseif ReadU8(segment, 0x2002b60) == 0x6d then"
+    },
+    {
+      "addr": 33565537,
+      "hex": "0x2002B61",
+      "context": "elseif ReadU8(segment, 0x2002b61) == 0x6d then"
+    },
+    {
+      "addr": 33565538,
+      "hex": "0x2002B62",
+      "context": "elseif ReadU8(segment, 0x2002b62) == 0x6d then"
+    },
+    {
+      "addr": 33565547,
+      "hex": "0x2002B6B",
+      "context": "RedWBag = ReadU8(segment, 0x2002b6b)"
+    },
+    {
+      "addr": 33565548,
+      "hex": "0x2002B6C",
+      "context": "RedWBag = ReadU8(segment, 0x2002b6c)"
+    },
+    {
+      "addr": 33565549,
+      "hex": "0x2002B6D",
+      "context": "RedWBag = ReadU8(segment, 0x2002b6d)"
+    },
+    {
+      "addr": 33565550,
+      "hex": "0x2002B6E",
+      "context": "RedWBag = ReadU8(segment, 0x2002b6e)"
+    },
+    {
+      "addr": 33565551,
+      "hex": "0x2002B6F",
+      "context": "RedWBag = ReadU8(segment, 0x2002b6f)"
+    },
+    {
+      "addr": 33565552,
+      "hex": "0x2002B70",
+      "context": "RedWBag = ReadU8(segment, 0x2002b70)"
+    },
+    {
+      "addr": 33565553,
+      "hex": "0x2002B71",
+      "context": "RedWBag = ReadU8(segment, 0x2002b71)"
+    },
+    {
+      "addr": 33565554,
+      "hex": "0x2002B72",
+      "context": "RedWBag = ReadU8(segment, 0x2002b72)"
+    },
+    {
+      "addr": 33565555,
+      "hex": "0x2002B73",
+      "context": "RedWBag = ReadU8(segment, 0x2002b73)"
+    },
+    {
+      "addr": 33565556,
+      "hex": "0x2002B74",
+      "context": "RedWBag = ReadU8(segment, 0x2002b74)"
+    },
+    {
+      "addr": 33565557,
+      "hex": "0x2002B75",
+      "context": "RedWBag = ReadU8(segment, 0x2002b75)"
+    },
+    {
+      "addr": 33565760,
+      "hex": "0x2002C40",
+      "context": "updateWall(segment, \"fusions29\", 0x2002c40)"
+    },
+    {
+      "addr": 33565799,
+      "hex": "0x2002C67",
+      "context": "updateWall(segment, \"fusions25\", 0x2002c67)"
+    },
+    {
+      "addr": 33565800,
+      "hex": "0x2002C68",
+      "context": "updateWall(segment, \"fusions2b\", 0x2002c68)"
+    },
+    {
+      "addr": 33565801,
+      "hex": "0x2002C69",
+      "context": "updateWall(segment, \"fusions2f\", 0x2002c69)"
+    },
+    {
+      "addr": 33565802,
+      "hex": "0x2002C6A",
+      "context": "updateWall(segment, \"fusions26\", 0x2002c6a)"
+    },
+    {
+      "addr": 33565803,
+      "hex": "0x2002C6B",
+      "context": "updateWall(segment, \"fusions2a\", 0x2002c6b)"
+    },
+    {
+      "addr": 33565825,
+      "hex": "0x2002C81",
+      "context": "{0x2002c81, 0x02},"
+    },
+    {
+      "addr": 33565826,
+      "hex": "0x2002C82",
+      "context": "{0x2002c82, 0x01},"
+    },
+    {
+      "addr": 33565827,
+      "hex": "0x2002C83",
+      "context": "{0x2002c83, 0x01},"
+    },
+    {
+      "addr": 33565828,
+      "hex": "0x2002C84",
+      "context": "{0x2002c84, 0x01},"
+    },
+    {
+      "addr": 33565829,
+      "hex": "0x2002C85",
+      "context": "{0x2002c85, 0x01},"
+    },
+    {
+      "addr": 33565830,
+      "hex": "0x2002C86",
+      "context": "{0x2002c86, 0x01},"
+    },
+    {
+      "addr": 33565831,
+      "hex": "0x2002C87",
+      "context": "{0x2002c87, 0x01},"
+    },
+    {
+      "addr": 33565832,
+      "hex": "0x2002C88",
+      "context": "{0x2002c88, 0x01},"
+    },
+    {
+      "addr": 33565833,
+      "hex": "0x2002C89",
+      "context": "{0x2002c89, 0x01},"
+    },
+    {
+      "addr": 33565834,
+      "hex": "0x2002C8A",
+      "context": "{0x2002c8a, 0x80},"
+    },
+    {
+      "addr": 33565835,
+      "hex": "0x2002C8B",
+      "context": "{0x2002c8b, 0x01},"
+    },
+    {
+      "addr": 33565836,
+      "hex": "0x2002C8C",
+      "context": "{0x2002c8c, 0x10},"
+    },
+    {
+      "addr": 33565837,
+      "hex": "0x2002C8D",
+      "context": "{0x2002c8d, 0x02},"
+    },
+    {
+      "addr": 33565852,
+      "hex": "0x2002C9C",
+      "context": "updateToggleFlag(segment, \"dws\", 0x2002c9c, 0x04)"
+    },
+    {
+      "addr": 33565858,
+      "hex": "0x2002CA2",
+      "context": "updateSectionFlag(segment, \"@Ruins - Golden Octo/Kill\", 0x2002ca2, 0x02)"
+    },
+    {
+      "addr": 33565859,
+      "hex": "0x2002CA3",
+      "context": "if testFlag(segment, 0x2002ca3, 0x40) then"
+    },
+    {
+      "addr": 33565860,
+      "hex": "0x2002CA4",
+      "context": "if testFlag(segment, 0x2002ca4, 0x01) then"
+    },
+    {
+      "addr": 33565861,
+      "hex": "0x2002CA5",
+      "context": "if testFlag(segment, 0x2002ca5, 0x08) then"
+    },
+    {
+      "addr": 33565862,
+      "hex": "0x2002CA6",
+      "context": "updateToggleFlag(segment, \"dhc\", 0x2002ca6, 0x20)"
+    },
+    {
+      "addr": 33565863,
+      "hex": "0x2002CA7",
+      "context": "updateSectionFlag(segment, \"@Trilby - Scrub/Item\", 0x2002ca7, 0x04)"
+    },
+    {
+      "addr": 33565885,
+      "hex": "0x2002CBD",
+      "context": "updateSectionFlag(segment, \"@Swamp - Center/Chest\", 0x2002cbd, 0x10)"
+    },
+    {
+      "addr": 33565886,
+      "hex": "0x2002CBE",
+      "context": "updateSectionFlag(segment, \"@Castle - Moat Left/Chest\", 0x2002cbe, 0x04)"
+    },
+    {
+      "addr": 33565888,
+      "hex": "0x2002CC0",
+      "context": "updateSectionFlag(segment, \"@Swamp - Underwater/Top\", 0x2002cc0, 0x04)"
+    },
+    {
+      "addr": 33565890,
+      "hex": "0x2002CC2",
+      "context": "updateDecreaseCount(segment, \"@Ruins - Armos Kill/Chests\", {{0x2002cc2, 0x08}, {0x2002cc2, 0x10}})"
+    },
+    {
+      "addr": 33565891,
+      "hex": "0x2002CC3",
+      "context": "updateSectionFlag(segment, \"@Minish Woods - Bottom/HP\", 0x2002cc3, 0x10)"
+    },
+    {
+      "addr": 33565893,
+      "hex": "0x2002CC5",
+      "context": "updateSectionFlag(segment, \"@Crenel Base - Entrance Vine/Item\", 0x2002cc5, 0x02)"
+    },
+    {
+      "addr": 33565895,
+      "hex": "0x2002CC7",
+      "context": "updateSectionFlag(segment, \"@Valley - Lost Woods/Chest (Left Left Left Up Up Up)\", 0x2002cc7, 0x04)"
+    },
+    {
+      "addr": 33565899,
+      "hex": "0x2002CCB",
+      "context": "updateSectionFlag(segment, \"@Lon Lon - Dig Spot/Digging\", 0x2002ccb, 0x20)"
+    },
+    {
+      "addr": 33565901,
+      "hex": "0x2002CCD",
+      "context": "updateSectionFlag(segment, \"@North Field - Dig Spot/Digging\", 0x2002ccd, 0x20)"
+    },
+    {
+      "addr": 33565902,
+      "hex": "0x2002CCE",
+      "context": "{{0x2002cce, 0x08}, {0x2002cce, 0x10}, {0x2002cce, 0x20}, {0x2002cce, 0x40}, {0x2002cce, 0x80}, {0x2002ccf, 0x01}}"
+    },
+    {
+      "addr": 33565903,
+      "hex": "0x2002CCF",
+      "context": "{{0x2002cce, 0x08}, {0x2002cce, 0x10}, {0x2002cce, 0x20}, {0x2002cce, 0x40}, {0x2002cce, 0x80}, {0x2002ccf, 0x01}}"
+    },
+    {
+      "addr": 33565904,
+      "hex": "0x2002CD0",
+      "context": "updateSectionFlag(segment, \"@Falls - Entrance/HP\", 0x2002cd0, 0x01)"
+    },
+    {
+      "addr": 33565905,
+      "hex": "0x2002CD1",
+      "context": "updateSectionFlag(segment, \"@Falls - Biggoron/Mirror Shield\", 0x2002cd1, 0x10)"
+    },
+    {
+      "addr": 33565906,
+      "hex": "0x2002CD2",
+      "context": "updateSectionFlag(segment, \"@Ruins - Near Dungeon Fusion/Chest\", 0x2002cd2, 0x10)"
+    },
+    {
+      "addr": 33565907,
+      "hex": "0x2002CD3",
+      "context": "updateSectionFlag(segment, \"@Valley Graveyard - Left Fusion/Chest\", 0x2002cd3, 0x04)"
+    },
+    {
+      "addr": 33565908,
+      "hex": "0x2002CD4",
+      "context": "updateSectionFlag(segment, \"@Crenel - Climb Fusion/Chest\", 0x2002cd4, 0x01)"
+    },
+    {
+      "addr": 33565909,
+      "hex": "0x2002CD5",
+      "context": "updateSectionFlag(segment, \"@Town - Inn Ledge/Chest\", 0x2002cd5, 0x01)"
+    },
+    {
+      "addr": 33565910,
+      "hex": "0x2002CD6",
+      "context": "updateSectionFlag(segment, \"@Town - Cafe/Cafe Lady\", 0x2002cd6, 0x40)"
+    },
+    {
+      "addr": 33565911,
+      "hex": "0x2002CD7",
+      "context": "updateSectionFlag(segment, \"@Clouds - North West Bottom/Chest\", 0x2002cd7, 0x20)"
+    },
+    {
+      "addr": 33565912,
+      "hex": "0x2002CD8",
+      "context": "updateSectionFlag(segment, \"@Clouds - North West Top/Dig Spot\", 0x2002cd8, 0x04)"
+    },
+    {
+      "addr": 33565913,
+      "hex": "0x2002CD9",
+      "context": "updateSectionFlag(segment, \"@Clouds - Southeast South Digging Spot/Digging\", 0x2002cd9, 0x01)"
+    },
+    {
+      "addr": 33565914,
+      "hex": "0x2002CDA",
+      "context": "updateSectionFlag(segment, \"@Falls - South Dig Spot/Digging\", 0x2002cda, 0x80)"
+    },
+    {
+      "addr": 33565915,
+      "hex": "0x2002CDB",
+      "context": "updateSectionFlag(segment, \"@Minish Woods - Post Village Fusion/Chest\", 0x2002cdb, 0x08)"
+    },
+    {
+      "addr": 33565916,
+      "hex": "0x2002CDC",
+      "context": "updateDecreaseCount(segment, \"@Wind Tribe/1F - Chests\", {{0x2002cdc, 0x20}, {0x2002cdc, 0x40}})"
+    },
+    {
+      "addr": 33565917,
+      "hex": "0x2002CDD",
+      "context": "updateDecreaseCount(segment, \"@Wind Tribe/3F - Chests\", {{0x2002cdd, 0x01}, {0x2002cdd, 0x02}, {0x2002cdd, 0x04}})"
+    },
+    {
+      "addr": 33565918,
+      "hex": "0x2002CDE",
+      "context": "updateSectionFlag(segment, \"@Crenel Base - Minish Crack/Chest\", 0x2002cde, 0x02)"
+    },
+    {
+      "addr": 33565920,
+      "hex": "0x2002CE0",
+      "context": "updateSectionFlag(segment, \"@Town - Inn/Pot\", 0x2002ce0, 0x80)"
+    },
+    {
+      "addr": 33565923,
+      "hex": "0x2002CE3",
+      "context": "updateSectionFlag(segment, \"@Western Woods - Percy Fusion/Percy\", 0x2002ce3, 0x80)"
+    },
+    {
+      "addr": 33565924,
+      "hex": "0x2002CE4",
+      "context": "updateSectionFlag(segment, \"@Western Woods - Percy Fusion/Moblin\", 0x2002ce4, 0x04)"
+    },
+    {
+      "addr": 33565925,
+      "hex": "0x2002CE5",
+      "context": "updateSectionFlag(segment, \"@Lon Lon - Ranch/Pot\", 0x2002ce5, 0x20)"
+    },
+    {
+      "addr": 33565926,
+      "hex": "0x2002CE6",
+      "context": "updateSectionFlag(segment, \"@Town - Shop/Behind Counter\", 0x2002ce6, 0x08)"
+    },
+    {
+      "addr": 33565928,
+      "hex": "0x2002CE8",
+      "context": "updateSectionFlag(segment, \"@Wind Tribe/2F - Gregal Gift 1\", 0x2002ce8, 0x20)"
+    },
+    {
+      "addr": 33565929,
+      "hex": "0x2002CE9",
+      "context": "updateSectionFlag(segment, \"@Valley - Dampe/Gift\", 0x2002ce9, 0x02)"
+    },
+    {
+      "addr": 33565931,
+      "hex": "0x2002CEB",
+      "context": "updateSectionFlag(segment, \"@Town - Library/Yellow Minish - Gift\", 0x2002ceb, 0x01)"
+    },
+    {
+      "addr": 33565934,
+      "hex": "0x2002CEE",
+      "context": "updateSectionFlag(segment, \"@South Field - Tree Fusion/HP\", 0x2002cee, 0x80)"
+    },
+    {
+      "addr": 33565935,
+      "hex": "0x2002CEF",
+      "context": "updateSectionFlag(segment, \"@Valley - Great Fairy/Gift\", 0x2002cef, 0x40)"
+    },
+    {
+      "addr": 33565936,
+      "hex": "0x2002CF0",
+      "context": "updateSectionFlag(segment, \"@Crenel - Great Fairy/Gift\", 0x2002cf0, 0x01)"
+    },
+    {
+      "addr": 33565938,
+      "hex": "0x2002CF2",
+      "context": "updateSectionFlag(segment, \"@Town - Music House/HP\", 0x2002cf2, 0x10)"
+    },
+    {
+      "addr": 33565939,
+      "hex": "0x2002CF3",
+      "context": "{0x2002cf3, 0x02},"
+    },
+    {
+      "addr": 33565940,
+      "hex": "0x2002CF4",
+      "context": "{0x2002cf4, 0x01}"
+    },
+    {
+      "addr": 33565941,
+      "hex": "0x2002CF5",
+      "context": "updateSectionFlag(segment, \"@Minish Village/Barrel House - Item\", 0x2002cf5, 0x04)"
+    },
+    {
+      "addr": 33565948,
+      "hex": "0x2002CFC",
+      "context": "updateSectionFlag(segment, \"@Town - School/Basement Top - Chest\", 0x2002cfc, 0x40)"
+    },
+    {
+      "addr": 33565949,
+      "hex": "0x2002CFD",
+      "context": "updateSectionFlag(segment, \"@Town - Well Left/Chest\", 0x2002cfd, 0x01)"
+    },
+    {
+      "addr": 33565950,
+      "hex": "0x2002CFE",
+      "context": "updateSectionFlag(segment, \"@Town - Fountain/Small Chest\", 0x2002cfe, 0x01)"
+    },
+    {
+      "addr": 33565952,
+      "hex": "0x2002D00",
+      "context": "if testFlag(segment, 0x2002d00, 0x80) then"
+    },
+    {
+      "addr": 33565953,
+      "hex": "0x2002D01",
+      "context": "if testFlag(segment, 0x2002d01, 0x01) then"
+    },
+    {
+      "addr": 33565954,
+      "hex": "0x2002D02",
+      "context": "updateToggleFlag(segment, \"rc\", 0x2002d02, 0x04)"
+    },
+    {
+      "addr": 33565955,
+      "hex": "0x2002D03",
+      "context": "{0x2002d03, 0x02},"
+    },
+    {
+      "addr": 33565956,
+      "hex": "0x2002D04",
+      "context": "updateSectionFlag(segment, \"@Crenel - Dig Cave/HP\", 0x2002d04, 0x20)"
+    },
+    {
+      "addr": 33565957,
+      "hex": "0x2002D05",
+      "context": "updateDecreaseCount(segment, \"@Trilby - Dig Cave/Chests\", {{0x2002d04, 0x80}, {0x2002d05, 0x02}})"
+    },
+    {
+      "addr": 33565958,
+      "hex": "0x2002D06",
+      "context": "updateDecreaseCount(segment, \"@Fortress/Left 2F - Dig - Chest\", {{0x2002d06, 0x01}, {0x2002d07, 0x20}})"
+    },
+    {
+      "addr": 33565959,
+      "hex": "0x2002D07",
+      "context": "updateDecreaseCount(segment, \"@Fortress/Left 2F - Dig - Chest\", {{0x2002d06, 0x01}, {0x2002d07, 0x20}})"
+    },
+    {
+      "addr": 33565960,
+      "hex": "0x2002D08",
+      "context": "updateSectionFlag(segment, \"@Fortress/Back 2F - Left - Big Chest\", 0x2002d08, 0x01)"
+    },
+    {
+      "addr": 33565962,
+      "hex": "0x2002D0A",
+      "context": "updateSectionFlag(segment, \"@Town - Shop/Attic Chest\", 0x2002d0a, 0x80)"
+    },
+    {
+      "addr": 33565963,
+      "hex": "0x2002D0B",
+      "context": "updateSectionFlag(segment, \"@Town - School Path/HP\", 0x2002d0b, 0x40)"
+    },
+    {
+      "addr": 33565964,
+      "hex": "0x2002D0C",
+      "context": "updateSectionFlag(segment, \"@Crenel - Beanstalk Fusion/HP\", 0x2002d0c, 0x08)"
+    },
+    {
+      "addr": 33565965,
+      "hex": "0x2002D0D",
+      "context": "updateSectionFlag(segment, \"@Western Woods - Beanstalk Fusion/Chest\", 0x2002d0d, 0x08)"
+    },
+    {
+      "addr": 33565966,
+      "hex": "0x2002D0E",
+      "context": "{0x2002d0e, 0x40},"
+    },
+    {
+      "addr": 33565967,
+      "hex": "0x2002D0F",
+      "context": "{0x2002d0f, 0x01},"
+    },
+    {
+      "addr": 33565968,
+      "hex": "0x2002D10",
+      "context": "updateSectionFlag(segment, \"@Crenel - Rain Path Fusion/Chest\", 0x2002d10, 0x40)"
+    },
+    {
+      "addr": 33565969,
+      "hex": "0x2002D11",
+      "context": "updateSectionFlag(segment, \"@Crenel - Mines Path Fusion/Chest\", 0x2002d11, 0x08)"
+    },
+    {
+      "addr": 33565970,
+      "hex": "0x2002D12",
+      "context": "if testFlag(segment, 0x2002d12, 0x08) then"
+    },
+    {
+      "addr": 33565971,
+      "hex": "0x2002D13",
+      "context": "updateSectionFlag(segment, \"@Town - Bakery Attic/Chest\", 0x2002d13, 0x20)"
+    },
+    {
+      "addr": 33565972,
+      "hex": "0x2002D14",
+      "context": "updateSectionFlag(segment, \"@Crypt/Gibdo Left - Item\", 0x2002d14, 0x10)"
+    },
+    {
+      "addr": 33565980,
+      "hex": "0x2002D1C",
+      "context": "updateDecreaseCount(segment, \"@Crenel - Dojo/Chests\", {{0x2002d1c, 0x02}, {0x2002d1c, 0x04}})"
+    },
+    {
+      "addr": 33565981,
+      "hex": "0x2002D1D",
+      "context": "updateSectionFlag(segment, \"@Trilby - Bomb Cave/Chest\", 0x2002d1d, 0x20)"
+    },
+    {
+      "addr": 33565982,
+      "hex": "0x2002D1E",
+      "context": "{0x2002d1e, 0x20},"
+    },
+    {
+      "addr": 33565983,
+      "hex": "0x2002D1F",
+      "context": "{0x2002d1f, 0x01},"
+    },
+    {
+      "addr": 33565984,
+      "hex": "0x2002D20",
+      "context": "{0x2002d20, 0x10},"
+    },
+    {
+      "addr": 33565985,
+      "hex": "0x2002D21",
+      "context": "{0x2002d21, 0x01},"
+    },
+    {
+      "addr": 33565986,
+      "hex": "0x2002D22",
+      "context": "updateSectionFlag(segment, \"@Swamp - South Cave/Chest\", 0x2002d22, 0x10)"
+    },
+    {
+      "addr": 33565987,
+      "hex": "0x2002D23",
+      "context": "updateSectionFlag(segment, \"@Crenel - Bridge Cave/Chest\", 0x2002d23, 0x80)"
+    },
+    {
+      "addr": 33565988,
+      "hex": "0x2002D24",
+      "context": "updateSectionFlag(segment, \"@Crenel Base - Water Cave/HP\", 0x2002d24, 0x01)"
+    },
+    {
+      "addr": 33565989,
+      "hex": "0x2002D25",
+      "context": "updateSectionFlag(segment, \"@Falls - 1st Cave/Chest\", 0x2002d25, 0x10)"
+    },
+    {
+      "addr": 33565990,
+      "hex": "0x2002D26",
+      "context": "{0x2002d26, 0x01},"
+    },
+    {
+      "addr": 33565991,
+      "hex": "0x2002D27",
+      "context": "updateSectionFlag(segment, \"@Valley Graveyard - Left Grave/HP\", 0x2002d27, 0x20)"
+    },
+    {
+      "addr": 33565992,
+      "hex": "0x2002D28",
+      "context": "updateSectionFlag(segment, \"@Crenel Base - Minish Vine Hole/Chest\", 0x2002d28, 0x01)"
+    },
+    {
+      "addr": 33565994,
+      "hex": "0x2002D2A",
+      "context": "updateSectionFlag(segment, \"@Lon Lon - Goron Cave Fusion/Big Chest\", 0x2002d2a, 0x40)"
+    },
+    {
+      "addr": 33565995,
+      "hex": "0x2002D2B",
+      "context": "updateSectionFlag(segment, \"@Crenel - Fairy Cave/HP\", 0x2002d2b, 0x20)"
+    },
+    {
+      "addr": 33565996,
+      "hex": "0x2002D2C",
+      "context": "updateSectionFlag(segment, \"@Crenel - Dojo/HP\", 0x2002d2c, 0x01)"
+    },
+    {
+      "addr": 33566015,
+      "hex": "0x2002D3F",
+      "context": "if testFlag(segment, 0x2002d3f, 0x40) then"
+    },
+    {
+      "addr": 33566016,
+      "hex": "0x2002D40",
+      "context": "updateSectionFlag(segment, \"@DeepWoods/1F - West Statue Puzzle - Chest\", 0x2002d40, 0x80)"
+    },
+    {
+      "addr": 33566017,
+      "hex": "0x2002D41",
+      "context": "if testFlag(segment, 0x2002d41, 0x04) then"
+    },
+    {
+      "addr": 33566018,
+      "hex": "0x2002D42",
+      "context": "updateSectionFlag(segment, \"@DeepWoods/1F - East Mulldozer Fight - Item\", 0x2002d42, 0x01)"
+    },
+    {
+      "addr": 33566019,
+      "hex": "0x2002D43",
+      "context": "if testFlag(segment, 0x2002d43, 0x10) then"
+    },
+    {
+      "addr": 33566020,
+      "hex": "0x2002D44",
+      "context": "if testFlag(segment, 0x2002d44, 0x20) then"
+    },
+    {
+      "addr": 33566021,
+      "hex": "0x2002D45",
+      "context": "if testFlag(segment, 0x2002D45, 0x02) then"
+    },
+    {
+      "addr": 33566022,
+      "hex": "0x2002D46",
+      "context": "updateSectionFlag(segment, \"@DeepWoods/1F - Madderpillar - HP\", 0x2002d46, 0x04)"
+    },
+    {
+      "addr": 33566038,
+      "hex": "0x2002D56",
+      "context": "if testFlag(segment, 0x2002d56, 0x10) then"
+    },
+    {
+      "addr": 33566039,
+      "hex": "0x2002D57",
+      "context": "if testFlag(segment, 0x2002d57, 0x20) then"
+    },
+    {
+      "addr": 33566040,
+      "hex": "0x2002D58",
+      "context": "updateSectionFlag(segment, \"@Cave Of Flame/B1 - Rollobite - Chest\", 0x2002d58, 0x80)"
+    },
+    {
+      "addr": 33566041,
+      "hex": "0x2002D59",
+      "context": "updateSectionFlag(segment, \"@Cave Of Flame/B1 - Hazy Room - Small Chest\", 0x2002d59, 0x02)"
+    },
+    {
+      "addr": 33566042,
+      "hex": "0x2002D5A",
+      "context": "if testFlag(segment, 0x2002D5A, 0x40) then"
+    },
+    {
+      "addr": 33566043,
+      "hex": "0x2002D5B",
+      "context": "{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}"
+    },
+    {
+      "addr": 33566044,
+      "hex": "0x2002D5C",
+      "context": "{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}"
+    },
+    {
+      "addr": 33566063,
+      "hex": "0x2002D6F",
+      "context": "if testFlag(segment, 0x2002d6f, 0x20) then"
+    },
+    {
+      "addr": 33566064,
+      "hex": "0x2002D70",
+      "context": "if testFlag(segment, 0x2002D70, 0x40) then"
+    },
+    {
+      "addr": 33566065,
+      "hex": "0x2002D71",
+      "context": "if testFlag(segment, 0x2002d71, 0x10) then"
+    },
+    {
+      "addr": 33566066,
+      "hex": "0x2002D72",
+      "context": "if testFlag(segment, 0x2002d72, 0x40) then"
+    },
+    {
+      "addr": 33566067,
+      "hex": "0x2002D73",
+      "context": "updateSectionFlag(segment, \"@Fortress/Left 3F - Item Drop\", 0x2002d73, 0x80)"
+    },
+    {
+      "addr": 33566068,
+      "hex": "0x2002D74",
+      "context": "updateSectionFlag(segment, \"@Fortress/Entrance 1F - Left Wizzrobe - Chest\", 0x2002d74, 0x08)"
+    },
+    {
+      "addr": 33566089,
+      "hex": "0x2002D89",
+      "context": "if testFlag(segment, 0x2002D89, 0x10) then"
+    },
+    {
+      "addr": 33566090,
+      "hex": "0x2002D8A",
+      "context": "if testFlag(segment, 0x2002d8a, 0x01) then"
+    },
+    {
+      "addr": 33566091,
+      "hex": "0x2002D8B",
+      "context": "updateSectionFlag(segment, \"@Droplet/Left Path B1 - Waterfall - Big Chest\", 0x2002d8b, 0x80)"
+    },
+    {
+      "addr": 33566092,
+      "hex": "0x2002D8C",
+      "context": "if testFlag(segment, 0x2002d8c, 0x02) then"
+    },
+    {
+      "addr": 33566093,
+      "hex": "0x2002D8D",
+      "context": "updateSectionFlag(segment, \"@Droplet/Entrance B2 - West - Iceblock\", 0x2002d8d, 0x80)"
+    },
+    {
+      "addr": 33566094,
+      "hex": "0x2002D8E",
+      "context": "updateSectionFlag(segment, \"@Droplet/Entrance B2 - East - Iceblock\", 0x2002d8e, 0x04)"
+    },
+    {
+      "addr": 33566095,
+      "hex": "0x2002D8F",
+      "context": "updateSectionFlag(segment, \"@Droplet/Left Path B2 - Ice Plain - Chest\", 0x2002d8f, 0x08)"
+    },
+    {
+      "addr": 33566096,
+      "hex": "0x2002D90",
+      "context": "if testFlag(segment, 0x2002d90, 0x08) then"
+    },
+    {
+      "addr": 33566097,
+      "hex": "0x2002D91",
+      "context": "updateSectionFlag(segment, \"@Droplet/Right Path B2 - Mulldozers - Item Drop\", 0x2002d91, 0x80)"
+    },
+    {
+      "addr": 33566098,
+      "hex": "0x2002D92",
+      "context": "updateSectionFlag(segment, \"@Droplet/Left Path B2 - Ice Madderpillar - Big Chest\", 0x2002d92, 0x80)"
+    },
+    {
+      "addr": 33566099,
+      "hex": "0x2002D93",
+      "context": "updateSectionFlag(segment, \"@Droplet/Left Path B2 - Underwater - Pot\", 0x2002d93, 0x04)"
+    },
+    {
+      "addr": 33566100,
+      "hex": "0x2002D94",
+      "context": "{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}"
+    },
+    {
+      "addr": 33566101,
+      "hex": "0x2002D95",
+      "context": "{{0x2002d94, 0x20}, {0x2002d94, 0x40}, {0x2002d94, 0x80}, {0x2002d95, 0x01}, {0x2002d95, 0x02}}"
+    },
+    {
+      "addr": 33566102,
+      "hex": "0x2002D96",
+      "context": "{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}"
+    },
+    {
+      "addr": 33566103,
+      "hex": "0x2002D97",
+      "context": "{{0x2002d96, 0x20}, {0x2002d96, 0x40}, {0x2002d96, 0x80}, {0x2002d97, 0x01}, {0x2002d97, 0x02}, {0x2002d97, 0x04}}"
+    },
+    {
+      "addr": 33566114,
+      "hex": "0x2002DA2",
+      "context": "if testFlag(segment, 0x2002DA2, 0x40) then"
+    },
+    {
+      "addr": 33566115,
+      "hex": "0x2002DA3",
+      "context": "if testFlag(segment, 0x2002da3, 0x10) then"
+    },
+    {
+      "addr": 33566116,
+      "hex": "0x2002DA4",
+      "context": "elseif testFlag(segment, 0x2002DA4, 0x04) then"
+    },
+    {
+      "addr": 33566117,
+      "hex": "0x2002DA5",
+      "context": "if testFlag(segment, 0x2002da5, 0x04) then"
+    },
+    {
+      "addr": 33566118,
+      "hex": "0x2002DA6",
+      "context": "if testFlag(segment, 0x2002da6, 0x08) then"
+    },
+    {
+      "addr": 33566119,
+      "hex": "0x2002DA7",
+      "context": "updateSectionFlag(segment, \"@Palace/1st Half 3F - Pot Puzzle - Item Drop\", 0x2002da7, 0x02)"
+    },
+    {
+      "addr": 33566121,
+      "hex": "0x2002DA9",
+      "context": "if testFlag(segment, 0x2002da9, 0x04) then"
+    },
+    {
+      "addr": 33566122,
+      "hex": "0x2002DAA",
+      "context": "updateSectionFlag(segment, \"@Palace/1st Half 1F - Grate - Chest\", 0x2002daa, 0x40)"
+    },
+    {
+      "addr": 33566123,
+      "hex": "0x2002DAB",
+      "context": "updateSectionFlag(segment, \"@Palace/2nd Half 1F - Dark Room - Big Chest\", 0x2002dab, 0x02)"
+    },
+    {
+      "addr": 33566124,
+      "hex": "0x2002DAC",
+      "context": "updateSectionFlag(segment, \"@Palace/2nd Half 4F - HP\", 0x2002dac, 0x01)"
+    },
+    {
+      "addr": 33566139,
+      "hex": "0x2002DBB",
+      "context": "if testFlag(segment, 0x2002dbb, 0x20) then"
+    },
+    {
+      "addr": 33566140,
+      "hex": "0x2002DBC",
+      "context": "if testFlag(segment, 0x2002dbc, 0x10) then"
+    },
+    {
+      "addr": 33566142,
+      "hex": "0x2002DBE",
+      "context": "if testFlag(segment, 0x2002DBE, 0x20) then"
+    },
+    {
+      "addr": 33566143,
+      "hex": "0x2002DBF",
+      "context": "updateSectionFlag(segment, \"@DHC/1F - Throne - Big Chest\", 0x2002dbf, 0x80)"
+    },
+    {
+      "addr": 33566144,
+      "hex": "0x2002DC0",
+      "context": "updateSectionFlag(segment, \"@DHC/1F - Blade - Chest\", 0x2002dc0, 0x20)"
+    },
+    {
+      "addr": 33566145,
+      "hex": "0x2002DC1",
+      "context": "updateSectionFlag(segment, \"@DHC/B1 - Big Chest\", 0x2002dc1, 0x08)"
+    },
+    {
+      "addr": 33566146,
+      "hex": "0x2002DC2",
+      "context": "updateSectionFlag(segment, \"@DHC/B2 - King\", 0x2002dc2, 0x02)"
+    },
+    {
+      "addr": 33566364,
+      "hex": "0x2002E9C",
+      "context": "updateSmallKeys(segment, \"ud_smallkey\", 0x2002e9c)"
+    },
+    {
+      "addr": 33566365,
+      "hex": "0x2002E9D",
+      "context": "updateSmallKeys(segment, \"dws_smallkey\", 0x2002e9d)"
+    },
+    {
+      "addr": 33566366,
+      "hex": "0x2002E9E",
+      "context": "updateSmallKeys(segment, \"cof_smallkey\", 0x2002e9e)"
+    },
+    {
+      "addr": 33566367,
+      "hex": "0x2002E9F",
+      "context": "updateSmallKeys(segment, \"fow_smallkey\", 0x2002e9f)"
+    },
+    {
+      "addr": 33566368,
+      "hex": "0x2002EA0",
+      "context": "updateSmallKeys(segment, \"tod_smallkey\", 0x2002ea0)"
+    },
+    {
+      "addr": 33566369,
+      "hex": "0x2002EA1",
+      "context": "updateSmallKeys(segment, \"pow_smallkey\", 0x2002ea1)"
+    },
+    {
+      "addr": 33566370,
+      "hex": "0x2002EA2",
+      "context": "updateSmallKeys(segment, \"dhc_smallkey\", 0x2002ea2)"
+    },
+    {
+      "addr": 33566371,
+      "hex": "0x2002EA3",
+      "context": "updateSmallKeys(segment, \"rc_smallkey\", 0x2002ea3)"
+    },
+    {
+      "addr": 33566372,
+      "hex": "0x2002EA4",
+      "context": "updateSectionFlag(segment, \"@Town - Shoe Shop/Gift\", 0x2002ea4, 0x08)"
+    },
+    {
+      "addr": 33566373,
+      "hex": "0x2002EA5",
+      "context": "updateSectionFlag(segment, \"@Town - Carlov/Gift\", 0x2002ea5, 0x02)"
+    },
+    {
+      "addr": 33566374,
+      "hex": "0x2002EA6",
+      "context": "updateSectionFlag(segment, \"@Hylia - Dojo/Gift\", 0x2002ea6, 0x04)"
+    },
+    {
+      "addr": 33566375,
+      "hex": "0x2002EA7",
+      "context": "updateSectionFlag(segment, \"@Town - Shop/80 Item\", 0x2002ea7, 0x01)"
+    },
+    {
+      "addr": 33566376,
+      "hex": "0x2002EA8",
+      "context": "updateSectionFlag(segment, \"@Town - Shop/600 Item 2\", 0x2002ea8, 0x04)"
+    },
+    {
+      "addr": 33566380,
+      "hex": "0x2002EAC",
+      "context": "updateToggleFlag(segment, \"ud_bigkey\", 0x2002eac, 0x04)"
+    },
+    {
+      "addr": 33566381,
+      "hex": "0x2002EAD",
+      "context": "updateToggleFlag(segment, \"dws_bigkey\", 0x2002ead, 0x04)"
+    },
+    {
+      "addr": 33566382,
+      "hex": "0x2002EAE",
+      "context": "updateToggleFlag(segment, \"cof_bigkey\", 0x2002eae, 0x04)"
+    },
+    {
+      "addr": 33566383,
+      "hex": "0x2002EAF",
+      "context": "updateToggleFlag(segment, \"fow_bigkey\", 0x2002eaf, 0x04)"
+    },
+    {
+      "addr": 33566384,
+      "hex": "0x2002EB0",
+      "context": "updateToggleFlag(segment, \"tod_bigkey\", 0x2002eb0, 0x04)"
+    },
+    {
+      "addr": 33566385,
+      "hex": "0x2002EB1",
+      "context": "updateToggleFlag(segment, \"pow_bigkey\", 0x2002eb1, 0x04)"
+    },
+    {
+      "addr": 33566386,
+      "hex": "0x2002EB2",
+      "context": "updateToggleFlag(segment, \"dhc_bigkey\", 0x2002eb2, 0x04)"
+    }
+  ],
+  "flags": [
+    {
+      "flag": 0,
+      "hex": "0x00",
+      "context": "return AutoTracker:ReadU8(0x2002b32) > 0x00"
+    },
+    {
+      "flag": 1,
+      "hex": "0x01",
+      "context": "if testFlag(segment, address, 0x01) or testFlag(segment, address, 0x02) then"
+    },
+    {
+      "flag": 2,
+      "hex": "0x02",
+      "context": "if testFlag(segment, address, 0x01) or testFlag(segment, address, 0x02) then"
+    },
+    {
+      "flag": 4,
+      "hex": "0x04",
+      "context": "local bookFlags = {0x04, 0x10, 0x40}"
+    },
+    {
+      "flag": 5,
+      "hex": "0x05",
+      "context": "elseif ReadU8(segment, 0x2002b32) == 0x05 then"
+    },
+    {
+      "flag": 8,
+      "hex": "0x08",
+      "context": "local usedBooks = {0x08, 0x20, 0x80}"
+    },
+    {
+      "flag": 12,
+      "hex": "0x0C",
+      "context": "ScriptHost:AddMemoryWatch(\"TMC Item Upgrades\", 0x2002ae4, 0x0c, updateGearFromMemory)"
+    },
+    {
+      "flag": 16,
+      "hex": "0x10",
+      "context": "if testFlag(segment, address, 0x10) or testFlag(segment, address, 0x20) then"
+    },
+    {
+      "flag": 17,
+      "hex": "0x11",
+      "context": "elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 th"
+    },
+    {
+      "flag": 21,
+      "hex": "0x15",
+      "context": "elseif ReadU8(segment, 0x2002b32) == 0x15 then"
+    },
+    {
+      "flag": 32,
+      "hex": "0x20",
+      "context": "if testFlag(segment, address, 0x10) or testFlag(segment, address, 0x20) then"
+    },
+    {
+      "flag": 44,
+      "hex": "0x2C",
+      "context": "ScriptHost:AddMemoryWatch(\"Wall fusions\", 0x2002c40, 0x2c, UpdateWallLocation)"
+    },
+    {
+      "flag": 64,
+      "hex": "0x40",
+      "context": "if testFlag(segment, address, 0x40) or testFlag(segment, address, 0x80) then"
+    },
+    {
+      "flag": 65,
+      "hex": "0x41",
+      "context": "if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then"
+    },
+    {
+      "flag": 70,
+      "hex": "0x46",
+      "context": "ScriptHost:AddMemoryWatch(\"TMC Item Data\", 0x2002b30, 0x46, updateItemsFromMemorySegment)"
+    },
+    {
+      "flag": 81,
+      "hex": "0x51",
+      "context": "elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 th"
+    },
+    {
+      "flag": 85,
+      "hex": "0x55",
+      "context": "elseif ReadU8(segment, 0x2002b32) == 0x55 then"
+    },
+    {
+      "flag": 101,
+      "hex": "0x65",
+      "context": "updateClouds(segment, \"clouds\", 0x65)"
+    },
+    {
+      "flag": 106,
+      "hex": "0x6A",
+      "context": "updateWilds(segment, \"wilds\", 0x6a)"
+    },
+    {
+      "flag": 109,
+      "hex": "0x6D",
+      "context": "if ReadU8(segment, 0x2002b58) == 0x6d then"
+    },
+    {
+      "flag": 110,
+      "hex": "0x6E",
+      "context": "updateRedW(segment, 0x6e)"
+    },
+    {
+      "flag": 111,
+      "hex": "0x6F",
+      "context": "updateRedV(segment, 0x6f)"
+    },
+    {
+      "flag": 112,
+      "hex": "0x70",
+      "context": "updateRedE(segment, 0x70)"
+    },
+    {
+      "flag": 113,
+      "hex": "0x71",
+      "context": "updateBlueL(segment, 0x71)"
+    },
+    {
+      "flag": 114,
+      "hex": "0x72",
+      "context": "updateBlueS(segment, 0x72)"
+    },
+    {
+      "flag": 115,
+      "hex": "0x73",
+      "context": "updateGreenC(segment, 0x73)"
+    },
+    {
+      "flag": 116,
+      "hex": "0x74",
+      "context": "updateGreenG(segment, 0x74)"
+    },
+    {
+      "flag": 117,
+      "hex": "0x75",
+      "context": "updateGreenP(segment, 0x75)"
+    },
+    {
+      "flag": 128,
+      "hex": "0x80",
+      "context": "if testFlag(segment, address, 0x40) or testFlag(segment, address, 0x80) then"
+    },
+    {
+      "flag": 129,
+      "hex": "0x81",
+      "context": "if ReadU8(segment, 0x2002b33) == 0x01 or ReadU8(segment, 0x2002b33) == 0x41 or ReadU8(segment, 0x2002b33) == 0x81 then"
+    },
+    {
+      "flag": 145,
+      "hex": "0x91",
+      "context": "elseif ReadU8(segment, 0x2002b33) == 0x11 or ReadU8(segment, 0x2002b33) == 0x51 or ReadU8(segment, 0x2002b33) == 0x91 th"
+    },
+    {
+      "flag": 242,
+      "hex": "0xF2",
+      "context": "elseif ReadU8(segment, address) == 0xF2 then"
+    },
+    {
+      "flag": 243,
+      "hex": "0xF3",
+      "context": "if ReadU8(segment, address) == 0xF3 then"
+    },
+    {
+      "flag": 512,
+      "hex": "0x200",
+      "context": "ScriptHost:AddMemoryWatch(\"TMC Locations and Bosses\", 0x2002c81, 0x200, updateLocations)"
+    }
+  ]
 }
