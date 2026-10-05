@@ -113,6 +113,16 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
         self.last_rx = time.monotonic()
         self.server.client_id += 1
         enable_tcp_keepalive(self.request)
+        # Greeting non sollicité, identique au plugin Bizhawk-nwa-tool :
+        # NWAServer.cs envoie "<nom_emulateur>\nnwa_version:1.0\n\n" dès la
+        # connexion. EmoTracker/LuaConnector (et le client web de ce
+        # simulateur) lisent ce greeting AVANT d'envoyer MY_NAME_IS ; sans
+        # lui, leur premier read avale la réponse à MY_NAME_IS, le handshake
+        # se décale et le client se déconnecte immédiatement.
+        try:
+            self.request.sendall(b"BizHawk-NWA-Simulator\nnwa_version:1.0\n\n")
+        except OSError:
+            pass
         print(f"[SIM] {self.name} connecté depuis {self.client_address[:2]}")
 
     # ------------------------------------------------- envois (protocole NWA)
@@ -147,11 +157,8 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
 
     # ------------------------------------------------------- commandes NWA
     def handle(self):
-        # Protocole Bizhawk-nwa-tool (cf. NWClientLib côté EmoTracker) : c'est
-        # le CLIENT qui envoie EMULATOR_INFO en premier et attend la réponse.
-        # Un greeting serveur non sollicité décale tous les reads côté client
-        # -> lecture de hash invalide -> déconnexion immédiate. Donc : pas de
-        # greeting, on répond uniquement aux requêtes.
+        # Le greeting du plugin est envoyé dans setup() ; ici on boucle en
+        # répondant aux commandes lues ligne à ligne.
         while True:
             idle = self.IDLE_TIMEOUT - (time.monotonic() - self.last_rx)
             if idle <= 0:
@@ -188,11 +195,12 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
                 return self.send_error("invalid_argument",
                                        "MY_NAME_IS accept one argument <name>")
             self.name = args[0]
-            # Le plugin BizHawk (CommandHandler.myNameIs) répond un HASH
-            # {"name": <nom>} — pas une réponse vide. NWClientLib côté
-            # EmoTracker attend ce hash ; sans lui il se déconnecte juste
-            # après MY_NAME_IS.
-            return self.send_hash_reply([("name", self.name)])
+            # Le plugin BizHawk (CommandHandler.myNameIs) ne répond RIEN ici ;
+            # c'est EMULATOR_INFO qui renvoie le hash {"name": ...}. Une
+            # réponse non sollicitée décale tous les reads du client
+            # (NWClientLib attend la réponse à EMULATOR_INFO, pas à
+            # MY_NAME_IS) -> handshake cassé -> déconnexion immédiate.
+            return
         if cmd == "EMULATOR_INFO":
             # Format exact du plugin : name=BizHawk, id="Happy Skarsnik",
             # commands séparées par des VIRGULES (Enum NWACommand).
@@ -585,7 +593,11 @@ class NwaClient:
         self.name = "AT-WEB-TESTER"
         self.buf = b""
         self.last_rx = time.monotonic()
-        self._cmd(f"MY_NAME_IS {self.name}")
+        # salutation non sollicitée du serveur NWA (comme le plugin BizHawk)
+        greet_status, greet = self._read()
+        if greet_status != "OK":
+            raise ConnectionError(f"greeting NWA invalide : {greet!r}")
+        self._cmd(f"MY_NAME_IS {self.name}")  # pas de réponse à cette commande
         info = self._cmd("EMULATOR_INFO")
         self.state.log(f"Connecté (NWA) à {info.get('name','?')} {info.get('version','?')}")
 
@@ -593,6 +605,9 @@ class NwaClient:
         self.sock.sendall((line + "\n").encode())
 
     def _read(self):
+        """Lit une réponse complète. Le plugin n'envoie RIEN en réponse à
+        MY_NAME_IS : on sort sur la première donnée reçue (fin de hash
+        '\\n\\n', bloc binaire complet, ou erreur)."""
         while True:
             if self.buf.startswith(b"\x00") and len(self.buf) >= 5:
                 size = struct.unpack(">I", self.buf[1:5])[0]
@@ -638,7 +653,12 @@ class NwaClient:
                 pass
 
     def _cmd(self, line):
+        """Envoie une commande et lit la réponse. Exception : MY_NAME_IS ne
+        reçoit JAMAIS de réponse du plugin BizHawk (NWAServer attend la
+        réponse de la commande suivante) -> on n'attend rien ici."""
         self._send(line)
+        if line.upper().startswith("MY_NAME_IS"):
+            return {}
         status, payload = self._read()
         if status != "OK":
             raise RuntimeError(f"NWA: {payload!r}")

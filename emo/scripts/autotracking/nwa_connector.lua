@@ -249,20 +249,61 @@ function NWAConnector:disconnect(reason)
 end
 
 -- Handshake après connexion : on s'annonce et on vérifie qu'un core GBA est chargé
+-- Protocole exact du plugin Bizhawk-nwa-tool (NWAServer.cs / NWClientLib) :
+--   1. le SERVEUR envoie une salutation non sollicitée à la connexion :
+--        "<nom émulateur>\nnwa_version:1.0\n\n"
+--   2. le client envoie "MY_NAME_IS <nom>" -> AUCUNE réponse
+--   3. "EMULATOR_INFO" -> hash name:/id:/commands:...
+--   4. "CORE_CURRENT_INFO" -> hash nom:/system:/...
+local function readUntilDelim(self, timeoutMs)
+        -- lit depuis la socket jusqu'à trouver "\n\n" (fin de greeting/hash)
+        self.socket:settimeout(timeoutMs)
+        local deadline = os.clock() * 1000 + timeoutMs * 6
+        while not self._rx:find("\n\n", 2, true) do
+                local chunk, err = self.socket:receive(8192)
+                if chunk and chunk ~= "" then
+                        self._rx = self._rx .. chunk
+                elseif err == "timeout" or err == "wantread" then
+                        if os.clock() * 1000 > deadline then return false end
+                else
+                        return false
+                end
+        end
+        return true
+end
+
 function NWAConnector:_handshake()
+        -- 1) salutation du serveur (le simulateur et le plugin l'envoient)
+        if not readUntilDelim(self, RX_TIMEOUT_MS) then return false end
+        local e = self._rx:find("\n\n", 2, true)
+        if not e then return false end
+        local greet = self._rx:sub(2, e - 1)   -- on saute le \n initial
+        self._rx = self._rx:sub(e + 2)
+        print("[NWA] Serveur détecté : " .. greet:gsub("\n", " | "))
+
+        -- 2) MY_NAME_IS : pas de réponse attendue (cf. NWClientLib)
         if not self:_sendCommand("MY_NAME_IS emo-autotracking-test") then return false end
-        local s1 = self:_readReply()
-        if s1 == "DISCONNECTED" then return false end
-        if not self:_sendCommand("CORE_CURRENT_INFO") then return false end
+
+        -- 3) EMULATOR_INFO : le plugin renvoie un hash {name, id, commands...}
+        if not self:_sendCommand("EMULATOR_INFO") then return false end
         local status, info = self:_readReply()
         if status ~= "OK" then return false end
+        local emu = parseHashReply(info)
+        print(string.format("[NWA] Émulateur : %s %s", emu.name or "?", emu.version or "?"))
+
+        -- 4) CORE_CURRENT_INFO : vérifier que le core chargé est bien GBA
+        if not self:_sendCommand("CORE_CURRENT_INFO") then return false end
+        status, info = self:_readReply()
+        if status ~= "OK" then return false end
         local parsed = parseHashReply(info)
-        if parsed.system and parsed.system:upper() ~= "GBA" then
+        local sysName = (parsed.system or parsed.platform or "GBA"):upper()
+        if sysName ~= "GBA" then
                 print(string.format("[NWA] Core %s (%s) non-GBA ignoré",
-                        parsed.core or "?", parsed.system))
+                        parsed.name or parsed.core or "?", sysName))
                 return false
         end
-        print(string.format("[NWA] Core : %s (%s)", parsed.core or "?", parsed.system or "GBA"))
+        print(string.format("[NWA] Core : %s (%s)",
+                parsed.name or parsed.core or "?", sysName))
         return true
 end
 
