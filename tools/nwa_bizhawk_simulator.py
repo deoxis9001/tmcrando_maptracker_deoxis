@@ -19,7 +19,11 @@ import sys
 import threading
 import time
 
-RAM_SIZE = 0x40000  # EXECRAM GBA : 256 Ko
+RAM_BASE = 0x02000000  # adresse de base IWRAM GBA (EXEC RAM dans BizHawk/mGBA)
+RAM_SIZE = 0x40000     # EXECRAM GBA : 256 Ko
+# Les adresses NWA sont relatives au domaine ; EmoTracker/TMC utilise des
+# adresses absolues GBA (0x0200xxxx). On accepte les deux : toute valeur >=
+# RAM_BASE est convertie en offset relatif.
 
 
 def enable_tcp_keepalive(sock, idle=15, interval=10, count=6):
@@ -143,17 +147,11 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
 
     # ------------------------------------------------------- commandes NWA
     def handle(self):
-        # Protocole Bizhawk-nwa-tool : c'est le SERVEUR (le plugin BizHawk) qui
-        # se présente en premier -> sans cet EMULATOR_INFO d'accueil, EmoTracker
-        # ne sait pas quoi demander et ferme la connexion immédiatement.
-        self.send_hash_reply([
-            ("name", "BizHawk-NWA-Simulator"),
-            ("version", "2.9-sim"),
-            ("id", "Happy Skarsnik (simulation)"),
-            ("nwa_version", "1.0"),
-            ("commands", "MY_NAME_IS;CORE_CURRENT_INFO;CORE_MEMORIES;"
-                         "CORE_READ;bCORE_WRITE;EMULATION_STATUS;GAME_INFO"),
-        ])
+        # Protocole Bizhawk-nwa-tool (cf. NWClientLib côté EmoTracker) : c'est
+        # le CLIENT qui envoie EMULATOR_INFO en premier et attend la réponse.
+        # Un greeting serveur non sollicité décale tous les reads côté client
+        # -> lecture de hash invalide -> déconnexion immédiate. Donc : pas de
+        # greeting, on répond uniquement aux requêtes.
         while True:
             idle = self.IDLE_TIMEOUT - (time.monotonic() - self.last_rx)
             if idle <= 0:
@@ -183,47 +181,90 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
         parts = line.split(" ", 1)
         cmd = parts[0].upper()
         args = parts[1].split(";") if len(parts) > 1 else []
+        self.name_from_line = cmd
         print(f"[SIM] {self.name} << {line}")
         if cmd == "MY_NAME_IS":
             if len(args) != 1 or not args[0]:
                 return self.send_error("invalid_argument",
                                        "MY_NAME_IS accept one argument <name>")
             self.name = args[0]
-            # Protocole Bizhawk-nwa-tool : NwaClient::SendMyName() attend une
-            # confirmation VIDE ("\\n\\n") — pas un dictionnaire. Une réponse
-            # inattendue fait fermer la connexion côté client (EmoTracker se
-            # déconnectait juste après MY_NAME_IS).
-            return self.send_ok()
+            # Le plugin BizHawk (CommandHandler.myNameIs) répond un HASH
+            # {"name": <nom>} — pas une réponse vide. NWClientLib côté
+            # EmoTracker attend ce hash ; sans lui il se déconnecte juste
+            # après MY_NAME_IS.
+            return self.send_hash_reply([("name", self.name)])
         if cmd == "EMULATOR_INFO":
+            # Format exact du plugin : name=BizHawk, id="Happy Skarsnik",
+            # commands séparées par des VIRGULES (Enum NWACommand).
             return self.send_hash_reply([
-                ("name", "BizHawk-NWA-Simulator"),
+                ("name", "BizHawk"),
                 ("version", "2.9-sim"),
-                ("id", "Happy Skarsnik (simulation)"),
+                ("id", "Happy Skarsnik"),
                 ("nwa_version", "1.0"),
-                ("commands", "MY_NAME_IS;CORE_CURRENT_INFO;CORE_MEMORIES;"
-                             "CORE_READ;bCORE_WRITE;EMULATION_STATUS;GAME_INFO"),
+                ("commands", "EMULATOR_INFO,EMULATION_STATUS,CORES_LIST,"
+                             "CORE_INFO,GAME_INFO,MY_NAME_IS,CORE_MEMORIES,"
+                             "CORE_READ,bCORE_WRITE,LOAD_STATE,SAVE_STATE,"
+                             "bLOAD_STATE_FROM_NETWORK,SAVE_STATE_TO_NETWORK,"
+                             "LIST_BIZHAWK_DOMAINS,CORE_CURRENT_INFO"),
             ])
         if cmd == "EMULATION_STATUS":
-            return self.send_hash_reply([("status", "running"), ("paused", "false")])
+            return self.send_hash_reply([("state", "running")])
         if cmd == "CORE_CURRENT_INFO":
             return self.send_hash_reply([
-                ("core", "mGBA"), ("system", "GBA"),
-                ("domain", "EXECUTEMEMORY"), ("size", str(RAM_SIZE)),
+                ("name", "mGBA"), ("platform", "GBA"), ("author", "sim"),
             ])
+        if cmd == "CORES_LIST":
+            return self.send_hash_reply([("name", "mGBA"), ("platform", "GBA")])
         if cmd == "GAME_INFO":
             return self.send_hash_reply([
-                ("name", "The Minish Cap (simulé)"), ("system", "GBA")])
+                ("name", "The Minish Cap (simulé)"),
+                ("region", "FR"), ("hash", "0")])
         if cmd == "CORE_MEMORIES":
-            return self.send_hash_reply([("name", "EXECUTEMEMORY"),
-                                         ("access", "rw"),
-                                         ("size", str(RAM_SIZE))])
+            # Liste de domaines au format BizHawk/mGBA GBA. La taille est en
+            # DECIMAL : c'est le domaine complet 0x02000000-0x0203FFFF, donc
+            # les adresses absolues GBA (0x0200AC0...) tombent dedans.
+            return self._send_domain_list([
+                ("EXECUTEMEMORY", "rw", RAM_SIZE),
+                ("IWRAM", "rw", RAM_SIZE),
+                ("SRAM", "rw", 0x10000),
+                ("ROM", "r", 0x2000000),
+                ("PALETTE", "rw", 0x400),
+                ("OAM", "rw", 0x400),
+                ("IO REGISTERS", "rw", 0x400),
+            ])
+        if cmd == "LIST_BIZHAWK_DOMAINS":
+            return self._send_domain_list([
+                ("Internal RAM", "rw", RAM_SIZE),
+                ("Save Game RAM", "rw", 0x10000),
+                ("ROM", "r", 0x2000000),
+            ])
         if cmd == "CORE_READ":
             return self.core_read(args)
         if cmd == "BCORE_WRITE":
             return self.core_write(args)
         self.send_error("invalid_command", f"Unknow command : {cmd}")
 
+    def _send_domain_list(self, domains):
+        out = ["\n"]
+        for name, access, size in domains:
+            out.append(f"name:{name}\naccess:{access}\nsize:{size}\n")
+        out.append("\n")
+        try:
+            self.request.sendall("".join(out).encode())
+        except OSError:
+            pass
+
     # CORE_READ DOMAIN;<offset>[;<size>;<offset2>;<size2>...]
+    @staticmethod
+    def _to_offset(v):
+        """Adresses NWA relatives au domaine, mais les pack TMC/EmoTracker
+        utilisent des adresses absolues GBA (0x0200AC0). On accepte les deux.
+        Retourne l'offset dans la RAM simulée, ou None si hors domaine."""
+        if v >= RAM_BASE:
+            off = v - RAM_BASE
+            return off if off < RAM_SIZE else None
+        return v if v < RAM_SIZE else None
+
     def _parse_ranges(self, args):
         rest = args[1:] if len(args) > 1 else []
         vals = []
@@ -245,8 +286,8 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
         ranges = []
         i = 0
         while i < len(vals):
-            off = vals[i]
-            if off < 0 or off >= RAM_SIZE:
+            off = self._to_offset(vals[i])
+            if off is None or vals[i] < 0:
                 return "out_of_bounds"
             if i + 1 < len(vals):
                 size = vals[i + 1]
@@ -260,7 +301,8 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
 
     def core_read(self, args):
         domain = args[0].strip().upper() if args else ""
-        if domain not in ("EXECUTEMEMORY", "EXECRAM", "IWRAM", "SYSTEM BUS"):
+        if domain not in ("EXECUTEMEMORY", "EXECRAM", "IWRAM", "SYSTEM BUS",
+                          "INTERNAL RAM", "MAIN MEMORY", "MEMORY"):
             return self.send_error("command_error",
                                    "The specified domain <" + domain + "> does not exists")
         ranges = self._parse_ranges(args)
