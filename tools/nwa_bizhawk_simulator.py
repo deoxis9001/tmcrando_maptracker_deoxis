@@ -1,18 +1,21 @@
--- Simulation d'un serveur Bizhawk-nwa-tool (https://github.com/Skarsnik/Bizhawk-nwa-tool)
--- pour tester l'interface d'autotracking SANS BizHawk ni console :
---   * même protocole TCP/NWA que le plugin (commandes texte \n ; erreurs "\nerror:...\n\n" ;
---     réponses hash "\nkey:value\n\n" ; données mémoire : octet 0 + taille u32 BE + bytes)
---   * port par défaut identique au plugin : 0xBEEF (49135)
---   * RAM GBA simulée : 256 Ko (EXECRAM), initialisée avec un savestate TMC
---     ("save.emo", "TMC-*.ss", "TMC-*.emuSave"... ou premier fichier .ss/.sav trouvé)
---   * écriture possible via bCORE_WRITE (pour fabriquer des états de test)
--- Usage :  python3 tools/nwa_bizhawk_simulator.py [port]
+""" Simulation d'un serveur Bizhawk-nwa-tool (https://github.com/Skarsnik/Bizhawk-nwa-tool)
+ pour tester l'interface d'autotracking SANS BizHawk ni console :
+   * même protocole TCP/NWA que le plugin (commandes texte \n ; erreurs "\nerror:...\n\n" ;
+     réponses hash "\nkey:value\n\n" ; données mémoire : octet 0 + taille u32 BE + bytes)
+   * port par défaut identique au plugin : 0xBEEF (49135)
+   * RAM GBA simulée : 256 Ko (EXECRAM), initialisée avec un savestate TMC
+     ("save.emo", "TMC-*.ss", "TMC-*.emuSave"... ou premier fichier .ss/.sav trouvé)
+   * écriture possible via bCORE_WRITE (pour fabriquer des états de test)
+ Usage :  python3 tools/nwa_bizhawk_simulator.py [port]"""
 
+import json
 import os
 import re
+import socket
 import socketserver
 import struct
 import sys
+import time
 
 RAM_SIZE = 0x40000  # EXECRAM GBA : 256 Ko
 
@@ -52,13 +55,18 @@ def load_fake_ram():
         print(f"[SIM] RAM partiellement initialisée depuis {path} + motifs de test")
         return ram
     # Sans savestate : motifs de test purs pour vérifier les boutons Bool/Int
+    seed_test_pattern(ram)
+    print("[SIM] Aucun savestate trouvé : RAM simulée avec motifs de test")
+    return ram
+
+
+def seed_test_pattern(ram):
+    """Écrit des motifs de test dans la zone autotracking (0x2AC0..0x2EB3)."""
     for a in range(0x2AC0, 0x2EB4):
         ram[a] = (a - 0x2AC0) & 0xFF
     ram[0x2B32] = 0x01          # isInGame() == true
     for a in (0x2C40, 0x2C41):
         ram[a] = 0xF3           # updateWall -> Active
-    print("[SIM] Aucun savestate trouvé : RAM simulée avec motifs de test")
-    return ram
 
 
 class NWASimulatorHandler(socketserver.BaseRequestHandler):
@@ -236,11 +244,364 @@ class Server(socketserver.ThreadingTCPServer):
     daemon_threads = True
 
 
+# ---------------------------------------------------------------------------
+# Interface web de test (autotracking) : sert tools/web/ + API JSON sur le
+# même processus que le serveur NWA simulé.
+#   GET  /                 -> page HTML
+#   GET  /api/state        -> état complet des boutons Bool/Int + RAM modifiée
+#   POST /api/action       -> {"id":..., "action":"toggle|inc|dec|set|type"}
+#   POST /api/connect      -> connecte un vrai client EmoTracker (localhost:49135)
+#   POST /api/disconnect
+#   POST /api/seed         -> motifs de test dans la RAM
+#   POST /api/reset
+# ---------------------------------------------------------------------------
+try:
+    from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+except ImportError:  # Python < 3.7
+    from http.server import BaseHTTPRequestHandler
+    from socketserver import ThreadingMixIn
+
+    class ThreadingHTTPServer(ThreadingMixIn, socketserver.TCPServer):
+        allow_reuse_address = True
+
+
+WEB_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "web")
+
+
+def build_buttons_from_autotracking(src_path):
+    """Extrait les 0xXXXXXXX et 0xXX d'autotracking.lua -> boutons Bool/Int."""
+    with open(src_path, encoding="utf-8", errors="replace") as fh:
+        src = fh.read()
+    tokens = re.findall(r"0x[0-9a-fA-F]{1,7}\b", src)
+    addrs = sorted({int(t, 16) for t in tokens if int(t, 16) >= 0x20000})
+    flags = sorted({int(t, 16) for t in tokens if int(t, 16) < 0x20000})
+    lines = src.splitlines()
+
+    def first_line(lit):
+        for l in lines:
+            if re.search(r"\b" + re.escape(lit) + r"\b", l, re.I):
+                return l.strip()[:120]
+        return ""
+
+    buttons = []
+    for a in addrs:
+        buttons.append({"id": f"addr-{a:x}", "kind": "address",
+                        "hex": f"0x{a:07X}", "value": a,
+                        "context": first_line(f"0x{a:07x}"),
+                        "type": "Bool", "on": False, "count": 0})
+    for f in flags:
+        buttons.append({"id": f"flag-{f:02x}", "kind": "flag",
+                        "hex": f"0x{f:02X}", "value": f,
+                        "context": first_line(f"0x{f:02x}"),
+                        "type": "Bool", "on": False, "count": 0})
+    return buttons
+
+
+class WebState:
+    def __init__(self, sim_server):
+        self.sim = sim_server          # serveur NWA (attribut .ram partagé)
+        self.buttons = {}              # id -> dict(type Bool|Int, on, count)
+        self.order = []
+        self.clients = []              # clients EmoTracker connectés via le web
+        self.logs = []
+        self.connected = False
+        self.port = 0xBEEF
+
+    def add_button(self, b):
+        if b["id"] not in self.buttons:
+            self.order.append(b["id"])
+        b["manual"] = True             # mis à jour par clic web ou par la RAM
+        self.buttons[b["id"]] = b
+
+    def log(self, msg):
+        self.logs.append(msg)
+        del self.logs[:-200]
+        print(f"[WEB] {msg}")
+
+    def full_state(self):
+        ram = self.sim.ram if self.sim else None
+        out = {
+            "connected": self.connected,
+            "port": self.port,
+            "clients": [f"{c.ip}:{c.port}" for c in self.clients],
+            "counts": {
+                "addresses": sum(1 for b in self.buttons.values() if b["kind"] == "address"),
+                "flags": sum(1 for b in self.buttons.values() if b["kind"] == "flag"),
+            },
+            "buttons": [],
+            "log": self.logs[-60:],
+        }
+        for bid in self.order:
+            b = self.buttons[bid]
+            entry = dict(b)
+            if b["kind"] == "address" and ram is not None:
+                off = b["value"] - 0x2000000
+                if 0 <= off < len(ram):
+                    entry["ram"] = ram[off]
+            out["buttons"].append(entry)
+        return out
+
+
+class WebHandler(BaseHTTPRequestHandler):
+    state = None      # injecté par main()
+    protocol_version = "HTTP/1.1"
+
+    def log_message(self, fmt, *args):
+        pass  # silence sur les requêtes statiques
+
+    def _send(self, code, ctype, body):
+        self.send_response(code)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _json(self, obj, code=200):
+        self._send(code, "application/json; charset=utf-8",
+                   json.dumps(obj).encode())
+
+    def do_GET(self):
+        st = WebHandler.state
+        path = self.path.split("?")[0]
+        if path == "/api/state":
+            return self._json(st.full_state())
+        if path in ("/", "/index.html"):
+            path = "/index.html"
+        fp = os.path.normpath(os.path.join(WEB_DIR, path.lstrip("/")))
+        if not fp.startswith(WEB_DIR) or not os.path.isfile(fp):
+            return self._send(404, "text/plain", b"Not found")
+        ctype = ("text/html; charset=utf-8" if fp.endswith(".html")
+                 else "application/javascript" if fp.endswith(".js")
+                 else "application/json" if fp.endswith(".json")
+                 else "text/css")
+        with open(fp, "rb") as fh:
+            return self._send(200, ctype, fh.read())
+
+    def do_POST(self):
+        st = WebHandler.state
+        n = int(self.headers.get("Content-Length", 0) or 0)
+        raw = self.rfile.read(n) if n else b"{}"
+        try:
+            req = json.loads(raw.decode() or "{}")
+        except ValueError:
+            return self._json({"error": "JSON invalide"}, 400)
+        path = self.path.split("?")[0]
+
+        if path == "/api/action":
+            b = st.buttons.get(req.get("id"))
+            if b is None:
+                return self._json({"error": "bouton inconnu"}, 404)
+            act = req.get("action")
+            if act == "toggle":
+                b["on"] = not b["on"]
+            elif act == "inc":
+                b["count"] = (b["count"] + 1) & 0xFF
+            elif act == "dec":
+                b["count"] = (b["count"] - 1) & 0xFF
+            elif act == "set":
+                b["count"] = int(req.get("value", 0)) & 0xFF
+            elif act == "type":
+                b["type"] = "Int" if b["type"] == "Bool" else "Bool"
+            else:
+                return self._json({"error": f"action '{act}' inconnue"}, 400)
+            # miroir dans la RAM simulée quand le bouton est actif
+            if b["kind"] == "address":
+                off = b["value"] - 0x2000000
+                if 0 <= off < len(st.sim.ram):
+                    val = (1 if b["on"] else 0) if b["type"] == "Bool" else b["count"]
+                    st.sim.ram[off] = val & 0xFF
+            return self._json({"ok": True, "button": b})
+
+        if path == "/api/reset":
+            for b in st.buttons.values():
+                b["on"] = False
+                b["count"] = 0
+            st.log("Réinitialisation de tous les boutons")
+            return self._json({"ok": True})
+
+        if path == "/api/seed":
+            seed_test_pattern(st.sim.ram)
+            st.log("Motifs de test écrits dans la RAM simulée")
+            return self._json({"ok": True})
+
+        if path == "/api/connect":
+            return self._json(st.connect_nwa(int(req.get("port", st.port) or 0xBEEF)))
+
+        if path == "/api/disconnect":
+            return self._json(st.disconnect_nwa())
+
+        return self._json({"error": "route inconnue"}, 404)
+
+    # -------------------------------------------------- pont web -> client NWA
+    # (méthodes du state, définies ci-dessous sur WebState)
+
+
+def _client_read_reply(sock, timeout=1.0):
+    """Lit une réponse NWA : hash texte, OK '\\n\\n', erreur, ou bloc binaire."""
+    sock.settimeout(timeout)
+    buf = b""
+    try:
+        while True:
+            chunk = sock.recv(4096)
+            if not chunk:
+                return "closed", buf
+            buf += chunk
+            if buf.startswith(b"\x00") and len(buf) >= 5:
+                size = struct.unpack(">I", buf[1:5])[0]
+                if len(buf) >= 5 + size:
+                    return "OK", buf[5:5 + size]
+            elif buf.endswith(b"\n\n"):
+                return "OK", buf[:-2]
+    except (socket.timeout, TimeoutError):
+        return "timeout", buf
+    except OSError:
+        return "closed", buf
+
+
+class NwaClient:
+    """Client NWA minimal : lit la RAM d'un serveur Bizhawk-nwa-tool (ou du
+    simulateur local) et applique la logique autotracking aux boutons web."""
+
+    def __init__(self, ip, port, state):
+        self.ip, self.port, self.state = ip, port, state
+        self.sock = socket.create_connection((ip, port), timeout=2)
+        self.name = "AT-WEB-TESTER"
+        self.buf = b""
+        self._cmd(f"MY_NAME_IS {self.name}")
+        info = self._cmd("EMULATOR_INFO")
+        self.state.log(f"Connecté (NWA) à {info.get('name','?')} {info.get('version','?')}")
+
+    def _send(self, line):
+        self.sock.sendall((line + "\n").encode())
+
+    def _read(self):
+        while True:
+            if self.buf.startswith(b"\x00") and len(self.buf) >= 5:
+                size = struct.unpack(">I", self.buf[1:5])[0]
+                if len(self.buf) >= 5 + size:
+                    payload, self.buf = self.buf[5:5 + size], self.buf[5 + size:]
+                    return "OK", payload
+            idx = self.buf.find(b"\n\n")
+            if idx != -1:
+                payload, self.buf = self.buf[:idx], self.buf[idx + 2:]
+                if payload.startswith(b"error:"):
+                    return "ERR", payload
+                pairs = {}
+                for l in payload.split(b"\n"):
+                    if b":" in l:
+                        k, v = l.split(b":", 1)
+                        pairs[k.decode()] = v.decode()
+                return "OK", pairs
+            chunk = self.sock.recv(4096)
+            if not chunk:
+                raise ConnectionError("connexion NWA fermée")
+            self.buf += chunk
+
+    def _cmd(self, line):
+        self._send(line)
+        status, payload = self._read()
+        if status != "OK":
+            raise RuntimeError(f"NWA: {payload!r}")
+        return payload
+
+    def read_bytes(self, offset, size):
+        data = self._cmd(f"CORE_READ EXECUTEMEMORY;0x{offset:x};{size}")
+        return data if isinstance(data, bytes) else b""
+
+    def close(self):
+        try:
+            self.sock.close()
+        except OSError:
+            pass
+
+
+def apply_watch_to_buttons(client, state):
+    """Memory watch : lit la RAM via NWA et met à jour les boutons adresse."""
+    for bid in list(state.order):
+        b = state.buttons[bid]
+        if b["kind"] != "address":
+            continue
+        off = b["value"] - 0x2000000
+        data = client.read_bytes(off, 1)
+        if len(data) < 1:
+            continue
+        v = data[0]
+        b["ram"] = v
+        if b["type"] == "Bool":
+            b["on"] = v != 0
+        else:
+            b["count"] = v
+
+
+def poll_loop(state, interval=0.5):
+    while state.connected:
+        c = next((cl for cl in state.clients if getattr(cl, "_is_poller", False)), None)
+        if c is None:
+            break
+        try:
+            apply_watch_to_buttons(c, state)
+        except Exception as exc:  # déconnexion réseau
+            state.log(f"Polling interrompu : {exc}")
+            state.disconnect_nwa()
+            break
+        import time
+        time.sleep(interval)
+
+
+def connect_impl(state, port):
+    if state.connected:
+        return {"ok": True, "already": True}
+    try:
+        client = NwaClient("127.0.0.1", port, state)
+    except OSError as exc:
+        state.log(f"Échec connexion NWA port {port} : {exc}")
+        return {"error": f"Connexion impossible : {exc} (lancez le simulateur ou BizHawk+NWA)"}
+    client._is_poller = True
+    state.clients.append(client)
+    state.connected = True
+    state.port = port
+    import threading
+    threading.Thread(target=poll_loop, args=(state,), daemon=True).start()
+    return {"ok": True, "port": port}
+
+
+def disconnect_impl(state):
+    for c in state.clients:
+        c.close()
+    state.clients.clear()
+    state.connected = False
+    state.log("Déconnecté du serveur NWA")
+    return {"ok": True}
+
+
+WebState.connect_nwa = lambda self, port=0xBEEF: connect_impl(self, port)
+WebState.disconnect_nwa = lambda self: disconnect_impl(self)
+
+
 def main():
     port = int(sys.argv[1], 0) if len(sys.argv) > 1 else 0xBEEF
+    web_port = int(sys.argv[2], 0) if len(sys.argv) > 2 else 8090
+
     handler = Server(("127.0.0.1", port), NWASimulatorHandler)
     handler.ram = load_fake_ram()
     handler.client_id = 0
+
+    state = WebState(handler)
+    at_lua = os.path.join(os.path.dirname(os.path.dirname(WEB_DIR)),
+                          "emo", "scripts", "autotracking", "autotracking.lua")
+    at_lua = os.path.normpath(at_lua)
+    for b in build_buttons_from_autotracking(at_lua):
+        state.add_button(b)
+    state.log(f"{len(state.buttons)} boutons générés depuis autotracking.lua")
+    WebHandler.state = state
+
+    webd = ThreadingHTTPServer(("0.0.0.0", web_port), WebHandler)
+    webd.daemon_threads = True
+
+    threading_mod = __import__("threading")
+    threading_mod.Thread(target=webd.serve_forever, daemon=True).start()
+    print(f"[WEB] Interface de test : http://127.0.0.1:{web_port}/")
     print(f"[SIM] Serveur NWA simulé (Bizhawk-nwa-tool) sur 127.0.0.1:{port}")
     print("[SIM] Ctrl+C pour arrêter.")
     try:
