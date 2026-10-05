@@ -161,6 +161,42 @@ function createAutotrackingTestControls()
                 self:updateIcon()
         end
 
+        -- Heartbeat manuel : envoie EMULATION_STATUS immediatement.
+        -- Utile si le trafic est coupe pendant longtemps (un pare-feu ou
+        -- l'OS peut fermer une connexion TCP silencieuse au bout de ~2 min ;
+        -- dans ce cas le connecteur se reconnecte automatiquement a la frame
+        -- suivante, et ce bouton force un exchange pour garder le lien vivant).
+        local ping = TestButton("PING NWA (heartbeat)", "at_nwa_ping", 0, "Bool")
+        function ping:onLeftClick()
+                if not NWAConnector.socket then
+                        print("[NWA] Pas connecte : tentative de reconnexion...")
+                        nwaConnectorConnect()
+                        self:setProperty("Active", NWAConnector.socket ~= nil)
+                        self:updateIcon()
+                        return
+                end
+                if NWAConnector:_sendCommand("EMULATION_STATUS") then
+                        local status = NWAConnector:_readReply()
+                        if status == "DISCONNECTED" then
+                                print("[NWA] Ping : serveur ne repond plus -> deconnecte")
+                                NWAConnector:disconnect("ping echoue")
+                                self:setProperty("Active", false)
+                        else
+                                print("[NWA] Ping OK (serveur vivant)")
+                                self:setProperty("Active", true)
+                        end
+                        self:updateIcon()
+                else
+                        print("[NWA] Ping : socket casse -> deconnecte")
+                        NWAConnector:disconnect("ping socket casse")
+                        self:setProperty("Active", false)
+                        self:updateIcon()
+                end
+        end
+        function ping:onRightClick()
+                print("[NWA] Le heartbeat automatique a lieu toutes les ~60 frames (updateProvider).")
+        end
+
         local seed = TestButton("SEED RAM (motifs test)", "at_nwa_seed", 0, "Bool")
         function seed:onLeftClick()
                 nwaConnectorSeedTestPattern()

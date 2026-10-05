@@ -28,7 +28,19 @@ NWA_DOMAIN = "EXECUTEMEMORY"   -- domaine BizHawk exposé en NWA par le plugin
 ------------------------------------------------------------------
 -- Helpers : octets <-> nombres (endianness GBA = little endian)
 ------------------------------------------------------------------
-local function be32(data, i) -- taille du bloc binaire réseau : big endian
+-- La bibliotheque "socket" fournie par LuaConnector (EmoTracker) est de
+-- style luasocket : sock:send(<chaine>). On normalise ici pour accepter
+-- aussi la forme sock:send(<nb_octets>) au cas ou.
+local function sockSend(sock, data)
+        if type(data) == "string" then
+                local n, err = sock:send(data)
+                if n then return n end
+                return nil, err
+        end
+        return sock:send(data) -- passe-through (forma "nbytes")
+end
+
+local function be32(data, i) -- taille du bloc binaire reseau : big endian
         return data:byte(i) * 0x1000000 + data:byte(i + 1) * 0x10000
                 + data:byte(i + 2) * 0x100 + data:byte(i + 3)
 end

@@ -11,13 +11,39 @@
 import json
 import os
 import re
+import select
 import socket
 import socketserver
 import struct
 import sys
+import threading
 import time
 
 RAM_SIZE = 0x40000  # EXECRAM GBA : 256 Ko
+
+
+def enable_tcp_keepalive(sock, idle=15, interval=10, count=6):
+    """Active SO_KEEPALIVE avec des paramètres courts.
+
+    Sans cela, une connexion TCP inactive est tuée au bout de ~2 min par
+    certains pare-feu/NAT/OS (et BizHawk ou le réseau peut couper les
+    connisons silencieuses). Les keepalive empêchent la coupure côté
+    inactivité ET font détecter une vraie coupure en ~1 min au lieu de
+    rester bloqué éternellement dans recv().
+    """
+    sock.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
+    if hasattr(socket, "TCP_KEEPIDLE"):      # Linux
+        sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_KEEPIDLE, idle)
+    if hasattr(socket, "TCP_KEEPINTVL"):     # Linux
+        sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_KEEPINTVL, interval)
+    if hasattr(socket, "TCP_KEEPCNT"):       # Linux
+        sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_KEEPCNT, count)
+    elif sys.platform == "darwin":           # macOS/BSD : une seule valeur
+        try:
+            sock.setsockopt(socket.IPPROTO_TCP,
+                            getattr(socket, "TCP_KEEPALIVE", 0x10), idle)
+        except OSError:
+            pass
 
 
 def load_fake_ram():
@@ -70,40 +96,72 @@ def seed_test_pattern(ram):
 
 
 class NWASimulatorHandler(socketserver.BaseRequestHandler):
+    # Les clients NWA restent souvent silencieux entre deux memory watches.
+    # Sans trafic, certains pare-feu/NAT/OS coupent la connexion TCP au bout
+    # d'environ 2 minutes -> "[SIM] Client X déconnecté" toutes les 2 min.
+    # D'où : SO_KEEPALIVE agressif + "heartbeat" applicatif (commentaire NWA).
+    IDLE_TIMEOUT = 180.0   # fermeture propre si rien pendant 3 min (garde-fou)
+
     def setup(self):
         self.ram = self.server.ram
         self.buf = b""
         self.name = f"Client {self.server.client_id}"
+        self.last_rx = time.monotonic()
         self.server.client_id += 1
+        enable_tcp_keepalive(self.request)
         print(f"[SIM] {self.name} connecté depuis {self.client_address[:2]}")
 
     # ------------------------------------------------- envois (protocole NWA)
     def send_error(self, kind, reason):
-        self.request.sendall(f"\nerror:{kind}\nreason:{reason}\n\n".encode())
+        try:
+            self.request.sendall(f"\nerror:{kind}\nreason:{reason}\n\n".encode())
+        except OSError:
+            pass
 
     def send_hash_reply(self, pairs):
         out = ["\n"]
         for k, v in pairs:
             out.append(f"{k}:{v}\n")
         out.append("\n")
-        self.request.sendall("".join(out).encode())
+        try:
+            self.request.sendall("".join(out).encode())
+        except OSError:
+            pass
 
     def send_ok(self):
-        self.request.sendall(b"\n\n")
+        try:
+            self.request.sendall(b"\n\n")
+        except OSError:
+            pass
 
     def send_data(self, payload: bytes):
         # format binaire du plugin : 0x00 + taille u32 BE + données
-        self.request.sendall(b"\x00" + struct.pack(">I", len(payload)) + payload)
+        try:
+            self.request.sendall(b"\x00" + struct.pack(">I", len(payload)) + payload)
+        except OSError:
+            pass
 
     # ------------------------------------------------------- commandes NWA
     def handle(self):
         while True:
+            idle = self.IDLE_TIMEOUT - (time.monotonic() - self.last_rx)
+            if idle <= 0:
+                print(f"[SIM] {self.name} inactif > {self.IDLE_TIMEOUT:.0f}s, "
+                      "fermeture propre (le client se reconnectera seul)")
+                break
+            try:
+                ready, _, _ = select.select([self.request], [], [], min(5.0, idle))
+            except (OSError, ValueError):
+                break
+            if not ready:
+                continue
             try:
                 chunk = self.request.recv(4096)
             except OSError:
                 break
             if not chunk:
                 break
+            self.last_rx = time.monotonic()
             self.buf += chunk
             while b"\n" in self.buf:
                 line, self.buf = self.buf.split(b"\n", 1)
@@ -466,8 +524,10 @@ class NwaClient:
     def __init__(self, ip, port, state):
         self.ip, self.port, self.state = ip, port, state
         self.sock = socket.create_connection((ip, port), timeout=2)
+        enable_tcp_keepalive(self.sock)
         self.name = "AT-WEB-TESTER"
         self.buf = b""
+        self.last_rx = time.monotonic()
         self._cmd(f"MY_NAME_IS {self.name}")
         info = self._cmd("EMULATOR_INFO")
         self.state.log(f"Connecté (NWA) à {info.get('name','?')} {info.get('version','?')}")
@@ -496,7 +556,29 @@ class NwaClient:
             chunk = self.sock.recv(4096)
             if not chunk:
                 raise ConnectionError("connexion NWA fermée")
+            self.last_rx = time.monotonic()
             self.buf += chunk
+
+    def ping_if_stale(self, max_age=30.0):
+        """Heartbeat applicatif : si aucun échange depuis max_age secondes,
+        envoie EMULATION_STATUS pour garder la connexion vivante (les pare-feu
+        et certains OS coupent les connexions TCP silencieuses au bout de
+        ~2 minutes). Lève ConnectionError si le serveur ne répond plus."""
+        if time.monotonic() - self.last_rx < max_age:
+            return
+        old = self.sock.gettimeout()
+        self.sock.settimeout(2.0)
+        try:
+            self._send("EMULATION_STATUS")
+            status, payload = self._read()
+            if status == "ERR":
+                raise ConnectionError(f"serveur NWA en erreur : {payload!r}")
+            # vide éventuellement le buffer : on est resynchronisé
+        finally:
+            try:
+                self.sock.settimeout(old)
+            except OSError:
+                pass
 
     def _cmd(self, line):
         self._send(line)
@@ -535,17 +617,18 @@ def apply_watch_to_buttons(client, state):
 
 
 def poll_loop(state, interval=0.5):
+    """Memory watch web : lit la RAM via NWA + heartbeat (ping_if_stale)."""
     while state.connected:
         c = next((cl for cl in state.clients if getattr(cl, "_is_poller", False)), None)
         if c is None:
             break
         try:
             apply_watch_to_buttons(c, state)
+            c.ping_if_stale(max_age=30.0)
         except Exception as exc:  # déconnexion réseau
             state.log(f"Polling interrompu : {exc}")
             state.disconnect_nwa()
             break
-        import time
         time.sleep(interval)
 
 
@@ -561,7 +644,6 @@ def connect_impl(state, port):
     state.clients.append(client)
     state.connected = True
     state.port = port
-    import threading
     threading.Thread(target=poll_loop, args=(state,), daemon=True).start()
     return {"ok": True, "port": port}
 
