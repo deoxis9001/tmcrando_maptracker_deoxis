@@ -189,6 +189,20 @@ $("#btnReset").onclick = async () => {
   try { await api("/api/reset", {}); } catch (e) { addLocalLog("⚠ " + e.message); }
   refreshSoon();
 };
+$("#btnSendFlags").onclick = async () => {
+  try {
+    const r = await api("/api/flags", { on: true });
+    addLocalLog(`📤 ${r.sent.length} flags envoyés dans la RAM (${r.sent.join(" ")}) → EmoTracker les lira au prochain watch`);
+  } catch (e) { addLocalLog("⚠ " + e.message); }
+  refreshSoon();
+};
+$("#btnClearFlags").onclick = async () => {
+  try {
+    const r = await api("/api/flags", { on: false });
+    addLocalLog(`🧹 ${r.sent.length} flags effacés de la RAM simulée`);
+  } catch (e) { addLocalLog("⚠ " + e.message); }
+  refreshSoon();
+};
 ["#search", "#kindFilter", "#typeFilter", "#stateFilter"].forEach((s) =>
   $(s).addEventListener("input", () => state && state.buttons.forEach(updateCard)));
 

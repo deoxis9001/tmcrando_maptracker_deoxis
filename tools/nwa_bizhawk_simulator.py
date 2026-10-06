@@ -91,12 +91,96 @@ def load_fake_ram():
 
 
 def seed_test_pattern(ram):
-    """Écrit des motifs de test dans la zone autotracking (0x2AC0..0x2EB3)."""
+    """Écrit des motifs de test dans la zone autotracking (0x2AC0..0x2EB3)
+    et active la moitié des drapeaux 0xXX dans la zone drapeaux."""
     for a in range(0x2AC0, 0x2EB4):
         ram[a] = (a - 0x2AC0) & 0xFF
     ram[0x2B32] = 0x01          # isInGame() == true
     for a in (0x2C40, 0x2C41):
         ram[a] = 0xF3           # updateWall -> Active
+    half = [f for f, *_ in FLAG_DEFS][: len(FLAG_DEFS) // 2]
+    set_flags_in_ram(ram, half, on=True)
+
+
+FLAG_DEFS = [
+    # (flag hex, description, bit, valeur a ecrire dans l'octet de drapeau)
+    (0x01, "Drapeau progres 01", 0x01, 0x01),
+    (0x02, "Drapeau progres 02", 0x02, 0x02),
+    (0x04, "Drapeau progres 04", 0x04, 0x04),
+    (0x08, "Drapeau progres 08", 0x08, 0x08),
+    (0x10, "Drapeau progres 10", 0x10, 0x10),
+    (0x20, "Drapeau progres 20", 0x20, 0x20),
+    (0x40, "Drapeau progres 40", 0x40, 0x40),
+    (0x80, "Drapeau progres 80", 0x80, 0x80),
+    (0x05, "Masque 05 (bits 0+2)", 0x05, 0x05),
+    (0x0C, "Masque 0C (bits 2+3)", 0x0C, 0x0C),
+    (0x11, "Valeur 11", 0xFF, 0x11),
+    (0x15, "Valeur 15", 0xFF, 0x15),
+    (0x2C, "Valeur 2C", 0xFF, 0x2C),
+    (0x41, "Valeur 41", 0xFF, 0x41),
+    (0x46, "Valeur 46", 0xFF, 0x46),
+    (0x51, "Valeur 51", 0xFF, 0x51),
+    (0x55, "Valeur 55", 0xFF, 0x55),
+    (0x65, "Valeur 65", 0xFF, 0x65),
+    (0x6A, "Valeur 6A", 0xFF, 0x6A),
+    (0x6D, "Valeur 6D", 0xFF, 0x6D),
+    (0x6E, "Valeur 6E", 0xFF, 0x6E),
+    (0x6F, "Valeur 6F", 0xFF, 0x6F),
+    (0x70, "Valeur 70", 0xFF, 0x70),
+    (0x71, "Valeur 71", 0xFF, 0x71),
+    (0x72, "Valeur 72", 0xFF, 0x72),
+    (0x73, "Valeur 73", 0xFF, 0x73),
+    (0x74, "Valeur 74", 0xFF, 0x74),
+    (0x75, "Valeur 75", 0xFF, 0x75),
+    (0x81, "Valeur 81", 0xFF, 0x81),
+    (0x91, "Valeur 91", 0xFF, 0x91),
+    (0xF2, "Valeur F2", 0xFF, 0xF2),
+    (0xF3, "Valeur F3", 0xFF, 0xF3),
+]
+FLAG_BASE = 0x2002F00   # zone reservee de la RAM simulee pour les drapeaux
+                        # (juste apres la zone autotracking 0x2AC0..0x2EB3)
+
+
+def flag_slot(ram, flag):
+    """Retourne (offset, bit, valeur) du slot RAM d'un drapeau 0xXX."""
+    for f, _desc, bit, val in FLAG_DEFS:
+        if f == flag:
+            return ram_flag_offset(f), bit, val
+    return None
+
+
+def ram_flag_offset(flag):
+    return FLAG_BASE + flag // 8
+
+
+def set_flags_in_ram(ram, flags, on=True):
+    """Applique une liste de drapeaux 0xXX dans la RAM partagee."""
+    changed = []
+    for f in flags:
+        slot = flag_slot(ram, f)
+        if slot is None:
+            continue
+        off, bit, val = slot
+        if off >= len(ram):
+            continue
+        if bit == 0xFF:      # valeur complete ecrite dans l'octet
+            ram[off] = val if on else 0x00
+        elif on:
+            ram[off] |= bit
+        else:
+            ram[off] &= ~bit & 0xFF
+        changed.append(f)
+    return changed
+
+
+def read_flags_from_ram(ram):
+    """Relit l'etat de tous les drapeaux depuis la RAM partagee."""
+    out = {}
+    for f, _desc, bit, _val in FLAG_DEFS:
+        off = ram_flag_offset(f)
+        if off < len(ram):
+            out[f] = bool(ram[off] & bit) if bit != 0xFF else (ram[off] != 0)
+    return out
 
 
 class NWASimulatorHandler(socketserver.BaseRequestHandler):
@@ -451,6 +535,9 @@ class WebState:
                 "addresses": sum(1 for b in self.buttons.values() if b["kind"] == "address"),
                 "flags": sum(1 for b in self.buttons.values() if b["kind"] == "flag"),
             },
+            "flag_defs": [{"hex": f"0x{f:02X}", "desc": d,
+                           "bit": f"0x{b:02X}"} for f, d, b, _v in FLAG_DEFS],
+            "flag_ram_base": f"0x{FLAG_BASE:07X}",
             "buttons": [],
             "log": self.logs[-60:],
         }
@@ -534,7 +621,35 @@ class WebHandler(BaseHTTPRequestHandler):
                 if 0 <= off < len(st.sim.ram):
                     val = (1 if b["on"] else 0) if b["type"] == "Bool" else b["count"]
                     st.sim.ram[off] = val & 0xFF
+            elif b["kind"] == "flag":
+                # un clic sur un bouton FLAG ecrit le drapeau dans la RAM ->
+                # visible par EmoTracker (memory watch) comme un vrai flag jeu
+                active = (not b["on"]) if b["type"] == "Bool" else (b["count"] != 0)
+                if b["type"] == "Bool":
+                    b["on"] = active
+                set_flags_in_ram(st.sim.ram, [b["value"]], on=active)
             return self._json({"ok": True, "button": b})
+
+        if path == "/api/flags":
+            # envoi massif de drapeaux vers EmoTracker via la RAM simulee.
+            # req = {"flags": [1, 5, 0x6A, "0xF3", ...], "on": true|false}
+            flags = req.get("flags") or [f for f, *_ in FLAG_DEFS]
+            parsed = []
+            for f in flags:
+                try:
+                    parsed.append(int(f, 16) if isinstance(f, str) else int(f))
+                except (ValueError, TypeError):
+                    continue
+            on = bool(req.get("on", True))
+            changed = set_flags_in_ram(st.sim.ram, parsed, on=on)
+            for f in changed:
+                b = st.buttons.get(f"flag-{f:02x}")
+                if b:
+                    b["on"] = on
+                    b["count"] = 1 if on else 0
+            st.log(f"Envoi de {len(changed)} drapeaux {'ACTIVÉS' if on else 'DÉSACTIVÉS'} "
+                   f"-> RAM (EmoTracker les lira au prochain watch)")
+            return self._json({"ok": True, "sent": [f"0x{f:02X}" for f in changed]})
 
         if path == "/api/reset":
             for b in st.buttons.values():
@@ -676,21 +791,42 @@ class NwaClient:
 
 
 def apply_watch_to_buttons(client, state):
-    """Memory watch : lit la RAM via NWA et met à jour les boutons adresse."""
+    """Memory watch : lit la RAM via NWA et met à jour les boutons.
+
+    - adresses 0xXXXXXXX : zone utilisée (0x2002AC0..0x2002EB2) lue en UNE
+      seule commande CORE_READ ;
+    - flags 0xXX : zone drapeaux (0x2002F00..) lue en une seule commande."""
+    lo, hi = 0x2002AC0, 0x2002EB3
+    flag_lo, flag_hi = FLAG_BASE, FLAG_BASE + 0x40
+    try:
+        block = client.read_bytes(lo - 0x2000000, hi - lo)
+        fblock = client.read_bytes(flag_lo - 0x2000000, flag_hi - flag_lo)
+    except Exception:
+        return
+    if not isinstance(block, bytes) or len(block) < (hi - lo):
+        block = b""
     for bid in list(state.order):
         b = state.buttons[bid]
-        if b["kind"] != "address":
-            continue
-        off = b["value"] - 0x2000000
-        data = client.read_bytes(off, 1)
-        if len(data) < 1:
-            continue
-        v = data[0]
-        b["ram"] = v
-        if b["type"] == "Bool":
-            b["on"] = v != 0
-        else:
-            b["count"] = v
+        if b["kind"] == "address" and block:
+            off = b["value"] - lo
+            if 0 <= off < len(block):
+                v = block[off]
+                b["ram"] = v
+                if b["type"] == "Bool":
+                    b["on"] = v != 0
+                else:
+                    b["count"] = v
+        elif b["kind"] == "flag" and isinstance(fblock, bytes) and fblock:
+            slot = flag_slot(None, b["value"])
+            if slot:
+                off, bit, _val = slot
+                i = off - flag_lo
+                if 0 <= i < len(fblock):
+                    byte = fblock[i]
+                    b["ram"] = byte
+                    on = bool(byte & bit) if bit != 0xFF else (byte != 0)
+                    b["on"] = on
+                    b["count"] = 1 if on else 0
 
 
 def poll_loop(state, interval=0.5):
