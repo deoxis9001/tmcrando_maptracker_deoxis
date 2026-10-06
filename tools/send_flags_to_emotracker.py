@@ -95,7 +95,7 @@ class NwaWriter:
 
     def write_bytes(self, offset, data):
         """Écrit `data` à l'offset domaine (relatif IWRAM ou absolu GBA)."""
-        self._cmd(f"bCORE_WRITE EXECUTEMEMORY;0x{offset:x};{len(data)}",
+        self._cmd(f"bCORE_WRITE System Bus;0x{offset:x};{len(data)}",
                   binary=data)
 
     def close(self):
@@ -193,7 +193,7 @@ def main():
                 grouped[a] |= fl
             for a, mask in sorted(grouped.items()):
                 off = a - 0x02000000
-                cur = w._cmd(f"CORE_READ EXECUTEMEMORY;0x{off:x};1")
+                cur = w._cmd(f"CORE_READ System Bus;0x{off:x};1")
                 cur = cur[0] if isinstance(cur, bytes) and cur else 0
                 new = (cur | mask) if on else (cur & ~mask) & 0xFF
                 w.write_bytes(off, bytes([new]))
@@ -205,7 +205,7 @@ def main():
             print(f"[SEND] {len(flags)} flags {'ACTIVÉS' if on else 'DÉSACTIVÉS'} "
                   f"écrits en RAM 0x{0x02000000 + lo:07X}..0x{0x02000000 + lo + len(data) - 1:07X}")
             # Vérification relecture (comme le ferait le memory watch EmoTracker)
-            back = w._cmd(f"CORE_READ EXECUTEMEMORY;0x{lo:x};{len(data)}")
+            back = w._cmd(f"CORE_READ System Bus;0x{lo:x};{len(data)}")
             ok = isinstance(back, bytes) and back == data
             print(f"[SEND] vérification relecture : {'OK ✔' if ok else 'ÉCHEC ✘'}")
     finally:

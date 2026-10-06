@@ -23,7 +23,7 @@
 --     enregistré sous le nom "NWA-BIZHAWK" dans AutoTracker.
 
 NWACONNECTOR_PROVIDERNAME = "NWA-BIZHAWK"
-NWA_DOMAIN = "EXECUTEMEMORY"   -- domaine BizHawk exposé en NWA par le plugin
+NWA_DOMAIN = "System Bus"       -- domaine BizHawk expose en NWA (prefere par EmoTracker)
 
 ------------------------------------------------------------------
 -- Helpers : octets <-> nombres (endianness GBA = little endian)
@@ -377,7 +377,7 @@ function nwaConnectorStateChanged(name, state)
         if state == 3 then -- CONNECTED
                 NWAConnector.segment = NWASegment.new(NWAConnector)
                 InvalidateReadCaches()
-                print("[NWA] Segment mémoire prêt (GBA EXECUTEMEMORY accessible)")
+                print("[NWA] Segment mémoire prêt (GBA System Bus accessible)")
         elseif state == 2 then -- DISCONNECTED
                 NWAConnector.segment = nil
                 InvalidateReadCaches()

@@ -400,6 +400,9 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
         if cmd == "EMULATOR_INFO":
             # Format exact du plugin : name=BizHawk, id="Happy Skarsnik",
             # commands séparées par des VIRGULES (Enum NWACommand).
+            # La liste doit contenir TOUTES les commandes qu'EmoTracker peut
+            # envoyer (NWConnector.lua / NwaDevice.cs), sinon il considère le
+            # serveur comme incompatible -> déconnexion.
             return self.send_hash_reply([
                 ("name", "BizHawk"),
                 ("version", "2.9-sim"),
@@ -409,13 +412,27 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
                              "CORE_INFO,GAME_INFO,MY_NAME_IS,CORE_MEMORIES,"
                              "CORE_READ,bCORE_WRITE,LOAD_STATE,SAVE_STATE,"
                              "bLOAD_STATE_FROM_NETWORK,SAVE_STATE_TO_NETWORK,"
-                             "LIST_BIZHAWK_DOMAINS,CORE_CURRENT_INFO"),
+                             "LIST_BIZHAWK_DOMAINS,CORE_CURRENT_INFO,"
+                             "SOFT_RESET,HARD_RESET,PRESS_BUTTON,"
+                             "GET_LUA_OBJECTS,DO_SCRIPT,LUA_CALL_FUNCTION,"
+                             "LUA_GET_GLOBAL,LUA_SET_GLOBAL,LUA_RUN_SNIPPET,"
+                             "POPUP_MESSAGE,SET_POPUP_TITLE,SET_PAUSE_SYNC"),
             ])
         if cmd == "EMULATION_STATUS":
-            return self.send_hash_reply([("state", "running")])
+            # EmoTracker (ProbeAsync + détection de changement de jeu) lit
+            # "game" dans EMULATION_STATUS ; sans cette clé il ne voit aucun
+            # jeu chargé et peut rejeter/fermer la connexion.
+            return self.send_hash_reply([("state", "running"),
+                                         ("game", "The Minish Cap (simulé)")])
         if cmd == "CORE_CURRENT_INFO":
+            # "game" est requis : NwaDevice.HasCoreOrGameChangedAsync compare
+            # le nom du jeu à chaque erreur de lecture. Sans clé "game", la
+            # valeur stockée (null) diffère de la nouvelle réponse (""), le
+            # changement est détecté -> reconnexion en boucle -> déconnections
+            # répétées juste après CORE_MEMORIES.
             return self.send_hash_reply([
-                ("name", "mGBA"), ("platform", "GBA"), ("author", "sim"),
+                ("name", "mGBA"), ( "platform", "GBA"), ("author", "sim"),
+                ("game", "The Minish Cap (simulé)"),
             ])
         if cmd == "CORES_LIST":
             return self.send_hash_reply([("name", "mGBA"), ("platform", "GBA")])
@@ -424,12 +441,17 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
                 ("name", "The Minish Cap (simulé)"),
                 ("region", "FR"), ("hash", "0")])
         if cmd == "CORE_MEMORIES":
-            # Liste de domaines au format BizHawk/mGBA GBA. La taille est en
-            # DECIMAL : c'est le domaine complet 0x02000000-0x0203FFFF, donc
-            # les adresses absolues GBA (0x0200AC0...) tombent dedans.
+            # Le premier domaine DOIT s'appeler "System Bus" : EmoTracker
+            # (NwaDevice.InitializeAddressMapAsync) l'exige et échoue à la
+            # connexion sinon -> déconnexion juste après CORE_MEMORIES.
+            # C'est aussi le nom du domaine System Bus dans BizHawk.
+            # Taille en DECIMAL = domaine complet 0x02000000-0x0203FFFF :
+            # DefaultAddressMap mappe les adresses absolues GBA (0x0200xxxx)
+            # directement dedans, sans translation.
             return self._send_domain_list([
-                ("EXECUTEMEMORY", "rw", RAM_SIZE),
+                ("System Bus", "rw", RAM_SIZE),
                 ("IWRAM", "rw", RAM_SIZE),
+                ("EWRAM", "rw", 0x40000),
                 ("SRAM", "rw", 0x10000),
                 ("ROM", "r", 0x2000000),
                 ("PALETTE", "rw", 0x400),
@@ -446,6 +468,18 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
             return self.core_read(args)
         if cmd == "BCORE_WRITE":
             return self.core_write(args)
+        # Commandes connues du plugin que le simulateur ne sait pas exécuter.
+        # Il faut répondre quelque chose (sinon le client attend, timeout,
+        # puis se déconnecte). ACK vide = succès silencieux.
+        known_noop = ("CORE_INFO", "LOAD_STATE", "SAVE_STATE",
+                      "bLOAD_STATE_FROM_NETWORK", "SAVE_STATE_TO_NETWORK",
+                      "SOFT_RESET", "HARD_RESET", "PRESS_BUTTON",
+                      "GET_LUA_OBJECTS", "DO_SCRIPT", "LUA_CALL_FUNCTION",
+                      "LUA_GET_GLOBAL", "LUA_SET_GLOBAL", "LUA_RUN_SNIPPET",
+                      "POPUP_MESSAGE", "SET_POPUP_TITLE", "SET_PAUSE_SYNC")
+        if cmd in known_noop:
+            print(f"[SIM] {self.name} : {cmd} non simulé -> ACK vide")
+            return self.send_ok()
         self.send_error("invalid_command", f"Unknow command : {cmd}")
 
     def _send_domain_list(self, domains):
@@ -505,10 +539,13 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
 
     def core_read(self, args):
         domain = args[0].strip().upper() if args else ""
-        if domain not in ("EXECUTEMEMORY", "EXECRAM", "IWRAM", "SYSTEM BUS",
-                          "INTERNAL RAM", "MAIN MEMORY", "MEMORY"):
+        # "System Bus" est le domaine qu'EmoTracker utilise (DefaultAddressMap
+        # GBA n'est pas nécessaire : il mappe les adresses absolues 0x02xxxxxx
+        # directement dedans). Les autres noms restent acceptés.
+        if domain not in ("SYSTEM BUS", "EXECUTEMEMORY", "EXECRAM", "IWRAM",
+                          "EWRAM", "INTERNAL RAM", "MAIN MEMORY", "MEMORY"):
             return self.send_error("command_error",
-                                   "The specified domain <" + domain + "> does not exists")
+                                   "The specified domain <" + args[0] + "> does not exists")
         ranges = self._parse_ranges(args)
         if ranges is None:
             return self.send_error("invalid_argument", "Bad number/offset")
@@ -520,7 +557,8 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
 
     def core_write(self, args):
         domain = args[0].strip().upper() if args else ""
-        if domain not in ("EXECUTEMEMORY", "EXECRAM", "IWRAM", "SYSTEM BUS"):
+        if domain not in ("SYSTEM BUS", "EXECUTEMEMORY", "EXECRAM", "IWRAM",
+                          "EWRAM"):
             return self.send_error("command_error", "Unknown domain")
         ranges = self._parse_ranges(args)
         if ranges is None or ranges == "out_of_bounds":
@@ -957,7 +995,9 @@ class NwaClient:
         return payload
 
     def read_bytes(self, offset, size):
-        data = self._cmd(f"CORE_READ EXECUTEMEMORY;0x{offset:x};{size}")
+        # "System Bus" = domaine préféré d'EmoTracker (DefaultAddressMap) ;
+        # le simulateur accepte les deux noms.
+        data = self._cmd(f"CORE_READ System Bus;0x{offset:x};{size}")
         return data if isinstance(data, bytes) else b""
 
     def close(self):
