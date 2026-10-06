@@ -362,6 +362,7 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
     def setup(self):
         self.ram = self.server.ram
         self.buf = b""
+        self.binary_wait = None   # (expected_size, deadline) si bCORE_WRITE en attente
         self.name = f"Client {self.server.client_id}"
         self.last_rx = time.monotonic()
         self.server.client_id += 1
@@ -407,19 +408,31 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
 
     # ------------------------------------------------------- commandes NWA
     def handle(self):
-        # Le greeting du plugin est envoyé dans setup() ; ici on boucle en
-        # répondant aux commandes lues ligne à ligne.
+        # Boucle : select() non bloquant -> process() (machine à états du
+        # plugin). Quand le client est silencieux depuis >25 s, on lui envoie
+        # un EMULATION_STATUS spontané (heartbeat applicatif) : les pare-
+        # feu/NAT coupent les connexions TCP sans trafic (~2 min), et cela
+        # prouve au client que le serveur est vivant.
+        last_tx = time.monotonic()
         while True:
             idle = self.IDLE_TIMEOUT - (time.monotonic() - self.last_rx)
             if idle <= 0:
                 print(f"[SIM] {self.name} inactif > {self.IDLE_TIMEOUT:.0f}s, "
                       "fermeture propre (le client se reconnectera seul)")
                 break
+            wait = 1.0
+            if self.binary_wait is None and time.monotonic() - last_tx > 25.0 \
+                    and time.monotonic() - self.last_rx > 25.0:
+                # heartbeat : identique au format d'une vraie réponse
+                self.send_hash_reply([("state", "running"),
+                                      ("game", "The Minish Cap (simulé)")])
+                last_tx = time.monotonic()
             try:
-                ready, _, _ = select.select([self.request], [], [], min(5.0, idle))
+                ready, _, _ = select.select([self.request], [], [], wait)
             except (OSError, ValueError):
                 break
             if not ready:
+                self.process()   # peut expirer un bloc binaire en attente
                 continue
             try:
                 chunk = self.request.recv(4096)
@@ -428,14 +441,31 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
             if not chunk:
                 break
             self.last_rx = time.monotonic()
+            last_tx = time.monotonic()
             self.buf += chunk
-            # Tant que le buffer commence par une ligne texte, on l'exécute.
-            # Si run_command attend un bloc binaire (bCORE_WRITE), elle le
-            # lit directement sur la socket via _recv_exact ; à son retour,
-            # self.buf peut commencer par 0x00 (bloc restant) -> on sort de
-            # la boucle texte et on laisse les prochains recv alimenter
-            # _recv_exact (qui lit self.buf en priorité).
-            while self.buf[:1] != b"\x00":
+            self.process()
+
+    def process(self):
+        # Machine à états identique au plugin Bizhawk-nwa-tool
+        # (NWAServer.handleReadData) : soit on attend un bloc binaire
+        # (après bCORE_WRITE), soit on lit des lignes de commande.
+        # IMPORTANT : on ne consomme JAMAIS un octet 0x00 comme début de
+        # commande, et on n'attend pas \n pour exécuter un bloc binaire
+        # complet — sinon le flux TCP se décale et EmoTracker ferme la
+        # connexion juste après CORE_MEMORIES ("device non vu").
+        guard = 0
+        while True:
+            guard += 1
+            if guard > 10000:
+                break
+            if self.binary_wait is not None:
+                if not self._consume_binary():
+                    break              # bloc incomplet : attendre plus de données
+            else:
+                if self.buf[:1] == b"\x00":
+                    self.send_error("protocol_error",
+                                    "Invalid data sent when waiting for a command")
+                    break
                 idx = self.buf.find(b"\n")
                 if idx == -1:
                     break
@@ -454,12 +484,15 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
                 return self.send_error("invalid_argument",
                                        "MY_NAME_IS accept one argument <name>")
             self.name = args[0]
-            # Le plugin BizHawk (CommandHandler.myNameIs) ne répond RIEN ici ;
-            # c'est EMULATOR_INFO qui renvoie le hash {"name": ...}. Une
-            # réponse non sollicitée décale tous les reads du client
-            # (NWClientLib attend la réponse à EMULATOR_INFO, pas à
-            # MY_NAME_IS) -> handshake cassé -> déconnexion immédiate.
-            return
+            # Le plugin BizHawk (CommandHandler.myNameIs) RÉPOND un hash
+            # {"name": ...} à MY_NAME_IS. EmoTracker 3.x (NwaDevice.
+            # ConnectAsync) fait `await SendCommandAsync("MY_NAME_IS ...")`
+            # qui LIT cette réponse avant toute commande suivante. Sans
+            # réponse, il attend jusqu'à ReceiveTimeout (5 s), lève une
+            # exception -> CleanupConnection() -> "[SIM] EmoTracker
+            # déconnecté" juste après s'être identifié : c'est exactement
+            # le log observé et le "EmoTracker ne voit pas le device".
+            return self.send_hash_reply([("name", self.name)])
         if cmd == "EMULATOR_INFO":
             # Format exact du plugin : name=BizHawk, id="Happy Skarsnik",
             # commands séparées par des VIRGULES (Enum NWACommand).
@@ -618,32 +651,84 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
         if ranges == "out_of_bounds":
             return self.send_error("invalid_argument",
                                    "Offset is out of bound for the domain")
-        payload = b"".join(bytes(self.ram[o:o + s]) for o, s in ranges)
-        return self.send_data(payload)
+        # Le plugin (actualReadMemory -> sendData) envoie UN bloc binaire
+        # (<0x00><taille u32 BE><données>) PAR plage d'accès mémoire, pas un
+        # bloc fusionné. EmoTracker (SendReadCommandAsync) lit exactement un
+        # bloc par CORE_READ ; avec un bloc fusionné de taille différente,
+        # la lecture se décale -> protocole cassé -> déconnexion.
+        for o, s in ranges:
+            self.send_data(bytes(self.ram[o:o + s]))
 
     def core_write(self, args):
         domain = args[0].strip().upper() if args else ""
         if domain not in ("SYSTEM BUS", "EXECUTEMEMORY", "EXECRAM", "IWRAM",
                           "EWRAM"):
+            # Le plugin (CommandHandler.coreWrite) attend les données binaires
+            # APRÈS la commande ; si on répond et ignore le bloc, le flux est
+            # décalé -> erreur protocol côté client. On consomme quand même
+            # le bloc pour rester synchrone.
+            self.binary_wait = (-1, time.monotonic() + 5.0)
             return self.send_error("command_error", "Unknown domain")
         ranges = self._parse_ranges(args)
         if ranges is None or ranges == "out_of_bounds":
-            return self.send_error("invalid_argument", "Bad offset/size")
+            # Pas de total exploitable : lit un bloc dont la taille est
+            # annoncée par son propre en-tête (expected=-1), puis erreur.
+            self.binary_wait = (-1, time.monotonic() + 5.0)
+            if ranges is None:
+                return self.send_error("invalid_argument", "Bad number/offset")
+            return self.send_error("invalid_argument",
+                                   "Offset is out of bound for the domain")
         total = sum(s for _, s in ranges)
-        header = self._recv_exact(5)
-        if header is None or header[0] != 0:
+        # NE PAS lire sur la socket ici : le bloc peut arriver dans un autre
+        # segment TCP. On mémorise la taille attendue et la boucle handle()
+        # appellera _consume_binary() dès que les octets sont disponibles.
+        self.pending_ranges = ranges
+        self.binary_wait = (total, time.monotonic() + 10.0)
+
+    def _consume_binary(self):
+        """Essaie de consommer le bloc binaire attendu (0x00 + taille u32 BE +
+        données) depuis self.buf. Retourne True si le bloc est complet
+        (traitement fait), False s'il manque des octets."""
+        expected, deadline = self.binary_wait
+        if time.monotonic() > deadline:
+            print(f"[SIM] {self.name} timeout bloc binaire bCORE_WRITE")
+            self.binary_wait = None
+            self.pending_ranges = None
+            return False
+        need = 5 if len(self.buf) < 5 else None
+        if need is not None and len(self.buf) < need:
+            return False
+        if self.buf[:1] != b"\x00":
+            self.binary_wait = None
+            self.pending_ranges = None
             return self.send_error("protocol_error", "Expected binary block")
-        (size,) = struct.unpack(">I", header[1:5])
-        if total > 0 and size != total:
-            return self.send_error("protocol_error",
-                                   f"Expecting a binary block of size {total} received a size of {size}")
-        data = self._recv_exact(size)
-        if data is None:
-            return self.send_error("protocol_error", "Connection closed mid-write")
+        if len(self.buf) < 5:
+            return False
+        (size,) = struct.unpack(">I", self.buf[1:5])
+        if expected > 0 and size != expected:
+            self.binary_wait = None
+            self.pending_ranges = None
+            self.buf = self.buf[5:]  # on ne peut pas resynchroner à l'aveugle
+            return self.send_error(
+                "protocol_error",
+                f"Expecting a binary block of size {expected} received a size of {size}")
+        if len(self.buf) < 5 + size:
+            return False             # données incomplètes : attendre
+        data = self.buf[5:5 + size]
+        self.buf = self.buf[5 + size:]
+        self.binary_wait = None
+        ranges = getattr(self, "pending_ranges", None)
+        self.pending_ranges = None
+        if ranges is None:
+            # écriture d'erreur (domaine/taille invalide) : on a consommé le
+            # bloc pour garder la synchro, rien à écrire.
+            return True
         pos = 0
         for off, s in ranges:
-            self.ram[off:off + s] = data[pos:pos + s]
-            pos += s
+            n = min(s, len(data) - pos)
+            if n > 0:
+                self.ram[off:off + n] = data[pos:pos + n]
+                pos += n
         return self.send_ok()
 
     def _recv_exact(self, n):
@@ -1170,7 +1255,7 @@ class NwaClient:
         # PAS de greeting lu ici : le plugin Bizhawk-nwa-tool (et ce
         # simulateur) n'envoie rien avant la première commande du client.
         # Attendre un greeting bloquait/cassait le handshake.
-        self._cmd(f"MY_NAME_IS {self.name}")  # pas de réponse à cette commande
+        self._cmd(f"MY_NAME_IS {self.name}")  # le plugin répond hash{name:}
         info = self._cmd("EMULATOR_INFO")
         self.state.log(f"Connecté (NWA) à {info.get('name','?')} {info.get('version','?')}")
 
@@ -1226,21 +1311,32 @@ class NwaClient:
                 pass
 
     def _cmd(self, line):
-        """Envoie une commande et lit la réponse. Exception : MY_NAME_IS ne
-        reçoit JAMAIS de réponse du plugin BizHawk (NWAServer attend la
-        réponse de la commande suivante) -> on n'attend rien ici."""
+        """Envoie une commande et lit la réponse (toutes les commandes
+        reçoivent une réponse du plugin Bizhawk-nwa-tool, y compris
+        MY_NAME_IS qui renvoie le hash name:)."""
         self._send(line)
-        if line.upper().startswith("MY_NAME_IS"):
-            return {}
         status, payload = self._read()
         if status != "OK":
             raise RuntimeError(f"NWA: {payload!r}")
         return payload
 
+    def read_ranges(self, ranges):
+        """ranges = [(off, size), ...] -> une seule commande CORE_READ ;
+        le plugin renvoie UN bloc binaire par plage (actualReadMemory)."""
+        args = ";".join(f"${o:X};${s:X}" for o, s in ranges)
+        self._send(f"CORE_READ System Bus;{args}")
+        out = []
+        for _ in ranges:
+            status, payload = self._read()
+            if status != "OK":
+                raise RuntimeError(f"NWA: {payload!r}")
+            out.append(payload if isinstance(payload, bytes) else b"")
+        return out
+
     def read_bytes(self, offset, size):
         # "System Bus" = domaine préféré d'EmoTracker (DefaultAddressMap) ;
         # le simulateur accepte les deux noms.
-        data = self._cmd(f"CORE_READ System Bus;0x{offset:x};{size}")
+        data = self._cmd(f"CORE_READ System Bus;${offset:X};${size:X}")
         return data if isinstance(data, bytes) else b""
 
     def close(self):
