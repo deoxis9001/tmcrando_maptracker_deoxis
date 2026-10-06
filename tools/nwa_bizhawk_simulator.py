@@ -8,6 +8,7 @@
    * écriture possible via bCORE_WRITE (pour fabriquer des états de test)
  Usage :  python3 tools/nwa_bizhawk_simulator.py [port]"""
 
+import csv
 import json
 import os
 import re
@@ -141,6 +142,68 @@ def load_flag_defs():
 
 FLAG_DEFS = load_flag_defs()
 
+
+def parse_mask(text):
+    """'0000 0001' -> 0x01 ; '1000 0000' -> 0x80 ; '0x80' -> 0x80 ; '1' -> 0x01."""
+    t = text.strip()
+    if not t:
+        return None
+    if t.lower().startswith("0x"):
+        return int(t, 16) & 0xFF
+    bits = re.sub(r"[^01]", "", t)
+    if len(bits) == 8 and re.fullmatch(r"[01 ]+", t.replace("0x", "")):
+        return int(bits, 2)
+    if re.fullmatch(r"\d+", t):
+        v = int(t)
+        if v <= 1:
+            return 0x01 if v == 1 else 0
+        if v <= 0xFF:
+            return v
+        return v & 0xFF
+    return None
+
+
+def normalize_addr(text):
+    """'2A80' / '0x2A80' / '0x2002A80' / '2002A80' -> '0x2002A80'."""
+    t = text.strip().lower().replace("0x", "")
+    if not re.fullmatch(r"[0-9a-f]+", t):
+        return None
+    if len(t) > 5 and t.startswith("200"):
+        full = t
+    else:
+        full = "200" + t.zfill(4)       # 2A80 -> 2002A80
+    return "0x" + full.upper()
+
+
+def parse_csv_text(text):
+    """Parse le contenu CSV d'un export du Google Sheet (meme regles que
+    tools/parse_flags_csv.py) SANS fichier : retourne une liste d'entries
+    {addr, flag, name, context}. Colonne A vide -> derniere adresse connue ;
+    '1000 0000' -> flag 0x80 ; 2A81 -> 0x2002A81."""
+    entries = []
+    current_addr = None
+    for row in csv.reader(text.splitlines()):
+        row = [c.strip() for c in row]
+        if not any(row):
+            continue                                  # séparateur
+        a = row[0] if len(row) > 0 else ""
+        b = row[1] if len(row) > 1 else ""
+        desc = row[2] if len(row) > 2 else ""
+        name = row[3] if len(row) > 3 else ""
+        if a:
+            addr = normalize_addr(a)
+            if addr is not None:
+                current_addr = addr
+        if current_addr is None:
+            continue
+        mask = parse_mask(b)
+        if mask is None or mask == 0:
+            continue
+        entries.append({"addr": current_addr, "flag": f"0x{mask:02X}",
+                        "name": name or desc, "context": desc if name else ""})
+    return entries
+
+
 # Table des valeurs 0xXX "entières" écrites dans la zone réservee FLAG_BASE
 # (utilisée par send_flags_to_emotracker.py pour les tests autotracking qui
 # comparent un octet à une valeur, ex : progression 0x6A, murs 0xF3...).
@@ -245,15 +308,18 @@ def _flag_to_offs(entry):
     return None
 
 
-def set_sheet_flags(ram, flags, on=True):
-    """flags = indices dans FLAG_DEFS ou tuples (addr, masque, desc).
+def set_sheet_flags(ram, flags, on=True, defs=None):
+    """flags = indices dans `defs` (FLAG_DEFS par defaut) ou tuples
+    (addr, masque, desc).
 
     Ecrit le bit `masque` a l'adresse reelle dans la RAM partagee.
     Retourne la liste des entrees appliquees.
     """
+    if defs is None:
+        defs = FLAG_DEFS
     applied = []
     for f in flags:
-        entry = FLAG_DEFS[f] if isinstance(f, int) and 0 <= f < len(FLAG_DEFS) else f
+        entry = defs[f] if isinstance(f, int) and 0 <= f < len(defs) else f
         pair = _flag_to_offs(entry)
         if pair is None:
             continue
@@ -300,16 +366,13 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
         self.last_rx = time.monotonic()
         self.server.client_id += 1
         enable_tcp_keepalive(self.request)
-        # Greeting non sollicité, identique au plugin Bizhawk-nwa-tool :
-        # NWAServer.cs envoie "<nom_emulateur>\nnwa_version:1.0\n\n" dès la
-        # connexion. EmoTracker/LuaConnector (et le client web de ce
-        # simulateur) lisent ce greeting AVANT d'envoyer MY_NAME_IS ; sans
-        # lui, leur premier read avale la réponse à MY_NAME_IS, le handshake
-        # se décale et le client se déconnecte immédiatement.
-        try:
-            self.request.sendall(b"BizHawk-NWA-Simulator\nnwa_version:1.0\n\n")
-        except OSError:
-            pass
+        # PAS de greeting non sollicité ici. Le plugin Bizhawk-nwa-tool
+        # (NWAServer.cs) n'envoie RIEN avant la première commande du client :
+        # NWClientLib.executeCommand attend la réponse à SA commande et lit
+        # "name:" dans les premières données reçues. Si le serveur parle en
+        # premier ("BizHawk-NWA-Simulator..."), ces octets sont avalés comme
+        # étant la réponse -> hash vide / décalage du flux -> EmoTracker ne
+        # "voit pas le device" et se déconnecte juste après CORE_MEMORIES.
         print(f"[SIM] {self.name} connecté depuis {self.client_address[:2]}")
 
     # ------------------------------------------------- envois (protocole NWA)
@@ -445,12 +508,15 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
             # (NwaDevice.InitializeAddressMapAsync) l'exige et échoue à la
             # connexion sinon -> déconnexion juste après CORE_MEMORIES.
             # C'est aussi le nom du domaine System Bus dans BizHawk.
-            # Taille en DECIMAL = domaine complet 0x02000000-0x0203FFFF :
-            # DefaultAddressMap mappe les adresses absolues GBA (0x0200xxxx)
-            # directement dedans, sans translation.
+            # Taille DECIMALE = taille REELLE de chaque domaine : BizHawk
+            # (MemoryDomain.Size) renvoie les tailles brutes, jamais 0. Un
+            # size:0 rend le domainCheck() d'EmoTracker invalide -> "device
+            # non vu" / reconnexion en boucle. Les adresses absolues GBA
+            # (0x0200xxxx) sont acceptées par _to_offset sur tous les
+            # domaines mémoire.
             return self._send_domain_list([
                 ("System Bus", "rw", RAM_SIZE),
-                ("IWRAM", "rw", RAM_SIZE),
+                ("IWRAM", "rw", 0x8000),
                 ("EWRAM", "rw", 0x40000),
                 ("SRAM", "rw", 0x10000),
                 ("ROM", "r", 0x2000000),
@@ -663,6 +729,40 @@ class WebState:
         self.logs = []
         self.connected = False
         self.port = 0xBEEF
+        # Source affichée dans le panneau "Flags Google Sheet" du web :
+        # liste (addr, mask, desc). Initialisée depuis FLAG_DEFS (flags.json),
+        # remplacée à chaud par /api/load_flags (upload CSV/JSON du sheet).
+        self.sheet = list(FLAG_DEFS)
+        self.sheet_source = "flags.json" if FLAG_DEFS else ""
+
+    def read_sheet(self, ram=None):
+        """Etat courant de chaque flag de la source active (self.sheet), lu
+        dans la RAM partagée -> sert directement au panneau web."""
+        if ram is None:
+            ram = self.sim.ram if self.sim else None
+        out = []
+        for addr, mask, desc in self.sheet:
+            on = False
+            if ram is not None:
+                pair = _flag_to_offs((addr, mask))
+                if pair is not None:
+                    off, m = pair
+                    on = bool(ram[off] & m)
+            out.append({"addr": addr, "hex": f"0x{addr:07X}",
+                        "flag": f"0x{mask:02X}", "context": desc, "on": on})
+        return out
+
+    def apply_sheet(self, entries, on=True):
+        """Écrit des flags (tuples (addr, mask, desc) ou indices) dans la RAM
+        partagée. Retourne la liste des entrées réellement modifiées."""
+        changed = set_sheet_flags(self.sim.ram, entries, on=on)
+        # synchronise l'état des boutons adresse correspondants
+        for entry in changed:
+            addr, mask, _d = entry
+            b = self.buttons.get(f"addr-{addr:x}")
+            if b:
+                b["on"] = on or bool(b["on"])
+        return changed
 
     def add_button(self, b):
         if b["id"] not in self.buttons:
@@ -677,6 +777,9 @@ class WebState:
 
     def full_state(self):
         ram = self.sim.ram if self.sim else None
+        # counts : basés sur la SOURCE REELLE du panneau Flags (state.sheet),
+        # pas seulement sur les FLAG_DEFS chargées au démarrage.
+        n_sheet = len(self.sheet) if self.sheet else len(FLAG_DEFS)
         out = {
             "connected": self.connected,
             "port": self.port,
@@ -684,13 +787,14 @@ class WebState:
             "counts": {
                 "addresses": sum(1 for b in self.buttons.values() if b["kind"] == "address"),
                 "flags": sum(1 for b in self.buttons.values() if b["kind"] == "flag"),
-                "sheet_flags": len(FLAG_DEFS),
+                "sheet_flags": n_sheet,
             },
-            # flags du Google Sheet (CSV -> parse_flags_csv.py -> flags.json)
-            # avec leur etat REEL lu dans la RAM partagee : le web peut donc
-            # afficher/cocher les vrais flags (addr + bit), pas seulement les
-            # boutons autotracking.
-            "sheet_flags": read_sheet_flags(ram) if ram is not None else [],
+            # flags du Google Sheet : la SOURCE REELLE de l'affichage web est
+            # state.sheet (chargee par /api/load_flags depuis le CSV/JSON du
+            # sheet, ou FLAG_DEFS au demarrage). Plus aucun passage par Lua :
+            # le web lit/ecrit directement dans la RAM partagee du simulateur.
+            "sheet_flags": self.read_sheet(),
+            "sheet_source": self.sheet_source or ("flags.json" if FLAG_DEFS else "aucun"),
             "flag_defs": [{"hex": f"0x{f:02X}", "desc": d,
                            "bit": f"0x{b:02X}"} for f, d, b, _v in VALUE_DEFS],
             "flag_ram_base": f"0x{FLAG_BASE:07X}",
@@ -791,12 +895,13 @@ class WebHandler(BaseHTTPRequestHandler):
             # req = {"flags": [...], "on": true|false, "addr": "0x2002A81",
             #        "mask": "0x80"}
             # Deux modes :
-            #  A) flags = ["0xADDR:0xMASK" | {addr, flag} | index FLAG_DEFS]
+            #  A) flags = ["0xADDR:0xMASK" | {addr, flag} | index dans la
+            #     source active du panneau (state.sheet)]
             #     -> chaque entree est ecrite a SON adresse reelle ;
             #  B) addr + mask (ou flags=["0x80"]) -> un seul octet `addr` avec
             #     le(s) bit(s) `mask` pose(s)/casse(s) — comportement "tout c'est
             #     2A81 = 0x80" du CSV Google Sheet.
-            # Sans "flags" et sans "addr" : TOUS les flags du sheet.
+            # Sans "flags" et sans "addr" : TOUS les flags de la source active.
             raw = req.get("flags")
             on = bool(req.get("on", True))
             entries = []
@@ -815,7 +920,7 @@ class WebHandler(BaseHTTPRequestHandler):
                     except (ValueError, TypeError):
                         continue
             elif raw is None:
-                entries = list(range(len(FLAG_DEFS)))
+                entries = list(range(len(st.sheet)))   # toute la source active
             else:
                 for f in raw:
                     if isinstance(f, dict):
@@ -829,22 +934,74 @@ class WebHandler(BaseHTTPRequestHandler):
                             v = int(f, 0) if isinstance(f, str) else int(f)
                         except (ValueError, TypeError):
                             continue
-                        if 0 <= v < len(FLAG_DEFS):
-                            entries.append(v)
+                        if 0 <= v < len(st.sheet):
+                            entries.append(v)          # index dans state.sheet
                         else:      # on dirait une adresse absolue -> bit 0x01
                             entries.append((v, 0x01, ""))
-            changed = set_sheet_flags(st.sim.ram, entries, on=on)
-            for entry in changed:
-                addr, mask, _d = entry
-                b = st.buttons.get(f"addr-{addr:x}")
-                if b:
-                    b["on"] = on or bool(b["on"])
+            changed = st.apply_sheet(entries, on=on)
             st.log(f"Envoi de {len(changed)} flags du sheet "
                    f"{'ACTIVÉS' if on else 'DÉSACTIVÉS'} à leur adresse réelle "
                    f"-> RAM (EmoTracker les lira au prochain watch)")
             return self._json({"ok": True,
                                "sent": [{"addr": f"0x{a:07X}", "flag": f"0x{m:02X}"}
                                         for a, m, _d in changed]})
+
+        if path == "/api/load_flags":
+            # Charge la liste des flags AFFICHEE dans le panneau web depuis :
+            #  - {"csv": "<export CSV brut du Google Sheet>"}  (colonnes :
+            #    addr vide = adresse precedente ; bits "0000 0001" -> 0x01,
+            #    "1000 0000" -> 0x80 ; 2A81 -> 0x2002A81)
+            #  - {"json": [<entries parse_flags_csv.py>] | {"flags": [...]}}
+            #  - {"path": "tools/flags.csv"} (fichier local CSV ou JSON)
+            # Aucune dépendance à autotracking.lua : le web affiche UNIQUEMENT
+            # ce qui vient du sheet.
+            src_name = None
+            new_defs = []
+            try:
+                if req.get("csv"):
+                    # parse_csv_text : meme logique que parse_flags_csv.py
+                    # (addr vide = adresse precedente, bits "0000 0001" ->
+                    # 0x01 ... "1000 0000" -> 0x80, 2A81 -> 0x2002A81)
+                    entries = parse_csv_text(req["csv"])
+                    src_name = "CSV (upload)"
+                elif req.get("json") is not None:
+                    data = req["json"]
+                    entries = data.get("flags", data) if isinstance(data, dict) else data
+                    src_name = "JSON (upload)"
+                elif req.get("path"):
+                    fp = os.path.abspath(req["path"])
+                    if not os.path.isfile(fp):
+                        return self._json({"error": f"fichier introuvable : {fp}"}, 400)
+                    if fp.endswith(".json"):
+                        with open(fp, encoding="utf-8") as fh:
+                            data = json.load(fh)
+                        entries = data.get("flags", data) if isinstance(data, dict) else data
+                    else:
+                        with open(fp, newline="", encoding="utf-8-sig") as fh:
+                            entries = parse_csv_text(fh.read())
+                    src_name = os.path.basename(fp)
+                else:
+                    return self._json({"error": "csv, json ou path requis"}, 400)
+            except Exception as exc:                      # noqa: BLE001
+                return self._json({"error": f"chargement impossible : {exc}"}, 400)
+            for e in entries:
+                try:
+                    addr = int(str(e.get("addr")), 0)
+                    mask = int(str(e.get("flag", e.get("mask", 1))), 0) & 0xFF
+                except (ValueError, TypeError, AttributeError):
+                    continue
+                desc = f'{e.get("context", "")} {e.get("name", "")}'.strip() or \
+                       f"flag {mask:02X}@{addr - RAM_BASE:04X}"
+                new_defs.append((addr, mask, desc))
+            if not new_defs:
+                return self._json({"error": "aucun flag valide trouvé dans la source"}, 400)
+            st.sheet = new_defs
+            st.sheet_source = src_name
+            st.log(f"Panneau Flags : {len(new_defs)} flags chargés depuis {src_name} "
+                   "(source web = Google Sheet, plus autotracking.lua)")
+            return self._json({"ok": True, "count": len(new_defs),
+                               "source": src_name,
+                               "sheet_flags": st.read_sheet()})
 
         if path == "/api/sheet_flags":
             # requete equivalente pour send_flags_to_emotracker.py --sheet :
@@ -859,7 +1016,7 @@ class WebHandler(BaseHTTPRequestHandler):
                 except (ValueError, TypeError, AttributeError):
                     continue
             on = bool(req.get("on", True))
-            changed = set_sheet_flags(st.sim.ram, entries, on=on)
+            changed = st.apply_sheet(entries, on=on)
             st.log(f"Sheet : {len(changed)}/{len(entries)} flags "
                    f"{'ACTIVÉS' if on else 'DÉSACTIVÉS'} dans la RAM")
             return self._json({"ok": True, "applied": len(changed)})
@@ -923,10 +1080,9 @@ class NwaClient:
         self.name = "AT-WEB-TESTER"
         self.buf = b""
         self.last_rx = time.monotonic()
-        # salutation non sollicitée du serveur NWA (comme le plugin BizHawk)
-        greet_status, greet = self._read()
-        if greet_status != "OK":
-            raise ConnectionError(f"greeting NWA invalide : {greet!r}")
+        # PAS de greeting lu ici : le plugin Bizhawk-nwa-tool (et ce
+        # simulateur) n'envoie rien avant la première commande du client.
+        # Attendre un greeting bloquait/cassait le handshake.
         self._cmd(f"MY_NAME_IS {self.name}")  # pas de réponse à cette commande
         info = self._cmd("EMULATOR_INFO")
         self.state.log(f"Connecté (NWA) à {info.get('name','?')} {info.get('version','?')}")
