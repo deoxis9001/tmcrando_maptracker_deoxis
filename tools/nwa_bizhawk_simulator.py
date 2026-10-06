@@ -92,17 +92,59 @@ def load_fake_ram():
 
 def seed_test_pattern(ram):
     """Écrit des motifs de test dans la zone autotracking (0x2AC0..0x2EB3)
-    et active la moitié des drapeaux 0xXX dans la zone drapeaux."""
+    et active la moitié des flags du Google Sheet à leur adresse réelle."""
     for a in range(0x2AC0, 0x2EB4):
         ram[a] = (a - 0x2AC0) & 0xFF
     ram[0x2B32] = 0x01          # isInGame() == true
     for a in (0x2C40, 0x2C41):
         ram[a] = 0xF3           # updateWall -> Active
-    half = [f for f, *_ in FLAG_DEFS][: len(FLAG_DEFS) // 2]
-    set_flags_in_ram(ram, half, on=True)
+    half = list(range(len(FLAG_DEFS) // 2))
+    set_sheet_flags(ram, half, on=True)
 
 
-FLAG_DEFS = [
+# FLAG_DEFS : chargées au démarrage depuis tools/flags.json (sortie de
+# parse_flags_csv.py sur le CSV du Google Sheet). Chaque entrée :
+#   {"addr": 33565376, "hex": "0x2002AC0", "flag": "0x01", "context": "gravekey"}
+# -> tuple (addr_absolue, masque_bit, description).
+# Fallback : si flags.json est absent, on utilise les bits 0x01..0x80 par
+# adresse pour que le simulateur reste fonctionnel.
+
+def load_flag_defs():
+    here = os.path.dirname(os.path.abspath(__file__))
+    # ordre de recherche : --flags /nwa_flags.json (genere par
+    # send_flags_to_emotracker.py) puis flags.json (sortie parse_flags_csv.py)
+    for path in (os.path.join(here, "nwa_flags.json"),
+                 os.path.join(here, "flags.json")):
+        try:
+            with open(path, encoding="utf-8") as fh:
+                data = json.load(fh)
+        except (OSError, ValueError):
+            continue
+        entries = data.get("flags", data) if isinstance(data, dict) else data
+        defs = []
+        for e in entries:
+            addr = int(e.get("addr"), 0)
+            mask = int(e.get("flag", e.get("mask", 1)), 0) & 0xFF
+            desc = f'{e.get("context", "")} {e.get("name", "")}'.strip() or \
+                   f"flag {mask:02X}@{addr - RAM_BASE:04X}"
+            defs.append((addr, mask, desc))
+        print(f"[SIM] FLAG_DEFS : {len(defs)} flags chargés depuis {path}")
+        return defs
+    print("[SIM] FLAG_DEFS : aucun flags.json trouvé, "
+          "fallback bits 0x01..0x80 par adresse (zones 2A80..2ADF)")
+    defs = []
+    for off in range(0x2A80, 0x2AE0):          # zones flags TMC connues
+        for bit in (0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80):
+            defs.append((RAM_BASE + off, bit, f"bit {bit:02X}@0x{off:04X}"))
+    return defs
+
+
+FLAG_DEFS = load_flag_defs()
+
+# Table des valeurs 0xXX "entières" écrites dans la zone réservee FLAG_BASE
+# (utilisée par send_flags_to_emotracker.py pour les tests autotracking qui
+# comparent un octet à une valeur, ex : progression 0x6A, murs 0xF3...).
+VALUE_DEFS = [
     # (flag hex, description, bit, valeur a ecrire dans l'octet de drapeau)
     (0x01, "Drapeau progres 01", 0x01, 0x01),
     (0x02, "Drapeau progres 02", 0x02, 0x02),
@@ -137,13 +179,13 @@ FLAG_DEFS = [
     (0xF2, "Valeur F2", 0xFF, 0xF2),
     (0xF3, "Valeur F3", 0xFF, 0xF3),
 ]
-FLAG_BASE = 0x2002F00   # zone reservee de la RAM simulee pour les drapeaux
-                        # (juste apres la zone autotracking 0x2AC0..0x2EB3)
+FLAG_BASE = 0x2002F00   # zone reservee de la RAM simulee pour les VALEURS
+                        # testees par send_flags_to_emotracker.py (0xXX "entiers")
 
 
-def flag_slot(ram, flag):
-    """Retourne (offset, bit, valeur) du slot RAM d'un drapeau 0xXX."""
-    for f, _desc, bit, val in FLAG_DEFS:
+def value_slot(flag):
+    """Retourne (offset, bit, valeur) du slot RAM d'une valeur testee 0xXX."""
+    for f, _desc, bit, val in VALUE_DEFS:
         if f == flag:
             return ram_flag_offset(f), bit, val
     return None
@@ -154,10 +196,10 @@ def ram_flag_offset(flag):
 
 
 def set_flags_in_ram(ram, flags, on=True):
-    """Applique une liste de drapeaux 0xXX dans la RAM partagee."""
+    """Applique une liste de valeurs 0xXX dans la zone FLAG_BASE."""
     changed = []
     for f in flags:
-        slot = flag_slot(ram, f)
+        slot = value_slot(f)
         if slot is None:
             continue
         off, bit, val = slot
@@ -174,12 +216,73 @@ def set_flags_in_ram(ram, flags, on=True):
 
 
 def read_flags_from_ram(ram):
-    """Relit l'etat de tous les drapeaux depuis la RAM partagee."""
+    """Relit l'etat des valeurs testees depuis la zone FLAG_BASE."""
     out = {}
-    for f, _desc, bit, _val in FLAG_DEFS:
+    for f, _desc, bit, _val in VALUE_DEFS:
         off = ram_flag_offset(f)
         if off < len(ram):
             out[f] = bool(ram[off] & bit) if bit != 0xFF else (ram[off] != 0)
+    return out
+
+
+# ---------------------------------------------------------------------------
+# VRAIS FLAGS du CSV Google Sheet : chaque entree FLAG_DEFS est un BIT a
+# poser/casser a son ADRESSE REELLE en RAM (ex : addr 0x2002AC0, flag 0x01).
+# C'est exactement ce que lit EmoTracker via ses memory watches NWA ->
+# autotracking direct, sans zone intermediaire.
+# ---------------------------------------------------------------------------
+
+def _flag_to_offs(entry):
+    """(addr_absolue, masque, desc) -> (offset_relatif, masque) ou None."""
+    try:
+        addr = int(entry[0], 0)
+        mask = int(entry[1], 0) & 0xFF
+    except (TypeError, ValueError):
+        return None
+    off = addr - RAM_BASE
+    if 0 <= off < RAM_SIZE and mask:
+        return (off, mask)
+    return None
+
+
+def set_sheet_flags(ram, flags, on=True):
+    """flags = indices dans FLAG_DEFS ou tuples (addr, masque, desc).
+
+    Ecrit le bit `masque` a l'adresse reelle dans la RAM partagee.
+    Retourne la liste des entrees appliquees.
+    """
+    applied = []
+    for f in flags:
+        entry = FLAG_DEFS[f] if isinstance(f, int) and 0 <= f < len(FLAG_DEFS) else f
+        pair = _flag_to_offs(entry)
+        if pair is None:
+            continue
+        off, mask = pair
+        if on:
+            ram[off] |= mask
+        else:
+            ram[off] &= ~mask & 0xFF
+        applied.append(entry)
+    return applied
+
+
+def clear_all_flags(ram):
+    """Remet toute la RAM a zero (desactive tous les flags/adresses)."""
+    for i in range(len(ram)):
+        ram[i] = 0
+
+
+def read_sheet_flags(ram):
+    """Etat courant de chaque flag du sheet : True si le bit est pose."""
+    out = []
+    for addr, mask, desc in FLAG_DEFS:
+        state = False
+        pair = _flag_to_offs((addr, mask))
+        if pair is not None:
+            off, m = pair
+            state = bool(ram[off] & m)
+        out.append({"addr": addr, "hex": f"0x{addr:07X}", "flag": f"0x{mask:02X}",
+                    "context": desc, "on": state})
     return out
 
 
@@ -263,8 +366,17 @@ class NWASimulatorHandler(socketserver.BaseRequestHandler):
                 break
             self.last_rx = time.monotonic()
             self.buf += chunk
-            while b"\n" in self.buf:
-                line, self.buf = self.buf.split(b"\n", 1)
+            # Tant que le buffer commence par une ligne texte, on l'exécute.
+            # Si run_command attend un bloc binaire (bCORE_WRITE), elle le
+            # lit directement sur la socket via _recv_exact ; à son retour,
+            # self.buf peut commencer par 0x00 (bloc restant) -> on sort de
+            # la boucle texte et on laisse les prochains recv alimenter
+            # _recv_exact (qui lit self.buf en priorité).
+            while self.buf[:1] != b"\x00":
+                idx = self.buf.find(b"\n")
+                if idx == -1:
+                    break
+                line, self.buf = self.buf[:idx], self.buf[idx + 1:]
                 if line.strip():
                     self.run_command(line.decode(errors="replace").strip())
 
@@ -534,9 +646,15 @@ class WebState:
             "counts": {
                 "addresses": sum(1 for b in self.buttons.values() if b["kind"] == "address"),
                 "flags": sum(1 for b in self.buttons.values() if b["kind"] == "flag"),
+                "sheet_flags": len(FLAG_DEFS),
             },
+            # flags du Google Sheet (CSV -> parse_flags_csv.py -> flags.json)
+            # avec leur etat REEL lu dans la RAM partagee : le web peut donc
+            # afficher/cocher les vrais flags (addr + bit), pas seulement les
+            # boutons autotracking.
+            "sheet_flags": read_sheet_flags(ram) if ram is not None else [],
             "flag_defs": [{"hex": f"0x{f:02X}", "desc": d,
-                           "bit": f"0x{b:02X}"} for f, d, b, _v in FLAG_DEFS],
+                           "bit": f"0x{b:02X}"} for f, d, b, _v in VALUE_DEFS],
             "flag_ram_base": f"0x{FLAG_BASE:07X}",
             "buttons": [],
             "log": self.logs[-60:],
@@ -631,31 +749,90 @@ class WebHandler(BaseHTTPRequestHandler):
             return self._json({"ok": True, "button": b})
 
         if path == "/api/flags":
-            # envoi massif de drapeaux vers EmoTracker via la RAM simulee.
-            # req = {"flags": [1, 5, 0x6A, "0xF3", ...], "on": true|false}
-            flags = req.get("flags") or [f for f, *_ in FLAG_DEFS]
-            parsed = []
-            for f in flags:
+            # envoi massif de FLAGS DU SHEET vers EmoTracker via la RAM simulee.
+            # req = {"flags": [...], "on": true|false, "addr": "0x2002A81",
+            #        "mask": "0x80"}
+            # Deux modes :
+            #  A) flags = ["0xADDR:0xMASK" | {addr, flag} | index FLAG_DEFS]
+            #     -> chaque entree est ecrite a SON adresse reelle ;
+            #  B) addr + mask (ou flags=["0x80"]) -> un seul octet `addr` avec
+            #     le(s) bit(s) `mask` pose(s)/casse(s) — comportement "tout c'est
+            #     2A81 = 0x80" du CSV Google Sheet.
+            # Sans "flags" et sans "addr" : TOUS les flags du sheet.
+            raw = req.get("flags")
+            on = bool(req.get("on", True))
+            entries = []
+            if raw is None and req.get("addr") is not None:
+                # mode B : une adresse + un/des masque(s) -> "2A81 = 0x80"
+                masks = req.get("mask", req.get("flag", "0xFF"))
+                if not isinstance(masks, list):
+                    masks = [masks]
                 try:
-                    parsed.append(int(f, 16) if isinstance(f, str) else int(f))
+                    base_addr = int(str(req["addr"]), 0)
                 except (ValueError, TypeError):
+                    return self._json({"error": f"addr invalide : {req['addr']}"}, 400)
+                for m in masks:
+                    try:
+                        entries.append((base_addr, int(str(m), 0) & 0xFF, ""))
+                    except (ValueError, TypeError):
+                        continue
+            elif raw is None:
+                entries = list(range(len(FLAG_DEFS)))
+            else:
+                for f in raw:
+                    if isinstance(f, dict):
+                        entries.append((int(str(f.get("addr")), 0),
+                                        int(str(f.get("flag", "1")), 0), ""))
+                    elif isinstance(f, str) and ":" in f:
+                        a, m = f.split(":", 1)
+                        entries.append((int(a, 0), int(m, 0), ""))
+                    else:
+                        try:
+                            v = int(f, 0) if isinstance(f, str) else int(f)
+                        except (ValueError, TypeError):
+                            continue
+                        if 0 <= v < len(FLAG_DEFS):
+                            entries.append(v)
+                        else:      # on dirait une adresse absolue -> bit 0x01
+                            entries.append((v, 0x01, ""))
+            changed = set_sheet_flags(st.sim.ram, entries, on=on)
+            for entry in changed:
+                addr, mask, _d = entry
+                b = st.buttons.get(f"addr-{addr:x}")
+                if b:
+                    b["on"] = on or bool(b["on"])
+            st.log(f"Envoi de {len(changed)} flags du sheet "
+                   f"{'ACTIVÉS' if on else 'DÉSACTIVÉS'} à leur adresse réelle "
+                   f"-> RAM (EmoTracker les lira au prochain watch)")
+            return self._json({"ok": True,
+                               "sent": [{"addr": f"0x{a:07X}", "flag": f"0x{m:02X}"}
+                                        for a, m, _d in changed]})
+
+        if path == "/api/sheet_flags":
+            # requete equivalente pour send_flags_to_emotracker.py --sheet :
+            # req = {"sheet": [{addr, flag, context}, ...], "on": true|false}
+            sheet = req.get("sheet") or []
+            entries = []
+            for e in sheet:
+                try:
+                    entries.append((int(str(e.get("addr")), 0),
+                                    int(str(e.get("flag", "1")), 0),
+                                    str(e.get("context", ""))))
+                except (ValueError, TypeError, AttributeError):
                     continue
             on = bool(req.get("on", True))
-            changed = set_flags_in_ram(st.sim.ram, parsed, on=on)
-            for f in changed:
-                b = st.buttons.get(f"flag-{f:02x}")
-                if b:
-                    b["on"] = on
-                    b["count"] = 1 if on else 0
-            st.log(f"Envoi de {len(changed)} drapeaux {'ACTIVÉS' if on else 'DÉSACTIVÉS'} "
-                   f"-> RAM (EmoTracker les lira au prochain watch)")
-            return self._json({"ok": True, "sent": [f"0x{f:02X}" for f in changed]})
+            changed = set_sheet_flags(st.sim.ram, entries, on=on)
+            st.log(f"Sheet : {len(changed)}/{len(entries)} flags "
+                   f"{'ACTIVÉS' if on else 'DÉSACTIVÉS'} dans la RAM")
+            return self._json({"ok": True, "applied": len(changed)})
 
         if path == "/api/reset":
             for b in st.buttons.values():
                 b["on"] = False
                 b["count"] = 0
-            st.log("Réinitialisation de tous les boutons")
+            clear_all_flags(st.sim.ram)
+            seed_test_pattern(st.sim.ram)
+            st.log("Réinitialisation : boutons OFF, RAM remise aux motifs de test")
             return self._json({"ok": True})
 
         if path == "/api/seed":
@@ -817,7 +994,7 @@ def apply_watch_to_buttons(client, state):
                 else:
                     b["count"] = v
         elif b["kind"] == "flag" and isinstance(fblock, bytes) and fblock:
-            slot = flag_slot(None, b["value"])
+            slot = value_slot(b["value"])
             if slot:
                 off, bit, _val = slot
                 i = off - flag_lo

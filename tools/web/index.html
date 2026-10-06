@@ -48,6 +48,16 @@ aside{display:flex;flex-direction:column;gap:14px}
 .legend{font-size:10px;color:var(--dim);margin-top:6px}
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}
 .small{font-size:11px;color:var(--dim)}
+/* ---- panneau FLAGS (Google Sheet : addr + bit, écrits à l'adresse réelle) ---- */
+#sheetFlags{max-height:300px;overflow-y:auto;background:#0b1019;border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-family:ui-monospace,Consolas,monospace;font-size:11.5px}
+.srow{display:flex;align-items:center;gap:6px;padding:2px 0;border-bottom:1px dotted #1d2639}
+.srow input[type=checkbox]{accent-color:var(--ok);cursor:pointer}
+.srow .shex{min-width:78px;color:var(--txt);font-weight:600}
+.srow .sflag{min-width:44px;color:var(--warn)}
+.srow .sname{color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.srow.on .shex{color:var(--ok)}
+.sheetbar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.sheetbar input[type=text]{flex:1;min-width:110px;background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:6px;padding:5px 8px;font-size:12px}
 </style>
 </head>
 <body>
@@ -88,6 +98,18 @@ aside{display:flex;flex-direction:column;gap:14px}
   </section>
 
   <aside>
+    <div class="panelbox">
+      <h2>Flags Google Sheet (<span id="sheetCount">0</span>)</h2>
+      <div class="sheetbar">
+        <input type="text" id="sheetSearch" placeholder="Filtrer : addr / flag / nom (ex. 2A81, 0x80, Lake)">
+        <button id="btnSheetAll" title="Coche TOUS les flags du sheet à leur adresse réelle dans la RAM simulée">Tout ON</button>
+        <button id="btnSheetOff" title="Remet tous les bits du sheet à 0 dans la RAM simulée">Tout OFF</button>
+      </div>
+      <div id="sheetFlags"></div>
+      <p class="small">Chaque ligne = bit <code>flag</code> à poser à l'adresse <code>addr</code>.
+      Le clic écrit directement dans la RAM du simulateur NWA → EmoTracker (connecté en NWA)
+      déclenche son autotracking au prochain memory watch.</p>
+    </div>
     <div class="panelbox">
       <h2>Zone RAM 0x2002AC0–0x2002EB2</h2>
       <div id="map"></div>

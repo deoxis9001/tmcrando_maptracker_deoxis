@@ -32,7 +32,8 @@ import sys
 
 sys.path.insert(0, __file__.rsplit("/", 1)[0])
 from nwa_bizhawk_simulator import (  # noqa: E402
-    FLAG_DEFS, FLAG_BASE, ram_flag_offset, flag_slot, set_flags_in_ram,
+    FLAG_DEFS, VALUE_DEFS, FLAG_BASE, ram_flag_offset, value_slot,
+    set_flags_in_ram,
 )
 
 NWA_HOST = "127.0.0.1"
@@ -134,9 +135,9 @@ def main():
     args = ap.parse_args()
 
     if args.list:
-        for f, desc, bit, val in FLAG_DEFS:
-            print(f"0x{f:02X}  {desc:<28} slot RAM 0x{0x02000000 + ram_flag_offset(f):07X}"
-                  f"  bit/mask 0x{bit:02X}  valeur 0x{val:02X}")
+        print(f"{len(FLAG_DEFS)} flags du Google Sheet (flags.json) :")
+        for i, (addr, mask, desc) in enumerate(FLAG_DEFS):
+            print(f"  [{i:>4}] 0x{addr:07X}  mask 0x{mask:02X}  {desc}")
         return
 
     # Flags demandés : soit depuis le sheet, soit la ligne de commande
@@ -151,7 +152,7 @@ def main():
         print(f"[SEND] {len(addr_flags)} entrées adresse+flag depuis {args.sheet}")
     else:
         addr_flags = []
-        known = {f for f, *_ in FLAG_DEFS}
+        known = {f for f, *_ in VALUE_DEFS}
         if args.all or not args.flags:
             flags = sorted(known)
         else:
@@ -159,7 +160,7 @@ def main():
             for t in args.flags:
                 v = int(t, 16) if not t.lower().startswith("0x") else int(t, 0)
                 if v not in known:
-                    print(f"[SEND] AVERTISSEMENT : 0x{v:02X} absent de FLAG_DEFS "
+                    print(f"[SEND] AVERTISSEMENT : 0x{v:02X} absent de VALUE_DEFS "
                           f"(utilisez --list), ignoré")
                     continue
                 flags.append(v)
@@ -167,9 +168,14 @@ def main():
     on = not args.off
     if args.via_web:
         import urllib.request
-        body = json.dumps({"flags": flags if not args.sheet else [],
-                           "on": on}).encode()
         url = f"http://127.0.0.1:{args.web_port}/api/flags"
+        if addr_flags:
+            payload = {"sheet": [{"addr": a, "flag": fl} for a, fl, _n in addr_flags],
+                       "on": on}
+            url = f"http://127.0.0.1:{args.web_port}/api/sheet_flags"
+        else:
+            payload = {"flags": flags, "on": on}
+        body = json.dumps(payload).encode()
         req = urllib.request.Request(url, data=body,
                                      headers={"Content-Type": "application/json"})
         res = json.load(urllib.request.urlopen(req, timeout=3))

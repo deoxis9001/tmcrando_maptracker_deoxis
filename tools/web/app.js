@@ -147,6 +147,7 @@ function renderAll() {
   badge.classList.toggle("on", state.connected);
   $("#simBadge").textContent = "Clients NWA : " + (state.clients.length ? state.clients.join(", ") : "aucun");
   renderMap();
+  renderSheet();
   const log = $("#log");
   if (state.log.length !== lastLogLen) {
     lastLogLen = state.log.length;
@@ -196,6 +197,59 @@ $("#btnSendFlags").onclick = async () => {
   } catch (e) { addLocalLog("⚠ " + e.message); }
   refreshSoon();
 };
+
+/* ------------------------------------------------------------------ */
+/* Panneau FLAGS Google Sheet : addr + bit, ecrits a l'adresse reelle  */
+/* ------------------------------------------------------------------ */
+let sheetRows = {};          // cle "hex:flag" -> {el, cb}
+
+function sheetKey(f) { return f.hex + ":" + f.flag; }
+
+function makeSheetRow(f) {
+  const el = document.createElement("div");
+  el.className = "srow";
+  el.innerHTML = `<input type="checkbox"><span class="shex"></span>` +
+                 `<span class="sflag"></span><span class="sname"></span>`;
+  el.querySelector(".shex").textContent = f.hex;
+  el.querySelector(".sflag").textContent = f.flag;
+  el.querySelector(".sname").textContent = f.context || "";
+  const cb = el.querySelector("input");
+  cb.onchange = async () => {
+    try {
+      await api("/api/sheet_flags", { sheet: [{ addr: f.addr, flag: f.flag }], on: cb.checked });
+      addLocalLog(`${cb.checked ? "\u2705" : "\u2b1c"} flag ${f.flag} @ ${f.hex} (${f.context}) \u2192 RAM`);
+    } catch (e) { addLocalLog("\u26a0 flag : " + e.message); cb.checked = !cb.checked; }
+    refreshSoon();
+  };
+  return { el, cb };
+}
+
+function renderSheet() {
+  if (!state) return;
+  const flags = state.sheet_flags || [];
+  $("#sheetCount").textContent = flags.length;
+  const q = ($("#sheetSearch").value || "").trim().toLowerCase();
+  const box = $("#sheetFlags");
+  for (const f of flags) {
+    let row = sheetRows[sheetKey(f)];
+    if (!row) { row = sheetRows[sheetKey(f)] = makeSheetRow(f); box.appendChild(row.el); }
+    row.cb.checked = !!f.on;
+    row.el.classList.toggle("on", !!f.on);
+    const hay = (f.hex + " " + f.flag + " " + (f.context || "")).toLowerCase();
+    row.el.style.display = (!q || hay.includes(q)) ? "" : "none";
+  }
+}
+
+async function sendAllSheet(on) {
+  try {
+    const r = await api("/api/flags", { on });
+    addLocalLog(`\ud83d\udce4 ${r.sent.length} flags du sheet ${on ? "ACTIV\u00c9S" : "D\u00c9SACTIV\u00c9S"} \u2192 EmoTracker les lira au prochain watch`);
+  } catch (e) { addLocalLog("\u26a0 " + e.message); }
+  refreshSoon();
+}
+$("#btnSheetAll").onclick = () => sendAllSheet(true);
+$("#btnSheetOff").onclick = () => sendAllSheet(false);
+$("#sheetSearch").addEventListener("input", renderSheet);
 $("#btnClearFlags").onclick = async () => {
   try {
     const r = await api("/api/flags", { on: false });
