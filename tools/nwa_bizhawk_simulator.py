@@ -51,9 +51,21 @@ def enable_tcp_keepalive(sock, idle=15, interval=10, count=6):
             pass
 
 
-def load_fake_ram():
-    """Ram GBA simulée : zeros, ou contenu d'un savestate TMC si trouvé."""
+def load_fake_ram(seed=False, savestate=False):
+    """Ram GBA simulée : TOUJOURS à 0 au départ (tous les flags à 0x00).
+
+    Le chargement d'un savestate et les motifs de test sont désactivés par
+    défaut ; utiliser --savestate / --seed (ou POST /api/seed) pour tester
+    des états non nuls.
+    """
     ram = bytearray(RAM_SIZE)
+    if seed:
+        seed_test_pattern(ram)
+        print("[SIM] RAM initialisée avec motifs de test (--seed)")
+        return ram
+    if not savestate:   # save TMC chargé seulement si --savestate est passé
+        print("[SIM] RAM simulée initialisée à 0 (tous les flags 0x00)")
+        return ram
     here = os.path.dirname(os.path.abspath(__file__))
     candidates = []
     for pattern in ("save.emo",):
@@ -80,14 +92,10 @@ def load_fake_ram():
         # copier ce qui tombe dans la zone autotracking si le fichier est petit
         for i in range(0x2AC0, min(len(data), 0xEB4)):
             ram[i] = data[i] & 0xFF
-        for a in range(0x2AC0, 0x2EB4):
-            if ram[a] == 0 and (a % 7) == 0:
-                ram[a] = 0xF3  # murs fusionnés -> item.Active = true
-        print(f"[SIM] RAM partiellement initialisée depuis {path} + motifs de test")
+        print(f"[SIM] RAM partiellement initialisée depuis {path}")
         return ram
-    # Sans savestate : motifs de test purs pour vérifier les boutons Bool/Int
-    seed_test_pattern(ram)
-    print("[SIM] Aucun savestate trouvé : RAM simulée avec motifs de test")
+    # Aucun savestate demandé/trouvé : RAM à 0 (tous les flags 0x00)
+    print("[SIM] RAM simulée initialisée à 0 (tous les flags 0x00)")
     return ram
 
 
@@ -1320,9 +1328,13 @@ class WebHandler(BaseHTTPRequestHandler):
             for b in st.buttons.values():
                 b["on"] = False
                 b["count"] = 0
+                b.pop("dirty", None)
+                b.pop("last_write", None)
+            # RAM remise à ZÉRO partout (tous les flags 0x00), PAS de motifs
+            st.sim.ram[:] = bytes(len(st.sim.ram))
             clear_all_flags(st.sim.ram)
-            seed_test_pattern(st.sim.ram)
-            st.log("Réinitialisation : boutons OFF, RAM remise aux motifs de test")
+            st.log("Réinitialisation : boutons OFF, RAM remise à 0 "
+                   "(tous les flags 0x00)")
             return self._json({"ok": True})
 
         if path == "/api/seed":
@@ -1568,11 +1580,16 @@ WebState.disconnect_nwa = lambda self: disconnect_impl(self)
 
 
 def main():
-    port = int(sys.argv[1], 0) if len(sys.argv) > 1 else 0xBEEF
-    web_port = int(sys.argv[2], 0) if len(sys.argv) > 2 else 8090
+    args = [a for a in sys.argv[1:] if not a.startswith("-")]
+    flags = {a for a in sys.argv[1:] if a.startswith("-")}
+    port = int(args[0], 0) if args else 0xBEEF
+    web_port = int(args[1], 0) if len(args) > 1 else 8090
 
     handler = Server(("127.0.0.1", port), NWASimulatorHandler)
-    handler.ram = load_fake_ram()
+    # RAM à 0 par défaut (tous les flags 0x00). --seed = motifs de test,
+    # --savestate = autorise le chargement d'un save TMC trouvé sur disque.
+    handler.ram = load_fake_ram(seed=("--seed" in flags),
+                                savestate=("--savestate" in flags))
     handler.client_id = 0
 
     state = WebState(handler)
