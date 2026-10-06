@@ -87,8 +87,11 @@ function updateCard(b) {
   c.refs.type.textContent = b.type;
   c.refs.type.classList.toggle("int", b.type === "Int");
   if (b.type === "Bool") {
-    c.refs.cur.textContent = b.on ? "ON (true)" : "OFF (false)";
-    c.refs.main.textContent = b.on ? "Désactiver" : "Activer";
+    // envoi brut a EmoTracker : 1 / 0 (pas ON/OFF)
+    c.refs.cur.textContent = b.on ? "1" : "0";
+    c.refs.main.textContent = b.on ? "0" : "1";
+    c.refs.main.title = b.on ? "Envoyer 0 à EmoTracker (bit cassé dans la RAM)"
+                             : "Envoyer 1 à EmoTracker (bit posé dans la RAM)";
     c.refs.dec.style.display = c.refs.inc.style.display = "none";
   } else {
     c.refs.cur.textContent = "valeur = " + b.count;
@@ -233,21 +236,33 @@ $("#btnSendFlags").onclick = async () => {
 
 function sheetKey(f) { return f.hex + ":" + f.flag; }
 
-function makeSheetRow(f) {
+function buildSheetEl(f) {
   const el = document.createElement("div");
   el.className = "srow";
-  el.innerHTML = `<input type="checkbox"><span class="shex"></span>` +
-                 `<span class="sflag"></span><span class="sname"></span>`;
+  el.innerHTML = `<input type="checkbox" title="Envoie 1 (coché) ou 0 (décoché) à EmoTracker"><span class="shex"></span>` +
+                 `<span class="sflag"></span><span class="sbit"></span><span class="sname"></span>`;
   el.querySelector(".shex").textContent = f.hex;
   el.querySelector(".sflag").textContent = f.flag;
+  el.querySelector(".sbit").textContent = f.on ? "1" : "0";   // valeur envoyée
   el.querySelector(".sname").textContent = f.context || "";
   const cb = el.querySelector("input");
   cb.onchange = async () => {
     try {
       await api("/api/sheet_flags", { sheet: [{ addr: f.addr, flag: f.flag }], on: cb.checked });
-      addLocalLog(`${cb.checked ? "\u2705" : "\u2b1c"} flag ${f.flag} @ ${f.hex} (${f.context}) \u2192 RAM`);
+      addLocalLog(`${cb.checked ? "\u2705" : "\u2b1c"} ${f.hex} ${f.flag} (${f.context}) \u2192 envoie ${cb.checked ? "1" : "0"} \u00e0 EmoTracker`);
     } catch (e) { addLocalLog("\u26a0 flag : " + e.message); cb.checked = !cb.checked; }
     refreshSoon();
+  };
+  return el;
+}
+
+function makeSheetRow(f) {
+  const el = buildSheetEl(f);
+  const cb = el.querySelector("input");
+  el._update = (ff) => {
+    cb.checked = !!ff.on;
+    el.classList.toggle("on", !!ff.on);
+    el.querySelector(".sbit").textContent = ff.on ? "1" : "0";
   };
   return { el, cb };
 }
@@ -261,8 +276,7 @@ function renderSheet() {
   for (const f of flags) {
     let row = sheetRows[sheetKey(f)];
     if (!row) { row = sheetRows[sheetKey(f)] = makeSheetRow(f); box.appendChild(row.el); }
-    row.cb.checked = !!f.on;
-    row.el.classList.toggle("on", !!f.on);
+    row.el._update(f);                       // checkbox + valeur 1/0 envoyée
     const hay = (f.hex + " " + f.flag + " " + (f.context || "")).toLowerCase();
     row.el.style.display = (!q || hay.includes(q)) ? "" : "none";
   }
@@ -271,7 +285,7 @@ function renderSheet() {
 async function sendAllSheet(on) {
   try {
     const r = await api("/api/flags", { on });
-    addLocalLog(`\ud83d\udce4 ${r.sent.length} flags du sheet ${on ? "ACTIV\u00c9S" : "D\u00c9SACTIV\u00c9S"} \u2192 EmoTracker les lira au prochain watch`);
+    addLocalLog(`\ud83d\udce4 ${r.sent.length} flags du sheet \u2192 envoie ${on ? "1" : "0"} \u00e0 EmoTracker (RAM)`);
   } catch (e) { addLocalLog("\u26a0 " + e.message); }
   refreshSoon();
 }

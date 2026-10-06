@@ -819,7 +819,13 @@ def build_buttons_from_flags(defs):
 
 
 def _apply_flag_button(ram, b):
-    """Écrit l'état d'un bouton-flag (addr_hex + value=masque) dans la RAM."""
+    """Écrit l'état d'un bouton-flag (addr_hex + value=masque) dans la RAM.
+
+    Le web est la SOURCE D'ENVOI directe vers EmoTracker : on écrit UNIQUEMENT
+    quand l'utilisateur agit sur le bouton (drapeau dirty). La valeur envoyée
+    est brute : Bool -> bit posé (octet modifié => 1) ou cassé (=> 0),
+    Int -> la valeur du compteur. Plus de réécriture périodique qui écrasait
+    les changements faits depuis d'autres clients NWA (BizHawk/EmoTracker)."""
     try:
         addr = int(b["addr_hex"], 16)
     except (KeyError, ValueError):
@@ -832,6 +838,30 @@ def _apply_flag_button(ram, b):
         ram[off] = (ram[off] | m) if b["on"] else (ram[off] & ~m) & 0xFF
     else:                                   # Int : le compteur remplace le bit
         ram[off] = (ram[off] & ~m | (b["count"] & m)) & 0xFF
+
+
+def push_buttons_to_ram(state):
+    """Ré-écrit dans la RAM partagée uniquement les boutons marqués 'dirty'
+    (un clic/action web récent). Appelé par le poller NWA : si un vrai client
+    BizHawk est connecté via /api/connect, ses valeurs lui sont poussées sans
+    jamais écraser ce que d'autres clients ont écrit entre-temps."""
+    ram = state.sim.ram
+    pushed = []
+    for bid in list(state.order):
+        b = state.buttons[bid]
+        if not b.get("dirty"):
+            continue
+        b.pop("dirty", None)
+        if b["kind"] == "address":
+            off = b["value"] - 0x2000000
+            if 0 <= off < len(ram):
+                ram[off] = ((1 if b["on"] else 0) if b["type"] == "Bool"
+                            else b["count"]) & 0xFF
+                pushed.append(b["id"])
+        elif b["kind"] == "flag" and b.get("addr_hex"):
+            _apply_flag_button(ram, b)
+            pushed.append(b["id"])
+    return pushed
 
 
 class WebState:
@@ -961,6 +991,15 @@ class WebState:
                     # état réel du bit dans la RAM (source de vérité EmoTracker)
                     entry["ram"] = ram[off]
                     entry["ram_on"] = bool(ram[off] & b["value"])
+                    # synchro montante : si la RAM change autrement (BizHawk,
+                    # /api/flags, seed), le bouton suit — sauf juste après un
+                    # clic web (dirty, l'envoi est en cours de propagation).
+                    if not b.get("dirty"):
+                        on = bool(ram[off] & b["value"])
+                        if b["type"] == "Bool":
+                            b["on"] = on
+                        else:
+                            b["count"] = 1 if on else 0
             out["buttons"].append(entry)
         return out
 
@@ -1028,7 +1067,12 @@ class WebHandler(BaseHTTPRequestHandler):
                 b["type"] = "Int" if b["type"] == "Bool" else "Bool"
             else:
                 return self._json({"error": f"action '{act}' inconnue"}, 400)
-            # miroir dans la RAM simulée quand le bouton est actif
+            # Le web ENVOIE directement la donnée à EmoTracker : écriture
+            # immédiate dans la RAM partagée (servie aux clients NWA, donc
+            # au memory watch d'EmoTracker) + drapeau dirty pour que le
+            # poller pousse aussi vers un BizHawk distant et protège le
+            # bouton contre l'écrasement par le watch descendant.
+            b["dirty"] = True
             if b["kind"] == "address":
                 off = b["value"] - 0x2000000
                 if 0 <= off < len(st.sim.ram):
@@ -1351,7 +1395,10 @@ def apply_watch_to_buttons(client, state):
 
     - adresses 0xXXXXXXX : zone utilisée (0x2002AC0..0x2002EB2) lue en UNE
       seule commande CORE_READ ;
-    - flags 0xXX : zone drapeaux (0x2002F00..) lue en une seule commande."""
+    - flags 0xXX : zone drapeaux (0x2002F00..) lue en une seule commande.
+    Les boutons sur lesquels le web vient d'agir ("dirty") sont ignorés par
+    la synchro descendante : c'est le web qui ENVOIE vers EmoTracker, pas
+    l'inverse, pendant le temps de propagation du prochain watch (<=1 s)."""
     lo, hi = 0x2002AC0, 0x2002EB3
     flag_lo, flag_hi = FLAG_BASE, FLAG_BASE + 0x40
     try:
@@ -1363,6 +1410,8 @@ def apply_watch_to_buttons(client, state):
         block = b""
     for bid in list(state.order):
         b = state.buttons[bid]
+        if b.get("dirty"):          # envoi web en attente -> pas d'écrasement
+            continue
         if b["kind"] == "address" and block:
             off = b["value"] - lo
             if 0 <= off < len(block):
@@ -1386,12 +1435,18 @@ def apply_watch_to_buttons(client, state):
 
 
 def poll_loop(state, interval=0.5):
-    """Memory watch web : lit la RAM via NWA + heartbeat (ping_if_stale)."""
+    """Memory watch web : pousse les actions web (boutons dirty) vers la RAM
+    lue par EmoTracker, lit la RAM via NWA pour la synchro inverse + heartbeat
+    (ping_if_stale)."""
     while state.connected:
         c = next((cl for cl in state.clients if getattr(cl, "_is_poller", False)), None)
         if c is None:
             break
         try:
+            pushed = push_buttons_to_ram(state)
+            if pushed:
+                state.log(f"📤 {len(pushed)} action(s) web envoyée(s) dans la RAM "
+                          f"(EmoTracker les lira à son prochain watch)")
             apply_watch_to_buttons(c, state)
             c.ping_if_stale(max_age=30.0)
         except Exception as exc:  # déconnexion réseau
