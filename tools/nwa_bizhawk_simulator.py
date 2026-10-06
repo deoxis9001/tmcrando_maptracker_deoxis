@@ -810,11 +810,13 @@ def build_buttons_from_flags(defs):
     / CSV du Google Sheet. Plus aucun bouton généré depuis autotracking.lua."""
     buttons = []
     for addr, mask, desc in defs:
+        # Type PAR DÉFAUT : Int (demande utilisateur). Les états existants
+        # sont conservés par rebuild_buttons() ; ici on ne fixe que le neuf.
         buttons.append({"id": f"flag-{addr:x}-{mask:02x}", "kind": "flag",
                         "hex": f"0x{addr:07X}", "value": mask,
                         "addr_hex": f"0x{addr:07X}",
                         "context": desc or f"flag {mask:02X}@{addr - RAM_BASE:04X}",
-                        "type": "Bool", "on": False, "count": 0})
+                        "type": "Int", "on": False, "count": 0})
     return buttons
 
 
@@ -826,18 +828,56 @@ def _apply_flag_button(ram, b):
     est brute : Bool -> bit posé (octet modifié => 1) ou cassé (=> 0),
     Int -> la valeur du compteur. Plus de réécriture périodique qui écrasait
     les changements faits depuis d'autres clients NWA (BizHawk/EmoTracker)."""
-    try:
-        addr = int(b["addr_hex"], 16)
-    except (KeyError, ValueError):
-        return
-    off = addr - RAM_BASE
-    if not (0 <= off < len(ram)):
+    off = _flag_off(b)
+    if off is None:
         return
     m = b["value"] & 0xFF
     if b["type"] == "Bool":
         ram[off] = (ram[off] | m) if b["on"] else (ram[off] & ~m) & 0xFF
-    else:                                   # Int : le compteur remplace le bit
-        ram[off] = (ram[off] & ~m | (b["count"] & m)) & 0xFF
+    else:
+        # Int : le compteur est la valeur du FLAG -> bit posé si count != 0,
+        # cassé si count == 0. On n'écrase JAMAIS les autres bits de l'octet
+        # (avant, un masque comme 0x80 recevait (count & 0x80) : les valeurs
+        # 1..127 donnaient 0 -> le clic paraissait ne rien faire).
+        ram[off] = (ram[off] | m) if (b["count"] & 0xFF) else (ram[off] & ~m) & 0xFF
+
+
+def _flag_off(b):
+    """Offset RAM d'un bouton flag, gère addr_hex OU hex sans préfixe
+    ('2A80', '0x2A80', '0x2002A80'). Retourne None si hors zone."""
+    txt = str(b.get("addr_hex") or b.get("hex") or "")
+    try:
+        v = int(txt, 16)
+    except ValueError:
+        return None
+    if not txt:
+        return None
+    # adresses courtes du CSV ('2A80') -> absolues ; >= RAM_BASE -> deja absolue
+    addr = v if v >= RAM_BASE else RAM_BASE + v
+    off = addr - RAM_BASE
+    return off if 0 <= off < RAM_SIZE else None
+
+
+# Protection anti-écrasement : après une action web sur un bouton, on ignore
+# la synchro montante (lecture RAM) pendant ce délai. Un booléen 'dirty' ne
+# suffit pas : il est consommé dès le premier passage du poller (0,5 s), alors
+# que /api/state ou le watch peuvent arriver juste après et lire une RAM pas
+# encore stabilisée -> le compteur retombait à 0 ("les boutons ne marchent
+# pas"). Le délai temporel couvre tout le temps de propagation NWA.
+DIRTY_HOLD = 3.0
+
+
+def _mark_dirty(b):
+    b["dirty"] = True
+    b["dirty_until"] = time.monotonic() + DIRTY_HOLD
+
+
+def _is_dirty(b):
+    d = bool(b.get("dirty"))
+    until = b.get("dirty_until", 0)
+    if until and time.monotonic() < until:
+        d = True
+    return d
 
 
 def push_buttons_to_ram(state):
@@ -851,7 +891,8 @@ def push_buttons_to_ram(state):
         b = state.buttons[bid]
         if not b.get("dirty"):
             continue
-        b.pop("dirty", None)
+        b.pop("dirty", None)      # envoi fait ; dirty_until reste actif
+        b["sent_at"] = time.monotonic()
         if b["kind"] == "address":
             off = b["value"] - 0x2000000
             if 0 <= off < len(ram):
@@ -862,6 +903,63 @@ def push_buttons_to_ram(state):
             _apply_flag_button(ram, b)
             pushed.append(b["id"])
     return pushed
+
+
+def _make_test_state(sim_ram):
+    """État minimal pour tests unitaires (sans serveur HTTP)."""
+    st = WebState.__new__(WebState)
+    class _Sim:  # bouchon : seul .ram est utilisé
+        ram = sim_ram
+    st.sim = _Sim()
+    st.buttons = {}
+    st.order = []
+    st.logs = []
+    st.clients = []
+    st.connected = False
+    st.port = 0xBEEF
+    st.sheet = list(FLAG_DEFS)
+    st.sheet_source = "flags.json"
+    return st
+
+
+def _do_action(st, req):
+    """Logique de /api/action, factorisée (handler HTTP + tests).
+
+    Retourne (code_http, reponse_dict)."""
+    b = st.buttons.get(req.get("id"))
+    if b is None:
+        return 404, {"error": "bouton inconnu"}
+    act = req.get("action")
+    if act == "toggle":
+        b["on"] = not b["on"]
+    elif act == "inc":
+        b["count"] = (b["count"] + 1) & 0xFF
+    elif act == "dec":
+        b["count"] = (b["count"] - 1) & 0xFF
+    elif act == "set":
+        b["count"] = int(req.get("value", 0)) & 0xFF
+    elif act == "type":
+        b["type"] = "Int" if b["type"] == "Bool" else "Bool"
+    else:
+        return 400, {"error": f"action '{act}' inconnue"}
+    # Le web ENVOIE directement la donnée à EmoTracker : écriture immédiate
+    # dans la RAM partagée (servie aux clients NWA) + drapeau dirty.
+    _mark_dirty(b)
+    if b["kind"] == "address":
+        off = b["value"] - 0x2000000
+        if 0 <= off < len(st.sim.ram):
+            val = (1 if b["on"] else 0) if b["type"] == "Bool" else b["count"]
+            st.sim.ram[off] = val & 0xFF
+    elif b["kind"] == "flag" and b.get("addr_hex"):
+        # un clic sur un bouton FLAG ecrit le bit du flag a son adresse
+        # reelle (addr_hex, masque=value) dans la RAM -> visible par
+        # EmoTracker (memory watch) comme un vrai flag du jeu
+        _apply_flag_button(st.sim.ram, b)
+        # NOTE : on ne recalcule PAS count/on depuis la RAM ici. En mode Int,
+        # plusieurs flags partagent le meme octet ; relire "bit pose ? 1 : 0"
+        # detruirait le compteur de l'user (ex. count=3 -> 1). La synchro
+        # montante dans full_state() est deja protegee par 'dirty'.
+    return 200, {"ok": True, "button": b}
 
 
 class WebState:
@@ -984,22 +1082,34 @@ class WebState:
                     entry["ram"] = ram[off]
             elif b["kind"] == "flag" and ram is not None and b.get("addr_hex"):
                 try:
-                    off = int(b["addr_hex"], 16) - RAM_BASE
-                except ValueError:
+                    off = _flag_off(b)
+                except TypeError:
                     off = -1
-                if 0 <= off < len(ram):
+                if off is not None and 0 <= off < len(ram):
                     # état réel du bit dans la RAM (source de vérité EmoTracker)
                     entry["ram"] = ram[off]
                     entry["ram_on"] = bool(ram[off] & b["value"])
                     # synchro montante : si la RAM change autrement (BizHawk,
-                    # /api/flags, seed), le bouton suit — sauf juste après un
-                    # clic web (dirty, l'envoi est en cours de propagation).
-                    if not b.get("dirty"):
+                    # /api/flags, seed), le bouton suit — sauf juste après une
+                    # action web (fenêtre anti-écho DIRTY_HOLD). En mode Int, on
+                    # ne touche JAMAIS count depuis la RAM : plusieurs boutons
+                    # partagent le même octet ; seul un passage 0->1 externe est
+                    # reflété (count=1), jamais l'inverse.
+                    if not _is_dirty(b):
                         on = bool(ram[off] & b["value"])
+                        last = b.get("last_ram_on")
+                        b["last_ram_on"] = on
                         if b["type"] == "Bool":
                             b["on"] = on
                         else:
-                            b["count"] = 1 if on else 0
+                            if on and not b["count"]:
+                                b["count"] = 1      # RAM passée à 1 -> on affiche 1
+                            elif not on and not b["count"]:
+                                pass                 # cohérent 0/0
+                            elif not on and b["count"]:
+                                # bit cassé par une autre source -> suivre la RAM
+                                if last != on:
+                                    b["count"] = 0
             out["buttons"].append(entry)
         return out
 
@@ -1051,39 +1161,8 @@ class WebHandler(BaseHTTPRequestHandler):
         path = self.path.split("?")[0]
 
         if path == "/api/action":
-            b = st.buttons.get(req.get("id"))
-            if b is None:
-                return self._json({"error": "bouton inconnu"}, 404)
-            act = req.get("action")
-            if act == "toggle":
-                b["on"] = not b["on"]
-            elif act == "inc":
-                b["count"] = (b["count"] + 1) & 0xFF
-            elif act == "dec":
-                b["count"] = (b["count"] - 1) & 0xFF
-            elif act == "set":
-                b["count"] = int(req.get("value", 0)) & 0xFF
-            elif act == "type":
-                b["type"] = "Int" if b["type"] == "Bool" else "Bool"
-            else:
-                return self._json({"error": f"action '{act}' inconnue"}, 400)
-            # Le web ENVOIE directement la donnée à EmoTracker : écriture
-            # immédiate dans la RAM partagée (servie aux clients NWA, donc
-            # au memory watch d'EmoTracker) + drapeau dirty pour que le
-            # poller pousse aussi vers un BizHawk distant et protège le
-            # bouton contre l'écrasement par le watch descendant.
-            b["dirty"] = True
-            if b["kind"] == "address":
-                off = b["value"] - 0x2000000
-                if 0 <= off < len(st.sim.ram):
-                    val = (1 if b["on"] else 0) if b["type"] == "Bool" else b["count"]
-                    st.sim.ram[off] = val & 0xFF
-            elif b["kind"] == "flag":
-                # un clic sur un bouton FLAG ecrit le bit du flag a son adresse
-                # reelle (addr_hex, masque=value) dans la RAM -> visible par
-                # EmoTracker (memory watch) comme un vrai flag du jeu
-                _apply_flag_button(st.sim.ram, b)
-            return self._json({"ok": True, "button": b})
+            code, payload = _do_action(st, req)
+            return self._json(payload, code)
 
         if path == "/api/flags":
             # envoi massif de FLAGS DU SHEET vers EmoTracker via la RAM simulee.
@@ -1410,8 +1489,11 @@ def apply_watch_to_buttons(client, state):
         block = b""
     for bid in list(state.order):
         b = state.buttons[bid]
-        if b.get("dirty"):          # envoi web en attente -> pas d'écrasement
+        if _is_dirty(b):            # envoi web récent -> pas d'écrasement
             continue
+        sent = b.get("sent_at", 0)
+        if sent and time.monotonic() - sent < DIRTY_HOLD:
+            continue                # RAM pas encore stabilisée côté client NWA
         if b["kind"] == "address" and block:
             off = b["value"] - lo
             if 0 <= off < len(block):
