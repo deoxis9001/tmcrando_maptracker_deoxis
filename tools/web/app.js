@@ -1,12 +1,15 @@
 // Interface web de test autotracking — EmoTracker / Bizhawk-nwa-tool
-// Boutons générés depuis autotracking.lua : toutes les adresses 0xXXXXXXX et
-// tous les flags 0xXX. Chaque bouton change de type Bool <-> Int.
+// Boutons generes depuis tools/flags.json (export du Google Sheet via
+// parse_flags_csv.py) : un bouton par flag (adresse 0x200XXXX + masque 0xXX).
+// Chaque bouton change de type Bool <-> Int. Plus aucun bouton lua.
 "use strict";
 
 const $ = (s) => document.querySelector(s);
 let state = null;          // dernier /api/state reçu
+let sheetRows = {};          // cle "hex:flag" -> {el, cb}
 let cards = {};            // id -> {el, refs}
 let lastLogLen = 0;
+let gridIds = "";          // signature des ids du grid (reconstruction si besoin)
 
 async function api(path, body) {
   const opt = body === undefined ? {} : {
@@ -58,7 +61,13 @@ function makeCard(b) {
   };
   refs.dec.onclick = () => act(b.id, { action: "dec" });
   refs.inc.onclick = () => act(b.id, { action: "inc" });
-  refs.ctx.textContent = b.context || "";
+  // bouton flag (flags.json) : adresse reelle + bit affiche, contexte = nom
+  if (b.kind === "flag" && b.addr_hex) {
+    refs.hex.textContent = b.addr_hex + " · " + b.hex;   // ex. 0x2002A80 · 0x01
+    refs.ctx.textContent = b.context || "";
+  } else {
+    refs.ctx.textContent = b.context || "";
+  }
   return { el, refs };
 }
 
@@ -72,7 +81,9 @@ async function act(id, body) {
 function updateCard(b) {
   let c = cards[b.id];
   if (!c) { c = cards[b.id] = makeCard(b); $("#grid").appendChild(c.el); }
-  c.refs.hex.textContent = b.hex;
+  // hex : bouton flag -> "0x2002A80 · 0x01" (adresse + bit), sinon l'hex seul
+  c.refs.hex.textContent = (b.kind === "flag" && b.addr_hex)
+    ? b.addr_hex + " · " + b.hex : b.hex;
   c.refs.type.textContent = b.type;
   c.refs.type.classList.toggle("int", b.type === "Int");
   if (b.type === "Bool") {
@@ -85,7 +96,12 @@ function updateCard(b) {
     c.refs.dec.style.display = c.refs.inc.style.display = "";
   }
   c.refs.ram.textContent = ("ram" in b) ? "RAM: 0x" + b.ram.toString(16).padStart(2, "0").toUpperCase() : "";
-  c.el.classList.toggle("active", isActive(b));
+  // synchro avec la RAM reelle (ecrite par le sheet / BizHawk / watch NWA) :
+  // un flag ON dans la RAM allume la carte meme sans clic web
+  const ramOn = ("ram_on" in b) ? b.ram_on : null;
+  c.el.classList.toggle("active", isActive(b) || ramOn === true);
+  if (ramOn === true && !isActive(b)) c.el.classList.add("ramset");
+  else c.el.classList.remove("ramset");
   c.el.style.display = visible(b) ? "" : "none";
 }
 
@@ -93,10 +109,13 @@ function visible(b) {
   const q = $("#search").value.trim().toLowerCase();
   if (q) {
     const hx = b.hex.toLowerCase();                 // ex. "0x2002ac0"
+    const ah = (b.addr_hex || "").toLowerCase();    // ex. "0x2002a80"
     const bare = hx.slice(2);                       // "2002ac0"
     const dec = String(b.value);                    // forme décimale
+    const ctx = (b.context || "").toLowerCase();    // nom du flag (flags.json)
     const qq = q.startsWith("0x") ? q.slice(2) : q; // requête sans préfixe
-    if (!hx.includes(q) && !bare.includes(qq) && !dec.includes(q)) return false;
+    if (!hx.includes(q) && !bare.includes(qq) && !dec.includes(q)
+        && !ah.includes(q) && !ctx.includes(q)) return false;
   }
   const k = $("#kindFilter").value;
   if (k !== "all" && b.kind !== k) return false;
@@ -138,10 +157,20 @@ function renderMap() {
 
 function renderAll() {
   if (!state) return;
+  // si la liste des ids a change (flags.json recharge / /api/load_flags),
+  // on reconstruit proprement la grille avant de la remplir
+  const ids = state.buttons.map((b) => b.id).join(",");
+  if (ids !== gridIds) {
+    gridIds = ids;
+    cards = {};
+    sheetRows = {};
+    $("#grid").innerHTML = "";
+    const sf = $("#sheetFlags"); if (sf) sf.innerHTML = "";
+  }
   let nActive = 0;
-  for (const b of state.buttons) { updateCard(b); if (isActive(b)) nActive++; }
+  for (const b of state.buttons) { updateCard(b); if (isActive(b) || b.ram_on) nActive++; }
   $("#stats").textContent =
-    `${state.counts.addresses} adresses · ${state.counts.flags} flags · ${nActive} actifs`;
+    `${state.counts.sheet_flags} flags (source : ${state.sheet_source}) · ${nActive} actifs`;
   const badge = $("#nwaBadge");
   badge.textContent = state.connected ? "NWA : connecté (port " + state.port + ")" : "NWA : déconnecté";
   badge.classList.toggle("on", state.connected);
@@ -201,7 +230,6 @@ $("#btnSendFlags").onclick = async () => {
 /* ------------------------------------------------------------------ */
 /* Panneau FLAGS Google Sheet : addr + bit, ecrits a l'adresse reelle  */
 /* ------------------------------------------------------------------ */
-let sheetRows = {};          // cle "hex:flag" -> {el, cb}
 
 function sheetKey(f) { return f.hex + ":" + f.flag; }
 

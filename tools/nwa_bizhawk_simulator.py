@@ -720,6 +720,35 @@ def build_buttons_from_autotracking(src_path):
     return buttons
 
 
+def build_buttons_from_flags(defs):
+    """Un bouton par flag de la liste (addr, mask, desc) — source : flags.json
+    / CSV du Google Sheet. Plus aucun bouton généré depuis autotracking.lua."""
+    buttons = []
+    for addr, mask, desc in defs:
+        buttons.append({"id": f"flag-{addr:x}-{mask:02x}", "kind": "flag",
+                        "hex": f"0x{addr:07X}", "value": mask,
+                        "addr_hex": f"0x{addr:07X}",
+                        "context": desc or f"flag {mask:02X}@{addr - RAM_BASE:04X}",
+                        "type": "Bool", "on": False, "count": 0})
+    return buttons
+
+
+def _apply_flag_button(ram, b):
+    """Écrit l'état d'un bouton-flag (addr_hex + value=masque) dans la RAM."""
+    try:
+        addr = int(b["addr_hex"], 16)
+    except (KeyError, ValueError):
+        return
+    off = addr - RAM_BASE
+    if not (0 <= off < len(ram)):
+        return
+    m = b["value"] & 0xFF
+    if b["type"] == "Bool":
+        ram[off] = (ram[off] | m) if b["on"] else (ram[off] & ~m) & 0xFF
+    else:                                   # Int : le compteur remplace le bit
+        ram[off] = (ram[off] & ~m | (b["count"] & m)) & 0xFF
+
+
 class WebState:
     def __init__(self, sim_server):
         self.sim = sim_server          # serveur NWA (attribut .ram partagé)
@@ -748,9 +777,39 @@ class WebState:
                 if pair is not None:
                     off, m = pair
                     on = bool(ram[off] & m)
-            out.append({"addr": addr, "hex": f"0x{addr:07X}",
+            out.append({"id": f"flag-{addr:x}-{mask:02x}",
+                        "addr": addr, "hex": f"0x{addr:07X}",
                         "flag": f"0x{mask:02X}", "context": desc, "on": on})
         return out
+
+    def rebuild_buttons(self):
+        """Régénère les boutons web depuis la source active self.sheet
+        (flags.json / CSV du Google Sheet). Conserve l'état Bool/Int des
+        boutons existants. Aucune dépendance à autotracking.lua."""
+        new_buttons = {}
+        new_order = []
+        ram = self.sim.ram if self.sim else None
+        for b in build_buttons_from_flags(self.sheet):
+            old = self.buttons.get(b["id"])
+            if old:
+                b["type"] = old.get("type", "Bool")
+                b["count"] = old.get("count", 0)
+                b["manual"] = old.get("manual", True)
+            elif old is None and ram is not None:
+                # bouton neuf : on herite de l'etat deja present dans la RAM
+                pair = _flag_to_offs((int(b["addr_hex"], 16), b["value"]))
+                if pair is not None:
+                    off, m = pair
+                    b["on"] = bool(ram[off] & m)
+            new_buttons[b["id"]] = b
+            new_order.append(b["id"])
+        # boutons ajoutés manuellement (expérimentation) conservés en fin
+        for bid in self.order:
+            if bid not in new_buttons:
+                new_buttons[bid] = self.buttons[bid]
+                new_order.append(bid)
+        self.buttons = new_buttons
+        self.order = new_order
 
     def apply_sheet(self, entries, on=True):
         """Écrit des flags (tuples (addr, mask, desc) ou indices) dans la RAM
@@ -808,6 +867,15 @@ class WebState:
                 off = b["value"] - 0x2000000
                 if 0 <= off < len(ram):
                     entry["ram"] = ram[off]
+            elif b["kind"] == "flag" and ram is not None and b.get("addr_hex"):
+                try:
+                    off = int(b["addr_hex"], 16) - RAM_BASE
+                except ValueError:
+                    off = -1
+                if 0 <= off < len(ram):
+                    # état réel du bit dans la RAM (source de vérité EmoTracker)
+                    entry["ram"] = ram[off]
+                    entry["ram_on"] = bool(ram[off] & b["value"])
             out["buttons"].append(entry)
         return out
 
@@ -882,12 +950,10 @@ class WebHandler(BaseHTTPRequestHandler):
                     val = (1 if b["on"] else 0) if b["type"] == "Bool" else b["count"]
                     st.sim.ram[off] = val & 0xFF
             elif b["kind"] == "flag":
-                # un clic sur un bouton FLAG ecrit le drapeau dans la RAM ->
-                # visible par EmoTracker (memory watch) comme un vrai flag jeu
-                active = (not b["on"]) if b["type"] == "Bool" else (b["count"] != 0)
-                if b["type"] == "Bool":
-                    b["on"] = active
-                set_flags_in_ram(st.sim.ram, [b["value"]], on=active)
+                # un clic sur un bouton FLAG ecrit le bit du flag a son adresse
+                # reelle (addr_hex, masque=value) dans la RAM -> visible par
+                # EmoTracker (memory watch) comme un vrai flag du jeu
+                _apply_flag_button(st.sim.ram, b)
             return self._json({"ok": True, "button": b})
 
         if path == "/api/flags":
@@ -984,11 +1050,30 @@ class WebHandler(BaseHTTPRequestHandler):
                     return self._json({"error": "csv, json ou path requis"}, 400)
             except Exception as exc:                      # noqa: BLE001
                 return self._json({"error": f"chargement impossible : {exc}"}, 400)
+            # normalisation : flags.json contient des entrees SANS bits
+            # ("0000 0001") -> flag peut etre une liste ["0000","0001"] ;
+            # le bit bas position = masque (regle du sheet : 1000 0000 -> 0x80)
+            def _mask_of(v):
+                if isinstance(v, (list, tuple)):
+                    v = "".join(str(x) for x in v)
+                s = str(v).replace(" ", "")
+                if not s:
+                    return None
+                try:
+                    n = int(s, 2) if set(s) <= set("01") and len(s) > 2 else int(s, 0)
+                except ValueError:
+                    return None
+                return n & 0xFF or None
             for e in entries:
                 try:
                     addr = int(str(e.get("addr")), 0)
-                    mask = int(str(e.get("flag", e.get("mask", 1))), 0) & 0xFF
                 except (ValueError, TypeError, AttributeError):
+                    continue
+                raw = e.get("flag", e.get("mask"))
+                if raw is None:
+                    raw = e.get("bits")
+                mask = _mask_of(raw) if raw is not None else 1
+                if mask is None:
                     continue
                 desc = f'{e.get("context", "")} {e.get("name", "")}'.strip() or \
                        f"flag {mask:02X}@{addr - RAM_BASE:04X}"
@@ -997,8 +1082,10 @@ class WebHandler(BaseHTTPRequestHandler):
                 return self._json({"error": "aucun flag valide trouvé dans la source"}, 400)
             st.sheet = new_defs
             st.sheet_source = src_name
+            st.rebuild_buttons()   # les boutons web viennent des flags, pas du lua
             st.log(f"Panneau Flags : {len(new_defs)} flags chargés depuis {src_name} "
-                   "(source web = Google Sheet, plus autotracking.lua)")
+                   f"-> {len(st.buttons)} boutons régénérés (source = Google Sheet, "
+                   "plus autotracking.lua)")
             return self._json({"ok": True, "count": len(new_defs),
                                "source": src_name,
                                "sheet_flags": st.read_sheet()})
@@ -1256,12 +1343,11 @@ def main():
     handler.client_id = 0
 
     state = WebState(handler)
-    at_lua = os.path.join(os.path.dirname(os.path.dirname(WEB_DIR)),
-                          "emo", "scripts", "autotracking", "autotracking.lua")
-    at_lua = os.path.normpath(at_lua)
-    for b in build_buttons_from_autotracking(at_lua):
-        state.add_button(b)
-    state.log(f"{len(state.buttons)} boutons générés depuis autotracking.lua")
+    # Boutons générés depuis tools/flags.json (export du Google Sheet via
+    # parse_flags_csv.py) — PLUS depuis autotracking.lua.
+    state.rebuild_buttons()
+    state.log(f"{len(state.buttons)} boutons générés depuis "
+              f"{state.sheet_source or 'flags.json'}")
     WebHandler.state = state
 
     webd = ThreadingHTTPServer(("0.0.0.0", web_port), WebHandler)
