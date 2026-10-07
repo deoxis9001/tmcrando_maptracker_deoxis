@@ -1,0 +1,38 @@
+[
+  {
+    "addr": "0x2002A80",
+    "flag": "0x01",
+    "name": "Mount Crenel",
+    "context": "Map Screen Square Revealed"
+  },
+  {
+    "addr": "0x2002A80",
+    "flag": "0x02",
+    "name": "Mount Crenel Base",
+    "context": "Map Screen Square Revealed"
+  },
+  {
+    "addr": "0x2002A80",
+    "flag": "0x80",
+    "name": "Hyrule Castle",
+    "context": "Map Screen Square Revealed"
+  },
+  {
+    "addr": "0x2002A81",
+    "flag": "0x01",
+    "name": "Outside Hyrule Castle",
+    "context": "Map Screen Square Revealed"
+  },
+  {
+    "addr": "0x2002A81",
+    "flag": "0x80",
+    "name": "Lake Hylia",
+    "context": "Map Screen Square Revealed"
+  },
+  {
+    "addr": "0x2002AC0",
+    "flag": "0x01",
+    "name": "gravekey",
+    "context": "Key"
+  }
+]

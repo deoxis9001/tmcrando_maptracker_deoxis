@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autotracking Test — EmoTracker / Bizhawk-nwa-tool</title>
+<style>
+:root{
+  --bg:#0f1420; --panel:#171e2e; --panel2:#1d2639; --line:#2a3550;
+  --txt:#dbe4f5; --dim:#8fa0bf; --acc:#4da3ff; --ok:#3ddc84; --warn:#ffb020; --bad:#ff5d5d;
+}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt)}
+header{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px 18px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+h1{font-size:17px;margin:0 12px 0 0}
+.badge{padding:3px 10px;border-radius:20px;font-size:12px;background:var(--panel2);border:1px solid var(--line);color:var(--dim)}
+.badge.on{color:#08130b;background:var(--ok);border-color:var(--ok);font-weight:600}
+button{cursor:pointer;background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:13px}
+button:hover{border-color:var(--acc)}
+button.primary{background:var(--acc);border-color:var(--acc);color:#04101f;font-weight:600}
+input[type=number]{width:74px;background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:6px;padding:5px 8px}
+main{display:grid;grid-template-columns:1fr 320px;gap:14px;padding:14px 18px}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+select{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:5px 8px}
+#stats{color:var(--dim);font-size:12px;margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;align-content:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;display:flex;flex-direction:column;gap:6px}
+.card.active{border-color:var(--ok);box-shadow:0 0 0 1px var(--ok) inset}
+.card.ramset{border-color:var(--acc);border-style:dashed}
+.top{display:flex;align-items:center;gap:8px}
+.hex{font-family:ui-monospace,Consolas,monospace;font-weight:700;font-size:14px}
+.kind{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--dim);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.kind.flag{color:var(--warn);border-color:var(--warn)}
+.typebtn{margin-left:auto;font-size:11px;padding:3px 8px;border-radius:14px;background:var(--panel2)}
+.typebtn.int{color:var(--acc);border-color:var(--acc)}
+.val{font-family:ui-monospace,Consolas,monospace;font-size:12px;color:var(--dim);display:flex;gap:10px;align-items:center}
+.val .ram{color:var(--warn)}
+.actions{display:flex;gap:6px}
+.actions button{flex:1;padding:5px 4px}
+.ctx{font-size:10.5px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:ui-monospace,Consolas,monospace}
+aside{display:flex;flex-direction:column;gap:14px}
+.panelbox{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}
+.panelbox h2{font-size:13px;margin:0 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:.6px}
+#log{height:260px;overflow-y:auto;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;background:#0b1019;border:1px solid var(--line);border-radius:6px;padding:6px;white-space:pre-wrap}
+#map{height:260px;overflow:auto;background:#0b1019;border:1px solid var(--line);border-radius:6px;padding:6px;font-family:ui-monospace,monospace;font-size:10px;line-height:1.1}
+.mb{display:inline-block;width:13px;height:13px;margin:1px;border-radius:2px;background:#1d2639;vertical-align:middle}
+.mb.used{background:#31415f}.mb.set{background:var(--ok)}.mb.val{background:var(--warn);color:#111}
+.legend{font-size:10px;color:var(--dim);margin-top:6px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}
+.small{font-size:11px;color:var(--dim)}
+/* ---- panneau FLAGS (Google Sheet : addr + bit, écrits à l'adresse réelle) ---- */
+#sheetFlags{max-height:300px;overflow-y:auto;background:#0b1019;border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-family:ui-monospace,Consolas,monospace;font-size:11.5px}
+.srow{display:flex;align-items:center;gap:6px;padding:2px 0;border-bottom:1px dotted #1d2639}
+.srow input[type=checkbox]{accent-color:var(--ok);cursor:pointer}
+.srow .shex{min-width:78px;color:var(--txt);font-weight:600}
+.srow .sflag{min-width:44px;color:var(--warn)}
+.srow .sbit{min-width:16px;text-align:center;font-weight:700;color:var(--dim)}
+.srow.on .sbit{color:var(--ok)}
+.srow .sname{color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.srow.on .shex{color:var(--ok)}
+.sheetbar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.sheetbar input[type=text]{flex:1;min-width:110px;background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:6px;padding:5px 8px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎮 Autotracking Test UI</h1>
+  <span class="badge" id="nwaBadge">NWA : déconnecté</span>
+  <span class="badge" id="simBadge">Simulateur : port 49135</span>
+  <label class="small">Port&nbsp;<input type="number" id="port" value="49135"></label>
+  <button class="primary" id="btnConnect">Connecter NWA</button>
+  <button id="btnDisconnect">Déconnecter</button>
+  <button id="btnSeed">Seed RAM</button>
+  <button id="btnReset">Reset boutons</button>
+  <button id="btnSendFlags" title="Écrit TOUS les flags 0xXX dans la RAM simulée → EmoTracker (connecté en NWA) les lit à son prochain memory watch">📤 Envoyer tous les flags</button>
+  <button id="btnClearFlags" title="Remet tous les drapeaux 0xXX à zéro dans la RAM simulée">🧹 Effacer les flags</button>
+</header>
+
+<main>
+  <section>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Filtrer 0x… (hex ou décimal)" style="flex:1;min-width:160px;background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:6px;padding:6px 10px">
+      <select id="kindFilter">
+        <option value="all">Tout</option>
+        <option value="address">Adresses 0xXXXXXXX</option>
+        <option value="flag">Flags 0xXX</option>
+      </select>
+      <select id="typeFilter">
+        <option value="all">Tous types</option>
+        <option value="Bool">Bool</option>
+        <option value="Int">Int</option>
+      </select>
+      <select id="stateFilter">
+        <option value="all">Tous états</option>
+        <option value="active">Actifs uniquement</option>
+      </select>
+      <span id="stats"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <aside>
+    <div class="panelbox">
+      <h2>Flags Google Sheet (<span id="sheetCount">0</span>)</h2>
+      <div class="sheetbar">
+        <input type="text" id="sheetSearch" placeholder="Filtrer : addr / flag / nom (ex. 2A81, 0x80, Lake)">
+        <button id="btnSheetAll" title="Coche TOUS les flags du sheet à leur adresse réelle dans la RAM simulée">Tout ON</button>
+        <button id="btnSheetOff" title="Remet tous les bits du sheet à 0 dans la RAM simulée">Tout OFF</button>
+      </div>
+      <div id="sheetFlags"></div>
+      <p class="small">Chaque ligne = bit <code>flag</code> à poser à l'adresse <code>addr</code>.
+      Le clic écrit directement dans la RAM du simulateur NWA → EmoTracker (connecté en NWA)
+      déclenche son autotracking au prochain memory watch.</p>
+    </div>
+    <div class="panelbox">
+      <h2>Zone RAM 0x2002AC0–0x2002EB2</h2>
+      <div id="map"></div>
+      <div class="legend"><span class="dot" style="background:#31415f"></span>adresse suivie
+        &nbsp;<span class="dot" style="background:var(--ok)"></span>Bool actif
+        &nbsp;<span class="dot" style="background:var(--warn)"></span>valeur Int ≠ 0</div>
+    </div>
+    <div class="panelbox">
+      <h2>Journal</h2>
+      <div id="log"></div>
+      <p class="small">Protocole NWA simulé via <a href="https://github.com/Skarsnik/Bizhawk-nwa-tool" target="_blank" style="color:var(--acc)">Bizhawk-nwa-tool</a>.
+      Les boutons « adresse » écrivent aussi dans la RAM simulée → visibles par EmoTracker connecté au même port.</p>
+    </div>
+  </aside>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
