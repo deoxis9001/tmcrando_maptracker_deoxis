@@ -182,8 +182,8 @@ def _valid_defs(defs):
     for e in defs:
         e = tuple(e) + ("", "", "", "")
         try:
-            addr = int(e[0], 0)
-            mask = int(e[1], 0) & 0xFF
+            addr = int(e[0], 0) if isinstance(e[0], str) else int(e[0])
+            mask = int(e[1], 0) & 0xFF if isinstance(e[1], str) else int(e[1]) & 0xFF
         except (TypeError, ValueError):
             continue
         out.append((addr, mask, str(e[2] or ""), str(e[3] or "").strip(),
@@ -191,31 +191,110 @@ def _valid_defs(defs):
     return out
 
 
+def _contiguous_low_mask(m):
+    """0x07 -> 0x07 ; 0x05 -> 0x03 ; 0x06 -> 0x02 ; 0x80 -> 0x00.
+    Plus petit masque contigu bas de page inclus dans m."""
+    low = 0
+    for j in range(8):
+        if m >> j & 1:
+            low |= 1 << j
+        else:
+            break
+    return low
+
+
 def default_button_type(defs):
-    """Calcule (type, int_max) pour chaque entrée valide de `defs` (règle :
-    0x01 -> Bool ; 0x02+ avec name ET context -> Bool ; sinon Int borné à la
-    limite du flag, réduite des bits réservés par les autres flags de la même
-    adresse). Liste alignée sur _valid_defs(defs)."""
+    """Calcule (type, int_max, hidden, group_max) pour chaque entrée valide
+    de `defs`. Règle utilisateur :
+
+      masque 0x01                                  -> Booléen
+      masque 0x02+ AVEC name ET context présents   -> Booléen
+      masque 0x02+ SANS name ni context            -> Int borné à la limite
+                                    (0x02->0..3, 0x04->0..7, 0x08->0..15 ...)
+
+      REGROUPEMENT : si la MEME ADRESSE porte plusieurs flags dont les bits
+      sont CONTIGUS en bas de l'octet et tous "vides" (sans name/context),
+      on n'affiche QUE LE PREMIER (le plus petit bit, ex. 0x01) en Int avec
+      la limite combinée (0x01+0x02 -> max 0x03 ; 0x04+0x08 -> max 0x0F), et
+      les suivants sont masqués (hidden=True). Des bits non contigus restent
+      des boutons séparés (0x01+0x04 sans nom -> Bool + Int 0..7 distincts).
+
+    Les bits réservés par des flags NOMMÉS (Bool) voisins ne bornent pas le
+    groupe : le champ Int s'étend jusqu'au premier bit occupé par un autre
+    bouton visible. Liste alignée sur _valid_defs(defs)."""
     norm = _valid_defs(defs)
-    # union des masques par adresse -> permet de borner le champ d'un Int
-    uaddr = {}
-    for addr, mask, *_rest in norm:
-        uaddr[addr] = uaddr.get(addr, 0) | mask
+    empty_by_addr = {}       # addr -> union des masques "vides" (sans nom)
+    for addr, mask, _d, name, ctx in norm:
+        if not (name and ctx):
+            empty_by_addr[addr] = empty_by_addr.get(addr, 0) | mask
+    leader_of = {}           # (addr, lo_bit) -> masque du groupe contigu bas
+    for addr, emask in empty_by_addr.items():
+        grp = _contiguous_low_mask(emask)
+        # un groupe d'un seul bit sans nom : comportement de base
+        # (0x01 -> Booléen ; 0x02+ -> Int borné au flag), PAS de regroupement.
+        if grp and grp & (grp - 1):
+            leader_of[(addr, (grp & -grp).bit_length() - 1)] = grp
+
+    def group_max(addr, grp):
+        gwidth = grp.bit_length()
+        hi_bit = gwidth - 1
+        reserved = empty_by_addr.get(addr, 0) & ~grp   # bits isolés au-dessus
+        for j in range(gwidth, 8):
+            if reserved >> j & 1:
+                hi_bit = j - 1
+                break
+        return (1 << (hi_bit - gwidth + 1)) - 1 if hi_bit >= gwidth - 1 \
+            else (1 << gwidth) - 1
+
     out = []
     for addr, mask, _d, name, ctx in norm:
-        if mask <= 0x01 or (name and ctx):
-            out.append(("Bool", None))
-        else:
-            lo_bit = (mask & -mask).bit_length() - 1   # bit de base du champ
-            others = uaddr[addr] & ~mask               # bits des autres flags
-            hi_bit = 7
-            for j in range(lo_bit + 1, 8):             # borne haute du champ
-                if others >> j & 1:
-                    hi_bit = j - 1
-                    break
-            width = hi_bit - lo_bit + 1
-            hi = min(_mask_to_int_max(mask), (1 << width) - 1)
-            out.append(("Int", hi))
+        named = bool(name and ctx)
+        lo_bit = (mask & -mask).bit_length() - 1 if mask else 0
+        grp = leader_of.get((addr, lo_bit))          # leader d'un groupe vide ?
+        if grp is not None and not named:
+            # LEADER : bouton unique du groupe de bits contigus "vides"
+            # (ex. 0x01+0x02 vides -> un seul Int max 0x03 affiché sur 0x01 ;
+            #  0x04+0x08 vides -> un seul Int max 0x0F affiché sur 0x04).
+            gmax = group_max(addr, grp)
+            out.append(("Int", gmax, False, gmax))
+            continue
+        if mask <= 0x01 or named:
+            # 0x01 -> Booléen SAUF s'il est leader d'un groupe vide (ci-dessus)
+            out.append(("Bool", None, False, None))
+            continue
+        grp_all = _contiguous_low_mask(empty_by_addr.get(addr, 0))
+        if (leader_of.get((addr, (grp_all & -grp_all).bit_length() - 1)) is not None
+                and grp_all >> lo_bit & 1):
+            # membre NON-leader d'un groupe contigu "vide" (>1 bit) : caché
+            # derrière le premier bit (le leader porte la valeur combinée).
+            first_bit = (grp_all & -grp_all).bit_length() - 1
+            gmax = group_max(addr, grp_all)
+            out.append(("Int", gmax, lo_bit != first_bit, gmax))
+            continue
+        # bit isolé (non contigu en bas d'octet) : bouton propre,
+        # borné par les bits voisins déjà utilisés.
+        others = empty_by_addr.get(addr, 0) & ~grp_all
+        hi_bit = 7
+        for j in range(lo_bit + 1, 8):
+            if others >> j & 1:
+                hi_bit = j - 1
+                break
+        width = hi_bit - lo_bit + 1
+        hi = min(_mask_to_int_max(mask), (1 << width) - 1)
+        out.append(("Int", hi, False, None))
+    return out
+
+
+def _norm_types(types):
+    """Compat : accepte les anciens triplets/tuplets (type, int_max)."""
+    out = []
+    for t in types:
+        t = tuple(t)
+        btype = t[0]
+        imax = t[1] if len(t) > 1 else None
+        hidden = t[2] if len(t) > 2 else False
+        gmax = t[3] if len(t) > 3 else None
+        out.append((btype, imax, bool(hidden), gmax))
     return out
 
 
@@ -900,19 +979,39 @@ def build_buttons_from_flags(defs):
       0x02+ avec name ET context -> Booléen
       0x02+ sans name/context    -> Int borné à la limite du flag
                                     (0x02->0..3, 0x04->0..7, 0x08->0..15 ...)
-    Plus une adresse à plusieurs flags : la borne Int tient compte des bits
-    réservés par les autres flags du même octet (default_button_type)."""
-    types = default_button_type(defs)
+    REGROUPEMENT : bits contigus "vides" sur une même adresse (ex. 0x01 et
+    0x02, ou 0x04 plein + 0x08 vide) -> un SEUL bouton affiché (le premier
+    bit), en Int avec la limite combinée ; les suivants sont hidden=True."""
+    types = _norm_types(default_button_type(defs))
     buttons = []
-    for (addr, mask, desc, _n, _c), (btype, imax) in zip(_valid_defs(defs), types):
+    for (addr, mask, desc, _n, _c), (btype, imax, hidden, gmax) in \
+            zip(_valid_defs(defs), types):
         m = mask & 0xFF
         buttons.append({"id": f"flag-{addr:x}-{m:02x}", "kind": "flag",
                         "hex": f"0x{addr:07X}", "value": m,
                         "addr_hex": f"0x{addr:07X}",
                         "context": desc or f"flag {m:02X}@{addr - RAM_BASE:04X}",
                         "type": btype, "int_max": imax,
+                        "hidden": hidden, "group_max": gmax,
                         "on": False, "count": 0})
     return buttons
+
+
+def _field_mask(b):
+    """Masque des bits du CHAMP d'un bouton Int : le groupe de bits contigus
+    "vides" auquel appartient le flag (ex. flags 0x01+0x02 sans nom -> champ
+    0x03 ; 0x04+0x08 -> champ 0x0C), borné par int_max à partir du bit de
+    base du masque affiché. Les flags nommés (Bool) voisins ne font PAS
+    partie du champ."""
+    m = b["value"] & 0xFF
+    if not m:
+        return 0xFF
+    lo = (m & -m).bit_length() - 1
+    imax = b.get("int_max")
+    hi = imax if isinstance(imax, int) else 0xFF
+    width = max(1, hi.bit_length())
+    width = min(width, 8 - lo)
+    return ((1 << width) - 1) << lo
 
 
 def _apply_flag_button(ram, b):
@@ -933,13 +1032,11 @@ def _apply_flag_button(ram, b):
         # Int : on écrit la VALEUR DU COMPTEUR dans le CHAMP du flag (bits
         # à partir du bit de base du masque, borné par int_max). Les bits
         # réservés aux autres flags du même octet sont préservés.
-        m = b["value"] & 0xFF
         lo = (m & -m).bit_length() - 1 if m else 0
         imax = b.get("int_max")
         hi = imax if isinstance(imax, int) else 0xFF
-        width = max(1, hi.bit_length())
-        field = ((1 << width) - 1) << lo
-        v = (min(b["count"], hi) & ((1 << width) - 1)) << lo
+        field = _field_mask(b)
+        v = (min(b["count"], hi) & (field >> lo)) << lo
         ram[off] = (ram[off] & ~field | v) & 0xFF
 
 
@@ -1163,12 +1260,16 @@ class WebState:
 
     def read_sheet(self, ram=None):
         """Etat courant de chaque flag de la source active (self.sheet), lu
-        dans la RAM partagée -> sert directement au panneau web."""
+        dans la RAM partagée -> sert directement au panneau web.
+
+        Les flags regroupés (bits contigus "vides" d'une même adresse, caché
+        derrière le premier bit en Int combiné) sont marqués hidden=True :
+        le web n'affiche que le bouton leader du groupe."""
         if ram is None:
             ram = self.sim.ram if self.sim else None
         out = []
-        types = default_button_type(self.sheet)
-        for (entry, (btype, imax)) in zip(_valid_defs(self.sheet), types):
+        types = _norm_types(default_button_type(self.sheet))
+        for (entry, (btype, imax, hidden, gmax)) in zip(_valid_defs(self.sheet), types):
             addr, mask, desc = entry[0], entry[1], entry[2]
             on = False
             if ram is not None:
@@ -1179,7 +1280,8 @@ class WebState:
             out.append({"id": f"flag-{addr:x}-{mask:02x}",
                         "addr": addr, "hex": f"0x{addr:07X}",
                         "flag": f"0x{mask:02X}", "context": desc, "on": on,
-                        "type": btype, "int_max": imax})
+                        "type": btype, "int_max": imax,
+                        "hidden": hidden, "group_max": gmax})
         return out
 
     def rebuild_buttons(self):
@@ -1318,16 +1420,16 @@ class WebState:
                         if b["type"] == "Int":
                             # seul le CHAMP du flag compte : les bits réservés
                             # aux autres flags du même octet sont ignorés.
-                            # champ = bits à partir du bit de poids faible du
-                            # masque jusqu'au bit juste avant le premier autre
-                            # flag (borné par la limite hi du flag).
+                            # champ = groupe de bits contigus "vides" (ex.
+                            # 0x01+0x02 -> 0x03), borné par int_max.
                             m = b["value"] & 0xFF
                             lo = (m & -m).bit_length() - 1        # bit de base
                             imax = b.get("int_max")
                             hi = imax if isinstance(imax, int) else 0xFF
-                            width = hi.bit_length()               # nb de bits
-                            field = ((1 << width) - 1) << lo
+                            field = _field_mask(b)
                             v = (ram[off] & field) >> lo
+                            if v > hi:                # sécurité si RAM hors borne
+                                v = v & ((1 << max(1, hi.bit_length())) - 1)
                             if v != b["count"]:
                                 b["count"] = v
                         else:
