@@ -134,9 +134,13 @@ def load_flag_defs():
         for e in entries:
             addr = int(e.get("addr"), 0)
             mask = int(e.get("flag", e.get("mask", 1)), 0) & 0xFF
-            desc = f'{e.get("context", "")} {e.get("name", "")}'.strip() or \
-                   f"flag {mask:02X}@{addr - RAM_BASE:04X}"
-            defs.append((addr, mask, desc))
+            # nom / context SEPARÉS : le type du bouton (Bool/Int) dépend de
+            # leur présence (règle utilisateur : 0x01->Bool ; 0x02+ -> Int si
+            # name ET context vides/absents, sinon Bool).
+            name = str(e.get("name", "") or "").strip()
+            ctx = str(e.get("context", "") or "").strip()
+            desc = f"{ctx} {name}".strip() or f"flag {mask:02X}@{addr - RAM_BASE:04X}"
+            defs.append((addr, mask, desc, name, ctx))
         print(f"[SIM] FLAG_DEFS : {len(defs)} flags chargés depuis {path}")
         return defs
     print("[SIM] FLAG_DEFS : aucun flags.json trouvé, "
@@ -144,11 +148,85 @@ def load_flag_defs():
     defs = []
     for off in range(0x2A80, 0x2AE0):          # zones flags TMC connues
         for bit in (0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80):
-            defs.append((RAM_BASE + off, bit, f"bit {bit:02X}@0x{off:04X}"))
+            d = f"bit {bit:02X}@0x{off:04X}"
+            defs.append((RAM_BASE + off, bit, d, d, ""))
     return defs
 
 
 FLAG_DEFS = load_flag_defs()
+
+
+# ---------------------------------------------------------------------------
+# Règle de TYPE PAR DÉFAUT des boutons (demande utilisateur) :
+#   masque 0x01                     -> Booléen
+#   masque 0x02+ ET name/context    -> Booléen
+#   masque 0x02+ SANS name/context  -> Int borné à la limite du flag :
+#       0x02 -> 0x00..0x03 | 0x04 -> 0x00..0x07 | 0x08 -> 0x00..0x0F
+#       0x10 -> 0x00..0x1F | 0x20 -> 0x00..0x3F | 0x40 -> 0x00..0x7F
+#       0x80 -> 0x00..0xFF
+# De plus, si la MEME ADRESSE possède plusieurs flags masqués, le champ non
+# masqué forme une valeur combinée : un bouton Int sur cette adresse est
+# automatiquement limité à la valeur max de l'octet moins les bits réservés
+# par les autres flags (ex. addr avec 0x01 et 0x20 -> Int max 0x1F).
+def _mask_to_int_max(mask):
+    """Limite haute d'un compteur Int déduite du masque du flag."""
+    m = mask & 0xFF
+    if not m or (m & (m - 1)):        # pas une puissance de deux -> octet entier
+        return 0xFF
+    return (m << 1) - 1               # 0x02->0x03, 0x04->0x07 ... 0x80->0xFF
+
+
+def _valid_defs(defs):
+    """Entrées normalisées (addr:int, mask:int, desc, name, ctx) — invalides filtrées."""
+    out = []
+    for e in defs:
+        e = tuple(e) + ("", "", "", "")
+        try:
+            addr = int(e[0], 0)
+            mask = int(e[1], 0) & 0xFF
+        except (TypeError, ValueError):
+            continue
+        out.append((addr, mask, str(e[2] or ""), str(e[3] or "").strip(),
+                    str(e[4] or "").strip()))
+    return out
+
+
+def default_button_type(defs):
+    """Calcule (type, int_max) pour chaque entrée valide de `defs` (règle :
+    0x01 -> Bool ; 0x02+ avec name ET context -> Bool ; sinon Int borné à la
+    limite du flag, réduite des bits réservés par les autres flags de la même
+    adresse). Liste alignée sur _valid_defs(defs)."""
+    norm = _valid_defs(defs)
+    # union des masques par adresse -> permet de borner le champ d'un Int
+    uaddr = {}
+    for addr, mask, *_rest in norm:
+        uaddr[addr] = uaddr.get(addr, 0) | mask
+    out = []
+    for addr, mask, _d, name, ctx in norm:
+        if mask <= 0x01 or (name and ctx):
+            out.append(("Bool", None))
+        else:
+            lo_bit = (mask & -mask).bit_length() - 1   # bit de base du champ
+            others = uaddr[addr] & ~mask               # bits des autres flags
+            hi_bit = 7
+            for j in range(lo_bit + 1, 8):             # borne haute du champ
+                if others >> j & 1:
+                    hi_bit = j - 1
+                    break
+            width = hi_bit - lo_bit + 1
+            hi = min(_mask_to_int_max(mask), (1 << width) - 1)
+            out.append(("Int", hi))
+    return out
+
+
+DEFAULT_TYPES = default_button_type(FLAG_DEFS)
+
+
+def _entry_extra(entry):
+    """(name, context) d'une entrée de defs (tuples 3 ou 5 champs)."""
+    if isinstance(entry, (list, tuple)) and len(entry) >= 5:
+        return str(entry[3] or ""), str(entry[4] or "")
+    return "", ""
 
 
 def parse_mask(text):
@@ -349,7 +427,7 @@ def clear_all_flags(ram):
 def read_sheet_flags(ram):
     """Etat courant de chaque flag du sheet : True si le bit est pose."""
     out = []
-    for addr, mask, desc in FLAG_DEFS:
+    for addr, mask, desc, *_rest in FLAG_DEFS:
         state = False
         pair = _flag_to_offs((addr, mask))
         if pair is not None:
@@ -814,17 +892,26 @@ def build_buttons_from_autotracking(src_path):
 
 
 def build_buttons_from_flags(defs):
-    """Un bouton par flag de la liste (addr, mask, desc) — source : flags.json
-    / CSV du Google Sheet. Plus aucun bouton généré depuis autotracking.lua."""
+    """Un bouton par flag de la liste — source : flags.json / CSV du Google
+    Sheet. Entrées = (addr, mask, desc[, name, ctx]).
+
+    TYPE PAR DÉFAUT (règle utilisateur) :
+      0x01              -> Booléen
+      0x02+ avec name ET context -> Booléen
+      0x02+ sans name/context    -> Int borné à la limite du flag
+                                    (0x02->0..3, 0x04->0..7, 0x08->0..15 ...)
+    Plus une adresse à plusieurs flags : la borne Int tient compte des bits
+    réservés par les autres flags du même octet (default_button_type)."""
+    types = default_button_type(defs)
     buttons = []
-    for addr, mask, desc in defs:
-        # Type PAR DÉFAUT : Int (demande utilisateur). Les états existants
-        # sont conservés par rebuild_buttons() ; ici on ne fixe que le neuf.
-        buttons.append({"id": f"flag-{addr:x}-{mask:02x}", "kind": "flag",
-                        "hex": f"0x{addr:07X}", "value": mask,
+    for (addr, mask, desc, _n, _c), (btype, imax) in zip(_valid_defs(defs), types):
+        m = mask & 0xFF
+        buttons.append({"id": f"flag-{addr:x}-{m:02x}", "kind": "flag",
+                        "hex": f"0x{addr:07X}", "value": m,
                         "addr_hex": f"0x{addr:07X}",
-                        "context": desc or f"flag {mask:02X}@{addr - RAM_BASE:04X}",
-                        "type": "Int", "on": False, "count": 0})
+                        "context": desc or f"flag {m:02X}@{addr - RAM_BASE:04X}",
+                        "type": btype, "int_max": imax,
+                        "on": False, "count": 0})
     return buttons
 
 
@@ -843,12 +930,17 @@ def _apply_flag_button(ram, b):
     if b["type"] == "Bool":
         ram[off] = (ram[off] | m) if b["on"] else (ram[off] & ~m) & 0xFF
     else:
-        # Int : on écrit la VALEUR DU COMPTEUR directement dans l'octet de
-        # l'adresse du flag (demande utilisateur : "quand 0x01 est dans le
-        # fichier, quand on fait +1 ça augmente à 0x02, etc."). La RAM passe
-        # donc 0x00 -> 0x01 -> 0x02 ... ; EmoTracker lit la valeur brute via
-        # son memory watch sur cette adresse.
-        ram[off] = b["count"] & 0xFF
+        # Int : on écrit la VALEUR DU COMPTEUR dans le CHAMP du flag (bits
+        # à partir du bit de base du masque, borné par int_max). Les bits
+        # réservés aux autres flags du même octet sont préservés.
+        m = b["value"] & 0xFF
+        lo = (m & -m).bit_length() - 1 if m else 0
+        imax = b.get("int_max")
+        hi = imax if isinstance(imax, int) else 0xFF
+        width = max(1, hi.bit_length())
+        field = ((1 << width) - 1) << lo
+        v = (min(b["count"], hi) & ((1 << width) - 1)) << lo
+        ram[off] = (ram[off] & ~field | v) & 0xFF
 
 
 def _flag_off(b):
@@ -969,15 +1061,34 @@ def _do_action(st, req):
         return 404, {"error": "bouton inconnu"}
     act = req.get("action")
     if act == "toggle":
-        b["on"] = not b["on"]
+        # toggle sur un bouton Int : 1 -> 0, sinon -> 1 (borné comme set)
+        imax = b.get("int_max")
+        hi = imax if isinstance(imax, int) else 0xFF
+        if b["type"] == "Int":
+            b["count"] = 0 if b["count"] else min(1, hi)
+        else:
+            b["on"] = not b["on"]
     elif act == "inc":
-        b["count"] = (b["count"] + 1) & 0xFF
+        imax = b.get("int_max")
+        hi = imax if isinstance(imax, int) else 0xFF
+        nxt = b["count"] + 1
+        b["count"] = 0 if nxt > hi else nxt      # wrap à la limite du flag
     elif act == "dec":
-        b["count"] = (b["count"] - 1) & 0xFF
+        imax = b.get("int_max")
+        hi = imax if isinstance(imax, int) else 0xFF
+        b["count"] = hi if b["count"] - 1 < 0 else max(0, b["count"] - 1)
     elif act == "set":
-        b["count"] = int(req.get("value", 0)) & 0xFF
+        v = int(req.get("value", 0))
+        imax = b.get("int_max")
+        hi = imax if isinstance(imax, int) else 0xFF
+        b["count"] = max(0, min(v, hi))          # limité à la borne du flag
     elif act == "type":
         b["type"] = "Int" if b["type"] == "Bool" else "Bool"
+        b["manual_type"] = True                  # choix explicite : survit au reload
+        if b["type"] == "Int":                   # ramène le count dans la borne
+            imax = b.get("int_max")
+            if isinstance(imax, int):
+                b["count"] = min(b["count"], imax)
     else:
         return 400, {"error": f"action '{act}' inconnue"}
     # Le web ENVOIE directement la donnée à EmoTracker : écriture immédiate
@@ -1019,9 +1130,15 @@ def _do_action(st, req):
                     if b["type"] == "Bool":
                         newv = (cur | m) if b["on"] else (cur & ~m) & 0xFF
                     else:
-                        # Int : valeur du compteur écrite brute dans l'octet
-                        # (cohérent avec _apply_flag_button / RAM locale).
-                        newv = b["count"] & 0xFF
+                        # Int : valeur du compteur écrite dans le CHAMP du
+                        # flag (cohérent avec _apply_flag_button local).
+                        lo2 = (m & -m).bit_length() - 1 if m else 0
+                        imax2 = b.get("int_max")
+                        hi2 = imax2 if isinstance(imax2, int) else 0xFF
+                        w2 = max(1, hi2.bit_length())
+                        fld = ((1 << w2) - 1) << lo2
+                        newv = (cur & ~fld |
+                                (min(b["count"], hi2) & ((1 << w2) - 1)) << lo2) & 0xFF
                     if newv != cur:
                         poller.write_bytes(off, bytes([newv]))
         except Exception as exc:
@@ -1050,7 +1167,9 @@ class WebState:
         if ram is None:
             ram = self.sim.ram if self.sim else None
         out = []
-        for addr, mask, desc in self.sheet:
+        types = default_button_type(self.sheet)
+        for (entry, (btype, imax)) in zip(_valid_defs(self.sheet), types):
+            addr, mask, desc = entry[0], entry[1], entry[2]
             on = False
             if ram is not None:
                 pair = _flag_to_offs((addr, mask))
@@ -1059,7 +1178,8 @@ class WebState:
                     on = bool(ram[off] & m)
             out.append({"id": f"flag-{addr:x}-{mask:02x}",
                         "addr": addr, "hex": f"0x{addr:07X}",
-                        "flag": f"0x{mask:02X}", "context": desc, "on": on})
+                        "flag": f"0x{mask:02X}", "context": desc, "on": on,
+                        "type": btype, "int_max": imax})
         return out
 
     def rebuild_buttons(self):
@@ -1072,10 +1192,14 @@ class WebState:
         for b in build_buttons_from_flags(self.sheet):
             old = self.buttons.get(b["id"])
             if old:
-                b["type"] = old.get("type", "Bool")
+                # type : on garde un choix MANUEL explicite de l'utilisateur,
+                # sinon on SUIT la règle par défaut (flags.json / CSV rechargé)
+                if old.get("manual_type"):
+                    b["type"] = old.get("type", "Bool")
                 b["count"] = old.get("count", 0)
+                b["on"] = old.get("on", b["on"])
                 b["manual"] = old.get("manual", True)
-            elif old is None and ram is not None:
+            elif ram is not None:
                 # bouton neuf : on herite de l'etat deja present dans la RAM
                 pair = _flag_to_offs((int(b["addr_hex"], 16), b["value"]))
                 if pair is not None:
@@ -1192,8 +1316,20 @@ class WebState:
                     # externe, sans jamais écraser un clic web récent.
                     if not _is_dirty(b):
                         if b["type"] == "Int":
-                            if ram[off] != b["count"]:
-                                b["count"] = ram[off]
+                            # seul le CHAMP du flag compte : les bits réservés
+                            # aux autres flags du même octet sont ignorés.
+                            # champ = bits à partir du bit de poids faible du
+                            # masque jusqu'au bit juste avant le premier autre
+                            # flag (borné par la limite hi du flag).
+                            m = b["value"] & 0xFF
+                            lo = (m & -m).bit_length() - 1        # bit de base
+                            imax = b.get("int_max")
+                            hi = imax if isinstance(imax, int) else 0xFF
+                            width = hi.bit_length()               # nb de bits
+                            field = ((1 << width) - 1) << lo
+                            v = (ram[off] & field) >> lo
+                            if v != b["count"]:
+                                b["count"] = v
                         else:
                             on = bool(ram[off] & b["value"])
                             last = b.get("last_ram_on")
@@ -1279,7 +1415,8 @@ class WebHandler(BaseHTTPRequestHandler):
                     return self._json({"error": f"addr invalide : {req['addr']}"}, 400)
                 for m in masks:
                     try:
-                        entries.append((base_addr, int(str(m), 0) & 0xFF, ""))
+                        mm = int(str(m), 0) & 0xFF
+                        entries.append((base_addr, mm, "", "", ""))
                     except (ValueError, TypeError):
                         continue
             elif raw is None:
@@ -1288,10 +1425,11 @@ class WebHandler(BaseHTTPRequestHandler):
                 for f in raw:
                     if isinstance(f, dict):
                         entries.append((int(str(f.get("addr")), 0),
-                                        int(str(f.get("flag", "1")), 0), ""))
+                                        int(str(f.get("flag", "1")), 0),
+                                        "", "", ""))
                     elif isinstance(f, str) and ":" in f:
                         a, m = f.split(":", 1)
-                        entries.append((int(a, 0), int(m, 0), ""))
+                        entries.append((int(a, 0), int(m, 0), "", "", ""))
                     else:
                         try:
                             v = int(f, 0) if isinstance(f, str) else int(f)
@@ -1372,9 +1510,13 @@ class WebHandler(BaseHTTPRequestHandler):
                 mask = _mask_of(raw) if raw is not None else 1
                 if mask is None:
                     continue
-                desc = f'{e.get("context", "")} {e.get("name", "")}'.strip() or \
+                ctx = str(e.get("context", "") or "").strip()
+                name = str(e.get("name", "") or "").strip()
+                desc = f"{ctx} {name}".strip() or \
                        f"flag {mask:02X}@{addr - RAM_BASE:04X}"
-                new_defs.append((addr, mask, desc))
+                # 5 champs (addr, mask, desc, name, ctx) : la règle de type
+                # Bool/Int par défaut dépend de name/context (voir load_flag_defs)
+                new_defs.append((addr, mask, desc, name, ctx))
             if not new_defs:
                 return self._json({"error": "aucun flag valide trouvé dans la source"}, 400)
             st.sheet = new_defs
