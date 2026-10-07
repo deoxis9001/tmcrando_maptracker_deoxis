@@ -843,11 +843,12 @@ def _apply_flag_button(ram, b):
     if b["type"] == "Bool":
         ram[off] = (ram[off] | m) if b["on"] else (ram[off] & ~m) & 0xFF
     else:
-        # Int : le compteur est la valeur du FLAG -> bit posé si count != 0,
-        # cassé si count == 0. On n'écrase JAMAIS les autres bits de l'octet
-        # (avant, un masque comme 0x80 recevait (count & 0x80) : les valeurs
-        # 1..127 donnaient 0 -> le clic paraissait ne rien faire).
-        ram[off] = (ram[off] | m) if (b["count"] & 0xFF) else (ram[off] & ~m) & 0xFF
+        # Int : on écrit la VALEUR DU COMPTEUR directement dans l'octet de
+        # l'adresse du flag (demande utilisateur : "quand 0x01 est dans le
+        # fichier, quand on fait +1 ça augmente à 0x02, etc."). La RAM passe
+        # donc 0x00 -> 0x01 -> 0x02 ... ; EmoTracker lit la valeur brute via
+        # son memory watch sur cette adresse.
+        ram[off] = b["count"] & 0xFF
 
 
 def _flag_off(b):
@@ -1015,9 +1016,12 @@ def _do_action(st, req):
                     cur = poller.read_bytes(off, 1)
                     cur = cur[0] if isinstance(cur, bytes) and cur else 0
                     m = b["value"] & 0xFF
-                    setbit = (b["on"] if b["type"] == "Bool"
-                              else bool(b["count"] & 0xFF))
-                    newv = (cur | m) if setbit else (cur & ~m) & 0xFF
+                    if b["type"] == "Bool":
+                        newv = (cur | m) if b["on"] else (cur & ~m) & 0xFF
+                    else:
+                        # Int : valeur du compteur écrite brute dans l'octet
+                        # (cohérent avec _apply_flag_button / RAM locale).
+                        newv = b["count"] & 0xFF
                     if newv != cur:
                         poller.write_bytes(off, bytes([newv]))
         except Exception as exc:
@@ -1182,25 +1186,19 @@ class WebState:
                     entry["ram_on"] = bool(ram[off] & b["value"])
                     # synchro montante : si la RAM change autrement (BizHawk,
                     # /api/flags, seed), le bouton suit — sauf juste après une
-                    # action web (fenêtre anti-écho DIRTY_HOLD). En mode Int, on
-                    # ne touche JAMAIS count depuis la RAM : plusieurs boutons
-                    # partagent le même octet ; seul un passage 0->1 externe est
-                    # reflété (count=1), jamais l'inverse.
+                    # action web (fenêtre anti-écho DIRTY_HOLD). En mode Int,
+                    # l'octet de la RAM porte la VALEUR BRUTE du compteur
+                    # (0x00 -> 0x01 -> 0x02 ...) : on reflète toute valeur
+                    # externe, sans jamais écraser un clic web récent.
                     if not _is_dirty(b):
-                        on = bool(ram[off] & b["value"])
-                        last = b.get("last_ram_on")
-                        b["last_ram_on"] = on
-                        if b["type"] == "Bool":
-                            b["on"] = on
+                        if b["type"] == "Int":
+                            if ram[off] != b["count"]:
+                                b["count"] = ram[off]
                         else:
-                            if on and not b["count"]:
-                                b["count"] = 1      # RAM passée à 1 -> on affiche 1
-                            elif not on and not b["count"]:
-                                pass                 # cohérent 0/0
-                            elif not on and b["count"]:
-                                # bit cassé par une autre source -> suivre la RAM
-                                if last != on:
-                                    b["count"] = 0
+                            on = bool(ram[off] & b["value"])
+                            last = b.get("last_ram_on")
+                            b["last_ram_on"] = on
+                            b["on"] = on
             out["buttons"].append(entry)
         return out
 
@@ -1665,14 +1663,12 @@ def apply_watch_to_buttons(client, state):
             b["last_ram_on"] = on
             if b["type"] == "Bool":
                 b["on"] = on
-            else:
-                # ne JAMAIS détruire un compteur : seul un passage externe
-                # 0->1 se reflète (count=1) ; un bit cassé par une autre
-                # source remet count à 0 (sinon le bouton mentirait).
-                if on and not b["count"]:
-                    b["count"] = 1
-                elif not on and b["count"] and last:
-                    b["count"] = 0
+            elif ram[off] != b["count"]:
+                # Int : la RAM porte la valeur brute du compteur ; on suit
+                # toute valeur externe (0x00 -> 0x01 -> 0x02 ...). Après un
+                # envoi web, sent_at/DIRTY_HOLD (contrôlé plus haut) évite
+                # l'effet d'écho.
+                b["count"] = ram[off]
 
 
 def poll_loop(state, interval=0.5):
