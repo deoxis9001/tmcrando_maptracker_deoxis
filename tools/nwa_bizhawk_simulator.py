@@ -890,9 +890,11 @@ def _is_dirty(b):
 
 def push_buttons_to_ram(state):
     """Ré-écrit dans la RAM partagée uniquement les boutons marqués 'dirty'
-    (un clic/action web récent). Appelé par le poller NWA : si un vrai client
-    BizHawk est connecté via /api/connect, ses valeurs lui sont poussées sans
-    jamais écraser ce que d'autres clients ont écrit entre-temps."""
+    (un clic/action web récent). Appelé par le poller NWA quand un VRAI
+    émulateur BizHawk est connecté via /api/connect : le poller maintient
+    alors la RAM locale synchrone avec l'émulateur, et re-pousser les actions
+    web garantit qu'elles y sont écrites aussi (l'écriture HTTP directe ne
+    touche que la RAM locale, invisible pour BizHawk)."""
     ram = state.sim.ram
     pushed = []
     for bid in list(state.order):
@@ -911,6 +913,33 @@ def push_buttons_to_ram(state):
             _apply_flag_button(ram, b)
             pushed.append(b["id"])
     return pushed
+
+
+def write_flags_to_nwa(client, entries, on=True):
+    """Écrit des flags directement dans la RAM de l'émulateur via NWA
+    (bCORE_WRITE), sans passer par la RAM locale du simulateur. Utilisé par
+    /api/flags et /api/sheet_flags quand un vrai BizHawk est connecté :
+    EmoTracker voit ainsi les flags dès son prochain memory watch."""
+    changed = []
+    for entry in entries:
+        pair = _flag_to_offs(entry) if not isinstance(entry, tuple) \
+            else _flag_to_offs(entry)
+        if pair is None:
+            continue
+        off, mask = pair
+        try:
+            cur = client.read_bytes(off, 1)
+            cur = cur[0] if isinstance(cur, bytes) and cur else 0
+        except Exception:
+            cur = 0
+        newv = (cur | mask) if on else (cur & ~mask) & 0xFF
+        if newv != cur:
+            try:
+                client.write_bytes(off, bytes([newv]))
+            except Exception as exc:
+                raise ConnectionError(f"bCORE_WRITE a échoué : {exc}")
+        changed.append((entry[0], mask, entry[2] if len(entry) > 2 else ""))
+    return changed
 
 
 def _make_test_state(sim_ram):
@@ -967,6 +996,32 @@ def _do_action(st, req):
         # plusieurs flags partagent le meme octet ; relire "bit pose ? 1 : 0"
         # detruirait le compteur de l'user (ex. count=3 -> 1). La synchro
         # montante dans full_state() est deja protegee par 'dirty'.
+    # Si un client NWA externe (vrai BizHawk) est connecté via /api/connect,
+    # pousser aussi l'écriture dans SA ram (bCORE_WRITE) : sans ça, le clic
+    # web reste invisible pour EmoTracker branché sur BizHawk.
+    poller = next((c for c in getattr(st, "clients", [])
+                   if getattr(c, "_is_poller", False)), None)
+    if poller is not None:
+        try:
+            if b["kind"] == "address":
+                off = b["value"] - 0x2000000
+                if 0 <= off < RAM_SIZE:
+                    val = ((1 if b["on"] else 0) if b["type"] == "Bool"
+                           else b["count"]) & 0xFF
+                    poller.write_bytes(off, bytes([val]))
+            else:
+                off = _flag_off(b)
+                if off is not None:
+                    cur = poller.read_bytes(off, 1)
+                    cur = cur[0] if isinstance(cur, bytes) and cur else 0
+                    m = b["value"] & 0xFF
+                    setbit = (b["on"] if b["type"] == "Bool"
+                              else bool(b["count"] & 0xFF))
+                    newv = (cur | m) if setbit else (cur & ~m) & 0xFF
+                    if newv != cur:
+                        poller.write_bytes(off, bytes([newv]))
+        except Exception as exc:
+            st.log(f"⚠ Envoi NWA (bouton {b['id']}) échoué : {exc}")
     return 200, {"ok": True, "button": b}
 
 
@@ -1034,14 +1089,42 @@ class WebState:
 
     def apply_sheet(self, entries, on=True):
         """Écrit des flags (tuples (addr, mask, desc) ou indices) dans la RAM
-        partagée. Retourne la liste des entrées réellement modifiées."""
-        changed = set_sheet_flags(self.sim.ram, entries, on=on)
-        # synchronise l'état des boutons adresse correspondants
+        partagée. Retourne la liste des entrées réellement modifiées.
+
+        Si un client NWA externe est connecté (/api/connect -> vrai BizHawk),
+        les flags sont écrits DIRECTEMENT dans sa RAM via bCORE_WRITE : le web
+        devient la source d'envoi vers l'émulateur/EmoTracker."""
+        # résoudre les indices en tuples réels
+        resolved = []
+        for e in entries:
+            if isinstance(e, int) and 0 <= e < len(self.sheet):
+                resolved.append(self.sheet[e])
+            else:
+                resolved.append(e)
+        changed = set_sheet_flags(self.sim.ram, resolved, on=on)
+        # envoi direct vers l'émulateur connecté (NWA bCORE_WRITE)
+        poller = next((c for c in self.clients
+                       if getattr(c, "_is_poller", False)), None)
+        if poller is not None:
+            try:
+                write_flags_to_nwa(poller, resolved, on=on)
+                self.log(f"Flags écrits directement dans la RAM de l'émulateur "
+                         f"connecté (bCORE_WRITE)")
+            except ConnectionError as exc:
+                self.log(f"⚠ Envoi NWA échoué : {exc}")
+        # synchronise l'état des boutons correspondants
         for entry in changed:
             addr, mask, _d = entry
-            b = self.buttons.get(f"addr-{addr:x}")
+            b = self.buttons.get(f"flag-{addr:x}-{mask:02x}") or \
+                self.buttons.get(f"addr-{addr:x}")
             if b:
-                b["on"] = on or bool(b["on"])
+                if b["type"] == "Bool":
+                    b["on"] = on
+                elif on and not b["count"]:
+                    b["count"] = 1
+                elif not on:
+                    b["count"] = 0
+                _mark_dirty(b)     # protège contre l'écho du watch
         return changed
 
     def add_button(self, b):
@@ -1397,6 +1480,15 @@ class NwaClient:
     def _send(self, line):
         self.sock.sendall((line + "\n").encode())
 
+    def write_bytes(self, offset, data: bytes):
+        """Écrit dans la RAM du serveur via bCORE_WRITE (comme le plugin)."""
+        self._send(f"bCORE_WRITE System Bus;${offset:X};${len(data):X}")
+        self.sock.sendall(b"\x00" + struct.pack(">I", len(data)) + data)
+        status, payload = self._read()
+        if status != "OK":
+            raise RuntimeError(f"NWA write: {payload!r}")
+        return True
+
     def _read(self):
         """Lit une réponse complète. Le plugin n'envoie RIEN en réponse à
         MY_NAME_IS : on sort sur la première donnée reçue (fin de hash
@@ -1481,24 +1573,68 @@ class NwaClient:
             pass
 
 
-def apply_watch_to_buttons(client, state):
-    """Memory watch : lit la RAM via NWA et met à jour les boutons.
+def _watch_range(off_lo, off_hi):
+    """Fusionne [off_lo, off_hi) avec la plage courante si elles se touchent."""
+    if off_hi <= off_lo:
+        return None
+    return (off_lo, off_hi)
 
-    - adresses 0xXXXXXXX : zone utilisée (0x2002AC0..0x2002EB2) lue en UNE
-      seule commande CORE_READ ;
-    - flags 0xXX : zone drapeaux (0x2002F00..) lue en une seule commande.
-    Les boutons sur lesquels le web vient d'agir ("dirty") sont ignorés par
-    la synchro descendante : c'est le web qui ENVOIE vers EmoTracker, pas
-    l'inverse, pendant le temps de propagation du prochain watch (<=1 s)."""
-    lo, hi = 0x2002AC0, 0x2002EB3
-    flag_lo, flag_hi = FLAG_BASE, FLAG_BASE + 0x40
+
+def compute_flag_ranges(state):
+    """Plages (offset_relatif_début, offset_relatif_fin) couvrant tous les
+    boutons-flag actifs — calculées depuis state.sheet (flags.json / CSV du
+    Google Sheet), PAS depuis les anciennes zones codées en dur. Le watch
+    lit donc exactement les octets que le web envoie à EmoTracker."""
+    ranges = []
+    for bid in state.order:
+        b = state.buttons[bid]
+        if b.get("kind") != "flag":
+            continue
+        off = _flag_off(b)
+        if off is None:
+            continue
+        r = _watch_range(off, off + 1)
+        if r is None:
+            continue
+        if ranges and r[0] <= ranges[-1][1]:
+            ranges[-1] = (ranges[-1][0], max(ranges[-1][1], r[1]))
+        else:
+            ranges.append(r)
+    return ranges
+
+
+def apply_watch_to_buttons(client, state):
+    """Memory watch : relit la RAM via NWA pour refléter les écritures des
+    AUTRES clients (BizHawk, patchs, savestates) sur les boutons web.
+
+    Plages lues = celles réellement utilisées par les flags de la source
+    active (state.sheet / flags.json), plus la zone réservee FLAG_BASE des
+    valeurs 0xXX. Les boutons sur lesquels le web vient d'agir ("dirty",
+    fenêtre DIRTY_HOLD) sont ignorés : c'est le web qui ENVOIE vers
+    EmoTracker, pas l'inverse, pendant le temps de propagation."""
+    ranges = compute_flag_ranges(state)
+    # zone valeurs 0xXX (VALUE_DEFS) : utile seulement si des boutons y vivent
+    extra = _watch_range(FLAG_BASE - RAM_BASE, FLAG_BASE - RAM_BASE + 0x40)
+    if extra:
+        merged = sorted(ranges + [extra])
+        ranges = []
+        for lo, hi in merged:
+            if ranges and lo <= ranges[-1][1]:
+                ranges[-1] = (ranges[-1][0], max(ranges[-1][1], hi))
+            else:
+                ranges.append((lo, hi))
+    if not ranges:
+        return
     try:
-        block = client.read_bytes(lo - 0x2000000, hi - lo)
-        fblock = client.read_bytes(flag_lo - 0x2000000, flag_hi - flag_lo)
+        blocks = client.read_ranges([(lo, hi - lo) for lo, hi in ranges])
     except Exception:
         return
-    if not isinstance(block, bytes) or len(block) < (hi - lo):
-        block = b""
+    # index global -> valeur RAM lue
+    def ram_at(off):
+        for (lo, hi), blk in zip(ranges, blocks):
+            if isinstance(blk, bytes) and lo <= off < hi:
+                return blk[off - lo]
+        return None
     for bid in list(state.order):
         b = state.buttons[bid]
         if _is_dirty(b):            # envoi web récent -> pas d'écrasement
@@ -1506,26 +1642,37 @@ def apply_watch_to_buttons(client, state):
         sent = b.get("sent_at", 0)
         if sent and time.monotonic() - sent < DIRTY_HOLD:
             continue                # RAM pas encore stabilisée côté client NWA
-        if b["kind"] == "address" and block:
-            off = b["value"] - lo
-            if 0 <= off < len(block):
-                v = block[off]
-                b["ram"] = v
-                if b["type"] == "Bool":
-                    b["on"] = v != 0
-                else:
-                    b["count"] = v
-        elif b["kind"] == "flag" and isinstance(fblock, bytes) and fblock:
-            slot = value_slot(b["value"])
-            if slot:
-                off, bit, _val = slot
-                i = off - flag_lo
-                if 0 <= i < len(fblock):
-                    byte = fblock[i]
-                    b["ram"] = byte
-                    on = bool(byte & bit) if bit != 0xFF else (byte != 0)
-                    b["on"] = on
-                    b["count"] = 1 if on else 0
+        if b["kind"] == "address":
+            off = b["value"] - 0x2000000
+            v = ram_at(off)
+            if v is None:
+                continue
+            b["ram"] = v
+            if b["type"] == "Bool":
+                b["on"] = v != 0
+            else:
+                b["count"] = v
+        elif b["kind"] == "flag":
+            off = _flag_off(b)
+            if off is None:
+                continue
+            byte = ram_at(off)
+            if byte is None:
+                continue
+            b["ram"] = byte
+            on = bool(byte & b["value"])
+            last = b.get("last_ram_on")
+            b["last_ram_on"] = on
+            if b["type"] == "Bool":
+                b["on"] = on
+            else:
+                # ne JAMAIS détruire un compteur : seul un passage externe
+                # 0->1 se reflète (count=1) ; un bit cassé par une autre
+                # source remet count à 0 (sinon le bouton mentirait).
+                if on and not b["count"]:
+                    b["count"] = 1
+                elif not on and b["count"] and last:
+                    b["count"] = 0
 
 
 def poll_loop(state, interval=0.5):
