@@ -3320,8 +3320,7 @@ function updateLocations(segment)
 			segment, "COF_ENTER",
 			"@Cave Of Flame/1F - Items",
 			{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
-		), {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
-		)
+		),
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/B1 - Hazy Room - Small Chest", 0x2002d59, 0x02)
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/B1 - Hazy Room - Big Chest", 0x2002d59, 0x04)
 		updateSectionFlagDungeons(segment, "COF_ENTER", "@Cave Of Flame/B1 - Rollobite - Chest", 0x2002d58, 0x80)
