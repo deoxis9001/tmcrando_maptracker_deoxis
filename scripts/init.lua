@@ -352,7 +352,7 @@ end
 -- Autotracking
 ------------------------------------------------------------------
 if PopVersion then
-	--ScriptHost:LoadScript(Script.."autotracking.lua")
+	ScriptHost:LoadScript(Script.."autotracking.lua")
 else
 	ScriptHost:LoadScript(ScriptAutotracking.."autotracking.lua")
 end
