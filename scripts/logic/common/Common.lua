@@ -507,7 +507,7 @@ function FusionsRedNumber(code)
 		if redW:getActive() == redW:getActiveCount() then
 			function_data_fusion[code] = 1
 			return 1
-		elseif count_Fuser < redW:getActive() then
+		elseif has("fusionred_out_on") and count_Fuser < redW:getActive() then
 			function_data_fusion[code] = 2
 			return 2
 		else
@@ -554,7 +554,7 @@ function FusionsBlueNumber(code)
 		if blueL:getActive() == blueL:getActiveCount() then
 			function_data_fusion[code] = 1
 			return 1
-		elseif count_Fuser < blueL:getActive() then
+		elseif has("fusionblue_out_on") and count_Fuser < blueL:getActive() then
 			function_data_fusion[code] = 2
 			return 2
 		else
@@ -633,7 +633,7 @@ function FusionsGreenNumber(code)
 		if greenC:getActive() == greenC:getActiveCount() then
 			function_data_fusion[code] = 1
 			return 1
-		elseif count_Fuser < greenC:getActive() then
+		elseif has("fusiongreen_out_on") and count_Fuser < greenC:getActive() then
 			function_data_fusion[code] = 2
 			return 2
 		else

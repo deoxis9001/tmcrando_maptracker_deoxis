@@ -1006,6 +1006,7 @@
           "$has|rupees_on"
         ],
         "item_count": 1,
+        "capture_item": true,
         "access_rules": [
           "$Json_Dungeon_Fortress_EntranceLargeRupee"
         ],

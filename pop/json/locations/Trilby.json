@@ -21,7 +21,7 @@
     ],
     "sections": [
       {
-        "name": "Item",
+        "name": "Items",
         "item_count": 15,
         "access_rules": [
           "^$Json_Trilby_RupeeCave_Rupees"

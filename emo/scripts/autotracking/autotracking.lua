@@ -155,7 +155,7 @@ function updateFusion(name, segment, code, address, flag)
 		if flagTest ~= 0 and items_codes_autotracking[code] then
 		  item.Active = true
 		elseif flagTest ~= 0 then
-		  item.Active = false
+		  item.Active = true
 		else
 		  item.Active = false
 		  items_codes_autotracking[code]=true
@@ -1410,7 +1410,7 @@ function updateHearts(segment, address)
 end
 function updateBigKeys(segment, code)
 	local item = Tracker:FindObjectForCode("big_key_none")
-	local item2 = Tracker:FindObjectForCode("require_reward_no")
+	local item2 = Tracker:FindObjectForCode("require_reward_no_yes")
 	if code == "ud_bigkey" and item.CurrentStage == 3 then
 		updateToggleFlag(segment, "ud_bigkey", 0x2002eac, 0x04)
 	elseif code == "dws_bigkey" and item.CurrentStage < 3 then
@@ -1445,7 +1445,7 @@ function updateBigKeys(segment, code)
 		else
 			updateToggleFlag(segment, "pow_bigkey", 0x2002eb1, 0x04)
 		end
-	elseif code == "dhc_bigkey" and (item.CurrentStage < 3 or  item2.CurrentStage == 1)  then
+	elseif code == "dhc_bigkey" and (item.CurrentStage < 3 or item2.CurrentStage == 1)  then
 		if testFlag(segment, 0x2002DBE, 0x20) then
 			updateToggleFlag(segment, "dhc_bigkey", 0x2002DBE, 0x20)
 		else
@@ -2007,20 +2007,22 @@ function updateLocations(segment)
 
 	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
 		updateToggleFlag(segment, "dws", 0x2002c9c, 0x04)
-
 		updateToggleFlag(segment, "cof", 0x2002c9c, 0x08)
 		updateToggleFlag(segment, "fow", 0x2002c9c, 0x10)
 		updateToggleFlag(segment, "tod", 0x2002c9c, 0x20)
 		updateToggleFlag(segment, "pow", 0x2002c9c, 0x40)
 		updateToggleFlag(segment, "rc", 0x2002d02, 0x04)
 		updateToggleFlag(segment, "dhc", 0x2002ca6, 0x20)
+
 		updateSectionFlag(segment, "@DeepWoods/Reward", 0x2002c9c, 0x04)
+		updateSectionFlag(segment, "@DeepWoods - Green Chu/Reward", 0x2002c9c, 0x04)
 		updateSectionFlag(segment, "@Cave Of Flame/Reward", 0x2002c9c, 0x08)
+		updateSectionFlag(segment, "@Cave Of Flame - Gleerok/Reward", 0x2002c9c, 0x08)
 		updateSectionFlag(segment, "@Fortress/Reward", 0x2002c9c, 0x10)
 		updateSectionFlag(segment, "@Droplet/Reward", 0x2002c9c, 0x20)
 		updateSectionFlag(segment, "@Palace/Reward", 0x2002c9c, 0x40)
 		updateSectionFlag(segment, "@Crypt/Reward", 0x2002d02, 0x04)
-		if has("fusiongold_vanilla") then
+		--if has("fusiongold_vanilla") then
 			if fusiongoldcombined:getActive() then
 				updateCloudsUsedFixed(
 					segment,
@@ -2044,11 +2046,11 @@ function updateLocations(segment)
 					{{0x2002c81, 0x02}, {0x2002c81, 0x04}, {0x2002c81, 0x08}, {0x2002c81, 0x10}, {0x2002c81, 0x20}}
 				)
 			end
-		end
+		--end
 	end
 
 	if AUTOTRACKER_ENABLE_FUSER_TRACKING then
-		if has("fusionred_vanilla") then
+		--if has("fusionred_vanilla") then
 			if fusionredcombined:getActive() then
 				updateFusionUsedFixed(
 					"redW",
@@ -2124,8 +2126,8 @@ function updateLocations(segment)
 					}
 				)
 			end
-		end
-		if has("fusionblue_vanilla") then
+		--end
+		--if has("fusionblue_vanilla") then
 			if fusionbluecombined:getActive() then
 				updateFusionUsedFixed(
 					"blueL",
@@ -2171,8 +2173,8 @@ function updateLocations(segment)
 					}
 				)
 			end
-		end
-		if has("fusiongreen_vanilla") then
+		--end
+		--if has("fusiongreen_vanilla") then
 			if fusiongreencombined:getActive() then
 				updateFusionUsedFixed(
 					"greenC",
@@ -2298,8 +2300,8 @@ function updateLocations(segment)
 					}
 				)
 			end
-		end
-		if has("fusionred_vanilla") then
+		--end
+		--if has("fusionred_vanilla") then
 			updateFusion("RedW", segment, "fusions0a", 0x2002c82, 0x04)
 			updateFusion("RedW", segment, "fusions0b", 0x2002c82, 0x08)
 			updateFusion("RedW", segment, "fusions0c", 0x2002c82, 0x10)
@@ -2326,8 +2328,8 @@ function updateLocations(segment)
 			updateFusion("RedE", segment, "fusions1f", 0x2002c84, 0x80)
 			updateFusion("RedE", segment, "fusions20", 0x2002c85, 0x01)
 			updateFusion("RedE", segment, "fusions21", 0x2002c85, 0x02)
-		end
-		if has("fusionblue_vanilla") then
+		--end
+		--if has("fusionblue_vanilla") then
 			updateFusion("BlueL", segment, "fusions22", 0x2002c85, 0x04)
 			updateFusion("BlueL", segment, "fusions23", 0x2002c85, 0x08)
 			updateFusion("BlueL", segment, "fusions24", 0x2002c85, 0x10)
@@ -2341,8 +2343,8 @@ function updateLocations(segment)
 			updateFusion("BlueS", segment, "fusions31", 0x2002c87, 0x02)
 			updateFusion("BlueS", segment, "fusions32", 0x2002c87, 0x04)
 			updateFusion("BlueS", segment, "fusions33", 0x2002c87, 0x08)
-		end
-		if has("fusiongreen_vanilla") then
+		--end
+		--if has("fusiongreen_vanilla") then
 			updateFusion("GreenC", segment, "fusions34", 0x2002c87, 0x10)
 			updateFusion("GreenC", segment, "fusions35", 0x2002c87, 0x20)
 			updateFusion("GreenC", segment, "fusions36", 0x2002c87, 0x40)
@@ -2394,7 +2396,7 @@ function updateLocations(segment)
 			updateFusion("GreenP", segment, "fusions5e", 0x2002c8c, 0x40)
 			updateFusion("GreenP", segment, "fusions61", 0x2002c8d, 0x02)
 			updateFusion("GreenP", segment, "fusions64", 0x2002c8d, 0x10)
-		end
+		--end
 	end
 	if AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		-- if has("golden_enemy_on") then
@@ -2464,13 +2466,13 @@ function updateLocations(segment)
 
 		-- MAP MINES
 		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf4, 0x01)
-		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x02)
-		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x80)
-		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x40)
-		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x20)
-		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x10)
-		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x04)
-		updateSectionFlag(segment, "@Crenel - Melari Mines - Center/Digging", 0x2002cf3, 0x08)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Left/Digging", 0x2002cf3, 0x02)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Bottom Left/Digging", 0x2002cf3, 0x80)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Bottom Middle/Digging", 0x2002cf3, 0x40)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Bottom Right/Digging", 0x2002cf3, 0x20)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Top Right/Digging", 0x2002cf3, 0x10)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Top Middle/Digging", 0x2002cf3, 0x04)
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Top Left/Digging", 0x2002cf3, 0x08)
 
 		--CRENEL BASE
 		updateSectionFlag(segment, "@Crenel Base - Entrance Vine/Item", 0x2002cc5, 0x02)
@@ -2529,7 +2531,7 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Crypt/Gibdo Right - Item", 0x2002d14, 0x20)
 
 		--Crypt map
-		updateSectionFlag(segment, "@Crypt - Reward/Gift", 0x2002d02, 0x04)
+		updateSectionFlag(segment, "@Crypt - Prize/Gift", 0x2002d02, 0x04)
 		updateSectionFlag(segment, "@Crypt - Left/Item", 0x2002d12, 0x40)
 		updateSectionFlag(segment, "@Crypt - Right/Item", 0x2002d12, 0x80)
 		updateSectionFlag(segment, "@Crypt - Gibdo Left/Item", 0x2002d14, 0x10)
@@ -2544,7 +2546,7 @@ function updateLocations(segment)
 		updateSectionFlag(segment, "@Trilby - Bomb Cave/Chest", 0x2002d1d, 0x20)
 		updateDecreaseCount(
 			segment,
-			"@Trilby - Puddle Fusion/Item",
+			"@Trilby - Puddle Fusion/Items",
 			{
 				{0x2002d20, 0x10},
 				{0x2002d20, 0x20},
@@ -2888,17 +2890,17 @@ function updateLocations(segment)
 			{{0x2002d5b, 0x40}, {0x2002d5b, 0x80}, {0x2002d5c, 0x01}, {0x2002d5c, 0x02}, {0x2002d5c, 0x04}}
 		)
 		updateSectionFlag(segment, "@Cave Of Flame - B1 - Hazy Room - Big Chest/Big Chest", 0x2002d59, 0x04)
-		updateSectionFlag(segment, "@Cave Of Flame - B1 - Hazy Room - Big Chest/Big Chest", 0x2002d59, 0x02)
-		updateSectionFlag(segment, "@Cave Of Flame - B1 - Rollobite/Chest", 0x2002d58, 0x40)
+		updateSectionFlag(segment, "@Cave Of Flame - B1 - Hazy Room - Small Chest/Small Chest", 0x2002d59, 0x02)
+		updateSectionFlag(segment, "@Cave Of Flame - B1 - Rollobite Pillar/Chest", 0x2002d58, 0x40)
 		updateSectionFlag(segment, "@Cave Of Flame - B1 - Rollobite/Chest", 0x2002d58, 0x80)
 		updateSectionFlag(segment, "@Cave Of Flame - B1/HP", 0x2002d5b, 0x10)
 		updateSectionFlag(segment, "@Cave Of Flame - B1 - Spikey Chus Pillar/Chest", 0x2002d57, 0x02)
 		updateSectionFlag(segment, "@Cave Of Flame - B1 - Spikey Chus/Big Chest", 0x2002d57, 0x01)
 		updateSectionFlag(segment, "@Cave Of Flame - B2 - Pre Lava North/Chest", 0x2002d59, 0x10)
-		updateSectionFlag(segment, "@Cave Of Flame - B2 - Pre Lava North/Chest", 0x2002d59, 0x20)
+		updateSectionFlag(segment, "@Cave Of Flame - B2 - Pre Lava South/Chest", 0x2002d59, 0x20)
 		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room Blade/Chest", 0x2002d5a, 0x01)
 		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room Left/Chest", 0x2002d5a, 0x80)
-		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room Left/Chest", 0x2002d5b, 0x01)
+		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room Right/Chest", 0x2002d5b, 0x01)
 		updateSectionFlag(segment, "@Cave Of Flame - B2 - Lava Room/Big Chest", 0x2002d5b, 0x02)
 		updateSectionFlag(segment, "@Cave Of Flame - Gleerok/Heart", 0x2002d5b, 0x04)
 
@@ -3185,6 +3187,7 @@ function updateKeys(segment)
 		updateSectionFlag(segment, "@Hylia - Mayor Cabin/Item", 0x2002ea4, 0x40)
 		updateSectionFlag(segment, "@Hylia - Dojo/Gift", 0x2002ea6, 0x04)
 		-- Crenel
+		updateSectionFlag(segment, "@Crenel - Melari Mines - Melari/Gift", 0x2002ea4, 0x80)
 		updateSectionFlag(segment, "@Crenel - Mines/Melari", 0x2002ea4, 0x80)
 		updateSectionFlag(segment, "@Crenel - Scrub/Gift", 0x2002ea5, 0x04)
 		updateSectionFlag(segment, "@Crenel - Dojo/Gift", 0x2002ea6, 0x01)
@@ -3227,15 +3230,15 @@ function UpdateWallLocation(segment)
 		updateWall(segment, "fusions26", 0x2002c6a)
 		 --hylia
 		updateWall(segment, "fusions2a", 0x2002c6b)
-		if has("fusionblue_vanilla") then
+		--if has("fusionblue_vanilla") then
 			updateWallUsedFixed("blueL", segment, {{0x2002c40}, {0x2002c67}, {0x2002c68}, {0x2002c69}, {0x2002c6a}, {0x2002c6b}})
-		end
+		--end
 	end
 end
-ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation)
-ScriptHost:AddMemoryWatch("TMC Locations and Bosses", 0x2002c81, 0x200, updateLocations)
-ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x46, updateItemsFromMemorySegment)
-ScriptHost:AddMemoryWatch("TMC Item Upgrades", 0x2002ae4, 0x0c, updateGearFromMemory)
-ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey)
-ScriptHost:AddMemoryWatch("TMC Keys", 0x2002d00, 0x200, updateKeys)
-ScriptHost:AddMemoryWatch("TMC figurine", 0x2002af0, 0x01, figurine)
+ScriptHost:AddMemoryWatch("Wall fusions", 0x2002c40, 0x2c, UpdateWallLocation, 5000)
+ScriptHost:AddMemoryWatch("TMC Locations and Bosses", 0x2002c81, 0x200, updateLocations, 5000)
+ScriptHost:AddMemoryWatch("TMC Item Data", 0x2002b30, 0x46, updateItemsFromMemorySegment, 5000)
+ScriptHost:AddMemoryWatch("TMC Item Upgrades", 0x2002ae4, 0x0c, updateGearFromMemory, 5000)
+ScriptHost:AddMemoryWatch("Graveyard Key", 0x2002ac0, 0x01, graveKey, 5000)
+ScriptHost:AddMemoryWatch("TMC Keys", 0x2002d00, 0x200, updateKeys, 5000)
+ScriptHost:AddMemoryWatch("TMC figurine", 0x2002af0, 0x01, figurine, 5000)

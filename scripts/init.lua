@@ -57,7 +57,7 @@ VERSION_RANDO = "1.0.0RC2"
 ------------------------------------------------------------------
 -- Configuration Debug options
 ------------------------------------------------------------------
-TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = false
+TMC_AUTOTRACKER_DEBUG_LOCATION_NOFOUND = true
 TMC_AUTOTRACKER_DEBUG_LOCATION = false
 TMC_AUTOTRACKER_DEBUG_Fuser = false
 TMC_AUTOTRACKER_DEBUG_ITEM = false

@@ -17,6 +17,7 @@
       {
         "name": "Item",
         "item_count": 1,
+        "capture_item": true,
         "access_rules": [
           "$Json_MinishWoods_SyrupsHut_Item"
         ],
